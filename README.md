@@ -2,7 +2,7 @@
 
 <h4>© 2017 DigiPen Institute Of Technology. All rights reserved.</h4>
 
-<h3>Team Usernames</h3>
+#<h3>Team Usernames</h3>
 
 <b>Producer/Product Manager</b> - HudsonGTV
 
