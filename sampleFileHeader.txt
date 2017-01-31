@@ -1,0 +1,12 @@
+/* ----------------------------------------------------------------------------
+** TEAM NAME
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - StudentName
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
