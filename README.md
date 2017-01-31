@@ -5,7 +5,8 @@
 #The Sparce
 
 <h3>Team Usernames:</h3>
- &nbsp; <h4><b>Producer/Product Manager/CEO</b>     - HudsonGTV</h4>
+
+ &nbsp; <b>Producer/Product Manager/CEO     - *HudsonGTV*
 
  &nbsp; <b>Art Director</b>                 - *ReallyNotSam*
 
