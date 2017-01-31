@@ -12,5 +12,5 @@
 
 <b>Tech Director/Tester</b>         - *iMajesticButter*
 
-<h3>Teacher Guy</h3>
+#<h3>Teacher Guy</h3>
 <b>Matt</b>                         - *cehnehd3h*
