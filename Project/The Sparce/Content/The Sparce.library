@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "The Sparce",
+	uint64 LibraryId = 58140cf7931af19d,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},
