@@ -1,13 +1,13 @@
 # WCD
 
-#Team Usernames
+*Team Usernames*
 
-HudsonGTV
+Producer/Product Manager - HudsonGTV
 
-ReallyNotSam
+Art Director - ReallyNotSam
 
-Sagedupuy
+Design Director - Sagedupuy
 
-iMajesticButter
+Tech Director/Tester - iMajesticButter
 
-cehnehd3h
+Matt - cehnehd3h
