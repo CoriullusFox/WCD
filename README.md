@@ -1,6 +1,6 @@
 # WCD
 
-team usernames
+#Team Usernames
 
 HudsonGTV
 
