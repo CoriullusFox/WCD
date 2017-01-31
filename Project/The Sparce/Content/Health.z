@@ -25,11 +25,8 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
-        if(this.ConfiguredHealth <= 0)
-        {
-            this.Owner.Destroy();
+        if(this.ConfiguredHealth <= 0) {
+            
         }
     }
-    
 }
