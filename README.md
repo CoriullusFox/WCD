@@ -4,13 +4,14 @@
 
 #The Sparce
 <h3>Team Usernames:</h3>
-<h4><b>Producer/Product Manager/CEO</b> - HudsonGTV</h4>
+<li>
+ &nbsp; <h4><b>Producer/Product Manager/CEO</b>     - HudsonGTV</h4>
 
-<b>Art Director</b>                 - *ReallyNotSam*
+ &nbsp; <b>Art Director</b>                 - *ReallyNotSam*
 
-<b>Design Director</b>              - *Sagedupuy*
+ &nbsp; <b>Design Director</b>              - *Sagedupuy*
 
-<b>Tech Director/Tester</b>         - *iMajesticButter*
+ &nbsp; <b>Tech Director/Tester</b>         - *iMajesticButter*
 
 #<h3>Teacher Guy</h3>
 <b>Matt</b>                         - *cehnehd3h*
