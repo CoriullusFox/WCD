@@ -1,13 +1,13 @@
 # WCD
 
-<h2>Team Usernames</h2>
+<h3>Team Usernames</h3>
 
-Producer/Product Manager - HudsonGTV
+<b>Producer/Product Manager</b> - HudsonGTV
 
-Art Director - ReallyNotSam
+<b>Art Director</b> - ReallyNotSam
 
-Design Director - Sagedupuy
+<b>Design Director</b> - Sagedupuy
 
-Tech Director/Tester - iMajesticButter
+<b>Tech Director/Tester</b> - iMajesticButter
 
-Matt - cehnehd3h
+<b>Matt</b> - cehnehd3h
