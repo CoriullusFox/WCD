@@ -1,6 +1,8 @@
 # WCD
 
-<div style = "text-align: center;"><h3>Team Usernames</h3>
+<h4>© 2017 DigiPen Institute Of Technology. All rights reserved.</h4>
+
+<h3>Team Usernames</h3>
 
 <b>Producer/Product Manager</b> - HudsonGTV
 
@@ -11,4 +13,3 @@
 <b>Tech Director/Tester</b> - iMajesticButter
 
 <b>Matt</b> - cehnehd3h
-</div>
