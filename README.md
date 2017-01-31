@@ -1,6 +1,6 @@
 # WCD
 
-<b>Team Usernames</b>
+<h2>Team Usernames</h2>
 
 Producer/Product Manager - HudsonGTV
 
