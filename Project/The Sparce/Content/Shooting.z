@@ -1,0 +1,39 @@
+
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - StudentName
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+//UNFINNISHED
+
+/*
+class Shooting : ZilchComponent
+{
+    //shootes bullets based on input
+    function Shoot (bullet: Archetype, spredShot: Boolean, numberOfSpread: Integer, distanceBetweenSpreadshots: Real, direction: Real3, position: Real3)
+    {
+        
+        if(!spredShot)
+        {
+            
+            var createdBullet = this.Space.CreateAtPosition(bullet, position);
+            if(createdBullet != null)
+            {
+                
+                
+                
+            }
+            
+        }
+        
+    }
+}
+*/
