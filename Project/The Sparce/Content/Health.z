@@ -1,0 +1,35 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** Health.z
+**
+** Author:
+** - Hudson Green (HudsonGTV)
+**
+** Contributors:
+** - null
+** --------------------------------------------------------------------------*/
+
+class Health : ZilchComponent
+{
+    
+    // CONFIGURABLE HEALTH PROPERTY
+    [Property]
+    var ConfiguredHealth : Real = 50;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
+        if(this.ConfiguredHealth <= 0)
+        {
+            this.Owner.Destroy();
+        }
+    }
+    
+}
