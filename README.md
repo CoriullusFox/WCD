@@ -4,7 +4,7 @@
 
 
 #<h3>Team Usernames</h3>
-<h4><b>Producer/Product Manager/CEO</b> - *HudsonGTV* </h4>
+<h4><b>Producer/Product Manager/CEO</b> - HudsonGTV</h4>
 
 <b>Art Director</b>                 - *ReallyNotSam*
 
