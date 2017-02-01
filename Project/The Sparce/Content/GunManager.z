@@ -12,7 +12,7 @@
 ** --------------------------------------------------------------------------*/
 
 
-enum Guns {Pistle, Shotgun}
+enum Guns {Pistle, Shotgun, Minigun}
 
 class GunManager : ZilchComponent
 {
@@ -39,6 +39,8 @@ class GunManager : ZilchComponent
             this.PlayerShooting.DistanceBetweenSpreadshots = 0;
             this.PlayerShooting.BulletSpeed = 50;
             this.PlayerShooting.LifeLength = 0.3;
+            this.PlayerShooting.RandomVary = 0.01;
+            this.PlayerShooting.Cooldown = 0.3;
             
         }
         else if(this.SelectedGun == Guns.Shotgun)
@@ -49,6 +51,20 @@ class GunManager : ZilchComponent
             this.PlayerShooting.DistanceBetweenSpreadshots = 0.1;
             this.PlayerShooting.BulletSpeed = 50;
             this.PlayerShooting.LifeLength = 0.1;
+            this.PlayerShooting.RandomVary = 0.1;
+            this.PlayerShooting.Cooldown = 1;
+            
+        }
+        else if(this.SelectedGun == Guns.Minigun)
+        {
+            
+            this.PlayerShooting.Spread = false;
+            this.PlayerShooting.NumberOfSpread = 0;
+            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
+            this.PlayerShooting.BulletSpeed = 45;
+            this.PlayerShooting.LifeLength = 0.4;
+            this.PlayerShooting.RandomVary = 0.05;
+            this.PlayerShooting.Cooldown = 0.01;
             
         }
     }

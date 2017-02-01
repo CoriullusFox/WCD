@@ -1,4 +1,3 @@
-
 /* ----------------------------------------------------------------------------
 ** TEAM - We Couldn't Decide
 ** © 2017 DigiPen Institute of Technology, All Rights Reserved.
@@ -15,7 +14,7 @@
 class Shooting : ZilchComponent
 {
     //shootes bullets based on input
-    function Shoot (bullet: Archetype, spredShot: Boolean, numberOfSpread: Integer, distanceBetweenSpreadshots: Real, direction: Real3, position: Real3, speed: Real, lifeLength : Real)
+    function Shoot (bullet: Archetype, spredShot: Boolean, numberOfSpread: Integer, distanceBetweenSpreadshots: Real, direction: Real3, position: Real3, speed: Real, lifeLength : Real, randomVary : Real)
     {
         //non spreadshot
         if(!spredShot)
@@ -23,10 +22,18 @@ class Shooting : ZilchComponent
             var createdBullet = this.Space.CreateAtPosition(bullet, position);
             if(createdBullet != null)
             {
-                createdBullet.Orientation.LookAtDirection(direction);
-                createdBullet.RigidBody.Velocity = Math.Normalize(direction) * speed;
-                
-                createdBullet.Despawn.LifeLength = lifeLength;
+                var randGen : Random = Random();
+                    //angle of rotation
+                    var angle = Math.Angle2D(direction) + randGen.Range(randomVary, randomVary*-1);
+                    
+                    //generate direction for orientation component from angle
+                    var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                    
+                    //apply direction and movement
+                    createdBullet.Orientation.LookAtDirection(newDirection);
+                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * speed;
+                    
+                    createdBullet.Despawn.LifeLength = lifeLength;
                 
             }
         }
@@ -41,8 +48,9 @@ class Shooting : ZilchComponent
                 var createdBullet = this.Space.CreateAtPosition(bullet, position);
                 if(createdBullet != null)
                 {
+                    var randGen : Random = Random();
                     //angle of rotation
-                    var angle = Math.Angle2D(direction) + (i * distanceBetweenSpreadshots) - (distanceBetweenSpreadshots * numberOfSpread)/2;
+                    var angle = (Math.Angle2D(direction) + (i * distanceBetweenSpreadshots) - (distanceBetweenSpreadshots * numberOfSpread)/2) + randGen.Range(randomVary, randomVary*-1);
                     
                     //generate direction for orientation component from angle
                     var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);

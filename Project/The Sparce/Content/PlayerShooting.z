@@ -28,16 +28,28 @@ class PlayerShooting : ZilchComponent
     var DistanceBetweenSpreadshots : Real = 0;
     var BulletSpeed : Real = 50;
     var LifeLength : Real = 1;
+    var RandomVary : Real = 0.1;
+    var Cooldown : Real = 0;
+    
+    
+    
+    var CooldownTimer : Real = 0;
+    
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
-    function OnKeyDown(event : KeyboardEvent)
+    function OnLogicUpdate(event : UpdateEvent)
     {
-        if(event.Key == Keys.Space)
+        this.CooldownTimer += event.Dt;
+        if(Zero.Keyboard.KeyIsDown(Keys.Space))
         {
-            this.Shooting.Shoot(this.Bullet, this.Spread, this.NumberOfSpread, this.DistanceBetweenSpreadshots, this.Direction, this.Owner.Transform.Translation, this.BulletSpeed, this.LifeLength);
+            if(this.CooldownTimer >= this.Cooldown)
+            {
+                this.CooldownTimer = 0;
+                this.Shooting.Shoot(this.Bullet, this.Spread, this.NumberOfSpread, this.DistanceBetweenSpreadshots, this.Direction, this.Owner.Transform.Translation, this.BulletSpeed, this.LifeLength, this.RandomVary);
+            }
         }
     }
 }
