@@ -6,7 +6,7 @@
 
 <h3>Team Usernames:</h3>
 
- &nbsp; <b>Producer/Product Manager/CEO</b> - *HudsonGTV*
+ &nbsp; <b>Producer/Product Manager/Ad Guy</b> - *HudsonGTV*
 
  &nbsp; <b>Art Director</b>                 - *ReallyNotSam*
 
