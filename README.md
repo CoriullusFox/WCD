@@ -1,6 +1,6 @@
 # WCD
 
-<h4>© 2017 DigiPen Institute Of Technology. All rights reserved.</h4>
+<h4>© 2017 DigiPen Institute Of Technology, All rights reserved.</h4>
 
 #The Sparce
 
