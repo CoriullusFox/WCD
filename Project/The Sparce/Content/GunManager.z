@@ -1,0 +1,55 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+
+enum Guns {Pistle, Shotgun}
+
+class GunManager : ZilchComponent
+{
+    [Property]
+    var SelectedGun : Guns = Guns.Pistle;
+    
+    [Dependency]
+    var PlayerShooting : PlayerShooting = null;
+    function Initialize(init : CogInitializer)
+    {
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //set values for bullets based off what gun is in use
+        if(this.SelectedGun == Guns.Pistle)
+        {
+            
+            this.PlayerShooting.Spread = false;
+            this.PlayerShooting.NumberOfSpread = 0;
+            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
+            this.PlayerShooting.BulletSpeed = 50;
+            this.PlayerShooting.LifeLength = 0.3;
+            
+        }
+        else if(this.SelectedGun == Guns.Shotgun)
+        {
+            
+            this.PlayerShooting.Spread = true;
+            this.PlayerShooting.NumberOfSpread = 10;
+            this.PlayerShooting.DistanceBetweenSpreadshots = 0.1;
+            this.PlayerShooting.BulletSpeed = 50;
+            this.PlayerShooting.LifeLength = 0.1;
+            
+        }
+    }
+}

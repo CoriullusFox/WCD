@@ -6,34 +6,56 @@
 ** FILE NAME
 **
 ** Author:
-** - StudentName
+** - Brandon Wolenetz
 **
 ** Contributors:
 ** - <list in same format as author if applicable>
 ** --------------------------------------------------------------------------*/
 
-//UNFINNISHED
-
-/*
 class Shooting : ZilchComponent
 {
     //shootes bullets based on input
-    function Shoot (bullet: Archetype, spredShot: Boolean, numberOfSpread: Integer, distanceBetweenSpreadshots: Real, direction: Real3, position: Real3)
+    function Shoot (bullet: Archetype, spredShot: Boolean, numberOfSpread: Integer, distanceBetweenSpreadshots: Real, direction: Real3, position: Real3, speed: Real, lifeLength : Real)
     {
-        
+        //non spreadshot
         if(!spredShot)
         {
-            
             var createdBullet = this.Space.CreateAtPosition(bullet, position);
             if(createdBullet != null)
             {
+                createdBullet.Orientation.LookAtDirection(direction);
+                createdBullet.RigidBody.Velocity = Math.Normalize(direction) * speed;
                 
-                
+                createdBullet.Despawn.LifeLength = lifeLength;
                 
             }
-            
         }
-        
+        //spreadshot
+        else
+        {
+            
+            for(var i = numberOfSpread; i > 0; i -= 1)
+            {
+                
+                
+                var createdBullet = this.Space.CreateAtPosition(bullet, position);
+                if(createdBullet != null)
+                {
+                    //angle of rotation
+                    var angle = Math.Angle2D(direction) + (i * distanceBetweenSpreadshots) - (distanceBetweenSpreadshots * numberOfSpread)/2;
+                    
+                    //generate direction for orientation component from angle
+                    var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                    
+                    //apply direction and movement
+                    createdBullet.Orientation.LookAtDirection(newDirection);
+                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * speed;
+                    
+                    createdBullet.Despawn.LifeLength = lifeLength;
+                    
+                }
+            }
+        }
     }
 }
-*/
+

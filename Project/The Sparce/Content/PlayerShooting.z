@@ -1,0 +1,43 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class PlayerShooting : ZilchComponent
+{
+    
+    [Dependency]
+    var Shooting : Shooting = null;
+    
+    [Property]
+    var Bullet : Archetype;
+    
+    [Property]
+    var Direction : Real3 = Real3(0,1,0);
+    
+    var Spread : Boolean = false;
+    var NumberOfSpread : Integer = 0;
+    var DistanceBetweenSpreadshots : Real = 0;
+    var BulletSpeed : Real = 50;
+    var LifeLength : Real = 1;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+    }
+
+    function OnKeyDown(event : KeyboardEvent)
+    {
+        if(event.Key == Keys.Space)
+        {
+            this.Shooting.Shoot(this.Bullet, this.Spread, this.NumberOfSpread, this.DistanceBetweenSpreadshots, this.Direction, this.Owner.Transform.Translation, this.BulletSpeed, this.LifeLength);
+        }
+    }
+}
