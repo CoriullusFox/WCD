@@ -1,12 +1,12 @@
 # WCD
 
-<h4>© 2017 DigiPen Institute Of Technology. All rights reserved.</h4>
+<h4>© 2017 DigiPen Institute Of Technology, All rights reserved.</h4>
 
 #The Sparce
 
 <h3>Team Usernames:</h3>
 
- &nbsp; <b>Producer/Product Manager/CEO</b> - *HudsonGTV*
+ &nbsp; <b>Producer/Product Manager/Ad Guy</b> - *HudsonGTV*
 
  &nbsp; <b>Art Director</b>                 - *ReallyNotSam*
 
