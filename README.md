@@ -14,5 +14,8 @@
 
  &nbsp; <b>Tech Director/Tester</b>         - *iMajesticButter*
 
-#<h3>Teacher Guy</h3>
+#<h3>Teacher Guy:</h3>
  &nbsp; <b>Matt</b>                         - *cehnehd3h*
+
+#<h3>Communication:</h3>
+ &nbsp; <b>Discord</b>                      - *https://discord.gg/P2NUz9d*
