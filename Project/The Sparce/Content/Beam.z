@@ -1,0 +1,14 @@
+class Beam : ZilchComponent
+{
+    [Property]
+    var Speed : Real = 10;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
+    }
+}

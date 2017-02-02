@@ -12,7 +12,7 @@
 ** --------------------------------------------------------------------------*/
 
 
-enum Guns {Pistle, Shotgun, Minigun}
+enum Guns {Pistle, Shotgun, Minigun, Rifle, Beam}
 
 class GunManager : ZilchComponent
 {
@@ -21,6 +21,23 @@ class GunManager : ZilchComponent
     
     [Dependency]
     var PlayerShooting : PlayerShooting = null;
+    
+    [Property]
+    var PistleBullet : Archetype;
+    
+    [Property]
+    var ShotgunBullet : Archetype;
+    
+    [Property]
+    var MinigunBullet : Archetype;
+    
+    [Property]
+    var RifleBullet : Archetype;
+    
+    [Property]
+    var BeamBullet : Archetype;
+    
+    
     function Initialize(init : CogInitializer)
     {
         
@@ -41,18 +58,20 @@ class GunManager : ZilchComponent
             this.PlayerShooting.LifeLength = 0.3;
             this.PlayerShooting.RandomVary = 0.01;
             this.PlayerShooting.Cooldown = 0.3;
+            this.PlayerShooting.Bullet = this.PistleBullet;
             
         }
         else if(this.SelectedGun == Guns.Shotgun)
         {
             
             this.PlayerShooting.Spread = true;
-            this.PlayerShooting.NumberOfSpread = 10;
+            this.PlayerShooting.NumberOfSpread = 3;
             this.PlayerShooting.DistanceBetweenSpreadshots = 0.1;
             this.PlayerShooting.BulletSpeed = 50;
-            this.PlayerShooting.LifeLength = 0.1;
-            this.PlayerShooting.RandomVary = 0.1;
+            this.PlayerShooting.LifeLength = 0.5;
+            this.PlayerShooting.RandomVary = 0.01;
             this.PlayerShooting.Cooldown = 1;
+            this.PlayerShooting.Bullet = this.ShotgunBullet;
             
         }
         else if(this.SelectedGun == Guns.Minigun)
@@ -65,6 +84,33 @@ class GunManager : ZilchComponent
             this.PlayerShooting.LifeLength = 0.4;
             this.PlayerShooting.RandomVary = 0.05;
             this.PlayerShooting.Cooldown = 0.01;
+            this.PlayerShooting.Bullet = this.MinigunBullet;
+            
+        }
+        else if(this.SelectedGun == Guns.Rifle)
+        {
+            
+            this.PlayerShooting.Spread = false;
+            this.PlayerShooting.NumberOfSpread = 0;
+            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
+            this.PlayerShooting.BulletSpeed = 45;
+            this.PlayerShooting.LifeLength = 2;
+            this.PlayerShooting.RandomVary = 0.01;
+            this.PlayerShooting.Cooldown = 1;
+            this.PlayerShooting.Bullet = this.RifleBullet;
+            
+        }
+        else if(this.SelectedGun == Guns.Beam)
+        {
+            
+            this.PlayerShooting.Spread = false;
+            this.PlayerShooting.NumberOfSpread = 0;
+            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
+            this.PlayerShooting.BulletSpeed = 0;
+            this.PlayerShooting.LifeLength = 2;
+            this.PlayerShooting.RandomVary = 0;
+            this.PlayerShooting.Cooldown = 5;
+            this.PlayerShooting.Bullet = this.BeamBullet;
             
         }
     }

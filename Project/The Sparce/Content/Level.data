@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.10279, 0.209682, 50],
+			Vec3 Translation = [-0.0873175, -0.346868, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.93171,
+			float Size = 7.33861,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.10279, 0.209682, 4.49308e-009],
+			Vec3 LookTarget = [-0.0873175, -0.346868, -3.81681e-009],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -205,12 +205,16 @@ Level =
 		},
 		PlayerShooting = 
 		{
-			string Bullet = "58385bdc673b144c:BulletTest",
-			Vec3 Direction = [1, 0, 0],
+			Vec3 Direction = [1, 1, 0],
 		},
 		GunManager = 
 		{
-			Enum SelectedGun = Pistle,
+			Enum SelectedGun = Beam,
+			string PistleBullet = "581681295c686b14:BulletTest.Archetype",
+			string ShotgunBullet = "581681295c686b14:BulletTest.Archetype",
+			string MinigunBullet = "581681295c686b14:BulletTest.Archetype",
+			string RifleBullet = "581681295c686b14:BulletTest.Archetype",
+			string BeamBullet = "581687be6ad28891:BulletTestBeam.Archetype",
 		},
 	},
 },
