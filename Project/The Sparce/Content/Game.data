@@ -6,15 +6,15 @@ GameSession =
 	},
 	Archetyped = 
 	{
-		string Name = "581681295c6750cc:Game",
+		string Name = "58168efcbf95a903:Game",
 	},
 	Viewports = 
 	{
 	},
 	DefaultGameSetup = 
 	{
-		string StartingSpaceName = "581681295c665a61:Space",
-		string StartingLevelName = "581681295c67de09:Level",
+		string StartingSpaceName = "58168efcbf987cb5:Space",
+		string StartingLevelName = "58168efcbf973619:Level",
 	},
 	CameraViewports = 
 	{

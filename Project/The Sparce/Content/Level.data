@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0873175, -0.346868, 50],
+			Vec3 Translation = [0.336657, 2.00449e-005, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.0873175, -0.346868, -3.81681e-009],
+			Vec3 LookTarget = [0.336657, 2.00449e-005, 1.47157e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -210,11 +210,27 @@ Level =
 		GunManager = 
 		{
 			Enum SelectedGun = Beam,
-			string PistleBullet = "581681295c686b14:BulletTest.Archetype",
-			string ShotgunBullet = "581681295c686b14:BulletTest.Archetype",
-			string MinigunBullet = "581681295c686b14:BulletTest.Archetype",
-			string RifleBullet = "581681295c686b14:BulletTest.Archetype",
-			string BeamBullet = "581687be6ad28891:BulletTestBeam.Archetype",
+			string PistleBullet = "58168efcbf94ba1b:BulletTest.Archetype",
+			string ShotgunBullet = "58168efcbf94ba1b:BulletTest.Archetype",
+			string MinigunBullet = "58168efcbf94ba1b:BulletTest.Archetype",
+			string RifleBullet = "58168efcbf94ba1b:BulletTest.Archetype",
+			string BeamBullet = "58168efcbf95057e:BulletTestBeam.Archetype.Archetype",
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		Movement = 
+		{
+			float Speed = 250,
 		},
 	},
 },

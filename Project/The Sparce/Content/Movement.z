@@ -1,0 +1,51 @@
+class Movement : ZilchComponent
+{
+    [Property]
+    var Speed : Real = 10;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var r3Speed = Real3(this.Speed *event.Dt, this.Speed *event.Dt, this.Speed *event.Dt);
+        if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            this.Owner.RigidBody.Velocity = Real3(-1,-1,0) * r3Speed;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            this.Owner.RigidBody.Velocity = Real3(1,-1,0) * r3Speed;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            this.Owner.RigidBody.Velocity = Real3(-1,1,0) * r3Speed;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            this.Owner.RigidBody.Velocity = Real3(1,1,0) * r3Speed;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            this.Owner.RigidBody.Velocity = Real3(0,1,0) * r3Speed;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.A))
+        {
+            this.Owner.RigidBody.Velocity = Real3(-1,0,0) * r3Speed;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            this.Owner.RigidBody.Velocity = Real3(0,-1,0) * r3Speed;
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.D))
+        {
+            this.Owner.RigidBody.Velocity = Real3(1,0,0) * r3Speed;
+        }
+        else
+        {
+            this.Owner.RigidBody.Velocity = Real3(0,0,0);
+        }
+        
+    }
+}
