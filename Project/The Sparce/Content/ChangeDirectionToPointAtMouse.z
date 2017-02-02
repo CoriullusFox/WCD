@@ -1,0 +1,20 @@
+class ChangeDirectionToPointAtMouse : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0.0);
+        
+        var position = Real3(this.Owner.Transform.Translation.X, this.Owner.Transform.Translation.Y, this.Owner.Transform.Translation.Z);
+        
+        var mouseDirection = mousePos - position;
+        
+        Math.Normalize(mouseDirection);
+        
+        this.Owner.PlayerShooting.Direction = Real3(mouseDirection.X, mouseDirection.Y, 0.0);
+    }
+}
