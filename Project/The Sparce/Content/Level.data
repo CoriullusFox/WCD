@@ -231,6 +231,7 @@ Level =
 		Movement = 
 		{
 			float Speed = 250,
+			float RunSpeed = 500,
 		},
 	},
 },

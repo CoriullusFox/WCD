@@ -2,6 +2,8 @@ class Movement : ZilchComponent
 {
     [Property]
     var Speed : Real = 10;
+    [Property]
+    var RunSpeed : Real = 10;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -9,7 +11,15 @@ class Movement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var r3Speed = Real3(this.Speed *event.Dt, this.Speed *event.Dt, this.Speed *event.Dt);
+        var r3Speed = Real3(0,0,0);
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift))
+        {
+            r3Speed = Real3(this.RunSpeed *event.Dt, this.RunSpeed *event.Dt, this.RunSpeed *event.Dt);
+        }
+        else
+        {
+            r3Speed = Real3(this.Speed *event.Dt, this.Speed *event.Dt, this.Speed *event.Dt);
+        }
         if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.RigidBody.Velocity = Real3(-1,-1,0) * r3Speed;
