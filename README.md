@@ -7,13 +7,13 @@ subscrib to keemstar rooiiiiiiiiiight now (jk screw him)
 
 <h3>Team Usernames:</h3>
 
- &nbsp; <b>CEO/Producer/Product Manager</b>   - *HudsonGTV* (Mr. Dr. Professor Master Hudson Green III)
+ &nbsp; <b>CEO/Producer/Product Manager/Ad Guy</b>   - *HudsonGTV*  
 
  &nbsp; <b>Art Director</b>                   - *ReallyNotSam* (The 10th Doctor)
 
  &nbsp; <b>Design Director</b>                - *Sagedupuy* (Sage Plant)
 
- &nbsp; <b>Tech Director/Tester/Kazzo Kid</b> - *iMajesticButter* (Skrek) <-New Ad Guy (No one else has Sony Vegas Pro so deal with it)
+ &nbsp; <b>Tech Director/Tester</b> - *iMajesticButter* (Tech man of amazingness!) 
 
 #<h3>Teacher Guy:</h3>
  &nbsp; <b>Matt</b>                           - *cehnehd3h* (Floor Matt)
