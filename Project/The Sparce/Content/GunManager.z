@@ -47,85 +47,32 @@ class GunManager : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
         //set values for bullets based off what gun is in use
         if(this.SelectedGun == Guns.Pistle)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 50;
-            this.PlayerShooting.LifeLength = 0.3;
-            this.PlayerShooting.RandomVary = 0.01;
-            this.PlayerShooting.Cooldown = 0.3;
-            this.PlayerShooting.Bullet = this.PistleBullet;*/
-            
             this.InitGun(false, 0, 0, 50, 0.3, 0.01, 0.3, this.PistleBullet);
-            
         }
         else if(this.SelectedGun == Guns.Shotgun)
         {
-            
-            /*this.PlayerShooting.Spread = true;
-            this.PlayerShooting.NumberOfSpread = 3;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0.1;
-            this.PlayerShooting.BulletSpeed = 50;
-            this.PlayerShooting.LifeLength = 0.5;
-            this.PlayerShooting.RandomVary = 0.01;
-            this.PlayerShooting.Cooldown = 1;
-            this.PlayerShooting.Bullet = this.ShotgunBullet;*/
-            
             this.InitGun(true, 3, 0.1, 50, 0.5, 0.01, 1, this.ShotgunBullet);
-            
         }
         else if(this.SelectedGun == Guns.Minigun)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 45;
-            this.PlayerShooting.LifeLength = 0.4;
-            this.PlayerShooting.RandomVary = 0.05;
-            this.PlayerShooting.Cooldown = 0.01;
-            this.PlayerShooting.Bullet = this.MinigunBullet;*/
-            
             this.InitGun(false, 0, 0, 45, 0.4, 0.05, 0.01, this.MinigunBullet);
-            
         }
         else if(this.SelectedGun == Guns.Rifle)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 45;
-            this.PlayerShooting.LifeLength = 2;
-            this.PlayerShooting.RandomVary = 0.01;
-            this.PlayerShooting.Cooldown = 1;
-            this.PlayerShooting.Bullet = this.RifleBullet;*/
-            
             this.InitGun(false, 0, 0, 45, 2, 0.01, 1, this.RifleBullet);
-            
         }
         else if(this.SelectedGun == Guns.Beam)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 0;
-            this.PlayerShooting.LifeLength = 2;
-            this.PlayerShooting.RandomVary = 0;
-            this.PlayerShooting.Cooldown = 5;
-            this.PlayerShooting.Bullet = this.BeamBullet;*/
-            
             this.InitGun(false, 0, 0, 0, 2, 0, 5, this.BeamBullet);
-            
         }
+        
     }
     
-                    /* SPREAD ENABLED, SPREAD AMOUNT */
+                    /* SPREAD ENABLED, SPREAD AMOUNT, DISTANCE BETWEEN SPREAD SHOTS, BULLET SPEED, LIFESPAN OF BULLET, RANDOM VARIATION, COOLDOWN, SPRITE SOURCE */
     function InitGun(spread : Boolean, spreadAmount : Integer, distBetweenSpreadShots : Real, bulletSpeed : Real, lifespan : Real, randVary : Real, cooldown : Real, spriteImage : Archetype) {
         
         this.PlayerShooting.Spread = spread;
