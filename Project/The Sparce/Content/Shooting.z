@@ -19,22 +19,26 @@ class Shooting : ZilchComponent
         //non spreadshot
         if(!spredShot)
         {
-            var createdBullet = this.Space.CreateAtPosition(bullet, position);
-            if(createdBullet != null)
+            if(bullet != null)
             {
-                var randGen : Random = Random();
-                    //angle of rotation
-                    var angle = Math.Angle2D(direction) + randGen.Range(randomVary, randomVary*-1);
+                var createdBullet = this.Space.CreateAtPosition(bullet, position);
+            
+                if(createdBullet != null)
+                {
+                    var randGen : Random = Random();
+                        //angle of rotation
+                        var angle = Math.Angle2D(direction) + randGen.Range(randomVary, randomVary*-1);
+                        
+                        //generate direction for orientation component from angle
+                        var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                        
+                        //apply direction and movement
+                        createdBullet.Orientation.LookAtDirection(newDirection);
+                        createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * speed;
+                        
+                        createdBullet.Despawn.LifeLength = lifeLength;
                     
-                    //generate direction for orientation component from angle
-                    var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
-                    
-                    //apply direction and movement
-                    createdBullet.Orientation.LookAtDirection(newDirection);
-                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * speed;
-                    
-                    createdBullet.Despawn.LifeLength = lifeLength;
-                
+                }
             }
         }
         //spreadshot
@@ -44,23 +48,26 @@ class Shooting : ZilchComponent
             for(var i = numberOfSpread; i > 0; i -= 1)
             {
                 
-                
-                var createdBullet = this.Space.CreateAtPosition(bullet, position);
-                if(createdBullet != null)
+                if(bullet != null)
                 {
-                    var randGen : Random = Random();
-                    //angle of rotation
-                    var angle = (Math.Angle2D(direction) + (i * distanceBetweenSpreadshots) - (distanceBetweenSpreadshots * numberOfSpread)/2) + randGen.Range(randomVary, randomVary*-1);
+                    var createdBullet = this.Space.CreateAtPosition(bullet, position);
                     
-                    //generate direction for orientation component from angle
-                    var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
-                    
-                    //apply direction and movement
-                    createdBullet.Orientation.LookAtDirection(newDirection);
-                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * speed;
-                    
-                    createdBullet.Despawn.LifeLength = lifeLength;
-                    
+                    if(createdBullet != null)
+                    {
+                        var randGen : Random = Random();
+                        //angle of rotation
+                        var angle = (Math.Angle2D(direction) + (i * distanceBetweenSpreadshots) - (distanceBetweenSpreadshots * numberOfSpread)/2) + randGen.Range(randomVary, randomVary*-1);
+                        
+                        //generate direction for orientation component from angle
+                        var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                        
+                        //apply direction and movement
+                        createdBullet.Orientation.LookAtDirection(newDirection);
+                        createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * speed;
+                        
+                        createdBullet.Despawn.LifeLength = lifeLength;
+                        
+                    }
                 }
             }
         }

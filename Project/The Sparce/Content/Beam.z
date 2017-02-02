@@ -11,6 +11,8 @@
 ** - <list in same format as author if applicable>
 ** --------------------------------------------------------------------------*/
 
+//makes the beam extend intead of just appear, also fades beam
+
 class Beam : ZilchComponent
 {
     [Property]
@@ -23,5 +25,6 @@ class Beam : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
+        this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
     }
 }

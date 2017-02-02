@@ -10,12 +10,12 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "581687be6ad28891:BulletTestBeam.Archetype",
+		string Name = "58168efcbf95057e:BulletTestBeam.Archetype.Archetype",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [0.3, 0.3, 1],
+		Vec3 Scale = [3, 0.3, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0.88, 1, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5816873c76818232:Beam",
+		string SpriteSource = "58169c32853e887c:sprLaser_strip4Animation",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
