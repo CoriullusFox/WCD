@@ -93,8 +93,8 @@ class GunManager : ZilchComponent
             this.PlayerShooting.Spread = false;
             this.PlayerShooting.NumberOfSpread = 0;
             this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 45;
-            this.PlayerShooting.LifeLength = 2;
+            this.PlayerShooting.BulletSpeed = 80;
+            this.PlayerShooting.LifeLength = 1;
             this.PlayerShooting.RandomVary = 0.01;
             this.PlayerShooting.Cooldown = 1;
             this.PlayerShooting.Bullet = this.RifleBullet;
