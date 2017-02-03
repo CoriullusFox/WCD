@@ -13,21 +13,7 @@
 
 class PlayerShooting : ZilchComponent
 {
-    
-    [Dependency]
-    var Shooting : Shooting = null;
-    
-    [Property]
     var Direction : Real3 = Real3(0,1,0);
-    
-    var Spread : Boolean = false;
-    var NumberOfSpread : Integer = 0;
-    var DistanceBetweenSpreadshots : Real = 0;
-    var BulletSpeed : Real = 50;
-    var LifeLength : Real = 1;
-    var RandomVary : Real = 0.1;
-    var Cooldown : Real = 0;
-    var Bullet : Archetype;
     
     
     
@@ -40,14 +26,13 @@ class PlayerShooting : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.CooldownTimer += event.Dt;
-        if(Zero.Keyboard.KeyIsDown(Keys.Space))
+        if(Zero.Keyboard.KeyIsDown(Keys.Space) || Zero.Mouse.IsButtonDown(MouseButtons.Left))
         {
-            if(this.CooldownTimer >= this.Cooldown)
-            {
-                this.CooldownTimer = 0;
-                this.Shooting.Shoot(this.Bullet, this.Spread, this.NumberOfSpread, this.DistanceBetweenSpreadshots, this.Direction, this.Owner.Transform.Translation, this.BulletSpeed, this.LifeLength, this.RandomVary);
-            }
+            //send shoot event
+            var toSend = Shoot();
+            toSend.Direction = this.Direction;
+            this.Owner.DispatchEvent(Events.Shoot, toSend);
+            
         }
     }
 }
