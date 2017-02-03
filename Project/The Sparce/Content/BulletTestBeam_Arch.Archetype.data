@@ -10,12 +10,12 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "58168efcbf95057e:BulletTestBeam.Archetype.Archetype",
+		string Name = "581eb1c660ff9008:BulletTestBeam_Arch",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [3, 0.3, 1],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "58169c32853e887c:sprLaser_strip4Animation",
+		string SpriteSource = "581ead6330c0e2e8:SprLaser_Sprite",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -87,5 +87,10 @@ Cog =
 	Beam = 
 	{
 		float Speed = 100,
+	},
+	Area = 
+	{
+		Vec2 Size = [0.5, 1],
+		Location Origin = BottomCenter,
 	},
 },

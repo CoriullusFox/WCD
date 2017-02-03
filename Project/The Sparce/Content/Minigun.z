@@ -13,9 +13,11 @@
 
 class Minigun : ZilchComponent
 {
-        var Cooldown : Real = 0;
-    var Bullet : Archetype = Archetype.BulletTest;
-    function Initialize(init : CogInitializer)
+    var Cooldown : Real = 0;
+    
+    [Property]
+    var Bullet : Archetype = Archetype.BulletTest_Arch;
+    function Initialize(init : CogInitializer) 
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);

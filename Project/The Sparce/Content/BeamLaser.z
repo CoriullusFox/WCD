@@ -14,7 +14,9 @@
 class BeamLaser : ZilchComponent
 {
     var Cooldown : Real = 0;
-    var Bullet : Archetype = Archetype.BulletTestBeam;
+    
+    [Property]
+    var Bullet : Archetype = null;
     var FreezTimer : Real = 0;
     function Initialize(init : CogInitializer)
     {
@@ -39,7 +41,7 @@ class BeamLaser : ZilchComponent
     function OnShoot(event : Shoot)
     {
         //only shoot if cooldown is over
-        if(this.Cooldown >= 5)
+        if(this.Cooldown >= 3)
         {
             this.Cooldown = 0;
             /** SHOOTING LOGIC HERE **/
@@ -47,7 +49,7 @@ class BeamLaser : ZilchComponent
             if(this.Bullet != null)
             {
                 this.FreezTimer = 2;
-                var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation - Real3(0,0,1));
+                var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
                 
                 if(createdBullet != null)
                 {

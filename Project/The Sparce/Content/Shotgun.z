@@ -13,9 +13,15 @@
 
 class Shotgun : ZilchComponent
 {
-    var Cooldown : Real = 0;
-    var Bullet : Archetype = Archetype.BulletTest;
+    var Cooldown : Real = 0.0;
+    
+    [Property]
+    var Bullet : Archetype = Archetype.BulletTest_Arch;
+    
+    [Property]
     var NumberOfShots : Integer = 3;
+    
+    [Property]
     var DistBetweenShots : Real = 0.1;
     function Initialize(init : CogInitializer)
     {
@@ -33,7 +39,7 @@ class Shotgun : ZilchComponent
     function OnShoot(event : Shoot)
     {
         //only shoot if cooldown is over
-        if(this.Cooldown >= 0.3)
+        if(this.Cooldown >= 0.5)
         {
             this.Cooldown = 0;
             /** SHOOTING LOGIC HERE **/
