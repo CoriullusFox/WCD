@@ -15,8 +15,6 @@ class EnemyAI : ZilchComponent
         if(distance < 10.0)
         {
             
-            
-            
         }
         
     }
