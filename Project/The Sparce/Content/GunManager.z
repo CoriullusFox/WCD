@@ -242,6 +242,7 @@ class Gun
     var IsActive            : Boolean = false;
     var WeaponTier          : Real = 1;
     var AmmoCount           : Real = -99;
+    var EjectBullet         : Boolean = false;
     
     // DEFAULT CRAFTING RECIPE (1 = NOTHING, -111, -111, -111 MEANS THE ITEM HAS NO CRAFTING RECIPE)
     var CraftingRecipe : Real3 = Real3
@@ -297,6 +298,7 @@ class Gun
         this.SpriteImage = spriteImg;
     }
     
+    [Virtual]
     function SetAsActive(isActive : Boolean)
     {
         this.IsActive = isActive;
@@ -312,6 +314,12 @@ class Gun
     function SetClipSize(ammoCount : Real)
     {
         this.AmmoCount = ammoCount;
+    }
+    
+    [Virtual]
+    function EjectEmptyShell(ejectBullet : Boolean)
+    {
+        this.EjectBullet = ejectBullet;
     }
     
 }
