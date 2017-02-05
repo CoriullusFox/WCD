@@ -24,6 +24,7 @@ class ShootManager : ZilchComponent
     var GunTexture         : Archetype = null;
     var SpreadAmount       : Real = 0.0;
     var NextShot           : Real = 0.0;
+    var CurrAmmoCount      : Real = -99;
     
     function Initialize(init : CogInitializer)
     {
@@ -34,6 +35,7 @@ class ShootManager : ZilchComponent
         this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
         this.GunTexture         = this.Gun.SelectedGunSprite;
         this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+        this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
         
     }
 
@@ -42,50 +44,58 @@ class ShootManager : ZilchComponent
         //Cooldown logic
         this.ModifiableCooldown -= event.Dt;
         
-        if(Zero.Keyboard.KeyIsPressed(Keys.NumPad1))
-        {
-            this.Gun.SelectedGun    = this.Gun.Pistol;
-            this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
-            this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
-            this.GunTexture         = this.Gun.SelectedGunSprite;
-            this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
-        }
-        
-        if(Zero.Keyboard.KeyIsPressed(Keys.NumPad2))
-        {
-            this.Gun.SelectedGun    = this.Gun.Shotgun;
-            this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
-            this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
-            this.GunTexture         = this.Gun.SelectedGunSprite;
-            this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
-        }
-        
-        if(Zero.Keyboard.KeyIsPressed(Keys.NumPad3))
-        {
-            this.Gun.SelectedGun    = this.Gun.Minigun;
-            this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
-            this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
-            this.GunTexture         = this.Gun.SelectedGunSprite;
-            this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
-        }
-        
-        if(Zero.Keyboard.KeyIsPressed(Keys.NumPad4))
-        {
-            this.Gun.SelectedGun    = this.Gun.Rifle;
-            this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
-            this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
-            this.GunTexture         = this.Gun.SelectedGunSprite;
-            this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
-        }
-        
-        if(Zero.Keyboard.KeyIsPressed(Keys.NumPad5))
-        {
-            this.Gun.SelectedGun    = this.Gun.Beam;
-            this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
-            this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
-            this.GunTexture         = this.Gun.SelectedGunSprite;
-            this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
-        }
+        // DEBUG CONTROLS
+        //if(this.Debug.DubugModeEnabled) {
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad1))
+            {
+                this.Gun.SelectedGun    = this.Gun.Pistol;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad2))
+            {
+                this.Gun.SelectedGun    = this.Gun.Shotgun;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad3))
+            {
+                this.Gun.SelectedGun    = this.Gun.Minigun;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad4))
+            {
+                this.Gun.SelectedGun    = this.Gun.Rifle;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad5))
+            {
+                this.Gun.SelectedGun    = this.Gun.Beam;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+            }
+        //}
         
     }
     
@@ -99,8 +109,16 @@ class ShootManager : ZilchComponent
             
             /** SHOOTING LOGIC HERE **/
             
-            if(this.GunTexture != null)
+            if(this.GunTexture != null && (this.CurrAmmoCount > 0 || this.CurrAmmoCount == -99))
             {
+                
+                if(this.CurrAmmoCount != -99)
+                {
+                    this.CurrAmmoCount -= 1;
+                }
+                
+                Console.WriteLine("Ammo Count", this.CurrAmmoCount);
+                
                 var createdBullet = this.Space.CreateAtPosition(this.GunTexture, this.Owner.Transform.Translation);
                 
                 if(createdBullet != null)
@@ -121,9 +139,12 @@ class ShootManager : ZilchComponent
                     
                     createdBullet.Despawn.LifeLength = this.Gun.SelectedGun.Lifespan;
                     
-                } else if(this.Debug.DubugModeEnabled) {
+                }
+                else if(this.Debug.DubugModeEnabled)
+                {
                     Console.WriteLine("createdBullet == null");
                 }
+                
             }
         }
     

@@ -1,0 +1,101 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** (c) 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
+# Info for creating a weapon!
+
+## Required For Basic Weapon
+
+### GunManager.z
+
+#### 1) Add gun name to enum at top
+#### 2) In Archetype Properties Section, add
+
+		[Property]
+		var Archetype[GunName] : Archetype;
+		
+#### 3) In Set Weapon Properties Section, add
+
+		var [GunName] : Gun = new Gun([Spread], [SpreadAmount], [DistBetweenShots], [BulletSpeed], [Lifespan], [RandVariation], [Cooldown]);
+		
+#### 4) In Set Weapon Textures Section, add
+
+		this.[GunName].SetTexture(this.Archetype[GunName]);
+
+#### 5) In Set Active Weapon Section(OnWeaponSwap), add the following:
+
+		else if(this.SelectedWeapon == Guns.[GunName])
+        {
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(false);
+            this.[GunName].SetAsActive(true);
+            this.SelectedWeapon = Guns.[GunName];
+            this.SelectedGun = this.[GunName];
+            this.SelectedGunSprite = this.Archetype[GunName];
+        }
+
+#### 6) Add the following line of code to the other weapons in Set Active Weapon Section (OnWeaponSwap)
+
+		this.[GunName].SetAsActive(false);
+
+## Optional Options For Weapons
+
+### GunManager.z
+
+#### Weapon Tier
+##### 1) In Weapon Tier Properties Section, add [Property] var Tier[GunName] : Integar = 1;
+##### 2) In Set Weapon Tier Section, add this.[GunName].SetTier(this.Tier[GunName]);
+
+#### Weapon Crafting Recipe
+##### 1) In Weapon Crafting Recipes Section, add
+
+		[Property]
+		var Recipe[GunName] : Real3 = Real3
+		(
+			[ID][ID][ID],	// FIRST ROW (USE IDs)
+			[ID][ID][ID],	// SECOND ROW (USE IDs)
+			[ID][ID][ID]	// THIRD ROW (USE IDs)
+		);
+		
+##### 2) In Set Weapon Crafting Recipes Section, add
+
+		this.[GunName].SetCraftingRecipe(this.Recipe[GunName]);
+		
+#### Weapon Ammo Clip Size
+##### 1) In Weapon Clip Size Properties Section, add
+
+		[Property]
+		var Clip[GunName] : Real = [AmmoClipSize];	// Use -99 for infinite ammmo
+		
+##### 2) In Set Clip Size Section, add
+
+		this.[GunName].SetClipSize(this.ClipGunName);
+
+### ShootManager.z
+
+#### Debug Weapon Select Controls
+##### 1) In Debug Controls Section, add
+		if(Zero.Keyboard.KeyIsPressed(Keys.NumPad[WeaponNumber]))
+		{
+			this.Gun.SelectedGun    = this.Gun.[GunName];
+			this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+			this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+			this.GunTexture         = this.Gun.SelectedGunSprite;
+			this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+			this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+		}
+
+
+

@@ -38,27 +38,64 @@ class GunManager : ZilchComponent
     // LINK ITEM ID/MANAGER CLASS
     var Item : ItemManager = null;
     
+    /* ARCHRTYPE PROPERTIES */
+    
+    [Property]
+    var SelectedWeapon      : Guns = Guns.Pistol;
+    
+    [Property]
+    var ArchetypePistol     : Archetype;
+    
+    [Property]
+    var ArchetypeShotgun    : Archetype;
+    
+    [Property]
+    var ArchetypeMinigun    : Archetype;
+    
+    [Property]
+    var ArchetypeRifle      : Archetype;
+    
+    [Property]
+    var ArchetypeBeam       : Archetype;
+    
+    /* WEAPON CLIP SIZE PROPERTIES */
+    
+    [Property]
+    var ClipPistol      : Real = -99;
+    
+    [Property]
+    var ClipShotgun     : Real = 6;
+    
+    [Property]
+    var ClipMinigun     : Real = 500;
+    
+    [Property]
+    var ClipRifle       : Real = 8;
+    
+    [Property]
+    var ClipBeam        : Real = 2;
+    
     /* WEAPON TIER PROPERTIES */
     
     [Property]
-    var TierPistol : Integer = 1;
+    var TierPistol      : Integer = 1;
     
     [Property]
-    var TierShotgun : Integer = 1;
+    var TierShotgun     : Integer = 1;
     
     [Property]
-    var TierMinigun : Integer = 1;
+    var TierMinigun     : Integer = 1;
     
     [Property]
-    var TierRifle : Integer = 1;
+    var TierRifle       : Integer = 1;
     
     [Property]
-    var TierBeam : Integer = 1;
+    var TierBeam        : Integer = 1;
     
     /* WEAPON CRAFTING RECIPES (USING ITEM IDs) */
     
     [Property]
-    var RecipePistol : Real3 = Real3
+    var RecipePistol  : Real3 = Real3
     (
         111,
         211,
@@ -73,31 +110,11 @@ class GunManager : ZilchComponent
         111
     );
     
-    /* ARCHRTYPE PROPERTIES */
-    
-    [Property]
-    var SelectedWeapon : Guns = Guns.Pistol;
-    
-    [Property]
-    var ArchetypePistol : Archetype;
-    
-    [Property]
-    var ArchetypeShotgun : Archetype;
-    
-    [Property]
-    var ArchetypeMinigun : Archetype;
-    
-    [Property]
-    var ArchetypeRifle : Archetype;
-    
-    [Property]
-    var ArchetypeBeam : Archetype;
-    
     // SET WEAPON PROPERTIES
-    var Pistol  : Gun = new Gun(false, 0.0, 0.0, 50.0, 0.3, 0.01, 0.3);
+    var Pistol  : Gun = new Gun(false, 0.05, 0.0, 50.0, 0.3, 0.01, 0.3);
     var Shotgun : Gun = new Gun(true, 0.2, 0.1, 50, 0.5, 0.01, 0.4);
-    var Minigun : Gun = new Gun(false, 0.0, 0.0, 45.0, 0.4, 0.05, 0.0);
-    var Rifle   : Gun = new Gun(false, 0.0, 0.0, 45.0, 2.0, 0.01, 1.0);
+    var Minigun : Gun = new Gun(false, 0.09, 0.0, 45.0, 0.4, 0.05, 0.0);
+    var Rifle   : Gun = new Gun(false, 0.01, 0.0, 45.0, 2.0, 0.01, 1.0);
     var Beam    : Gun = new Gun(false, 0.0, 0.0, 0.0, 2.0, 0.0, 5.0);
     
     // SELECTED WEAPON PROPERTIES
@@ -114,9 +131,16 @@ class GunManager : ZilchComponent
         this.Rifle.SetTexture(this.ArchetypeRifle);
         this.Beam.SetTexture(this.ArchetypeBeam);
         
-        // SET WEAPON CRAFTING RECIPIES
+        // SET WEAPON CRAFTING RECIPES
         this.Pistol.SetCraftingRecipe(this.RecipePistol);
         this.Shotgun.SetCraftingRecipe(this.RecipeShotgun);
+        
+        // SET CLIP SIZE
+        this.Pistol.SetClipSize(this.ClipPistol);
+        this.Shotgun.SetClipSize(this.ClipShotgun);
+        this.Minigun.SetClipSize(this.ClipMinigun);
+        this.Rifle.SetClipSize(this.ClipRifle);
+        this.Beam.SetClipSize(this.ClipBeam);
         
         // SET DEFAULT GUN
         this.SelectedGun = this.Pistol;
@@ -217,8 +241,9 @@ class Gun
     var SpriteImage         : Archetype = null;
     var IsActive            : Boolean = false;
     var WeaponTier          : Real = 1;
+    var AmmoCount           : Real = -99;
     
-    // DEFAULT CRAFTING RECIPE (1 = NOTHING, A NEGATIVE NUMBER MEANS THE ITEM HAS NO CRAFTING RECIPE)
+    // DEFAULT CRAFTING RECIPE (1 = NOTHING, -111, -111, -111 MEANS THE ITEM HAS NO CRAFTING RECIPE)
     var CraftingRecipe : Real3 = Real3
     (
         -111,
@@ -226,7 +251,8 @@ class Gun
         -111
     );
     
-    function SetTier(weaponTier : Real) {
+    function SetTier(weaponTier : Real)
+    {
         this.WeaponTier = weaponTier;
     }
     
@@ -239,7 +265,8 @@ class Gun
         var tierLowerProperty = this.WeaponTier - 1;
         
         // ONLY APPLY TIER BONUS IF WEAPON IS HIGHER THAN TIER ONE
-        if(this.WeaponTier > 1) {
+        if(this.WeaponTier > 1)
+        {
             tier = this.WeaponTier + 0.2;
             tierLowerProperty = (this.WeaponTier - 1) / 6;
         }
@@ -253,27 +280,38 @@ class Gun
         this.Cooldown         = cooldown - tierLowerProperty;
         this.SpriteImage      = Archetype.MissingTexture;
         
-        if(this.DistBetweenShots < 0) {
+        if(this.DistBetweenShots < 0)
+        {
             this.DistBetweenShots = 0;
         }
         
-        if(this.Cooldown < 0) {
+        if(this.Cooldown < 0)
+        {
             this.Cooldown = 0;
         }
         
     }
     
-    function SetTexture(spriteImg : Archetype) {
+    function SetTexture(spriteImg : Archetype)
+    {
         this.SpriteImage = spriteImg;
     }
     
-    function SetAsActive(isActive : Boolean) {
+    function SetAsActive(isActive : Boolean)
+    {
         this.IsActive = isActive;
     }
     
     [Virtual]
-    function SetCraftingRecipe(craftingRecipe : Real3) {
+    function SetCraftingRecipe(craftingRecipe : Real3)
+    {
         this.CraftingRecipe = craftingRecipe;
+    }
+    
+    [Virtual]
+    function SetClipSize(ammoCount : Real)
+    {
+        this.AmmoCount = ammoCount;
     }
     
 }
