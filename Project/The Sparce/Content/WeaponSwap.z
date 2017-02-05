@@ -34,90 +34,36 @@ class WeaponSwap : ZilchComponent
         var init : CogInitializer = null;
         if(event.Key == Keys.NumPad7)
         {
-            //this is a place where guns are disabled!
-            this.Owner.RemoveComponentByName("Pistol");
-            this.Owner.RemoveComponentByName("Shotgun");
-            this.Owner.RemoveComponentByName("Minigun");
-            this.Owner.RemoveComponentByName("BeamLaser");
-            this.Owner.RemoveComponentByName("Rifle");
-            
-            this.Owner.AddComponentByName("Pistol");
-            this.Owner.Pistol.Initialize(init);
+            this.RemoveComponents();
+            this.AddNewComponent("Pistol", true);
         }
         else if(event.Key == Keys.NumPad8)
         {
-            if(this.ShotgunUnlocked)
-            {
-                //this is a place where guns are disabled!
-                this.Owner.RemoveComponentByName("Pistol");
-                this.Owner.RemoveComponentByName("Shotgun");
-                this.Owner.RemoveComponentByName("Minigun");
-                this.Owner.RemoveComponentByName("BeamLaser");
-                this.Owner.RemoveComponentByName("Rifle");
-                
-                this.Owner.AddComponentByName("Shotgun");
-                this.Owner.Shotgun.Initialize(init);
-            }
+            this.RemoveComponents();
+            this.AddNewComponent("Shotgun", this.ShotgunUnlocked);
         }
         else if(event.Key == Keys.NumPad9)
         {
-            if(this.MinigunUnlocked)
-            {
-                //this is a place where guns are disabled!
-                this.Owner.RemoveComponentByName("Pistol");
-                this.Owner.RemoveComponentByName("Shotgun");
-                this.Owner.RemoveComponentByName("Minigun");
-                this.Owner.RemoveComponentByName("BeamLaser");
-                this.Owner.RemoveComponentByName("Rifle");
-                
-                this.Owner.AddComponentByName("Minigun");
-                this.Owner.Minigun.Initialize(init);
-            }
+            this.RemoveComponents();
+            this.AddNewComponent("Minigun", this.MinigunUnlocked);
         }
         else if(event.Key == Keys.NumPad4)
         {
-            if(this.BeamLaserUnlocked)
-            {
-                //this is a place where guns are disabled!
-                this.Owner.RemoveComponentByName("Pistol");
-                this.Owner.RemoveComponentByName("Shotgun");
-                this.Owner.RemoveComponentByName("Minigun");
-                this.Owner.RemoveComponentByName("BeamLaser");
-                this.Owner.RemoveComponentByName("Rifle");
-                
-                this.Owner.AddComponentByName("BeamLaser");
-                this.Owner.BeamLaser.Initialize(init);
-            }
+            this.RemoveComponents();
+            this.AddNewComponent("BeamLaser", this.BeamLaserUnlocked);
         }
         else if(event.Key == Keys.NumPad5)
         {
-            if(this.RifleUnlocked)
-            {
-                //this is a place where guns are disabled!
-                this.Owner.RemoveComponentByName("Pistol");
-                this.Owner.RemoveComponentByName("Shotgun");
-                this.Owner.RemoveComponentByName("Minigun");
-                this.Owner.RemoveComponentByName("BeamLaser");
-                this.Owner.RemoveComponentByName("Rifle");
-                //INSTRUCTIONS! add code to disable your gun component everywhere where guns are disabled
-                
-                //this is where the gun is added back
-                this.Owner.AddComponentByName("Rifle");
-                this.Owner.Rifle.Initialize(init);
-            }
+            this.RemoveComponents();
+            this.AddNewComponent("Rifle", this.RifleUnlocked);
         }
-        //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but adding bach your gun!
+        //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
 
     function OnMouseScroll(event : ViewportMouseEvent)
     {
         //remove components and clamp selected
-        //this is a place where guns are disabled!
-        this.Owner.RemoveComponentByName("Pistol");
-        this.Owner.RemoveComponentByName("Shotgun");
-        this.Owner.RemoveComponentByName("Minigun");
-        this.Owner.RemoveComponentByName("BeamLaser");
-        this.Owner.RemoveComponentByName("Rifle");
+        this.RemoveComponents();
         this.Selected += event.Scroll.Y as Integer;
         if(this.Selected > this.NumberOfWeapons - 1)
         {
@@ -132,42 +78,68 @@ class WeaponSwap : ZilchComponent
         var init : CogInitializer = null;
         if(this.Selected == 0)
         {
-            this.Owner.AddComponentByName("Pistol");
-            this.Owner.Pistol.Initialize(init);
+            this.AddNewComponent("Pistol", true);
         }
         else if(this.Selected == 1)
         {
-            if(this.ShotgunUnlocked)
-            {
-                this.Owner.AddComponentByName("Shotgun");
-                this.Owner.Shotgun.Initialize(init);
-            }
+            this.AddNewComponent("Shotgun", this.ShotgunUnlocked);
         }
         else if(this.Selected == 2)
         {
-            if(this.MinigunUnlocked)
-            {
-                this.Owner.AddComponentByName("Minigun");
-                this.Owner.Minigun.Initialize(init);
-            }
+            this.AddNewComponent("Minigun", this.MinigunUnlocked);
         }
         else if(this.Selected == 3)
         {
-            if(this.BeamLaserUnlocked)
-            {
-                this.Owner.AddComponentByName("BeamLaser");
-                this.Owner.BeamLaser.Initialize(init);
-            }
+            this.AddNewComponent("BeamLaser", this.RifleUnlocked);
         }
         else if(this.Selected == 4)
         {
-            if(this.RifleUnlocked)
+            this.AddNewComponent("Rifle", this.RifleUnlocked);
+        }
+        //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
+    }
+    
+    function RemoveComponents()
+    {
+        
+        this.Owner.RemoveComponentByName("Pistol");
+        this.Owner.RemoveComponentByName("Shotgun");
+        this.Owner.RemoveComponentByName("Minigun");
+        this.Owner.RemoveComponentByName("BeamLaser");
+        this.Owner.RemoveComponentByName("Rifle");
+        //INSTRUCTIONS! add code to disable your gun component here, example: this.Owner.RemoveComponentByName("BlahGun");
+        
+    }
+    function AddNewComponent(name : String, unlocked : Boolean)
+    {
+        
+        if(unlocked)
+        {
+            var init : CogInitializer = null;
+            this.Owner.AddComponentByName(name);
+            if(this.Owner.Pistol != null)
             {
-                //this is where the gun is added back
-                this.Owner.AddComponentByName("Rifle");
+                this.Owner.Pistol.Initialize(init);
+            }
+            if(this.Owner.Shotgun != null)
+            {
+                this.Owner.Shotgun.Initialize(init);
+            }
+            if(this.Owner.Minigun != null)
+            {
+                this.Owner.Minigun.Initialize(init);
+            }
+            if(this.Owner.BeamLaser != null)
+            {
+                this.Owner.BeamLaser.Initialize(init);
+            }
+            if(this.Owner.Rifle != null)
+            {
                 this.Owner.Rifle.Initialize(init);
             }
+            //INSTRUCTIONS add a new if statement for initializing the component of the gun that you are adding!
         }
-        //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but adding bach your gun!
+        
     }
+    
 }
