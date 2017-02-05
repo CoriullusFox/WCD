@@ -48,17 +48,6 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	PlayerShooting = 
-	{
-	},
-	Movement = 
-	{
-		float Speed = 250,
-		float RunSpeed = 500,
-	},
-	ChangeDirectionToPointAtMouse = 
-	{
-	},
 	GunManager = 
 	{
 		Enum SelectedWeapon = Pistol,
@@ -79,6 +68,17 @@ Cog =
 		int TierBeam = 1,
 		Vec3 RecipePistol = [111, 211, 111],
 		Vec3 RecipeShotgun = [111, 511, 111],
+	},
+	PlayerShooting = 
+	{
+	},
+	Movement = 
+	{
+		float Speed = 250,
+		float RunSpeed = 500,
+	},
+	ChangeDirectionToPointAtMouse = 
+	{
 	},
 	ShootManager = 
 	{

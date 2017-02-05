@@ -18,15 +18,16 @@ class ShootManager : ZilchComponent
     var Gun : GunManager = null;
     
     var Debug : DebugMode = null;
-    var AmmoC : AmmoBar = null;
+    var AmmoBar : AmmoBar = null;
     
     var ModifiableCooldown : Real = 0.0;
     var CoolDwn            : Real = 0.0;
     var GunTexture         : Archetype = null;
     var SpreadAmount       : Real = 0.0;
     var NextShot           : Real = 0.0;
-    var CurrAmmoCount      : Real = -99;
-    var DefaultAmmoCount   : Real = 0.0;
+    var CurrAmmoCount      : Real = -99.0;
+    var DefaultAmmoCount   : Real = 5.0;
+    var AmmoSubtract       : Real = 1.0;
     
     function Initialize(init : CogInitializer)
     {
@@ -120,9 +121,14 @@ class ShootManager : ZilchComponent
             if(this.GunTexture != null && (this.CurrAmmoCount > 0 || this.CurrAmmoCount == -99))
             {
                 
-                if(this.CurrAmmoCount != -99)
+                if(this.CurrAmmoCount != -99.0)
                 {
-                    this.CurrAmmoCount -= 1;
+                    this.CurrAmmoCount -= this.AmmoSubtract;
+                }
+                
+                if(this.CurrAmmoCount != this.DefaultAmmoCount) {
+                    //this.AmmoBar.AmmoCountF(this.CurrAmmoCount, this.DefaultAmmoCount);
+                    //this.AmmoBar.AmmoCount = this.CurrAmmoCount;
                 }
                 
                 Console.WriteLine("Ammo Count", this.CurrAmmoCount);
@@ -146,8 +152,6 @@ class ShootManager : ZilchComponent
                     createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
                     
                     createdBullet.Despawn.LifeLength = this.Gun.SelectedGun.Lifespan;
-                    
-                    //this.AmmoC.AmmoCountF(this.CurrAmmoCount, this.Gun.SelectedGun.AmmoCount);
                     
                 }
                 
