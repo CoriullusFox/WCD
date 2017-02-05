@@ -18,6 +18,7 @@ class ShootManager : ZilchComponent
     var Gun : GunManager = null;
     
     var Debug : DebugMode = null;
+    var AmmoC : AmmoBar = null;
     
     var ModifiableCooldown : Real = 0.0;
     var CoolDwn            : Real = 0.0;
@@ -25,6 +26,7 @@ class ShootManager : ZilchComponent
     var SpreadAmount       : Real = 0.0;
     var NextShot           : Real = 0.0;
     var CurrAmmoCount      : Real = -99;
+    var DefaultAmmoCount   : Real = 0.0;
     
     function Initialize(init : CogInitializer)
     {
@@ -36,6 +38,7 @@ class ShootManager : ZilchComponent
         this.GunTexture         = this.Gun.SelectedGunSprite;
         this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
         this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+        this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
         
     }
 
@@ -54,6 +57,7 @@ class ShootManager : ZilchComponent
                 this.GunTexture         = this.Gun.SelectedGunSprite;
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad2))
@@ -64,6 +68,7 @@ class ShootManager : ZilchComponent
                 this.GunTexture         = this.Gun.SelectedGunSprite;
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad3))
@@ -74,6 +79,7 @@ class ShootManager : ZilchComponent
                 this.GunTexture         = this.Gun.SelectedGunSprite;
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad4))
@@ -84,6 +90,7 @@ class ShootManager : ZilchComponent
                 this.GunTexture         = this.Gun.SelectedGunSprite;
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad5))
@@ -94,6 +101,7 @@ class ShootManager : ZilchComponent
                 this.GunTexture         = this.Gun.SelectedGunSprite;
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
             }
         //}
         
@@ -138,6 +146,8 @@ class ShootManager : ZilchComponent
                     createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
                     
                     createdBullet.Despawn.LifeLength = this.Gun.SelectedGun.Lifespan;
+                    
+                    //this.AmmoC.AmmoCountF(this.CurrAmmoCount, this.Gun.SelectedGun.AmmoCount);
                     
                 }
                 

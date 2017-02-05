@@ -95,6 +95,7 @@
 			this.GunTexture         = this.Gun.SelectedGunSprite;
 			this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
 			this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+			this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
 		}
 
 

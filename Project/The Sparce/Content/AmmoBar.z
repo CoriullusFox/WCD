@@ -1,0 +1,22 @@
+class AmmoBar : ZilchComponent
+{
+    
+    var AmmoCount : Real = 0;
+    var CurrAmmoCount : Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.Transform.Scale = Real3(this.AmmoCount, 0.15, 1);
+    }
+    
+    function AmmoCountF(currAmmoCount : Real, defaultAmmoCount : Real) {
+        this.AmmoCount = currAmmoCount;
+        this.CurrAmmoCount = defaultAmmoCount;
+    }
+    
+}
