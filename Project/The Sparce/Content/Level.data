@@ -223,17 +223,17 @@ Level =
 		ChangeDirectionToPointAtMouse = 
 		{
 		},
-		WeponSwap = 
-		{
-			bool ShotgunUnlocked = true,
-			bool MinigunUnlocked = true,
-			bool BeamLaserUnlocked = true,
-			bool RifleUnlocked = true,
-			int NumberOfWepons = 5,
-		},
 		Pistol = 
 		{
 			string Bullet = "58385bdc673b144c:BulletTest",
+		},
+		WeponSwap = 
+		{
+			bool ShotgunUnlocked = false,
+			bool MinigunUnlocked = false,
+			bool BeamLaserUnlocked = false,
+			bool RifleUnlocked = false,
+			int NumberOfWeapons = 5,
 		},
 	},
 },
