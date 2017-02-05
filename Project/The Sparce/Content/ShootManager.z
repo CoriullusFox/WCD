@@ -140,10 +140,6 @@ class ShootManager : ZilchComponent
                     createdBullet.Despawn.LifeLength = this.Gun.SelectedGun.Lifespan;
                     
                 }
-                else if(this.Debug.DubugModeEnabled)
-                {
-                    Console.WriteLine("createdBullet == null");
-                }
                 
             }
         }

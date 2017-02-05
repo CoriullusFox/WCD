@@ -61,6 +61,17 @@ Cog =
 	},
 	GunManager = 
 	{
+		Enum SelectedWeapon = Pistol,
+		string ArchetypePistol = "4faa6050b86884ec:DefaultArchetype",
+		string ArchetypeShotgun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypeMinigun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypeRifle = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypeBeam = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		float ClipPistol = -99,
+		float ClipShotgun = 6,
+		float ClipMinigun = 500,
+		float ClipRifle = 8,
+		float ClipBeam = 2,
 		int TierPistol = 1,
 		int TierShotgun = 1,
 		int TierMinigun = 1,
@@ -68,12 +79,6 @@ Cog =
 		int TierBeam = 1,
 		Vec3 RecipePistol = [111, 211, 111],
 		Vec3 RecipeShotgun = [111, 511, 111],
-		Enum SelectedWeapon = Pistol,
-		string ArchetypePistol = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
-		string ArchetypeShotgun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
-		string ArchetypeMinigun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
-		string ArchetypeRifle = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
-		string ArchetypeBeam = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
 	},
 	ShootManager = 
 	{

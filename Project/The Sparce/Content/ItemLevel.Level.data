@@ -166,12 +166,19 @@ Level =
 			bool Active = true,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "585d46aa5615f38d:TempPlayer",
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "TempPlayer",
+		},
+		Archetyped = 
+		{
+			string Name = "585d46aa5615f38d:TempPlayer",
 		},
 		Transform = 
 		{
@@ -179,9 +186,74 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "TempPlayer",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		PlayerShooting = 
+		{
+		},
+		Movement = 
+		{
+			float Speed = 250,
+			float RunSpeed = 500,
+		},
+		ChangeDirectionToPointAtMouse = 
+		{
+		},
+		GunManager = 
+		{
+			Enum SelectedWeapon = Pistol,
+			string ArchetypePistol = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+			string ArchetypeShotgun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+			string ArchetypeMinigun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+			string ArchetypeRifle = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+			string ArchetypeBeam = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+			float ClipPistol = -99,
+			float ClipShotgun = 6,
+			float ClipMinigun = 500,
+			float ClipRifle = 8,
+			float ClipBeam = 2,
+			int TierPistol = 1,
+			int TierShotgun = 1,
+			int TierMinigun = 1,
+			int TierRifle = 1,
+			int TierBeam = 1,
+			Vec3 RecipePistol = [111, 211, 111],
+			Vec3 RecipeShotgun = [111, 511, 111],
+		},
+		ShootManager = 
+		{
+		},
+		DebugMode = 
+		{
+			bool DubugModeEnabled = true,
 		},
 	},
 },
