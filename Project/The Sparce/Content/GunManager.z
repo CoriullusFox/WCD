@@ -23,14 +23,20 @@
 
 // STILL BEING EDITED!
 
-enum Guns { Pistol, Shotgun, Minigun, Rifle, Beam }
+enum Guns
+{
+    Pistol,
+    Shotgun,
+    Minigun,
+    Rifle,
+    Beam
+}
 
 class GunManager : ZilchComponent
 {
     
-    // ITEM ID/MANAGER DEPENDENCY
-    [Dependency]
-    var Items : ItemManager = null;
+    // LINK ITEM ID/MANAGER CLASS
+    var Item : ItemManager = null;
     
     /* WEAPON TIER PROPERTIES */
     
@@ -89,10 +95,14 @@ class GunManager : ZilchComponent
     
     // SET WEAPON PROPERTIES
     var Pistol  : Gun = new Gun(false, 0, 0, 50, 0.3, 0.01, 0.3);
-    var Shotgun : Gun = new Gun(true, 3, 0.1, 50, 0.5, 0.01, 1);
+    var Shotgun : Gun = new Gun(true, 0.2, 0.1, 50, 0.5, 0.01, 1);
     var Minigun : Gun = new Gun(false, 0, 0, 45, 0.4, 0.05, 0.01);
     var Rifle   : Gun = new Gun(false, 0, 0, 45, 2, 0.01, 1);
     var Beam    : Gun = new Gun(false, 0, 0, 0, 2, 0, 5);
+    
+    // SELECTED WEAPON PROPERTIES
+    var SelectedGun         : Gun;
+    var SelectedGunSprite   : Archetype = Archetype.MissingTexture;
     
     function Initialize(init : CogInitializer)
     {
@@ -107,6 +117,10 @@ class GunManager : ZilchComponent
         // SET WEAPON CRAFTING RECIPIES
         this.Pistol.SetCraftingRecipe(this.RecipePistol);
         this.Shotgun.SetCraftingRecipe(this.RecipeShotgun);
+        
+        // SET DEFAULT GUN
+        this.SelectedGun = this.Pistol;
+        this.SelectedGunSprite = this.ArchetypePistol;
         
         // CONNECTS OTHER FUNCTIONS
         Zero.Connect(this.Space, Events.LogicUpdate, this.UpdateWeaponProperties);
@@ -136,6 +150,9 @@ class GunManager : ZilchComponent
             this.Minigun.SetAsActive(false);
             this.Rifle.SetAsActive(false);
             this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Pistol;
+            this.SelectedGun = this.Pistol;
+            this.SelectedGunSprite = this.ArchetypePistol;
         }
         else if(this.SelectedWeapon == Guns.Shotgun)
         {
@@ -144,6 +161,9 @@ class GunManager : ZilchComponent
             this.Minigun.SetAsActive(false);
             this.Rifle.SetAsActive(false);
             this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Shotgun;
+            this.SelectedGun = this.Shotgun;
+            this.SelectedGunSprite = this.ArchetypeShotgun;
         }
         else if(this.SelectedWeapon == Guns.Minigun)
         {
@@ -152,6 +172,9 @@ class GunManager : ZilchComponent
             this.Minigun.SetAsActive(true);
             this.Rifle.SetAsActive(false);
             this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Minigun;
+            this.SelectedGun = this.Minigun;
+            this.SelectedGunSprite = this.ArchetypeMinigun;
         }
         else if(this.SelectedWeapon == Guns.Rifle)
         {
@@ -160,6 +183,9 @@ class GunManager : ZilchComponent
             this.Minigun.SetAsActive(false);
             this.Rifle.SetAsActive(true);
             this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Rifle;
+            this.SelectedGun = this.Rifle;
+            this.SelectedGunSprite = this.ArchetypeRifle;
         }
         else if(this.SelectedWeapon == Guns.Beam)
         {
@@ -168,6 +194,9 @@ class GunManager : ZilchComponent
             this.Minigun.SetAsActive(false);
             this.Rifle.SetAsActive(false);
             this.Beam.SetAsActive(true);
+            this.SelectedWeapon = Guns.Beam;
+            this.SelectedGun = this.Beam;
+            this.SelectedGunSprite = this.ArchetypeBeam;
         }
         
     }
@@ -179,7 +208,7 @@ class Gun
 {
     
     var Spread              : Boolean = false;
-    var SpreadAmount        : Integer = 0;
+    var SpreadAmount        : Real = 0;
     var DistBetweenShots    : Real = 0.0;
     var BulletSpeed         : Real = 50.0;
     var Lifespan            : Real = 1.0;
@@ -203,7 +232,7 @@ class Gun
     
     // CLASS PARAMS
     [Virtual]
-    constructor(spread : Boolean, spreadAmount : Integer, distBetweenShots : Real, bulletSpeed : Real, lifespan : Real, randVary : Real, cooldown : Real)
+    constructor(spread : Boolean, spreadAmount : Real, distBetweenShots : Real, bulletSpeed : Real, lifespan : Real, randVary : Real, cooldown : Real)
     {
         
         var tier = this.WeaponTier;

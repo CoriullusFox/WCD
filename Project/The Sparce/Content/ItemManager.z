@@ -32,6 +32,8 @@
 class ItemManager : ZilchComponent
 {
     
+    var Gun                     : GunManager = null;
+    
     var ItemAir                 : Integer = 1;
     var ItemBarrelSmall         : Integer = 2;
     var ItemBarrelMedium        : Integer = 3;

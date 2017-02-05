@@ -1,0 +1,31 @@
+class DebugMode : ZilchComponent
+{
+    
+    [Property]
+    var DubugModeEnabled : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.F3))
+        {
+            
+            this.DubugModeEnabled = !this.DubugModeEnabled;
+            
+            if(this.DubugModeEnabled)
+            {
+                Console.WriteLine("Debug Mode: 'Enabled'");
+            }
+            else if(!this.DubugModeEnabled)
+            {
+                Console.WriteLine("Debug Mode: 'Disabled'");
+            }
+            
+        }
+    }
+    
+}
