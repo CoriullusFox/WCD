@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0.11, 0, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -62,11 +62,11 @@ Cog =
 	GunManager = 
 	{
 		Enum SelectedWeapon = Pistol,
-		string ArchetypePistol = "4faa6050b86884ec:DefaultArchetype",
-		string ArchetypeShotgun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
-		string ArchetypeMinigun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
-		string ArchetypeRifle = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
-		string ArchetypeBeam = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypePistol = "585c1eb1faa07ab2:BulletTest",
+		string ArchetypeShotgun = "585c1eb1faa07ab2:BulletTest",
+		string ArchetypeMinigun = "585c1eb1faa07ab2:BulletTest",
+		string ArchetypeRifle = "585c1eb1faa07ab2:BulletTest",
+		string ArchetypeBeam = "585c1eb1faa07ab2:BulletTest",
 		float ClipPistol = -99,
 		float ClipShotgun = 6,
 		float ClipMinigun = 500,
@@ -85,6 +85,21 @@ Cog =
 	},
 	DebugMode = 
 	{
-		bool DubugModeEnabled = false,
+		bool DubugModeEnabled = true,
+	},
+	IgnoreSpaceEffects = 
+	{
+		bool Drag = false,
+		bool Flow = false,
+		bool Force = false,
+		bool Gravity = true,
+		bool Thrust = false,
+		bool Vortex = false,
+		bool Wind = false,
+		bool Invalid = false,
+		bool Torque = false,
+		bool PointGravity = false,
+		bool PointForce = false,
+		bool Buoyancy = false,
 	},
 },
