@@ -15,7 +15,7 @@ class Rifle : ZilchComponent
     var Cooldown : Real = 0;
     
     [Property]
-    var Bullet : Archetype = Archetype.Find("BulletTest_Arch.Archetype");
+    var Bullet : Archetype = Archetype.BulletTest;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);

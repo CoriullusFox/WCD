@@ -1,0 +1,156 @@
+
+
+class WeponSwap : ZilchComponent
+{
+    [Property]
+    var ShotgunUnlocked : Boolean = false;
+    [Property]
+    var MinigunUnlocked : Boolean = false;
+    [Property]
+    var BeamLaserUnlocked : Boolean = false;
+    [Property]
+    var RifleUnlocked : Boolean = false;
+    [Property]
+    var NumberOfWepons : Integer = 5;
+    
+    var Selected : Integer = 0;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+    }
+    
+    
+    
+    function OnKeyDown(event : KeyboardEvent)
+    {
+        //swap based on buttons being pressed
+        var init : CogInitializer = null;
+        if(event.Key == Keys.NumPad7)
+        {
+            this.Owner.RemoveComponentByName("Pistol");
+            this.Owner.RemoveComponentByName("Shotgun");
+            this.Owner.RemoveComponentByName("Minigun");
+            this.Owner.RemoveComponentByName("BeamLaser");
+            this.Owner.RemoveComponentByName("Rifle");
+            
+            this.Owner.AddComponentByName("Pistol");
+            this.Owner.Pistol.Initialize(init);
+        }
+        else if(event.Key == Keys.NumPad8)
+        {
+            if(this.ShotgunUnlocked)
+            {
+                this.Owner.RemoveComponentByName("Pistol");
+                this.Owner.RemoveComponentByName("Shotgun");
+                this.Owner.RemoveComponentByName("Minigun");
+                this.Owner.RemoveComponentByName("BeamLaser");
+                this.Owner.RemoveComponentByName("Rifle");
+                
+                this.Owner.AddComponentByName("Shotgun");
+                this.Owner.Shotgun.Initialize(init);
+            }
+        }
+        else if(event.Key == Keys.NumPad9)
+        {
+            if(this.MinigunUnlocked)
+            {
+                this.Owner.RemoveComponentByName("Pistol");
+                this.Owner.RemoveComponentByName("Shotgun");
+                this.Owner.RemoveComponentByName("Minigun");
+                this.Owner.RemoveComponentByName("BeamLaser");
+                this.Owner.RemoveComponentByName("Rifle");
+                
+                this.Owner.AddComponentByName("Minigun");
+                this.Owner.Minigun.Initialize(init);
+            }
+        }
+        else if(event.Key == Keys.NumPad4)
+        {
+            if(this.BeamLaserUnlocked)
+            {
+                this.Owner.RemoveComponentByName("Pistol");
+                this.Owner.RemoveComponentByName("Shotgun");
+                this.Owner.RemoveComponentByName("Minigun");
+                this.Owner.RemoveComponentByName("BeamLaser");
+                this.Owner.RemoveComponentByName("Rifle");
+                
+                this.Owner.AddComponentByName("BeamLaser");
+                this.Owner.BeamLaser.Initialize(init);
+            }
+        }
+        else if(event.Key == Keys.NumPad5)
+        {
+            if(this.RifleUnlocked)
+            {
+                this.Owner.RemoveComponentByName("Pistol");
+                this.Owner.RemoveComponentByName("Shotgun");
+                this.Owner.RemoveComponentByName("Minigun");
+                this.Owner.RemoveComponentByName("BeamLaser");
+                this.Owner.RemoveComponentByName("Rifle");
+                
+                this.Owner.AddComponentByName("Rifle");
+                this.Owner.Rifle.Initialize(init);
+            }
+        }
+    }
+
+    function OnMouseScroll(event : ViewportMouseEvent)
+    {
+        //remove components and clamp selected
+        this.Owner.RemoveComponentByName("Pistol");
+        this.Owner.RemoveComponentByName("Shotgun");
+        this.Owner.RemoveComponentByName("Minigun");
+        this.Owner.RemoveComponentByName("BeamLaser");
+        this.Owner.RemoveComponentByName("Rifle");
+        this.Selected += event.Scroll.Y as Integer;
+        if(this.Selected > this.NumberOfWepons - 1)
+        {
+            this.Selected = 0;
+        }
+        else if(this.Selected < 0)
+        {
+            this.Selected = this.NumberOfWepons - 1;
+        }
+        
+        //add new components and check if unlocked
+        var init : CogInitializer = null;
+        if(this.Selected == 0)
+        {
+            this.Owner.AddComponentByName("Pistol");
+            this.Owner.Pistol.Initialize(init);
+        }
+        else if(this.Selected == 1)
+        {
+            if(this.ShotgunUnlocked)
+            {
+                this.Owner.AddComponentByName("Shotgun");
+                this.Owner.Shotgun.Initialize(init);
+            }
+        }
+        else if(this.Selected == 2)
+        {
+            if(this.MinigunUnlocked)
+            {
+                this.Owner.AddComponentByName("Minigun");
+                this.Owner.Minigun.Initialize(init);
+            }
+        }
+        else if(this.Selected == 3)
+        {
+            if(this.BeamLaserUnlocked)
+            {
+                this.Owner.AddComponentByName("BeamLaser");
+                this.Owner.BeamLaser.Initialize(init);
+            }
+        }
+        else if(this.Selected == 4)
+        {
+            if(this.RifleUnlocked)
+            {
+                this.Owner.AddComponentByName("Rifle");
+                this.Owner.Rifle.Initialize(init);
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@ class BeamLaser : ZilchComponent
 {
     var Cooldown : Real = 0;
     
-    var Bullet : Archetype = Archetype.Find("BulletTestBeam_Arch.Archetype");
+    var Bullet : Archetype = Archetype.BulletTestBeam;
     var FreezTimer : Real = 0;
     function Initialize(init : CogInitializer)
     {

@@ -6,16 +6,12 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "BulletTest",
-	},
-	Archetyped = 
-	{
-		string Name = "58385bdc673b144c:BulletTest",
+		string Name = "BulletTestBeam",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [0.3, 0.3, 1],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +24,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "4e07948c35993095:DefaultSprite",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -73,5 +69,24 @@ Cog =
 	Despawn = 
 	{
 		float LifeLength = 10,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0.5, 0],
+		Vec3 Size = [0.5, 0.5, 0.5],
+	},
+	Beam = 
+	{
+		float Speed = 100,
+	},
+	Area = 
+	{
+		Vec2 Size = [0.5, 1],
+		Location Origin = BottomCenter,
 	},
 },

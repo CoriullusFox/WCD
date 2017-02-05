@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.329649, 0.37356, 50],
+			Vec3 Translation = [0.0442991, 0.0824005, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.64025,
+			float Size = 7.33861,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.329649, 0.37356, -1.44094e-008],
+			Vec3 LookTarget = [0.0442991, 0.0824005, 1.93637e-009],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -223,9 +223,17 @@ Level =
 		ChangeDirectionToPointAtMouse = 
 		{
 		},
+		WeponSwap = 
+		{
+			bool ShotgunUnlocked = true,
+			bool MinigunUnlocked = true,
+			bool BeamLaserUnlocked = true,
+			bool RifleUnlocked = true,
+			int NumberOfWepons = 5,
+		},
 		Pistol = 
 		{
-			string Bullet = "583f1fe70f05cfdc:BulletTest_Arch.Archetype",
+			string Bullet = "58385bdc673b144c:BulletTest",
 		},
 	},
 },

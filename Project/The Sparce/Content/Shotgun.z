@@ -16,7 +16,7 @@ class Shotgun : ZilchComponent
     var Cooldown : Real = 0.0;
     
     [Property]
-    var Bullet : Archetype = Archetype.Find("BulletTest_Arch.Archetype");
+    var Bullet : Archetype = Archetype.BulletTest;
     
     [Property]
     var NumberOfShots : Integer = 3;
