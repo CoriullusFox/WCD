@@ -8,7 +8,7 @@
 ** - Hudson Green
 **
 ** Contributors:
-** - none
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 
 class ShootManager : ZilchComponent
@@ -96,6 +96,7 @@ class ShootManager : ZilchComponent
         if(this.ModifiableCooldown < 0)
         {
             this.ModifiableCooldown = this.CoolDwn;
+            
             /** SHOOTING LOGIC HERE **/
             
             if(this.GunTexture != null)
