@@ -21,7 +21,6 @@ class Minigun : ZilchComponent
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Console.WriteLine("init");
     }
 
     function OnLogicUpdate(event : UpdateEvent)
