@@ -8,7 +8,7 @@
 ** - Hudson Green (HudsonGTV)
 **
 ** Contributors:
-** - null
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 
 class Health : ZilchComponent
@@ -18,13 +18,30 @@ class Health : ZilchComponent
     [Property]
     var ConfiguredHealth : Real = 50;
     
+    //REGEN
+    [Property]
+    var RegenRate : Real = 0.5;
+    
+    var MaxHealth : Real;
     function Initialize(init : CogInitializer)
     {
+        this.MaxHealth = this.ConfiguredHealth;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Hurt, this.OnHurt);
+    }
+
+    function OnHurt(event : Hurt)
+    {
+        this.ConfiguredHealth -= event.Damage;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        //REGEN
+        if(this.ConfiguredHealth < this.MaxHealth)
+        {
+            this.ConfiguredHealth += this.RegenRate * event.Dt;
+        }
         // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
         if(this.ConfiguredHealth <= 0)
         {

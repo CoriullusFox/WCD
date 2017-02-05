@@ -15,7 +15,7 @@ Level =
 			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
-			float Strength = 0,
+			float Strength = 10,
 			Vec3 Direction = [0, -1, 0],
 		},
 		DragEffect = 
@@ -26,12 +26,12 @@ Level =
 		},
 		CameraViewport = 
 		{
-			bool Background = true,
+			bool Background = false,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
-			int Layer = 0,
+			int Layer = 1,
 			bool Active = true,
-			bool Blocking = true,
+			bool Blocking = false,
 			CogPath Renderer = 
 			{
 				string Path = ".",
@@ -62,8 +62,8 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Fill,
-			Vec2 Resolution = [1280, 720],
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [1920, 1080],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
@@ -90,11 +90,6 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		UICreator = 
-		{
-			string UILevel = "583eff26622e0a01:UILevel",
-			string UIArchtype = "583eff1c670aa158:UISpace",
-		},
 	},
 	Cog = 
 	{
@@ -108,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.489156, -0.557891, 50],
+			Vec3 Translation = [11.3306, -1.57647, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.33861,
+			float Size = 14.9569,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.489156, -0.557891, -2.13817e-008],
+			Vec3 LookTarget = [11.3306, -1.57647, 4.95279e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -179,11 +174,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TempPlayer",
+			string Name = "Healthbar",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [17, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -193,7 +188,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -205,48 +200,11 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		PlayerShooting = 
+		HealthBarPlayer = 
 		{
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		Movement = 
-		{
-			float Speed = 250,
-			float RunSpeed = 500,
-		},
-		ChangeDirectionToPointAtMouse = 
-		{
-		},
-		Pistol = 
-		{
-			string Bullet = "58385bdc673b144c:BulletTest",
-		},
-		WeaponSwap = 
-		{
-			bool ShotgunUnlocked = true,
-			bool MinigunUnlocked = true,
-			bool BeamLaserUnlocked = true,
-			bool RifleUnlocked = true,
-			int NumberOfWeapons = 5,
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 100,
+			float MaxHealth = 100,
+			float HealthbarSpeed = 10,
 			float RegenRate = 1,
-		},
-		DebugPlayerDamage = 
-		{
 		},
 	},
 },

@@ -18,3 +18,10 @@ class Shoot : ZilchEvent
     var Direction : Real3 = Real3(0,0,0);
     
 }
+class Hurt : ZilchEvent
+{
+    
+    sends Hurt : Hurt;
+    var Damage : Real = 0;
+    
+}
