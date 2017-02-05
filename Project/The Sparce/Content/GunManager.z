@@ -28,10 +28,12 @@ enum Guns { Pistol, Shotgun, Minigun, Rifle, Beam }
 class GunManager : ZilchComponent
 {
     
+    // ITEM ID/MANAGER DEPENDENCY
     [Dependency]
     var Items : ItemManager = null;
     
     /* WEAPON TIER PROPERTIES */
+    
     [Property]
     var TierPistol : Integer = 1;
     
@@ -104,7 +106,9 @@ class GunManager : ZilchComponent
         
         // SET WEAPON CRAFTING RECIPIES
         this.Pistol.SetCraftingRecipe(this.RecipePistol);
+        this.Shotgun.SetCraftingRecipe(this.RecipeShotgun);
         
+        // CONNECTS OTHER FUNCTIONS
         Zero.Connect(this.Space, Events.LogicUpdate, this.UpdateWeaponProperties);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnWeaponSwap);
         
