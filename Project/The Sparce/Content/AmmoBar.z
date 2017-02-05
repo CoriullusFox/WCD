@@ -1,11 +1,6 @@
 class AmmoBar : ZilchComponent
 {
     
-    var AmmoCount : Real = 5.0;
-    var CurrAmmoCount : Real = 0.0;
-    
-    var SetAmmoBarI : AmmoCtClass;
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -13,23 +8,12 @@ class AmmoBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var setAmmoBarInfo : AmmoCtClass = new AmmoCtClass(this.AmmoCount, this.CurrAmmoCount);
-        this.SetAmmoBarI = setAmmoBarInfo;
-        this.Owner.Transform.Scale = Real3(this.AmmoCount, 0.15, 1);
-    }
-    
-}
-
-class AmmoCtClass
-{
-    
-    var AmmoCount : Real = 0.0;
-    var CurrAmmoCount : Real = 0.0;
-    
-    constructor(currAmmoCount : Real, defaultAmmoCount : Real)
-    {
-        this.AmmoCount = currAmmoCount;
-        this.CurrAmmoCount = defaultAmmoCount;
+        this.Owner.Transform.Scale = Real3(5, 0.15, 1);
+        
+        if(this.Space.ObjectCount > 1)
+        {
+            this.Owner.Destroy();
+        }
     }
     
 }

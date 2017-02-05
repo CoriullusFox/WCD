@@ -18,7 +18,6 @@ class ShootManager : ZilchComponent
     var Gun : GunManager = null;
     
     var Debug : DebugMode = null;
-    var AmmoBar : AmmoBar = null;
     
     var ModifiableCooldown : Real = 0.0;
     var CoolDwn            : Real = 0.0;
@@ -27,7 +26,12 @@ class ShootManager : ZilchComponent
     var NextShot           : Real = 0.0;
     var CurrAmmoCount      : Real = -99.0;
     var DefaultAmmoCount   : Real = 5.0;
+    
+    [Property]
     var AmmoSubtract       : Real = 1.0;
+    
+    [Property]
+    var AmmoBarArchetype   : Archetype = Archetype.AmmoBar;
     
     function Initialize(init : CogInitializer)
     {
@@ -47,6 +51,14 @@ class ShootManager : ZilchComponent
     {
         //Cooldown logic
         this.ModifiableCooldown -= event.Dt;
+        
+        var decrease = this.DefaultAmmoCount - this.CurrAmmoCount;
+        var ammoInPercent = 100 - (decrease / this.DefaultAmmoCount * 100);
+        
+        Console.WriteLine("% Ammo", ammoInPercent);
+        
+        var ammoBarHUD = this.Space.CreateAtPosition(this.AmmoBarArchetype, this.Owner.Transform.Translation + Real3(0, -0.75, 0));
+        ammoBarHUD.Transform.Scale = Real3(ammoInPercent / 25, 0.15, 1);
         
         // DEBUG CONTROLS
         //if(this.Debug.DubugModeEnabled) {
@@ -124,11 +136,6 @@ class ShootManager : ZilchComponent
                 if(this.CurrAmmoCount != -99.0)
                 {
                     this.CurrAmmoCount -= this.AmmoSubtract;
-                }
-                
-                if(this.CurrAmmoCount != this.DefaultAmmoCount) {
-                    //this.AmmoBar.AmmoCountF(this.CurrAmmoCount, this.DefaultAmmoCount);
-                    //this.AmmoBar.AmmoCount = this.CurrAmmoCount;
                 }
                 
                 Console.WriteLine("Ammo Count", this.CurrAmmoCount);

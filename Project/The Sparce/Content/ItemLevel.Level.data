@@ -250,6 +250,8 @@ Level =
 		},
 		ShootManager = 
 		{
+			float AmmoSubtract = 1,
+			string AmmoBarArchetype = "585c1c0394829202:AmmoBar",
 		},
 		DebugMode = 
 		{
@@ -272,24 +274,24 @@ Level =
 		},
 		Hierarchy = 
 		{
-			ArchetypeInstance = 
-			{
-				string Name = "585c1c0394829202:AmmoBar",
-				LinkId = 
-				{
-					uint Id = 5,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, -0.850674, 0],
-					Vec3 Scale = [2, 0.15, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "AmmoBar",
-				},
-			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585c1c0394829202:AmmoBar",
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -0.850674, 0],
+			Vec3 Scale = [2, 0.15, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoBar",
 		},
 	},
 },
