@@ -11,7 +11,9 @@
 ** - <list in same format as author if applicable>
 ** --------------------------------------------------------------------------*/
 
-enum Guns {Pistol, Shotgun, Minigun, Rifle, Beam}
+//disabled by Brandon becouse we are useing a better more versatile way of shooting, like i said in class like 200000 times! (and becouse it causes an error)
+
+/*enum Guns {Pistol, Shotgun, Minigun, Rifle, Beam}
 
 class Gun
 {
@@ -57,4 +59,4 @@ class GunManager : ZilchComponent
         
     }
     
-}
+}*/
