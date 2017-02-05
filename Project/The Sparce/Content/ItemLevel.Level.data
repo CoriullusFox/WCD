@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.8164,
+			float Size = 20,
 		},
 		EditorCameraController = 
 		{
@@ -166,19 +166,12 @@ Level =
 			bool Active = true,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "585d46aa5615f38d:TempPlayer",
 		LinkId = 
 		{
 			uint Id = 4,
-		},
-		Named = 
-		{
-			string Name = "TempPlayer",
-		},
-		Archetyped = 
-		{
-			string Name = "585d46aa5615f38d:TempPlayer",
 		},
 		Transform = 
 		{
@@ -186,95 +179,63 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.11, 0, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			string Name = "TempPlayer",
 		},
-		RigidBody = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585c1c0394829202:AmmoBar",
+		LinkId = 
 		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
+			uint Id = 5,
 		},
-		GunManager = 
+		Transform = 
 		{
-			Enum SelectedWeapon = Pistol,
-			string ArchetypePistol = "585c1eb1faa07ab2:BulletTest",
-			string ArchetypeShotgun = "585c1eb1faa07ab2:BulletTest",
-			string ArchetypeMinigun = "585c1eb1faa07ab2:BulletTest",
-			string ArchetypeRifle = "585c1eb1faa07ab2:BulletTest",
-			string ArchetypeBeam = "585c1eb1faa07ab2:BulletTest",
-			float ClipPistol = -99,
-			float ClipShotgun = 6,
-			float ClipMinigun = 500,
-			float ClipRifle = 8,
-			float ClipBeam = 2,
-			int TierPistol = 1,
-			int TierShotgun = 1,
-			int TierMinigun = 1,
-			int TierRifle = 1,
-			int TierBeam = 1,
-			Vec3 RecipePistol = [111, 211, 111],
-			Vec3 RecipeShotgun = [111, 511, 111],
+			Vec3 Translation = [0, -1, 0],
+			Vec3 Scale = [2, 0.15, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
-		PlayerShooting = 
+		Named = 
 		{
+			string Name = "AmmoBar",
 		},
-		Movement = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585c3b17d1cfff7b:CooldownBar",
+		LinkId = 
 		{
-			float Speed = 250,
-			float RunSpeed = 500,
+			uint Id = 6,
 		},
-		ChangeDirectionToPointAtMouse = 
+		Transform = 
 		{
+			Vec3 Translation = [0, -1.15, 0],
+			Vec3 Scale = [2, 0.15, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
-		ShootManager = 
+		Named = 
 		{
-			float AmmoSubtract = 1,
-			string ArchetypeAmmoBar = "585c1c0394829202:AmmoBar",
-			string ArchetypeCooldownBar = "585c3b17d1cfff7b:CooldownBar",
+			string Name = "CooldownBar",
 		},
-		DebugMode = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585c326494ed3b45:HealthBar",
+		LinkId = 
 		{
-			bool DubugModeEnabled = true,
+			uint Id = 7,
 		},
-		IgnoreSpaceEffects = 
+		Transform = 
 		{
-			bool Drag = false,
-			bool Flow = false,
-			bool Force = false,
-			bool Gravity = true,
-			bool Thrust = false,
-			bool Vortex = false,
-			bool Wind = false,
-			bool Invalid = false,
-			bool Torque = false,
-			bool PointGravity = false,
-			bool PointForce = false,
-			bool Buoyancy = false,
+			Vec3 Translation = [0, -1.3, 0],
+			Vec3 Scale = [2, 0.15, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
-		Hierarchy = 
+		Named = 
 		{
+			string Name = "HealthBar",
 		},
 	},
 },

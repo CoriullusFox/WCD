@@ -5,10 +5,10 @@
 ** Health.z
 **
 ** Author:
-** - Hudson Green (HudsonGTV)
+** - Hudson Green
 **
 ** Contributors:
-** - Brandon Wolenetz
+** - none
 ** --------------------------------------------------------------------------*/
 
 class Health : ZilchComponent
@@ -16,18 +16,28 @@ class Health : ZilchComponent
     
     // CONFIGURABLE HEALTH PROPERTY
     [Property]
-    var ConfiguredHealth : Real = 50;
+    var ConfiguredHealth    : Real = 50;
+    
+    [Property]
+    var DefaultHP           : Real = 50;
+    
+    [Property]
+    var ArchetypeAmmoBar    : Archetype = Archetype.HealthBar;
     
     //REGEN
     [Property]
     var RegenRate : Real = 0.5;
     
     var MaxHealth : Real;
+    
     function Initialize(init : CogInitializer)
     {
+        
         this.MaxHealth = this.ConfiguredHealth;
+        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.Hurt, this.OnHurt);
+        
     }
 
     function OnHurt(event : Hurt)
@@ -37,16 +47,41 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        var healthDecrease = this.DefaultHP - this.ConfiguredHealth;
+        
+        var healthInPercent = 100 - (healthDecrease / (this.DefaultHP + 0.001) * 100);
+        
+        //Console.WriteLine("% Ammo", cooldownInPercent);
+        
+        if(healthInPercent > 100)
+        {
+            healthInPercent = 100;
+        }
+        
+        var healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -1.05, 0));
+        
+        healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.T))
+        {
+            this.ConfiguredHealth -= 5;
+        }
+        
         //REGEN
         if(this.ConfiguredHealth < this.MaxHealth)
         {
             this.ConfiguredHealth += this.RegenRate * event.Dt;
         }
+        
         // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
         if(this.ConfiguredHealth <= 0)
         {
             this.Owner.Destroy();
         }
+        
+        //Console.WriteLine("HP", this.ConfiguredHealth);
+        
     }
     
 }

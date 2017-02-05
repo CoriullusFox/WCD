@@ -71,8 +71,8 @@ class ShootManager : ZilchComponent
         var ammoBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -0.75, 0));
         var cooldownBarHUD = this.Space.CreateAtPosition(this.ArchetypeCooldownBar, this.Owner.Transform.Translation + Real3(0, -0.9, 0));
         
-        ammoBarHUD.Transform.Scale = Real3(ammoInPercent / 25, 0.15, 1);
-        cooldownBarHUD.Transform.Scale = Real3(cooldownInPercent / 25, 0.15, 1);
+        ammoBarHUD.Transform.Scale = Real3(ammoInPercent / 35, 0.15, 1);
+        cooldownBarHUD.Transform.Scale = Real3(cooldownInPercent / 35, 0.15, 1);
         
         // DEBUG CONTROLS
         //if(this.Debug.DubugModeEnabled) {

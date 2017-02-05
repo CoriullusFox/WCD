@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "CooldownBar",
+		string Name = "HealthBar",
 	},
 	Archetyped = 
 	{
-		string Name = "585c3b17d1cfff7b:CooldownBar",
+		string Name = "585c326494ed3b45:HealthBar",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -1.15, 0],
+		Vec3 Translation = [0, -1.3, 0],
 		Vec3 Scale = [2, 0.15, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.76, 0.4104, 0, 1],
+		Vec4 Color = [0.54, 0, 0.000323925, 1],
 		BlendMode BlendMode = Additive,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -36,7 +36,7 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	CooldownBar = 
+	HealthBar = 
 	{
 	},
 },
