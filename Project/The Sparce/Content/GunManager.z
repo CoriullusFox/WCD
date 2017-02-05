@@ -1,6 +1,6 @@
 /* ----------------------------------------------------------------------------
 ** TEAM - We Couldn't Decide
-** ? 2017 DigiPen Institute of Technology, All Rights Reserved.
+** (c) 2017 DigiPen Institute of Technology, All Rights Reserved.
 **
 ** FILE NAME
 **
@@ -11,10 +11,100 @@
 ** - <list in same format as author if applicable>
 ** --------------------------------------------------------------------------*/
 
-//disabled by Brandon becouse we are useing a better more versatile way of shooting, like i said in class like 200000 times! (and becouse it causes an error)
+enum Guns { Pistol, Shotgun, Minigun, Rifle, Beam }
 
-/*enum Guns {Pistol, Shotgun, Minigun, Rifle, Beam}
+class GunManager : ZilchComponent
+{
+    
+    [Property]
+    var SelectedWeapon : Guns = Guns.Pistol;
+    
+    [Property]
+    var ArchetypePistol : Archetype;
+    
+    [Property]
+    var ArchetypeShotgun : Archetype;
+    
+    [Property]
+    var ArchetypeMinigun : Archetype;
+    
+    [Property]
+    var ArchetypeRifle : Archetype;
+    
+    [Property]
+    var ArchetypeBeam : Archetype;
+    
+    // SET WEAPON PROPERTIES
+    var Pistol  : Gun = new Gun(false, 0, 0, 50, 0.3, 0.01, 0.3);
+    var Shotgun : Gun = new Gun(true, 3, 0.1, 50, 0.5, 0.01, 1);
+    var Minigun : Gun = new Gun(false, 0, 0, 45, 0.4, 0.05, 0.01);
+    var Rifle   : Gun = new Gun(false, 0, 0, 45, 2, 0.01, 1);
+    var Beam    : Gun = new Gun(false, 0, 0, 0, 2, 0, 5);
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        // SET WEAPON TEXTURES
+        this.Pistol.SetTexture(this.ArchetypePistol);
+        this.Shotgun.SetTexture(this.ArchetypeShotgun);
+        this.Minigun.SetTexture(this.ArchetypeMinigun);
+        this.Rifle.SetTexture(this.ArchetypeRifle);
+        this.Beam.SetTexture(this.ArchetypeBeam);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnWeaponSwap);
+        
+    }
 
+    function OnWeaponSwap(event : Event)
+    {
+        
+        // SET ACTIVE WEAPON
+        if(this.SelectedWeapon == Guns.Pistol)
+        {
+            this.Pistol.SetAsActive(true);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(false);
+        }
+        else if(this.SelectedWeapon == Guns.Shotgun)
+        {
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(true);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(false);
+        }
+        else if(this.SelectedWeapon == Guns.Minigun)
+        {
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(true);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(false);
+        }
+        else if(this.SelectedWeapon == Guns.Rifle)
+        {
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(true);
+            this.Beam.SetAsActive(false);
+        }
+        else if(this.SelectedWeapon == Guns.Beam)
+        {
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(true);
+        }
+        
+    }
+    
+}
+
+// CREATE GUN CLASS
 class Gun
 {
     var Spread              : Boolean = false;
@@ -25,8 +115,10 @@ class Gun
     var RandomVariation     : Real = 1.0;
     var Cooldown            : Real = 1.0;
     var SpriteImage         : Archetype = null;
+    var IsActive            : Boolean = false;
     
     // CLASS PARAMS
+    [Virtual]
     constructor(spread : Boolean, spreadAmount : Integer, distBetweenShots : Real, bulletSpeed : Real, lifespan : Real, randVary : Real, cooldown : Real)
     {
         this.Spread           = spread;
@@ -43,20 +135,8 @@ class Gun
         this.SpriteImage = spriteImg;
     }
     
-}
-
-class GunManager : ZilchComponent
-{
-    
-    function Initialize(init : CogInitializer)
-    {
-        
-        var pistol = new Gun(false, 0, 0, 50, 0.3, 0.01, 0.3);
-        var shotgun = new Gun(true, 3, 0.1, 50, 0.5, 0.01, 1);
-        var minigun = new Gun(false, 0, 0, 45, 0.4, 0.05, 0.01);
-        var rifle = new Gun(false, 0, 0, 45, 2, 0.01, 1);
-        var beam = new Gun(false, 0, 0, 0, 2, 0, 5);
-        
+    function SetAsActive(isActive : Boolean) {
+        this.IsActive = isActive;
     }
     
-}*/
+}
