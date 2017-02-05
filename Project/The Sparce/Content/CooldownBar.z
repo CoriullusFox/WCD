@@ -11,7 +11,7 @@
 ** - none
 ** --------------------------------------------------------------------------*/
 
-class AmmoBar : ZilchComponent
+class CooldownBar : ZilchComponent
 {
     
     function Initialize(init : CogInitializer)
@@ -21,7 +21,7 @@ class AmmoBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Transform.Scale = Real3(5, 0.15, 1);
+        this.Owner.Transform.Scale = Real3(5, 0.15, 1.15);
         
         if(this.Space.ObjectCount > this.Owner.Space.ObjectCount - 1)
         {

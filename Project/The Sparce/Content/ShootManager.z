@@ -19,19 +19,22 @@ class ShootManager : ZilchComponent
     
     var Debug : DebugMode = null;
     
-    var ModifiableCooldown : Real = 0.0;
-    var CoolDwn            : Real = 0.0;
-    var GunTexture         : Archetype = null;
-    var SpreadAmount       : Real = 0.0;
-    var NextShot           : Real = 0.0;
-    var CurrAmmoCount      : Real = -99.0;
-    var DefaultAmmoCount   : Real = 5.0;
+    var ModifiableCooldown      : Real = 0.0;
+    var CoolDwn                 : Real = 0.0;
+    var GunTexture              : Archetype = null;
+    var SpreadAmount            : Real = 0.0;
+    var NextShot                : Real = 0.0;
+    var CurrAmmoCount           : Real = -99.0;
+    var DefaultAmmoCount        : Real = 5.0;
     
     [Property]
-    var AmmoSubtract       : Real = 1.0;
+    var AmmoSubtract            : Real = 1.0;
     
     [Property]
-    var AmmoBarArchetype   : Archetype = Archetype.AmmoBar;
+    var ArchetypeAmmoBar        : Archetype = Archetype.AmmoBar;
+    
+    [Property]
+    var ArchetypeCooldownBar    : Archetype = Archetype.CooldownBar;
     
     function Initialize(init : CogInitializer)
     {
@@ -52,13 +55,24 @@ class ShootManager : ZilchComponent
         //Cooldown logic
         this.ModifiableCooldown -= event.Dt;
         
-        var decrease = this.DefaultAmmoCount - this.CurrAmmoCount;
-        var ammoInPercent = 100 - (decrease / this.DefaultAmmoCount * 100);
+        var ammoDecrease = this.DefaultAmmoCount - this.CurrAmmoCount;
+        var cooldownDecrease = this.CoolDwn - this.ModifiableCooldown;
         
-        Console.WriteLine("% Ammo", ammoInPercent);
+        var ammoInPercent = 100 - (ammoDecrease / (this.DefaultAmmoCount + 0.001) * 100);
+        var cooldownInPercent = (cooldownDecrease / (this.CoolDwn + 0.001) * 100);
         
-        var ammoBarHUD = this.Space.CreateAtPosition(this.AmmoBarArchetype, this.Owner.Transform.Translation + Real3(0, -0.75, 0));
+        //Console.WriteLine("% Ammo", cooldownInPercent);
+        
+        if(cooldownInPercent > 100)
+        {
+            cooldownInPercent = 100;
+        }
+        
+        var ammoBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -0.75, 0));
+        var cooldownBarHUD = this.Space.CreateAtPosition(this.ArchetypeCooldownBar, this.Owner.Transform.Translation + Real3(0, -0.9, 0));
+        
         ammoBarHUD.Transform.Scale = Real3(ammoInPercent / 25, 0.15, 1);
+        cooldownBarHUD.Transform.Scale = Real3(cooldownInPercent / 25, 0.15, 1);
         
         // DEBUG CONTROLS
         //if(this.Debug.DubugModeEnabled) {
@@ -126,12 +140,13 @@ class ShootManager : ZilchComponent
         //only shoot if cooldown is over
         if(this.ModifiableCooldown < 0)
         {
-            this.ModifiableCooldown = this.CoolDwn;
             
             /** SHOOTING LOGIC HERE **/
             
             if(this.GunTexture != null && (this.CurrAmmoCount > 0 || this.CurrAmmoCount == -99))
             {
+                
+                this.ModifiableCooldown = this.CoolDwn;
                 
                 if(this.CurrAmmoCount != -99.0)
                 {
