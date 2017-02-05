@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "TempPlayer",
 	},
+	Archetyped = 
+	{
+		string Name = "585d46aa5615f38d:TempPlayer",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-0.121622, 0.0270271, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -65,11 +69,11 @@ Cog =
 		Vec3 RecipePistol = [111, 211, 111],
 		Vec3 RecipeShotgun = [111, 511, 111],
 		Enum SelectedWeapon = Pistol,
-		string ArchetypePistol = "",
-		string ArchetypeShotgun = "",
-		string ArchetypeMinigun = "",
-		string ArchetypeRifle = "",
-		string ArchetypeBeam = "",
+		string ArchetypePistol = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypeShotgun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypeMinigun = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypeRifle = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
+		string ArchetypeBeam = "585d0c82f8c09f07:BulletTest_Arch.Archetype",
 	},
 	ShootManager = 
 	{
