@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0442991, 0.0824005, 50],
+			Vec3 Translation = [-0.538769, -0.0985515, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0442991, 0.0824005, 1.93637e-009],
+			Vec3 LookTarget = [-0.538769, -0.0985515, -2.35503e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -227,7 +227,7 @@ Level =
 		{
 			string Bullet = "58385bdc673b144c:BulletTest",
 		},
-		WeponSwap = 
+		WeaponSwap = 
 		{
 			bool ShotgunUnlocked = false,
 			bool MinigunUnlocked = false,
