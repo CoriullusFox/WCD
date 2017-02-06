@@ -114,7 +114,7 @@ class GunManager : ZilchComponent
     // (spread, spreadAmount, distBetweenShots, bulletSpeed, lifespan, randVary, cooldown)
     var Pistol  : Gun = new Gun(false, 0.05, 0.0, 50.0, 0.3, 0.01, 0.3);
     var Shotgun : Gun = new Gun(true, 0.2, 0.1, 50, 0.5, 0.01, 0.4);
-    var Minigun : Gun = new Gun(false, 0.09, 0.0, 45.0, 0.4, 0.05, 0.1);
+    var Minigun : Gun = new Gun(false, 0.09, 0.0, 45.0, 0.4, 0.05, 0.0);
     var Rifle   : Gun = new Gun(false, 0.01, 0.0, 45.0, 2.0, 0.01, 1.0);
     var Beam    : Gun = new Gun(false, 0.0, 0.0, 0.0, 2.0, 0.0, 5.0);
     

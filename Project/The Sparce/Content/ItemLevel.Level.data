@@ -256,4 +256,22 @@ Level =
 			string Name = "Cursor",
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "585c372f898ee2b4:BulletShell",
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-12.5952, -10.346, 0],
+			Vec3 Scale = [0.5, 0.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "BulletShell",
+		},
+	},
 },
