@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 44.9329,
 		},
 		EditorCameraController = 
 		{
@@ -236,6 +236,24 @@ Level =
 		Named = 
 		{
 			string Name = "HealthBar",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585c36d052be62db:Cursor",
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 15.2238, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Cursor",
 		},
 	},
 },
