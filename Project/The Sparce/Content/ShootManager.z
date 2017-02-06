@@ -26,6 +26,10 @@ class ShootManager : ZilchComponent
     var NextShot                : Real = 0.0;
     var CurrAmmoCount           : Real = -99.0;
     var DefaultAmmoCount        : Real = 5.0;
+    var ChargedUp               : Boolean = true;
+    
+    [Property]
+    var ChargeEnabled       : Boolean = true;
     
     [Property]
     var AmmoSubtract            : Real = 1.0;
@@ -85,6 +89,8 @@ class ShootManager : ZilchComponent
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
                 this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad2))
@@ -96,6 +102,8 @@ class ShootManager : ZilchComponent
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
                 this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad3))
@@ -107,6 +115,8 @@ class ShootManager : ZilchComponent
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
                 this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = false;
+                this.ChargeEnabled      = false;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad4))
@@ -118,6 +128,8 @@ class ShootManager : ZilchComponent
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
                 this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
             }
             
             if(Zero.Keyboard.KeyIsPressed(Keys.NumPad5))
@@ -129,6 +141,8 @@ class ShootManager : ZilchComponent
                 this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
                 this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
                 this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
             }
         //}
         
@@ -137,8 +151,9 @@ class ShootManager : ZilchComponent
     //Shooting logic (only runs when the event is called)
     function OnShoot(event : Shoot)
     {
+        
         //only shoot if cooldown is over
-        if(this.ModifiableCooldown < 0)
+        if(this.ModifiableCooldown < 0 && this.ChargedUp)
         {
             
             /** SHOOTING LOGIC HERE **/

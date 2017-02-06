@@ -82,7 +82,10 @@ Cog =
 	{
 		float VerticalVelocity = 5,
 		float HorizontalVelocity = 5,
-		string ArchetypeBullet = "",
+		string ArchetypeBullet = "585c35d4ecab5a38:BulletMinigun",
+	},
+	MinigunBarrelDelayEffect = 
+	{
 	},
 	Health = 
 	{
