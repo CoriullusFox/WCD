@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0.0272834, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -53,7 +53,7 @@ Cog =
 		Enum SelectedWeapon = Pistol,
 		string ArchetypePistol = "585c1eb1faa07ab2:BulletTest",
 		string ArchetypeShotgun = "585c1eb1faa07ab2:BulletTest",
-		string ArchetypeMinigun = "585c1eb1faa07ab2:BulletTest",
+		string ArchetypeMinigun = "585c35d4ecab5a38:BulletMinigun",
 		string ArchetypeRifle = "585c1eb1faa07ab2:BulletTest",
 		string ArchetypeBeam = "585c1eb1faa07ab2:BulletTest",
 		float ClipPistol = -99,
@@ -69,8 +69,27 @@ Cog =
 		Vec3 RecipePistol = [111, 211, 111],
 		Vec3 RecipeShotgun = [111, 511, 111],
 	},
+	ShootManager = 
+	{
+		float AmmoSubtract = 1,
+		string ArchetypeAmmoBar = "585c1c0394829202:AmmoBar",
+		string ArchetypeCooldownBar = "585c3b17d1cfff7b:CooldownBar",
+	},
 	PlayerShooting = 
 	{
+	},
+	BulletEject = 
+	{
+		float VerticalVelocity = 5,
+		float HorizontalVelocity = 5,
+		string ArchetypeBullet = "",
+	},
+	Health = 
+	{
+		float ConfiguredHealth = 50,
+		float DefaultHP = 50,
+		string ArchetypeAmmoBar = "585c326494ed3b45:HealthBar",
+		float RegenRate = 0.5,
 	},
 	Movement = 
 	{
@@ -79,12 +98,6 @@ Cog =
 	},
 	ChangeDirectionToPointAtMouse = 
 	{
-	},
-	ShootManager = 
-	{
-		float AmmoSubtract = 1,
-		string ArchetypeAmmoBar = "585c1c0394829202:AmmoBar",
-		string ArchetypeCooldownBar = "585c3b17d1cfff7b:CooldownBar",
 	},
 	DebugMode = 
 	{
@@ -104,11 +117,6 @@ Cog =
 		bool PointGravity = false,
 		bool PointForce = false,
 		bool Buoyancy = false,
-	},
-	Health = 
-	{
-		float ConfiguredHealth = 50,
-		float RegenRate = 0.5,
 	},
 	Hierarchy = 
 	{

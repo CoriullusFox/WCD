@@ -159,6 +159,7 @@ class ShootManager : ZilchComponent
                 
                 if(createdBullet != null)
                 {
+                    
                     Console.WriteLine("boom");
                     var randGen : Random = Random();
                     //angle of rotation
@@ -172,6 +173,12 @@ class ShootManager : ZilchComponent
                     //apply direction and movement
                     createdBullet.Orientation.LookAtDirection(newDirection);
                     createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
+                    
+                    if(createdBullet.ArchetypeName == "BulletTest")
+                    {
+                        this.Owner.BulletEject.ShootShell = true;
+                        Console.WriteLine("Ejected Shell");
+                    }
                     
                     createdBullet.Despawn.LifeLength = this.Gun.SelectedGun.Lifespan;
                     
