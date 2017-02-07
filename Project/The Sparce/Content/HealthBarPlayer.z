@@ -1,0 +1,43 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class HealthBarPlayer : ZilchComponent
+{
+    [Property]
+    var MaxHealth : Real = 100;
+    var Health : Real;
+    [Property]
+    var HealthbarSpeed : Real = 10;
+    [Property]
+    var RegenRate : Real = 0.5;
+    function Initialize(init : CogInitializer)
+    {
+        this.Health = this.MaxHealth;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.Hurt, this.OnHurt);
+    }
+
+    function OnHurt(event : Hurt)
+    {
+        this.Health -= event.Damage;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Health < this.MaxHealth){
+            this.Health += event.Dt * this.RegenRate;
+        }
+        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(1,(this.Health / this.MaxHealth) * 10,1), event.Dt * this.HealthbarSpeed);
+        
+    }
+}

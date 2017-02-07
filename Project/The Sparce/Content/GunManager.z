@@ -1,142 +1,326 @@
 /* ----------------------------------------------------------------------------
 ** TEAM - We Couldn't Decide
-** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+** (c) 2017 DigiPen Institute of Technology, All Rights Reserved.
 **
 ** FILE NAME
 **
 ** Author:
-** - Brandon Wolenetz
+** - Hudson Green
 **
 ** Contributors:
-** - Hudson Green (Fixed code and make it more efficient)
+** - none
 ** --------------------------------------------------------------------------*/
 
+/**
+    THIS FILE INITIALIZES THE GUNS AND THEIR PROPERTIES. IT WILL ALSO CONTAIN CRAFTING FOR THE GUNS! THIS DOES NOT MANAGE SHOOTING AT ALL!
 
-enum Guns {Pistle, Shotgun, Minigun, Rifle, Beam}
+    CHANGELOG:
+        - ADDED TIERS
+        - ADDED CRAFTING
+        - MADE TO BE EASILY MODIFIED
+
+**/
+
+// STILL BEING EDITED!
+
+enum Guns
+{
+    Pistol,
+    Shotgun,
+    Minigun,
+    Rifle,
+    Beam
+}
 
 class GunManager : ZilchComponent
 {
-    [Property]
-    var SelectedGun : Guns = Guns.Pistle;
     
-    [Dependency]
-    var PlayerShooting : PlayerShooting = null;
+    // LINK ITEM ID/MANAGER CLASS
+    var Item : ItemManager = null;
     
-    [Property]
-    var PistleBullet : Archetype;
+    /* ARCHRTYPE PROPERTIES */
     
     [Property]
-    var ShotgunBullet : Archetype;
+    var SelectedWeapon      : Guns = Guns.Pistol;
     
     [Property]
-    var MinigunBullet : Archetype;
+    var ArchetypePistol     : Archetype = Archetype.BulletTest;
     
     [Property]
-    var RifleBullet : Archetype;
+    var ArchetypeShotgun    : Archetype = Archetype.BulletTest;
     
     [Property]
-    var BeamBullet : Archetype;
+    var ArchetypeMinigun    : Archetype = Archetype.BulletTest;
     
+    [Property]
+    var ArchetypeRifle      : Archetype = Archetype.BulletTest;
+    
+    [Property]
+    var ArchetypeBeam       : Archetype = Archetype.BulletTest;
+    
+    /* WEAPON CLIP SIZE PROPERTIES */
+    
+    [Property]
+    var ClipPistol      : Real = -99;
+    
+    [Property]
+    var ClipShotgun     : Real = 6;
+    
+    [Property]
+    var ClipMinigun     : Real = 500;
+    
+    [Property]
+    var ClipRifle       : Real = 8;
+    
+    [Property]
+    var ClipBeam        : Real = 2;
+    
+    /* WEAPON TIER PROPERTIES */
+    
+    [Property]
+    var TierPistol      : Integer = 1;
+    
+    [Property]
+    var TierShotgun     : Integer = 1;
+    
+    [Property]
+    var TierMinigun     : Integer = 1;
+    
+    [Property]
+    var TierRifle       : Integer = 1;
+    
+    [Property]
+    var TierBeam        : Integer = 1;
+    
+    /* WEAPON CRAFTING RECIPES (USING ITEM IDs) */
+    
+    [Property]
+    var RecipePistol  : Real3 = Real3
+    (
+        111,
+        211,
+        111
+    );
+    
+    [Property]
+    var RecipeShotgun : Real3 = Real3
+    (
+        111,
+        511,
+        111
+    );
+    
+    // SET WEAPON PROPERTIES
+    // (spread, spreadAmount, distBetweenShots, bulletSpeed, lifespan, randVary, cooldown)
+    var Pistol  : Gun = new Gun(false, 0.05, 0.0, 50.0, 0.3, 0.01, 0.3);
+    var Shotgun : Gun = new Gun(true, 0.2, 0.1, 50, 0.5, 0.01, 0.4);
+    var Minigun : Gun = new Gun(false, 0.09, 0.0, 45.0, 0.4, 0.05, 0.0);
+    var Rifle   : Gun = new Gun(false, 0.01, 0.0, 45.0, 2.0, 0.01, 1.0);
+    var Beam    : Gun = new Gun(false, 0.0, 0.0, 0.0, 2.0, 0.0, 5.0);
+    
+    // SELECTED WEAPON PROPERTIES
+    var SelectedGun         : Gun = new Gun(false, 0.05, 0.0, 50.0, 0.3, 0.01, 0.3);
+    var SelectedGunSprite   : Archetype = Archetype.MissingTexture;
     
     function Initialize(init : CogInitializer)
     {
         
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        // SET WEAPON TEXTURES
+        this.Pistol.SetTexture(this.ArchetypePistol);
+        this.Shotgun.SetTexture(this.ArchetypeShotgun);
+        this.Minigun.SetTexture(this.ArchetypeMinigun);
+        this.Rifle.SetTexture(this.ArchetypeRifle);
+        this.Beam.SetTexture(this.ArchetypeBeam);
+        
+        // SET WEAPON CRAFTING RECIPES
+        this.Pistol.SetCraftingRecipe(this.RecipePistol);
+        this.Shotgun.SetCraftingRecipe(this.RecipeShotgun);
+        
+        // SET CLIP SIZE
+        this.Pistol.SetClipSize(this.ClipPistol);
+        this.Shotgun.SetClipSize(this.ClipShotgun);
+        this.Minigun.SetClipSize(this.ClipMinigun);
+        this.Rifle.SetClipSize(this.ClipRifle);
+        this.Beam.SetClipSize(this.ClipBeam);
+        
+        // SET DEFAULT GUN
+        this.SelectedGun = this.Pistol;
+        this.SelectedGunSprite = this.ArchetypePistol;
+        
+        // CONNECTS OTHER FUNCTIONS
+        Zero.Connect(this.Space, Events.LogicUpdate, this.UpdateWeaponProperties);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnWeaponSwap);
+        
+    }
+    
+    function UpdateWeaponProperties(event : Event) {
+        
+        // SET WEAPON TIER
+        this.Pistol.SetTier(this.TierPistol);
+        this.Shotgun.SetTier(this.TierShotgun);
+        this.Minigun.SetTier(this.TierMinigun);
+        this.Rifle.SetTier(this.TierRifle);
+        this.Beam.SetTier(this.TierBeam);
         
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
+    function OnWeaponSwap(event : Event)
     {
-        //set values for bullets based off what gun is in use
-        if(this.SelectedGun == Guns.Pistle)
+        
+        // SET ACTIVE WEAPON
+        if(this.SelectedWeapon == Guns.Pistol)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 50;
-            this.PlayerShooting.LifeLength = 0.3;
-            this.PlayerShooting.RandomVary = 0.01;
-            this.PlayerShooting.Cooldown = 0.3;
-            this.PlayerShooting.Bullet = this.PistleBullet;*/
-            
-            this.InitGun(false, 0, 0, 50, 0.3, 0.01, 0.3, this.PistleBullet);
-            
+            this.Pistol.SetAsActive(true);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Pistol;
+            this.SelectedGun = this.Pistol;
+            this.SelectedGunSprite = this.ArchetypePistol;
         }
-        else if(this.SelectedGun == Guns.Shotgun)
+        else if(this.SelectedWeapon == Guns.Shotgun)
         {
-            
-            /*this.PlayerShooting.Spread = true;
-            this.PlayerShooting.NumberOfSpread = 3;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0.1;
-            this.PlayerShooting.BulletSpeed = 50;
-            this.PlayerShooting.LifeLength = 0.5;
-            this.PlayerShooting.RandomVary = 0.01;
-            this.PlayerShooting.Cooldown = 1;
-            this.PlayerShooting.Bullet = this.ShotgunBullet;*/
-            
-            this.InitGun(true, 3, 0.1, 50, 0.5, 0.01, 1, this.ShotgunBullet);
-            
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(true);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Shotgun;
+            this.SelectedGun = this.Shotgun;
+            this.SelectedGunSprite = this.ArchetypeShotgun;
         }
-        else if(this.SelectedGun == Guns.Minigun)
+        else if(this.SelectedWeapon == Guns.Minigun)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 45;
-            this.PlayerShooting.LifeLength = 0.4;
-            this.PlayerShooting.RandomVary = 0.05;
-            this.PlayerShooting.Cooldown = 0.01;
-            this.PlayerShooting.Bullet = this.MinigunBullet;*/
-            
-            this.InitGun(false, 0, 0, 45, 0.4, 0.05, 0.01, this.MinigunBullet);
-            
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(true);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Minigun;
+            this.SelectedGun = this.Minigun;
+            this.SelectedGunSprite = this.ArchetypeMinigun;
         }
-        else if(this.SelectedGun == Guns.Rifle)
+        else if(this.SelectedWeapon == Guns.Rifle)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 45;
-            this.PlayerShooting.LifeLength = 2;
-            this.PlayerShooting.RandomVary = 0.01;
-            this.PlayerShooting.Cooldown = 1;
-            this.PlayerShooting.Bullet = this.RifleBullet;*/
-            
-            this.InitGun(false, 0, 0, 45, 2, 0.01, 1, this.RifleBullet);
-            
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(true);
+            this.Beam.SetAsActive(false);
+            this.SelectedWeapon = Guns.Rifle;
+            this.SelectedGun = this.Rifle;
+            this.SelectedGunSprite = this.ArchetypeRifle;
         }
-        else if(this.SelectedGun == Guns.Beam)
+        else if(this.SelectedWeapon == Guns.Beam)
         {
-            
-            /*this.PlayerShooting.Spread = false;
-            this.PlayerShooting.NumberOfSpread = 0;
-            this.PlayerShooting.DistanceBetweenSpreadshots = 0;
-            this.PlayerShooting.BulletSpeed = 0;
-            this.PlayerShooting.LifeLength = 2;
-            this.PlayerShooting.RandomVary = 0;
-            this.PlayerShooting.Cooldown = 5;
-            this.PlayerShooting.Bullet = this.BeamBullet;*/
-            
-            this.InitGun(false, 0, 0, 0, 2, 0, 5, this.BeamBullet);
-            
+            this.Pistol.SetAsActive(false);
+            this.Shotgun.SetAsActive(false);
+            this.Minigun.SetAsActive(false);
+            this.Rifle.SetAsActive(false);
+            this.Beam.SetAsActive(true);
+            this.SelectedWeapon = Guns.Beam;
+            this.SelectedGun = this.Beam;
+            this.SelectedGunSprite = this.ArchetypeBeam;
         }
+        
     }
     
-                    /* SPREAD ENABLED, SPREAD AMOUNT */
-    function InitGun(spread : Boolean, spreadAmount : Integer, distBetweenSpreadShots : Real, bulletSpeed : Real, lifespan : Real, randVary : Real, cooldown : Real, spriteImage : Archetype) {
+}
+
+// CREATE GUN CLASS
+class Gun
+{
+    
+    var Spread              : Boolean = false;
+    var SpreadAmount        : Real = 0;
+    var DistBetweenShots    : Real = 0.0;
+    var BulletSpeed         : Real = 50.0;
+    var Lifespan            : Real = 1.0;
+    var RandomVariation     : Real = 1.0;
+    var Cooldown            : Real = 1.0;
+    var SpriteImage         : Archetype = null;
+    var IsActive            : Boolean = false;
+    var WeaponTier          : Real = 1;
+    var AmmoCount           : Real = -99;
+    var EjectBullet         : Boolean = false;
+    
+    // DEFAULT CRAFTING RECIPE (1 = NOTHING, -111, -111, -111 MEANS THE ITEM HAS NO CRAFTING RECIPE)
+    var CraftingRecipe : Real3 = Real3
+    (
+        -111,
+        -111,
+        -111
+    );
+    
+    function SetTier(weaponTier : Real)
+    {
+        this.WeaponTier = weaponTier;
+    }
+    
+    // CLASS PARAMS
+    [Virtual]
+    constructor(spread : Boolean, spreadAmount : Real, distBetweenShots : Real, bulletSpeed : Real, lifespan : Real, randVary : Real, cooldown : Real)
+    {
         
-        this.PlayerShooting.Spread = spread;
-        this.PlayerShooting.NumberOfSpread = spreadAmount;
-        this.PlayerShooting.DistanceBetweenSpreadshots = distBetweenSpreadShots;
-        this.PlayerShooting.BulletSpeed = bulletSpeed;
-        this.PlayerShooting.LifeLength = lifespan;
-        this.PlayerShooting.RandomVary = randVary;
-        this.PlayerShooting.Cooldown = cooldown;
-        this.PlayerShooting.Bullet = spriteImage;
+        var tier = this.WeaponTier;
+        var tierLowerProperty = this.WeaponTier - 1;
         
+        // ONLY APPLY TIER BONUS IF WEAPON IS HIGHER THAN TIER ONE
+        if(this.WeaponTier > 1)
+        {
+            tier = this.WeaponTier + 0.2;
+            tierLowerProperty = (this.WeaponTier - 1) / 6;
+        }
+        
+        this.Spread           = spread;
+        this.SpreadAmount     = spreadAmount;
+        this.DistBetweenShots = distBetweenShots - tierLowerProperty;
+        this.BulletSpeed      = bulletSpeed + tier;
+        this.Lifespan         = lifespan;
+        this.RandomVariation  = randVary;
+        this.Cooldown         = cooldown - tierLowerProperty;
+        this.SpriteImage      = Archetype.MissingTexture;
+        
+        if(this.DistBetweenShots < 0)
+        {
+            this.DistBetweenShots = 0;
+        }
+        
+        if(this.Cooldown < 0)
+        {
+            this.Cooldown = 0;
+        }
+        
+    }
+    
+    function SetTexture(spriteImg : Archetype)
+    {
+        this.SpriteImage = spriteImg;
+    }
+    
+    [Virtual]
+    function SetAsActive(isActive : Boolean)
+    {
+        this.IsActive = isActive;
+    }
+    
+    [Virtual]
+    function SetCraftingRecipe(craftingRecipe : Real3)
+    {
+        this.CraftingRecipe = craftingRecipe;
+    }
+    
+    [Virtual]
+    function SetClipSize(ammoCount : Real)
+    {
+        this.AmmoCount = ammoCount;
+    }
+    
+    [Virtual]
+    function EjectEmptyShell(ejectBullet : Boolean)
+    {
+        this.EjectBullet = ejectBullet;
     }
     
 }

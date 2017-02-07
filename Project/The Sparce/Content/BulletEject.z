@@ -1,0 +1,59 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** (c) 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
+class BulletEject : ZilchComponent
+{
+    
+    [Property]
+    var VerticalVelocity : Real = 5.0;
+    
+    [Property]
+    var HorizontalVelocity : Real = 5.0;
+    
+    [Property]
+    var ArchetypeBullet : Archetype = Archetype.BulletMinigun;
+    
+    var ShootShell : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.ShootShell == true)
+        {
+            
+            var bullet = this.Space.FindObjectByName("BulletTest");
+            var shell = this.Space.CreateAtPosition(Archetype.Find("BulletShell"), this.Owner.Transform.Translation);
+            var randGen : Random = Random();
+            
+            this.ShootShell = false;
+            
+            if(bullet.RigidBody.Velocity.X < 0)
+            {
+                var randRange = randGen.Range(4.2, 5.8);
+                shell.RigidBody.Velocity = Real3(randRange, randRange, 0.0);
+            }
+            else
+            {
+                var randRange = randGen.Range(4.2, 5.8);
+                shell.RigidBody.Velocity = Real3(-randRange, randRange, 0.0);
+            }
+            
+        }
+        
+    }
+}

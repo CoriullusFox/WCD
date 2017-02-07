@@ -1,0 +1,73 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class Shotgun : ZilchComponent
+{
+    var Cooldown : Real = 0.0;
+    
+    [Property]
+    var Bullet : Archetype = Archetype.BulletTest;
+    
+    [Property]
+    var NumberOfShots : Integer = 3;
+    
+    [Property]
+    var DistBetweenShots : Real = 0.1;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //Cooldown logic
+        this.Cooldown += event.Dt;
+    }
+    
+    //Shooting logic (only runs when the event is called)
+    function OnShoot(event : Shoot)
+    {
+        //only shoot if cooldown is over
+        if(this.Cooldown >= 0.5)
+        {
+            this.Cooldown = 0;
+            /** SHOOTING LOGIC HERE **/
+            for(var i = this.NumberOfShots; i > 0; i -= 1)
+            {
+                if(this.Bullet != null)
+                    {
+                        var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
+                        
+                        if(createdBullet != null)
+                        {
+                            var randGen : Random = Random();
+                            //angle of rotation
+                            var angle = (Math.Angle2D(event.Direction) + (i * this.DistBetweenShots) - (this.DistBetweenShots * this.NumberOfShots)/2) + randGen.Range(0.01, -0.01);
+                            
+                            //generate direction for orientation component from angle
+                            var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                            
+                            //apply direction and movement
+                            createdBullet.Orientation.LookAtDirection(newDirection);
+                            createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
+                            
+                            createdBullet.Despawn.LifeLength = 0.5;
+                            
+                        }
+                    }
+            }
+        }
+    
+    }
+}

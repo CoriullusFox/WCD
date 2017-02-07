@@ -1,0 +1,79 @@
+class MinigunBarrelDelayEffect : ZilchComponent
+{
+    
+    [Dependency]
+    var Shoot               : ShootManager = null;
+    var Gun                 : GunManager = null;
+    
+    var StartupSoundPlayed  : Boolean = false;
+    
+    [Property]
+    var Cooldown            : Real = 0.95;
+    
+    [Property]
+    var ModifiableCooldown  : Real = 0.95;
+    
+    [Property]
+    var MinigunStart        : Archetype = Archetype.MinigunPower;
+    
+    [Property]
+    var MinigunSpinning     : Archetype = Archetype.MinigunSpinning;
+    
+    [Property]
+    var MinigunPowerdown    : Archetype = Archetype.MinigunPowerdown;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(!this.Shoot.ChargeEnabled)
+        {
+            
+            if(Zero.Mouse.IsButtonDown(MouseButtons.Right) && this.Shoot.ChargedUp == false)
+            {
+                
+                Console.WriteLine("Charge Enabled! :)");
+                
+                if(!this.StartupSoundPlayed)
+                {
+                    var soundPowerupEntity = this.Space.CreateAtPosition(this.MinigunStart, this.Owner.Transform.Translation);
+                }
+                
+                //Cooldown logic
+                this.ModifiableCooldown -= event.Dt;
+                
+                if(this.ModifiableCooldown < 0)
+                {
+                    
+                    this.ModifiableCooldown = this.Cooldown;
+                    this.Shoot.ChargedUp = true;
+                    this.Space.FindObjectByName("MinigunPower").Destroy();
+                    
+                    var soundPowerupEntity = this.Space.CreateAtPosition(this.MinigunSpinning, this.Owner.Transform.Translation);
+                    
+                }
+                
+            }
+            else if(!Zero.Mouse.IsButtonDown(MouseButtons.Right) && this.Shoot.ChargedUp == true)
+            {
+                
+                Console.WriteLine("Charge Disabled! :(");
+                
+                this.Shoot.ChargedUp = false;
+                this.Space.FindObjectByName("MinigunSpinning").Destroy();
+                
+                var soundPowerupEntity = this.Space.CreateAtPosition(this.MinigunPowerdown, this.Owner.Transform.Translation);
+                
+            }
+            
+            
+            
+        }
+    
+    }
+    
+}

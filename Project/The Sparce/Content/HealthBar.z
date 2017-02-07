@@ -1,22 +1,19 @@
 /* ----------------------------------------------------------------------------
 ** TEAM - We Couldn't Decide
-** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+** (c) 2017 DigiPen Institute of Technology, All Rights Reserved.
 **
 ** FILE NAME
 **
 ** Author:
-** - Brandon Wolenetz
+** - Hudson Green
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - none
 ** --------------------------------------------------------------------------*/
 
-//makes the beam extend intead of just appear, also fades beam
-
-class Beam : ZilchComponent
+class HealthBar : ZilchComponent
 {
-    [Property]
-    var Speed : Real = 10;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -24,7 +21,12 @@ class Beam : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
-        this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
+        this.Owner.Transform.Scale = Real3(5, 0.15, 1);
+        
+        if(this.Space.ObjectCount > this.Owner.Space.ObjectCount - 1)
+        {
+            this.Owner.Destroy();
+        }
     }
+    
 }

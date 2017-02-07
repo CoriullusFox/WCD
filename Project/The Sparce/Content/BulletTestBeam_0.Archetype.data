@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "BulletTestBeam",
 	},
+	Archetyped = 
+	{
+		string Name = "585c1ebce414b198:BulletTestBeam",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -24,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "4e07948c35993095:DefaultSprite",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,

@@ -11,13 +11,8 @@
 ** - <list in same format as author if applicable>
 ** --------------------------------------------------------------------------*/
 
-class PlayerShooting : ZilchComponent
+class DebugPlayerDamage : ZilchComponent
 {
-    var Direction : Real3 = Real3(0,1,0);
-    
-    
-    
-    var CooldownTimer : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -26,13 +21,17 @@ class PlayerShooting : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsDown(Keys.Space) || Zero.Mouse.IsButtonDown(MouseButtons.Left))
+        
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.Backslash))
         {
-            //send shoot event
-            var toSend = Shoot();
-            toSend.Direction = this.Direction;
-            this.Owner.DispatchEvent(Events.Shoot, toSend);
+            
+            var toSend = Hurt();
+            toSend.Damage = 10;
+            this.Owner.DispatchEvent(Events.Hurt, toSend);
+            this.GameSession.DispatchEvent(Events.Hurt, toSend);
             
         }
+        
     }
 }
