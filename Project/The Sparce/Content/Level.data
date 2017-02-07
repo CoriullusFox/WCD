@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.33861,
+			float Size = 16.3324,
 		},
 		EditorCameraController = 
 		{
@@ -210,11 +210,11 @@ Level =
 		GunManager = 
 		{
 			Enum SelectedGun = Beam,
-			string PistleBullet = "58168efcbf94ba1b:BulletTest.Archetype",
-			string ShotgunBullet = "58168efcbf94ba1b:BulletTest.Archetype",
-			string MinigunBullet = "58168efcbf94ba1b:BulletTest.Archetype",
-			string RifleBullet = "58168efcbf94ba1b:BulletTest.Archetype",
-			string BeamBullet = "58168efcbf95057e:BulletTestBeam.Archetype.Archetype",
+			string PistleBullet = "580e63ae4c297722:BulletTest",
+			string ShotgunBullet = "580e63ae4c297722:BulletTest",
+			string MinigunBullet = "580e63ae4c297722:BulletTest",
+			string RifleBullet = "580e63ae4c297722:BulletTest",
+			string BeamBullet = "580e63ae4c298252:BulletTestBeam",
 		},
 		RigidBody = 
 		{
