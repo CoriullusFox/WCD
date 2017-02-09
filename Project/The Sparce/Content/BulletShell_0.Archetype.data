@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "BulletShell",
 	},
+	Archetyped = 
+	{
+		string Name = "5819b19ffb8abb8e:BulletShell",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -88.8299, 0],
+		Vec3 Translation = [-12.4647, -10.4577, 0],
 		Vec3 Scale = [0.5, 0.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "4e07948c35993095:DefaultSprite",
+		string SpriteSource = "5819c6bce42eb68f:ABulletShell",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,10 +42,10 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
-		Vec3 Velocity = [0, -56.3999, 0],
+		Vec3 Velocity = [0, -1535.15, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
 	GravityEffect = 
@@ -54,15 +58,19 @@ Cog =
 	},
 	TimedDeath = 
 	{
-		float Lifetime = 1.2,
+		float Lifetime = 1.5,
 	},
 	SoundEmitter = 
 	{
 		bool StartPlaying = true,
 		int ExtraPriority = 0,
-		string CueName = "4e1bd44008b4dc2a:DefaultCue",
+		string CueName = "5819b1c58335057c:BulletShell.SoundCue",
 		float Volume = 0.1,
 		float Pitch = 1,
 		bool Positional = true,
+	},
+	FreezeBullet = 
+	{
+		float TimeUntilStop = 0.8,
 	},
 },

@@ -23,6 +23,9 @@ class BulletEject : ZilchComponent
     [Property]
     var ArchetypeBullet : Archetype = Archetype.BulletMinigun;
     
+    [Property]
+    var BulletShell : Archetype = Archetype.BulletShell;
+    
     var ShootShell : Boolean = false;
     
     function Initialize(init : CogInitializer)
@@ -37,7 +40,7 @@ class BulletEject : ZilchComponent
         {
             
             var bullet = this.Space.FindObjectByName("BulletTest");
-            var shell = this.Space.CreateAtPosition(Archetype.Find("BulletShell"), this.Owner.Transform.Translation);
+            var shell = this.Space.CreateAtPosition(this.BulletShell, this.Owner.Transform.Translation);
             var randGen : Random = Random();
             
             this.ShootShell = false;

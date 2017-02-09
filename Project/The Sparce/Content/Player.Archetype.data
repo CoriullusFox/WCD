@@ -1,0 +1,164 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Player",
+	},
+	Archetyped = 
+	{
+		string Name = "5819c2376fedf85b:Player",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0.0272834, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [0.11, 0, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = true,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	GunManager = 
+	{
+		Enum SelectedWeapon = Pistol,
+		string ArchetypePistol = "580e63ae4c297722:BulletTest",
+		string ArchetypeShotgun = "580e63ae4c297722:BulletTest",
+		string ArchetypeMinigun = "580e63ae4c297722:BulletTest",
+		string ArchetypeRifle = "580e63ae4c297722:BulletTest",
+		string ArchetypeBeam = "580e63ae4c297722:BulletTest",
+		float ClipPistol = -99,
+		float ClipShotgun = 6,
+		float ClipMinigun = 500,
+		float ClipRifle = 8,
+		float ClipBeam = 2,
+		int TierPistol = 1,
+		int TierShotgun = 1,
+		int TierMinigun = 1,
+		int TierRifle = 1,
+		int TierBeam = 1,
+		Vec3 RecipePistol = [111, 211, 111],
+		Vec3 RecipeShotgun = [111, 511, 111],
+	},
+	ShootManager = 
+	{
+		bool ChargeEnabled = true,
+		float AmmoSubtract = 1,
+		string ArchetypeAmmoBar = "5819b194843c203b:AmmoBar",
+		string ArchetypeCooldownBar = "5819b1b0ffb28fc6:CooldownBar",
+	},
+	PlayerShooting = 
+	{
+	},
+	BulletEject = 
+	{
+		float VerticalVelocity = 5,
+		float HorizontalVelocity = 5,
+		string ArchetypeBullet = "5819b19184e80a9a:BulletMinigun",
+	},
+	MinigunBarrelDelayEffect = 
+	{
+		float Cooldown = 0.95,
+		float ModifiableCooldown = 0.95,
+		string MinigunStart = "5819b1affcd99b7d:MinigunPower",
+		string MinigunSpinning = "5819b15ef1092ce6:MinigunSpinning",
+		string MinigunPowerdown = "5819b155f3d96dc0:MinigunPowerdown",
+	},
+	Health = 
+	{
+		float ConfiguredHealth = 50,
+		float DefaultHP = 50,
+		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+		float RegenRate = 0.5,
+	},
+	Movement = 
+	{
+		float Speed = 250,
+		float RunSpeed = 500,
+	},
+	ChangeDirectionToPointAtMouse = 
+	{
+	},
+	DebugMode = 
+	{
+		bool DubugModeEnabled = true,
+	},
+	IgnoreSpaceEffects = 
+	{
+		bool Drag = false,
+		bool Flow = false,
+		bool Force = false,
+		bool Gravity = true,
+		bool Thrust = false,
+		bool Vortex = false,
+		bool Wind = false,
+		bool Invalid = false,
+		bool Torque = false,
+		bool PointGravity = false,
+		bool PointForce = false,
+		bool Buoyancy = false,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Camera",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, -0.0272834, 40],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Camera = 
+			{
+				ProjectionMode ProjectionMode = Orthographic,
+				Facing Facing = NegativeZ,
+				CameraTransparentSort TransparentSort = InheritFromSpace,
+				float FieldOfView = 45,
+				float NearPlane = 0.5,
+				float FarPlane = 200,
+				float Size = 20,
+			},
+			Microphone = 
+			{
+				bool Active = true,
+			},
+		},
+	},
+},

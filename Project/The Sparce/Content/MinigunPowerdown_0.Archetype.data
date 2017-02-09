@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "MinigunPowerdown",
 	},
+	Archetyped = 
+	{
+		string Name = "5819b155f3d96dc0:MinigunPowerdown",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -36,7 +40,7 @@ Cog =
 	{
 		bool StartPlaying = true,
 		int ExtraPriority = 0,
-		string CueName = "4e1bd44008b4dc2a:DefaultCue",
+		string CueName = "5819b1c5833a76fd:MinigunPowerDown.SoundCue",
 		float Volume = 1,
 		float Pitch = 1,
 		bool Positional = true,
