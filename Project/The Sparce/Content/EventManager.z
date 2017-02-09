@@ -25,3 +25,10 @@ class Hurt : ZilchEvent
     var Damage : Real = 0;
     
 }
+class Energy : ZilchEvent
+{
+    
+    sends Energy : Energy;
+    var Energy : Real = 0;
+    
+}

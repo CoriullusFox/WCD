@@ -11,28 +11,31 @@
 ** - <list in same format as author if applicable>
 ** --------------------------------------------------------------------------*/
 
-class HealthBarPlayer : ZilchComponent
+class EnergyBar : ZilchComponent
 {
+    
+    var Energy : Real = 100;
     [Property]
-    var MaxHealth : Real = 100;
-    var Health : Real;
-    [Property]
-    var HealthbarSpeed : Real = 10;
+    var Speed : Real = 10;
+    var MaxEnergy : Real;
     function Initialize(init : CogInitializer)
     {
-        this.Health = this.MaxHealth;
+        this.MaxEnergy = this.Energy;
+        Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.GameSession, Events.Hurt, this.OnHurt);
-    }
-
-    function OnHurt(event : Hurt)
-    {
-        this.Health -= event.Damage;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(1,(this.Health / this.MaxHealth) * 10,1), event.Dt * this.HealthbarSpeed);
+        
+        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(1,(this.Energy / this.MaxEnergy) * 10,1), event.Dt * this.Speed);
+        
+    }
+
+    function OnEnergy(event : Energy)
+    {
+        
+        this.Energy = event.Energy;
         
     }
 }

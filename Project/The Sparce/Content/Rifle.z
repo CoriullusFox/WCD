@@ -16,10 +16,20 @@ class Rifle : ZilchComponent
     
     [Property]
     var Bullet : Archetype = Archetype.BulletTest;
+    
+    [Property]
+    var EnergyUse : Real = 20;
+    var Energy : Real = 0;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
+    }
+    
+    function OnEnergy(event : Energy)
+    {
+        this.Energy = event.Energy;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -32,8 +42,14 @@ class Rifle : ZilchComponent
     function OnShoot(event : Shoot)
     {
         //only shoot if cooldown is over
-        if(this.Cooldown >= 3)
+        if(this.Cooldown >= 2.5 && this.Energy >= this.EnergyUse)
         {
+            
+            
+            //use energy
+            this.Owner.EnergyStor.Energy -= this.EnergyUse;
+            
+            
             this.Cooldown = 0;
             /** SHOOTING LOGIC HERE **/
             

@@ -8,7 +8,7 @@
 ** - Hudson Green
 **
 ** Contributors:
-** - none
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 
 class Health : ZilchComponent
@@ -19,10 +19,13 @@ class Health : ZilchComponent
     var ConfiguredHealth    : Real = 50;
     
     [Property]
-    var DefaultHP           : Real = 50;
+    var ArchetypeAmmoBar    : Archetype = Archetype.HealthBar;
     
     [Property]
-    var ArchetypeAmmoBar    : Archetype = Archetype.HealthBar;
+    var MiniHeathBar        : Boolean = true;
+    
+    [Property]
+    var Player              : Boolean = false;
     
     //REGEN
     [Property]
@@ -48,9 +51,9 @@ class Health : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        var healthDecrease = this.DefaultHP - this.ConfiguredHealth;
+        var healthDecrease = this.MaxHealth - this.ConfiguredHealth;
         
-        var healthInPercent = 100 - (healthDecrease / (this.DefaultHP + 0.001) * 100);
+        var healthInPercent = 100 - (healthDecrease / (this.MaxHealth + 0.001) * 100);
         
         //Console.WriteLine("% Ammo", cooldownInPercent);
         
@@ -59,19 +62,22 @@ class Health : ZilchComponent
             healthInPercent = 100;
         }
         
-        var healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -1.05, 0));
-        
-        healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
-        
-        if(Zero.Keyboard.KeyIsPressed(Keys.T))
+        if(this.MiniHeathBar)
         {
-            this.ConfiguredHealth -= 5;
+            var healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -1.05, 0));
+            healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
         }
-        
         //REGEN
         if(this.ConfiguredHealth < this.MaxHealth)
         {
             this.ConfiguredHealth += this.RegenRate * event.Dt;
+            if(this.Player)
+            {
+                var toSend = Hurt();
+                toSend.Damage = (this.RegenRate * event.Dt) * -1;
+                this.GameSession.DispatchEvent(Events.Hurt, toSend);
+            }
+            
         }
         
         // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO

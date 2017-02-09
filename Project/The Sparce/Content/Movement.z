@@ -1,3 +1,16 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
 class Movement : ZilchComponent
 {
     [Property]
@@ -22,19 +35,19 @@ class Movement : ZilchComponent
         }
         if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
-            this.Owner.RigidBody.Velocity = Real3(-1,-1,0) * r3Speed;
+            this.Owner.RigidBody.Velocity = Real3(-0.5,-0.5,0) * r3Speed;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
-            this.Owner.RigidBody.Velocity = Real3(1,-1,0) * r3Speed;
+            this.Owner.RigidBody.Velocity = Real3(0.5,-0.5,0) * r3Speed;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            this.Owner.RigidBody.Velocity = Real3(-1,1,0) * r3Speed;
+            this.Owner.RigidBody.Velocity = Real3(-0.5,0.5,0) * r3Speed;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            this.Owner.RigidBody.Velocity = Real3(1,1,0) * r3Speed;
+            this.Owner.RigidBody.Velocity = Real3(0.5,0.5,0) * r3Speed;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.W))
         {

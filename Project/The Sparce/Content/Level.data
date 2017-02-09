@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.336657, 2.00449e-005, 50],
+			Vec3 Translation = [-0.374694, -0.17838, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3324,
+			float Size = 4.4511,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.336657, 2.00449e-005, 1.47157e-008],
+			Vec3 LookTarget = [-0.374694, -0.17838, -1.63784e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -228,12 +228,6 @@ Level =
 			float Speed = 250,
 			float RunSpeed = 500,
 		},
-		Shotgun = 
-		{
-			string Bullet = "580e63ae4c297722:BulletTest",
-			int NumberOfShots = 3,
-			float DistBetweenShots = 0.1,
-		},
 		ChangeDirectionToPointAtMouse = 
 		{
 		},
@@ -243,9 +237,27 @@ Level =
 		Health = 
 		{
 			float ConfiguredHealth = 100,
-			float DefaultHP = 50,
 			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
-			float RegenRate = 0.5,
+			bool MiniHeathBar = false,
+			bool Player = true,
+			float RegenRate = 1.5,
+		},
+		WeaponSwap = 
+		{
+			bool ShotgunUnlocked = true,
+			bool MinigunUnlocked = true,
+			bool BeamLaserUnlocked = true,
+			bool RifleUnlocked = true,
+			int NumberOfWeapons = 5,
+		},
+		EnergyStor = 
+		{
+		},
+		Shotgun = 
+		{
+			string Bullet = "580e63ae4c297722:BulletTest",
+			int NumberOfShots = 3,
+			float DistBetweenShots = 0.1,
 		},
 	},
 },
