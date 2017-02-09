@@ -1,0 +1,20 @@
+class BulletScript : ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name != "TempPlayer" && event.OtherObject.Name != this.Owner.Name)
+        {
+            var toSend = Hurt();
+            toSend.Damage = 10;
+            event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+            this.Owner.Destroy();
+            
+        }
+    }
+}

@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "BulletTest",
 	},
+	Archetyped = 
+	{
+		string Name = "580e63ae4c297722:BulletTest",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -69,5 +73,18 @@ Cog =
 	Despawn = 
 	{
 		float LifeLength = 10,
+	},
+	BulletScript = 
+	{
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.5, 0.5, 0.5],
 	},
 },
