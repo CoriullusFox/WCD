@@ -32,8 +32,10 @@ class UICooldownBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
-        this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X,(this.Cooldown / this.MaxCooldown) * 3,this.Owner.Transform.Scale.Z);
+        if(this.Cooldown >= 0)
+        {
+            this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X,3 - (this.Cooldown / this.MaxCooldown) * 3,this.Owner.Transform.Scale.Z);
+        }
         
     }
 }
