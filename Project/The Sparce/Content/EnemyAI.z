@@ -1,7 +1,10 @@
 class EnemyAI : ZilchComponent
 {
     [Property]
-    var Proximity : Real = 10.0;
+    var ChaseProximity : Real = 10.0;
+    
+    [Property]
+    var ShootProximity : Real = 40.0;
     
     [Property]
     var Speed : Integer = 15;
@@ -15,13 +18,18 @@ class EnemyAI : ZilchComponent
     {
         var distanceFromPlayer = Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
         
-        if(distanceFromPlayer < this.Proximity)
+        if(distanceFromPlayer < this.ChaseProximity)
         {
             var moveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
             
             Math.Normalize(moveDirection);
             
             this.Owner.Transform.Translation += moveDirection * event.Dt * this.Speed;
+        }
+        
+        if(distanceFromPlayer < this.ShootProximity)
+        {
+            
         }
         
     }

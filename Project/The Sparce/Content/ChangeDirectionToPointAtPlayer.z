@@ -1,0 +1,17 @@
+class ChangeDirectionToPointAtPlayer : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        var mouseDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
+        
+        Math.Normalize(mouseDirection);
+        
+        this.Owner.PlayerShooting.Direction = Real3(mouseDirection.X, mouseDirection.Y, 0.0);
+    }
+}

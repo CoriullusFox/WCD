@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "ChangeDirectionToPointAtPlayer",
+		uint64 ResourceId = 5819d8181b5f4337,
+	},
+},
