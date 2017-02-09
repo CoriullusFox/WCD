@@ -9,6 +9,9 @@ class EnemyAI : ZilchComponent
     [Property]
     var Speed : Integer = 15;
     
+    [Property]
+    var Direction : Real3 = Real3(0,1,0);
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -29,7 +32,9 @@ class EnemyAI : ZilchComponent
         
         if(distanceFromPlayer < this.ShootProximity)
         {
-            
+            var toSend = Shoot();
+            toSend.Direction = this.Direction;
+            this.Owner.DispatchEvent(Events.Shoot, toSend);
         }
         
     }
