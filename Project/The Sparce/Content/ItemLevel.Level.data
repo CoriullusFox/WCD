@@ -173,82 +173,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5819c2376fedf85b:Player",
-		LinkId = 
-		{
-			uint Id = 4,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0.0272834, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5819b194843c203b:AmmoBar",
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -1, 0],
-			Vec3 Scale = [2, 0.15, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "AmmoBar",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5819b1b0ffb28fc6:CooldownBar",
-		LinkId = 
-		{
-			uint Id = 6,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -1.15, 0],
-			Vec3 Scale = [2, 0.15, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "CooldownBar",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5819b1a1fc281cba:HealthBar",
-		LinkId = 
-		{
-			uint Id = 7,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -1.3, 0],
-			Vec3 Scale = [2, 0.15, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "HealthBar",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5819b1bffeb885d8:Cursor",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -265,7 +193,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -273,7 +201,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.77664, 0, 0],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -294,9 +222,6 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
-		},
-		Shooting = 
-		{
 		},
 		PlayerShooting = 
 		{
@@ -344,15 +269,59 @@ Level =
 		{
 			float EnergyRegenRate = 10,
 		},
-		Shotgun = 
+		Pistol = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			int NumberOfShots = 3,
-			float DistBetweenShots = 0.1,
-			float EnergyUse = 10,
+			float EnergyUse = 5,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 		Hierarchy = 
 		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5819b1bffeb885d8:Cursor",
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.7913, -4.67883, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Cursor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5819e977b459b3a3:DropPistol",
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.84784, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "DropPistol",
 		},
 	},
 },
