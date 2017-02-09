@@ -2,8 +2,8 @@ AudioContent =
 {
 	SoundBuilder = 
 	{
-		string Name = "MinigunFullSpin",
-		uint64 ResourceId = 5819b1c58339eb67,
+		string Name = "MinigunPowerup",
+		uint64 ResourceId = 5819d8ad2db5c06a,
 		bool Compressed = true,
 		uint Quality = 100,
 		SoundLoadType LoadType = Decompress,

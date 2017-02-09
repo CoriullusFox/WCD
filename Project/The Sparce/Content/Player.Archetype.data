@@ -84,6 +84,7 @@ Cog =
 		float VerticalVelocity = 5,
 		float HorizontalVelocity = 5,
 		string ArchetypeBullet = "5819b19184e80a9a:BulletMinigun",
+		string BulletShell = "5819b19ffb8abb8e:BulletShell",
 	},
 	MinigunBarrelDelayEffect = 
 	{
@@ -96,8 +97,9 @@ Cog =
 	Health = 
 	{
 		float ConfiguredHealth = 50,
-		float DefaultHP = 50,
 		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+		bool MiniHeathBar = true,
+		bool Player = false,
 		float RegenRate = 0.5,
 	},
 	Movement = 
@@ -129,36 +131,5 @@ Cog =
 	},
 	Hierarchy = 
 	{
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 2,
-			},
-			Named = 
-			{
-				string Name = "Camera",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, -0.0272834, 40],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Camera = 
-			{
-				ProjectionMode ProjectionMode = Orthographic,
-				Facing Facing = NegativeZ,
-				CameraTransparentSort TransparentSort = InheritFromSpace,
-				float FieldOfView = 45,
-				float NearPlane = 0.5,
-				float FarPlane = 200,
-				float Size = 20,
-			},
-			Microphone = 
-			{
-				bool Active = true,
-			},
-		},
 	},
 },

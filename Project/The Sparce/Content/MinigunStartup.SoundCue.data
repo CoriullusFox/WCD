@@ -1,7 +1,7 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.05,
+	float Volume = 0.5,
 	float VolumeVariation = 0,
 	float Pitch = 0,
 	float PitchVariation = 0,
@@ -14,7 +14,7 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "585c694269d65f5a:MinigunStartup",
+			string SoundName = "5819d8ad2db5c06a:MinigunPowerup",
 			float Weight = 1,
 		},
 	],

@@ -41,6 +41,7 @@ class MinigunBarrelDelayEffect : ZilchComponent
                 if(!this.StartupSoundPlayed)
                 {
                     var soundPowerupEntity = this.Space.CreateAtPosition(this.MinigunStart, this.Owner.Transform.Translation);
+                    this.StartupSoundPlayed = true;
                 }
                 
                 //Cooldown logic
@@ -64,6 +65,7 @@ class MinigunBarrelDelayEffect : ZilchComponent
                 Console.WriteLine("Charge Disabled! :(");
                 
                 this.Shoot.ChargedUp = false;
+                this.StartupSoundPlayed = false;
                 this.Space.FindObjectByName("MinigunSpinning").Destroy();
                 
                 var soundPowerupEntity = this.Space.CreateAtPosition(this.MinigunPowerdown, this.Owner.Transform.Translation);
