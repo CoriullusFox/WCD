@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [14.7746, 0.550597, 50],
+			Vec3 Translation = [-0.124961, -0.793275, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897,
+			float Size = 5.50234,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [14.7746, 0.550597, 6.74917e-007],
+			Vec3 LookTarget = [-0.124961, -0.793275, 2.36362e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -178,9 +178,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17, 0, 0],
-			Vec3 Scale = [1, 10, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [0, -1.09974, 0],
+			Vec3 Scale = [0.2, 3, 1],
+			Quat Rotation = [0, 0, 0.707107, 0.707107],
 		},
 		Sprite = 
 		{
@@ -218,9 +218,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [16, 0, 0],
-			Vec3 Scale = [1, 10, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [0, -1.29974, 0],
+			Vec3 Scale = [0.2, 3, 1],
+			Quat Rotation = [0, 0, 0.707107, 0.707107],
 		},
 		Sprite = 
 		{
@@ -241,6 +241,45 @@ Level =
 			uint StartFrame = 0,
 		},
 		EnergyBar = 
+		{
+			float Speed = 10,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "CooldownBar",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -1.49974, 0],
+			Vec3 Scale = [0.2, 3, 1],
+			Quat Rotation = [0, 0, 0.707107, 0.707107],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.735, 0.6615, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		UICooldownBar = 
 		{
 			float Speed = 10,
 		},

@@ -32,3 +32,11 @@ class Energy : ZilchEvent
     var Energy : Real = 0;
     
 }
+class Cooldown : ZilchEvent
+{
+    
+    sends Cooldown : Cooldown;
+    var Cooldown : Real;
+    var MaxCooldown : Real;
+    
+}

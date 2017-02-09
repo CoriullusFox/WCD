@@ -20,6 +20,7 @@ class Rifle : ZilchComponent
     [Property]
     var EnergyUse : Real = 20;
     var Energy : Real = 0;
+    var CooldownMax : Real = 2.5;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
@@ -36,13 +37,17 @@ class Rifle : ZilchComponent
     {
         //Cooldown logic
         this.Cooldown += event.Dt;
+        var toSend = Cooldown();
+        toSend.Cooldown = this.CooldownMax - this.Cooldown;
+        toSend.MaxCooldown = this.CooldownMax;
+        this.GameSession.DispatchEvent(Events.Cooldown, toSend);
     }
     
     //Shooting logic (only runs when the event is called)
     function OnShoot(event : Shoot)
     {
         //only shoot if cooldown is over
-        if(this.Cooldown >= 2.5 && this.Energy >= this.EnergyUse)
+        if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
         {
             
             

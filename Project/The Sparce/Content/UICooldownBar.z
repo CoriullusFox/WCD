@@ -11,31 +11,29 @@
 ** - <list in same format as author if applicable>
 ** --------------------------------------------------------------------------*/
 
-class EnergyBar : ZilchComponent
+class UICooldownBar : ZilchComponent
 {
     
-    var Energy : Real = 100;
+    var Cooldown : Real = 100;
     [Property]
-    var Speed : Real = 10;
-    var MaxEnergy : Real;
+    var Speed : Real = 100;
+    var MaxCooldown : Real = 100;
     function Initialize(init : CogInitializer)
     {
-        this.MaxEnergy = this.Energy;
-        Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.Cooldown, this.OnCooldown);
+    }
+
+    function OnCooldown(event : Cooldown)
+    {
+        this.Cooldown = event.Cooldown;
+        this.MaxCooldown = event.MaxCooldown;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X,(this.Energy / this.MaxEnergy) * 3,this.Owner.Transform.Scale.Z), event.Dt * this.Speed);
-        
-    }
-
-    function OnEnergy(event : Energy)
-    {
-        
-        this.Energy = event.Energy;
+        this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X,(this.Cooldown / this.MaxCooldown) * 3,this.Owner.Transform.Scale.Z);
         
     }
 }
