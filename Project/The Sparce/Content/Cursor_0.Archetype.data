@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Cursor",
 	},
+	Archetyped = 
+	{
+		string Name = "5819b1bffeb885d8:Cursor",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-13.5848, -10.5063, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "4e07948c35993095:DefaultSprite",
+		string SpriteSource = "5819de4b41109e1b:cursor",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,

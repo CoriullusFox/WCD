@@ -79,13 +79,6 @@ Cog =
 	PlayerShooting = 
 	{
 	},
-	BulletEject = 
-	{
-		float VerticalVelocity = 5,
-		float HorizontalVelocity = 5,
-		string ArchetypeBullet = "5819b19184e80a9a:BulletMinigun",
-		string BulletShell = "5819b19ffb8abb8e:BulletShell",
-	},
 	MinigunBarrelDelayEffect = 
 	{
 		float Cooldown = 0.95,
@@ -128,6 +121,21 @@ Cog =
 		bool PointGravity = false,
 		bool PointForce = false,
 		bool Buoyancy = false,
+	},
+	DebugPlayerDamage = 
+	{
+	},
+	WeaponSwap = 
+	{
+		bool ShotgunUnlocked = false,
+		bool MinigunUnlocked = false,
+		bool BeamLaserUnlocked = false,
+		bool RifleUnlocked = false,
+		int NumberOfWeapons = 5,
+	},
+	EnergyStor = 
+	{
+		float EnergyRegenRate = 10,
 	},
 	Hierarchy = 
 	{

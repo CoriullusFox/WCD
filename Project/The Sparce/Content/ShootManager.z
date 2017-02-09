@@ -189,11 +189,11 @@ class ShootManager : ZilchComponent
                     createdBullet.Orientation.LookAtDirection(newDirection);
                     createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
                     
-                    if(createdBullet.ArchetypeName == "BulletTest")
-                    {
-                        this.Owner.BulletEject.ShootShell = true;
-                        Console.WriteLine("Ejected Shell");
-                    }
+                    //if(createdBullet.ArchetypeName == "BulletTest")
+                    //{
+                    //    this.Owner.BulletEject.ShootShell = true;
+                    //    Console.WriteLine("Ejected Shell");
+                    //}
                     
                     createdBullet.Despawn.LifeLength = this.Gun.SelectedGun.Lifespan;
                     
