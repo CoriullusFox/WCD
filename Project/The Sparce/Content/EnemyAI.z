@@ -3,6 +3,9 @@ class EnemyAI : ZilchComponent
     [Property]
     var Proximity : Real = 10.0;
     
+    [Property]
+    var Speed : Integer = 15;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -10,11 +13,15 @@ class EnemyAI : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var distance = Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
+        var distanceFromPlayer = Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
         
-        if(distance < 10.0)
+        if(distanceFromPlayer < this.Proximity)
         {
+            var moveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
             
+            Math.Normalize(moveDirection);
+            
+            this.Owner.Transform.Translation += moveDirection * event.Dt * this.Speed;
         }
         
     }
