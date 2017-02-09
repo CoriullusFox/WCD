@@ -6,26 +6,22 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "MinigunPowerdown",
-	},
-	Archetyped = 
-	{
-		string Name = "585c6c6a2df783df:MinigunPowerdown",
+		string Name = "CooldownBar",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-8.66428, -10.7637, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [2, 0.15, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
-		bool Visible = false,
+		bool Visible = true,
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0, 0, 0.235],
-		BlendMode BlendMode = Alpha,
+		Vec4 Color = [0.76, 0.4104, 0, 1],
+		BlendMode BlendMode = Additive,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 		string SpriteSource = "5275aa4d802dd6dc:Square",
@@ -36,13 +32,7 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	SoundEmitter = 
+	CooldownBar = 
 	{
-		bool StartPlaying = true,
-		int ExtraPriority = 0,
-		string CueName = "585c6efc8b2ff27d:MinigunPowerDown",
-		float Volume = 1,
-		float Pitch = 1,
-		bool Positional = true,
 	},
 },

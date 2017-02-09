@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "DebugPlayerDamage",
+		uint64 ResourceId = 5819b1c5833816b8,
+	},
+},

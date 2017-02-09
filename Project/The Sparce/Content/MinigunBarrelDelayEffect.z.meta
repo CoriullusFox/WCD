@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "MinigunBarrelDelayEffect",
+		uint64 ResourceId = 5819b1c58339c0cf,
+	},
+},

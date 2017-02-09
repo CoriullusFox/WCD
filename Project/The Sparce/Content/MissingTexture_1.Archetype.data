@@ -6,16 +6,12 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "AmmoBar",
-	},
-	Archetyped = 
-	{
-		string Name = "585c1c0394829202:AmmoBar",
+		string Name = "MissingTexture",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -1, 0],
-		Vec3 Scale = [2, 0.15, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,19 +20,16 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.83, 0.7968, 0, 1],
-		BlendMode BlendMode = Additive,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "4e07948c35993095:DefaultSprite",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
-	},
-	AmmoBar = 
-	{
 	},
 },

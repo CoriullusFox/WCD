@@ -8,13 +8,9 @@ Cog =
 	{
 		string Name = "TempPlayer",
 	},
-	Archetyped = 
-	{
-		string Name = "585d46aa5615f38d:TempPlayer",
-	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0.0272834, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +38,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -50,24 +46,12 @@ Cog =
 	},
 	GunManager = 
 	{
-		Enum SelectedWeapon = Pistol,
-		string ArchetypePistol = "585c1eb1faa07ab2:BulletTest",
-		string ArchetypeShotgun = "585c1eb1faa07ab2:BulletTest",
-		string ArchetypeMinigun = "585c35d4ecab5a38:BulletMinigun",
-		string ArchetypeRifle = "585c1eb1faa07ab2:BulletTest",
-		string ArchetypeBeam = "585c1eb1faa07ab2:BulletTest",
-		float ClipPistol = -99,
-		float ClipShotgun = 6,
-		float ClipMinigun = 500,
-		float ClipRifle = 8,
-		float ClipBeam = 2,
-		int TierPistol = 1,
-		int TierShotgun = 1,
-		int TierMinigun = 1,
-		int TierRifle = 1,
-		int TierBeam = 1,
-		Vec3 RecipePistol = [111, 211, 111],
-		Vec3 RecipeShotgun = [111, 511, 111],
+		string SelectedGun = "",
+		string PistleBullet = "",
+		string ShotgunBullet = "",
+		string MinigunBullet = "",
+		string RifleBullet = "",
+		string BeamBullet = "",
 	},
 	ShootManager = 
 	{
@@ -77,6 +61,7 @@ Cog =
 	},
 	PlayerShooting = 
 	{
+		Vec3 Direction = [0, 0, 0],
 	},
 	BulletEject = 
 	{

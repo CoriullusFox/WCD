@@ -8,13 +8,9 @@ Cog =
 	{
 		string Name = "MinigunPower",
 	},
-	Archetyped = 
-	{
-		string Name = "585c6c1408017873:MinigunPower",
-	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.1969, -10.7637, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -40,7 +36,7 @@ Cog =
 	{
 		bool StartPlaying = true,
 		int ExtraPriority = 0,
-		string CueName = "585c69326635e1eb:MinigunStartup",
+		string CueName = "4e1bd44008b4dc2a:DefaultCue",
 		float Volume = 1,
 		float Pitch = 1,
 		bool Positional = true,

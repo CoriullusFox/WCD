@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "CooldownBar",
+		uint64 ResourceId = 5819b1c583371e1f,
+	},
+},

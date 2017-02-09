@@ -6,16 +6,12 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "BulletShell",
-	},
-	Archetyped = 
-	{
-		string Name = "585c372f898ee2b4:BulletShell",
+		string Name = "BulletTest",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-12.5952, -10.346, 0],
-		Vec3 Scale = [0.5, 0.5, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [0.3, 0.3, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +20,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0, 0.31, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "585c4cb18700acd6:BulletShell",
+		string SpriteSource = "5274db4c2e7c11f9:Circle",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -36,37 +32,42 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
+	Orientation = 
+	{
+		Vec3 GlobalUp = [0, 0, 1],
+		Vec3 UpVector = [0, 0, 1],
+		Vec3 ForwardVector = [0, 1, 0],
+		OrientationBases DefaultBases = ForwardYUpZ,
+	},
 	RigidBody = 
 	{
 		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	GravityEffect = 
+	IgnoreSpaceEffects = 
 	{
-		bool Active = true,
-		bool WakeUpOnChange = true,
-		bool LocalSpaceDirection = false,
-		float Strength = 18,
-		Vec3 Direction = [0, -1, 0],
+		bool Drag = true,
+		bool Flow = true,
+		bool Force = true,
+		bool Gravity = true,
+		bool Thrust = true,
+		bool Vortex = true,
+		bool Wind = true,
+		bool Invalid = false,
+		bool Torque = true,
+		bool PointGravity = true,
+		bool PointForce = true,
+		bool Buoyancy = true,
 	},
-	TimedDeath = 
+	Despawn = 
 	{
-		float Lifetime = 1.2,
-	},
-	SoundEmitter = 
-	{
-		bool StartPlaying = true,
-		int ExtraPriority = 0,
-		string CueName = "585c441792451eb2:BulletShell",
-		float Volume = 0.1,
-		float Pitch = 1,
-		bool Positional = true,
+		float LifeLength = 10,
 	},
 },

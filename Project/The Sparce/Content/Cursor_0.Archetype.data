@@ -6,11 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "MissingTexture",
-	},
-	Archetyped = 
-	{
-		string Name = "585d0d9c30a462aa:MissingTexture",
+		string Name = "Cursor",
 	},
 	Transform = 
 	{
@@ -28,12 +24,15 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "585d0c69364c852e:MissingTexture",
+		string SpriteSource = "4e07948c35993095:DefaultSprite",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
+	},
+	CustomCursor = 
+	{
 	},
 },

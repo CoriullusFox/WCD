@@ -90,6 +90,11 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		UICreator = 
+		{
+			string UILevel = "5819b1c5833d962d:UILevel",
+			string UIArchtype = "5819b167eb57c437:UISpace",
+		},
 	},
 	Cog = 
 	{
@@ -205,16 +210,6 @@ Level =
 		},
 		PlayerShooting = 
 		{
-			Vec3 Direction = [1, 1, 0],
-		},
-		GunManager = 
-		{
-			Enum SelectedGun = Beam,
-			string PistleBullet = "580e63ae4c297722:BulletTest",
-			string ShotgunBullet = "580e63ae4c297722:BulletTest",
-			string MinigunBullet = "580e63ae4c297722:BulletTest",
-			string RifleBullet = "580e63ae4c297722:BulletTest",
-			string BeamBullet = "580e63ae4c298252:BulletTestBeam",
 		},
 		RigidBody = 
 		{
@@ -232,6 +227,25 @@ Level =
 		{
 			float Speed = 250,
 			float RunSpeed = 500,
+		},
+		Shotgun = 
+		{
+			string Bullet = "580e63ae4c297722:BulletTest",
+			int NumberOfShots = 3,
+			float DistBetweenShots = 0.1,
+		},
+		ChangeDirectionToPointAtMouse = 
+		{
+		},
+		DebugPlayerDamage = 
+		{
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 100,
+			float DefaultHP = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			float RegenRate = 0.5,
 		},
 	},
 },

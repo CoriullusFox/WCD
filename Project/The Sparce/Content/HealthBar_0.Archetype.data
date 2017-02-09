@@ -6,16 +6,12 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Cursor",
-	},
-	Archetyped = 
-	{
-		string Name = "585c36d052be62db:Cursor",
+		string Name = "HealthBar",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Scale = [2, 0.15, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +20,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
-		BlendMode BlendMode = Alpha,
+		Vec4 Color = [0.54, 0, 0.000323925, 1],
+		BlendMode BlendMode = Additive,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "585d0c69364c852e:MissingTexture",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -36,7 +32,7 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	CustomCursor = 
+	HealthBar = 
 	{
 	},
 },
