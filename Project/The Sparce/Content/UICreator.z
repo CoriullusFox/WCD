@@ -29,26 +29,14 @@ class UICreator : ZilchComponent
 
     function OnLevelStarted(event : GameEvent)
     {
-        if(event.LevelName == "Level")
-        {
-            Console.WriteLine("ho");
+        if(event.LevelName != "UILevel")
+            {
             if(this.UISpace != null)
             {
                 this.UISpace.Destroy();
             }
             this.UISpace = this.GameSession.CreateNamedSpace("UI", this.UIArchtype);
             this.UISpace.LoadLevel(this.UILevel);
-        }
-        else if(event.LevelName == "UILevel")
-        {
-        }
-        else
-        {
-            Console.WriteLine("hi");
-            if(this.UISpace != null)
-            {
-                this.UISpace.Destroy();
-            }
         }
     }
 
