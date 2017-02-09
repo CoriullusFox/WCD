@@ -22,6 +22,7 @@ class BeamLaser : ZilchComponent
     var EnergyUse : Real = 30;
     var Energy : Real = 0;
     var CooldownMax : Real = 5;
+    var Player : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
@@ -36,13 +37,15 @@ class BeamLaser : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
         //Cooldown logic
         this.Cooldown += event.Dt;
-        var toSend = Cooldown();
-        toSend.Cooldown = this.CooldownMax - this.Cooldown;
-        toSend.MaxCooldown = this.CooldownMax;
-        this.GameSession.DispatchEvent(Events.Cooldown, toSend);
+        if(this.Player)
+        {
+            var toSend = Cooldown();
+            toSend.Cooldown = this.CooldownMax - this.Cooldown;
+            toSend.MaxCooldown = this.CooldownMax;
+            this.GameSession.DispatchEvent(Events.Cooldown, toSend);
+        }
         
         //don't allow movement when beam is firing
         if(this.FreezTimer > 0)
@@ -55,12 +58,15 @@ class BeamLaser : ZilchComponent
     //Shooting logic (only runs when the event is called)
     function OnShoot(event : Shoot)
     {
+        this.Player = event.Player;
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
         {
-            
-            //use energy
-            this.Owner.EnergyStor.Energy -= this.EnergyUse;
+            if(this.Player)
+            {
+                //use energy
+                this.Owner.EnergyStor.Energy -= this.EnergyUse;
+            }
             
             
             this.Cooldown = 0;

@@ -150,6 +150,14 @@ class WeaponSwap : ZilchComponent
                 this.Owner.Rifle.Initialize(init);
             }
             //INSTRUCTIONS add a new if statement for initializing the component of the gun that you are adding!
+            
+            
+            
+            
+            //send shoot event to tell script that is's on a player
+            var toSend = Shoot();
+            toSend.Player = true;
+            this.Owner.DispatchEvent(Events.Shoot, toSend);
         }
         
     }
