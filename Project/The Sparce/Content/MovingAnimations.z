@@ -25,10 +25,14 @@ class MovingAnimations : ZilchComponent
     var NorthWest : SpriteSource = null;
     
     [Property]
-    var WalkingAnimationSpeed : Integer = 1;
+    var CurrentWalkingAnimationSpeed : Integer = 2;
+    
+    var WalkingAnimationSpeed : Integer = 0;
     
     [Property]
-    var RunningAnimationSpeed : Integer = 8;
+    var CurrentRunningAnimationSpeed : Integer = 4;
+    
+    var RunningAnimationSpeed : Integer = 4;
     
     function Initialize(init : CogInitializer)
     {
@@ -37,6 +41,8 @@ class MovingAnimations : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+        
         if(Zero.Keyboard.KeyIsDown(Keys.Shift))
         {
             this.Owner.Sprite.AnimationSpeed = this.RunningAnimationSpeed;
@@ -47,63 +53,75 @@ class MovingAnimations : ZilchComponent
         }
         if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
-            if(this.Owner.Sprite.SpriteSource != this.SouthWest)
-            {
-                this.Owner.Sprite.SpriteSource = this.SouthWest;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.SouthWest;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
-            if(this.Owner.Sprite.SpriteSource != this.SouthEast)
-            {
-                this.Owner.Sprite.SpriteSource = this.SouthEast;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.SouthEast;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            if(this.Owner.Sprite.SpriteSource != this.NorthWest)
-            {
-                this.Owner.Sprite.SpriteSource = this.NorthWest;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.NorthWest;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            if(this.Owner.Sprite.SpriteSource != this.NorthEast)
-            {
-                this.Owner.Sprite.SpriteSource = this.NorthEast;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.NorthEast;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            if(this.Owner.Sprite.SpriteSource != this.North)
-            {
-                this.Owner.Sprite.SpriteSource = this.North;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.North;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.A))
         {
-            if(this.Owner.Sprite.SpriteSource != this.West)
-            {
-                this.Owner.Sprite.SpriteSource = this.West;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.West;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.S))
         {
-            if(this.Owner.Sprite.SpriteSource != this.South)
-            {
-                this.Owner.Sprite.SpriteSource = this.South;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.South;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
-            if(this.Owner.Sprite.SpriteSource != this.East)
-            {
-                this.Owner.Sprite.SpriteSource = this.East;
-            }
+            this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+            
+            this.RunningAnimationSpeed = this.CurrentRunningAnimationSpeed;
+            
+            this.Owner.Sprite.SpriteSource = this.East;
         }
         else
         {
-            this.Owner.Sprite.CurrentFrame = 1;
+            this.WalkingAnimationSpeed = 0;
+            
+            this.Owner.Sprite.AnimationSpeed = this.WalkingAnimationSpeed;
+            
+            this.Owner.Sprite.CurrentFrame = 4;
         }
     }
 }

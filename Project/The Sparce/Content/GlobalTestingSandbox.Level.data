@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.46473, 4.01148, 50],
+			Vec3 Translation = [0.0487331, -0.0725234, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -130,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457,
+			float Size = 4.07623,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-4.46473, 4.01148, -9.97074e-007],
+			Vec3 LookTarget = [0.0487331, -0.0725234, -7.99784e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -216,12 +216,12 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5812ede87e09d134:PlayerEast_Anim",
+			string SpriteSource = "5812ef1fdef735df:PlayerSouth_Anim",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 1,
+			float AnimationSpeed = 2,
 			uint StartFrame = 0,
 		},
 		Shooting = 
@@ -244,8 +244,8 @@ Level =
 		},
 		Movement = 
 		{
-			float Speed = 500,
-			float RunSpeed = 1000,
+			float Speed = 300,
+			float RunSpeed = 600,
 		},
 		ChangeDirectionToPointAtMouse = 
 		{
@@ -300,8 +300,8 @@ Level =
 			string SouthWest = "5812ef37a6a737bd:PlayerSouthWest_Anim",
 			string West = "5812eee383faa2b4:PlayerWest_Anim",
 			string NorthWest = "5812ee539ad4bc66:PlayerNorthWest_Anim",
-			int WalkingAnimationSpeed = 6,
-			int RunningAnimationSpeed = 8,
+			int WalkingAnimationSpeed = 2,
+			int RunningAnimationSpeed = 4,
 		},
 		Hierarchy = 
 		{
