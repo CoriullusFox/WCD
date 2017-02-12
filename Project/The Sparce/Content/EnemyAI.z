@@ -1,3 +1,16 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Sage Dupuy
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
 class EnemyAI : ZilchComponent
 {
     [Property]
@@ -10,7 +23,10 @@ class EnemyAI : ZilchComponent
     var Speed : Integer = 15;
     
     [Property]
-    var Direction : Real3 = Real3(0,1,0);
+    var LookDirection : Real3 = Real3(0,1,0);
+    
+    [Property]
+    var MoveDirection : Real3 = Real3(0.0, 0.0, 0.0);
     
     function Initialize(init : CogInitializer)
     {
@@ -23,17 +39,17 @@ class EnemyAI : ZilchComponent
         
         if(distanceFromPlayer < this.ChaseProximity)
         {
-            var moveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
+            this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
             
-            Math.Normalize(moveDirection);
+            Math.Normalize(this.MoveDirection);
             
-            this.Owner.Transform.Translation += moveDirection * event.Dt * this.Speed;
+            this.Owner.Transform.Translation += this.MoveDirection * event.Dt * this.Speed;
         }
         
         if(distanceFromPlayer < this.ShootProximity)
         {
             var toSend = Shoot();
-            toSend.Direction = this.Direction;
+            toSend.Direction = this.LookDirection;
             this.Owner.DispatchEvent(Events.Shoot, toSend);
         }
         

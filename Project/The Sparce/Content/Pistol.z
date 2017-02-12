@@ -21,7 +21,7 @@ class Pistol : ZilchComponent
     [Property]
     var EnergyUse : Real = 5;
     var Energy : Real = 0;
-    var CooldownMax : Real = 0.5;
+    var CooldownMax : Real = 0.4;
     var Player : Boolean = false;
     function Initialize(init : CogInitializer)
     {

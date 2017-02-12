@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "MovingAnimations",
+		string Name = "PlayerAnimations",
 		uint64 ResourceId = 5812f3b41e6d9d52,
 	},
 },

@@ -18,9 +18,9 @@ class Rifle : ZilchComponent
     var Bullet : Archetype = Archetype.BulletTest;
     
     [Property]
-    var EnergyUse : Real = 20;
+    var EnergyUse : Real = 10;
     var Energy : Real = 0;
-    var CooldownMax : Real = 2.5;
+    var CooldownMax : Real = 1.2;
     var Player : Boolean = false;
     function Initialize(init : CogInitializer)
     {

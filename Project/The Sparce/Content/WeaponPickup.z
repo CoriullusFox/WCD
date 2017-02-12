@@ -1,0 +1,63 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Sage Dupuy
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class WeaponPickup : ZilchComponent
+{
+    [Property]
+    var Unlocked : String = "null";
+    
+    [Property]
+    var RotationSpeed : Real = 45.0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var rotationSpeedRadians = Math.ToRadians(this.RotationSpeed);
+        
+        this.Owner.Transform.RotateAnglesLocal(Real3(0,0,rotationSpeedRadians * event.Dt));
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "TempPlayer")
+        {
+            if(this.Unlocked == "Minigun")
+            {
+                event.OtherObject.WeaponSwap.MinigunUnlocked = true;
+            }
+            
+            if(this.Unlocked == "Shotgun")
+            {
+                event.OtherObject.WeaponSwap.ShotgunUnlocked = true;
+            }
+            
+            if(this.Unlocked == "Rifle")
+            {
+                event.OtherObject.WeaponSwap.RifleUnlocked = true;
+            }
+            
+            if(this.Unlocked == "BeamLaser")
+            {
+                event.OtherObject.WeaponSwap.BeamLaserUnlocked = true;
+            }
+            
+            this.Owner.Destroy();
+        }
+    }
+}

@@ -36,7 +36,7 @@ class GunManager : ZilchComponent
 {
     
     // LINK ITEM ID/MANAGER CLASS
-    var Item : ItemManager = null;
+    //var Item : ItemManager = null;
     
     /* ARCHRTYPE PROPERTIES */
     

@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "BulletEject",
-		uint64 ResourceId = 5819b1c5833451bc,
-	},
-},

@@ -1,0 +1,52 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Sage Dupuy
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class EnemyAnimations : ZilchComponent
+{
+    [Property]
+    var North : SpriteSource = null;
+    
+    [Property]
+    var NorthEast : SpriteSource = null;
+    
+    [Property]
+    var East : SpriteSource = null;
+    
+    [Property]
+    var SouthEast : SpriteSource = null;
+    
+    [Property]
+    var South : SpriteSource = null;
+    
+    [Property]
+    var SouthWest : SpriteSource = null;
+    
+    [Property]
+    var West : SpriteSource = null;
+    
+    [Property]
+    var NorthWest : SpriteSource = null;
+    
+    [Property]
+    var AnimationSpeed : Integer = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //IDKKKKKKKKKKKKKKKKK
+    }
+}

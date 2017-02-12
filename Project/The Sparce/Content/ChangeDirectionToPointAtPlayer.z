@@ -12,6 +12,6 @@ class ChangeDirectionToPointAtPlayer : ZilchComponent
         
         Math.Normalize(mouseDirection);
         
-        this.Owner.EnemyAI.Direction = Real3(mouseDirection.X, mouseDirection.Y, 0.0);
+        this.Owner.EnemyAI.LookDirection = Real3(mouseDirection.X, mouseDirection.Y, 0.0);
     }
 }

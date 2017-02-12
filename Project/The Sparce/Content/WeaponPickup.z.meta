@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "DropPistol",
+		string Name = "WeaponPickup",
 		uint64 ResourceId = 5819e9088ceebcb1,
 	},
 },
