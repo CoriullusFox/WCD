@@ -73,9 +73,9 @@ class Health : ZilchComponent
             this.ConfiguredHealth += this.RegenRate * event.Dt;
             if(this.Player)
             {
-                var toSend = Hurt();
-                toSend.Damage = (this.RegenRate * event.Dt) * -1;
-                this.GameSession.DispatchEvent(Events.Hurt, toSend);
+                var toSend = HealthToUI();
+                toSend.Health = this.ConfiguredHealth;
+                this.GameSession.DispatchEvent(Events.HealthToUI, toSend);
             }
             
         }

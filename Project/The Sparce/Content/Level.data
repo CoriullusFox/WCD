@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.41129, -1.12968, 49.999],
+			Vec3 Translation = [0.97081, -3.27507, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0501,
+			float Size = 16.3324,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.41129, -1.12968, -0.000999887],
+			Vec3 LookTarget = [0.97081, -3.27507, -0.000999747],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -307,6 +307,8 @@ Level =
 			float ChaseProximity = 6,
 			float ShootProximity = 24,
 			int Speed = 1,
+			Vec3 LookDirection = [0, 1, 0],
+			Vec3 MoveDirection = [0, 0, 0],
 		},
 		PlayerShooting = 
 		{

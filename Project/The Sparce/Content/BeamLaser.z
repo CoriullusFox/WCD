@@ -91,6 +91,9 @@ class BeamLaser : ZilchComponent
                     
                     createdBullet.Despawn.LifeLength = 2;
                     
+                    //set whether or not the beam is from the player
+                    createdBullet.Beam.PlayerBeam = this.Player;
+                    
                 }
             }
         }

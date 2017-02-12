@@ -22,12 +22,12 @@ class HealthBarPlayer : ZilchComponent
     {
         this.Health = this.MaxHealth;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.GameSession, Events.Hurt, this.OnHurt);
-    }
+        Zero.Connect(this.GameSession, Events.HealthToUI, this.OnHealthToUI);
+        }
 
-    function OnHurt(event : Hurt)
+    function OnHealthToUI(event : HealthToUI)
     {
-        this.Health -= event.Damage;
+        this.Health = event.Health;
     }
 
     function OnLogicUpdate(event : UpdateEvent)

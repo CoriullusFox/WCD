@@ -72,7 +72,7 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 10,
+		float LifeLength = 3,
 	},
 	BoxCollider = 
 	{

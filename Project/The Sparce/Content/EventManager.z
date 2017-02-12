@@ -41,3 +41,10 @@ class Cooldown : ZilchEvent
     var MaxCooldown : Real;
     
 }
+class HealthToUI : ZilchEvent
+{
+    
+    sends HealthToUI : HealthToUI;
+    var Health : Real;
+    
+}

@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.32559, 0.768699, 50],
+			Vec3 Translation = [-1.95053, 0.584169, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.1306,
+			float Size = 13.4064,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.32559, 0.768699, -1.45366e-007],
+			Vec3 LookTarget = [-1.95053, 0.584169, -8.52601e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -223,12 +223,20 @@ Level =
 		{
 			float EnergyRegenRate = 10,
 		},
-		Shotgun = 
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Pistol = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			int NumberOfShots = 3,
-			float DistBetweenShots = 0.1,
-			float EnergyUse = 10,
+			float EnergyUse = 5,
 		},
 		Hierarchy = 
 		{
@@ -273,7 +281,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Enemy",
 		},
 		Transform = 
 		{
@@ -304,6 +312,8 @@ Level =
 			float ChaseProximity = 6,
 			float ShootProximity = 24,
 			int Speed = 1,
+			Vec3 LookDirection = [0, 1, 0],
+			Vec3 MoveDirection = [0, 0, 0],
 		},
 		Pistol = 
 		{
@@ -319,6 +329,14 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 100,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
 		},
 	},
 	Cog = 

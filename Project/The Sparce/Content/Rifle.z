@@ -85,6 +85,9 @@ class Rifle : ZilchComponent
                     
                     createdBullet.Despawn.LifeLength = 2;
                     
+                    //set whether or not the bullet is from the player
+                    createdBullet.BulletScript.PlayerBullet = this.Player;
+                    
                 }
             }
         }
