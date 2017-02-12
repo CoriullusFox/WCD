@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.95053, 0.584169, 50],
+			Vec3 Translation = [-3.69833, 1.59411, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.4064,
+			float Size = 9.93171,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.95053, 0.584169, -8.52601e-008],
+			Vec3 LookTarget = [-3.69833, 1.59411, -1.61659e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -185,7 +185,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,
@@ -217,7 +217,8 @@ Level =
 			bool MinigunUnlocked = true,
 			bool BeamLaserUnlocked = true,
 			bool RifleUnlocked = true,
-			int NumberOfWeapons = 5,
+			bool FlamethrowerUnlocked = true,
+			int NumberOfWeapons = 6,
 		},
 		EnergyStor = 
 		{
@@ -233,10 +234,10 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
-		Pistol = 
+		FlameThrower = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			float EnergyUse = 5,
+			float EnergyUse = 10,
 		},
 		Hierarchy = 
 		{
@@ -315,11 +316,6 @@ Level =
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
-		Pistol = 
-		{
-			string Bullet = "580e63ae4c297722:BulletTest",
-			float EnergyUse = 5,
-		},
 		BoxCollider = 
 		{
 			bool Ghost = false,
@@ -332,11 +328,19 @@ Level =
 		},
 		Health = 
 		{
-			float ConfiguredHealth = 100,
+			float ConfiguredHealth = 25,
 			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
 			float RegenRate = 0.5,
+		},
+		Pistol = 
+		{
+			string Bullet = "580e63ae4c297722:BulletTest",
+			float EnergyUse = 5,
+		},
+		ChangeDirectionToPointAtPlayer = 
+		{
 		},
 	},
 	Cog = 

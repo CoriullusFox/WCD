@@ -23,6 +23,8 @@ class WeaponSwap : ZilchComponent
     [Property]
     var RifleUnlocked : Boolean = false;
     [Property]
+    var FlamethrowerUnlocked : Boolean = false;
+    [Property]
     var NumberOfWeapons : Integer = 5;
     
     
@@ -69,6 +71,11 @@ class WeaponSwap : ZilchComponent
             this.RemoveComponents();
             this.AddNewComponent("Rifle", this.RifleUnlocked);
         }
+        else if(event.Key == Keys.NumPad6)
+        {
+            this.RemoveComponents();
+            this.AddNewComponent("FlameThrower", this.FlamethrowerUnlocked);
+        }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
 
@@ -108,6 +115,10 @@ class WeaponSwap : ZilchComponent
         {
             this.AddNewComponent("Rifle", this.RifleUnlocked);
         }
+        else if(this.Selected == 5)
+        {
+            this.AddNewComponent("FlameThrower", this.FlamethrowerUnlocked);
+        }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
     
@@ -119,6 +130,7 @@ class WeaponSwap : ZilchComponent
         this.Owner.RemoveComponentByName("Minigun");
         this.Owner.RemoveComponentByName("BeamLaser");
         this.Owner.RemoveComponentByName("Rifle");
+        this.Owner.RemoveComponentByName("FlameThrower");
         //INSTRUCTIONS! add code to disable your gun component here, example: this.Owner.RemoveComponentByName("BlahGun");
         
     }
@@ -148,6 +160,10 @@ class WeaponSwap : ZilchComponent
             if(this.Owner.Rifle != null)
             {
                 this.Owner.Rifle.Initialize(init);
+            }
+            if(this.Owner.FlameThrower != null)
+            {
+                this.Owner.FlameThrower.Initialize(init);
             }
             //INSTRUCTIONS add a new if statement for initializing the component of the gun that you are adding!
             

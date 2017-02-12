@@ -1,5 +1,6 @@
 class ChangeDirectionToPointAtMouse : ZilchComponent
 {
+    var Direction : Real3 = Real3(0,0,0);
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -14,6 +15,8 @@ class ChangeDirectionToPointAtMouse : ZilchComponent
         var mouseDirection = mousePos - position;
         
         Math.Normalize(mouseDirection);
+        
+        this.Direction = Real3(mouseDirection.X, mouseDirection.Y, 0.0);
         
         this.Owner.PlayerShooting.Direction = Real3(mouseDirection.X, mouseDirection.Y, 0.0);
     }
