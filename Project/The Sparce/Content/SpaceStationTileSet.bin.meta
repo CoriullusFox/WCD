@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "SpaceStationTileSet",
+		uint64 ResourceId = 5812cb923a82b921,
+		string LoaderType = "TilePaletteSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "",
+	},
+},

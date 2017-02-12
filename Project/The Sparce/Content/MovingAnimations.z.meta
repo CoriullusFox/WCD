@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "MovingAnimations",
+		uint64 ResourceId = 5812f3b41e6d9d52,
+	},
+},
