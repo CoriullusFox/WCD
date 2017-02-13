@@ -11,7 +11,7 @@ var BlahBlah : Blah = BLaH;
 //local func
 function func()
 {
-	//comments go before the commets subject
+	//comments go before the comments subject
 	var blahBlah : Blah = BlAh;
 	
 }
@@ -22,7 +22,7 @@ function Func()
 }
 
 Asset nameing
-Type_name.extention
+Type-name_extention
 
 Parameter nameing
 lowercase

@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.26392, 3.16618, 50],
+			Vec3 Translation = [0.159632, 4.6747, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -130,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.788,
+			float Size = 22.313,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.26392, 3.16618, -1.1047e-006],
+			Vec3 LookTarget = [0.159632, 4.6747, -1.04247e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -187,7 +187,7 @@ Level =
 			string SourceName = "5812c6bda55446fb:GlobalTestingSandbox_TileMap01",
 			string PaletteName = "5812cb923a82b921:SpaceStationTileSet",
 			float UnitsPerTile = 1,
-			float MeshThickness = 1.2,
+			float MeshThickness = 2,
 		},
 	},
 	Cog = 
@@ -267,6 +267,7 @@ Level =
 			bool MinigunUnlocked = false,
 			bool BeamLaserUnlocked = false,
 			bool RifleUnlocked = false,
+			bool FlamethrowerUnlocked = false,
 			int NumberOfWeapons = 5,
 		},
 		EnergyStor = 
@@ -466,7 +467,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.5, 0, 0],
+			Vec3 Translation = [-9.5, 13.5, 0],
 			Vec3 Scale = [0.5, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -516,7 +517,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3, 0, 0],
+			Vec3 Translation = [-8.5, 13.5, 0],
 			Vec3 Scale = [0.5, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -566,7 +567,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5, 0, 0],
+			Vec3 Translation = [-10.5, 13.5, 0],
 			Vec3 Scale = [0.5, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
