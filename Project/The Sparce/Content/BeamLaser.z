@@ -19,7 +19,7 @@ class BeamLaser : ZilchComponent
     var FreezTimer : Real = 0;
     
     [Property]
-    var EnergyUse : Real = 30;
+    var EnergyUse : Real = 100;
     var Energy : Real = 0;
     var CooldownMax : Real = 5;
     var Player : Boolean = false;

@@ -88,6 +88,9 @@ class Rifle : ZilchComponent
                     //set whether or not the bullet is from the player
                     createdBullet.BulletScript.PlayerBullet = this.Player;
                     
+                    //set damage
+                    createdBullet.BulletScript.Damage = 25;
+                    
                 }
             }
         }

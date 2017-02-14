@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.877682, 0.856402, 50],
+			Vec3 Translation = [0.975727, -2.55509, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -130,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6597,
+			float Size = 20.1897,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.877682, 0.856402, -1.01108e-006],
+			Vec3 LookTarget = [0.975727, -2.55509, -1.00679e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -266,7 +266,7 @@ Level =
 			bool RifleUnlocked = true,
 			bool FlamethrowerUnlocked = true,
 			bool BouncerUnlocked = true,
-			int NumberOfWeapons = 5,
+			int NumberOfWeapons = 7,
 		},
 		EnergyStor = 
 		{
@@ -373,7 +373,7 @@ Level =
 		{
 			float ChaseProximity = 6,
 			float ShootProximity = 20,
-			int Speed = 1,
+			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
@@ -649,7 +649,7 @@ Level =
 		{
 			float ChaseProximity = 6,
 			float ShootProximity = 20,
-			int Speed = 1,
+			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
@@ -737,7 +737,7 @@ Level =
 		{
 			float ChaseProximity = 6,
 			float ShootProximity = 20,
-			int Speed = 1,
+			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
@@ -825,7 +825,7 @@ Level =
 		{
 			float ChaseProximity = 6,
 			float ShootProximity = 20,
-			int Speed = 1,
+			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
@@ -918,7 +918,7 @@ Level =
 		{
 			float ChaseProximity = 6,
 			float ShootProximity = 20,
-			int Speed = 1,
+			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
@@ -1006,7 +1006,7 @@ Level =
 		{
 			float ChaseProximity = 6,
 			float ShootProximity = 20,
-			int Speed = 100,
+			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
