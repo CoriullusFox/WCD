@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.975727, -2.55509, 50],
+			Vec3 Translation = [4.33896, 5.35433, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -130,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897,
+			float Size = 27.2533,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.975727, -2.55509, -1.00679e-006],
+			Vec3 LookTarget = [4.33896, 5.35433, -8.59784e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -260,12 +260,12 @@ Level =
 		},
 		WeaponSwap = 
 		{
-			bool ShotgunUnlocked = true,
-			bool MinigunUnlocked = true,
-			bool BeamLaserUnlocked = true,
-			bool RifleUnlocked = true,
-			bool FlamethrowerUnlocked = true,
-			bool BouncerUnlocked = true,
+			bool ShotgunUnlocked = false,
+			bool MinigunUnlocked = false,
+			bool BeamLaserUnlocked = false,
+			bool RifleUnlocked = false,
+			bool FlamethrowerUnlocked = false,
+			bool BouncerUnlocked = false,
 			int NumberOfWeapons = 7,
 		},
 		EnergyStor = 
@@ -299,6 +299,9 @@ Level =
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
 			float EnergyUse = 5,
+		},
+		SelectedStor = 
+		{
 		},
 		Hierarchy = 
 		{
@@ -409,6 +412,18 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			float RegenRate = 0.5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
 	Cog = 
@@ -691,7 +706,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,
@@ -779,7 +794,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,
@@ -872,7 +887,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,
@@ -960,7 +975,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,
@@ -1048,7 +1063,7 @@ Level =
 			bool Static = false,
 			bool Asleep = false,
 			bool Kinematic = false,
-			bool RotationLocked = false,
+			bool RotationLocked = true,
 			bool Mode2D = true,
 			bool AllowSleep = true,
 			bool Inherit2DMode = true,

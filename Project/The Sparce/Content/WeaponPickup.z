@@ -56,7 +56,7 @@ class WeaponPickup : ZilchComponent
             {
                 event.OtherObject.WeaponSwap.BeamLaserUnlocked = true;
             }
-            else if(this.Unlocked == "Flamethrower")
+            else if(this.Unlocked == "FlameThrower")
             {
                 event.OtherObject.WeaponSwap.FlamethrowerUnlocked = true;
             }

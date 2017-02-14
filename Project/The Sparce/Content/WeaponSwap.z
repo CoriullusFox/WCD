@@ -149,6 +149,11 @@ class WeaponSwap : ZilchComponent
     function AddNewComponent(name : String, unlocked : Boolean)
     {
         
+        var sendSelected = SelectedGun();
+        sendSelected.Selected = name;
+        sendSelected.Unlocked = unlocked;
+        this.GameSession.DispatchEvent(Events.SelectedGun, sendSelected);
+        
         if(unlocked)
         {
             var init : CogInitializer = null;

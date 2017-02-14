@@ -48,3 +48,11 @@ class HealthToUI : ZilchEvent
     var Health : Real;
     
 }
+class SelectedGun : ZilchEvent
+{
+    
+    sends SelectedGun : SelectedGun;
+    var Selected : String;
+    var Unlocked : Boolean;
+    
+}

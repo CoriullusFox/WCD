@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.124961, -0.793275, 50],
+			Vec3 Translation = [2.48935, -4.05993, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.50234,
+			float Size = 20.1897,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.124961, -0.793275, 2.36362e-008],
+			Vec3 LookTarget = [2.48935, -4.05993, 1.37911e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -282,6 +282,43 @@ Level =
 		UICooldownBar = 
 		{
 			float Speed = 10,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9.89476, -7.78344, 4.74891e-008],
+			Vec3 Scale = [3, 3, 13],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 150,
+			string Text = "Pistol",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 256,
+			bool Smoothing = true,
+		},
+		DisplaySelected = 
+		{
 		},
 	},
 },
