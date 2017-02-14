@@ -20,6 +20,7 @@ class Beam : ZilchComponent
     
     var DPS : Real = 50;
     var PlayerBeam : Boolean = false;
+    var Extend : Boolean = true;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -28,6 +29,13 @@ class Beam : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
+        
+        if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != "TempPlayer")
+        {
+            
+            this.Extend = false;
+            
+        }
         
         //handling damage
         if(this.PlayerBeam)
@@ -56,7 +64,10 @@ class Beam : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
-        this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
+        if(this.Extend)
+        {
+            this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
+            this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
+        }
     }
 }
