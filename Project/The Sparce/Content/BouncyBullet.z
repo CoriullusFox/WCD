@@ -17,7 +17,6 @@ class BouncyBullet : ZilchComponent
                 var toSend = Hurt();
                 toSend.Damage = this.Damage;
                 event.OtherObject.DispatchEvent(Events.Hurt, toSend);
-                this.Owner.Despawn.LifeLength -= 1;
                 
             }
         }
@@ -29,7 +28,6 @@ class BouncyBullet : ZilchComponent
                 var toSend = Hurt();
                 toSend.Damage = this.Damage;
                 event.OtherObject.DispatchEvent(Events.Hurt, toSend);
-                this.Owner.Despawn.LifeLength -= 1;
                 
             }
             
