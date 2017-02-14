@@ -25,7 +25,9 @@ class WeaponSwap : ZilchComponent
     [Property]
     var FlamethrowerUnlocked : Boolean = false;
     [Property]
-    var NumberOfWeapons : Integer = 5;
+    var BouncerUnlocked : Boolean = false;
+    [Property]
+    var NumberOfWeapons : Integer = 7;
     
     
     //to add a new gun add a boolean for it beaing unlocked, example: [Property] var GunUnlocked : Boolean = false;
@@ -76,6 +78,11 @@ class WeaponSwap : ZilchComponent
             this.RemoveComponents();
             this.AddNewComponent("FlameThrower", this.FlamethrowerUnlocked);
         }
+        else if(event.Key == Keys.NumPad1)
+        {
+            this.RemoveComponents();
+            this.AddNewComponent("Bouncer", this.BouncerUnlocked);
+        }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
 
@@ -119,6 +126,10 @@ class WeaponSwap : ZilchComponent
         {
             this.AddNewComponent("FlameThrower", this.FlamethrowerUnlocked);
         }
+        else if(this.Selected == 6)
+        {
+            this.AddNewComponent("Bouncer", this.BouncerUnlocked);
+        }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
     
@@ -131,6 +142,7 @@ class WeaponSwap : ZilchComponent
         this.Owner.RemoveComponentByName("BeamLaser");
         this.Owner.RemoveComponentByName("Rifle");
         this.Owner.RemoveComponentByName("FlameThrower");
+        this.Owner.RemoveComponentByName("Bouncer");
         //INSTRUCTIONS! add code to disable your gun component here, example: this.Owner.RemoveComponentByName("BlahGun");
         
     }
@@ -164,6 +176,10 @@ class WeaponSwap : ZilchComponent
             if(this.Owner.FlameThrower != null)
             {
                 this.Owner.FlameThrower.Initialize(init);
+            }
+            if(this.Owner.Bouncer != null)
+            {
+                this.Owner.Bouncer.Initialize(init);
             }
             //INSTRUCTIONS add a new if statement for initializing the component of the gun that you are adding!
             

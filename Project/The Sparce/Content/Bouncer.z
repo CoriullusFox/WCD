@@ -1,0 +1,86 @@
+class Bouncer : ZilchComponent
+{
+    var Cooldown : Real = 0;
+    
+    [Property]
+    var Bullet : Archetype = Archetype.BouncyBulletTest;
+    
+    [Property]
+    var EnergyUse : Real = 5;
+    var Energy : Real = 0;
+    var CooldownMax : Real = 0.4;
+    var Player : Boolean = false;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
+    }
+    
+    function OnEnergy(event : Energy)
+    {
+        this.Energy = event.Energy;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //Cooldown logic
+        this.Cooldown += event.Dt;
+        if(this.Player)
+        {
+            var toSend = Cooldown();
+            toSend.Cooldown = this.CooldownMax - this.Cooldown;
+            toSend.MaxCooldown = this.CooldownMax;
+            this.GameSession.DispatchEvent(Events.Cooldown, toSend);
+        }
+    }
+    
+    //Shooting logic (only runs when the event is called)
+    function OnShoot(event : Shoot)
+    {
+        this.Player = event.Player;
+        //only shoot if cooldown is over
+        if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
+        {
+            
+            
+            if(this.Player)
+            {
+                //use energy
+                this.Owner.EnergyStor.Energy -= this.EnergyUse;
+            }
+            
+            
+            this.Cooldown = 0;
+            /** SHOOTING LOGIC HERE **/
+            
+            if(this.Bullet != null)
+            {
+                var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
+                
+                if(createdBullet != null)
+                {
+                    var randGen : Random = Random();
+                    //angle of rotation
+                    var angle = Math.Angle2D(event.Direction) + randGen.Range(0.01, -0.01);
+                    
+                    //generate direction for orientation component from angle
+                    var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                    
+                    //apply direction and movement
+                    createdBullet.Orientation.LookAtDirection(newDirection);
+                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 20;
+                    
+                    createdBullet.Transform.Translation += Math.Normalize(newDirection);
+                    
+                    createdBullet.Despawn.LifeLength = 3;
+                    
+                    //set whether or not the bullet is from the player
+                    createdBullet.BouncyBullet.PlayerBullet = this.Player;
+                    
+                }
+            }
+        }
+    
+    }
+}
