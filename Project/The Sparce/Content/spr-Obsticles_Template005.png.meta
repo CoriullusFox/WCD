@@ -1,18 +1,9 @@
 ImageContent = 
 {
-	ContentTags = 
-	{
-		Array Tags = 
-		[
-			"Template",
-			"spr",
-			"Obsticle",
-		],
-	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "spr-Obsticles_Template005",
-		uint64 ResourceId = 582dbe1cd1df5288,
+		uint64 ResourceId = 582fdda0d38eeb48,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 16,
 		uint FrameSizeY = 16,
