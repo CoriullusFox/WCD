@@ -29,8 +29,8 @@ Cog =
 		uint DrawOrder = 0,
 		float WarmUpTime = 0,
 		ParticleGeometry GeometryMode = Billboarded,
-		ParticleRenderMode RenderMode = Blended,
-		ParticleSortMode SortMode = Youngest,
+		ParticleRenderMode RenderMode = Additive,
+		ParticleSortMode SortMode = Sorted,
 		ParticleAnimation ParticleAnimation = Single,
 		string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
 		Vec4 Tint = [1, 1, 1, 1],
@@ -100,7 +100,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [5, 0, 0],
-		Vec3 Size = [4.5, 1.5, 0.5],
+		Vec3 Size = [4.5, 1.5, 2.5],
 	},
 	RigidBody = 
 	{

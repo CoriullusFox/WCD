@@ -43,7 +43,7 @@ class Flame : ZilchComponent
         var angle = 0.0;
         
         //strange fix to small bug
-        this.Owner.Transform.Translation = Real3(0,0,0);
+        this.Owner.Transform.Translation = Real3(0,0,1);
         //point at mouse
         //angle of rotation
         if(this.PlayerFlame)
