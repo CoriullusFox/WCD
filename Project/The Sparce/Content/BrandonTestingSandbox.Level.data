@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.69833, 1.59411, 50],
+			Vec3 Translation = [0.754587, -0.5834, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3746,
+			float Size = 9.9317,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.69833, 1.59411, -1.61659e-007],
+			Vec3 LookTarget = [0.754587, -0.5834, 3.29842e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -235,10 +235,10 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
-		FlameThrower = 
+		Pistol = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			float EnergyUse = 10,
+			float EnergyUse = 5,
 		},
 		Hierarchy = 
 		{

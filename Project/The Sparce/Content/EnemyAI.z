@@ -20,7 +20,7 @@ class EnemyAI : ZilchComponent
     var ShootProximity : Real = 40.0;
     
     [Property]
-    var Speed : Integer = 15;
+    var Speed : Integer = 100;
     
     [Property]
     var LookDirection : Real3 = Real3(0,1,0);
@@ -43,7 +43,7 @@ class EnemyAI : ZilchComponent
             
             Math.Normalize(this.MoveDirection);
             
-            this.Owner.Transform.Translation += this.MoveDirection * event.Dt * this.Speed;
+            this.Owner.RigidBody.Velocity  = this.MoveDirection * event.Dt * this.Speed;
         }
         
         if(distanceFromPlayer < this.ShootProximity)

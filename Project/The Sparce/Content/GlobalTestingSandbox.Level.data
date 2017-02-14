@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.208751, 0.618518, 50],
+			Vec3 Translation = [0.877682, 0.856402, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -130,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.0259,
+			float Size = 24.6597,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.208751, 0.618518, -1.04032e-006],
+			Vec3 LookTarget = [0.877682, 0.856402, -1.01108e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -224,9 +224,6 @@ Level =
 			float AnimationSpeed = 2,
 			uint StartFrame = 0,
 		},
-		Shooting = 
-		{
-		},
 		PlayerShooting = 
 		{
 		},
@@ -263,12 +260,12 @@ Level =
 		},
 		WeaponSwap = 
 		{
-			bool ShotgunUnlocked = false,
-			bool MinigunUnlocked = false,
-			bool BeamLaserUnlocked = false,
-			bool RifleUnlocked = false,
-			bool FlamethrowerUnlocked = false,
-			bool BouncerUnlocked = false,
+			bool ShotgunUnlocked = true,
+			bool MinigunUnlocked = true,
+			bool BeamLaserUnlocked = true,
+			bool RifleUnlocked = true,
+			bool FlamethrowerUnlocked = true,
+			bool BouncerUnlocked = true,
 			int NumberOfWeapons = 5,
 		},
 		EnergyStor = 
@@ -297,6 +294,11 @@ Level =
 			string NorthWest = "5812ee539ad4bc66:PlayerNorthWest_Anim",
 			int CurrentWalkingAnimationSpeed = 2,
 			int CurrentRunningAnimationSpeed = 3,
+		},
+		Pistol = 
+		{
+			string Bullet = "580e63ae4c297722:BulletTest",
+			float EnergyUse = 5,
 		},
 		Hierarchy = 
 		{
@@ -399,6 +401,14 @@ Level =
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
 			int AnimationSpeed = 3,
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
 		},
 	},
 	Cog = 
@@ -668,6 +678,26 @@ Level =
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
 			int AnimationSpeed = 3,
 		},
+		Health = 
+		{
+			float ConfiguredHealth = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
 	},
 	Cog = 
 	{
@@ -735,6 +765,26 @@ Level =
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
 			int AnimationSpeed = 3,
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
 	Cog = 
@@ -804,6 +854,31 @@ Level =
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
 			int AnimationSpeed = 3,
 		},
+		Health = 
+		{
+			float ConfiguredHealth = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
+		},
+		Minigun = 
+		{
+			string Bullet = "580e63ae4c297722:BulletTest",
+			float EnergyUse = 5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
 	},
 	Cog = 
 	{
@@ -872,6 +947,26 @@ Level =
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
 			int AnimationSpeed = 3,
 		},
+		Health = 
+		{
+			float ConfiguredHealth = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
 	},
 	Cog = 
 	{
@@ -911,7 +1006,7 @@ Level =
 		{
 			float ChaseProximity = 6,
 			float ShootProximity = 20,
-			int Speed = 1,
+			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 		},
@@ -939,6 +1034,26 @@ Level =
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
 			int AnimationSpeed = 3,
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
 	Cog = 
@@ -1004,6 +1119,106 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-5.5, 13.5, 0],
+			Vec3 Scale = [0.5, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "Bouncer",
+			float RotationSpeed = 500,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "Minigun Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.54124, 13.5, 0],
+			Vec3 Scale = [0.5, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "FlameThrower",
+			float RotationSpeed = 500,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Named = 
+		{
+			string Name = "Minigun Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.56804, 13.5, 0],
 			Vec3 Scale = [0.5, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

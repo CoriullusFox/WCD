@@ -8,7 +8,7 @@
 ** - Sage Dupuy
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 
 class WeaponPickup : ZilchComponent
@@ -42,19 +42,27 @@ class WeaponPickup : ZilchComponent
                 event.OtherObject.WeaponSwap.MinigunUnlocked = true;
             }
             
-            if(this.Unlocked == "Shotgun")
+            else if(this.Unlocked == "Shotgun")
             {
                 event.OtherObject.WeaponSwap.ShotgunUnlocked = true;
             }
             
-            if(this.Unlocked == "Rifle")
+            else if(this.Unlocked == "Rifle")
             {
                 event.OtherObject.WeaponSwap.RifleUnlocked = true;
             }
             
-            if(this.Unlocked == "BeamLaser")
+            else if(this.Unlocked == "BeamLaser")
             {
                 event.OtherObject.WeaponSwap.BeamLaserUnlocked = true;
+            }
+            else if(this.Unlocked == "Flamethrower")
+            {
+                event.OtherObject.WeaponSwap.FlamethrowerUnlocked = true;
+            }
+            else if(this.Unlocked == "Bouncer")
+            {
+                event.OtherObject.WeaponSwap.BouncerUnlocked = true;
             }
             
             this.Owner.Destroy();
