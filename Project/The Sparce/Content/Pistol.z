@@ -17,11 +17,12 @@ class Pistol : ZilchComponent
     
     [Property]
     var Bullet : Archetype = Archetype.BulletTest;
-    
     [Property]
+    var Damage : Real = 10;
     var EnergyUse : Real = 5;
     var Energy : Real = 0;
     var CooldownMax : Real = 0.4;
+    [Property]
     var Player : Boolean = false;
     function Initialize(init : CogInitializer)
     {
@@ -88,6 +89,8 @@ class Pistol : ZilchComponent
                     
                     //set whether or not the bullet is from the player
                     createdBullet.BulletScript.PlayerBullet = this.Player;
+                    
+                    createdBullet.BulletScript.Damage = this.Damage;
                     
                 }
             }

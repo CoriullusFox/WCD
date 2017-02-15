@@ -19,6 +19,7 @@ class BeamLaser : ZilchComponent
     var FreezTimer : Real = 0;
     
     [Property]
+    var DPS : Real = 50;
     var EnergyUse : Real = 100;
     var Energy : Real = 0;
     var CooldownMax : Real = 5;
@@ -93,6 +94,8 @@ class BeamLaser : ZilchComponent
                     
                     //set whether or not the beam is from the player
                     createdBullet.Beam.PlayerBeam = this.Player;
+                    
+                    createdBullet.Beam.DPS = this.DPS;
                     
                 }
             }

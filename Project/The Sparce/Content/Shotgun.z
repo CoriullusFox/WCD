@@ -22,9 +22,10 @@ class Shotgun : ZilchComponent
     var NumberOfShots : Integer = 5;
     
     [Property]
-    var DistBetweenShots : Real = 0.1;
+    var DamagePerBullet : Real = 10;
     
     [Property]
+    var DistBetweenShots : Real = 0.1;
     var EnergyUse : Real = 25;
     var Energy : Real = 0;
     var CooldownMax : Real = 0.7;
@@ -94,6 +95,8 @@ class Shotgun : ZilchComponent
                             
                             //set whether or not the bullet is from the player
                             createdBullet.BulletScript.PlayerBullet = this.Player;
+                            
+                            createdBullet.BulletScript.Damage = this.DamagePerBullet;
                             
                         }
                     }

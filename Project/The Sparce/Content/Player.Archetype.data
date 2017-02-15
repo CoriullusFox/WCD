@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-1.0627, 0.156276, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -64,7 +64,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 100,
+		float ConfiguredHealth = 1000,
 		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
 		bool MiniHeathBar = false,
 		bool Player = true,
@@ -72,12 +72,12 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = false,
-		bool MinigunUnlocked = false,
-		bool BeamLaserUnlocked = false,
-		bool RifleUnlocked = false,
-		bool FlamethrowerUnlocked = false,
-		bool BouncerUnlocked = false,
+		bool ShotgunUnlocked = true,
+		bool MinigunUnlocked = true,
+		bool BeamLaserUnlocked = true,
+		bool RifleUnlocked = true,
+		bool FlamethrowerUnlocked = true,
+		bool BouncerUnlocked = true,
 		int NumberOfWeapons = 7,
 	},
 	EnergyStor = 
@@ -110,7 +110,8 @@ Cog =
 	Pistol = 
 	{
 		string Bullet = "580e63ae4c297722:BulletTest",
-		float EnergyUse = 5,
+		float Damage = 10,
+		bool Player = true,
 	},
 	SelectedStor = 
 	{

@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.84939, -0.21363, 50],
+			Vec3 Translation = [-1.9473, -2.60084, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.3718,
+			float Size = 18.05,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.84939, -0.21363, -6.45271e-008],
+			Vec3 LookTarget = [-1.9473, -2.60084, -6.8807e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -404,7 +404,8 @@ Level =
 		Pistol = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			float EnergyUse = 5,
+			float Damage = 10,
+			bool Player = false,
 		},
 	},
 	Cog = 
@@ -519,7 +520,8 @@ Level =
 		Pistol = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			float EnergyUse = 5,
+			float Damage = 10,
+			bool Player = true,
 		},
 		SelectedStor = 
 		{

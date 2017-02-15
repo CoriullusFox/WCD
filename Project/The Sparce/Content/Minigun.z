@@ -19,6 +19,7 @@ class Minigun : ZilchComponent
     var Bullet : Archetype = Archetype.BulletTest;
     
     [Property]
+    var DamagePerBullet : Real = 2.5;
     var EnergyUse : Real = 5;
     var Energy : Real = 0;
     var CooldownMax : Real = 0.1;
@@ -90,7 +91,7 @@ class Minigun : ZilchComponent
                     createdBullet.BulletScript.PlayerBullet = this.Player;
                     
                     //set damage
-                    createdBullet.BulletScript.Damage = 2.5;
+                    createdBullet.BulletScript.Damage = this.DamagePerBullet;
                     
                 }
             }

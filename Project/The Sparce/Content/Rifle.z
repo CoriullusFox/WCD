@@ -18,6 +18,7 @@ class Rifle : ZilchComponent
     var Bullet : Archetype = Archetype.BulletTest;
     
     [Property]
+    var Damage : Real = 25;
     var EnergyUse : Real = 10;
     var Energy : Real = 0;
     var CooldownMax : Real = 1.2;
@@ -89,7 +90,7 @@ class Rifle : ZilchComponent
                     createdBullet.BulletScript.PlayerBullet = this.Player;
                     
                     //set damage
-                    createdBullet.BulletScript.Damage = 25;
+                    createdBullet.BulletScript.Damage = this.Damage;
                     
                 }
             }
