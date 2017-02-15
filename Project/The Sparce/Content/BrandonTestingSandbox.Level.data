@@ -57,7 +57,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -95,12 +95,18 @@ Level =
 			bool EditorIconDepth = true,
 			bool Wireframe = false,
 		},
+		GameStateManager = 
+		{
+		},
+		Pause = 
+		{
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 2,
 		},
 		Named = 
 		{
@@ -108,7 +114,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.494895, -1.43566, 50],
+			Vec3 Translation = [-0.497356, 1.83428, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +126,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7781,
+			float Size = 16.3323,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +134,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.494895, -1.43566, 3.79448e-008],
+			Vec3 LookTarget = [-0.497356, 1.83428, -5.42783e-009],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -145,7 +151,7 @@ Level =
 		string Name = "580ad9c286542aaa:Teleporter",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Transform = 
 		{
@@ -162,7 +168,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -207,7 +213,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -252,7 +258,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -297,7 +303,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -314,7 +320,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -412,7 +418,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -448,7 +454,7 @@ Level =
 		string Name = "5819e0dc33f34ca0:Enemy",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -465,7 +471,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -479,6 +485,11 @@ Level =
 		},
 		SpawnPlayer = 
 		{
+		},
+		EditorConfig = 
+		{
+			string EditingProject = "",
+			string EditingLevel = "",
 		},
 	},
 },
