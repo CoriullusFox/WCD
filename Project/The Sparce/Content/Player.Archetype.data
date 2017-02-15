@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.00366122, 0.0833211, 5.25659],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -109,7 +109,7 @@ Cog =
 		string WeaponEast = "580db89c89031379:PistolEast",
 		string WeaponSouthEast = "580db89c8939a5dd:PistolSouthEast",
 		string WeaponSouth = "580db89c89382171:PistolSouth",
-		string WeaponSouthWest = "580db89c8904fb22:PistolWest",
+		string WeaponSouthWest = "580db89c893a8faa:PistolSouthWest",
 		string WeaponWest = "580db89c8904fb22:PistolWest",
 		string WeaponNorthWest = "580db89c89077612:PistolNorthWest",
 		int CurrentWalkingAnimationSpeed = 2,
