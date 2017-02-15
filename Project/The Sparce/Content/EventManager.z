@@ -46,6 +46,7 @@ class HealthToUI : ZilchEvent
     
     sends HealthToUI : HealthToUI;
     var Health : Real;
+    var MaxHealth : Real;
     
 }
 class SelectedGun : ZilchEvent

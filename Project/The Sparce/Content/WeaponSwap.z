@@ -40,6 +40,7 @@ class WeaponSwap : ZilchComponent
     {
         Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
     }
+    
     function OnMouseScroll(event : ViewportMouseEvent)
     {
         //remove components and clamp selected

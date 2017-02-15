@@ -57,7 +57,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
+				uint ResolvedCog = 2,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -100,7 +100,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0267736, -0.425291, 50],
+			Vec3 Translation = [-1.84939, -0.21363, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.8164,
+			float Size = 13.3718,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0267736, -0.425291, 1.16986e-009],
+			Vec3 LookTarget = [-1.84939, -0.21363, -6.45271e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -145,7 +145,7 @@ Level =
 		string Name = "580ad9c286542aaa:Teleporter",
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -162,7 +162,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -207,7 +207,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -252,7 +252,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -297,7 +297,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -314,7 +314,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -401,16 +401,17 @@ Level =
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
 		},
-		BeamLaser = 
+		Pistol = 
 		{
-			float EnergyUse = 100,
+			string Bullet = "580e63ae4c297722:BulletTest",
+			float EnergyUse = 5,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -472,7 +473,7 @@ Level =
 		},
 		Health = 
 		{
-			float ConfiguredHealth = 100,
+			float ConfiguredHealth = 1000,
 			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
 			bool MiniHeathBar = false,
 			bool Player = true,
@@ -529,7 +530,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 2,
 				},
 				Named = 
 				{
@@ -591,6 +592,24 @@ Level =
 			string PaletteName = "",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5819e0dc33f34ca0:Enemy",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.87017, 4.56998, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },

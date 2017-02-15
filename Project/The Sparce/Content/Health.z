@@ -75,6 +75,7 @@ class Health : ZilchComponent
             {
                 var toSend = HealthToUI();
                 toSend.Health = this.ConfiguredHealth;
+                toSend.MaxHealth = this.MaxHealth;
                 this.GameSession.DispatchEvent(Events.HealthToUI, toSend);
             }
             

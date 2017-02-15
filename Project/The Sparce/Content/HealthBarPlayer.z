@@ -28,6 +28,7 @@ class HealthBarPlayer : ZilchComponent
     function OnHealthToUI(event : HealthToUI)
     {
         this.Health = event.Health;
+        this.MaxHealth = event.MaxHealth;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
