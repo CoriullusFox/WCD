@@ -106,7 +106,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthEast;
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouthEast;
             
             if(this.Owner.Sprite.SpriteSource != this.SouthEast)
             {
