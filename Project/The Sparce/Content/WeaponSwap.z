@@ -39,53 +39,7 @@ class WeaponSwap : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
-        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
     }
-    
-    
-    
-    function OnKeyDown(event : KeyboardEvent)
-    {
-        //swap based on buttons being pressed
-        var init : CogInitializer = null;
-        if(event.Key == Keys.NumPad7)
-        {
-            this.RemoveComponents();
-            this.AddNewComponent("Pistol", true);
-        }
-        else if(event.Key == Keys.NumPad8)
-        {
-            this.RemoveComponents();
-            this.AddNewComponent("Shotgun", this.ShotgunUnlocked);
-        }
-        else if(event.Key == Keys.NumPad9)
-        {
-            this.RemoveComponents();
-            this.AddNewComponent("Minigun", this.MinigunUnlocked);
-        }
-        else if(event.Key == Keys.NumPad4)
-        {
-            this.RemoveComponents();
-            this.AddNewComponent("BeamLaser", this.BeamLaserUnlocked);
-        }
-        else if(event.Key == Keys.NumPad5)
-        {
-            this.RemoveComponents();
-            this.AddNewComponent("Rifle", this.RifleUnlocked);
-        }
-        else if(event.Key == Keys.NumPad6)
-        {
-            this.RemoveComponents();
-            this.AddNewComponent("FlameThrower", this.FlamethrowerUnlocked);
-        }
-        else if(event.Key == Keys.NumPad1)
-        {
-            this.RemoveComponents();
-            this.AddNewComponent("Bouncer", this.BouncerUnlocked);
-        }
-        //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
-    }
-
     function OnMouseScroll(event : ViewportMouseEvent)
     {
         //remove components and clamp selected
