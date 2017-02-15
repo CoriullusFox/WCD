@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.33896, 5.35433, 50],
+			Vec3 Translation = [-0.53741, -1.12018, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -130,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2533,
+			float Size = 14.9569,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.33896, 5.35433, -8.59784e-007],
+			Vec3 LookTarget = [-0.53741, -1.12018, -1.07294e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -195,154 +195,6 @@ Level =
 		LinkId = 
 		{
 			uint Id = 5,
-		},
-		Named = 
-		{
-			string Name = "TempPlayer",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5812ef1fdef735df:PlayerSouth_Anim",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 2,
-			uint StartFrame = 0,
-		},
-		PlayerShooting = 
-		{
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		Movement = 
-		{
-			float Speed = 300,
-			float RunSpeed = 600,
-		},
-		ChangeDirectionToPointAtMouse = 
-		{
-		},
-		DebugPlayerDamage = 
-		{
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 100,
-			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
-			bool MiniHeathBar = false,
-			bool Player = true,
-			float RegenRate = 1.5,
-		},
-		WeaponSwap = 
-		{
-			bool ShotgunUnlocked = false,
-			bool MinigunUnlocked = false,
-			bool BeamLaserUnlocked = false,
-			bool RifleUnlocked = false,
-			bool FlamethrowerUnlocked = false,
-			bool BouncerUnlocked = false,
-			int NumberOfWeapons = 7,
-		},
-		EnergyStor = 
-		{
-			float EnergyRegenRate = 10,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.05, 0.1, 0.5],
-		},
-		PlayerAnimations = 
-		{
-			string North = "5812ef7faa1505fd:PlayerNorth_Anim",
-			string NorthEast = "5812ed9c6151ee10:PlayerNorthEast_Anim",
-			string East = "5812ede87e09d134:PlayerEast_Anim",
-			string SouthEast = "5812ef5ea05cdd1b:PlayerSouthEast_Anim",
-			string South = "5812ef1fdef735df:PlayerSouth_Anim",
-			string SouthWest = "5812ef37a6a737bd:PlayerSouthWest_Anim",
-			string West = "5812eee383faa2b4:PlayerWest_Anim",
-			string NorthWest = "5812ee539ad4bc66:PlayerNorthWest_Anim",
-			int CurrentWalkingAnimationSpeed = 2,
-			int CurrentRunningAnimationSpeed = 3,
-		},
-		Pistol = 
-		{
-			string Bullet = "580e63ae4c297722:BulletTest",
-			float EnergyUse = 5,
-		},
-		SelectedStor = 
-		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 2,
-				},
-				Named = 
-				{
-					string Name = "Camera",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 40],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Camera = 
-				{
-					ProjectionMode ProjectionMode = Orthographic,
-					Facing Facing = NegativeZ,
-					CameraTransparentSort TransparentSort = InheritFromSpace,
-					float FieldOfView = 45,
-					float NearPlane = 0.5,
-					float FarPlane = 200,
-					float Size = 20,
-				},
-				Microphone = 
-				{
-					bool Active = true,
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 6,
 		},
 		Named = 
 		{
@@ -430,7 +282,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -480,7 +332,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -530,7 +382,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -580,7 +432,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -630,7 +482,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -718,7 +570,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -806,7 +658,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -880,7 +732,7 @@ Level =
 		Minigun = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			float EnergyUse = 5,
+			float DamagePerBullet = 2.5,
 		},
 		RigidBody = 
 		{
@@ -899,7 +751,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -987,7 +839,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -1075,7 +927,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -1125,7 +977,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -1175,7 +1027,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -1225,7 +1077,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -1269,6 +1121,24 @@ Level =
 		{
 			string Unlocked = "Bouncer",
 			float RotationSpeed = 500,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PlayerSpawnPoint",
 		},
 	},
 },
