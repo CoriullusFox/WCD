@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-1.0627, 0.156276, 0],
+		Vec3 Translation = [0.00366122, 0.0833211, 5.25659],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -104,6 +104,14 @@ Cog =
 		string SouthWest = "5812ef37a6a737bd:PlayerSouthWest_Anim",
 		string West = "5812eee383faa2b4:PlayerWest_Anim",
 		string NorthWest = "5812ee539ad4bc66:PlayerNorthWest_Anim",
+		string WeaponNorth = "580db89c8901d42a:PistolNorth",
+		string WeaponNorthEast = "580db89c89006cb2:PistolNorthEast",
+		string WeaponEast = "580db89c89031379:PistolEast",
+		string WeaponSouthEast = "580db89c8939a5dd:PistolSouthEast",
+		string WeaponSouth = "580db89c89382171:PistolSouth",
+		string WeaponSouthWest = "580db89c8904fb22:PistolWest",
+		string WeaponWest = "580db89c8904fb22:PistolWest",
+		string WeaponNorthWest = "580db89c89077612:PistolNorthWest",
 		int CurrentWalkingAnimationSpeed = 2,
 		int CurrentRunningAnimationSpeed = 3,
 	},
@@ -147,6 +155,41 @@ Cog =
 			Microphone = 
 			{
 				bool Active = true,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Weapon",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [0.25, 0.25, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "580db89c89382171:PistolSouth",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
 			},
 		},
 	},

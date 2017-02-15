@@ -8,7 +8,7 @@
 ** - Sage Dupuy
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 
 class PlayerAnimations : ZilchComponent
@@ -38,6 +38,30 @@ class PlayerAnimations : ZilchComponent
     var NorthWest : SpriteSource = null;
     
     [Property]
+    var WeaponNorth : SpriteSource = null;
+    
+    [Property]
+    var WeaponNorthEast : SpriteSource = null;
+    
+    [Property]
+    var WeaponEast : SpriteSource = null;
+    
+    [Property]
+    var WeaponSouthEast : SpriteSource = null;
+    
+    [Property]
+    var WeaponSouth : SpriteSource = null;
+    
+    [Property]
+    var WeaponSouthWest : SpriteSource = null;
+    
+    [Property]
+    var WeaponWest : SpriteSource = null;
+    
+    [Property]
+    var WeaponNorthWest : SpriteSource = null;
+    
+    [Property]
     var CurrentWalkingAnimationSpeed : Integer = 2;
     
     var WalkingAnimationSpeed : Integer = 0;
@@ -47,6 +71,7 @@ class PlayerAnimations : ZilchComponent
     
     var RunningAnimationSpeed : Integer = 4;
     
+    var WeaponS : CogPath = CogPath("Weapon");
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -55,6 +80,8 @@ class PlayerAnimations : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+        
+        Console.WriteLine(this.WeaponS);
         
         if(Zero.Keyboard.KeyIsDown(Keys.Shift))
         {
@@ -68,6 +95,8 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouthWest;
+            
             if(this.Owner.Sprite.SpriteSource != this.SouthWest)
             {
                 this.Owner.Sprite.SpriteSource = this.SouthWest;
@@ -76,6 +105,8 @@ class PlayerAnimations : ZilchComponent
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthEast;
             
             if(this.Owner.Sprite.SpriteSource != this.SouthEast)
             {
@@ -86,6 +117,8 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthWest;
+            
             if(this.Owner.Sprite.SpriteSource != this.NorthWest)
             {
                 this.Owner.Sprite.SpriteSource = this.NorthWest;
@@ -94,6 +127,8 @@ class PlayerAnimations : ZilchComponent
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
             this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthEast;
             
             if(this.Owner.Sprite.SpriteSource != this.NorthEast)
             {
@@ -104,6 +139,8 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorth;
+            
             if(this.Owner.Sprite.SpriteSource != this.North)
             {
                 this.Owner.Sprite.SpriteSource = this.North;
@@ -112,6 +149,8 @@ class PlayerAnimations : ZilchComponent
         else if(Zero.Keyboard.KeyIsDown(Keys.A))
         {
             this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponWest;
             
             if(this.Owner.Sprite.SpriteSource != this.West)
             {
@@ -122,6 +161,8 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouth;
+            
             if(this.Owner.Sprite.SpriteSource != this.South)
             {
                 this.Owner.Sprite.SpriteSource = this.South;
@@ -130,6 +171,8 @@ class PlayerAnimations : ZilchComponent
         else if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
             this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponEast;
             
             if(this.Owner.Sprite.SpriteSource != this.East)
             {
