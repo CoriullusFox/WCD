@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Player",
+		string Name = "TempPlayer",
 	},
 	Archetyped = 
 	{
@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0.0272834, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,106 +24,51 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.11, 0, 1, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5812ef1fdef735df:PlayerSouth_Anim",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 1,
+		float AnimationSpeed = 2,
 		uint StartFrame = 0,
+	},
+	PlayerShooting = 
+	{
 	},
 	RigidBody = 
 	{
 		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
-		bool RotationLocked = false,
+		bool RotationLocked = true,
 		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	GunManager = 
-	{
-		Enum SelectedWeapon = Pistol,
-		string ArchetypePistol = "580e63ae4c297722:BulletTest",
-		string ArchetypeShotgun = "580e63ae4c297722:BulletTest",
-		string ArchetypeMinigun = "580e63ae4c297722:BulletTest",
-		string ArchetypeRifle = "580e63ae4c297722:BulletTest",
-		string ArchetypeBeam = "580e63ae4c297722:BulletTest",
-		float ClipPistol = -99,
-		float ClipShotgun = 6,
-		float ClipMinigun = 500,
-		float ClipRifle = 8,
-		float ClipBeam = 2,
-		int TierPistol = 1,
-		int TierShotgun = 1,
-		int TierMinigun = 1,
-		int TierRifle = 1,
-		int TierBeam = 1,
-		Vec3 RecipePistol = [111, 211, 111],
-		Vec3 RecipeShotgun = [111, 511, 111],
-	},
-	ShootManager = 
-	{
-		bool ChargeEnabled = true,
-		float AmmoSubtract = 1,
-		string ArchetypeAmmoBar = "5819b194843c203b:AmmoBar",
-		string ArchetypeCooldownBar = "5819b1b0ffb28fc6:CooldownBar",
-	},
-	PlayerShooting = 
-	{
-	},
-	MinigunBarrelDelayEffect = 
-	{
-		float Cooldown = 0.95,
-		float ModifiableCooldown = 0.95,
-		string MinigunStart = "5819b1affcd99b7d:MinigunPower",
-		string MinigunSpinning = "5819b15ef1092ce6:MinigunSpinning",
-		string MinigunPowerdown = "5819b155f3d96dc0:MinigunPowerdown",
-	},
-	Health = 
-	{
-		float ConfiguredHealth = 50,
-		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
-		bool MiniHeathBar = true,
-		bool Player = false,
-		float RegenRate = 0.5,
-	},
 	Movement = 
 	{
-		float Speed = 250,
-		float RunSpeed = 500,
+		float Speed = 300,
+		float RunSpeed = 600,
 	},
 	ChangeDirectionToPointAtMouse = 
 	{
 	},
-	DebugMode = 
-	{
-		bool DubugModeEnabled = true,
-	},
-	IgnoreSpaceEffects = 
-	{
-		bool Drag = false,
-		bool Flow = false,
-		bool Force = false,
-		bool Gravity = true,
-		bool Thrust = false,
-		bool Vortex = false,
-		bool Wind = false,
-		bool Invalid = false,
-		bool Torque = false,
-		bool PointGravity = false,
-		bool PointForce = false,
-		bool Buoyancy = false,
-	},
 	DebugPlayerDamage = 
 	{
+	},
+	Health = 
+	{
+		float ConfiguredHealth = 100,
+		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+		bool MiniHeathBar = false,
+		bool Player = true,
+		float RegenRate = 1.5,
 	},
 	WeaponSwap = 
 	{
@@ -131,13 +76,77 @@ Cog =
 		bool MinigunUnlocked = false,
 		bool BeamLaserUnlocked = false,
 		bool RifleUnlocked = false,
-		int NumberOfWeapons = 5,
+		bool FlamethrowerUnlocked = false,
+		bool BouncerUnlocked = false,
+		int NumberOfWeapons = 7,
 	},
 	EnergyStor = 
 	{
 		float EnergyRegenRate = 10,
 	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.05, 0.1, 0.5],
+	},
+	PlayerAnimations = 
+	{
+		string North = "5812ef7faa1505fd:PlayerNorth_Anim",
+		string NorthEast = "5812ed9c6151ee10:PlayerNorthEast_Anim",
+		string East = "5812ede87e09d134:PlayerEast_Anim",
+		string SouthEast = "5812ef5ea05cdd1b:PlayerSouthEast_Anim",
+		string South = "5812ef1fdef735df:PlayerSouth_Anim",
+		string SouthWest = "5812ef37a6a737bd:PlayerSouthWest_Anim",
+		string West = "5812eee383faa2b4:PlayerWest_Anim",
+		string NorthWest = "5812ee539ad4bc66:PlayerNorthWest_Anim",
+		int CurrentWalkingAnimationSpeed = 2,
+		int CurrentRunningAnimationSpeed = 3,
+	},
+	Pistol = 
+	{
+		string Bullet = "580e63ae4c297722:BulletTest",
+		float EnergyUse = 5,
+	},
+	SelectedStor = 
+	{
+	},
 	Hierarchy = 
 	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Camera",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 40],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Camera = 
+			{
+				ProjectionMode ProjectionMode = Orthographic,
+				Facing Facing = NegativeZ,
+				CameraTransparentSort TransparentSort = InheritFromSpace,
+				float FieldOfView = 45,
+				float NearPlane = 0.5,
+				float FarPlane = 200,
+				float Size = 20,
+			},
+			Microphone = 
+			{
+				bool Active = true,
+			},
+		},
 	},
 },
