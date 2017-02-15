@@ -49,8 +49,6 @@ class EnemyAnimations : ZilchComponent
     {
         var angle = Math.Angle2D(this.Owner.RigidBody.Velocity);
         
-        Console.WriteLine (angle);
-        
         if(angle > -0.25 && angle < 0.25 && this.Owner.Sprite.SpriteSource != this.East)
         {
             
