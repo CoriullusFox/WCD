@@ -81,7 +81,6 @@ class PlayerAnimations : ZilchComponent
     {
         this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
         
-        Console.WriteLine(this.WeaponS);
         
         if(Zero.Keyboard.KeyIsDown(Keys.Shift))
         {

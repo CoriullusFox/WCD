@@ -6,11 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Teleporter",
+		string Name = "Teleporter2",
+	},
+	Archetyped = 
+	{
+		string Name = "580ad9c286542aaa:Teleporter",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.201327, 4.98844, -8.8003e-009],
+		Vec3 Translation = [7.46746, -2.01457, -8.8003e-009],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -32,21 +36,11 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	BoxCollider = 
-	{
-		bool Ghost = false,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
-	},
 	Teleporter = 
 	{
-		CogPath Postition = 
+		CogPath Position = 
 		{
-			string Path = ":/Transform",
+			string Path = ":/Teleporter",
 			bool ErrorOnResolveToNull = false,
 			bool ErrorOnPathCantCompute = false,
 			bool ErrorOnDirectLinkFail = false,
@@ -59,5 +53,6 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
+		float Proximity = 2,
 	},
 },

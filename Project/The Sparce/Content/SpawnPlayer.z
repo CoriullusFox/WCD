@@ -1,7 +1,7 @@
 class SpawnPlayer : ZilchComponent
 {
     [Property]
-    var PlayerToSpawn : String = "Null";
+    var PlayerToSpawn : String = "Player";
     
     function Initialize(init : CogInitializer)
     {

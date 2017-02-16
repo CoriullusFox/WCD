@@ -4,13 +4,13 @@ class Teleporter : ZilchComponent
     var Position : CogPath = null;
     
     [Property]
-    var Proximity : Real = 2.0;
+    var Proximity : Real = 1;
     
     var Teleported : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Owner, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -18,8 +18,6 @@ class Teleporter : ZilchComponent
         var player = this.Space.FindObjectByName("TempPlayer");
         
         var distanceFromPlayer = Math.Distance(player.Transform.Translation, this.Owner.Transform.Translation);
-        
-        Console.WriteLine("`distanceFromPlayer`");
         
         //if distanceFromPlayer is less than Proximity and Teleported is equal to false
         if(distanceFromPlayer < this.Proximity && this.Teleported == false)
