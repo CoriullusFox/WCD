@@ -17,6 +17,8 @@ class DebugMode : ZilchComponent
     [Property]
     var DubugModeEnabled : Boolean = false;
     
+    var DebugText : Archetype = Archetype.DebugModeText;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -32,10 +34,21 @@ class DebugMode : ZilchComponent
             if(this.DubugModeEnabled)
             {
                 Console.WriteLine("Debug Mode: 'Enabled'");
+                this.Space.CreateAtPosition(this.DebugText, Real3(-9, 5, 5));
+                this.Owner.EnergyStor.Energy += 99999;
             }
             else if(!this.DubugModeEnabled)
             {
+                
                 Console.WriteLine("Debug Mode: 'Disabled'");
+                
+                var debugText = this.Space.FindObjectByName("DebugModeText");
+                
+                if(debugText != null)
+                {
+                    debugText.Destroy();
+                }
+                
             }
             
         }

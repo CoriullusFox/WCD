@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.84784, 0, 0],
+		Vec3 Translation = [3.16794, 0.134306, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5819c6bce42eb68f:ABulletShell",
+		string SpriteSource = "580db89c89006cb2:PistolNorthEast",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
