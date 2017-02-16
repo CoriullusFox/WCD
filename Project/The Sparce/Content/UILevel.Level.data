@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.737766, -4.99439, 50],
+			Vec3 Translation = [-2.16699, 0.228272, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7594,
+			float Size = 22.313,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.737766, -4.99439, -3.85971e-007],
+			Vec3 LookTarget = [-2.16699, 0.228272, -6.5624e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -292,11 +292,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "SelectedWeapon",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.5, -7.78344, 4.74891e-008],
+			Vec3 Translation = [-10, -7.78344, 0],
 			Vec3 Scale = [3, 3, 13],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -321,22 +321,146 @@ Level =
 		{
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5819b1bffeb885d8:Cursor",
 		LinkId = 
 		{
 			uint Id = 8,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.00294619, -5.3398, 5],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
-			string Name = "Cursor",
+			string Name = "FailMenu",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 9,
+				},
+				Named = 
+				{
+					string Name = "MechTransform",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 5],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 10,
+						},
+						Named = 
+						{
+							string Name = "You Lost",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 10, -5],
+							Vec3 Scale = [8, 8, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0.7, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5820efc589857afa:TheSparceFont",
+							uint FontSize = 150,
+							string Text = "YOU LOST",
+							TextAlign Align = Center,
+							float PixelsPerUnit = 256,
+							bool Smoothing = false,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 11,
+						},
+						Named = 
+						{
+							string Name = "Restart",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0.000678539, -5],
+							Vec3 Scale = [2, 2, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0.7, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5820efc589857afa:TheSparceFont",
+							uint FontSize = 150,
+							string Text = "RESTART",
+							TextAlign Align = Center,
+							float PixelsPerUnit = 256,
+							bool Smoothing = false,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 12,
+						},
+						Named = 
+						{
+							string Name = "ReturnToMainMenu",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, -3.99932, -5],
+							Vec3 Scale = [2, 2, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0.7, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5820efc589857afa:TheSparceFont",
+							uint FontSize = 150,
+							string Text = "RETURN TO MAIN MENU",
+							TextAlign Align = Center,
+							float PixelsPerUnit = 256,
+							bool Smoothing = false,
+						},
+					},
+				},
+			},
 		},
 	},
 },
