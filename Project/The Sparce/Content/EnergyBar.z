@@ -28,6 +28,7 @@ class EnergyBar : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
+        
         this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X,(this.Energy / this.MaxEnergy) * 3,this.Owner.Transform.Scale.Z), event.Dt * this.Speed);
         
     }
@@ -35,7 +36,7 @@ class EnergyBar : ZilchComponent
     function OnEnergy(event : Energy)
     {
         
-        this.Energy = event.Energy;
+        this.Energy = Math.Clamp(0, this.MaxEnergy, event.Energy);
         
     }
 }

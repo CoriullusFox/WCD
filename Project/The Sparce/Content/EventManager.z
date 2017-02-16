@@ -57,3 +57,7 @@ class SelectedGun : ZilchEvent
     var Unlocked : Boolean;
     
 }
+class PlayerDeath : ZilchEvent
+{
+    sends PlayerDeath : PlayerDeath;
+}
