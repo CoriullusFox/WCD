@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "TheSparceFont",
+		uint64 ResourceId = 5820efc589857afa,
+	},
+},
