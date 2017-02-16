@@ -87,6 +87,9 @@ class Health : ZilchComponent
             if(this.Player)
             {
                 //Death screen
+                var toSend = PlayerDeath();
+                this.GameSession.DispatchEvent(Events.PlayerDeath, toSend);
+                this.Space.TimeSpace.Paused = true;
             }
             else
             {
