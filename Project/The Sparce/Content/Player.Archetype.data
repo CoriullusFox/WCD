@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [9.36197, -2.13421, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -123,6 +123,10 @@ Cog =
 		string Bullet = "580e63ae4c297722:BulletTest",
 		float Damage = 10,
 		bool Player = true,
+	},
+	DebugMode = 
+	{
+		bool DubugModeEnabled = false,
 	},
 	Hierarchy = 
 	{
