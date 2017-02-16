@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.8618, -6.55037, 50],
+			Vec3 Translation = [-9.49568, -8.54204, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2684,
+			float Size = 10.0259,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-4.8618, -6.55037, -1.83418e-007],
+			Vec3 LookTarget = [-9.49568, -8.54204, -3.85971e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -296,7 +296,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.89476, -7.78344, 4.74891e-008],
+			Vec3 Translation = [-10, -7.78344, 4.74891e-008],
 			Vec3 Scale = [3, 3, 13],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -315,7 +315,7 @@ Level =
 			string Text = "Pistol",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 256,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		DisplaySelected = 
 		{
