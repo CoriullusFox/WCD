@@ -28,15 +28,18 @@ class EnergyBar : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
+        var energyBarDecrease = this.MaxEnergy - this.Energy;
         
-        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X,(this.Energy / this.MaxEnergy) * 3,this.Owner.Transform.Scale.Z), event.Dt * this.Speed);
+        var energyBarP = 100 - (energyBarDecrease / (this.MaxEnergy + 0.001) * 100);
+        
+        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X, energyBarP / 33.3333, this.Owner.Transform.Scale.Z), event.Dt * this.Speed);
         
     }
 
     function OnEnergy(event : Energy)
     {
         
-        this.Energy = Math.Clamp(0, this.MaxEnergy, event.Energy);
+        this.Energy = event.Energy;
         
     }
 }

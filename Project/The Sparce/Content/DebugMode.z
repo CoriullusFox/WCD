@@ -34,8 +34,8 @@ class DebugMode : ZilchComponent
             if(this.DubugModeEnabled)
             {
                 Console.WriteLine("Debug Mode: 'Enabled'");
-                this.Space.CreateAtPosition(this.DebugText, Real3(-9, 5, 5));
-                this.Owner.EnergyStor.Energy += 99999;
+                this.Space.CreateAtPosition(this.DebugText, Real3(-7, 5, 5));
+                this.Owner.EnergyStor.EnergyRegenRate = 9999;
             }
             else if(!this.DubugModeEnabled)
             {
