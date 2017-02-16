@@ -1,15 +1,15 @@
 class SpawnPlayer : ZilchComponent
 {
+    [Property]
+    var PlayerToSpawn : String = "Null";
+    
     function Initialize(init : CogInitializer)
     {
-        var player = Zero.ObjectStore.RestoreOrArchetype("Player", "Player", this.Space);
+        var player = Zero.ObjectStore.RestoreOrArchetype(this.PlayerToSpawn, this.PlayerToSpawn, this.Space);
         if(player != null)
-        {
-            
-            
+        { 
             player.Transform.Translation = this.Owner.Transform.Translation;
             this.LevelSettings.CameraViewport.Camera = player.FindChildByName("Camera");
-            
         }
     }
 }

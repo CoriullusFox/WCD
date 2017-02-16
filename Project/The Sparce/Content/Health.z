@@ -84,7 +84,17 @@ class Health : ZilchComponent
         // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
         if(this.ConfiguredHealth <= 0)
         {
-            this.Owner.Destroy();
+            if(this.Player)
+            {
+                //Death screen
+            }
+            else
+            {
+                //This is temporary until we decide to make the enemies deaths perminent
+                this.Owner.Destroy();
+            }
+            
+            
         }
         
         //Console.WriteLine("HP", this.ConfiguredHealth);

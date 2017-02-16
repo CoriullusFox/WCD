@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5819c2376fedf85b:Player",
+		string Name = "5829a4c2c285429f:SandboxPlayer",
 	},
 	Transform = 
 	{
@@ -53,8 +53,8 @@ Cog =
 	},
 	Movement = 
 	{
-		float Speed = 300,
-		float RunSpeed = 600,
+		float Speed = 600,
+		float RunSpeed = 1200,
 	},
 	ChangeDirectionToPointAtMouse = 
 	{
@@ -64,7 +64,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 1000,
+		float ConfiguredHealth = 1e+006,
 		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
 		bool MiniHeathBar = false,
 		bool Player = true,
@@ -72,12 +72,12 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = false,
-		bool MinigunUnlocked = false,
-		bool BeamLaserUnlocked = false,
-		bool RifleUnlocked = false,
-		bool FlamethrowerUnlocked = false,
-		bool BouncerUnlocked = false,
+		bool ShotgunUnlocked = true,
+		bool MinigunUnlocked = true,
+		bool BeamLaserUnlocked = true,
+		bool RifleUnlocked = true,
+		bool FlamethrowerUnlocked = true,
+		bool BouncerUnlocked = true,
 		int NumberOfWeapons = 7,
 	},
 	EnergyStor = 
