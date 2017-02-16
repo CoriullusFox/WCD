@@ -114,7 +114,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.83417, -0.80301, 50],
+			Vec3 Translation = [-1.32213, -0.310073, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -126,7 +126,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7781,
+			float Size = 13.3718,
 		},
 		EditorCameraController = 
 		{
@@ -134,7 +134,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.83417, -0.80301, -6.38618e-008],
+			Vec3 LookTarget = [-1.32213, -0.310073, -4.14799e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -432,7 +432,7 @@ Level =
 		},
 		SpawnPlayer = 
 		{
-			string PlayerToSpawn = "Player",
+			string PlayerToSpawn = "SandboxPlayer",
 		},
 	},
 	Cog = 
@@ -491,24 +491,6 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			float Proximity = 1,
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5820e8f49dbffcb3:WeaponPickup",
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2.59479, 3.21915, 3.85835e-008],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "WeaponPickup",
 		},
 	},
 },
