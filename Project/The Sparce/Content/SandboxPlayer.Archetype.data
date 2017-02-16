@@ -68,7 +68,7 @@ Cog =
 		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
 		bool MiniHeathBar = false,
 		bool Player = true,
-		float RegenRate = 1.5,
+		float RegenRate = 50,
 	},
 	WeaponSwap = 
 	{
