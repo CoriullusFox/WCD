@@ -70,7 +70,7 @@ class Bouncer : ZilchComponent
                     
                     //apply direction and movement
                     createdBullet.Orientation.LookAtDirection(newDirection);
-                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 20;
+                    createdBullet.RigidBody.ApplyForce(Math.Normalize(newDirection) * 20);
                     
                     createdBullet.Transform.Translation += Math.Normalize(newDirection);
                     

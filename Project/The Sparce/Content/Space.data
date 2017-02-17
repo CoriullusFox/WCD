@@ -4,9 +4,13 @@ Space =
 	{
 		uint Id = 1,
 	},
+	Named = 
+	{
+		string Name = "GameSpace",
+	},
 	Archetyped = 
 	{
-		string Name = "554cea0f94af6dc4:Space",
+		string Name = "580e63ae4c280169:Space",
 	},
 	TimeSpace = 
 	{
@@ -20,6 +24,8 @@ Space =
 	{
 		TransparentSort TransparentSort = ViewDepth,
 		string SpriteLayerOrder = "52b23ad3c402d436:DefaultSpriteLayerOrder",
+		bool UseRandomSeed = false,
+		uint RandomSeed = 0,
 	},
 	ActionSpace = 
 	{

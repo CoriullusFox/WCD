@@ -24,6 +24,7 @@ class Movement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.Owner.RigidBody.Velocity = Real3(0,0,0);
         var r3Speed = Real3(0,0,0);
         if(Zero.Keyboard.KeyIsDown(Keys.Shift))
         {

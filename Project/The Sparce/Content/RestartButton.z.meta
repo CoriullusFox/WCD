@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "RestartButton",
+		uint64 ResourceId = 580f28d2d6ca3b87,
+	},
+},

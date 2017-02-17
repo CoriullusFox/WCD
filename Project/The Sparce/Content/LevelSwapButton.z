@@ -1,0 +1,37 @@
+class LevelSwapButton : ZilchComponent
+{
+    [Property]
+    var LevelToLoad : Level;
+    [Property]
+    var DestroyCurrentSpace : Boolean = true;
+    var GameSpace : Space;
+    var DefaultColor : Real4;
+    function Initialize(init : CogInitializer)
+    {
+        this.GameSpace = this.GameSession.FindSpaceByName("GameSpace");
+        this.DefaultColor = this.Owner.SpriteText.Color;
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        this.GameSpace.LoadLevel(this.LevelToLoad);
+        this.GameSpace.TimeSpace.Paused = false;
+        if(this.Space.Name != "GameSpace" && this.DestroyCurrentSpace)
+        {
+            this.Space.Destroy();
+        }
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        this.Owner.SpriteText.Color = this.DefaultColor;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        this.Owner.SpriteText.Color = Real4(1, 0, 0, 1);
+    }
+}

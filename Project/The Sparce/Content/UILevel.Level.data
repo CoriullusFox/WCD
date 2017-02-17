@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.142208, -1.13042, 50],
+			Vec3 Translation = [-2.41553, -1.18569, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335,
+			float Size = 22.313,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.142208, -1.13042, 3.53142e-008],
+			Vec3 LookTarget = [-2.41553, -1.18569, -4.73398e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -372,7 +372,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0, 10, -5],
+							Vec3 Translation = [0, 10, 0],
 							Vec3 Scale = [8, 8, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -393,12 +393,50 @@ Level =
 							float PixelsPerUnit = 256,
 							bool Smoothing = false,
 						},
+						Hierarchy = 
+						{
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 11,
+								},
+								Named = 
+								{
+									string Name = "FailBack",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [0, -0.4, -1],
+									Vec3 Scale = [0.7, 0.7, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [0, 0.701961, 1, 1],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "580f2b89ad88217b:sprite_bigbtn",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+							},
+						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -406,7 +444,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0, 0.000678539, -5],
+							Vec3 Translation = [0, 0.000678539, 0],
 							Vec3 Scale = [2, 2, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -427,12 +465,58 @@ Level =
 							float PixelsPerUnit = 256,
 							bool Smoothing = false,
 						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
+						RestartButton = 
+						{
+						},
+						Hierarchy = 
+						{
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 13,
+								},
+								Named = 
+								{
+									string Name = "RestartBack",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [0, -0.4, -1],
+									Vec3 Scale = [1, 1, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [0, 0.701961, 1, 1],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "580f2b89ad884eb2:sprite_smallbtn",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+							},
+						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 14,
 						},
 						Named = 
 						{
@@ -440,7 +524,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0, -3.99932, -5],
+							Vec3 Translation = [0, -3.99932, 0],
 							Vec3 Scale = [2, 2, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -460,6 +544,54 @@ Level =
 							TextAlign Align = Center,
 							float PixelsPerUnit = 256,
 							bool Smoothing = false,
+						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
+						LevelSwapButton = 
+						{
+							string LevelToLoad = "580f2d187401da74:MainMenu",
+							bool DestroyCurrentSpace = true,
+						},
+						Hierarchy = 
+						{
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 15,
+								},
+								Named = 
+								{
+									string Name = "RestartBack",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [0, -0.4, -1],
+									Vec3 Scale = [2.1, 2, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [0, 0.701961, 1, 1],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "580f2b89ad884eb2:sprite_smallbtn",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+							},
 						},
 					},
 				},
