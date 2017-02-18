@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [9.36197, -2.13421, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -72,7 +72,7 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = false,
+		bool ShotgunUnlocked = true,
 		bool MinigunUnlocked = false,
 		bool BeamLaserUnlocked = false,
 		bool RifleUnlocked = false,
@@ -121,7 +121,10 @@ Cog =
 	Pistol = 
 	{
 		string Bullet = "580e63ae4c297722:BulletTest",
-		float Damage = 10,
+		float Damage = 25,
+		float EnergyUse = 5,
+		float Energy = 0,
+		float CooldownMax = 0.4,
 		bool Player = true,
 	},
 	DebugMode = 

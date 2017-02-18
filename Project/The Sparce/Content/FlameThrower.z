@@ -20,9 +20,17 @@ class FlameThrower : ZilchComponent
     
     [Property]
     var DPS : Real = 25;
+    
+    [Property]
     var EnergyUse : Real = 70;
+    
+    [Property]
     var Energy : Real = 0;
+    
+    [Property]
     var CooldownMax : Real = 6;
+    
+    [Property]
     var Player : Boolean = false;
     function Initialize(init : CogInitializer) 
     {

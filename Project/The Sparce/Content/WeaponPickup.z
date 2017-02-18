@@ -16,21 +16,9 @@ class WeaponPickup : ZilchComponent
     [Property]
     var Unlocked : String = "null";
     
-    [Property]
-    var RotationSpeed : Real = 45.0;
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-        
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-    
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        var rotationSpeedRadians = Math.ToRadians(this.RotationSpeed);
-        
-        this.Owner.Transform.RotateAnglesLocal(Real3(0,0,rotationSpeedRadians * event.Dt));
     }
     
     function OnCollisionStarted(event : CollisionEvent)

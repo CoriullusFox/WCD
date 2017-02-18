@@ -26,9 +26,17 @@ class Shotgun : ZilchComponent
     
     [Property]
     var DistBetweenShots : Real = 0.1;
-    var EnergyUse : Real = 25;
-    var Energy : Real = 0;
+    
+    [Property]
+    var EnergyUse : Real = 25.0;
+    
+    [Property]
+    var Energy : Real = 100.0;
+    
+    [Property]
     var CooldownMax : Real = 0.7;
+    
+    [Property]
     var Player : Boolean = false;
     function Initialize(init : CogInitializer)
     {

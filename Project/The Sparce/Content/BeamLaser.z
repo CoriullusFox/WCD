@@ -15,14 +15,25 @@ class BeamLaser : ZilchComponent
 {
     var Cooldown : Real = 0;
     
+    [Property]
     var Bullet : Archetype = Archetype.BulletTestBeam;
+    
+    [Property]
     var FreezTimer : Real = 0;
     
     [Property]
     var DPS : Real = 50;
+    
+    [Property]
     var EnergyUse : Real = 100;
+    
+    [Property]
     var Energy : Real = 0;
+    
+    [Property]
     var CooldownMax : Real = 5;
+    
+    [Property]
     var Player : Boolean = false;
     function Initialize(init : CogInitializer)
     {

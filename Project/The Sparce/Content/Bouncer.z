@@ -7,9 +7,17 @@ class Bouncer : ZilchComponent
     
     [Property]
     var Damage : Real = 10;
+    
+    [Property]
     var EnergyUse : Real = 5;
+    
+    [Property]
     var Energy : Real = 0;
+    
+    [Property]
     var CooldownMax : Real = 0.4;
+    
+    [Property]
     var Player : Boolean = false;
     function Initialize(init : CogInitializer)
     {

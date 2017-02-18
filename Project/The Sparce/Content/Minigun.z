@@ -20,9 +20,17 @@ class Minigun : ZilchComponent
     
     [Property]
     var DamagePerBullet : Real = 2.5;
+    
+    [Property]
     var EnergyUse : Real = 5;
+    
+    [Property]
     var Energy : Real = 0;
+    
+    [Property]
     var CooldownMax : Real = 0.1;
+    
+    [Property]
     var Player : Boolean = false;
     function Initialize(init : CogInitializer) 
     {

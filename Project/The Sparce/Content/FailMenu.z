@@ -11,11 +11,11 @@ class FailMenu : ZilchComponent
     {
         if(this.Fail)
         {
-            this.Owner.Transform.Translation = Real3(0,0,0);
+            this.Owner.Transform.Translation = Real3(0, 0, 0);
         }
         else
         {
-            this.Owner.Transform.Translation = Real3(0,0,0);
+            this.Owner.Transform.Translation = Real3(0, 0, 100);
         }
     }
 
