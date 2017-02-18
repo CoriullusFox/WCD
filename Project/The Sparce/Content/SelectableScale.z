@@ -1,0 +1,58 @@
+class SelectableScale : ZilchComponent
+{
+    [Property]
+    var ScaleDirection : Real3 = Real3(0.0, 0.0, 0.0);
+    
+    [Property]
+    var MaxScale : Real3 = Real3(0.0, 0.0, 0.0);
+    
+    [Property]
+    var MinScale : Real3 = Real3(0.0, 0.0, 0.0);
+    
+    [Property]
+    var ScaleSpeed : Real = 1.0;
+    
+    var Touching : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        Math.Normalize(this.ScaleDirection);
+        
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.Touching)
+        {
+            while(this.Owner.Transform.Scale.X < this.MaxScale.X && this.Owner.Transform.Scale.Y < this.MaxScale.Y)
+            {
+                this.Owner.Transform.Scale += this.ScaleDirection * event.Dt * this.ScaleSpeed;
+            }
+        }
+        else
+        {
+            while(this.Owner.Transform.Scale.X > this.MinScale.X && this.Owner.Transform.Scale.Y > this.MinScale.Y)
+            {
+                this.Owner.Transform.Scale -= this.ScaleDirection * event.Dt * this.ScaleSpeed;
+            }
+        }
+        
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        this.Touching = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        this.Touching = true;
+    }
+}

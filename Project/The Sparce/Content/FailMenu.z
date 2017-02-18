@@ -15,7 +15,7 @@ class FailMenu : ZilchComponent
         }
         else
         {
-            this.Owner.Transform.Translation = Real3(0,0,100);
+            this.Owner.Transform.Translation = Real3(0,0,0);
         }
     }
 

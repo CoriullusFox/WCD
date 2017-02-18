@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "SelectablePosition",
+		uint64 ResourceId = 5897a8e6973af36d,
+	},
+},
