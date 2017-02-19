@@ -65,6 +65,8 @@ class Grid : ZilchComponent
                 this.Grid[i][l] = (new Node(walkable, worldPoint, i, l));
             }
             
+            
+            
         }
     }
     
@@ -105,8 +107,18 @@ class Grid : ZilchComponent
         
         var x : Integer = ((this.GridSizeX - 1) * percentX) as Integer;
         var y : Integer = ((this.GridSizeY - 1) * percentY) as Integer;
+        if(this.Grid[x][y].Walkable){
+            return this.Grid[x][y];
+        }
         
-        return this.Grid[x][y];
-        
+        var n = this.GetNeighbours(this.Grid[x][y]);
+        for(var i = 0; i < n.Count; ++i)
+        {
+            if(n[i].Walkable)
+            {
+                return n[i];
+            }
+        }
+        return null;
     }
 }

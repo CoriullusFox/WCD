@@ -114,7 +114,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.2318, 1.4604, 48.2747],
+			Vec3 Translation = [-4.9591, 3.23662, 48.2747],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -126,7 +126,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.313,
+			float Size = 7.42735,
 		},
 		EditorCameraController = 
 		{
@@ -134,7 +134,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.2318, 1.4604, -1.72528],
+			Vec3 LookTarget = [-4.9591, 3.23662, -1.72528],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -306,7 +306,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.56518, 3.34892, -8.8003e-009],
+			Vec3 Translation = [-5.5, 3.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -336,7 +336,7 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			Vec3 Size = [0.45, 0.45, 0.5],
 		},
 	},
 	Cog = 
