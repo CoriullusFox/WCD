@@ -115,6 +115,10 @@ Level =
 			bool Glow = false,
 			float GlowThreshold = 1,
 		},
+		ChangeCamSizeOnFail = 
+		{
+			float NewCamSize = 25,
+		},
 	},
 	Cog = 
 	{
@@ -133,7 +137,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.01819, -2.41389, 55.2566],
+			Vec3 Translation = [-11.3175, 2.82408, 55.2566],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -145,7 +149,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5336,
+			float Size = 27.2534,
 		},
 		EditorCameraController = 
 		{
@@ -153,7 +157,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.01819, -2.41389, 5.25659],
+			Vec3 LookTarget = [-11.3175, 2.82408, 5.25659],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -231,7 +235,7 @@ Level =
 		},
 		Grid = 
 		{
-			Vec2 GridWorldSize = [50, 50],
+			Vec2 GridWorldSize = [76, 75],
 		},
 		AStarPathfind = 
 		{
@@ -253,7 +257,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.5561, 2.27123, 0],
+			Vec3 Translation = [-13.5561, -3.50526, 0],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -277,8 +281,8 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 15,
-			float ShootProximity = 20,
+			float ChaseProximity = 10,
+			float ShootProximity = 9,
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
@@ -369,8 +373,8 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 15,
-			float ShootProximity = 20,
+			float ChaseProximity = 10,
+			float ShootProximity = 9,
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
@@ -470,8 +474,8 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 15,
-			float ShootProximity = 20,
+			float ChaseProximity = 10,
+			float ShootProximity = 9,
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
@@ -562,8 +566,8 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 15,
-			float ShootProximity = 20,
+			float ChaseProximity = 10,
+			float ShootProximity = 9,
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
@@ -624,29 +628,11 @@ Level =
 			bool Player = false,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5819e0dc33f34ca0:Enemy",
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [17.1828, -16.6704, 0],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -658,7 +644,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20.7555, 10.0506, 0],
+			Vec3 Translation = [17.1828, -16.6704, 0],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -682,8 +668,100 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 15,
-			float ShootProximity = 20,
+			float ChaseProximity = 10,
+			float ShootProximity = 9,
+			int Speed = 100,
+			Vec3 LookDirection = [0, 1, 0],
+			Vec3 MoveDirection = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5800bf6d54ec0d53:Slippery",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.065, 0.09, 0.5],
+		},
+		ChangeDirectionToPointAtPlayer = 
+		{
+		},
+		EnemyAnimations = 
+		{
+			string North = "58128ac7e63298e0:EnemyNorth_Anim",
+			string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
+			string East = "58128986ce447b92:EnemyEast_Anim",
+			string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
+			string South = "58128b1d3c322a60:EnemySouth_Anim",
+			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
+			string West = "58128bf533d431ee:EnemyWest_Anim",
+			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
+			int AnimationSpeed = 3,
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 50,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			float RegenRate = 0.5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+		Archetyped = 
+		{
+			string Name = "5819e0dc33f34ca0:Enemy",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-23.9647, 5.82802, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		EnemyAI = 
+		{
+			float ChaseProximity = 10,
+			float ShootProximity = 9,
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
@@ -783,8 +861,8 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 15,
-			float ShootProximity = 20,
+			float ChaseProximity = 10,
+			float ShootProximity = 9,
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
@@ -1069,6 +1147,533 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-2, 3.5, 0],
+			Vec3 Scale = [2, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-26, 3.5, 0],
+			Vec3 Scale = [2, 15, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-23, -1.5, 0],
+			Vec3 Scale = [2, 5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-24.4, -3, 0],
+			Vec3 Scale = [1, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-21, 10, 0],
+			Vec3 Scale = [8, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13, 9, 0],
+			Vec3 Scale = [12, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-20, 4, 0],
+			Vec3 Scale = [2, 6, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.5, 2, 0],
+			Vec3 Scale = [15, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7, 4, 0],
+			Vec3 Scale = [2, 6, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 28,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.5, 2, 0],
+			Vec3 Scale = [15, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 29,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18, -1, 0],
+			Vec3 Scale = [12, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-14, 4, 0],
+			Vec3 Scale = [2, 6, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-14.5, 6, 0],
+			Vec3 Scale = [7, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.5, 3.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.5, 3.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.5, 3.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-12.5, 5, 0],
+			Vec3 Scale = [1, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Named = 
+		{
+			string Name = "PathObsticle",
+		},
+		Archetyped = 
+		{
+			string Name = "5800bb6ac5872867:PathObsticle",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13, 0.5, 0],
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

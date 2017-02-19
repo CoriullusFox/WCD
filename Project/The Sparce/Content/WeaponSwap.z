@@ -27,7 +27,8 @@ class WeaponSwap : ZilchComponent
     [Property]
     var BouncerUnlocked : Boolean = false;
     [Property]
-    var NumberOfWeapons : Integer = 7;
+    var TeslaUnlocked : Boolean = false;
+    var NumberOfWeapons : Integer = 8;
     
     
     //to add a new gun add a boolean for it beaing unlocked, example: [Property] var GunUnlocked : Boolean = false;
@@ -85,6 +86,10 @@ class WeaponSwap : ZilchComponent
         {
             this.AddNewComponent("Bouncer", this.BouncerUnlocked);
         }
+        else if(this.Selected == 7)
+        {
+            this.AddNewComponent("TeslaGun", this.TeslaUnlocked);
+        }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
     
@@ -98,6 +103,7 @@ class WeaponSwap : ZilchComponent
         this.Owner.RemoveComponentByName("Rifle");
         this.Owner.RemoveComponentByName("FlameThrower");
         this.Owner.RemoveComponentByName("Bouncer");
+        this.Owner.RemoveComponentByName("TeslaGun");
         //INSTRUCTIONS! add code to disable your gun component here, example: this.Owner.RemoveComponentByName("BlahGun");
         
     }
@@ -140,6 +146,10 @@ class WeaponSwap : ZilchComponent
             if(this.Owner.Bouncer != null)
             {
                 this.Owner.Bouncer.Initialize(init);
+            }
+            if(this.Owner.TeslaGun != null)
+            {
+                this.Owner.TeslaGun.Initialize(init);
             }
             //INSTRUCTIONS add a new if statement for initializing the component of the gun that you are adding!
             

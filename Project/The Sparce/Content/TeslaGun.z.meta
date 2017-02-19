@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "TeslaGun",
+		uint64 ResourceId = 58037ef7bea3098d,
+	},
+},

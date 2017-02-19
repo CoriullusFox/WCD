@@ -78,7 +78,7 @@ Cog =
 		bool RifleUnlocked = true,
 		bool FlamethrowerUnlocked = true,
 		bool BouncerUnlocked = true,
-		int NumberOfWeapons = 7,
+		bool TeslaUnlocked = true,
 	},
 	EnergyStor = 
 	{

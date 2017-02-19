@@ -28,6 +28,9 @@ class EnemyAI : ZilchComponent
     [Property]
     var MoveDirection : Real3 = Real3(0.0, 0.0, 0.0);
     
+    [Property]
+    var Pathfind : Boolean = false;
+    
     
     function Initialize(init : CogInitializer)
     {
@@ -41,10 +44,11 @@ class EnemyAI : ZilchComponent
         if(distanceFromPlayer < this.ChaseProximity)
         {
             
-            var path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
+            var path = Array[Node]();
             
+            if(this.Pathfind) this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
             
-            if(path != null && path.Count > 1)
+            if(this.Pathfind && path != null && path.Count > 1)
             {
                 
                 
