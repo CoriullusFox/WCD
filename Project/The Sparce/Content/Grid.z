@@ -61,7 +61,7 @@ class Grid : ZilchComponent
                 var worldPoint = bottomL + Real3(1,0,0) * (i + this.NodeDiameter + this.NodeRadius) + (Real3(0,1,0) * (l + this.NodeDiameter + this.NodeRadius)) + Real3(0,this.GridSizeY/2, 0);
                 var filter = CastFilter();
                 filter.IgnoreDynamic = true;
-                var walkable : Boolean = !(this.Space.PhysicsSpace.CastSphereResults(worldPoint, this.NodeDiameter, 1, filter).IsNotEmpty);
+                var walkable : Boolean = !(this.Space.PhysicsSpace.CastSphereResults(worldPoint, this.NodeRadius - 0.3, 1, filter).IsNotEmpty);
                 this.Grid[i][l] = (new Node(walkable, worldPoint, i, l));
                 
                 if(!this.Grid[i][l].Walkable)

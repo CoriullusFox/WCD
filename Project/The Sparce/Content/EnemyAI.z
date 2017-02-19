@@ -84,9 +84,24 @@ class EnemyAI : ZilchComponent
         
         if(distanceFromPlayer < this.ShootProximity)
         {
-            var toSend = Shoot();
-            toSend.Direction = this.LookDirection;
-            this.Owner.DispatchEvent(Events.Shoot, toSend);
+            //raycast for shooting
+            var ray = Ray();
+            ray.Start = this.Owner.Transform.Translation;
+            ray.Direction = this.LookDirection;
+            var cast = this.Space.PhysicsSpace.CastRayFirst(ray);
+            var debugLine = DebugLine();
+            debugLine.Start(this.Owner.Transform.Translation);
+            debugLine.End(cast.WorldPosition);
+            debugLine.Draw();
+            if (cast.ObjectHit != null)
+            {
+                if(cast.ObjectHit.Name == "TempPlayer")
+                {
+                    var toSend = Shoot();
+                    toSend.Direction = this.LookDirection;
+                    this.Owner.DispatchEvent(Events.Shoot, toSend);
+                }
+            }
         }
         
     }
