@@ -63,6 +63,12 @@ class Grid : ZilchComponent
                 filter.IgnoreDynamic = true;
                 var walkable : Boolean = !(this.Space.PhysicsSpace.CastSphereResults(worldPoint, this.NodeDiameter, 1, filter).IsNotEmpty);
                 this.Grid[i][l] = (new Node(walkable, worldPoint, i, l));
+                
+                if(!this.Grid[i][l].Walkable)
+                {
+                    this.Space.CreateAtPosition(Archetype.MissingTexture, worldPoint);
+                }
+                
             }
             
             
@@ -79,7 +85,7 @@ class Grid : ZilchComponent
         {
             for (var y = -1; y <= 1; ++y)
             {
-                if(x == 0 && y == 0) continue;
+                if(x == 0 && y == 0 || node == null) continue;
                 
                 var checkX = node.GridX + x;
                 var checkY = node.GridY + y;
@@ -110,7 +116,6 @@ class Grid : ZilchComponent
         if(this.Grid[x][y].Walkable){
             return this.Grid[x][y];
         }
-        
         var n = this.GetNeighbours(this.Grid[x][y]);
         for(var i = 0; i < n.Count; ++i)
         {

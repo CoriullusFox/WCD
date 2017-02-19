@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [1, 0, 0, 0.21],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -35,9 +35,5 @@ Cog =
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
-	},
-	Despawn = 
-	{
-		float LifeLength = 0.1,
 	},
 },

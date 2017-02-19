@@ -65,9 +65,9 @@ class EnemyAI : ZilchComponent
                 
                 this.MoveDirection = path[1].WorldPos - this.Owner.Transform.Translation;
                 
-                Math.Clamp(this.MoveDirection, Real3(0,0,0), Real3(1,1,1));
+                Math.Clamp(this.MoveDirection, Real3(0,0,0), Real3(0.1,0.1,0.1));
                 
-                this.Owner.RigidBody.Velocity  = this.MoveDirection * event.Dt * this.Speed;
+                this.Owner.RigidBody.Velocity = this.MoveDirection * event.Dt * this.Speed;
                 
                 
             }
@@ -76,7 +76,7 @@ class EnemyAI : ZilchComponent
                 
                 this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
                 
-                Math.Clamp(this.MoveDirection, Real3(0,0,0), Real3(1,1,1));
+                Math.Clamp(this.MoveDirection, Real3(0,0,0), Real3(0.1,0.1,0.1));
                 
                 this.Owner.RigidBody.Velocity  = this.MoveDirection * event.Dt * this.Speed;
             }

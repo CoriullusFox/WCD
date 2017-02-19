@@ -16,11 +16,11 @@ class Node
     var Walkable : Boolean = true;
     var WorldPos : Real3 = Real3(0,0,0);
     
-    var GCost : Integer;
-    var HCost : Integer;
+    var GCost : Integer = 0;
+    var HCost : Integer = 0;
     
-    var GridX : Integer;
-    var GridY : Integer;
+    var GridX : Integer = 0;
+    var GridY : Integer = 0;
     var Parent : Node;
     
     constructor (walkable : Boolean, worldPos : Real3, gridX : Integer, gridY : Integer)

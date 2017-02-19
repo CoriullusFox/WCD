@@ -24,7 +24,7 @@ Cog =
 	},
 	Grid = 
 	{
-		Vec2 GridWorldSize = [25, 25],
+		Vec2 GridWorldSize = [26, 25],
 	},
 	AStarPathfind = 
 	{
