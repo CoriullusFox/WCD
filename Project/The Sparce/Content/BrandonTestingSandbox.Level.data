@@ -114,7 +114,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.946743, 1.63622, 48.2747],
+			Vec3 Translation = [-0.2318, 1.4604, 48.2747],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -126,7 +126,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335,
+			float Size = 22.313,
 		},
 		EditorCameraController = 
 		{
@@ -134,7 +134,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.946743, 1.63622, -1.72528],
+			Vec3 LookTarget = [-0.2318, 1.4604, -1.72528],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -432,7 +432,7 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 6,
+			float ChaseProximity = 15,
 			float ShootProximity = 20,
 			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
@@ -493,19 +493,12 @@ Level =
 			bool Player = false,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		LinkId = 
 		{
 			uint Id = 11,
-		},
-		Named = 
-		{
-			string Name = "PlayerSpawnPoint",
-		},
-		Archetyped = 
-		{
-			string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		},
 		Transform = 
 		{
@@ -513,16 +506,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpawnPlayer = 
+		Named = 
 		{
-			string PlayerToSpawn = "Player",
-		},
-		Grid = 
-		{
-			Vec2 GridWorldSize = [25, 25],
-		},
-		AStarPathfind = 
-		{
+			string Name = "PlayerSpawnPoint",
 		},
 	},
 	Cog = 

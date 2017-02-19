@@ -28,9 +28,8 @@ class AStarPathfind : ZilchComponent
     {
     }
     
-    function PathFind(start : Real3, goal : Real3)
+    function PathFind(start : Real3, goal : Real3) : Array[Node]
     {
-        
         var startNode = this.Grid.NodeFromWorldPos(start);
         var targetNode = this.Grid.NodeFromWorldPos(goal);
         
@@ -57,8 +56,8 @@ class AStarPathfind : ZilchComponent
                 
                 if (currNode == targetNode)
                 {
-                    this.RetracePath(startNode, targetNode);
-                    return;
+                    
+                    return this.RetracePath(startNode, targetNode);
                     
                 }
                 
@@ -98,10 +97,11 @@ class AStarPathfind : ZilchComponent
                 break;
             }
         }
+        return null;
     }
     
     
-    function RetracePath(startNode : Node, endNode : Node)
+    function RetracePath(startNode : Node, endNode : Node) : Array[Node]
     {
         
         var revPath = Array[Node]();
@@ -124,7 +124,7 @@ class AStarPathfind : ZilchComponent
             
         }
         
-        
+        return path;
         
     }
     

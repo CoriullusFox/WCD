@@ -40,11 +40,46 @@ class EnemyAI : ZilchComponent
         
         if(distanceFromPlayer < this.ChaseProximity)
         {
-            this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
             
-            Math.Normalize(this.MoveDirection);
+            var path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
             
-            this.Owner.RigidBody.Velocity  = this.MoveDirection * event.Dt * this.Speed;
+            
+            if(path != null && path.Count > 1)
+            {
+                
+                
+                var temp = path[0].WorldPos;
+                //draw debug lines
+                for (var i = 1; i < path.Count; ++i)
+                {
+                    var debugLine = DebugLine();
+                    debugLine.Start(temp);
+                    debugLine.End(path[i].WorldPos);
+                    debugLine.Float4Color(Real4(0,0,1,1));
+                    debugLine.Width(3);
+                    temp = path[i].WorldPos;
+                    debugLine.Draw();
+                    
+                }
+                
+                
+                this.MoveDirection = path[1].WorldPos - this.Owner.Transform.Translation;
+                
+                Math.Normalize(this.MoveDirection);
+                
+                this.Owner.RigidBody.Velocity  = this.MoveDirection * event.Dt * this.Speed;
+                
+                
+            }
+            else
+            {
+                
+                this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
+                
+                Math.Normalize(this.MoveDirection);
+                
+                this.Owner.RigidBody.Velocity  = this.MoveDirection * event.Dt * this.Speed;
+            }
         }
         
         if(distanceFromPlayer < this.ShootProximity)
