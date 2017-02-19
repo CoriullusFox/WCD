@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.86253, -2.10101, 50],
+			Vec3 Translation = [1.23831, -1.79315, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.3482,
+			float Size = 29.7594,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.86253, -2.10101, -6.68785e-008],
+			Vec3 LookTarget = [1.23831, -1.79315, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -333,7 +333,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 100],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -409,7 +409,7 @@ Level =
 								Transform = 
 								{
 									Vec3 Translation = [0, 0.571428, 1],
-									Vec3 Scale = [1.42857, 1.42857, 1],
+									Vec3 Scale = [1.52848, 1.45451, 1],
 									Quat Rotation = [0, 0, 0, 1],
 								},
 								SpriteText = 
@@ -424,7 +424,7 @@ Level =
 									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 									string FontName = "5820efc589857afa:TheSparceFont",
 									uint FontSize = 150,
-									string Text = "YOU LOST",
+									string Text = "DEFEAT!",
 									TextAlign Align = Center,
 									float PixelsPerUnit = 256,
 									bool Smoothing = false,
@@ -483,6 +483,17 @@ Level =
 						},
 						RestartButton = 
 						{
+						},
+						SelectableColor = 
+						{
+							Vec4 DefaultOwnerColor = [0.0784314, 0, 1, 1],
+							bool SetOwnerColor = true,
+							Vec4 DefaultChildColor = [0, 0.760784, 1, 1],
+							bool SetChildColor = true,
+							Vec4 SelectedOwnerColor = [0, 0.760784, 1, 1],
+							bool ChangeOwnerColor = true,
+							Vec4 SelectedChildColor = [0.0784314, 0, 1, 1],
+							bool ChangeChildColor = true,
 						},
 						Hierarchy = 
 						{
@@ -575,6 +586,17 @@ Level =
 						{
 							string LevelToLoad = "580f2d187401da74:MainMenu",
 							bool DestroyCurrentSpace = true,
+						},
+						SelectableColor = 
+						{
+							Vec4 DefaultOwnerColor = [0.0784314, 0, 1, 1],
+							bool SetOwnerColor = true,
+							Vec4 DefaultChildColor = [0, 0.760784, 1, 1],
+							bool SetChildColor = true,
+							Vec4 SelectedOwnerColor = [0, 0.760784, 1, 1],
+							bool ChangeOwnerColor = true,
+							Vec4 SelectedChildColor = [0.0784314, 0, 1, 1],
+							bool ChangeChildColor = true,
 						},
 						Hierarchy = 
 						{
