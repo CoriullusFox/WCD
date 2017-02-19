@@ -1,0 +1,42 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class Node
+{
+    var Walkable : Boolean = true;
+    var WorldPos : Real3 = Real3(0,0,0);
+    
+    var GCost : Integer;
+    var HCost : Integer;
+    
+    var GridX : Integer;
+    var GridY : Integer;
+    var Parent : Node;
+    
+    constructor (walkable : Boolean, worldPos : Real3, gridX : Integer, gridY : Integer)
+    {
+        
+        this.Walkable = walkable;
+        this.WorldPos = worldPos;
+        this.GridX = gridX;
+        this.GridY = gridY;
+    }
+    
+    function FCost() : Integer
+    {
+        
+        return this.GCost + this.HCost;
+        
+    }
+    
+}

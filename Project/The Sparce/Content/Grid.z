@@ -1,0 +1,112 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class Grid : ZilchComponent
+{
+    
+    [Property]
+    var GridWorldSize : Real2 = Real2(25,25);
+    var NodeRadius : Real = 0.5;
+    var Grid : Array[Array[Node]];
+    
+    var NodeDiameter : Real;
+    var GridSizeX : Integer;
+    var GridSizeY : Integer;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        this.NodeDiameter = this.NodeRadius*2;
+        this.GridSizeX = (this.GridWorldSize.X/this.NodeDiameter) as Integer;
+        this.GridSizeY = (this.GridWorldSize.Y/this.NodeDiameter) as Integer;
+        
+        this.CreateGrid();
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+    function CreateGrid()
+    {
+        this.Grid = Array[Array[Node]]();
+        this.Grid.Resize(this.GridSizeX);
+        for(var i = 0; i < this.GridSizeX; ++i)
+        {
+            
+            this.Grid[i] = Array[Node]();
+            this.Grid[i].Resize(this.GridSizeY);
+            
+        }
+        var bottomL = this.Owner.Transform.Translation - Real3(1,0,0) * this.GridWorldSize.X/2 - Real3(0,1,0) * this.GridWorldSize.Y;
+        
+        for (var i = 0; i < this.GridSizeX; ++i)
+        {
+            
+            for (var l = 0; l < this.GridSizeY; ++l)
+            {
+                var worldPoint = bottomL + Real3(1,0,0) * (i + this.NodeDiameter + this.NodeRadius) + (Real3(0,1,0) * (l + this.NodeDiameter + this.NodeRadius)) + Real3(0,this.GridSizeY/2, 0);
+                var filter = CastFilter();
+                filter.IgnoreDynamic = true;
+                var walkable : Boolean = !(this.Space.PhysicsSpace.CastSphereResults(worldPoint, this.NodeDiameter, 1, filter).IsNotEmpty);
+                this.Grid[i][l] = (new Node(walkable, worldPoint, i, l));
+            }
+            
+        }
+    }
+    
+    function GetNeighbours(node : Node) : Array[Node]
+    {
+        
+        var neighbours = Array[Node]();
+        
+        for (var x = -1; x <= 1; ++x)
+        {
+            for (var y = -1; y <= 1; ++y)
+            {
+                if(x == 0 && y == 0) continue;
+                
+                var checkX = node.GridX + x;
+                var checkY = node.GridY + y;
+                
+                if(checkX >= 0 && checkX < this.GridSizeX && checkY >= 0 && checkY < this.GridSizeY)
+                {
+                    
+                    neighbours.Add(this.Grid[checkX][checkY]);
+                    
+                }
+                
+            }
+        }
+        return neighbours;
+    }
+    
+    function NodeFromWorldPos(pos : Real3) : Node
+    {
+        
+        var percentX = (pos.X + this.GridWorldSize.X/2)/this.GridWorldSize.X;
+        var percentY = (pos.Y + this.GridWorldSize.Y/2)/this.GridWorldSize.Y;
+        
+        percentX = Math.Clamp(percentX, 0, 1);
+        percentY = Math.Clamp(percentY, 0, 1);
+        
+        var x : Integer = ((this.GridSizeX - 1) * percentX) as Integer;
+        var y : Integer = ((this.GridSizeY - 1) * percentY) as Integer;
+        
+        return this.Grid[x][y];
+        
+    }
+}

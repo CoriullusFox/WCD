@@ -8,7 +8,7 @@
 ** - Sage Dupuy
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 
 class EnemyAI : ZilchComponent
@@ -27,6 +27,7 @@ class EnemyAI : ZilchComponent
     
     [Property]
     var MoveDirection : Real3 = Real3(0.0, 0.0, 0.0);
+    
     
     function Initialize(init : CogInitializer)
     {

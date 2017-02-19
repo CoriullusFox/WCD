@@ -114,7 +114,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.39261, -2.48551, 50],
+			Vec3 Translation = [0.946743, 1.63622, 48.2747],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -126,7 +126,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7782,
+			float Size = 13.5335,
 		},
 		EditorCameraController = 
 		{
@@ -134,7 +134,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-6.39261, -2.48551, -2.63118e-007],
+			Vec3 LookTarget = [0.946743, 1.63622, -1.72528],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -216,7 +216,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.27578, 3.20724, -8.8003e-009],
+			Vec3 Translation = [2.79267, 1.50666, -8.8003e-009],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -261,7 +261,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.03506, -2.72336, -8.8003e-009],
+			Vec3 Translation = [-3.03506, -2.72336, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -486,7 +486,10 @@ Level =
 		Pistol = 
 		{
 			string Bullet = "580e63ae4c297722:BulletTest",
-			float Damage = 1000,
+			float Damage = 0.1,
+			float EnergyUse = 5,
+			float Energy = 0,
+			float CooldownMax = 0.4,
 			bool Player = false,
 		},
 	},
@@ -506,13 +509,20 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.401561, 0.382033, 0],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		SpawnPlayer = 
 		{
-			string PlayerToSpawn = "SandboxPlayer",
+			string PlayerToSpawn = "Player",
+		},
+		Grid = 
+		{
+			Vec2 GridWorldSize = [25, 25],
+		},
+		AStarPathfind = 
+		{
 		},
 	},
 	Cog = 
@@ -571,6 +581,23 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			float Proximity = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "Test",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.13409, 4.58951, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
 	},
 },

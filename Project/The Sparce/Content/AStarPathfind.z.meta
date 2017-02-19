@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "AStarPathfind",
+		uint64 ResourceId = 5800303340378973,
+	},
+},

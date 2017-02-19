@@ -1,0 +1,160 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class AStarPathfind : ZilchComponent
+{
+    
+    
+    
+    [Dependency]
+    var Grid : Grid;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+    
+    function PathFind(start : Real3, goal : Real3)
+    {
+        
+        var startNode = this.Grid.NodeFromWorldPos(start);
+        var targetNode = this.Grid.NodeFromWorldPos(goal);
+        
+        var openSet = Array[Node]();
+        var closedSet = Array[Node]();
+        
+        openSet.Add(startNode);
+        
+        while (openSet.Count > 0)
+        {
+            
+            var currNode = openSet[0];
+            if(targetNode.Walkable){
+                for (var i = 1; i < openSet.Count; ++i)
+                {
+                    if(openSet[i].FCost() < currNode.FCost() || openSet[i].FCost() == currNode.FCost() && openSet[i].HCost < currNode.HCost)
+                    {
+                        currNode = openSet[i];
+                    }
+                }
+                
+                openSet.RemoveFirst(currNode);
+                closedSet.Add(currNode);
+                
+                if (currNode == targetNode)
+                {
+                    this.RetracePath(startNode, targetNode);
+                    return;
+                    
+                }
+                
+                foreach (var neighbour in this.Grid.GetNeighbours(currNode))
+                {
+                    
+                    if(!neighbour.Walkable || this.ArrayContains(closedSet, neighbour))
+                    {
+                        
+                        continue;
+                        
+                    }
+                    
+                    
+                    var newMovementCostToNeighbour = currNode.GCost + this.GetDist(currNode, neighbour);
+                    if (newMovementCostToNeighbour < neighbour.GCost || !this.ArrayContains(openSet, neighbour))
+                    {
+                        
+                        neighbour.GCost = newMovementCostToNeighbour;
+                        neighbour.HCost = this.GetDist(neighbour, targetNode);
+                        neighbour.Parent = currNode;
+                        
+                        if(!this.ArrayContains(openSet, neighbour))
+                        {
+                            
+                            openSet.Add(neighbour);
+                            
+                        }
+                        
+                    }
+                    
+                    
+                }
+                
+            }
+            else{
+                break;
+            }
+        }
+    }
+    
+    
+    function RetracePath(startNode : Node, endNode : Node)
+    {
+        
+        var revPath = Array[Node]();
+        var currNode = endNode;
+        
+        while (currNode != startNode)
+        {
+            
+            revPath.Add(currNode);
+            currNode = currNode.Parent;
+            
+        }
+        
+        //reverse revPath into path
+        var path = Array[Node]();
+        for(var i = revPath.Count - 1; i > 0; --i)
+        {
+            
+            path.Add(revPath[i]);
+            
+        }
+        
+        
+        
+    }
+    
+    function GetDist(nodeA : Node, nodeB : Node) : Integer
+    {
+        
+        var distX = Math.Abs(nodeA.GridX - nodeB.GridX);
+        var distY = Math.Abs(nodeA.GridY - nodeB.GridY);
+        
+        if(distX > distY)
+        {
+            return 14*distY + 10*(distX-distY);
+        }
+        return 14*distX + 10*(distY-distX);
+    }
+    
+    function ArrayContains(array : Array[Node], node : Node) : Boolean
+    {
+        
+        for (var i = 0; i < array.Count; ++i)
+        {
+            if(array[i] == node)
+            {
+                
+                return true;
+                
+            }
+            
+        }
+        return false;
+    }
+    
+}
