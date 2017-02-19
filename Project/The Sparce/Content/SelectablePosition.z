@@ -33,7 +33,7 @@ class SelectablePosition : ZilchComponent
         {
             while(this.Owner.Transform.Translation.X < this.MaxPosition.X && this.Owner.Transform.Translation.Y < this.MaxPosition.Y)
             {
-                this.Owner.Transform.Translation+= this.PositionDirection * event.Dt * this.PositionSpeed;
+                this.Owner.Transform.Translation += this.PositionDirection * event.Dt * this.PositionSpeed;
             }
         }
         else
