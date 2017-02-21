@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.23831, -1.79315, 152.501],
+			Vec3 Translation = [-8.34704, -3.86843, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7594,
+			float Size = 18.05,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.23831, -1.79315, 102.501],
+			Vec3 LookTarget = [-8.34704, -3.86843, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -296,7 +296,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -8, 0],
+			Vec3 Translation = [-13.4269, -8, 0],
 			Vec3 Scale = [3, 3, 13],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -313,7 +313,7 @@ Level =
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
 			string Text = "Pistol",
-			TextAlign Align = Center,
+			TextAlign Align = Left,
 			float PixelsPerUnit = 256,
 			bool Smoothing = false,
 		},
@@ -641,6 +641,48 @@ Level =
 					},
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "UISelectedWeapon",
+		},
+		Archetyped = 
+		{
+			string Name = "5829ac33dea7de32:UISelectedWeapon",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.1737, -8.62896, 0],
+			Vec3 Scale = [10, 10, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		SelectedWeaponIcon = 
+		{
 		},
 	},
 },

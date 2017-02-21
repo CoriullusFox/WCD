@@ -1,0 +1,74 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
+class SelectedWeaponIcon : ZilchComponent
+{
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.GameSession, Events.SelectedGun, this.SelectedGunIcon);
+    }
+
+    function SelectedGunIcon(event : SelectedGun)
+    {
+        if(event.Unlocked)
+        {
+            
+            var selectedWeapon = event.Selected;
+            
+            if(selectedWeapon == "Pistol")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
+                this.Owner.Sprite.CurrentFrame = 2;
+            }
+            
+            else if(selectedWeapon == "Shotgun")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
+                this.Owner.Sprite.CurrentFrame = 1;
+            }
+            
+            else if(selectedWeapon == "Minigun")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
+                this.Owner.Sprite.CurrentFrame = 3;
+            }
+            
+            else if(selectedWeapon == "Rifle")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
+                this.Owner.Sprite.CurrentFrame = 4;
+            }
+            
+            else if(selectedWeapon == "Beam")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
+                this.Owner.Sprite.CurrentFrame = 5;
+            }
+            
+            else if(selectedWeapon == "FlameThrower")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
+                this.Owner.Sprite.CurrentFrame = 6;
+            }
+            
+        }
+        else
+        {
+            
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("UI_Locked");
+            
+        }
+    }
+    
+}
