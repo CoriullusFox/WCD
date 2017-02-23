@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Bullet_LongLaser",
+		uint64 ResourceId = 582a5189641020d5,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 8,
+		uint FrameSizeY = 20,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333,
+		float OriginX = 4,
+		float OriginY = 10,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
