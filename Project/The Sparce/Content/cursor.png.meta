@@ -3,7 +3,7 @@ ImageContent =
 	SpriteSourceBuilder = 
 	{
 		string Name = "cursor",
-		uint64 ResourceId = 5819de4b41109e1b,
+		uint64 ResourceId = 5865dc329c52fa47,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 16,
 		uint FrameSizeY = 16,

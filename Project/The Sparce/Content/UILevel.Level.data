@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.05,
+			float Size = 36.3483,
 		},
 		EditorCameraController = 
 		{
@@ -683,6 +683,24 @@ Level =
 		},
 		SelectedWeaponIcon = 
 		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5819b1bffeb885d8:Cursor",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.8057, -5.09641, 102.501],
+			Vec3 Scale = [6, 6, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Cursor",
 		},
 	},
 },

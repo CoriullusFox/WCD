@@ -1,9 +1,16 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"BasicParticles",
+		],
+	},
 	TextureBuilder = 
 	{
 		string Name = "Beam",
-		uint64 ResourceId = 580e63ae4c295281,
+		uint64 ResourceId = 5310e87946edd85d,
 		BuilderTextureType TextureType = Texture2D,
 		RgbUsage RgbUsage = Color,
 		AlphaUsage AlphaUsage = Transparency,
