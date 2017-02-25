@@ -16,19 +16,19 @@ class Bouncer : ZilchComponent
     var Cooldown : Real = 0;
     
     [Property]
-    var Bullet : Archetype = Archetype.BouncyBulletTest;
+    var Bullet : Archetype = Archetype.BouncyBullet;
     
     [Property]
-    var Damage : Real = 10;
+    var Damage : Real = 12.5;
     
     [Property]
     var EnergyUse : Real = 5;
     
     [Property]
-    var Energy : Real = 0;
+    var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 0.4;
+    var CooldownMax : Real = 0.25;
     
     [Property]
     var Player : Boolean = false;

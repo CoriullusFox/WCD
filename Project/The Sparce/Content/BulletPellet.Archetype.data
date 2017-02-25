@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "BulletTest",
+		string Name = "BulletPellet",
 	},
 	Archetyped = 
 	{
-		string Name = "580e63ae4c297722:BulletTest",
+		string Name = "583c7df4b951b687:BulletPellet",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [0.3, 0.3, 1],
+		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "582a5189641064e9:Bullet_Pellet",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -85,6 +85,6 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		Vec3 Size = [0.02, 0.05, 0.5],
 	},
 },

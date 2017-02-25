@@ -44,19 +44,19 @@ class GunManager : ZilchComponent
     var SelectedWeapon      : Guns = Guns.Pistol;
     
     [Property]
-    var ArchetypePistol     : Archetype = Archetype.BulletTest;
+    var ArchetypePistol     : Archetype = null;
     
     [Property]
-    var ArchetypeShotgun    : Archetype = Archetype.BulletTest;
+    var ArchetypeShotgun    : Archetype = null;
     
     [Property]
-    var ArchetypeMinigun    : Archetype = Archetype.BulletTest;
+    var ArchetypeMinigun    : Archetype = null;
     
     [Property]
-    var ArchetypeRifle      : Archetype = Archetype.BulletTest;
+    var ArchetypeRifle      : Archetype = null;
     
     [Property]
-    var ArchetypeBeam       : Archetype = Archetype.BulletTest;
+    var ArchetypeBeam       : Archetype = null;
     
     /* WEAPON CLIP SIZE PROPERTIES */
     

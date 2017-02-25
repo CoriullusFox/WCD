@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "BulletLaser",
+		string Name = "BulletLargeLaser",
 	},
 	Archetyped = 
 	{
-		string Name = "582a53e2acc08829:BulletLaser",
+		string Name = "583c4110d1935b64:BulletLargeLaser",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "582a5189640c82f4:Bullet_TinyLaser",
+		string SpriteSource = "582a5189641020d5:Bullet_LongLaser",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -85,6 +85,6 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.02, 0.05, 0.5],
+		Vec3 Size = [0.03, 0.15, 0.5],
 	},
 },

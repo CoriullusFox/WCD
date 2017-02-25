@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "TeslaPlaceholder",
+		string Name = "Tesla",
 	},
 	Archetyped = 
 	{
@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [31.622, 16.1756, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -47,18 +47,18 @@ Cog =
 		float EmitVariance = 0,
 		float Size = 1,
 		float SizeVariance = 0.5,
-		float Lifetime = 1,
+		float Lifetime = 3,
 		float LifetimeVariance = 0.2,
-		float Spin = 0,
+		float Spin = 4,
 		float SpinVariance = 50,
 		bool RandomSpin = true,
-		float Fill = 0.28,
+		float Fill = 1,
 		float EmitterVelocityPercent = 0,
 		Vec3 StartVelocity = [0, 0, 0],
-		Vec3 RandomVelocity = [2, 2, 2],
+		Vec3 RandomVelocity = [1, 1, 0],
 		Vec3 TangentVelocity = [0, 0, 0],
-		Vec3 EmitterSize = [3, 3, 0],
-		bool FastMovingEmitter = false,
+		Vec3 EmitterSize = [5, 5, 0],
+		bool FastMovingEmitter = true,
 	},
 	LinearParticleAnimator = 
 	{

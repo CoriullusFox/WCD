@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "TempPlayer",
-		uint64 ResourceId = 5819b17ef42c126c,
+		string Name = "BulletPellet",
+		uint64 ResourceId = 583c7df4b951b687,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

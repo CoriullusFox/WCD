@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "MinigunPowerdown",
-		uint64 ResourceId = 5819b155f3d96dc0,
+		string Name = "BulletLargeLaser",
+		uint64 ResourceId = 583c4110d1935b64,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "BulletLaser",
-		uint64 ResourceId = 582a53e2acc08829,
+		string Name = "BulletBeam",
+		uint64 ResourceId = 583c4c3f0309dcff,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

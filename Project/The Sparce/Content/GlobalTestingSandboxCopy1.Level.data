@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.96264, 0.840907, 50],
+			Vec3 Translation = [4.02136, 0.27723, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 67.032,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.96264, 0.840907, -1.13846e-006],
+			Vec3 LookTarget = [4.02136, 0.27723, -1.04847e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -196,12 +196,19 @@ Level =
 			float MeshThickness = 2,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "PlayerSpawnPoint",
+		},
+		Archetyped = 
+		{
+			string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		},
 		Transform = 
 		{
@@ -209,9 +216,34 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		SpawnPlayer = 
 		{
-			string Name = "PlayerSpawnPoint",
+			string PlayerToSpawn = "SandboxPlayer",
+		},
+		Grid = 
+		{
+			Vec2 GridWorldSize = [50, 50],
+		},
+		AStarPathfind = 
+		{
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5812ef1fdef735df:PlayerSouth_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

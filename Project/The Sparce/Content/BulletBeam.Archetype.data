@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "BulletTestBeam",
+		string Name = "BulletBeam",
 	},
 	Archetyped = 
 	{
-		string Name = "580e63ae4c298252:BulletTestBeam",
+		string Name = "583c4c3f0309dcff:BulletBeam",
 	},
 	Transform = 
 	{
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -82,7 +82,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0.5, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		Vec3 Size = [0.25, 0.5, 0.5],
 	},
 	Beam = 
 	{

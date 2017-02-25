@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "BouncyBullet",
+		string Name = "BulletTinyPellet",
 	},
 	Archetyped = 
 	{
-		string Name = "582a50e058efc8d0:BouncyBullet",
+		string Name = "583c7e44dd4f1575:BulletTinyPellet",
 	},
 	Transform = 
 	{
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "582a4f382fc0acaf:Bullet_Bouncer",
+		string SpriteSource = "582a5189640cf628:Bullet_TinyPellet",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -74,17 +74,17 @@ Cog =
 	{
 		float LifeLength = 10,
 	},
-	SphereCollider = 
+	BulletScript = 
 	{
-		bool Ghost = false,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
-		string MaterialName = "580b0045e6dd168a:Bouncy",
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.1,
-	},
-	BouncyBullet = 
-	{
+		Vec3 Size = [0.025, 0.025, 0.5],
 	},
 },

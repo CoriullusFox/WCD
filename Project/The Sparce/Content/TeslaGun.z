@@ -16,13 +16,13 @@ class TeslaGun : ZilchComponent
     var Cooldown : Real = 0;
     
     [Property]
-    var Damage : Real = 50;
+    var Damage : Real = 10;
     
     [Property]
     var EnergyUse : Real = 100;
     
     [Property]
-    var Energy : Real = 0;
+    var Energy : Real = 100;
     
     [Property]
     var CooldownMax : Real = 5;
