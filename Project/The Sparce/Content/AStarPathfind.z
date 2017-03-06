@@ -30,6 +30,7 @@ class AStarPathfind : ZilchComponent
     
     function PathFind(start : Real3, goal : Real3) : Array[Node]
     {
+        Console.WriteLine(start);
         var startNode = this.Grid.NodeFromWorldPos(start);
         var targetNode = this.Grid.NodeFromWorldPos(goal);
         

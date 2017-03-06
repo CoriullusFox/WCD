@@ -137,7 +137,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.63597, -2.25633, 55.2566],
+			Vec3 Translation = [-19.0199, -0.257194, 55.2566],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -149,7 +149,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9569,
+			float Size = 24.6598,
 		},
 		EditorCameraController = 
 		{
@@ -157,7 +157,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.63597, -2.25633, 5.25659],
+			Vec3 LookTarget = [-19.0199, -0.257194, 5.25659],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -289,7 +289,7 @@ Level =
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
-			float ResponseTime = 0.5,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{
@@ -384,7 +384,7 @@ Level =
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
-			float ResponseTime = 0.5,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{
@@ -488,7 +488,7 @@ Level =
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
-			float ResponseTime = 0.5,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{
@@ -583,7 +583,7 @@ Level =
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
-			float ResponseTime = 0.5,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{
@@ -688,7 +688,7 @@ Level =
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
-			float ResponseTime = 0.5,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{
@@ -783,7 +783,7 @@ Level =
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
-			float ResponseTime = 0.5,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{
@@ -887,7 +887,7 @@ Level =
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
-			float ResponseTime = 0.5,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{

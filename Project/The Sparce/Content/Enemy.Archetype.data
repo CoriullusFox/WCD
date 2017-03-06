@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-13.5561, -3.50526, 0],
+		Vec3 Translation = [-20.7555, -9.46578, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -44,7 +44,8 @@ Cog =
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
 		bool Pathfind = true,
-		float ResponseTime = 0.5,
+		bool Debug = false,
+		float ResponceTime = 2,
 	},
 	BoxCollider = 
 	{

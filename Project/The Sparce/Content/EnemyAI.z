@@ -34,23 +34,29 @@ class EnemyAI : ZilchComponent
     [Property]
     var Debug : Boolean = false;
     
-    var Timer : Real = 0;
+    [Property]
+    var ResponceTime : Real = 2;
+    
+    var Timer : Real;
+    
+    var PathFindTimer : Real = 0.25;
+    
     
     var Path : Array[Node] = Array[Node]();
     
-    //the smaller this value, the more LAG
-    [Property]
-    var ResponseTime : Real = 0.5;
+    
     
     
     function Initialize(init : CogInitializer)
     {
-        this.Timer = this.ResponseTime;
+        this.Timer = this.ResponceTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.PathFindTimer -= event.Dt;
+        this.Timer -= event.Dt;
         var distanceFromPlayer = Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
         
         if(this.Pathfind && this.Path != null && this.Path.Count > 1)
@@ -74,36 +80,45 @@ class EnemyAI : ZilchComponent
                 }
             }
             
+            //follow path
+            if(Math.Distance(this.Path[0].WorldPos, this.Owner.Transform.Translation) > 0.3)
+            {
+                this.MoveDirection = this.Path[0].WorldPos - this.Owner.Transform.Translation;
+            }
+            else
+            {
+                if(distanceFromPlayer < this.ChaseProximity && this.PathFindTimer <= 0)
+                {
+                    this.PathFindTimer = 0.25;
+                    this.Timer = this.ResponceTime;
+                    this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
+                }
+                this.Path.RemoveAt(0);
+                if(this.Path.Count > 0) this.MoveDirection = this.Path[0].WorldPos - this.Owner.Transform.Translation;
+            }
             
-            this.MoveDirection = this.Path[1].WorldPos - this.Owner.Transform.Translation;
+            this.Move(this.MoveDirection);
             
-            if(this.MoveDirection.X > 0) this.MoveDirection.X = 1;
-            if(this.MoveDirection.Y > 0) this.MoveDirection.Y = 1;
-            if(this.MoveDirection.Z > 0) this.MoveDirection.Z = 1;
-            
-            this.Owner.RigidBody.Velocity = this.MoveDirection * event.Dt * this.Speed;
             
             
         }
         
+        
         if(distanceFromPlayer < this.ChaseProximity)
         {
             
-            if(this.Pathfind && this.Timer <= 0)
+            if((this.Path.Count <= 1 || this.Timer <= 0) && this.PathFindTimer <= 0)
             {
-                this.Timer = this.ResponseTime;
+                this.PathFindTimer = 0.25;
+                this.Timer = this.ResponceTime;
                 this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
             }
-            this.Timer -= event.Dt;
             
-            if(!this.Pathfind)
+            if(!this.Pathfind || this.Path.Count <= 1)
             {
                 
                 this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
-                
-                Math.Clamp(this.MoveDirection, Real3(0,0,0), Real3(0.1,0.1,0.1));
-                
-                this.Owner.RigidBody.Velocity  = this.MoveDirection * event.Dt * this.Speed;
+                this.Move(this.MoveDirection);
             }
         }
         
@@ -131,6 +146,12 @@ class EnemyAI : ZilchComponent
                 }
             }
         }
+        
+    }
+    function Move(dir : Real3)
+    {
+        
+        this.Owner.RigidBody.Velocity = Math.Normalize(dir) * this.Space.TimeSpace.Dt * this.Speed;
         
     }
 }
