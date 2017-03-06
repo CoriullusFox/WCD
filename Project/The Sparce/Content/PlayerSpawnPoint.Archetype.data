@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.012678, -0.00709498, 1],
-		Vec3 Scale = [4, 4, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	SpawnPlayer = 
@@ -24,27 +24,10 @@ Cog =
 	},
 	Grid = 
 	{
-		Vec2 GridWorldSize = [50, 50],
+		Vec2 GridWorldSize = [100, 100],
+		bool Debug = false,
 	},
 	AStarPathfind = 
 	{
-	},
-	Sprite = 
-	{
-		bool Visible = false,
-		bool VisibilityCulling = true,
-		bool VisibilityEvents = true,
-		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
-		BlendMode BlendMode = Alpha,
-		SpriteGeometryMode GeometryMode = ZPlane,
-		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5812ef1fdef735df:PlayerSouth_Anim",
-		bool RenderMask = false,
-		bool FlipX = false,
-		bool FlipY = false,
-		bool AnimationActive = true,
-		float AnimationSpeed = 1,
-		uint StartFrame = 0,
 	},
 },

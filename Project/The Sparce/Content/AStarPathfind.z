@@ -33,6 +33,13 @@ class AStarPathfind : ZilchComponent
         var startNode = this.Grid.NodeFromWorldPos(start);
         var targetNode = this.Grid.NodeFromWorldPos(goal);
         
+        var count = 0;
+        while(!targetNode.Walkable || count >= 8)
+        {
+            ++count;
+            targetNode = this.Grid.GetNeighbours(targetNode)[0];
+        }
+        
         var openSet = Array[Node]();
         var closedSet = Array[Node]();
         

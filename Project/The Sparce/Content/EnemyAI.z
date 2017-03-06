@@ -29,11 +29,23 @@ class EnemyAI : ZilchComponent
     var MoveDirection : Real3 = Real3(0.0, 0.0, 0.0);
     
     [Property]
-    var Pathfind : Boolean = false;
+    var Pathfind : Boolean = true;
+    
+    [Property]
+    var Debug : Boolean = false;
+    
+    var Timer : Real = 0;
+    
+    var Path : Array[Node] = Array[Node]();
+    
+    //the smaller this value, the more LAG
+    [Property]
+    var ResponseTime : Real = 0.5;
     
     
     function Initialize(init : CogInitializer)
     {
+        this.Timer = this.ResponseTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
@@ -41,41 +53,50 @@ class EnemyAI : ZilchComponent
     {
         var distanceFromPlayer = Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
         
-        if(distanceFromPlayer < this.ChaseProximity)
+        if(this.Pathfind && this.Path != null && this.Path.Count > 1)
         {
             
-            var path = Array[Node]();
             
-            if(this.Pathfind) this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
-            
-            if(this.Pathfind && path != null && path.Count > 1)
-            {
-                
-                
-                var temp = path[0].WorldPos;
-                //draw debug lines
-                for (var i = 1; i < path.Count; ++i)
+            var temp = this.Path[0].WorldPos;
+            //draw debug lines
+            if(this.Debug)
+                {
+                for (var i = 1; i < this.Path.Count; ++i)
                 {
                     var debugLine = DebugLine();
                     debugLine.Start(temp);
-                    debugLine.End(path[i].WorldPos);
+                    debugLine.End(this.Path[i].WorldPos);
                     debugLine.Float4Color(Real4(0,0,1,1));
                     debugLine.Width(3);
-                    temp = path[i].WorldPos;
+                    temp = this.Path[i].WorldPos;
                     debugLine.Draw();
                     
                 }
-                
-                
-                this.MoveDirection = path[1].WorldPos - this.Owner.Transform.Translation;
-                
-                Math.Clamp(this.MoveDirection, Real3(0,0,0), Real3(0.1,0.1,0.1));
-                
-                this.Owner.RigidBody.Velocity = this.MoveDirection * event.Dt * this.Speed;
-                
-                
             }
-            else
+            
+            
+            this.MoveDirection = this.Path[1].WorldPos - this.Owner.Transform.Translation;
+            
+            if(this.MoveDirection.X > 0) this.MoveDirection.X = 1;
+            if(this.MoveDirection.Y > 0) this.MoveDirection.Y = 1;
+            if(this.MoveDirection.Z > 0) this.MoveDirection.Z = 1;
+            
+            this.Owner.RigidBody.Velocity = this.MoveDirection * event.Dt * this.Speed;
+            
+            
+        }
+        
+        if(distanceFromPlayer < this.ChaseProximity)
+        {
+            
+            if(this.Pathfind && this.Timer <= 0)
+            {
+                this.Timer = this.ResponseTime;
+                this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
+            }
+            this.Timer -= event.Dt;
+            
+            if(!this.Pathfind)
             {
                 
                 this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
@@ -94,9 +115,12 @@ class EnemyAI : ZilchComponent
             ray.Direction = this.LookDirection;
             var cast = this.Space.PhysicsSpace.CastRayFirst(ray);
             var debugLine = DebugLine();
-            debugLine.Start(this.Owner.Transform.Translation);
-            debugLine.End(cast.WorldPosition);
-            debugLine.Draw();
+            if(this.Debug)
+            {
+                debugLine.Start(this.Owner.Transform.Translation);
+                debugLine.End(cast.WorldPosition);
+                debugLine.Draw();
+            }
             if (cast.ObjectHit != null)
             {
                 if(cast.ObjectHit.Name == "TempPlayer")
