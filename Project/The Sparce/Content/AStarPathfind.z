@@ -19,6 +19,7 @@ class AStarPathfind : ZilchComponent
     [Dependency]
     var Grid : Grid;
     
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -30,7 +31,6 @@ class AStarPathfind : ZilchComponent
     
     function PathFind(start : Real3, goal : Real3) : Array[Node]
     {
-        Console.WriteLine(start);
         var startNode = this.Grid.NodeFromWorldPos(start);
         var targetNode = this.Grid.NodeFromWorldPos(goal);
         
@@ -141,15 +141,9 @@ class AStarPathfind : ZilchComponent
     
     function GetDist(nodeA : Node, nodeB : Node) : Integer
     {
-        
         var distX = Math.Abs(nodeA.GridX - nodeB.GridX);
         var distY = Math.Abs(nodeA.GridY - nodeB.GridY);
-        
-        if(distX > distY)
-        {
-            return 14*distY + 10*(distX-distY);
-        }
-        return 14*distX + 10*(distY-distX);
+        return 10 * (distX + distY) + (14 - 2 * 10) * Math.Min(distX, distY);
     }
     
     function ArrayContains(array : Array[Node], node : Node) : Boolean

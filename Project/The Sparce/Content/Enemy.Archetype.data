@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-20.7555, -9.46578, 0],
+		Vec3 Translation = [-13.5561, -3.50526, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -91,5 +91,10 @@ Cog =
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	EnemyToutchDamage = 
+	{
+		float SecondsBetweenDamage = 0.25,
+		float Damage = 10,
 	},
 },
