@@ -115,8 +115,6 @@ class EnemyAI : ZilchComponent
                 this.PathFindTimer = 0.25;
                 this.Timer = this.ResponceTime;
                 this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
-                //DEBUG
-                this.Space.TimeSpace.Paused = true;
             }
             
             if(!this.Pathfind || this.Path.Count <= 1)

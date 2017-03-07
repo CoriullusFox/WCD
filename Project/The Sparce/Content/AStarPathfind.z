@@ -19,6 +19,7 @@ class AStarPathfind : ZilchComponent
     [Dependency]
     var Grid : Grid;
     
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -73,8 +74,6 @@ class AStarPathfind : ZilchComponent
                 //get neighbours of the current node
                 foreach (var neighbour in this.Grid.GetNeighbours(currNode))
                 {
-                    //DEBUG
-                    if(neighbour.Walkable) this.Space.CreateAtPosition(Archetype.MissingTexture, neighbour.WorldPos);
                     
                     if(!neighbour.Walkable || this.ArrayContains(closedSet, neighbour))
                     {
