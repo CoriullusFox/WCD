@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.34704, -3.86843, 152.501],
+			Vec3 Translation = [-3.13883, -2.61738, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.3483,
+			float Size = 30.1194,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-8.34704, -3.86843, 102.501],
+			Vec3 LookTarget = [-3.13883, -2.61738, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -378,7 +378,7 @@ Level =
 						},
 						Sprite = 
 						{
-							bool Visible = true,
+							bool Visible = false,
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
@@ -414,7 +414,7 @@ Level =
 								},
 								SpriteText = 
 								{
-									bool Visible = true,
+									bool Visible = false,
 									bool VisibilityCulling = true,
 									bool VisibilityEvents = true,
 									bool CastShadows = false,
@@ -453,7 +453,7 @@ Level =
 						},
 						Sprite = 
 						{
-							bool Visible = true,
+							bool Visible = false,
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
@@ -515,7 +515,7 @@ Level =
 								},
 								SpriteText = 
 								{
-									bool Visible = true,
+									bool Visible = false,
 									bool VisibilityCulling = true,
 									bool VisibilityEvents = true,
 									bool CastShadows = false,
@@ -554,7 +554,7 @@ Level =
 						},
 						Sprite = 
 						{
-							bool Visible = true,
+							bool Visible = false,
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
@@ -618,7 +618,7 @@ Level =
 								},
 								SpriteText = 
 								{
-									bool Visible = true,
+									bool Visible = false,
 									bool VisibilityCulling = true,
 									bool VisibilityEvents = true,
 									bool CastShadows = false,
@@ -679,7 +679,7 @@ Level =
 			bool FlipY = false,
 			bool AnimationActive = false,
 			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			uint StartFrame = 2,
 		},
 		SelectedWeaponIcon = 
 		{

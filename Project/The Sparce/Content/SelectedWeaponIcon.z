@@ -41,7 +41,7 @@ class SelectedWeaponIcon : ZilchComponent
             else if(selectedWeapon == "Minigun")
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
-                this.Owner.Sprite.CurrentFrame = 3;
+                this.Owner.Sprite.CurrentFrame = 0;
             }
             
             else if(selectedWeapon == "Rifle")
@@ -53,13 +53,13 @@ class SelectedWeaponIcon : ZilchComponent
             else if(selectedWeapon == "Beam")
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
-                this.Owner.Sprite.CurrentFrame = 5;
+                this.Owner.Sprite.CurrentFrame = 8;
             }
             
             else if(selectedWeapon == "FlameThrower")
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.Find("Weapon_Drop");
-                this.Owner.Sprite.CurrentFrame = 6;
+                this.Owner.Sprite.CurrentFrame = 7;
             }
             
         }

@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class Movement : ZilchComponent
@@ -17,6 +17,10 @@ class Movement : ZilchComponent
     var Speed : Real = 10;
     [Property]
     var RunSpeed : Real = 10;
+    
+    // DEFAULT IS FACING DOWN
+    var CurrentDirection : Real3 = Real3(0, -1, 0);
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -37,34 +41,42 @@ class Movement : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.RigidBody.Velocity = Real3(-0.5,-0.5,0) * r3Speed;
+            this.CurrentDirection = Real3(-0.15, -0.25, 0);
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.RigidBody.Velocity = Real3(0.5,-0.5,0) * r3Speed;
+            this.CurrentDirection = Real3(0.38, -0.25, 0);
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
             this.Owner.RigidBody.Velocity = Real3(-0.5,0.5,0) * r3Speed;
+            this.CurrentDirection = Real3(-0.35, 0.1, 0);
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
             this.Owner.RigidBody.Velocity = Real3(0.5,0.5,0) * r3Speed;
+            this.CurrentDirection = Real3(0.35, 0.1, 0);
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
             this.Owner.RigidBody.Velocity = Real3(0,1,0) * r3Speed;
+            this.CurrentDirection = Real3(-0.35, 0.3, 0);
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.A))
         {
             this.Owner.RigidBody.Velocity = Real3(-1,0,0) * r3Speed;
+            this.CurrentDirection = Real3(-0.42, -0.08, 0);
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.RigidBody.Velocity = Real3(0,-1,0) * r3Speed;
+            this.CurrentDirection = Real3(0.25, -0.25, 0);
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
             this.Owner.RigidBody.Velocity = Real3(1,0,0) * r3Speed;
+            this.CurrentDirection = Real3(0.42, -0.08, 0);
         }
         else
         {

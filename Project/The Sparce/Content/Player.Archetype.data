@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-10.3469, 0.280949, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -78,7 +78,7 @@ Cog =
 		bool RifleUnlocked = false,
 		bool FlamethrowerUnlocked = false,
 		bool BouncerUnlocked = false,
-		int NumberOfWeapons = 7,
+		bool TeslaUnlocked = false,
 	},
 	EnergyStor = 
 	{
@@ -120,7 +120,7 @@ Cog =
 	},
 	Pistol = 
 	{
-		string Bullet = "580e63ae4c297722:BulletTest",
+		string Bullet = "583c4110d1935b64:BulletLargeLaser",
 		float Damage = 25,
 		float EnergyUse = 5,
 		float Energy = 0,
@@ -130,6 +130,10 @@ Cog =
 	DebugMode = 
 	{
 		bool DubugModeEnabled = false,
+	},
+	MuzzleFire = 
+	{
+		string MuzzleFireParticle = "583a04ce746741f7:MuzzleFire",
 	},
 	Hierarchy = 
 	{
