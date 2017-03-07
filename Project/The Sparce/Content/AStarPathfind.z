@@ -73,6 +73,8 @@ class AStarPathfind : ZilchComponent
                 //get neighbours of the current node
                 foreach (var neighbour in this.Grid.GetNeighbours(currNode))
                 {
+                    //DEBUG
+                    if(neighbour.Walkable) this.Space.CreateAtPosition(Archetype.MissingTexture, neighbour.WorldPos);
                     
                     if(!neighbour.Walkable || this.ArrayContains(closedSet, neighbour))
                     {
@@ -140,15 +142,9 @@ class AStarPathfind : ZilchComponent
     
     function GetDist(nodeA : Node, nodeB : Node) : Integer
     {
-        
         var distX = Math.Abs(nodeA.GridX - nodeB.GridX);
         var distY = Math.Abs(nodeA.GridY - nodeB.GridY);
-        
-        if(distX > distY)
-        {
-            return 14*distY + 10*(distX-distY);
-        }
-        return 14*distX + 10*(distY-distX);
+        return 10 * (distX + distY) + (14 - 2 * 10) * Math.Min(distX, distY);
     }
     
     function ArrayContains(array : Array[Node], node : Node) : Boolean
