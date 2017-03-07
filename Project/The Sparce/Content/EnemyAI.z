@@ -93,7 +93,10 @@ class EnemyAI : ZilchComponent
                     this.Timer = this.ResponceTime;
                     this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
                 }
-                this.Path.RemoveAt(0);
+                if(this.Path.Count > 0)
+                {
+                    this.Path.RemoveAt(0);
+                }
                 if(this.Path.Count > 0) this.MoveDirection = this.Path[0].WorldPos - this.Owner.Transform.Translation;
             }
             

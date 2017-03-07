@@ -137,7 +137,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-19.0199, -0.257194, 55.2566],
+			Vec3 Translation = [-5.81124, 10.4121, 55.2566],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -149,7 +149,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6598,
+			float Size = 44.933,
 		},
 		EditorCameraController = 
 		{
@@ -157,7 +157,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-19.0199, -0.257194, 5.25659],
+			Vec3 LookTarget = [-5.81124, 10.4121, 5.25659],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -236,7 +236,7 @@ Level =
 		Grid = 
 		{
 			Vec2 GridWorldSize = [100, 100],
-			bool Debug = false,
+			bool Debug = true,
 		},
 		AStarPathfind = 
 		{
