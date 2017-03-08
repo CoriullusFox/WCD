@@ -7,7 +7,7 @@ subscrib to keemstar rooiiiiiiiiiight now (jk screw him)
 
 <h3>Team Usernames:</h3>
 
- &nbsp; <b>CEO/Producer/Product Manager/Ad Guy</b>   - *HudsonGTV*  
+ &nbsp; <b>CEO, Producer, Product Manager, Ad Guy & Sound Manager</b>   - *HudsonGTV*  
 
  &nbsp; <b>Art Director</b>                   - *ReallyNotSam* (The 10th Doctor)
 
