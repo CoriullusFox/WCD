@@ -121,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.51616, -0.613221, 50.5815],
+			Vec3 Translation = [11.1623, -0.00117221, 50.5815],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7594,
+			float Size = 60.6531,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.51616, -0.613221, 0.581462],
+			Vec3 LookTarget = [11.1623, -0.00117221, 0.581462],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -547,13 +547,14 @@ Level =
 			float SecondsBetweenDamage = 0.25,
 			float Damage = 10,
 		},
-		Pistol = 
+		BeamLaser = 
 		{
-			string Bullet = "583c4110d1935b64:BulletLargeLaser",
-			float Damage = 25,
-			float EnergyUse = 1,
+			string Bullet = "583c4c3f0309dcff:BulletBeam",
+			float FreezTimer = 0,
+			float DPS = 50,
+			float EnergyUse = 5,
 			float Energy = 100,
-			float CooldownMax = 0.25,
+			float CooldownMax = 0.1,
 			bool Player = false,
 		},
 	},
