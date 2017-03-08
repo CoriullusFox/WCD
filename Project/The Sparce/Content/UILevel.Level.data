@@ -378,7 +378,7 @@ Level =
 						},
 						Sprite = 
 						{
-							bool Visible = false,
+							bool Visible = true,
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
@@ -414,7 +414,7 @@ Level =
 								},
 								SpriteText = 
 								{
-									bool Visible = false,
+									bool Visible = true,
 									bool VisibilityCulling = true,
 									bool VisibilityEvents = true,
 									bool CastShadows = false,
@@ -453,7 +453,7 @@ Level =
 						},
 						Sprite = 
 						{
-							bool Visible = false,
+							bool Visible = true,
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
@@ -515,7 +515,7 @@ Level =
 								},
 								SpriteText = 
 								{
-									bool Visible = false,
+									bool Visible = true,
 									bool VisibilityCulling = true,
 									bool VisibilityEvents = true,
 									bool CastShadows = false,
@@ -554,7 +554,7 @@ Level =
 						},
 						Sprite = 
 						{
-							bool Visible = false,
+							bool Visible = true,
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
@@ -618,7 +618,7 @@ Level =
 								},
 								SpriteText = 
 								{
-									bool Visible = false,
+									bool Visible = true,
 									bool VisibilityCulling = true,
 									bool VisibilityEvents = true,
 									bool CastShadows = false,
