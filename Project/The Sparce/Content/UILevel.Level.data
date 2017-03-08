@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.13883, -2.61738, 152.501],
+			Vec3 Translation = [-1.45849, -4.93182, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.13883, -2.61738, 102.501],
+			Vec3 LookTarget = [-1.45849, -4.93182, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -685,22 +685,66 @@ Level =
 		{
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5819b1bffeb885d8:Cursor",
 		LinkId = 
 		{
 			uint Id = 17,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [13.8057, -5.09641, 102.501],
-			Vec3 Scale = [6, 6, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
-			string Name = "Cursor",
+			string Name = "CursorMCH",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.8549, -5.04104, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		CustomCursor = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 18,
+				},
+				Named = 
+				{
+					string Name = "Cursor",
+				},
+				Archetyped = 
+				{
+					string Name = "5819b1bffeb885d8:Cursor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 39],
+					Vec3 Scale = [6, 6, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = false,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5865dc329c52fa47:cursor",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
 		},
 	},
 },
