@@ -108,6 +108,7 @@ class AStarPathfind : ZilchComponent
                 break;
             }
         }
+        Console.WriteLine("INSIDE A WALL!!!!!");
         return null;
     }
     

@@ -57,7 +57,7 @@ class Grid : ZilchComponent
             this.Grid[i].Resize(this.GridSizeY);
             
         }
-        var bottomL = this.Owner.Transform.Translation - Real3(1,0,0) * (this.GridWorldSize.X/2) - Real3(0,1,0) * this.GridWorldSize.Y/2;
+        var bottomL = Real3(0,0,0) - Real3(1,0,0) * (this.GridWorldSize.X/2) - Real3(0,1,0) * this.GridWorldSize.Y/2;
         
         for (var i = 0; i < this.GridSizeX; ++i)
         {

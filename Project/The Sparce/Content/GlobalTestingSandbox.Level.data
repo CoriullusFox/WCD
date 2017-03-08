@@ -231,7 +231,7 @@ Level =
 		},
 		SpawnPlayer = 
 		{
-			string PlayerToSpawn = "Player",
+			string PlayerToSpawn = "SandboxPlayer",
 		},
 		Grid = 
 		{
