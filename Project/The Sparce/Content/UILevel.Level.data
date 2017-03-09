@@ -196,7 +196,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, -2, -102.501],
+					Vec3 Translation = [5, -2.1, -102.501],
 					Vec3 Scale = [0.2, 3, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
@@ -236,7 +236,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, -2.25, -102.501],
+					Vec3 Translation = [5, -2.35, -102.501],
 					Vec3 Scale = [0.2, 3, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
@@ -275,7 +275,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, -2.5, -102.501],
+					Vec3 Translation = [5, -2.6, -102.501],
 					Vec3 Scale = [0.2, 3, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
@@ -703,6 +703,7 @@ Level =
 		},
 		SelectedWeaponIcon = 
 		{
+			string SelectedWeaponSprite = "UI_Gun_Selected",
 		},
 	},
 	Cog = 
