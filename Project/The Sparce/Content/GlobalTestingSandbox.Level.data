@@ -137,7 +137,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0439009, 1.98202, 55.2566],
+			Vec3 Translation = [-16.4078, 3.47057, 55.2566],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -149,7 +149,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 81.8731,
+			float Size = 22.3131,
 		},
 		EditorCameraController = 
 		{
@@ -157,7 +157,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0439009, 1.98202, 5.25659],
+			Vec3 LookTarget = [-16.4078, 3.47057, 5.25659],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -231,7 +231,7 @@ Level =
 		},
 		SpawnPlayer = 
 		{
-			string PlayerToSpawn = "Player",
+			string PlayerToSpawn = "SandboxPlayer",
 		},
 		Grid = 
 		{
@@ -287,8 +287,8 @@ Level =
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = false,
-			bool Debug = false,
+			bool Pathfind = true,
+			bool Debug = true,
 			float ResponceTime = 2,
 		},
 		BoxCollider = 
@@ -382,13 +382,13 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 1000,
+			float ChaseProximity = 10,
 			float ShootProximity = 9,
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = false,
-			bool Debug = false,
+			bool Pathfind = true,
+			bool Debug = true,
 			float ResponceTime = 2,
 		},
 		BoxCollider = 
@@ -487,8 +487,8 @@ Level =
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = false,
-			bool Debug = false,
+			bool Pathfind = true,
+			bool Debug = true,
 			float ResponceTime = 2,
 		},
 		BoxCollider = 
@@ -587,8 +587,8 @@ Level =
 			int Speed = 100,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = false,
-			bool Debug = false,
+			bool Pathfind = true,
+			bool Debug = true,
 			float ResponceTime = 2,
 		},
 		BoxCollider = 

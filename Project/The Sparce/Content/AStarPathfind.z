@@ -67,17 +67,6 @@ class AStarPathfind : ZilchComponent
                 //get neighbours of the current node
                 foreach (var neighbour in this.Grid.GetNeighbours(currNode))
                 {
-                    //Console.WriteLine(openSet.Items[0].FCost);
-                    //if(openSet.Count > 2)
-                    //{
-                    //    Console.WriteLine(openSet.Items[1].FCost);
-                    //    Console.WriteLine(openSet.Items[2].FCost);
-                    //}
-                    //Console.WriteLine("______________");
-                    
-                    
-                    this.Space.CreateAtPosition(Archetype.MissingTexture, neighbour.WorldPos);
-                    
                     
                     //Console.WriteLine(openSet.Count);
                     if(!neighbour.Walkable || this.ArrayContains(closedSet, neighbour))
@@ -89,14 +78,14 @@ class AStarPathfind : ZilchComponent
                     
                     
                     var newMovementCostToNeighbour = currNode.GCost + this.GetDist(currNode, neighbour);
-                    if (newMovementCostToNeighbour < neighbour.GCost || !this.ArrayContains(openSet.Items, neighbour))
+                    if (newMovementCostToNeighbour < neighbour.GCost || !this.ArrayContains(openSet, neighbour))
                     {
                         
                         neighbour.GCost = newMovementCostToNeighbour;
                         neighbour.HCost = this.GetDist(neighbour, targetNode);
                         neighbour.Parent = currNode;
                         
-                        if(!this.ArrayContains(openSet.Items, neighbour))
+                        if(!this.ArrayContains(openSet, neighbour))
                         {
                             
                             openSet.Add(neighbour);
@@ -159,17 +148,15 @@ class AStarPathfind : ZilchComponent
     function ArrayContains(array : Array[Node], node : Node) : Boolean
     {
         
-        for (var i = 0; i < array.Count; ++i)
-        {
-            if(array[i] == node)
-            {
-                
-                return true;
-                
-            }
-            
-        }
-        return false;
+        return array.FindFirstIndex(node) != -1;
+        
+    }
+    
+    function ArrayContains(array : Heap, node : Node) : Boolean
+    {
+        
+        return array.Items[node.HeapIndex] == node;
+        
     }
     
 }
