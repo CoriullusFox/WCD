@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.45849, -4.93182, 152.501],
+			Vec3 Translation = [-2.36742, -3.06576, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194,
+			float Size = 36.7879,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.45849, -4.93182, 102.501],
+			Vec3 LookTarget = [-2.36742, -3.06576, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -253,82 +253,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "CooldownBar",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -1.49974, 0],
-			Vec3 Scale = [0.2, 3, 1],
-			Quat Rotation = [0, 0, 0.707107, 0.707107],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.735, 0.6615, 0, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		UICooldownBar = 
-		{
-			float Speed = 10,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 7,
-		},
-		Named = 
-		{
-			string Name = "SelectedWeapon",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-13.4269, -8, 0],
-			Vec3 Scale = [3, 3, 13],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0, 0.76, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
-			uint FontSize = 150,
-			string Text = "Pistol",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 256,
-			bool Smoothing = false,
-		},
-		DisplaySelected = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
 			string Name = "FailMenu",
 		},
 		Transform = 
@@ -346,7 +270,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -364,7 +288,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 8,
 						},
 						Named = 
 						{
@@ -400,7 +324,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 11,
+									uint Id = 9,
 								},
 								Named = 
 								{
@@ -439,7 +363,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 10,
 						},
 						Named = 
 						{
@@ -501,7 +425,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 13,
+									uint Id = 11,
 								},
 								Named = 
 								{
@@ -540,7 +464,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -604,7 +528,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 15,
+									uint Id = 13,
 								},
 								Named = 
 								{
@@ -641,6 +565,82 @@ Level =
 					},
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "SelectedWeapon",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.4269, -8, 0],
+			Vec3 Scale = [3, 3, 13],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0.76, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "Pistol",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 256,
+			bool Smoothing = false,
+		},
+		DisplaySelected = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "CooldownBar",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -1.49974, 0],
+			Vec3 Scale = [0.2, 3, 1],
+			Quat Rotation = [0, 0, 0.707107, 0.707107],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.735, 0.6615, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		UICooldownBar = 
+		{
+			float Speed = 10,
 		},
 	},
 	Cog = 

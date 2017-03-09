@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Bullet_Fire",
-		uint64 ResourceId = 5844c6e04b5c8f44,
+		string Name = "Blank",
+		uint64 ResourceId = 5844ac6293e25cb9,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 8,
-		uint FrameSizeY = 8,
+		uint FrameSizeX = 64,
+		uint FrameSizeY = 64,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
-		float OriginX = 4,
-		float OriginY = 4,
+		float OriginX = 32,
+		float OriginY = 32,
 		float PixelsPerUnit = 64,
 		bool Smoothing = false,
 		bool Looping = true,

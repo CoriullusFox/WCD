@@ -2,16 +2,16 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Bullet_Fire",
-		uint64 ResourceId = 5844c6e04b5c8f44,
+		string Name = "Gun_Icon_Railgun",
+		uint64 ResourceId = 5844b0cb143a10d7,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 8,
-		uint FrameSizeY = 8,
+		uint FrameSizeX = 16,
+		uint FrameSizeY = 16,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
-		float OriginX = 4,
-		float OriginY = 4,
-		float PixelsPerUnit = 64,
+		float OriginX = 8,
+		float OriginY = 8,
+		float PixelsPerUnit = 16,
 		bool Smoothing = false,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
