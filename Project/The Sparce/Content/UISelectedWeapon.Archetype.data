@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-15.1737, -8.62896, 0],
-		Vec3 Scale = [10, 10, 1],
+		Vec3 Translation = [-15, -8.75, 0],
+		Vec3 Scale = [15, 15, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+		string SpriteSource = "5844c28a4853e00b:UI_Gun_Selected",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,

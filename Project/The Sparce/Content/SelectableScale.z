@@ -1,13 +1,26 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon
+**
+** Contributors:
+** - Hudson Green
+** --------------------------------------------------------------------------*/
+
 class SelectableScale : ZilchComponent
 {
     [Property]
-    var ScaleDirection : Real3 = Real3(0.0, 0.0, 0.0);
+    var ScaleDirection : Real3 = Real3(1.0, 1.0, 1.0);
     
     [Property]
-    var MaxScale : Real3 = Real3(0.0, 0.0, 0.0);
+    var MaxScale : Real3 = Real3(1.25, 1.25, 1.0);
     
     [Property]
-    var MinScale : Real3 = Real3(0.0, 0.0, 0.0);
+    var MinScale : Real3 = Real3(1.0, 1.0, 1.0);
     
     [Property]
     var ScaleSpeed : Real = 1.0;
@@ -29,18 +42,25 @@ class SelectableScale : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
+        var modifiedScaleSpeed = 0;
+        
         if(this.Touching)
         {
-            while(this.Owner.Transform.Scale.X < this.MaxScale.X && this.Owner.Transform.Scale.Y < this.MaxScale.Y)
+            modifiedScaleSpeed = 0;
+            while(this.Owner.Transform.Scale.X < this.MaxScale.X && this.Owner.Transform.Scale.Y < this.MaxScale.Y && modifiedScaleSpeed <= this.ScaleSpeed)
             {
-                this.Owner.Transform.Scale += this.ScaleDirection * event.Dt * this.ScaleSpeed;
+                this.Owner.Transform.Scale += this.ScaleDirection * event.Dt * modifiedScaleSpeed;
+                ++modifiedScaleSpeed;
             }
         }
         else
         {
-            while(this.Owner.Transform.Scale.X > this.MinScale.X && this.Owner.Transform.Scale.Y > this.MinScale.Y)
+            modifiedScaleSpeed = 0;
+            while(this.Owner.Transform.Scale.X > this.MinScale.X && this.Owner.Transform.Scale.Y > this.MinScale.Y && modifiedScaleSpeed <= this.ScaleSpeed)
             {
                 this.Owner.Transform.Scale -= this.ScaleDirection * event.Dt * this.ScaleSpeed;
+                ++modifiedScaleSpeed;
+                
             }
         }
         
