@@ -87,7 +87,7 @@ class EnemyAI : ZilchComponent
             }
             else
             {
-                if(distanceFromPlayer < this.ChaseProximity && this.PathFindTimer <= 0)
+                if(distanceFromPlayer < this.ChaseProximity && this.PathFindTimer <= 0 && this.Pathfind)
                 {
                     this.PathFindTimer = 0.25;
                     this.Timer = this.ResponceTime;
@@ -110,7 +110,7 @@ class EnemyAI : ZilchComponent
         if(distanceFromPlayer < this.ChaseProximity)
         {
             
-            if((this.Path.Count <= 1 || this.Timer <= 0) && this.PathFindTimer <= 0)
+            if((this.Path.Count <= 1 || this.Timer <= 0) && this.PathFindTimer <= 0 && this.Pathfind)
             {
                 this.PathFindTimer = 0.25;
                 this.Timer = this.ResponceTime;

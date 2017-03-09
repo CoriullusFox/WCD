@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Heap",
+		uint64 ResourceId = 5869827df07c3848,
+	},
+},

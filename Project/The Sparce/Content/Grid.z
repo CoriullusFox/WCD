@@ -38,6 +38,15 @@ class Grid : ZilchComponent
         this.GridSizeY = Math.Round(this.GridWorldSize.Y/this.NodeDiameter) as Integer;
         
     }
+    
+    var MaxSize : Integer
+    {
+        get
+        {
+            return this.GridSizeX * this.GridSizeY;
+        }
+    }
+    
 
     function OnLogicUpdate(event : UpdateEvent)
     {

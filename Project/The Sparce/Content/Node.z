@@ -24,6 +24,8 @@ class Node
     var GridY : Integer = 0;
     var Parent : Node;
     
+    var HeapIndex : Integer;
+    
     constructor (walkable : Boolean, worldPos : Real3, gridX : Integer, gridY : Integer, closeToWall : Boolean)
     {
         
@@ -35,10 +37,10 @@ class Node
         if(!walkable) this.CloseToWall = false;
     }
     
-    function FCost() : Integer
+    var FCost : Integer
     {
         
-        return this.GCost + this.HCost;
+        get { return this.GCost + this.HCost; }
         
     }
     

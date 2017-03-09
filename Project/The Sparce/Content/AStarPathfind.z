@@ -41,7 +41,7 @@ class AStarPathfind : ZilchComponent
             targetNode = this.Grid.GetNeighbours(targetNode)[0];
         }
         
-        var openSet = Array[Node]();
+        var openSet = new Heap(this.Grid.MaxSize);
         var closedSet = Array[Node]();
         
         openSet.Add(startNode);
@@ -50,17 +50,10 @@ class AStarPathfind : ZilchComponent
         {
             
             //do some checking on the current node
-            var currNode = openSet[0];
             if(targetNode != null){
-                for (var i = 1; i < openSet.Count; ++i)
-                {
-                    if(openSet[i].FCost() < currNode.FCost() || openSet[i].FCost() == currNode.FCost() && openSet[i].HCost < currNode.HCost)
-                    {
-                        currNode = openSet[i];
-                    }
-                }
                 
-                openSet.RemoveFirst(currNode);
+                
+                var currNode = openSet.RemoveFirst();
                 closedSet.Add(currNode);
                 
                 if (currNode == targetNode)
@@ -74,7 +67,19 @@ class AStarPathfind : ZilchComponent
                 //get neighbours of the current node
                 foreach (var neighbour in this.Grid.GetNeighbours(currNode))
                 {
+                    //Console.WriteLine(openSet.Items[0].FCost);
+                    //if(openSet.Count > 2)
+                    //{
+                    //    Console.WriteLine(openSet.Items[1].FCost);
+                    //    Console.WriteLine(openSet.Items[2].FCost);
+                    //}
+                    //Console.WriteLine("______________");
                     
+                    
+                    this.Space.CreateAtPosition(Archetype.MissingTexture, neighbour.WorldPos);
+                    
+                    
+                    //Console.WriteLine(openSet.Count);
                     if(!neighbour.Walkable || this.ArrayContains(closedSet, neighbour))
                     {
                         
@@ -84,18 +89,22 @@ class AStarPathfind : ZilchComponent
                     
                     
                     var newMovementCostToNeighbour = currNode.GCost + this.GetDist(currNode, neighbour);
-                    if (newMovementCostToNeighbour < neighbour.GCost || !this.ArrayContains(openSet, neighbour))
+                    if (newMovementCostToNeighbour < neighbour.GCost || !this.ArrayContains(openSet.Items, neighbour))
                     {
                         
                         neighbour.GCost = newMovementCostToNeighbour;
                         neighbour.HCost = this.GetDist(neighbour, targetNode);
                         neighbour.Parent = currNode;
                         
-                        if(!this.ArrayContains(openSet, neighbour))
+                        if(!this.ArrayContains(openSet.Items, neighbour))
                         {
                             
                             openSet.Add(neighbour);
                             
+                        }
+                        else
+                        {
+                            openSet.UpdateItem(neighbour);
                         }
                         
                     }
