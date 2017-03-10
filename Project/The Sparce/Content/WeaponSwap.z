@@ -117,8 +117,14 @@ class WeaponSwap : ZilchComponent
         
         if(unlocked)
         {
+            //send shoot event to tell script that is's on a player
+            var toSend = Shoot();
+            toSend.Player = true;
+            this.Owner.DispatchEvent(Events.Shoot, toSend);
+            
             var init : CogInitializer = null;
             this.Owner.AddComponentByName(name);
+            
             if(this.Owner.Pistol != null)
             {
                 this.Owner.Pistol.Initialize(init);
@@ -153,12 +159,7 @@ class WeaponSwap : ZilchComponent
             }
             //INSTRUCTIONS add a new if statement for initializing the component of the gun that you are adding!
             
-            
-            
-            
             //send shoot event to tell script that is's on a player
-            var toSend = Shoot();
-            toSend.Player = true;
             this.Owner.DispatchEvent(Events.Shoot, toSend);
         }
         

@@ -31,8 +31,15 @@ class Rifle : ZilchComponent
     
     [Property]
     var Player : Boolean = false;
+    
+    [Property]
+    var BulletSpeed : Real = 25;
+    
+    [Property]
+    var CamZoom : Real = 10;
     function Initialize(init : CogInitializer)
     {
+        this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
@@ -90,7 +97,7 @@ class Rifle : ZilchComponent
                     
                     //apply direction and movement
                     createdBullet.Orientation.LookAtDirection(newDirection);
-                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
+                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * this.BulletSpeed;
                     
                     createdBullet.Despawn.LifeLength = 2;
                     

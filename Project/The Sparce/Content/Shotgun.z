@@ -38,8 +38,15 @@ class Shotgun : ZilchComponent
     
     [Property]
     var Player : Boolean = false;
+    
+    [Property]
+    var BulletSpeed : Real = 25;
+    
+    [Property]
+    var CamZoom : Real = 10;
     function Initialize(init : CogInitializer)
     {
+        this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);

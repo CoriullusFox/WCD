@@ -32,8 +32,15 @@ class Minigun : ZilchComponent
     
     [Property]
     var Player : Boolean = false;
+    
+    [Property]
+    var BulletSpeed : Real = 25;
+    
+    [Property]
+    var CamZoom : Real = 100;
     function Initialize(init : CogInitializer) 
     {
+        this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
@@ -91,7 +98,7 @@ class Minigun : ZilchComponent
                     
                     //apply direction and movement
                     createdBullet.Orientation.LookAtDirection(newDirection);
-                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * (45 - randGen.Range(10, -10));
+                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * (this.BulletSpeed - randGen.Range(10, -10));
                     
                     createdBullet.Despawn.LifeLength = 0.5;
                     
