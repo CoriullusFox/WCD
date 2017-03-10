@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-15, -8.75, 0],
-		Vec3 Scale = [15, 15, 1],
+		Vec3 Translation = [-15.1737, -8.62896, 0],
+		Vec3 Scale = [10, 10, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -38,5 +38,6 @@ Cog =
 	},
 	SelectedWeaponIcon = 
 	{
+		string SelectedWeaponSprite = "UI_Gun_Selected",
 	},
 },
