@@ -255,6 +255,9 @@ paket-files/
 .idea/
 *.sln.iml
 
+# Stop Sage from uploading ProjectScreenshot.png
+ProjectScreenshot.png
+
 # Important Gitignore Stuff -Matt
 *.hkgbrnd
 *.gitignore

@@ -28,8 +28,12 @@ class WeaponSwap : ZilchComponent
     var BouncerUnlocked : Boolean = false;
     [Property]
     var TeslaUnlocked : Boolean = false;
-    var NumberOfWeapons : Integer = 8;
+    [Property]
+    var DisableLockedWeaponSelect : Boolean = true;
     
+    
+    var NumberOfWeapons : Integer = 8;
+    //var PrevSelected : Integer = 0;
     
     //to add a new gun add a boolean for it beaing unlocked, example: [Property] var GunUnlocked : Boolean = false;
     //than increase "NumberOfWeapons" by one
@@ -50,10 +54,12 @@ class WeaponSwap : ZilchComponent
         if(this.Selected > this.NumberOfWeapons - 1)
         {
             this.Selected = 0;
+            //this.PrevSelected = this.NumberOfWeapons - 1;
         }
         else if(this.Selected < 0)
         {
             this.Selected = this.NumberOfWeapons - 1;
+            //this.PrevSelected = 0;
         }
         
         //add new components and check if unlocked
@@ -61,37 +67,72 @@ class WeaponSwap : ZilchComponent
         if(this.Selected == 0)
         {
             this.AddNewComponent("Pistol", true);
+            //this.IsSelectableWeapon(true);
+            //this.PrevSelected = 0;
         }
         else if(this.Selected == 1)
         {
             this.AddNewComponent("Shotgun", this.ShotgunUnlocked);
+            //this.IsSelectableWeapon(this.ShotgunUnlocked);
+            //this.PrevSelected = 1;
         }
         else if(this.Selected == 2)
         {
             this.AddNewComponent("Minigun", this.MinigunUnlocked);
+            //this.IsSelectableWeapon(this.MinigunUnlocked);
+            //this.PrevSelected = 2;
         }
         else if(this.Selected == 3)
         {
-            this.AddNewComponent("BeamLaser", this.RifleUnlocked);
+            this.AddNewComponent("BeamLaser", this.BeamLaserUnlocked);
+            //this.IsSelectableWeapon(this.BeamLaserUnlocked);
+            //this.PrevSelected = 3;
         }
         else if(this.Selected == 4)
         {
             this.AddNewComponent("Rifle", this.RifleUnlocked);
+            //this.IsSelectableWeapon(this.RifleUnlocked);
+            //this.PrevSelected = 4;
         }
         else if(this.Selected == 5)
         {
             this.AddNewComponent("FlameThrower", this.FlamethrowerUnlocked);
+            //this.IsSelectableWeapon(this.FlamethrowerUnlocked);
+            //this.PrevSelected = 5;
         }
         else if(this.Selected == 6)
         {
             this.AddNewComponent("Bouncer", this.BouncerUnlocked);
+            //this.IsSelectableWeapon(this.BouncerUnlocked);
+            //this.PrevSelected = 6;
         }
         else if(this.Selected == 7)
         {
             this.AddNewComponent("TeslaGun", this.TeslaUnlocked);
+            //this.IsSelectableWeapon(this.TeslaUnlocked);
+            //this.PrevSelected = 7;
         }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
+    
+    /*function IsSelectableWeapon(weaponIsUnlocked : Boolean)
+    {
+        if(this.DisableLockedWeaponSelect && !weaponIsUnlocked)
+        {
+            if(this.Selected > this.PrevSelected)
+            {
+                ++this.Selected;
+            }
+            else if(this.Selected < this.PrevSelected)
+            {
+                --this.Selected;
+            }
+        }
+        else
+        {
+            return;
+        }
+    }*/
     
     function RemoveComponents()
     {

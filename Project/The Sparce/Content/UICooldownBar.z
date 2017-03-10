@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class UICooldownBar : ZilchComponent
@@ -32,10 +32,22 @@ class UICooldownBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Cooldown >= 0)
+        var cooldownDecrease = this.MaxCooldown - this.Cooldown;
+        var cooldownInPercent = (cooldownDecrease / (this.MaxCooldown + 0.001) * 100);
+        
+        if(cooldownInPercent > 100)
         {
-            this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X,3 - (this.Cooldown / this.MaxCooldown) * 3,this.Owner.Transform.Scale.Z);
+            cooldownInPercent = 100;
         }
+        
+        if(this.Cooldown >= -2)
+        {
+            this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X, 3 - (1 - (cooldownInPercent / 100)) * 3, this.Owner.Transform.Scale.Z);
+        }
+        
+        Console.WriteLine("Cooldown", this.Cooldown);
+        Console.WriteLine("Max-Cooldown", this.MaxCooldown);
+        Console.WriteLine("% Cooldown", cooldownInPercent);
         
     }
 }

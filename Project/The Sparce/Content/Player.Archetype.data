@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-10.3469, 0.280949, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -79,6 +79,7 @@ Cog =
 		bool FlamethrowerUnlocked = false,
 		bool BouncerUnlocked = false,
 		bool TeslaUnlocked = false,
+		bool DisableLockedWeaponSelect = true,
 	},
 	EnergyStor = 
 	{
@@ -126,6 +127,8 @@ Cog =
 		float Energy = 0,
 		float CooldownMax = 0.4,
 		bool Player = true,
+		float BulletSpeed = 25,
+		float CamZoom = 10,
 	},
 	DebugMode = 
 	{
