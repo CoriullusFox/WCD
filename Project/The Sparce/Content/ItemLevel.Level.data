@@ -263,7 +263,9 @@ Level =
 			bool MinigunUnlocked = true,
 			bool BeamLaserUnlocked = true,
 			bool RifleUnlocked = true,
-			int NumberOfWeapons = 5,
+			bool FlamethrowerUnlocked = false,
+			bool BouncerUnlocked = false,
+			bool TeslaUnlocked = false,
 		},
 		EnergyStor = 
 		{
@@ -271,8 +273,14 @@ Level =
 		},
 		Pistol = 
 		{
-			string Bullet = "580e63ae4c297722:BulletTest",
+			string Bullet = "583c4110d1935b64:BulletLargeLaser",
+			float Damage = 25,
 			float EnergyUse = 5,
+			float Energy = 100,
+			float CooldownMax = 0.25,
+			bool Player = false,
+			float BulletSpeed = 25,
+			float CamZoom = 10,
 		},
 		BoxCollider = 
 		{
@@ -315,7 +323,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.84784, 0, 0],
+			Vec3 Translation = [2.59622, -0.10065, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

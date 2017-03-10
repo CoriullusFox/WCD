@@ -383,7 +383,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.30102, 3.15892, 0],
+			Vec3 Translation = [-8.79431, 3.0238, 0],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -437,6 +437,9 @@ Level =
 			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
+			bool Pathfind = true,
+			bool Debug = false,
+			float ResponceTime = 2,
 		},
 		BoxCollider = 
 		{
@@ -485,12 +488,14 @@ Level =
 		},
 		Pistol = 
 		{
-			string Bullet = "580e63ae4c297722:BulletTest",
+			string Bullet = "583c4110d1935b64:BulletLargeLaser",
 			float Damage = 0.1,
 			float EnergyUse = 5,
 			float Energy = 0,
 			float CooldownMax = 0.4,
 			bool Player = false,
+			float BulletSpeed = 25,
+			float CamZoom = 10,
 		},
 	},
 	ArchetypeInstance = 

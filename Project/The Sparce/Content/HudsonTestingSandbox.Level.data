@@ -464,7 +464,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.0441, 0.0747533, 0],
+			Vec3 Translation = [9.9321, 0.0747533, 0],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -556,6 +556,7 @@ Level =
 			float Energy = 100,
 			float CooldownMax = 0.1,
 			bool Player = false,
+			float CamZoom = 10,
 		},
 	},
 },
