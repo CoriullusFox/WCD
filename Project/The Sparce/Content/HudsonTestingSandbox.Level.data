@@ -133,11 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-<<<<<<< HEAD
-			float Size = 36.788,
-=======
 			float Size = 27.2532,
->>>>>>> origin/master
 		},
 		EditorCameraController = 
 		{
@@ -452,8 +448,6 @@ Level =
 		{
 		},
 	},
-<<<<<<< HEAD
-=======
 	Cog = 
 	{
 		LinkId = 
@@ -564,5 +558,4 @@ Level =
 			bool Player = false,
 		},
 	},
->>>>>>> origin/master
 },
