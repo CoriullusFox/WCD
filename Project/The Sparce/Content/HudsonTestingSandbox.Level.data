@@ -121,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.382252, 0, 50],
+			Vec3 Translation = [0.212949, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96338,
+			float Size = 9.07181,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.382252, 0, 0],
+			Vec3 LookTarget = [0.212949, 0, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -169,8 +169,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0389814, -0.0396612, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [3, 3, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -183,7 +183,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -203,14 +203,62 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			Vec3 Size = [0.125, 0.125, 0.5],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 4,
+				},
+				Named = 
+				{
+					string Name = "Light",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.0196991, 0.0565517, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Light = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					LightType LightType = Point,
+					Vec4 Color = [1, 1, 1, 1],
+					float Intensity = 1,
+					float Range = 5,
+					float Falloff = 1,
+					float Angle = 45,
+					float Size = 20,
+				},
+				GodRayLight = 
+				{
+					GodRayLightType LightType = Point,
+					bool Active = true,
+					int Samples = 80,
+					Vec4 Color = [0.83, 1, 0, 0.5],
+					float Intensity = 0.4,
+					float ScreenRadius = 0.51,
+					float OccluderClarity = 0.54,
+					bool ScreenEdgeFade = true,
+					float BeginFade = -0.1,
+					float EndFade = 0.1,
+					float DepthOffset = 1,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -245,7 +293,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -290,7 +338,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -329,7 +377,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -364,51 +412,6 @@ Level =
 			float Intensity = 0.69,
 			float ScreenRadius = 0.47,
 			float OccluderClarity = 1,
-			bool ScreenEdgeFade = true,
-			float BeginFade = -0.1,
-			float EndFade = 0.1,
-			float DepthOffset = 1,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "Light",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.0192823, 0.0168905, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Light = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			LightType LightType = Point,
-			Vec4 Color = [1, 1, 1, 1],
-			float Intensity = 1,
-			float Range = 5,
-			float Falloff = 1,
-			float Angle = 45,
-			float Size = 20,
-		},
-		GodRayLight = 
-		{
-			GodRayLightType LightType = Point,
-			bool Active = true,
-			int Samples = 80,
-			Vec4 Color = [0.83, 1, 0, 0.5],
-			float Intensity = 0.69,
-			float ScreenRadius = 0.51,
-			float OccluderClarity = 0.54,
 			bool ScreenEdgeFade = true,
 			float BeginFade = -0.1,
 			float EndFade = 0.1,
@@ -547,14 +550,12 @@ Level =
 			float SecondsBetweenDamage = 0.25,
 			float Damage = 10,
 		},
-		BeamLaser = 
+		TeslaGun = 
 		{
-			string Bullet = "583c4c3f0309dcff:BulletBeam",
-			float FreezTimer = 0,
-			float DPS = 50,
-			float EnergyUse = 5,
+			float Damage = 20,
+			float EnergyUse = 100,
 			float Energy = 100,
-			float CooldownMax = 0.1,
+			float CooldownMax = 5,
 			bool Player = false,
 			float CamZoom = 10,
 		},
