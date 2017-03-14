@@ -89,7 +89,7 @@ Level =
 		UICreator = 
 		{
 			string UILevel = "5819b1c5833d962d:UILevel",
-			string UIArchtype = "5819b167eb57c437:UISpace",
+			string UIArchtype = "5819b167eb57c437:UI_Space",
 		},
 		ForwardRenderer = 
 		{
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.07182,
+			float Size = 30.1195,
 		},
 		EditorCameraController = 
 		{
@@ -156,12 +156,19 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		LinkId = 
 		{
 			uint Id = 3,
+		},
+		Named = 
+		{
+			string Name = "PlayerSpawnPoint",
+		},
+		Archetyped = 
+		{
+			string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		},
 		Transform = 
 		{
@@ -169,9 +176,35 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		SpawnPlayer = 
 		{
-			string Name = "PlayerSpawnPoint",
+			string PlayerToSpawn = "Entity_Player",
+		},
+		Grid = 
+		{
+			Vec2 GridWorldSize = [100, 100],
+			bool Debug = false,
+		},
+		AStarPathfind = 
+		{
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5812ef1fdef735df:PlayerSouth_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 	Cog = 
@@ -221,7 +254,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5844c0fe60a2ae39:Explosion",
+			string Name = "5844c0fe60a2ae39:Particle_Explosion",
 		},
 		Transform = 
 		{

@@ -45,9 +45,9 @@ class UICooldownBar : ZilchComponent
             this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X, 3 - (1 - (cooldownInPercent / 100)) * 3, this.Owner.Transform.Scale.Z);
         }
         
-        Console.WriteLine("Cooldown", this.Cooldown);
-        Console.WriteLine("Max-Cooldown", this.MaxCooldown);
-        Console.WriteLine("% Cooldown", cooldownInPercent);
+        //Console.WriteLine("Cooldown", this.Cooldown);
+        //Console.WriteLine("Max-Cooldown", this.MaxCooldown);
+        //Console.WriteLine("% Cooldown", cooldownInPercent);
         
     }
 }
