@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "FreezeBulletScript",
+		uint64 ResourceId = 584d510ee3a737b4,
+	},
+},
