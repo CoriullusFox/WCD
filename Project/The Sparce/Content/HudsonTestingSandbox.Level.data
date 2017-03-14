@@ -117,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0698052, -0.00360769, 55.0839],
+			Vec3 Translation = [-0.0698052, -0.0588481, 55.0839],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -129,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299,
+			float Size = 18.2684,
 		},
 		EditorCameraController = 
 		{
@@ -137,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.0698052, -0.00360769, 5.08386],
+			Vec3 LookTarget = [-0.0698052, -0.0588481, 5.08386],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -189,7 +189,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "Minigun",
+			string Unlocked = "FlameThrower",
 		},
 		BoxCollider = 
 		{
@@ -436,7 +436,7 @@ Level =
 		},
 		SpawnPlayer = 
 		{
-			string PlayerToSpawn = "Entity_Player",
+			string PlayerToSpawn = "Entity_SandboxPlayer",
 		},
 		Grid = 
 		{

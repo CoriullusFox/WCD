@@ -37,7 +37,7 @@ class Minigun : ZilchComponent
     var BulletSpeed : Real = 25;
     
     [Property]
-    var CamZoom : Real = 100;
+    var CamZoom : Real = 9;
     
     function Initialize(init : CogInitializer) 
     {

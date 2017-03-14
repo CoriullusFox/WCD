@@ -33,7 +33,7 @@ class HealthBarPlayer : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X,(this.Health / this.MaxHealth) * 3,this.Owner.Transform.Scale.Z), event.Dt * this.HealthbarSpeed);
+        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X,(this.Health / this.MaxHealth) * 3.5,this.Owner.Transform.Scale.Z), event.Dt * this.HealthbarSpeed);
         
     }
 }

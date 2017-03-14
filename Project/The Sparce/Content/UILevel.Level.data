@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.57438, -3.57474, 152.501],
+			Vec3 Translation = [-6.23509, -7.75828, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5298,
+			float Size = 9.07178,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-4.57438, -3.57474, 102.501],
+			Vec3 LookTarget = [-6.23509, -7.75828, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -510,7 +510,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.32, 0, 1, 1],
+			Vec4 Color = [0, 1, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -636,7 +636,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [2.5, 2, -102.5],
-					Vec3 Scale = [0.2, 3, 1],
+					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
 				Sprite = 
@@ -676,7 +676,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [2.5, 1.75, -102.5],
-					Vec3 Scale = [0.2, 3, 1],
+					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
 				Sprite = 
@@ -685,7 +685,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0, 0.49, 1, 1],
+					Vec4 Color = [0, 0.76, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -715,7 +715,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [2.5, 1.5, -102.5],
-					Vec3 Scale = [0.2, 3, 1],
+					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
 				Sprite = 
@@ -751,7 +751,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [2.5, 2, -103],
-					Vec3 Scale = [0.2, 3, 1],
+					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
 				Named = 
@@ -769,7 +769,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [2.5, 1.75, -103],
-					Vec3 Scale = [0.2, 3, 1],
+					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
 				Named = 
@@ -787,7 +787,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [2.5, 1.5, -103],
-					Vec3 Scale = [0.2, 3, 1],
+					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
 				Named = 

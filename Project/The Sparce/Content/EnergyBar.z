@@ -32,7 +32,12 @@ class EnergyBar : ZilchComponent
         
         var energyBarP = 100 - (energyBarDecrease / (this.MaxEnergy + 0.001) * 100);
         
-        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X, energyBarP / 33.3333, this.Owner.Transform.Scale.Z), event.Dt * this.Speed);
+        if(energyBarP > 100)
+        {
+            energyBarP = 100;
+        }
+        
+        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, Real3(this.Owner.Transform.Scale.X, ((energyBarP / 100)) * 3.5, this.Owner.Transform.Scale.Z), event.Dt * this.Speed);
         
     }
 
