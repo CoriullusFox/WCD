@@ -2,10 +2,17 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Cursor",
+		string Name = "UI_Cursor",
 		uint64 ResourceId = 5819b1bffeb885d8,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"UI",
+		],
 	},
 },

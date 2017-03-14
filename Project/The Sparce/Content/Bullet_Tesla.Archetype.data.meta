@@ -2,10 +2,17 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Tesla",
+		string Name = "Bullet_Tesla",
 		uint64 ResourceId = 580340fa4b4bf62b,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Bullet",
+		],
 	},
 },

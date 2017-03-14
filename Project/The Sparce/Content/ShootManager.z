@@ -35,10 +35,10 @@ class ShootManager : ZilchComponent
     var AmmoSubtract            : Real = 1.0;
     
     [Property]
-    var ArchetypeAmmoBar        : Archetype = Archetype.AmmoBar;
+    var ArchetypeAmmoBar        : Archetype = Archetype.UI_AmmoBar;
     
     [Property]
-    var ArchetypeCooldownBar    : Archetype = Archetype.CooldownBar;
+    var ArchetypeCooldownBar    : Archetype = Archetype.UI_CooldownBar;
     
     function Initialize(init : CogInitializer)
     {

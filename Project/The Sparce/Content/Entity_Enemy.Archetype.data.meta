@@ -2,10 +2,17 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Enemy",
+		string Name = "Entity_Enemy",
 		uint64 ResourceId = 5819e0dc33f34ca0,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Entity",
+		],
 	},
 },

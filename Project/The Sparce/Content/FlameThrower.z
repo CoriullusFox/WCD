@@ -16,7 +16,7 @@ class FlameThrower : ZilchComponent
     var Cooldown : Real = 0;
     
     [Property]
-    var Bullet : Archetype = Archetype.FlamethrowerAmmo;
+    var Bullet : Archetype = Archetype.Bullet_FlamethrowerAmmo;
     
     [Property]
     var DPS : Real = 50;

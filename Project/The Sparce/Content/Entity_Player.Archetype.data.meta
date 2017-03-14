@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Explosion",
-		uint64 ResourceId = 5844c0fe60a2ae39,
+		string Name = "Entity_Player",
+		uint64 ResourceId = 5819c2376fedf85b,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
@@ -12,7 +12,7 @@ DataContent =
 	{
 		Array Tags = 
 		[
-			"Archetype",
+			"Entity",
 		],
 	},
 },

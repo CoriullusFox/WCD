@@ -16,7 +16,7 @@ class Shotgun : ZilchComponent
     var Cooldown : Real = 0.0;
     
     [Property]
-    var Bullet : Archetype = Archetype.BulletTinyPellet;
+    var Bullet : Archetype = Archetype.Bullet_TinyPellet;
     
     [Property]
     var NumberOfShots : Integer = 5;

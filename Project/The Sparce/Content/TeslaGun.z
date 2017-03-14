@@ -99,7 +99,7 @@ class TeslaGun : ZilchComponent
                 }
                 cast.PopFront();
             }
-            this.Space.CreateAtPosition(Archetype.Tesla, this.Owner.Transform.Translation);
+            this.Space.CreateAtPosition(Archetype.Bullet_Tesla, this.Owner.Transform.Translation);
             
         }
     

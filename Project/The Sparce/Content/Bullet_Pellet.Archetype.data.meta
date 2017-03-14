@@ -2,10 +2,17 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "BulletPellet",
+		string Name = "Bullet_Pellet",
 		uint64 ResourceId = 583c7df4b951b687,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Bullet",
+		],
 	},
 },

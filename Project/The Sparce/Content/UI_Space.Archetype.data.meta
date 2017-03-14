@@ -2,10 +2,17 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "UISpace",
+		string Name = "UI_Space",
 		uint64 ResourceId = 5819b167eb57c437,
 		string LoaderType = "Space",
 		uint Version = 0,
 		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"UI",
+		],
 	},
 },

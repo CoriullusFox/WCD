@@ -2,10 +2,17 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "TripleMonitor",
+		string Name = "Decor_TripleMonitor",
 		uint64 ResourceId = 580a7760db23c84f,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Decor",
+		],
 	},
 },

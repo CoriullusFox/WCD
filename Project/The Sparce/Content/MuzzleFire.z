@@ -2,7 +2,7 @@ class MuzzleFire : ZilchComponent
 {
     
     [Property]
-    var MuzzleFireParticle : Archetype = Archetype.MuzzleFire;
+    var MuzzleFireParticle : Archetype = Archetype.Particle_MuzzleFire;
     
     [Dependency]
     var SpriteDirection : Movement = null;

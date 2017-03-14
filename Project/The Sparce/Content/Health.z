@@ -19,7 +19,7 @@ class Health : ZilchComponent
     var ConfiguredHealth    : Real = 50;
     
     [Property]
-    var ArchetypeAmmoBar    : Archetype = Archetype.HealthBar;
+    var ArchetypeAmmoBar    : Archetype = Archetype.UI_HealthBar;
     
     [Property]
     var MiniHeathBar        : Boolean = true;
