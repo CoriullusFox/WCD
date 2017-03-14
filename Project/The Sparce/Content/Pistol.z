@@ -38,6 +38,8 @@ class Pistol : ZilchComponent
     
     [Property]
     var CamZoom : Real = 10;
+    
+    var Once : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
@@ -53,6 +55,11 @@ class Pistol : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(!this.Once)
+        {
+            this.Once = true;
+            this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
+        }
         //Cooldown logic
         this.Cooldown += event.Dt;
         if(this.Player)

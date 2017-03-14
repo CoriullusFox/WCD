@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-9, 0, 0],
+		Vec3 Translation = [-28.539, 12.6769, -3.8147e-006],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -43,7 +43,7 @@ Cog =
 		int Speed = 100,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
-		bool Pathfind = false,
+		bool Pathfind = true,
 		bool Debug = false,
 		float ResponceTime = 2,
 	},

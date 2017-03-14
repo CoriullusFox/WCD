@@ -35,6 +35,7 @@ class FlameThrower : ZilchComponent
     
     [Property]
     var CamZoom : Real = 10;
+    
     function Initialize(init : CogInitializer) 
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;

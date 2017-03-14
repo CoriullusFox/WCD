@@ -38,6 +38,7 @@ class Minigun : ZilchComponent
     
     [Property]
     var CamZoom : Real = 100;
+    
     function Initialize(init : CogInitializer) 
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
