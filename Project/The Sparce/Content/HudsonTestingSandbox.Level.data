@@ -100,13 +100,9 @@ Level =
 			bool Reflections = true,
 			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
 			bool GodRays = true,
-			bool RenderMasks = true,
+			bool RenderMasks = false,
 			bool Glow = true,
 			float GlowThreshold = 1,
-		},
-		AmbientLight = 
-		{
-			Vec4 Color = [1, 1, 1, 1],
 		},
 	},
 	Cog = 
@@ -121,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.212949, 0, 50],
+			Vec3 Translation = [-0.502654, 3.96791, 55.0839],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.07181,
+			float Size = 14.7781,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.212949, 0, 0],
+			Vec3 LookTarget = [-0.502654, 3.96791, 5.08386],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -203,7 +199,7 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.125, 0.125, 0.5],
+			Vec3 Size = [0.125, 0.075, 0.5],
 		},
 		Hierarchy = 
 		{
