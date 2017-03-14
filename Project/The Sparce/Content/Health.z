@@ -33,6 +33,8 @@ class Health : ZilchComponent
     
     var MaxHealth : Real;
     
+    var FreezeTimer : Real = 0;
+    
     function Initialize(init : CogInitializer)
     {
         
@@ -56,6 +58,14 @@ class Health : ZilchComponent
         var healthInPercent = 100 - (healthDecrease / (this.MaxHealth + 0.001) * 100);
         
         //Console.WriteLine("% Ammo", cooldownInPercent);
+        
+        if(this.FreezeTimer > 0)
+        {
+            
+            this.FreezeTimer -= event.Dt;
+            this.Owner.RigidBody.Velocity = Real3(0,0,0);
+            
+        }
         
         if(healthInPercent > 100)
         {
@@ -103,5 +113,16 @@ class Health : ZilchComponent
         //Console.WriteLine("HP", this.ConfiguredHealth);
         
     }
+    
+    
+    function Freeze(damage : Real, sprite : SpriteSource, time : Real)
+    {
+        
+        this.FreezeTimer = time;
+        this.Owner.Sprite.SpriteSource = sprite;
+        this.ConfiguredHealth -= damage;
+        
+    }
+    
     
 }

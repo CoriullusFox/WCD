@@ -79,6 +79,8 @@ Cog =
 		bool FlamethrowerUnlocked = true,
 		bool BouncerUnlocked = true,
 		bool TeslaUnlocked = true,
+		bool ChainEUnlocked = true,
+		bool DisableLockedWeaponSelect = true,
 	},
 	EnergyStor = 
 	{
@@ -120,12 +122,22 @@ Cog =
 	},
 	Pistol = 
 	{
-		string Bullet = "580e63ae4c297722:BulletTest",
+		string Bullet = "583c4110d1935b64:BulletLargeLaser",
 		float Damage = 10,
 		float EnergyUse = 5,
 		float Energy = 0,
 		float CooldownMax = 0.4,
 		bool Player = true,
+		float BulletSpeed = 25,
+		float CamZoom = 10,
+	},
+	DebugMode = 
+	{
+		bool DubugModeEnabled = false,
+	},
+	MuzzleFire = 
+	{
+		string MuzzleFireParticle = "583a04ce746741f7:MuzzleFire",
 	},
 	Hierarchy = 
 	{

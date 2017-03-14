@@ -29,10 +29,12 @@ class WeaponSwap : ZilchComponent
     [Property]
     var TeslaUnlocked : Boolean = false;
     [Property]
+    var ChainEUnlocked : Boolean = false;
+    [Property]
     var DisableLockedWeaponSelect : Boolean = true;
     
     
-    var NumberOfWeapons : Integer = 8;
+    var NumberOfWeapons : Integer = 9;
     //var PrevSelected : Integer = 0;
     
     //to add a new gun add a boolean for it beaing unlocked, example: [Property] var GunUnlocked : Boolean = false;
@@ -112,6 +114,12 @@ class WeaponSwap : ZilchComponent
             //this.IsSelectableWeapon(this.TeslaUnlocked);
             //this.PrevSelected = 7;
         }
+        else if(this.Selected == 8)
+        {
+            this.AddNewComponent("ChainElectricity", this.ChainEUnlocked);
+            //this.IsSelectableWeapon(this.TeslaUnlocked);
+            //this.PrevSelected = 7;
+        }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
     
@@ -145,6 +153,7 @@ class WeaponSwap : ZilchComponent
         this.Owner.RemoveComponentByName("FlameThrower");
         this.Owner.RemoveComponentByName("Bouncer");
         this.Owner.RemoveComponentByName("TeslaGun");
+        this.Owner.RemoveComponentByName("ChainElectricity");
         //INSTRUCTIONS! add code to disable your gun component here, example: this.Owner.RemoveComponentByName("BlahGun");
         
     }
@@ -197,6 +206,10 @@ class WeaponSwap : ZilchComponent
             if(this.Owner.TeslaGun != null)
             {
                 this.Owner.TeslaGun.Initialize(init);
+            }
+            if(this.Owner.ChainElectricity != null)
+            {
+                this.Owner.ChainElectricity.Initialize(init);
             }
             //INSTRUCTIONS add a new if statement for initializing the component of the gun that you are adding!
             
