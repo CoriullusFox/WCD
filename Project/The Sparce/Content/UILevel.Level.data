@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6596,
+			float Size = 16.5298,
 		},
 		EditorCameraController = 
 		{
@@ -516,7 +516,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 85,
-			string Text = "Pistol",
+			string Text = "Pistol (Tier 1)",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 256,
 			bool Smoothing = false,
@@ -527,7 +527,7 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5829ac33dea7de32:UISelectedWeapon",
+		string Name = "5829ac33dea7de32:UI_SelectedWeapon",
 		LinkId = 
 		{
 			uint Id = 13,
@@ -576,7 +576,7 @@ Level =
 				},
 				Archetyped = 
 				{
-					string Name = "5819b1bffeb885d8:Cursor",
+					string Name = "5819b1bffeb885d8:UI_Cursor",
 				},
 				Transform = 
 				{
@@ -743,7 +743,7 @@ Level =
 			},
 			ArchetypeInstance = 
 			{
-				string Name = "58088dbda434152e:BackgroundBar",
+				string Name = "58088dbda434152e:UI_BackgroundBar",
 				LinkId = 
 				{
 					uint Id = 20,
@@ -761,7 +761,7 @@ Level =
 			},
 			ArchetypeInstance = 
 			{
-				string Name = "58088dbda434152e:BackgroundBar",
+				string Name = "58088dbda434152e:UI_BackgroundBar",
 				LinkId = 
 				{
 					uint Id = 21,
@@ -779,7 +779,7 @@ Level =
 			},
 			ArchetypeInstance = 
 			{
-				string Name = "58088dbda434152e:BackgroundBar",
+				string Name = "58088dbda434152e:UI_BackgroundBar",
 				LinkId = 
 				{
 					uint Id = 22,
