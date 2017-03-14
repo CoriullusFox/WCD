@@ -36,8 +36,4 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	Despawn = 
-	{
-		float LifeLength = 0.1,
-	},
 },
