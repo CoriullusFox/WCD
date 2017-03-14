@@ -4,7 +4,7 @@ class ChainElectricity : ZilchComponent
     var Cooldown : Real = 0;
     
     [Property]
-    var Bullet : Archetype = Archetype.BulletBeam;
+    var Bullet : Archetype = Archetype.Bullet_Beam;
     
     var FreezTimer : Real = 0;
     
