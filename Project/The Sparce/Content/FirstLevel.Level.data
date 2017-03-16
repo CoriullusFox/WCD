@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.28459, -1.30346, 50],
+			Vec3 Translation = [2.52292, 0.585258, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1195,
+			float Size = 16.5299,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.28459, -1.30346, -1.28041e-006],
+			Vec3 LookTarget = [2.52292, 0.585258, -1.11398e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -215,6 +215,41 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "Floor TileSet",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "584fcb0cc574d09c:FirstLevel_TileMap00",
+			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
 			string Name = "TileMap",
 		},
 		Transform = 
@@ -236,94 +271,10 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5844a9a5122d917f:GlobalTestingSandboxCopy1_TileMap01",
-			string PaletteName = "5812cb923a82b921:SpaceStationTileSet",
+			string SourceName = "584fd4df00cf772a:FirstLevel_TileMap01",
+			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Named = 
-		{
-			string Name = "Explosion",
-		},
-		Archetyped = 
-		{
-			string Name = "5844c0fe60a2ae39:Particle_Explosion",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.647211, -0.599465, 0],
-			Vec3 Scale = [0.1, 0.1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteParticleSystem = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			SystemChildMode ChildMode = Independent,
-			SystemSpace SystemSpace = WorldSpace,
-			uint DrawOrder = 0,
-			float WarmUpTime = 0,
-			ParticleGeometry GeometryMode = Billboarded,
-			ParticleRenderMode RenderMode = Blended,
-			ParticleSortMode SortMode = Youngest,
-			ParticleAnimation ParticleAnimation = Single,
-			string Texture = "5844c6157e0f037e:Particle_TinyBurst_Anim",
-			Vec4 Tint = [1, 1, 1, 0.9999],
-			float VelocityScale = 0,
-			float LengthScale = 0,
-			float MaxParticleSize = 0,
-			Vec3 SystemSize = [0, 0, 1],
-		},
-		LinearParticleAnimator = 
-		{
-			Vec3 Force = [0, 0, 0],
-			Vec3 RandomForce = [0, 0, 0],
-			float Torque = 0,
-			float Growth = -5,
-			float Dampening = 1,
-			Vec3 Twist = [0, 0, 0],
-		},
-		ParticleColorAnimator = 
-		{
-			Vec4 Color0 = [1, 0.87, 0, 0.9999],
-			Vec4 Color1 = [1, 0.57, 0, 1],
-			Vec4 Color2 = [1, 0.39, 0, 0.7],
-			Vec4 Color3 = [1, 0.03, 0, 0.7],
-			Vec4 Color4 = [0.235, 0.235, 0.235, 0.8],
-		},
-		Despawn = 
-		{
-			float LifeLength = 50,
-		},
-		SphericalParticleEmitter = 
-		{
-			bool Active = true,
-			uint EmitCount = 5000,
-			float EmitRate = 0,
-			float EmitVariance = 50000,
-			float Size = 1.5,
-			float SizeVariance = 0.5,
-			float Lifetime = 0.1,
-			float LifetimeVariance = 0.05,
-			float Spin = 0,
-			float SpinVariance = 10,
-			bool RandomSpin = false,
-			float Fill = 1,
-			float EmitterVelocityPercent = 1,
-			Vec3 StartVelocity = [0, 0, 0],
-			Vec3 RandomVelocity = [50, 50, 2],
-			Vec3 TangentVelocity = [0, 0, 0],
-			Vec3 EmitterSize = [0.1, 0.1, 0],
-			bool FastMovingEmitter = false,
 		},
 	},
 },

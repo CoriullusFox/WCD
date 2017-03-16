@@ -1,8 +1,0 @@
-Useing It
-==========================================================================================================================================================================
-When creating a new walls tileset please open this one, save as, then name it what you want and go ahead and edit the already existing tiles(Colors,Shapes,Isomentric Shading etc...)
-==========================================================================================================================================================================
-
-Other
-==========================================================================================================================================================================
-Please note you are not required to use this it would just make it easier for the design director when implimenting them in zero
