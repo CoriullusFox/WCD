@@ -13,6 +13,7 @@
 
 class SelectableScale : ZilchComponent
 {
+    
     [Property]
     var ScaleDirection : Real3 = Real3(1.0, 1.0, 1.0);
     
@@ -33,10 +34,10 @@ class SelectableScale : ZilchComponent
         Math.Normalize(this.ScaleDirection);
         
         Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
-        
         Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -75,4 +76,10 @@ class SelectableScale : ZilchComponent
     {
         this.Touching = true;
     }
+    
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        this.Space.SoundSpace.PlayCue(SoundCue.UI_Button_Click);
+    }
+    
 }
