@@ -68,7 +68,7 @@ Level =
 		},
 		DeferredRenderer = 
 		{
-			Vec4 ClearColor = [0.095, 0.095, 0.095, 1],
+			Vec4 ClearColor = [0, 0, 0, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -112,7 +112,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 49.999],
+			Vec3 Translation = [-0.549713, 0.00643277, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -124,7 +124,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.1034,
+			float Size = 40.6571,
 		},
 		EditorCameraController = 
 		{
@@ -132,7 +132,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, -0.001],
+			Vec3 LookTarget = [-0.549713, 0.00643277, -0.001],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -197,8 +197,8 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
+			Vec4 Color = [0.22425, 0, 0.345, 1],
+			BlendMode BlendMode = Additive,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
@@ -272,6 +272,10 @@ Level =
 					Vec3 MaxScale = [1.2, 1.2, 1],
 					Vec3 MinScale = [1, 1, 1],
 					float ScaleSpeed = 1,
+				},
+				ButtonLevelChange = 
+				{
+					string Level = "5823135492b312bf:FirstLevel",
 				},
 				Hierarchy = 
 				{
@@ -357,6 +361,10 @@ Level =
 					Vec3 MinScale = [1, 1, 1],
 					float ScaleSpeed = 1,
 				},
+				ButtonLevelChange = 
+				{
+					string Level = "584fedc2561f6c6e:TutorialLevel",
+				},
 				Hierarchy = 
 				{
 					Cog = 
@@ -440,6 +448,10 @@ Level =
 					Vec3 MaxScale = [1.2, 1.2, 1],
 					Vec3 MinScale = [1, 1, 1],
 					float ScaleSpeed = 1,
+				},
+				ButtonLevelChange = 
+				{
+					string Level = "584fed9351e69d3b:SettingsLevel",
 				},
 				Hierarchy = 
 				{
@@ -525,6 +537,9 @@ Level =
 					Vec3 MinScale = [1, 1, 1],
 					float ScaleSpeed = 1,
 				},
+				QuitGameButton = 
+				{
+				},
 				Hierarchy = 
 				{
 					Cog = 
@@ -563,6 +578,80 @@ Level =
 					},
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "Particle_SpaceBackground_Group",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "584fe92eafe4ada3:Particle_Stars",
+				LinkId = 
+				{
+					uint Id = 15,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-8, 0, 0],
+					Vec3 Scale = [12, 12, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Particle_Stars_Left",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "584fe92eafe4ada3:Particle_Stars",
+				LinkId = 
+				{
+					uint Id = 16,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [8, 0, 0],
+					Vec3 Scale = [12, 12, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Particle_Stars_Right",
+				},
+			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "584fe9a2c2196992:UI_Cursor_Menu",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "CursorMCH",
 		},
 	},
 },

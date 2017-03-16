@@ -1,0 +1,16 @@
+class ButtonLevelChange : ZilchComponent
+{
+    
+    [Property]
+    var Level : Level = Level.FirstLevel;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
+    }
+
+    function OnMouseUp(event : ViewportMouseEvent)
+    {
+        this.Space.LoadLevel(this.Level);
+    }
+}

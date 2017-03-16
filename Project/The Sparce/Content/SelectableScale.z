@@ -37,7 +37,7 @@ class SelectableScale : ZilchComponent
         Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -77,7 +77,7 @@ class SelectableScale : ZilchComponent
         this.Touching = true;
     }
     
-    function OnMouseDown(event : ViewportMouseEvent)
+    function OnMouseUp(event : ViewportMouseEvent)
     {
         this.Space.SoundSpace.PlayCue(SoundCue.UI_Button_Click);
     }

@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "TileDecor_General",
+		uint64 ResourceId = 584fd561dfbc7afb,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 120,
+		uint FrameSizeY = 120,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333,
+		float OriginX = 60,
+		float OriginY = 60,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
