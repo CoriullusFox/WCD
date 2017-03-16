@@ -107,6 +107,8 @@ class BeamLaser : ZilchComponent
                     //apply direction and movement
                     createdBullet.Orientation.LookAtDirection(newDirection);
                     
+                    createdBullet.Transform.Translation += newDirection * 0.2;
+                    
                     createdBullet.Despawn.LifeLength = 2;
                     
                     //set whether or not the beam is from the player

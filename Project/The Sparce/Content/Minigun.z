@@ -99,6 +99,7 @@ class Minigun : ZilchComponent
                     
                     //apply direction and movement
                     createdBullet.Orientation.LookAtDirection(newDirection);
+                    createdBullet.Transform.Translation += newDirection;
                     createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * (this.BulletSpeed - randGen.Range(10, -10));
                     
                     createdBullet.Despawn.LifeLength = 0.5;

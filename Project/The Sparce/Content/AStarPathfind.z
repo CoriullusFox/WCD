@@ -13,18 +13,14 @@
 
 class AStarPathfind : ZilchComponent
 {
-    
-    
-    
     [Dependency]
     var Grid : Grid;
-    
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
     }

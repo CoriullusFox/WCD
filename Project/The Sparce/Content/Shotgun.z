@@ -104,6 +104,7 @@ class Shotgun : ZilchComponent
                             
                             //apply direction and movement
                             createdBullet.Orientation.LookAtDirection(newDirection);
+                            createdBullet.Transform.Translation += newDirection;
                             createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
                             
                             createdBullet.Despawn.LifeLength = 0.5;
