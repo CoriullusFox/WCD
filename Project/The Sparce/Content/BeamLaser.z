@@ -19,9 +19,6 @@ class BeamLaser : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_Beam;
     
     [Property]
-    var FreezTimer : Real = 0;
-    
-    [Property]
     var DPS : Real = 50;
     
     [Property]
@@ -63,18 +60,12 @@ class BeamLaser : ZilchComponent
             toSend.MaxCooldown = this.CooldownMax;
             this.GameSession.DispatchEvent(Events.Cooldown, toSend);
         }
-        
-        //don't allow movement when beam is firing
-        if(this.FreezTimer > 0)
-        {
-            this.FreezTimer -= event.Dt;
-            this.Owner.RigidBody.Velocity = Real3(0,0,0);
-        }
     }
     
     //Shooting logic (only runs when the event is called)
     function OnShoot(event : Shoot)
     {
+        
         this.Player = event.Player;
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
@@ -91,7 +82,7 @@ class BeamLaser : ZilchComponent
             
             if(this.Bullet != null)
             {
-                this.FreezTimer = 2;
+                this.Owner.Health.Freeze(0, SpriteSource.PlayerSouth_Anim, 2);
                 Console.WriteLine("bla");
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
                 

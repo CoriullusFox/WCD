@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "MissingTexture",
+		string Name = "Electricity",
 	},
 	Archetyped = 
 	{
-		string Name = "5819b149f62c9ab5:MissingTexture_0",
+		string Name = "584fdefe787e7723:Bullet_Electricity",
 	},
 	Transform = 
 	{
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5844ac6293e25cb9:Blank",
+		string SpriteSource = "584fdd3503560a69:Bullet_ElectricityAnim",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,6 +38,13 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 0.5,
+		float LifeLength = 10,
+	},
+	Orientation = 
+	{
+		Vec3 GlobalUp = [0, 1, 0],
+		Vec3 UpVector = [0, 0, 1],
+		Vec3 ForwardVector = [0, 1, 0],
+		OrientationBases DefaultBases = ForwardYUpZ,
 	},
 },

@@ -47,6 +47,13 @@ class Grid : ZilchComponent
         }
     }
     
+    var BottomL : Real3
+    {
+        get
+        {
+            return Real3(0,0,0) - Real3(1,0,0) * (this.GridWorldSize.X/2) - Real3(0,1,0) * this.GridWorldSize.Y/2;
+        }
+    }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
@@ -66,7 +73,7 @@ class Grid : ZilchComponent
             this.Grid[i].Resize(this.GridSizeY);
             
         }
-        var bottomL = Real3(0,0,0) - Real3(1,0,0) * (this.GridWorldSize.X/2) - Real3(0,1,0) * this.GridWorldSize.Y/2;
+        var bottomL = this.BottomL;
         
         for (var i = 0; i < this.GridSizeX; ++i)
         {
@@ -141,6 +148,13 @@ class Grid : ZilchComponent
     
     function NodeFromWorldPos(pos : Real3) : Node
     {
+        var worldOffset = pos - this.BottomL;
+        var localPos = Real2(worldOffset.X * this.GridSizeX / this.GridWorldSize.X, worldOffset.Y * this.GridSizeY / this.GridWorldSize.Y);
+        var gridPos = Integer2(localPos.X as Integer, localPos.Y as Integer);
+        //this.Space.CreateAtPosition(Archetype.MissingTexture_0, this.Grid[gridPos.X][gridPos.Y].WorldPos);
+        return this.Grid[gridPos.X][gridPos.Y];
+        
+        /*
         var percentX = (pos.X + this.GridWorldSize.X/2)/this.GridWorldSize.X;
         var percentY = (pos.Y + this.GridWorldSize.Y/2)/this.GridWorldSize.Y;
         percentX = Math.Clamp(percentX, 0, 1);
@@ -149,5 +163,6 @@ class Grid : ZilchComponent
         var x : Integer = ((this.GridSizeX - 1) * percentX) as Integer;
         var y : Integer = ((this.GridSizeY - 1) * percentY) as Integer;
         return this.Grid[x][y];
+        */
     }
 }
