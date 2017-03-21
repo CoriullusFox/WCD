@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.689476, 11.5792, 50],
+			Vec3 Translation = [-4.81928, 0.135387, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 49.6586,
+			float Size = 9.07185,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.689476, 11.5792, -1.19412e-006],
+			Vec3 LookTarget = [-4.81928, 0.135387, -1.58054e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -219,7 +219,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -250,11 +250,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TileMap",
+			string Name = "Walls TileMap",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -0.2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -271,8 +271,43 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "584fd4df00cf772a:FirstLevel_TileMap01",
+			string SourceName = "585472dcb7194604:FirstLevel_TileMap02",
 			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "Decor TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -0.1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "58547260d11fbefe:FirstLevel_TileMap03",
+			string PaletteName = "584fd7da8bf9792b:TileDecor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
 		},
