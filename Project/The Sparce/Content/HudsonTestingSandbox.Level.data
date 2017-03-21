@@ -104,6 +104,10 @@ Level =
 			bool Glow = true,
 			float GlowThreshold = 1,
 		},
+		DebugMode = 
+		{
+			bool DubugModeEnabled = false,
+		},
 	},
 	Cog = 
 	{
@@ -117,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0698052, -0.0588481, 55.0839],
+			Vec3 Translation = [0, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -137,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.0698052, -0.0588481, 5.08386],
+			Vec3 LookTarget = [0, 0, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

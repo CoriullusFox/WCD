@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5819c2376fedf85b:Player",
+		string Name = "5819c2376fedf85b:Entity_Player",
 	},
 	Transform = 
 	{
@@ -65,7 +65,7 @@ Cog =
 	Health = 
 	{
 		float ConfiguredHealth = 100,
-		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+		string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
 		bool MiniHeathBar = false,
 		bool Player = true,
 		float RegenRate = 1.5,
@@ -79,6 +79,7 @@ Cog =
 		bool FlamethrowerUnlocked = false,
 		bool BouncerUnlocked = false,
 		bool TeslaUnlocked = false,
+		bool ChainEUnlocked = false,
 		bool DisableLockedWeaponSelect = true,
 	},
 	EnergyStor = 
@@ -121,7 +122,7 @@ Cog =
 	},
 	Pistol = 
 	{
-		string Bullet = "583c4110d1935b64:BulletLargeLaser",
+		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
 		float Damage = 25,
 		float EnergyUse = 5,
 		float Energy = 0,
@@ -130,13 +131,9 @@ Cog =
 		float BulletSpeed = 25,
 		float CamZoom = 10,
 	},
-	DebugMode = 
-	{
-		bool DubugModeEnabled = false,
-	},
 	MuzzleFire = 
 	{
-		string MuzzleFireParticle = "583a04ce746741f7:MuzzleFire",
+		string MuzzleFireParticle = "583a04ce746741f7:Particle_MuzzleFire",
 	},
 	Hierarchy = 
 	{
