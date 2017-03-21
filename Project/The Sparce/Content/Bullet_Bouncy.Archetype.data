@@ -10,12 +10,12 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "582a50e058efc8d0:BouncyBullet",
+		string Name = "582a50e058efc8d0:Bullet_Bouncy",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [4, 4, 1],
+		Vec3 Translation = [-1.87427, 10.0702, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -82,7 +82,7 @@ Cog =
 		string MaterialName = "580b0045e6dd168a:Bouncy",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.1,
+		float Radius = 0.4,
 	},
 	BouncyBullet = 
 	{
