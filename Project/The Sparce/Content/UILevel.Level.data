@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.59135, -1.0898, 152.501],
+			Vec3 Translation = [-1.06662, -1.0898, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2532,
+			float Size = 29.7594,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.59135, -1.0898, 102.501],
+			Vec3 LookTarget = [-1.06662, -1.0898, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -174,6 +174,150 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "PauseMenuGroup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 102.5],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 5,
+				},
+				Named = 
+				{
+					string Name = "PauseText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 8, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.47, 0, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5820efc589857afa:TheSparceFont",
+					uint FontSize = 150,
+					string Text = "Paused",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 35,
+					bool Smoothing = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 6,
+				},
+				Named = 
+				{
+					string Name = "ButtonRestartBG",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -1, -98.5],
+					Vec3 Scale = [4, 4, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.355, 0, 0.000212951, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "580f2b89ad884eb2:sprite_smallbtn",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				SelectableScale = 
+				{
+					Vec3 ScaleDirection = [1, 1, 1],
+					Vec3 MaxScale = [4.5, 4.5, 1],
+					Vec3 MinScale = [4, 4, 1],
+					float ScaleSpeed = 2,
+				},
+				RestartButton = 
+				{
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 7,
+						},
+						Named = 
+						{
+							string Name = "ButtonRestart",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0.4, 1],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 0, 0.000599861, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5820efc589857afa:TheSparceFont",
+							uint FontSize = 150,
+							string Text = "RESTART",
+							TextAlign Align = Center,
+							float PixelsPerUnit = 256,
+							bool Smoothing = false,
+						},
+						Hierarchy = 
+						{
+						},
+					},
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
 			string Name = "FailMenu",
 		},
 		Transform = 
@@ -191,7 +335,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 5,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -209,7 +353,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 6,
+							uint Id = 10,
 						},
 						Named = 
 						{
@@ -245,7 +389,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 7,
+									uint Id = 11,
 								},
 								Named = 
 								{
@@ -284,7 +428,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 8,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -346,7 +490,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 9,
+									uint Id = 13,
 								},
 								Named = 
 								{
@@ -385,7 +529,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 14,
 						},
 						Named = 
 						{
@@ -449,7 +593,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 11,
+									uint Id = 15,
 								},
 								Named = 
 								{
@@ -492,7 +636,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -530,7 +674,7 @@ Level =
 		string Name = "5829ac33dea7de32:UI_SelectedWeapon",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -547,7 +691,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -568,7 +712,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 19,
 				},
 				Named = 
 				{
@@ -609,7 +753,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -627,7 +771,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
+					uint Id = 21,
 				},
 				Named = 
 				{
@@ -667,7 +811,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 18,
+					uint Id = 22,
 				},
 				Named = 
 				{
@@ -706,7 +850,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 19,
+					uint Id = 23,
 				},
 				Named = 
 				{
@@ -745,7 +889,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 20,
+					uint Id = 24,
 				},
 				Named = 
 				{
@@ -784,7 +928,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 25,
 				},
 				Named = 
 				{
@@ -823,7 +967,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 26,
 				},
 				Named = 
 				{

@@ -5,10 +5,10 @@
 ** FILE NAME
 **
 ** Author:
-** - Brandon
+** - Hudson Green
 **
 ** Contributors:
-** - Hudson Green
+** - <none>
 ** --------------------------------------------------------------------------*/
 
 class SelectableScale : ZilchComponent

@@ -121,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [0.844965, 1.46654, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9569,
+			float Size = 22.0464,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [0.844965, 1.46654, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -262,7 +262,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TileMap",
+			string Name = "Decor",
 		},
 		Transform = 
 		{
@@ -283,8 +283,8 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "58298810506a8b49:HudsonTestingSandbox_TileMap00",
-			string PaletteName = "5812cb923a82b921:SpaceStationTileSet",
+			string SourceName = "58548317db5ddcf1:HudsonTestingSandbox_TileMap07",
+			string PaletteName = "584fd7da8bf9792b:TileDecor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
 		},
@@ -297,41 +297,31 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Light",
+			string Name = "MainLayer",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.46717, 1.56642, 0],
+			Vec3 Translation = [0, 0, -0.05],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Light = 
+		MultiSprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			LightType LightType = Point,
 			Vec4 Color = [1, 1, 1, 1],
-			float Intensity = 1,
-			float Range = 2,
-			float Falloff = 1,
-			float Angle = 45,
-			float Size = 20,
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 		},
-		GodRayLight = 
+		TileMap = 
 		{
-			GodRayLightType LightType = Point,
-			bool Active = true,
-			int Samples = 80,
-			Vec4 Color = [0.725, 0, 0, 0.5],
-			float Intensity = 0.69,
-			float ScreenRadius = 0.47,
-			float OccluderClarity = 1,
-			bool ScreenEdgeFade = true,
-			float BeginFade = -0.1,
-			float EndFade = 0.1,
-			float DepthOffset = 1,
+			string SourceName = "58298810506a8b49:HudsonTestingSandbox_TileMap00",
+			string PaletteName = "5812cb923a82b921:SpaceStationTileSet",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
 		},
 	},
 	Cog = 
@@ -385,7 +375,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.46508, -1.2856, 0],
+			Vec3 Translation = [-4.51321, 5.6402, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -426,6 +416,51 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "Light",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.49961, 4.6753, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Light = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			LightType LightType = Point,
+			Vec4 Color = [1, 1, 1, 1],
+			float Intensity = 1,
+			float Range = 2,
+			float Falloff = 1,
+			float Angle = 45,
+			float Size = 20,
+		},
+		GodRayLight = 
+		{
+			GodRayLightType LightType = Point,
+			bool Active = true,
+			int Samples = 80,
+			Vec4 Color = [0.725, 0, 0, 0.5],
+			float Intensity = 0.69,
+			float ScreenRadius = 0.47,
+			float OccluderClarity = 1,
+			bool ScreenEdgeFade = true,
+			float BeginFade = -0.1,
+			float EndFade = 0.1,
+			float DepthOffset = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
 			string Name = "PlayerSpawnPoint",
 		},
 		Archetyped = 
@@ -455,7 +490,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -561,6 +596,96 @@ Level =
 			float BulletSpeed = 10,
 			float LifeLength = 1.5,
 			float CamZoom = 10,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "Light",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.49361, 4.6753, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Light = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			LightType LightType = Point,
+			Vec4 Color = [1, 1, 1, 1],
+			float Intensity = 1,
+			float Range = 2,
+			float Falloff = 1,
+			float Angle = 45,
+			float Size = 20,
+		},
+		GodRayLight = 
+		{
+			GodRayLightType LightType = Point,
+			bool Active = true,
+			int Samples = 80,
+			Vec4 Color = [0.725, 0, 0, 0.5],
+			float Intensity = 0.69,
+			float ScreenRadius = 0.47,
+			float OccluderClarity = 1,
+			bool ScreenEdgeFade = true,
+			float BeginFade = -0.1,
+			float EndFade = 0.1,
+			float DepthOffset = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "Light",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.47516, 5.66379, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Light = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			LightType LightType = Point,
+			Vec4 Color = [1, 1, 1, 1],
+			float Intensity = 1,
+			float Range = 2,
+			float Falloff = 1,
+			float Angle = 45,
+			float Size = 20,
+		},
+		GodRayLight = 
+		{
+			GodRayLightType LightType = Point,
+			bool Active = true,
+			int Samples = 80,
+			Vec4 Color = [0.725, 0, 0, 0.5],
+			float Intensity = 0.69,
+			float ScreenRadius = 0.47,
+			float OccluderClarity = 1,
+			bool ScreenEdgeFade = true,
+			float BeginFade = -0.1,
+			float EndFade = 0.1,
+			float DepthOffset = 1,
 		},
 	},
 },
