@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [9.75, 0, 0],
+		Vec3 Translation = [3.5, 32, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -96,14 +96,5 @@ Cog =
 	{
 		float SecondsBetweenDamage = 0.25,
 		float Damage = 10,
-	},
-	TeslaGun = 
-	{
-		float Damage = 20,
-		float EnergyUse = 100,
-		float Energy = 100,
-		float CooldownMax = 5,
-		bool Player = false,
-		float CamZoom = 10,
 	},
 },
