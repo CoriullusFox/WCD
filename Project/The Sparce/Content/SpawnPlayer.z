@@ -5,7 +5,7 @@ class SpawnPlayer : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        var player = Zero.ObjectStore.RestoreOrArchetype(this.PlayerToSpawn, this.PlayerToSpawn, this.Space);
+        var player = Zero.ObjectStore.RestoreOrArchetype("PlayerSave.wcd", this.PlayerToSpawn, this.Space);
         if(player != null)
         { 
             player.Transform.Translation = this.Owner.Transform.Translation;
