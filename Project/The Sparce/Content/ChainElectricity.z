@@ -51,6 +51,7 @@ class ChainElectricity : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
         //Cooldown logic
         this.Cooldown += event.Dt;
         if(this.Player)
@@ -87,13 +88,25 @@ class ChainElectricity : ZilchComponent
             {
                 
                 var temp : Cog = null;
-                var cast = this.Space.PhysicsSpace.CastSphereResults(this.Links[i].Transform.Translation, this.Radius, 10, filter);
+                var cast = this.Space.PhysicsSpace.CastSphereResults(this.Links[i].Transform.Translation, this.Radius, this.MaxLinks, filter);
+                
+                if(this.LevelSettings.DebugMode.DubugModeEnabled)
+                {
+                    var debugCircle = DebugCircle();
+                    debugCircle.Position(this.Links[i].Transform.Translation);
+                    debugCircle.Radius(this.Radius);
+                    debugCircle.Border(true);
+                    debugCircle.Filled(true);
+                    debugCircle.Axis(Real3(0,0,1));
+                    debugCircle.Duration(1);
+                    debugCircle.Draw();
+                }
                 for (var l = 0; l < cast.Size() /*|| cast.Empty()*/; ++l)
                 {
                     
                     if(cast.Current.ObjectHit.Name == "Enemy" && !this.ArrayContains(this.Links, cast.Current.ObjectHit))
                     {
-                        
+                        Console.WriteLine(temp);
                         if(temp == null || Math.Distance(this.Links[i].Transform.Translation, cast.Current.ObjectHit.Transform.Translation) < Math.Distance(this.Links[i].Transform.Translation, temp.Transform.Translation))
                         {
                             var dir = cast.Current.ObjectHit.Transform.Translation - this.Links[i].Transform.Translation;

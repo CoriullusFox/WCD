@@ -31,6 +31,10 @@ class AStarPathfind : ZilchComponent
         var targetNode = this.Grid.NodeFromWorldPos(goal);
         
         var count = 0;
+        if(targetNode == null || startNode == null)
+        {
+            return null;
+        }
         while(!targetNode.Walkable || count >= 8)
         {
             ++count;

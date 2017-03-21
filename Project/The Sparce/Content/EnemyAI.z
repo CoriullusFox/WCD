@@ -67,7 +67,7 @@ class EnemyAI : ZilchComponent
             
             var temp = this.Path[0].WorldPos;
             //draw debug lines
-            if(this.Debug)
+            if(this.Debug || this.LevelSettings.DebugMode.DubugModeEnabled)
                 {
                 for (var i = 1; i < this.Path.Count; ++i)
                 {
@@ -97,11 +97,12 @@ class EnemyAI : ZilchComponent
                     var playerPos = player.Transform.Translation - Real3(0, player.Transform.Scale.Y / 4, 0);
                     this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(myPos, playerPos);
                 }
-                if(this.Path.Count > 0)
+                if(this.Pathfind && this.Path != null && this.Path.Count > 0)
                 {
                     this.Path.RemoveAt(0);
                 }
-                if(this.Path.Count > 0) this.MoveDirection = this.Path[0].WorldPos - this.Owner.Transform.Translation;
+                if(this.Path != null && this.Path.Count > 0) 
+                    this.MoveDirection = this.Path[0].WorldPos - this.Owner.Transform.Translation;
             }
             
             this.Move(this.MoveDirection);
@@ -114,14 +115,14 @@ class EnemyAI : ZilchComponent
         if(distanceFromPlayer < this.ChaseProximity)
         {
             
-            if((this.Path.Count <= 1 || this.Timer <= 0) && this.PathFindTimer <= 0 && this.Pathfind)
+            if((this.Path != null && this.Path.Count <= 1 || this.Timer <= 0) && this.PathFindTimer <= 0 && this.Pathfind && this.Path != null)
             {
                 this.PathFindTimer = 0.25;
                 this.Timer = this.ResponceTime;
                 this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation);
             }
             
-            if(!this.Pathfind || this.Path.Count <= 1)
+            if(!this.Pathfind || this.Path == null)
             {
                 
                 this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;

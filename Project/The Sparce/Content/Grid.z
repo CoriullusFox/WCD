@@ -152,6 +152,10 @@ class Grid : ZilchComponent
         var localPos = Real2(worldOffset.X * this.GridSizeX / this.GridWorldSize.X, worldOffset.Y * this.GridSizeY / this.GridWorldSize.Y);
         var gridPos = Integer2(localPos.X as Integer, localPos.Y as Integer);
         //this.Space.CreateAtPosition(Archetype.MissingTexture_0, this.Grid[gridPos.X][gridPos.Y].WorldPos);
+        if(gridPos.X >= this.GridSizeX || gridPos.Y >= this.GridSizeY || gridPos.X < 0 || gridPos.Y < 0)
+        {
+            return null;
+        }
         return this.Grid[gridPos.X][gridPos.Y];
         
         /*
