@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5819e0dc33f34ca0:Enemy",
+		string Name = "5819e0dc33f34ca0:Entity_Enemy",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-28.539, 12.6769, -3.8147e-006],
+		Vec3 Translation = [9.75, 0, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -75,7 +75,7 @@ Cog =
 	Health = 
 	{
 		float ConfiguredHealth = 50,
-		string ArchetypeAmmoBar = "5819b1a1fc281cba:HealthBar",
+		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
 		float RegenRate = 0.5,
@@ -96,5 +96,14 @@ Cog =
 	{
 		float SecondsBetweenDamage = 0.25,
 		float Damage = 10,
+	},
+	TeslaGun = 
+	{
+		float Damage = 20,
+		float EnergyUse = 100,
+		float Energy = 100,
+		float CooldownMax = 5,
+		bool Player = false,
+		float CamZoom = 10,
 	},
 },

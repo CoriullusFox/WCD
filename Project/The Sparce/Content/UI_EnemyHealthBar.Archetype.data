@@ -8,10 +8,6 @@ Cog =
 	{
 		string Name = "HealthBar",
 	},
-	Archetyped = 
-	{
-		string Name = "5819b1a1fc281cba:UI_HealthBar",
-	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -28,7 +24,7 @@ Cog =
 		BlendMode BlendMode = Additive,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "585465dd7d6ee3bb:UI_Bar",
+		string SpriteSource = "5844c38b22f58933:UI_EnemyBar",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
