@@ -43,6 +43,9 @@ class Shotgun : ZilchComponent
     var BulletSpeed : Real = 25;
     
     [Property]
+    var LifeLength : Real = 1.5;
+    
+    [Property]
     var CamZoom : Real = 10;
     function Initialize(init : CogInitializer)
     {
@@ -107,7 +110,7 @@ class Shotgun : ZilchComponent
                             createdBullet.Transform.Translation += newDirection;
                             createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
                             
-                            createdBullet.Despawn.LifeLength = 0.5;
+                            createdBullet.Despawn.LifeLength = this.LifeLength;
                             
                             //set whether or not the bullet is from the player
                             createdBullet.BulletScript.PlayerBullet = this.Player;

@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class Pistol : ZilchComponent
@@ -34,7 +34,10 @@ class Pistol : ZilchComponent
     var Player : Boolean = false;
     
     [Property]
-    var BulletSpeed : Real = 25;
+    var BulletSpeed : Real = 10;
+    
+    [Property]
+    var LifeLength : Real = 1.5;
     
     [Property]
     var CamZoom : Real = 10;
@@ -108,7 +111,7 @@ class Pistol : ZilchComponent
                     createdBullet.Transform.Translation += newDirection;
                     createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * this.BulletSpeed;
                     
-                    createdBullet.Despawn.LifeLength = 0.5;
+                    createdBullet.Despawn.LifeLength = this.LifeLength;
                     
                     //set whether or not the bullet is from the player
                     createdBullet.BulletScript.PlayerBullet = this.Player;

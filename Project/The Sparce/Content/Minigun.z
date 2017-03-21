@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class Minigun : ZilchComponent
@@ -35,6 +35,9 @@ class Minigun : ZilchComponent
     
     [Property]
     var BulletSpeed : Real = 25;
+    
+    [Property]
+    var LifeLength : Real = 3.5;
     
     [Property]
     var CamZoom : Real = 9;
@@ -102,7 +105,7 @@ class Minigun : ZilchComponent
                     createdBullet.Transform.Translation += newDirection;
                     createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * (this.BulletSpeed - randGen.Range(10, -10));
                     
-                    createdBullet.Despawn.LifeLength = 0.5;
+                    createdBullet.Despawn.LifeLength = this.LifeLength;
                     
                     //set whether or not the bullet is from the player
                     createdBullet.BulletScript.PlayerBullet = this.Player;

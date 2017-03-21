@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class BeamLaser : ZilchComponent
@@ -32,6 +32,9 @@ class BeamLaser : ZilchComponent
     
     [Property]
     var Player : Boolean = false;
+    
+    [Property]
+    var LifeLength : Real = 2.5;
     
     [Property]
     var CamZoom : Real = 20;
@@ -100,7 +103,7 @@ class BeamLaser : ZilchComponent
                     
                     createdBullet.Transform.Translation += newDirection * 0.2;
                     
-                    createdBullet.Despawn.LifeLength = 2;
+                    createdBullet.Despawn.LifeLength = this.LifeLength;
                     
                     //set whether or not the beam is from the player
                     createdBullet.Beam.PlayerBeam = this.Player;
