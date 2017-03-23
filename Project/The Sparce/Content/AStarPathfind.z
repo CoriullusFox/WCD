@@ -127,7 +127,7 @@ class AStarPathfind : ZilchComponent
         
         //reverse revPath into path
         var path = Array[Node]();
-        for(var i = revPath.Count - 1; i > 0; --i)
+        for(var i = revPath.Count - 1; i >= 0; --i)
         {
             
             path.Add(revPath[i]);

@@ -93,8 +93,9 @@ class EnemyAI : ZilchComponent
                 {
                     this.PathFindTimer = 0.25;
                     this.Timer = this.ResponceTime;
-                    var myPos = this.Owner.Transform.Translation - Real3(0, this.Owner.Transform.Scale.Y / 4, 0);
-                    var playerPos = player.Transform.Translation - Real3(0, player.Transform.Scale.Y / 4, 0);
+                    var myPos = this.Owner.Transform.Translation;// - Real3(0, this.Owner.Transform.Scale.Y / 2, 0);
+                    var playerPos = player.Transform.Translation;// - Real3(0, player.Transform.Scale.Y / 2, 0);
+                    
                     this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(myPos, playerPos);
                 }
                 if(this.Pathfind && this.Path != null && this.Path.Count > 0)

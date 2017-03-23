@@ -11,7 +11,7 @@ class DetectVictory : ZilchComponent
         {
             
             
-            Zero.ObjectStore.Store("..\\..\\PlayerSave.wcd", this.Space.FindObjectByName("TempPlayer"));
+            Zero.ObjectStore.Store("PlayerSave.wcd", this.Space.FindObjectByName("TempPlayer"));
             Console.WriteLine("VICTORY!");
             this.Space.TimeSpace.Paused = true;
             

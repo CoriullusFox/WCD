@@ -156,6 +156,12 @@ class Grid : ZilchComponent
         {
             return null;
         }
+        
+        if(this.LevelSettings.DebugMode.DubugModeEnabled)
+        {
+            this.Space.CreateAtPosition(Archetype.MissingTexture_0, this.Grid[gridPos.X][gridPos.Y].WorldPos);
+        }
+        
         return this.Grid[gridPos.X][gridPos.Y];
         
         /*
