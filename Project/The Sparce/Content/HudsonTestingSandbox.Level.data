@@ -111,6 +111,12 @@ Level =
 		PlayerHealthSaving = 
 		{
 		},
+		Pause = 
+		{
+		},
+		GameStateManager = 
+		{
+		},
 	},
 	Cog = 
 	{

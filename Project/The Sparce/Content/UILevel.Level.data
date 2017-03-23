@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7594,
+			float Size = 32.8893,
 		},
 		EditorCameraController = 
 		{
@@ -182,6 +182,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		UIPauseGame = 
+		{
+		},
 		Hierarchy = 
 		{
 			Cog = 
@@ -192,11 +195,46 @@ Level =
 				},
 				Named = 
 				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -97.5],
+					Vec3 Scale = [100, 100, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 0.5],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 6,
+				},
+				Named = 
+				{
 					string Name = "PauseText",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 8, 0],
+					Vec3 Translation = [0, 8, -97.5],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -222,7 +260,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -273,7 +311,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 7,
+							uint Id = 8,
 						},
 						Named = 
 						{
@@ -314,7 +352,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -335,7 +373,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -353,7 +391,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -389,7 +427,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 11,
+									uint Id = 12,
 								},
 								Named = 
 								{
@@ -428,7 +466,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -490,7 +528,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 13,
+									uint Id = 14,
 								},
 								Named = 
 								{
@@ -529,7 +567,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 15,
 						},
 						Named = 
 						{
@@ -593,7 +631,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 15,
+									uint Id = 16,
 								},
 								Named = 
 								{
@@ -636,7 +674,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -674,7 +712,7 @@ Level =
 		string Name = "5829ac33dea7de32:UI_SelectedWeapon",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -691,7 +729,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -712,7 +750,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 19,
+					uint Id = 20,
 				},
 				Named = 
 				{
@@ -753,7 +791,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -771,7 +809,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 22,
 				},
 				Named = 
 				{
@@ -811,7 +849,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 23,
 				},
 				Named = 
 				{
@@ -850,7 +888,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
+					uint Id = 24,
 				},
 				Named = 
 				{
@@ -889,7 +927,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 24,
+					uint Id = 25,
 				},
 				Named = 
 				{
@@ -928,7 +966,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 25,
+					uint Id = 26,
 				},
 				Named = 
 				{
@@ -967,7 +1005,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 27,
 				},
 				Named = 
 				{

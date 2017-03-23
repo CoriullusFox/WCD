@@ -19,6 +19,7 @@ class Shoot : ZilchEvent
     var Player : Boolean = false;
     
 }
+
 class Hurt : ZilchEvent
 {
     
@@ -26,6 +27,7 @@ class Hurt : ZilchEvent
     var Damage : Real = 0;
     
 }
+
 class Energy : ZilchEvent
 {
     
@@ -33,6 +35,7 @@ class Energy : ZilchEvent
     var Energy : Real = 0;
     
 }
+
 class Cooldown : ZilchEvent
 {
     
@@ -41,6 +44,7 @@ class Cooldown : ZilchEvent
     var MaxCooldown : Real;
     
 }
+
 class HealthToUI : ZilchEvent
 {
     
@@ -49,6 +53,7 @@ class HealthToUI : ZilchEvent
     var MaxHealth : Real;
     
 }
+
 class SelectedGun : ZilchEvent
 {
     
@@ -57,7 +62,14 @@ class SelectedGun : ZilchEvent
     var Unlocked : Boolean;
     
 }
+
 class PlayerDeath : ZilchEvent
 {
     sends PlayerDeath : PlayerDeath;
+}
+
+class EventPause : ZilchEvent
+{
+    sends EventPause : EventPause;
+    var Paused : Boolean;
 }

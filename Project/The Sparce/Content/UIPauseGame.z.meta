@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "UIPauseGame",
+		uint64 ResourceId = 585100c3e52e1979,
+	},
+},
