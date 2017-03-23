@@ -28,7 +28,7 @@ class WeaponPickup : ZilchComponent
             var toSend = UnlockorUpgrade();
             if(this.Unlocked == "Pistol")
             {
-                event.OtherObject.UpgradeManager.PistolTier != 1;
+                event.OtherObject.UpgradeManager.PistolTier += 1;
                 toSend.Name = "Pistol";
                 toSend.Tier = event.OtherObject.UpgradeManager.PistolTier;
             }
@@ -40,7 +40,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.MinigunTier != 1;
+                    event.OtherObject.UpgradeManager.MinigunTier += 1;
                 }
                 toSend.Name = "Minigun";
                 toSend.Tier = event.OtherObject.UpgradeManager.MinigunTier;
@@ -54,7 +54,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.ShotgunTier != 1;
+                    event.OtherObject.UpgradeManager.ShotgunTier += 1;
                 }
                 toSend.Name = "Shotgun";
                 toSend.Tier = event.OtherObject.UpgradeManager.ShotgunTier;
@@ -68,7 +68,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.RifleTier != 1;
+                    event.OtherObject.UpgradeManager.RifleTier += 1;
                 }
                 toSend.Name = "Rifle";
                 toSend.Tier = event.OtherObject.UpgradeManager.RifleTier;
@@ -82,7 +82,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.BeamlaserTier != 1;
+                    event.OtherObject.UpgradeManager.BeamlaserTier += 1;
                 }
                 toSend.Name = "BeamLaser";
                 toSend.Tier = event.OtherObject.UpgradeManager.BeamlaserTier;
@@ -95,7 +95,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.FlamethrowerTier != 1;
+                    event.OtherObject.UpgradeManager.FlamethrowerTier += 1;
                 }
                 toSend.Name = "FlameThrower";
                 toSend.Tier = event.OtherObject.UpgradeManager.FlamethrowerTier;
@@ -108,7 +108,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.BouncerTier != 1;
+                    event.OtherObject.UpgradeManager.BouncerTier += 1;
                 }
                 toSend.Name = "Bouncer";
                 toSend.Tier = event.OtherObject.UpgradeManager.BouncerTier;
@@ -121,7 +121,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.TeslaTier != 1;
+                    event.OtherObject.UpgradeManager.TeslaTier += 1;
                 }
                 toSend.Name = "TeslaGun";
                 toSend.Tier = event.OtherObject.UpgradeManager.TeslaTier;
@@ -134,7 +134,7 @@ class WeaponPickup : ZilchComponent
                 }
                 else
                 {
-                    event.OtherObject.UpgradeManager.ChainETier != 1;
+                    event.OtherObject.UpgradeManager.ChainETier += 1;
                 }
                 toSend.Name = "ChainElectricity";
                 toSend.Tier = event.OtherObject.UpgradeManager.ChainETier;

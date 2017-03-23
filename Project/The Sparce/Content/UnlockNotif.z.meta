@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "UnlockNotif",
+		uint64 ResourceId = 58511de34fdf4d62,
+	},
+},
