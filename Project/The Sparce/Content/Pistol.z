@@ -19,7 +19,7 @@ class Pistol : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_LargeLaser;
     
     [Property]
-    var Damage : Real = 25;
+    var Damage : Real = 1.0;
     
     [Property]
     var EnergyUse : Real = 1;

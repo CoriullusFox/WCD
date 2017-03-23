@@ -16,10 +16,10 @@ class TeslaGun : ZilchComponent
     var Cooldown : Real = 0;
     
     [Property]
-    var Damage : Real = 20;
+    var Damage : Real = 25;
     
     [Property]
-    var EnergyUse : Real = 100;
+    var EnergyUse : Real = 99;
     
     [Property]
     var Energy : Real = 100;
@@ -31,7 +31,7 @@ class TeslaGun : ZilchComponent
     var Player : Boolean = false;
     
     [Property]
-    var CamZoom : Real = 10;
+    var CamZoom : Real = 30;
     function Initialize(init : CogInitializer)
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;

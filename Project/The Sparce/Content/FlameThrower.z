@@ -19,22 +19,22 @@ class FlameThrower : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_FlamethrowerAmmo;
     
     [Property]
-    var DPS : Real = 50;
+    var DPS : Real = 10;
     
     [Property]
-    var EnergyUse : Real = 75;
+    var EnergyUse : Real = 6;
     
     [Property]
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 2.5;
+    var CooldownMax : Real = 0.2;
     
     [Property]
     var Player : Boolean = false;
     
     [Property]
-    var CamZoom : Real = 10;
+    var CamZoom : Real = 15;
     
     function Initialize(init : CogInitializer) 
     {

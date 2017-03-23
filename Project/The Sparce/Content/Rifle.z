@@ -27,19 +27,19 @@ class Rifle : ZilchComponent
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 1.5;
+    var CooldownMax : Real = 2.5;
     
     [Property]
     var Player : Boolean = false;
     
     [Property]
-    var BulletSpeed : Real = 25;
+    var BulletSpeed : Real = 35;
     
     [Property]
-    var LifeLength : Real = 1.5;
+    var LifeLength : Real = 3.0;
     
     [Property]
-    var CamZoom : Real = 10;
+    var CamZoom : Real = 50.0;
     function Initialize(init : CogInitializer)
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;

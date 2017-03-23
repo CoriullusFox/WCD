@@ -22,13 +22,13 @@ class Shotgun : ZilchComponent
     var NumberOfShots : Integer = 5;
     
     [Property]
-    var DamagePerBullet : Real = 25;
+    var DamagePerBullet : Real = 10;
     
     [Property]
     var DistBetweenShots : Real = 0.1;
     
     [Property]
-    var EnergyUse : Real = 25.0;
+    var EnergyUse : Real = 12.5;
     
     [Property]
     var Energy : Real = 100.0;
@@ -40,13 +40,13 @@ class Shotgun : ZilchComponent
     var Player : Boolean = false;
     
     [Property]
-    var BulletSpeed : Real = 25;
+    var BulletSpeed : Real = 18;
     
     [Property]
-    var LifeLength : Real = 1.5;
+    var LifeLength : Real = 0.5;
     
     [Property]
-    var CamZoom : Real = 10;
+    var CamZoom : Real = 5;
     function Initialize(init : CogInitializer)
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;

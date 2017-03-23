@@ -56,10 +56,13 @@ class Health : ZilchComponent
 
     function OnHurt(event : Hurt)
     {
+        Console.WriteLine("OWWW");
+        
         this.ConfiguredHealth -= event.Damage;
         
         this.Owner.Sprite.Color = this.HurtColor;
         
+        this.HurtTimer = this.HurtDuration;
         this.IsHurt = true;
     }
 
@@ -74,7 +77,6 @@ class Health : ZilchComponent
             else
             {
                 this.Owner.Sprite.Color = Real4(1.0, 1.0, 1.0, 1.0);
-                this.HurtTimer = this.HurtDuration;
                 this.IsHurt = false;
             }
         }
@@ -130,6 +132,17 @@ class Health : ZilchComponent
             else
             {
                 //This is temporary until we decide to make the enemies deaths perminent
+                
+                this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
+                
+                this.Owner.Sprite.AnimationActive = false;
+                
+                this.Owner.Sprite.CurrentFrame = 1;
+                
+                this.Space.CreateAtPosition(Archetype.Particle_BlackDots, this.Owner.Transform.Translation);
+                
+                this.Space.CreateAtPosition(Archetype.Particle_WhiteExplosion, this.Owner.Transform.Translation);
+                
                 this.Owner.Destroy();
             }
             

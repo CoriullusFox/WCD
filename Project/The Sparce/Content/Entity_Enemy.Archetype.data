@@ -103,13 +103,13 @@ Cog =
 	Pistol = 
 	{
 		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
-		float Damage = 10,
+		float Damage = 5,
 		float EnergyUse = 1,
 		float Energy = 100,
 		float CooldownMax = 1,
 		bool Player = false,
 		float BulletSpeed = 10,
-		float LifeLength = 1.5,
+		float LifeLength = 10,
 		float CamZoom = 10,
 	},
 },
