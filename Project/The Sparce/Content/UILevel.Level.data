@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.66673, -13.4544, 152.501],
+			Vec3 Translation = [-10.683, -11.4575, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2872,
+			float Size = 13.5336,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-7.66673, -13.4544, 102.501],
+			Vec3 LookTarget = [-10.683, -11.4575, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -176,6 +176,11 @@ Level =
 		{
 			string Name = "PauseMenuGroup",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 102.5],
@@ -196,6 +201,11 @@ Level =
 				Named = 
 				{
 					string Name = "Sprite",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -232,6 +242,11 @@ Level =
 				{
 					string Name = "PauseText",
 				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
 				Transform = 
 				{
 					Vec3 Translation = [0, 8, -97.5],
@@ -265,6 +280,11 @@ Level =
 				Named = 
 				{
 					string Name = "ButtonRestartBG",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -744,7 +764,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-18.25, -12.25, 102.5],
+			Vec3 Translation = [-18.25, -12.25, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -756,11 +776,66 @@ Level =
 		},
 		Hierarchy = 
 		{
+			ArchetypeInstance = 
+			{
+				string Name = "5829ac33dea7de32:UI_SelectedWeapon",
+				LinkId = 
+				{
+					uint Id = 20,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.15, 0],
+					Vec3 Scale = [7.5, 7.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "UISelectedWeapon",
+				},
+			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 20,
+					uint Id = 21,
+				},
+				Named = 
+				{
+					string Name = "SelectedWeapon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2, 1.25, 0],
+					Vec3 Scale = [1.5, 1.5, 13],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 1, 0, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5820efc589857afa:TheSparceFont",
+					uint FontSize = 85,
+					string Text = "Pistol (Tier 1)",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 256,
+					bool Smoothing = false,
+				},
+				DisplaySelected = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 22,
 				},
 				Named = 
 				{
@@ -768,7 +843,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.33899, 0.388731, -102.5],
+					Vec3 Translation = [2, 0.5, 1],
 					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
@@ -800,7 +875,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 23,
 				},
 				Named = 
 				{
@@ -808,7 +883,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.33899, 0.138731, -102.5],
+					Vec3 Translation = [2, 0.25, 1],
 					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
@@ -839,7 +914,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 24,
 				},
 				Named = 
 				{
@@ -847,7 +922,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.33899, -0.111269, -102.5],
+					Vec3 Translation = [2, 0, 1],
 					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
@@ -878,84 +953,6 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
-				},
-				Named = 
-				{
-					string Name = "BackgroundBar",
-				},
-				Archetyped = 
-				{
-					string Name = "58088dbda434152e:UI_BackgroundBar",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.33899, 0.388731, -103],
-					Vec3 Scale = [0.2, 3.5, 1],
-					Quat Rotation = [0, 0, 0.707107, 0.707107],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0.25],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "585465dd7d6ee3bb:UI_Bar",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 24,
-				},
-				Named = 
-				{
-					string Name = "BackgroundBar",
-				},
-				Archetyped = 
-				{
-					string Name = "58088dbda434152e:UI_BackgroundBar",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.33899, 0.138731, -103],
-					Vec3 Scale = [0.2, 3.5, 1],
-					Quat Rotation = [0, 0, 0.707107, 0.707107],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0.25],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "585465dd7d6ee3bb:UI_Bar",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
 					uint Id = 25,
 				},
 				Named = 
@@ -968,7 +965,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.33899, -0.111269, -103],
+					Vec3 Translation = [2, 0.5, 0],
 					Vec3 Scale = [0.2, 3.5, 1],
 					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
@@ -991,22 +988,43 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "5829ac33dea7de32:UI_SelectedWeapon",
 				LinkId = 
 				{
 					uint Id = 26,
 				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.35026, -0.0604949, -102.5],
-					Vec3 Scale = [7.5, 7.5, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
 				Named = 
 				{
-					string Name = "UISelectedWeapon",
+					string Name = "BackgroundBar",
+				},
+				Archetyped = 
+				{
+					string Name = "58088dbda434152e:UI_BackgroundBar",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2, 0.25, 0],
+					Vec3 Scale = [0.2, 3.5, 1],
+					Quat Rotation = [0, 0, 0.707107, 0.707107],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.25],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585465dd7d6ee3bb:UI_Bar",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
 				},
 			},
 			Cog = 
@@ -1017,33 +1035,35 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SelectedWeapon",
+					string Name = "BackgroundBar",
+				},
+				Archetyped = 
+				{
+					string Name = "58088dbda434152e:UI_BackgroundBar",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.3602, 1.14934, -102.5],
-					Vec3 Scale = [1.5, 1.5, 13],
-					Quat Rotation = [0, 0, 0, 1],
+					Vec3 Translation = [2, 0, 0],
+					Vec3 Scale = [0.2, 3.5, 1],
+					Quat Rotation = [0, 0, 0.707107, 0.707107],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0, 1, 0, 1],
+					Vec4 Color = [1, 1, 1, 0.25],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "5820efc589857afa:TheSparceFont",
-					uint FontSize = 85,
-					string Text = "Pistol (Tier 1)",
-					TextAlign Align = Left,
-					float PixelsPerUnit = 256,
-					bool Smoothing = false,
-				},
-				DisplaySelected = 
-				{
+					string SpriteSource = "585465dd7d6ee3bb:UI_Bar",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
 				},
 			},
 		},
