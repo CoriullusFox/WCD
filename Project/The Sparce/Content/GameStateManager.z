@@ -46,7 +46,15 @@ class GameStateManager : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.F))
         {
             this.EnableFullscreen = !this.EnableFullscreen;
-            this.GameSession.ChangeResolution(this.EnableFullscreen, Real2(this.ResX, this.ResY));
+            if(this.EnableFullscreen)
+            {
+                var screenRes = Real2(1920, 1080);
+                this.GameSession.ChangeResolution(false, screenRes);
+            }
+            else
+            {
+                this.GameSession.ChangeResolution(false, Real2(808, 520));
+            }
         }
     }
 
