@@ -43,9 +43,22 @@ class WeaponSwap : ZilchComponent
     
     
     var Selected : Integer = 0;
+    
+    var Once : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(!this.Once)
+        {
+            this.Once = !this.Once;
+            this.RemoveComponents();
+            this.AddNewComponent("Pistol", true);
+        }
     }
     
     function OnMouseScroll(event : ViewportMouseEvent)
@@ -159,12 +172,6 @@ class WeaponSwap : ZilchComponent
     }
     function AddNewComponent(name : String, unlocked : Boolean)
     {
-        
-        var sendSelected = SelectedGun();
-        sendSelected.Selected = name;
-        sendSelected.Unlocked = unlocked;
-        this.GameSession.DispatchEvent(Events.SelectedGun, sendSelected);
-        
         if(unlocked)
         {
             //send shoot event to tell script that is's on a player
@@ -215,7 +222,12 @@ class WeaponSwap : ZilchComponent
             
             //send shoot event to tell script that is's on a player
             this.Owner.DispatchEvent(Events.Shoot, toSend);
+        
         }
+        var sendSelected = SelectedGun();
+        sendSelected.Selected = name;
+        sendSelected.Unlocked = unlocked;
+        this.GameSession.DispatchEvent(Events.SelectedGun, sendSelected);
         
     }
     

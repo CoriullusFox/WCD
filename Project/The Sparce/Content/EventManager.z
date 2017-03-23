@@ -73,3 +73,9 @@ class EventPause : ZilchEvent
     sends EventPause : EventPause;
     var Paused : Boolean;
 }
+
+class Tier : ZilchEvent
+{
+    sends Tier : Tier;
+    var Tier : Integer;
+}

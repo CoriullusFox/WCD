@@ -1,11 +1,17 @@
 class DisplaySelected : ZilchComponent
 {
     
-    var WeaponTier : String = "1";
+    var WeaponTier : Integer = 1;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.GameSession, Events.SelectedGun, this.OnSelectedGun);
+        Zero.Connect(this.GameSession, Events.Tier, this.OnTier);
+    }
+
+    function OnTier(event : Tier)
+    {
+        this.WeaponTier = event.Tier;
     }
 
     function OnSelectedGun(event : SelectedGun)
@@ -14,7 +20,7 @@ class DisplaySelected : ZilchComponent
         if(event.Unlocked)
         {
             
-            this.Owner.SpriteText.Text = String.Concatenate(event.Selected, String.Concatenate(" (Tier ", String.Concatenate(this.WeaponTier, ")")));
+            this.Owner.SpriteText.Text = ("`event.Selected` (Tier `this.WeaponTier`)");
             
         }
         else
