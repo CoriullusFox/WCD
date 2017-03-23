@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.87717, -11.881, 152.501],
+			Vec3 Translation = [-14.0592, -15.2076, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-9.87717, -11.881, 102.501],
+			Vec3 LookTarget = [-14.0592, -15.2076, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1068,7 +1068,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
 			string Text = "Sprite Text...",
 			TextAlign Align = Center,
