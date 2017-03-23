@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "ResolutionManager",
-		uint64 ResourceId = 5851033270d107c4,
-	},
-},

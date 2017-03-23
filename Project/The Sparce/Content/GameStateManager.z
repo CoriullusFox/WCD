@@ -8,14 +8,38 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class GameStateManager : ZilchComponent
 {
+    
+    [Property]
+    var EnableFullscreen : Boolean = false;
+    
+    var ResX : Real = 1920;
+    var ResY : Real = 1080;
+    
     function Initialize(init : CogInitializer)
     {
+        
+        this.ResX = this.GameSession.Resolution.X;
+        this.ResY = this.GameSession.Resolution.Y;
+        
+        this.Space.LevelSettings.CameraViewport.ResolutionOrAspect = Real2(this.ResX, this.ResY);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.F))
+        {
+            this.EnableFullscreen = !this.EnableFullscreen;
+            this.GameSession.ChangeResolution(this.EnableFullscreen, Real2(this.ResX, this.ResY));
+        }
     }
 
     function OnGameRequestQuit(event : GameEvent)
