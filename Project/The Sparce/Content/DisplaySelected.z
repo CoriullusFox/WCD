@@ -3,10 +3,20 @@ class DisplaySelected : ZilchComponent
     
     var WeaponTier : Integer = 1;
     
+    var Selected : String = "Pistol";
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.GameSession, Events.SelectedGun, this.OnSelectedGun);
         Zero.Connect(this.GameSession, Events.Tier, this.OnTier);
+        Zero.Connect(this.GameSession, Events.UnlockorUpgrade, this.OnUnlockorUpgrade);
+    }
+
+    function OnUnlockorUpgrade(event : UnlockorUpgrade)
+    {
+        if(this.Selected == event.Name)
+        {
+            this.Owner.SpriteText.Text = ("`event.Name` (Tier `event.Tier`)");
+        }
     }
 
     function OnTier(event : Tier)
@@ -20,6 +30,7 @@ class DisplaySelected : ZilchComponent
         if(event.Unlocked)
         {
             
+            this.Selected = event.Selected;
             this.Owner.SpriteText.Text = ("`event.Selected` (Tier `this.WeaponTier`)");
             
         }

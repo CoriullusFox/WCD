@@ -93,6 +93,7 @@ Level =
 		},
 		GameStateManager = 
 		{
+			bool EnableFullscreen = false,
 		},
 		Pause = 
 		{
@@ -144,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.383934, 0.133423, 50],
+			Vec3 Translation = [-8.2301, -6.07356, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -156,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90609,
+			float Size = 12.0993,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.383934, 0.133423, 1.67813e-008],
+			Vec3 LookTarget = [-8.2301, -6.07356, -3.5975e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -369,7 +370,10 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
 			float RegenRate = 0.5,
+			float MaxHealth = 0,
+			float HurtDuration = 0.1,
 		},
 		RigidBody = 
 		{
@@ -681,7 +685,10 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
 			float RegenRate = 0.5,
+			float MaxHealth = 0,
+			float HurtDuration = 0.1,
 		},
 		RigidBody = 
 		{
@@ -781,7 +788,10 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
 			float RegenRate = 0.5,
+			float MaxHealth = 0,
+			float HurtDuration = 0.1,
 		},
 		RigidBody = 
 		{
@@ -881,7 +891,10 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
 			float RegenRate = 0.5,
+			float MaxHealth = 0,
+			float HurtDuration = 0.1,
 		},
 		RigidBody = 
 		{
@@ -981,7 +994,10 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
 			float RegenRate = 0.5,
+			float MaxHealth = 0,
+			float HurtDuration = 0.1,
 		},
 		RigidBody = 
 		{
@@ -1081,7 +1097,10 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
 			float RegenRate = 0.5,
+			float MaxHealth = 0,
+			float HurtDuration = 0.1,
 		},
 		RigidBody = 
 		{
@@ -1181,7 +1200,10 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
 			float RegenRate = 0.5,
+			float MaxHealth = 0,
+			float HurtDuration = 0.1,
 		},
 		RigidBody = 
 		{
@@ -1199,6 +1221,59 @@ Level =
 		{
 			float SecondsBetweenDamage = 0.25,
 			float Damage = 10,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8.81857, -7.24153, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "4e07948c35993095:DefaultSprite",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "Pistol",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 },
