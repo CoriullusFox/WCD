@@ -51,6 +51,7 @@ class UpgradeManager : ZilchComponent
                     
                     
                 }
+                
             }
             if(event.Selected == "Shotgun")
             {
