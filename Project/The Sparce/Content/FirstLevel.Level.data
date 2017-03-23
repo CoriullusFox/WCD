@@ -102,6 +102,7 @@ Level =
 		},
 		GameStateManager = 
 		{
+			bool EnableFullscreen = false,
 		},
 		Pause = 
 		{
@@ -128,7 +129,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.18981, 0.513834, 50],
+			Vec3 Translation = [-7.5256, 3.90112, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -140,7 +141,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.3386,
+			float Size = 27.2532,
 		},
 		EditorCameraController = 
 		{
@@ -148,7 +149,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.18981, 0.513834, -3.33433e-007],
+			Vec3 LookTarget = [-7.5256, 3.90112, -1.7926e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -324,7 +325,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Decor TileMap",
+			string Name = "Wall Decor TileMap",
 		},
 		Transform = 
 		{
