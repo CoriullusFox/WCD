@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.5, 32, 0],
+		Vec3 Translation = [11.5, 4, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -78,7 +78,10 @@ Cog =
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
+		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		float RegenRate = 0.5,
+		float MaxHealth = 0,
+		float HurtDuration = 0.1,
 	},
 	RigidBody = 
 	{
@@ -96,5 +99,17 @@ Cog =
 	{
 		float SecondsBetweenDamage = 0.25,
 		float Damage = 10,
+	},
+	Pistol = 
+	{
+		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
+		float Damage = 10,
+		float EnergyUse = 1,
+		float Energy = 100,
+		float CooldownMax = 1,
+		bool Player = false,
+		float BulletSpeed = 10,
+		float LifeLength = 1.5,
+		float CamZoom = 10,
 	},
 },

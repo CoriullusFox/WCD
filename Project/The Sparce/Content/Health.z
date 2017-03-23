@@ -27,13 +27,22 @@ class Health : ZilchComponent
     [Property]
     var Player              : Boolean = false;
     
+    [Property]
+    var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
+    
     //REGEN
     [Property]
     var RegenRate : Real = 0.5;
     
+    [Property]
     var MaxHealth : Real;
     
     var FreezeTimer : Real = 0;
+    
+    [Property]
+    var HurtDuration : Real = 0.1;
+    var HurtTimer : Real = 0;
+    var IsHurt : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -48,10 +57,27 @@ class Health : ZilchComponent
     function OnHurt(event : Hurt)
     {
         this.ConfiguredHealth -= event.Damage;
+        
+        this.Owner.Sprite.Color = this.HurtColor;
+        
+        this.IsHurt = true;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if (this.IsHurt)
+        {
+            if (this.HurtTimer > 0)
+            {
+                this.HurtTimer -= event.Dt;
+            }
+            else
+            {
+                this.Owner.Sprite.Color = Real4(1.0, 1.0, 1.0, 1.0);
+                this.HurtTimer = this.HurtDuration;
+                this.IsHurt = false;
+            }
+        }
         
         var healthDecrease = this.MaxHealth - this.ConfiguredHealth;
         
