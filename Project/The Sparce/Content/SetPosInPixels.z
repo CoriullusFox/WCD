@@ -1,0 +1,63 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
+class SetPositionInPixels : ZilchComponent
+{
+    
+    [Property]
+    var ViewportX : Real = 0;
+    [Property]
+    var ViewportY : Real = 0;
+    [Property]
+    var Alignment : Integer = 1;
+    
+    
+    var Offset : Real3
+    {
+        get
+        {
+            var half = this.Owner.Transform.Scale / 2;
+            half.Z = 0;
+            return half;
+        }
+    }
+    
+    var Viewport : Real2
+    {
+        get
+        {
+            return Real2(this.ViewportX, this.Alignment * this.ViewportY);
+        }
+    }
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var viewport = this.LevelSettings.CameraViewport;
+        
+        if(viewport == null) return;
+        
+        var screenSize = viewport.ViewportResolution;
+        screenSize.X = 0;
+        
+        var screen = viewport.ViewportToScreen(this.Viewport + screenSize);
+        var world = viewport.ScreenToWorldZPlane(screen, this.Owner.Transform.WorldTranslation.Z);
+        
+        this.Owner.Transform.WorldTranslation = world + this.Offset;
+    }
+    
+}

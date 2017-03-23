@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "SetPosInPixels",
+		uint64 ResourceId = 58510e72d38916b6,
+	},
+},

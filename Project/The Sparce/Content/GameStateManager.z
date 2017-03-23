@@ -23,10 +23,18 @@ class GameStateManager : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         
-        this.ResX = this.GameSession.Resolution.X;
-        this.ResY = this.GameSession.Resolution.Y;
+        var viewport = this.LevelSettings.CameraViewport;
+        
+        if(viewport == null) return;
+        
+        var screenSize = viewport.ViewportResolution;
+        
+        this.ResX = screenSize.X;
+        this.ResY = screenSize.Y;
         
         this.Space.LevelSettings.CameraViewport.ResolutionOrAspect = Real2(this.ResX, this.ResY);
+        
+        Console.WriteLine(this.Space.LevelSettings.CameraViewport.ResolutionOrAspect);
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
