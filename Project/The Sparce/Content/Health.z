@@ -56,8 +56,6 @@ class Health : ZilchComponent
 
     function OnHurt(event : Hurt)
     {
-        Console.WriteLine("OWWW");
-        
         this.ConfiguredHealth -= event.Damage;
         
         this.Owner.Sprite.Color = this.HurtColor;

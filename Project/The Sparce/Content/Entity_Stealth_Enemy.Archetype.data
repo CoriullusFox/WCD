@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [4, 4, 1],
+		Vec3 Translation = [12.9028, 12.1594, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -70,7 +70,7 @@ Cog =
 		string SouthWest = "585fa4b5ce7e5130:Entity_SneakPig_SW",
 		string West = "585fa454f5d99ad8:Entity_SneakPig_West",
 		string NorthWest = "585fa4f6c7fc3570:Entity_SneakPig_NW",
-		int AnimationSpeed = 3,
+		float AnimationSpeed = 3,
 	},
 	Health = 
 	{
