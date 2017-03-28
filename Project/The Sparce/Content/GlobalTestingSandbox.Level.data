@@ -145,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.2301, -6.07356, 50],
+			Vec3 Translation = [-0.270228, -0.222234, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0993,
+			float Size = 24.365,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-8.2301, -6.07356, -3.5975e-007],
+			Vec3 LookTarget = [-0.270228, -0.222234, -1.1813e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1274,6 +1274,76 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.63099, 8.28809, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585f9d0af09c5e32:BossCaptain_South",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BossAnim = 
+		{
+			string North = "585f9d70c9583a59:BossCaptain_North",
+			string NorthEast = "585f9d98da9dd979:BossCaptain_NE",
+			string East = "585f9dddd0be4b3e:BossCaptain_East",
+			string SouthEast = "585f9d60caf88c99:BossCaptain_SE",
+			string South = "585f9d0af09c5e32:BossCaptain_South",
+			string SouthWest = "585f9d06ce81fa88:BossCaptain_SW",
+			string West = "585f9d38f29c2404:BossCaptain_West",
+			string NorthWest = "585f9d44c47611cc:BossCaptain_NW",
+			int AnimationSpeed = 1,
+		},
+		BossMovement = 
+		{
+			float ResponceTime = 2,
+			bool Pathfind = true,
+			bool Debug = false,
+			Vec3 MoveDirection = [0, 0, 0],
+			int Speed = 100,
+		},
+		ChangeDirectionToPointAtPlayer = 
+		{
 		},
 	},
 },

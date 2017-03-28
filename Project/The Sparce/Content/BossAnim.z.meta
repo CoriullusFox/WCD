@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "BossAnim",
+		uint64 ResourceId = 585f9fd4f22ed379,
+	},
+},
