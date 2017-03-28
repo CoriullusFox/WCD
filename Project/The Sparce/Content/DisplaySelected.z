@@ -5,10 +5,10 @@
 ** FILE NAME
 **
 ** Author:
-** - Hudson Green
+** - Brandon
 **
 ** Contributors:
-** - none
+** - Hudson
 ** --------------------------------------------------------------------------*/
 
 class DisplaySelected : ZilchComponent

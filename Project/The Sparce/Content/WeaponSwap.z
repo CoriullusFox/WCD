@@ -120,7 +120,7 @@ class WeaponSwap : ZilchComponent
             {
                 if(this.BeamLaserUnlocked)
                 {
-                this.AddNewComponent("BeamLaser", this.BeamLaserUnlocked);
+                this.AddNewComponent("\"Laser\"", this.BeamLaserUnlocked);
                 }
                 else
                 {
