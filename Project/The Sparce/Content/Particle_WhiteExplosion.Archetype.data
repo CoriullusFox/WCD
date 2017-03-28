@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2, 0, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [0.1, 0.1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -72,5 +72,49 @@ Cog =
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
 		bool FastMovingEmitter = true,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Warp",
+			},
+			Archetyped = 
+			{
+				string Name = "580db526cbf2b7c2:CameraWarp",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [2.5, 2.5, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Camera = 
+			{
+				ProjectionMode ProjectionMode = Orthographic,
+				Facing Facing = NegativeZ,
+				CameraTransparentSort TransparentSort = InheritFromSpace,
+				float FieldOfView = 45,
+				float NearPlane = 0.5,
+				float FarPlane = 200,
+				float Size = 20,
+			},
+			ScreenWarpRing = 
+			{
+				float Size = 0.005,
+				float Thickness = 5,
+				float Intensity = -0.05,
+			},
+			Despawn = 
+			{
+				float LifeLength = 0.1,
+			},
+		},
 	},
 },

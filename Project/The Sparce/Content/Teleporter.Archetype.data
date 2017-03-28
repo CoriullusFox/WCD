@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Teleporter2",
+		string Name = "Teleporter1",
 	},
 	Archetyped = 
 	{
@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [7.46746, -2.01457, -8.8003e-009],
+		Vec3 Translation = [-8.67981, -1.76837, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0.0100002, 1, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "58512a90a3d96f00:Decor_Animated_Teleporter_Anim",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -40,7 +40,7 @@ Cog =
 	{
 		CogPath Position = 
 		{
-			string Path = ":/Teleporter",
+			string Path = ":/Teleporter2",
 			bool ErrorOnResolveToNull = false,
 			bool ErrorOnPathCantCompute = false,
 			bool ErrorOnDirectLinkFail = false,
@@ -53,6 +53,6 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
-		float Proximity = 2,
+		float Proximity = 1,
 	},
 },
