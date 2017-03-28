@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [9.30724, 12.9187, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	WeaponPickup = 
 	{
-		string Unlocked = "FlameThrower",
+		string Unlocked = "Bouncer",
 	},
 	BoxCollider = 
 	{
