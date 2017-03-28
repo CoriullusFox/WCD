@@ -12,17 +12,17 @@ class StartupResolutionSettings : ZilchComponent
         this.DefaultResX = this.GameSession.Resolution.X;
         this.DefaultResY = this.GameSession.Resolution.Y;
         
-        this.GameSession.ChangeResolution(false, Real2(1024, 576));
+        //this.GameSession.ChangeResolution(false, Real2(1024, 576));
         
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        if(Zero.Keyboard.KeyIsPressed(Keys.F))
+        /*if(Zero.Keyboard.KeyIsPressed(Keys.F))
         {
             this.GameSession.ChangeResolution(true, Real2(this.DefaultResX, this.DefaultResY));
-        }
+        }*/
         
     }
 }

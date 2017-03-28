@@ -1,3 +1,16 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
 class DisplaySelected : ZilchComponent
 {
     
@@ -9,14 +22,6 @@ class DisplaySelected : ZilchComponent
         Zero.Connect(this.GameSession, Events.SelectedGun, this.OnSelectedGun);
         Zero.Connect(this.GameSession, Events.Tier, this.OnTier);
         Zero.Connect(this.GameSession, Events.UnlockorUpgrade, this.OnUnlockorUpgrade);
-    }
-
-    function OnUnlockorUpgrade(event : UnlockorUpgrade)
-    {
-        if(this.Selected == event.Name)
-        {
-            this.Owner.SpriteText.Text = ("`event.Name` (Tier `event.Tier`)");
-        }
     }
 
     function OnTier(event : Tier)
@@ -41,6 +46,14 @@ class DisplaySelected : ZilchComponent
             
         }
         
+    }
+    
+    function OnUnlockorUpgrade(event : UnlockorUpgrade)
+    {
+        if(this.Selected == event.Name)
+        {
+            this.Owner.SpriteText.Text = ("`event.Name` (Tier `event.Tier`)");
+        }
     }
     
 }

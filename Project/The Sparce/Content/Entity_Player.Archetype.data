@@ -141,9 +141,9 @@ Cog =
 	},
 	UpgradeManager = 
 	{
-		int PistolTier = 2,
+		int PistolTier = 1,
 		int ShotgunTier = 1,
-		int MinigunTier = 1,
+		int MinigunTier = 5,
 		int BeamlaserTier = 1,
 		int RifleTier = 1,
 		int FlamethrowerTier = 1,
