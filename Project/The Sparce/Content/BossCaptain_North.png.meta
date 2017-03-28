@@ -1,5 +1,12 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Animated",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "BossCaptain_North",

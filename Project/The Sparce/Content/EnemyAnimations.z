@@ -38,7 +38,7 @@ class EnemyAnimations : ZilchComponent
     var NorthWest : SpriteSource = null;
     
     [Property]
-    var AnimationSpeed : Integer = 1;
+    var AnimationSpeed : Real = 1.0;
     
     function Initialize(init : CogInitializer)
     {

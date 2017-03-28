@@ -12,7 +12,7 @@ DataContent =
 	{
 		Array Tags = 
 		[
-			"Entity",
+			"Enemy",
 		],
 	},
 },

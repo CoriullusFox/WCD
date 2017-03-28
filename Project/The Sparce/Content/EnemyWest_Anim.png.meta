@@ -5,6 +5,7 @@ ImageContent =
 		Array Tags = 
 		[
 			"enemy",
+			"Animated",
 		],
 	},
 	SpriteSourceBuilder = 

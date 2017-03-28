@@ -1,5 +1,13 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"enemy",
+			"Animated",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Entity_BuffPig_South",

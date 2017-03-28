@@ -1,12 +1,19 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"enemy",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Entity_ShieldPig_NE_strip4",
 		uint64 ResourceId = 585f9a097ca94351,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 0,
-		uint FrameSizeY = 0,
+		uint FrameSizeX = 64,
+		uint FrameSizeY = 16,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
 		float OriginX = 32,
