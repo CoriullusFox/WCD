@@ -1,0 +1,19 @@
+SoundCue =
+{
+	PlayMode PlayMode = Single,
+	float Volume = 1,
+	float VolumeVariation = 0,
+	float Pitch = 1,
+	float PitchVariation = 0,
+	float MinDistance = 10,
+	float MaxDistance = 10000,
+	float PositionRandomization = 0,
+	uint MaxPlaybacks = 10,
+	uint Priority = 100,
+	Array Sounds = [
+		{
+			string SoundName = "4e1bda59a3a9f650(Default)",
+			float Weight = 1,
+		},
+	],
+},

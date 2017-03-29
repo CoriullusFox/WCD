@@ -1,0 +1,8 @@
+PhysicsMaterial = 
+{
+	float Restitution = 0.3 ,
+	float StaticFriction =  0.7 ,
+	float DynamicFriction = 0.5 ,
+	float Density = 1 ,
+	uint LogicalId = 0 ,
+}

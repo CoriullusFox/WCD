@@ -1,0 +1,22 @@
+Cog =
+{
+	LinkId =
+	{
+		uint Id = 956,
+	},
+	Transform =
+	{
+		float[] Translation = [8.33635, 3.42551, 6.54643],
+		float[] Scale = [1, 1, 1],
+		float[] Rotation = [0, 0, 0, 1],
+	},
+	Light =
+	{
+		LightType LightType = Point,
+		bool Active = true,
+		float Range = 10,
+		float Angle = 45,
+		float Intensity = 1,
+		float[] Color = [1, 1, 1, 1],
+	},
+},

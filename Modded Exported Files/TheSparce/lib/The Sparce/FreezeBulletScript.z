@@ -1,0 +1,36 @@
+class FreezeBulletScript : ZilchComponent
+{
+    
+    var Player : Boolean = false;
+    
+    var NewSpriteSouce : SpriteSource;
+    
+    var FreezeTime : Real = 5;
+    
+    var Damage : Real = 10;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(this.Player)
+        {
+            if(event.OtherObject.Name == "Enemy")
+            {
+                event.OtherObject.Health.Freeze(this.Damage, this.NewSpriteSouce, this.FreezeTime);
+                this.Owner.Destroy();
+            }
+        }
+        else
+        {
+            if(event.OtherObject.Name == "TempPlayer")
+            {
+                event.OtherObject.Health.Freeze(this.Damage, this.NewSpriteSouce, this.FreezeTime);
+                this.Owner.Destroy();
+            }
+        }
+    }
+}

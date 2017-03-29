@@ -1,0 +1,48 @@
+Cog = 
+{
+	Transform = 
+	{
+		float[] Translation = [0, 0, -0],
+		float[] Scale = [1, 1, 1],
+		float[] Rotation = [0, 0, 0, 1],
+	},
+	Model = 
+	{
+		string MaterialName = "5096e2b76da5f95c:GeneratedDefaultMultiMat",
+		string MeshName = "",
+		float[] Color = [1, 0, 0, 1],
+		bool Visible = true,
+	},
+	MeshCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = false,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		float[] Offset = [0, 0, 0],
+		string PhysicsMeshName = "",
+	},
+	GeometryMesh = 
+	{
+		int Layer = 0,
+		string GeometryMaterialName = "4fd669fea36c0021:Default",
+		uint64 CachedGeometryId = 5096e29563a98b30,
+		object Shape = 
+		{
+			Array Contours = 
+			[
+				{
+					Array Data = 
+					[
+						[0.536, -0.4815],
+						[0.536, 0.5185],
+						[-0.536, 0.4815],
+						[-0.536, -0.5185],
+					],
+				},
+			],
+		},
+		bool Dynamic = false,
+	},
+},

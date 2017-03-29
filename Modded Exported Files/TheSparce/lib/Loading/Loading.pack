@@ -1,0 +1,43 @@
+ResourcePackage = 
+{
+	string Name = "Loading",
+	Array Resources = 
+	[
+		{
+			uint64 ResourceId = 4f767d1c54ebdd3c,
+			string Type = "TextureZTex",
+			string Name = "LogoLoadingOuter",
+			string Location = "LogoLoadingOuter.ztex",
+		},
+		{
+			uint64 ResourceId = 5009c93db7bcef5e,
+			string Type = "TextureZTex",
+			string Name = "White",
+			string Location = "White.ztex",
+		},
+		{
+			uint64 ResourceId = 4f767d1c54ebd0c5,
+			string Type = "TextureZTex",
+			string Name = "LogoLoadingInner",
+			string Location = "LogoLoadingInner.ztex",
+		},
+		{
+			uint64 ResourceId = 541dd065ae220a1c,
+			string Type = "Fragment",
+			string Name = "Common",
+			string Location = "Common.frag",
+		},
+		{
+			uint64 ResourceId = 51ed159bfa4a3af5,
+			string Type = "Fragment",
+			string Name = "BasicVertex",
+			string Location = "BasicVertex.frag",
+		},
+		{
+			uint64 ResourceId = 51ed159bfa4a2173,
+			string Type = "Fragment",
+			string Name = "Basic",
+			string Location = "Basic.frag",
+		},
+	],
+},

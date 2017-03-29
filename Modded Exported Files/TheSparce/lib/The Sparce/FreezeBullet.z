@@ -1,0 +1,34 @@
+class FreezeBullet : ZilchComponent
+{
+    
+    [Property]
+    var TimeUntilStop : Real = 0.8;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        var randomAnimationSpeed : Random = Random();
+        var randStop             : Random = Random();
+        
+        randomAnimationSpeed.Range(0.9, 1.8);
+        randStop.Range((this.TimeUntilStop - 0.1), (this.TimeUntilStop + 0.1));
+        
+        this.Owner.Sprite.AnimationSpeed = randomAnimationSpeed.Real();
+        
+        this.TimeUntilStop -= event.Dt;
+        
+        if(this.TimeUntilStop <= 0)
+        {
+            this.Owner.Sprite.AnimationActive = false;
+            this.Owner.RigidBody.Velocity = Real3(0, 0, 0);
+            this.Owner.GravityEffect.Active = false;
+        }
+        
+    }
+    
+}

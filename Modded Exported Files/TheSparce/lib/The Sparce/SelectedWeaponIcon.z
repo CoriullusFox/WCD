@@ -1,0 +1,77 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
+class SelectedWeaponIcon : ZilchComponent
+{
+    
+    [Property]
+    var SelectedWeaponSprite : String = "UI_Gun_Selected";
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.GameSession, Events.SelectedGun, this.SelectedGunIcon);
+    }
+
+    function SelectedGunIcon(event : SelectedGun)
+    {
+        if(event.Unlocked)
+        {
+            
+            var selectedWeapon = event.Selected;
+            
+            if(selectedWeapon == "Pistol")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 2;
+            }
+            
+            else if(selectedWeapon == "Shotgun")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 1;
+            }
+            
+            else if(selectedWeapon == "Minigun")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 0;
+            }
+            
+            else if(selectedWeapon == "Rifle")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 4;
+            }
+            
+            else if(selectedWeapon == "Beam")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 8;
+            }
+            
+            else if(selectedWeapon == "FlameThrower")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 7;
+            }
+            
+        }
+        else
+        {
+            
+            this.Owner.Sprite.SpriteSource = SpriteSource.Find("UI_Locked");
+            
+        }
+    }
+    
+}

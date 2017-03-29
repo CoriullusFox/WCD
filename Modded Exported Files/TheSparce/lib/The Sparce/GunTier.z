@@ -1,0 +1,23 @@
+class GunTier
+{
+    
+    var Damage : Real = 0;
+    var BulletSpeed : Real = 15;
+    var EnergyUse : Real = 100;
+    var Cooldown : Real = 5;
+    var CamZoom : Real = 10;
+    var BulletLifeLength : Real = 10;
+    
+    constructor(damage : Real, bulletSpeed : Real, energyUse : Real, cooldown : Real, camZoom : Real, bulletLifeLength : Real)
+    {
+        
+        this.Damage = damage;
+        this.BulletSpeed = bulletSpeed;
+        this.EnergyUse = energyUse;
+        this.Cooldown = cooldown;
+        this.CamZoom = camZoom;
+        this.BulletLifeLength = bulletLifeLength;
+        
+    }
+    
+}

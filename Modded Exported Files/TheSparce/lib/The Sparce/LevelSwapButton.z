@@ -1,0 +1,23 @@
+class LevelSwapButton : ZilchComponent
+{
+    [Property]
+    var LevelToLoad : Level;
+    [Property]
+    var DestroyCurrentSpace : Boolean = true;
+    var GameSpace : Space;
+    function Initialize(init : CogInitializer)
+    {
+        this.GameSpace = this.GameSession.FindSpaceByName("GameSpace");
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        this.GameSpace.LoadLevel(this.LevelToLoad);
+        this.GameSpace.TimeSpace.Paused = false;
+        if(this.Space.Name != "GameSpace" && this.DestroyCurrentSpace)
+        {
+            this.Space.Destroy();
+        }
+    }
+}

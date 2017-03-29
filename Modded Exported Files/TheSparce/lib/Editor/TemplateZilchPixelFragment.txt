@@ -1,0 +1,48 @@
+[Pixel][AutoBlock]
+class %FRAGMENTNAME%
+{
+    // Custom Inputs
+    [Input]
+    var TestTexture : Sampler2d = null;
+    [Input]
+    var EdgeFalloffPower : Real = 0.0;
+    [Input]
+    var EdgeFalloffScale : Real = 0.0;
+    [Input]
+    var EdgeGlowColor : Real4 = Real4();
+
+    //Built In
+    // View Space Normal
+    [Input]
+    var Normal : Real3 = Real3();
+    // Us from mesh
+    [Input]
+    var Uv : Real2 = Real2();
+    // Time in seconds
+    [Input]
+    var Time : Real = 0.0;
+    // Object color from model
+    //[Input]
+    //var ObjectColor : Real4 = Real4();
+    // Position in view space
+    [Input]
+    var PixelPosition : Real3 = Real3();
+    //Eye is at 0,0,0  
+    
+    //Color added to the surface
+    [Output]
+    var Additive : Real4 = Real4();
+    
+    //Surface effected by lighting
+    //[Output]
+    //var SurfaceColor : Real4 = Real4();
+    
+    function Main()
+    {
+        // Simple edge glow
+        var texColor = this.TestTexture.Sample(this.Uv);
+        var scalar = Math.Saturate(1.0 - Math.Dot(-Math.Normalize(this.PixelPosition), this.Normal));
+        scalar = Math.Pow(scalar, this.EdgeFalloffPower) * this.EdgeFalloffScale;
+        this.Additive = scalar * this.EdgeGlowColor * texColor;
+    }
+}

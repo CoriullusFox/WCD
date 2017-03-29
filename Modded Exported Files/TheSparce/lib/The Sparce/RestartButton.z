@@ -1,0 +1,16 @@
+class RestartButton : ZilchComponent
+{
+    var GameSpace : Space;
+    function Initialize(init : CogInitializer)
+    {
+        this.GameSpace = this.GameSession.FindSpaceByName("GameSpace");
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        this.Space.ReloadLevel();
+        this.GameSpace.ReloadLevel();
+        this.GameSpace.TimeSpace.Paused = false;
+    }
+}

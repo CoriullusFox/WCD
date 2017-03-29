@@ -1,0 +1,73 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+//makes the beam extend intead of just appear, also fades beam, and handles beam damage
+
+class Beam : ZilchComponent
+{
+    [Property]
+    var Speed : Real = 10;
+    
+    var DPS : Real = 50;
+    var PlayerBeam : Boolean = false;
+    var Extend : Boolean = true;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        
+        if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != "TempPlayer")
+        {
+            
+            this.Extend = false;
+            
+        }
+        
+        //handling damage
+        if(this.PlayerBeam)
+        {
+            if(event.OtherObject.Name != "TempPlayer" && event.OtherObject.Name != this.Owner.Name)
+            {
+                var toSend = Hurt();
+                toSend.Damage = this.DPS * this.Space.TimeSpace.Dt;
+                event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                
+            }
+        }
+        else
+        {
+            
+            if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != this.Owner.Name)
+            {
+                var toSend = Hurt();
+                toSend.Damage = this.DPS * this.Space.TimeSpace.Dt;
+                event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                
+            }
+            
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Extend)
+        {
+            this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
+            this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "BackgroundBar",
+	},
+	Archetyped = 
+	{
+		string Name = "58088dbda434152e:UI_BackgroundBar",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [1.75, 0, -103],
+		Vec3 Scale = [0.2, 3.5, 1],
+		Quat Rotation = [0, 0, 0.707107, 0.707107],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 0.25],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "585465dd7d6ee3bb:UI_Bar",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+},

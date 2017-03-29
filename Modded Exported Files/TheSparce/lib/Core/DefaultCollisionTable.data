@@ -1,0 +1,10 @@
+CollisionTable = 
+{
+	Array RegisteredGroups = 
+	[
+		"DefaultGroup",
+	],
+	Array CollisionFilters = 
+	[
+	],
+},

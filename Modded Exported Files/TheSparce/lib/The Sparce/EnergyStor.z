@@ -1,0 +1,35 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class EnergyStor : ZilchComponent
+{
+    var Energy : Real = 100;
+    [Property]
+    var EnergyRegenRate : Real = 10;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Energy < 100)
+        {
+            this.Energy += this.EnergyRegenRate * event.Dt;
+        }
+        var toSend = Energy();
+        toSend.Energy = this.Energy;
+        this.GameSession.DispatchEvent(Events.Energy, toSend);
+    }
+    
+}

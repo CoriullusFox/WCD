@@ -1,0 +1,12 @@
+Material =
+{
+	Lambert = 
+	{
+	
+	}
+	
+	TextureDiffuse =
+	{
+		string DiffuseTexture = "4df5d3b6b7325139(Grid)",
+	},
+},

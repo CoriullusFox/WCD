@@ -1,0 +1,147 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Sage Dupuy
+**
+** Contributors:
+** - Brandon Wolenetz
+** --------------------------------------------------------------------------*/
+
+class WeaponPickup : ZilchComponent
+{
+    [Property]
+    var Unlocked : String = "null";
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "TempPlayer")
+        {
+            var toSend = UnlockorUpgrade();
+            if(this.Unlocked == "Pistol")
+            {
+                event.OtherObject.UpgradeManager.PistolTier += 1;
+                toSend.Name = "Pistol";
+                toSend.Tier = event.OtherObject.UpgradeManager.PistolTier;
+            }
+            else if(this.Unlocked == "Minigun")
+            {
+                if(!event.OtherObject.WeaponSwap.MinigunUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.MinigunUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.MinigunTier += 1;
+                }
+                toSend.Name = "Minigun";
+                toSend.Tier = event.OtherObject.UpgradeManager.MinigunTier;
+            }
+            
+            else if(this.Unlocked == "Shotgun")
+            {
+                if(!event.OtherObject.WeaponSwap.ShotgunUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.ShotgunUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.ShotgunTier += 1;
+                }
+                toSend.Name = "Shotgun";
+                toSend.Tier = event.OtherObject.UpgradeManager.ShotgunTier;
+            }
+            
+            else if(this.Unlocked == "Rifle")
+            {
+                if(!event.OtherObject.WeaponSwap.RifleUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.RifleUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.RifleTier += 1;
+                }
+                toSend.Name = "Rifle";
+                toSend.Tier = event.OtherObject.UpgradeManager.RifleTier;
+            }
+            
+            else if(this.Unlocked == "BeamLaser")
+            {
+                if(!event.OtherObject.WeaponSwap.BeamLaserUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.BeamLaserUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.BeamlaserTier += 1;
+                }
+                toSend.Name = "BeamLaser";
+                toSend.Tier = event.OtherObject.UpgradeManager.BeamlaserTier;
+            }
+            else if(this.Unlocked == "FlameThrower")
+            {
+                if(!event.OtherObject.WeaponSwap.FlamethrowerUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.FlamethrowerUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.FlamethrowerTier += 1;
+                }
+                toSend.Name = "FlameThrower";
+                toSend.Tier = event.OtherObject.UpgradeManager.FlamethrowerTier;
+            }
+            else if(this.Unlocked == "Bouncer")
+            {
+                if(!event.OtherObject.WeaponSwap.BouncerUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.BouncerUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.BouncerTier += 1;
+                }
+                toSend.Name = "Bouncer";
+                toSend.Tier = event.OtherObject.UpgradeManager.BouncerTier;
+            }
+            else if(this.Unlocked == "Tesla")
+            {
+                if(!event.OtherObject.WeaponSwap.TeslaUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.TeslaUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.TeslaTier += 1;
+                }
+                toSend.Name = "TeslaGun";
+                toSend.Tier = event.OtherObject.UpgradeManager.TeslaTier;
+            }
+            else if(this.Unlocked == "ChainE")
+            {
+                if(!event.OtherObject.WeaponSwap.ChainEUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.ChainEUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.ChainETier += 1;
+                }
+                toSend.Name = "ChainElectricity";
+                toSend.Tier = event.OtherObject.UpgradeManager.ChainETier;
+            }
+            
+            this.GameSession.DispatchEvent(Events.UnlockorUpgrade, toSend);
+            this.Owner.Destroy();
+        }
+    }
+}

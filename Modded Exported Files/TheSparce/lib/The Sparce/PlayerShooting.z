@@ -1,0 +1,39 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class PlayerShooting : ZilchComponent
+{
+    var Direction : Real3 = Real3(0,1,0);
+    
+    
+    
+    var CooldownTimer : Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsDown(Keys.Space) || Zero.Mouse.IsButtonDown(MouseButtons.Left))
+        {
+            //send shoot event
+            var toSend = Shoot();
+            toSend.Direction = this.Direction;
+            toSend.Player = true;
+            this.Owner.DispatchEvent(Events.Shoot, toSend);
+            
+        }
+    }
+}

@@ -1,0 +1,23 @@
+Cog = {
+	LinkId = {
+		uint Id = 63,
+	},
+	Transform = {
+		float[] Translation = [52.022728, 32.381828, -4.6544914],
+		float[] Scale = [1, 1, 1],
+		float[] Rotation = [-0.19116619, 0.61306053, 0.23040242, 0.73111361],
+	},
+	Light = {
+		LightType = Spot,
+		bool Active = true,
+		float Range = 100,
+		float Angle = 89,
+		float Intensity = 1,
+		float[] Color = [1, 1, 1, 1],
+	},
+	Shadow = {
+		Quality = HighQuality,
+		bool SoftShadows = true,
+		float Size = 20,
+	},
+},

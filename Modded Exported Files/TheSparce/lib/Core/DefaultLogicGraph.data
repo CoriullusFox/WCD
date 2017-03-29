@@ -1,0 +1,13 @@
+LogicGraph = 
+{
+	string EditorData = "LogicGraphEditorData = 
+	{
+		Nodes = 
+		{
+		},
+		Connections = 
+		{
+		},
+	},
+	",
+},

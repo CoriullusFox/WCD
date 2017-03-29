@@ -1,0 +1,11 @@
+GameSession = 
+{
+	Viewports = 
+	{
+	},
+	DefaultGameSetup = 
+	{
+		string StartingSpaceName = "Space",
+		string StartingLevelName = "Level",
+	},
+},

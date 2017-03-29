@@ -1,0 +1,75 @@
+class Flame : ZilchComponent
+{
+    
+    var CountDown : Real = 4;
+    var PlayerFlame : Boolean = false;
+    [Property]
+    var DPS : Real = 25;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);
+    }
+
+    function OnCollisionPersisted(event : CollisionEvent)
+    {
+        //handling damage
+        if(this.PlayerFlame)
+        {
+            if(event.OtherObject.Name != "TempPlayer" && event.OtherObject.Name != this.Owner.Name)
+            {
+                var toSend = Hurt();
+                toSend.Damage = this.DPS * this.Space.TimeSpace.Dt;
+                event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                
+            }
+        }
+        else
+        {
+            
+            if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != this.Owner.Name)
+            {
+                var toSend = Hurt();
+                toSend.Damage = this.DPS * this.Space.TimeSpace.Dt;
+                event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                
+            }
+            
+        }
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var angle = 0.0;
+        
+        //strange fix to small bug
+        this.Owner.Transform.Translation = Real3(0,0,1);
+        //point at mouse
+        //angle of rotation
+        if(this.PlayerFlame)
+        {
+            angle = Math.Angle2D(this.Space.FindObjectByName("TempPlayer").ChangeDirectionToPointAtMouse.Direction);
+        }
+        else
+        {
+            angle = Math.Angle2D(this.Owner.ChangeDirectionToPointAtPlayer.Direction);
+        }
+        
+        
+        
+        //generate direction for orientation component from angle
+        var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+        
+        //apply direction and movement
+        this.Owner.Orientation.LookAtDirection(newDirection);
+        //countdown for turning off particles
+        this.CountDown -= event.Dt;
+        if(this.CountDown <= 0)
+        {
+            
+            this.Owner.SphericalParticleEmitter.Active = false;
+            
+        }
+        
+    }
+}

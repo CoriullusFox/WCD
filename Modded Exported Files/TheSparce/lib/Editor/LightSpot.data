@@ -1,0 +1,20 @@
+Cog = 
+{
+	Transform = 
+	{
+		float[] Translation = [0, 5, 0],
+		float[] Scale = [1, 1, 1],
+		float[] Rotation = [-0.70710677, 0, 0, 0.70710677],
+	},
+	
+	Light = 
+	{
+		LightType = Spot,
+		bool Active = true,
+		float Range = 10,
+		float Angle = 45,
+		float Intensity = 1,
+		float[] Color = [1, 1, 1, 1],
+	},
+}
+

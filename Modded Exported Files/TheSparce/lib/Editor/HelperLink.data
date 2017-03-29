@@ -1,0 +1,14 @@
+Cog = 
+{
+	ObjectLink =
+	{
+		uint ObjectA = 0 ,
+		uint ObjectB = 0 ,	
+		float[] BodyPointA = [0, 0, 0],	
+		float[] BodyPointB = [0, 0, 0],	
+	},
+	
+	HelperLink =
+	{
+	},
+}

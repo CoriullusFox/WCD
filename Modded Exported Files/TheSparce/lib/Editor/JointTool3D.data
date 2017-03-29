@@ -1,0 +1,21 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "JointTool3D",
+	},
+	Archetyped = 
+	{
+		string Name = "54851860c810b588:JointTool2D",
+	},
+	MouseCapture = 
+	{
+	},
+	JointTool3D = 
+	{
+	},
+},

@@ -1,0 +1,223 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "TempPlayer",
+	},
+	Archetyped = 
+	{
+		string Name = "5819c2376fedf85b:Entity_Player",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5812ef1fdef735df:PlayerSouth_Anim",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 2,
+		uint StartFrame = 0,
+	},
+	PlayerShooting = 
+	{
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = true,
+		bool Mode2D = false,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	Movement = 
+	{
+		float Speed = 300,
+		float RunSpeed = 600,
+	},
+	ChangeDirectionToPointAtMouse = 
+	{
+	},
+	DebugPlayerDamage = 
+	{
+	},
+	Health = 
+	{
+		float ConfiguredHealth = 100,
+		string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
+		bool MiniHeathBar = false,
+		bool Player = true,
+		Vec4 HurtColor = [1, 0, 0, 1],
+		float RegenRate = 1.5,
+		float MaxHealth = 0,
+		float HurtDuration = 0.1,
+	},
+	WeaponSwap = 
+	{
+		bool ShotgunUnlocked = true,
+		bool MinigunUnlocked = false,
+		bool BeamLaserUnlocked = false,
+		bool RifleUnlocked = false,
+		bool FlamethrowerUnlocked = false,
+		bool BouncerUnlocked = false,
+		bool TeslaUnlocked = false,
+		bool ChainEUnlocked = false,
+		bool DisableLockedWeaponSelect = true,
+	},
+	EnergyStor = 
+	{
+		float EnergyRegenRate = 10,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "5800bf6d54ec0d53:Slippery",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.2, 0.525, 0.5],
+	},
+	PlayerAnimations = 
+	{
+		string North = "5812ef7faa1505fd:PlayerNorth_Anim",
+		string NorthEast = "5812ed9c6151ee10:PlayerNorthEast_Anim",
+		string East = "5812ede87e09d134:PlayerEast_Anim",
+		string SouthEast = "5812ef5ea05cdd1b:PlayerSouthEast_Anim",
+		string South = "5812ef1fdef735df:PlayerSouth_Anim",
+		string SouthWest = "5812ef37a6a737bd:PlayerSouthWest_Anim",
+		string West = "5812eee383faa2b4:PlayerWest_Anim",
+		string NorthWest = "5812ee539ad4bc66:PlayerNorthWest_Anim",
+		string WeaponNorth = "580db89c8901d42a:PistolNorth",
+		string WeaponNorthEast = "580db89c89006cb2:PistolNorthEast",
+		string WeaponEast = "580db89c89031379:PistolEast",
+		string WeaponSouthEast = "580db89c8939a5dd:PistolSouthEast",
+		string WeaponSouth = "580db89c89382171:PistolSouth",
+		string WeaponSouthWest = "580db89c893a8faa:PistolSouthWest",
+		string WeaponWest = "580db89c8904fb22:PistolWest",
+		string WeaponNorthWest = "580db89c89077612:PistolNorthWest",
+		int CurrentWalkingAnimationSpeed = 2,
+		int CurrentRunningAnimationSpeed = 3,
+	},
+	SelectedStor = 
+	{
+	},
+	Pistol = 
+	{
+		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
+		float Damage = 25,
+		float EnergyUse = 5,
+		float Energy = 0,
+		float CooldownMax = 0.4,
+		bool Player = true,
+		float BulletSpeed = 25,
+		float LifeLength = 1.5,
+		float CamZoom = 10,
+	},
+	MuzzleFire = 
+	{
+		string MuzzleFireParticle = "583a04ce746741f7:Particle_MuzzleFire",
+	},
+	UpgradeManager = 
+	{
+		int PistolTier = 1,
+		int ShotgunTier = 1,
+		int MinigunTier = 1,
+		int BeamlaserTier = 1,
+		int RifleTier = 1,
+		int FlamethrowerTier = 1,
+		int BouncerTier = 1,
+		int TeslaTier = 1,
+		int ChainETier = 1,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Camera",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 40],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Camera = 
+			{
+				ProjectionMode ProjectionMode = Orthographic,
+				Facing Facing = NegativeZ,
+				CameraTransparentSort TransparentSort = InheritFromSpace,
+				float FieldOfView = 45,
+				float NearPlane = 0.5,
+				float FarPlane = 200,
+				float Size = 10,
+			},
+			Microphone = 
+			{
+				bool Active = true,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Weapon",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [0.25, 0.25, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "580db89c89382171:PistolSouth",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+	},
+},

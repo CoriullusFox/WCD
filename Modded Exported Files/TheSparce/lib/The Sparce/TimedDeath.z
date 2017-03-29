@@ -1,0 +1,28 @@
+class TimedDeath : ZilchComponent
+{
+    //The amount of time before this object will be destroyed
+    [Property]
+    var Lifetime : Real = 1.0;
+    
+    constructor() : base()
+    {
+    }
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Queue up a delay for our lifetime, after that much
+        //time call the function that kills us
+        var sequence = Action.Sequence(this.Owner.Actions);
+        Action.Delay(sequence, this.Lifetime);
+        Action.Call(sequence, this.OnDeath);
+    }
+    
+    function OnDeath()
+    {
+        //let anyone listening know we just died
+        var toSend = new Event();
+        this.Owner.DispatchEvent("Death", toSend);
+        
+        this.Owner.Destroy();
+    }
+}
