@@ -1,0 +1,16 @@
+# Called once when the object is created
+def Initialize(self, %CLASSNAME):
+    #%CLASSNAME.ConnectState(%CLASSNAME.Space, Events.LogicUpdate, self.OnLogicUpdate);
+    pass
+
+# Called once when entering the state
+def OnEnter(self, %CLASSNAME):
+    pass
+
+# Called every frame while in this state
+def OnLogicUpdate(self, %CLASSNAME, UpdateEvent):
+    pass
+
+# Called once when exiting this state
+def OnExit(self, %CLASSNAME):
+    pass

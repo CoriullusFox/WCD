@@ -1,0 +1,191 @@
+class UpgradeManager : ZilchComponent
+{
+    
+    [Property]
+    var PistolTier : Integer = 1;
+    
+    [Property]
+    var ShotgunTier : Integer = 1;
+    
+    [Property]
+    var MinigunTier : Integer = 1;
+    
+    [Property]
+    var BeamlaserTier : Integer = 1;
+    
+    [Property]
+    var RifleTier : Integer = 1;
+    
+    [Property]
+    var FlamethrowerTier : Integer = 1;
+    
+    [Property]
+    var BouncerTier : Integer = 1;
+    
+    [Property]
+    var TeslaTier : Integer = 1;
+    
+    [Property]
+    var ChainETier : Integer = 1;
+    
+    var TierBalancer : Integer = 3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.GameSession, Events.SelectedGun, this.OnSelectedGun);
+    }
+
+    function OnSelectedGun(event : SelectedGun)
+    {
+        if(event.Unlocked)
+        {
+            var toSend = Tier();
+            if(event.Selected == "Pistol")
+            {
+                toSend.Tier = this.PistolTier;
+                if(this.PistolTier == 2)
+                {
+                    /*Example*/
+                    
+                    //this.Owner.Pistol.CamZoom = 20;
+                    //this.Owner.Pistol.EnergyUse = 2;
+                    //this.Owner.Pistol.Damage = 99999;
+                    //this.Owner.Pistol.BulletSpeed = 100;
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.Pistol.CamZoom       = this.Owner.Pistol.CamZoom     + this.PistolTier;
+                //this.Owner.Pistol.EnergyUse     = this.Owner.Pistol.EnergyUse   - this.PistolTier / this.TierBalancer;
+                //this.Owner.Pistol.Damage        = this.Owner.Pistol.Damage      + this.PistolTier * this.TierBalancer;
+                //this.Owner.Pistol.BulletSpeed   = this.Owner.Pistol.BulletSpeed + this.PistolTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "Shotgun")
+            {
+                
+                toSend.Tier = this.ShotgunTier;
+                if(this.ShotgunTier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.Shotgun.CamZoom          = this.Owner.Shotgun.CamZoom         + this.ShotgunTier;
+                //this.Owner.Shotgun.EnergyUse        = this.Owner.Shotgun.EnergyUse       - this.ShotgunTier / this.TierBalancer;
+                //this.Owner.Shotgun.DamagePerBullet  = this.Owner.Shotgun.DamagePerBullet + this.ShotgunTier * this.TierBalancer;
+                //this.Owner.Shotgun.BulletSpeed      = this.Owner.Shotgun.BulletSpeed     + this.ShotgunTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "Minigun")
+            {
+                
+                toSend.Tier = this.MinigunTier;
+                if(this.MinigunTier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.Minigun.CamZoom          = this.Owner.Minigun.CamZoom         + this.MinigunTier;
+                //this.Owner.Minigun.EnergyUse        = this.Owner.Minigun.EnergyUse       - this.MinigunTier / this.TierBalancer;
+                //this.Owner.Minigun.DamagePerBullet  = this.Owner.Minigun.DamagePerBullet + this.MinigunTier * this.TierBalancer;
+                //this.Owner.Minigun.BulletSpeed      = this.Owner.Minigun.BulletSpeed     + this.MinigunTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "BeamLaser")
+            {
+                
+                toSend.Tier = this.BeamlaserTier;
+                if(this.BeamlaserTier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.BeamLaser.CamZoom          = this.Owner.BeamLaser.CamZoom         + this.BeamlaserTier;
+                //this.Owner.BeamLaser.EnergyUse        = this.Owner.BeamLaser.EnergyUse       - this.BeamlaserTier / this.TierBalancer;
+                //this.Owner.BeamLaser.DPS              = this.Owner.BeamLaser.DPS             + this.BeamlaserTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "Rifle")
+            {
+                
+                toSend.Tier = this.RifleTier;
+                if(this.RifleTier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.Rifle.CamZoom          = this.Owner.Rifle.CamZoom         + this.RifleTier;
+                //this.Owner.Rifle.EnergyUse        = this.Owner.Rifle.EnergyUse       - this.RifleTier / this.TierBalancer;
+                //this.Owner.Rifle.Damage           = this.Owner.Rifle.Damage          + this.RifleTier * this.TierBalancer;
+                //this.Owner.Rifle.BulletSpeed      = this.Owner.Rifle.BulletSpeed     + this.RifleTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "FlameThrower")
+            {
+                
+                toSend.Tier = this.FlamethrowerTier;
+                if(this.FlamethrowerTier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.FlameThrower.CamZoom          = this.Owner.FlameThrower.CamZoom         + this.FlamethrowerTier;
+                //this.Owner.FlameThrower.EnergyUse        = this.Owner.FlameThrower.EnergyUse       - this.FlamethrowerTier / this.TierBalancer;
+                //this.Owner.FlameThrower.DPS              = this.Owner.FlameThrower.DPS             + this.FlamethrowerTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "Bouncer")
+            {
+                
+                toSend.Tier = this.BouncerTier;
+                if(this.BouncerTier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.Bouncer.CamZoom          = this.Owner.Bouncer.CamZoom         + this.BouncerTier;
+                //this.Owner.Bouncer.EnergyUse        = this.Owner.Bouncer.EnergyUse       - this.BouncerTier / this.TierBalancer;
+                //this.Owner.Bouncer.Damage           = this.Owner.Bouncer.Damage          + this.BouncerTier * this.TierBalancer;
+                //this.Owner.Bouncer.BulletSpeed      = this.Owner.Bouncer.BulletSpeed     + this.BouncerTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "TeslaGun")
+            {
+                
+                toSend.Tier = this.TeslaTier;
+                if(this.TeslaTier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.TeslaGun.CamZoom          = this.Owner.TeslaGun.CamZoom         + this.TeslaTier;
+                //this.Owner.TeslaGun.EnergyUse        = this.Owner.TeslaGun.EnergyUse       - this.TeslaTier / this.TierBalancer;
+                //this.Owner.TeslaGun.Damage           = this.Owner.TeslaGun.Damage          + this.TeslaTier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "ChainElectricity")
+            {
+                
+                toSend.Tier = this.ChainETier;
+                if(this.ChainETier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.ChainElectricity.CamZoom          = this.Owner.ChainElectricity.CamZoom         + this.ChainETier;
+                //this.Owner.ChainElectricity.EnergyUsePer     = this.Owner.ChainElectricity.EnergyUsePer    - this.ChainETier / this.TierBalancer;
+                //this.Owner.ChainElectricity.Damage           = this.Owner.ChainElectricity.Damage          + this.ChainETier * this.TierBalancer;
+                
+            }
+            this.GameSession.DispatchEvent(Events.Tier, toSend);
+        }
+        
+    }
+}

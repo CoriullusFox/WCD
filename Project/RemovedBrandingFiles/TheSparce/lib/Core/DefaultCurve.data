@@ -1,0 +1,21 @@
+SampleCurve = 
+{
+	float[] WidthRange = [0, 1],
+	float[] HeightRange = [0, 1],
+	uint SampleRate = 6,
+	Array ControlPoints = 
+	[
+		{
+			float Time = 0,
+			float Value = 0.5,
+			float[] TangentIn = [0, 0],
+			float[] TangentOut = [0.7071, 0.7071],
+		},
+		{
+			float Time = 1.0,
+			float Value = 0.75,
+			float[] TangentIn = [-0.7071, -0.7071],
+			float[] TangentOut = [0, 0],
+		},
+	],
+},

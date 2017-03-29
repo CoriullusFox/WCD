@@ -1,0 +1,5 @@
+def Initialize(self, %CLASSNAME):
+    %CLASSNAME.ConnectEdge(%CLASSNAME.Space, Events.LogicUpdate, self.OnLogicUpdate);
+
+def OnLogicUpdate(self, %CLASSNAME, OnLogicUpdate):
+    return Zero.Keyboard.KeyIsDown(Keys.Left);

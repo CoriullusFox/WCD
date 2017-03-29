@@ -1,0 +1,24 @@
+Cog =
+{
+	LinkId =
+	{
+		uint Id = 213,
+	},
+	Transform =
+	{
+		float[] Translation = [0, 0, 0],
+		float[] Scale = [1, 1, 1],
+		float[] Rotation = [0, 0, 0, 1],
+	},
+	Sprite =
+	{
+		string SpriteSource = "5275aa4d802dd6dc:Square",
+		bool FlipX = false,
+		bool FlipY = false,
+		float[] Color = [1, 1, 1, 1],
+		bool Visible = true,
+		bool AnimationActive = true,
+		uint CurrentFrame = 0,
+		BlendMode BlendMode = Alpha,
+	},
+},

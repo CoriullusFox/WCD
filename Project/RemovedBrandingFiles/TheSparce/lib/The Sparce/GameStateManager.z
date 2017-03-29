@@ -1,0 +1,66 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - Hudson Green
+** --------------------------------------------------------------------------*/
+
+class GameStateManager : ZilchComponent
+{
+    
+    [Property]
+    var EnableFullscreen : Boolean = false;
+    
+    var ResX : Real = 1920;
+    var ResY : Real = 1080;
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        var viewport = this.LevelSettings.CameraViewport;
+        
+        if(viewport == null) return;
+        
+        var screenSize = viewport.ViewportResolution;
+        
+        this.ResX = screenSize.X;
+        this.ResY = screenSize.Y;
+        
+        this.Space.LevelSettings.CameraViewport.ResolutionOrAspect = Real2(this.ResX, this.ResY);
+        
+        Console.WriteLine(this.Space.LevelSettings.CameraViewport.ResolutionOrAspect);
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.F))
+        {
+            this.EnableFullscreen = !this.EnableFullscreen;
+            if(this.EnableFullscreen)
+            {
+                var screenRes = Real2(1920, 1080);
+                this.GameSession.ChangeResolution(false, screenRes);
+            }
+            else
+            {
+                this.GameSession.ChangeResolution(false, Real2(808, 520));
+            }
+        }
+    }
+
+    function OnGameRequestQuit(event : GameEvent)
+    {
+        event.Handled = true;
+    }
+
+}

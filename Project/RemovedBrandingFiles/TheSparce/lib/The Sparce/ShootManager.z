@@ -1,0 +1,207 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** (c) 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - Brandon Wolenetz
+** --------------------------------------------------------------------------*/
+
+class ShootManager : ZilchComponent
+{
+    
+    [Dependency]
+    var Gun : GunManager = null;
+    
+    var Debug : DebugMode = null;
+    
+    var ModifiableCooldown      : Real = 0.0;
+    var CoolDwn                 : Real = 0.0;
+    var GunTexture              : Archetype = null;
+    var SpreadAmount            : Real = 0.0;
+    var NextShot                : Real = 0.0;
+    var CurrAmmoCount           : Real = -99.0;
+    var DefaultAmmoCount        : Real = 5.0;
+    var ChargedUp               : Boolean = true;
+    
+    [Property]
+    var ChargeEnabled       : Boolean = true;
+    
+    [Property]
+    var AmmoSubtract            : Real = 1.0;
+    
+    [Property]
+    var ArchetypeAmmoBar        : Archetype = Archetype.UI_AmmoBar;
+    
+    [Property]
+    var ArchetypeCooldownBar    : Archetype = Archetype.UI_CooldownBar;
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+        this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+        this.GunTexture         = this.Gun.SelectedGunSprite;
+        this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+        this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+        this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //Cooldown logic
+        this.ModifiableCooldown -= event.Dt;
+        
+        var ammoDecrease = this.DefaultAmmoCount - this.CurrAmmoCount;
+        var cooldownDecrease = this.CoolDwn - this.ModifiableCooldown;
+        
+        var ammoInPercent = 100 - (ammoDecrease / (this.DefaultAmmoCount + 0.001) * 100);
+        var cooldownInPercent = (cooldownDecrease / (this.CoolDwn + 0.001) * 100);
+        
+        //Console.WriteLine("% Ammo", cooldownInPercent);
+        
+        if(cooldownInPercent > 100)
+        {
+            cooldownInPercent = 100;
+        }
+        
+        var ammoBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -0.75, 0));
+        var cooldownBarHUD = this.Space.CreateAtPosition(this.ArchetypeCooldownBar, this.Owner.Transform.Translation + Real3(0, -0.9, 0));
+        
+        ammoBarHUD.Transform.Scale = Real3(ammoInPercent / 35, 0.15, 1);
+        cooldownBarHUD.Transform.Scale = Real3(cooldownInPercent / 35, 0.15, 1);
+        
+        // DEBUG CONTROLS
+        //if(this.Debug.DubugModeEnabled) {
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad1))
+            {
+                this.Gun.SelectedGun    = this.Gun.Pistol;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad2))
+            {
+                this.Gun.SelectedGun    = this.Gun.Shotgun;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad3))
+            {
+                this.Gun.SelectedGun    = this.Gun.Minigun;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = false;
+                this.ChargeEnabled      = false;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad4))
+            {
+                this.Gun.SelectedGun    = this.Gun.Rifle;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
+            }
+            
+            if(Zero.Keyboard.KeyIsPressed(Keys.NumPad5))
+            {
+                this.Gun.SelectedGun    = this.Gun.Beam;
+                this.ModifiableCooldown = this.Gun.SelectedGun.Cooldown;
+                this.CoolDwn            = this.Gun.SelectedGun.Cooldown;
+                this.GunTexture         = this.Gun.SelectedGunSprite;
+                this.SpreadAmount       = this.Gun.SelectedGun.SpreadAmount;
+                this.CurrAmmoCount      = this.Gun.SelectedGun.AmmoCount;
+                this.DefaultAmmoCount   = this.Gun.SelectedGun.AmmoCount;
+                this.ChargedUp          = true;
+                this.ChargeEnabled      = true;
+            }
+        //}
+        
+    }
+    
+    //Shooting logic (only runs when the event is called)
+    function OnShoot(event : Shoot)
+    {
+        
+        //only shoot if cooldown is over
+        if(this.ModifiableCooldown < 0 && this.ChargedUp)
+        {
+            
+            /** SHOOTING LOGIC HERE **/
+            
+            if(this.GunTexture != null && (this.CurrAmmoCount > 0 || this.CurrAmmoCount == -99))
+            {
+                
+                this.ModifiableCooldown = this.CoolDwn;
+                
+                if(this.CurrAmmoCount != -99.0)
+                {
+                    this.CurrAmmoCount -= this.AmmoSubtract;
+                }
+                
+                Console.WriteLine("Ammo Count", this.CurrAmmoCount);
+                
+                var createdBullet = this.Space.CreateAtPosition(this.GunTexture, this.Owner.Transform.Translation);
+                
+                if(createdBullet != null)
+                {
+                    
+                    Console.WriteLine("boom");
+                    var randGen : Random = Random();
+                    //angle of rotation
+                    var angle = Math.Angle2D(event.Direction) + randGen.Range(this.SpreadAmount, -this.SpreadAmount);
+                    Console.WriteLine("Spread", this.SpreadAmount);
+                    Console.WriteLine("Cooldown", this.ModifiableCooldown);
+                    
+                    //generate direction for orientation component from angle
+                    var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                    
+                    //apply direction and movement
+                    createdBullet.Orientation.LookAtDirection(newDirection);
+                    createdBullet.RigidBody.Velocity = Math.Normalize(newDirection) * 45;
+                    
+                    //if(createdBullet.ArchetypeName == "BulletTest")
+                    //{
+                    //    this.Owner.BulletEject.ShootShell = true;
+                    //    Console.WriteLine("Ejected Shell");
+                    //}
+                    
+                    createdBullet.Despawn.LifeLength = this.Gun.SelectedGun.Lifespan;
+                    
+                }
+                
+            }
+        }
+    
+    }
+}
+

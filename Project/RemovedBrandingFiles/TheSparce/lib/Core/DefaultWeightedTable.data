@@ -1,0 +1,11 @@
+WeightedTable = 
+{
+	float MaxHeight = 1,
+	Array Items = 
+	[
+		{
+			string Value = "Item 1",
+			float Probability = 0.5,
+		},
+	],
+},

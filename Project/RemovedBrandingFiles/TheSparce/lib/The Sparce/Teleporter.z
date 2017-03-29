@@ -1,0 +1,38 @@
+class Teleporter : ZilchComponent
+{
+    [Property]
+    var Position : CogPath = null;
+    
+    [Property]
+    var Proximity : Real = 1;
+    
+    var Teleported : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = this.Space.FindObjectByName("TempPlayer");
+        
+        var distanceFromPlayer = Math.Distance(player.Transform.Translation, this.Owner.Transform.Translation);
+        
+        //if distanceFromPlayer is less than Proximity and Teleported is equal to false
+        if(distanceFromPlayer < this.Proximity && this.Teleported == false)
+        {
+            this.Space.FindObjectByName("`this.Position.Cog.Name`").Teleporter.Teleported = true;
+            
+            //Set player's position to Position
+            player.Transform.Translation = this.Position.Cog.Transform.Translation;
+        }
+        //if distanceFromPlayer is greater than Proximity and Teleported is equal to true
+        if(distanceFromPlayer > this.Proximity && this.Teleported == true)
+        {
+            this.Space.FindObjectByName("`this.Position.Cog.Name`").Teleporter.Teleported = false;
+            
+            this.Teleported = false;
+        }
+    }
+}

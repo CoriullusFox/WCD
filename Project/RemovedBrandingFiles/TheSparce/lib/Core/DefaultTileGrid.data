@@ -1,0 +1,433 @@
+Cog =
+{
+	LinkId =
+	{
+		uint Id = 74,
+	},
+	Named =
+	{
+		string Name = "TileGrid",
+	},
+	Transform =
+	{
+		float[] Translation = [0, 0, 0],
+		float[] Scale = [1, 1, 1],
+		float[] Rotation = [0, 0, 0, 0],
+	},
+	TileGrid =
+	{
+		string TileSetName = "4e37269500d7214c(DefaultTileSet)",
+		float CellSize = 1,
+		uint ChunkWidth = 10,
+		uint ChunkHeight = 10,
+		uint ChunkDepth = 1,
+		Chunks =
+		{
+			Chunk =
+			{
+				float[] Position = [0, 0, 0],
+				Array Cells = [
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = 0,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+
+					{
+						int Id = -1,
+					},
+				],
+			},
+		},
+	},
+},

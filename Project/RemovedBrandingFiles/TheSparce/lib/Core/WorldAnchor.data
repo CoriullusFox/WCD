@@ -1,0 +1,19 @@
+Cog =
+{
+	Transform =
+	{
+		float[] Translation = [ 0, 0, 0 ] ,
+		float[] Scale = [ 1, 1, 1 ] ,
+		float[] Rotation = [ 0, 0, 0, 1 ] ,	
+	},
+	
+	BoxCollider =
+	{
+		bool Ghost = true,
+		bool SendsMessages = false,
+		string MaterialName = HardMaterial ,
+		float[] Size = [ 0.5 , 0.5, 0.5 ] ,
+	},
+	
+}
+

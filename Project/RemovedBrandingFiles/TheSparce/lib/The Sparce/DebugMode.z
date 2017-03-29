@@ -1,0 +1,65 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - <list in same format as author if applicable>
+** --------------------------------------------------------------------------*/
+
+class DebugMode : ZilchComponent
+{
+    
+    [Property]
+    var DubugModeEnabled : Boolean = false;
+    
+    var DebugText : Archetype = Archetype.DebugModeText;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.DubugModeEnabled)
+        {
+            if(Zero.Keyboard.KeyIsPressed(Keys.Equal))
+                this.Space.TimeSpace.TimeScale += 0.05;
+            if(Zero.Keyboard.KeyIsPressed(Keys.Minus))
+                this.Space.TimeSpace.TimeScale -= 0.05;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.F3))
+        {
+            
+            this.DubugModeEnabled = !this.DubugModeEnabled;
+            
+            if(this.DubugModeEnabled)
+            {
+                Console.WriteLine(this.Space.TimeSpace.TimeScale);
+                Console.WriteLine("Debug Mode: 'Enabled'");
+                this.Space.CreateAtPosition(this.DebugText, Real3(-7, 5, 5));
+                this.Space.FindObjectByName("TempPlayer").EnergyStor.EnergyRegenRate = 100.0;
+            }
+            else if(!this.DubugModeEnabled)
+            {
+                this.Space.TimeSpace.TimeScale = 1;
+                Console.WriteLine("Debug Mode: 'Disabled'");
+                
+                var debugText = this.Space.FindObjectByName("DebugModeText");
+                
+                if(debugText != null)
+                {
+                    debugText.Destroy();
+                }
+                
+            }
+            
+        }
+    }
+    
+}

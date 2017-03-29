@@ -1,0 +1,167 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** Health.z
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - Brandon Wolenetz
+** --------------------------------------------------------------------------*/
+
+class Health : ZilchComponent
+{
+    
+    // CONFIGURABLE HEALTH PROPERTY
+    [Property]
+    var ConfiguredHealth    : Real = 50;
+    
+    [Property]
+    var ArchetypeAmmoBar    : Archetype = Archetype.UI_HealthBar;
+    
+    [Property]
+    var MiniHeathBar        : Boolean = true;
+    
+    [Property]
+    var Player              : Boolean = false;
+    
+    [Property]
+    var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
+    
+    //REGEN
+    [Property]
+    var RegenRate : Real = 0.5;
+    
+    [Property]
+    var MaxHealth : Real;
+    
+    var FreezeTimer : Real = 0;
+    
+    [Property]
+    var HurtDuration : Real = 0.1;
+    var HurtTimer : Real = 0;
+    var IsHurt : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        this.MaxHealth = this.ConfiguredHealth;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Hurt, this.OnHurt);
+        
+    }
+
+    function OnHurt(event : Hurt)
+    {
+        Console.WriteLine("OWWW");
+        
+        this.ConfiguredHealth -= event.Damage;
+        
+        this.Owner.Sprite.Color = this.HurtColor;
+        
+        this.HurtTimer = this.HurtDuration;
+        this.IsHurt = true;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.IsHurt)
+        {
+            if (this.HurtTimer > 0)
+            {
+                this.HurtTimer -= event.Dt;
+            }
+            else
+            {
+                this.Owner.Sprite.Color = Real4(1.0, 1.0, 1.0, 1.0);
+                this.IsHurt = false;
+            }
+        }
+        
+        var healthDecrease = this.MaxHealth - this.ConfiguredHealth;
+        
+        var healthInPercent = 100 - (healthDecrease / (this.MaxHealth + 0.001) * 100);
+        
+        //Console.WriteLine("% Ammo", cooldownInPercent);
+        
+        if(this.FreezeTimer > 0)
+        {
+            
+            this.FreezeTimer -= event.Dt;
+            this.Owner.RigidBody.Velocity = Real3(0,0,0);
+            
+        }
+        
+        if(healthInPercent > 100)
+        {
+            healthInPercent = 100;
+        }
+        
+        if(this.MiniHeathBar)
+        {
+            var healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -1.05, 0));
+            healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
+        }
+        //REGEN
+        if(this.ConfiguredHealth < this.MaxHealth)
+        {
+            this.ConfiguredHealth += this.RegenRate * event.Dt;
+            if(this.Player)
+            {
+                var toSend = HealthToUI();
+                toSend.Health = this.ConfiguredHealth;
+                toSend.MaxHealth = this.MaxHealth;
+                this.GameSession.DispatchEvent(Events.HealthToUI, toSend);
+            }
+            
+        }
+        
+        // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
+        if(this.ConfiguredHealth <= 0)
+        {
+            if(this.Player)
+            {
+                //Death screen
+                var toSend = PlayerDeath();
+                this.GameSession.DispatchEvent(Events.PlayerDeath, toSend);
+                this.Space.TimeSpace.Paused = true;
+            }
+            else
+            {
+                //This is temporary until we decide to make the enemies deaths perminent
+                
+                this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
+                
+                this.Owner.Sprite.AnimationActive = false;
+                
+                this.Owner.Sprite.CurrentFrame = 1;
+                
+                this.Space.CreateAtPosition(Archetype.Particle_BlackDots, this.Owner.Transform.Translation);
+                
+                this.Space.CreateAtPosition(Archetype.Particle_WhiteExplosion, this.Owner.Transform.Translation);
+                
+                this.Owner.Destroy();
+            }
+            
+            
+        }
+        
+        //Console.WriteLine("HP", this.ConfiguredHealth);
+        
+    }
+    
+    
+    function Freeze(damage : Real, sprite : SpriteSource, time : Real)
+    {
+        
+        this.FreezeTimer = time;
+        this.Owner.Sprite.SpriteSource = sprite;
+        this.ConfiguredHealth -= damage;
+        
+    }
+    
+    
+}

@@ -1,0 +1,21 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "TranslateTool",
+	},
+	Archetyped = 
+	{
+		string Name = "52a18633a5a34329:TranslateTool",
+	},
+	MouseCapture = 
+	{
+	},
+	TranslateTool = 
+	{
+	},
+},

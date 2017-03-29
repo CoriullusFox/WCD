@@ -1,0 +1,63 @@
+NavMeshSource = 
+{
+	Object Data = 
+	{
+		Array Polygons = 
+		[
+			{
+				uint Edge0 = 0,
+				uint Edge1 = 1,
+				uint Edge2 = 2,
+			},
+			{
+				uint Edge0 = 1,
+				uint Edge1 = 3,
+				uint Edge2 = 4,
+			},
+		],
+		Array Edges = 
+		[
+			{
+				uint VertA = 2,
+				uint VertB = 3,
+				int PolyA = 0,
+				int PolyB = -1,
+			},
+			{
+				uint VertA = 3,
+				uint VertB = 4,
+				int PolyA = 0,
+				int PolyB = 1,
+			},
+			{
+				uint VertA = 4,
+				uint VertB = 2,
+				int PolyA = 0,
+				int PolyB = -1,
+			},
+			{
+				uint VertA = 3,
+				uint VertB = 5,
+				int PolyA = 1,
+				int PolyB = -1,
+			},
+			{
+				uint VertA = 5,
+				uint VertB = 4,
+				int PolyA = 1,
+				int PolyB = -1,
+			},
+		],
+		Array Vertices = 
+		[
+[-0.5, -0.5, 0.5],
+[0.5, -0.5, 0.5],
+[-0.5, 0.5, 0.5],
+[0.5, 0.5, 0.5],
+[-0.5, 0.5, -0.5],
+[0.5, 0.5, -0.5],
+[-0.5, -0.5, -0.5],
+[0.5, -0.5, -0.5],
+		],
+	},
+},

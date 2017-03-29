@@ -1,0 +1,21 @@
+class DetectVictory : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(!this.Space.FindAllObjectsByName("Enemy").IsNotEmpty)
+        {
+            
+            
+            Zero.ObjectStore.Store("PlayerSave.wcd", this.Space.FindObjectByName("TempPlayer"));
+            Console.WriteLine("VICTORY!");
+            this.Space.TimeSpace.Paused = true;
+            
+        }
+        
+    }
+}

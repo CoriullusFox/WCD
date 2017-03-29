@@ -1,0 +1,10 @@
+Cog =
+{
+	Named =
+	{
+		string Name = "Renderer",
+	},
+	EditorRenderer =
+	{
+	},
+}

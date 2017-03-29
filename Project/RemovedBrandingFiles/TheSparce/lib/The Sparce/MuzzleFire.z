@@ -1,0 +1,29 @@
+class MuzzleFire : ZilchComponent
+{
+    
+    [Property]
+    var MuzzleFireParticle : Archetype = Archetype.Particle_MuzzleFire;
+    
+    [Dependency]
+    var SpriteDirection : Movement = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
+    }
+
+    function OnShoot(event : Shoot)
+    {
+        
+        var currentDirection = this.SpriteDirection.CurrentDirection;       // CURRENT DIRECTION
+        
+        var muzzleParticle = this.Space.CreateAtPosition(this.MuzzleFireParticle, currentDirection / 4);
+        if(muzzleParticle != null)
+        {
+            
+            muzzleParticle.AttachTo(this.Owner);
+            
+        }
+    }
+    
+}

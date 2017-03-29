@@ -1,0 +1,188 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Sage Dupuy
+**
+** Contributors:
+** - Brandon Wolenetz
+** --------------------------------------------------------------------------*/
+
+class PlayerAnimations : ZilchComponent
+{
+    [Property]
+    var North : SpriteSource = null;
+    
+    [Property]
+    var NorthEast : SpriteSource = null;
+    
+    [Property]
+    var East : SpriteSource = null;
+    
+    [Property]
+    var SouthEast : SpriteSource = null;
+    
+    [Property]
+    var South : SpriteSource = null;
+    
+    [Property]
+    var SouthWest : SpriteSource = null;
+    
+    [Property]
+    var West : SpriteSource = null;
+    
+    [Property]
+    var NorthWest : SpriteSource = null;
+    
+    [Property]
+    var WeaponNorth : SpriteSource = null;
+    
+    [Property]
+    var WeaponNorthEast : SpriteSource = null;
+    
+    [Property]
+    var WeaponEast : SpriteSource = null;
+    
+    [Property]
+    var WeaponSouthEast : SpriteSource = null;
+    
+    [Property]
+    var WeaponSouth : SpriteSource = null;
+    
+    [Property]
+    var WeaponSouthWest : SpriteSource = null;
+    
+    [Property]
+    var WeaponWest : SpriteSource = null;
+    
+    [Property]
+    var WeaponNorthWest : SpriteSource = null;
+    
+    [Property]
+    var CurrentWalkingAnimationSpeed : Integer = 2;
+    
+    var WalkingAnimationSpeed : Integer = 0;
+    
+    [Property]
+    var CurrentRunningAnimationSpeed : Integer = 4;
+    
+    var RunningAnimationSpeed : Integer = 4;
+    
+    var WeaponS : CogPath = CogPath("Weapon");
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
+        
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift))
+        {
+            this.Owner.Sprite.AnimationSpeed = this.RunningAnimationSpeed;
+        }
+        else
+        {
+            this.Owner.Sprite.AnimationSpeed = this.WalkingAnimationSpeed;
+        }
+        if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouthWest;
+            
+            if(this.Owner.Sprite.SpriteSource != this.SouthWest)
+            {
+                this.Owner.Sprite.SpriteSource = this.SouthWest;
+            }
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouthEast;
+            
+            if(this.Owner.Sprite.SpriteSource != this.SouthEast)
+            {
+                this.Owner.Sprite.SpriteSource = this.SouthEast;
+            }
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthWest;
+            
+            if(this.Owner.Sprite.SpriteSource != this.NorthWest)
+            {
+                this.Owner.Sprite.SpriteSource = this.NorthWest;
+            }
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthEast;
+            
+            if(this.Owner.Sprite.SpriteSource != this.NorthEast)
+            {
+                this.Owner.Sprite.SpriteSource = this.NorthEast;
+            }
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorth;
+            
+            if(this.Owner.Sprite.SpriteSource != this.North)
+            {
+                this.Owner.Sprite.SpriteSource = this.North;
+            }
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.A))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponWest;
+            
+            if(this.Owner.Sprite.SpriteSource != this.West)
+            {
+                this.Owner.Sprite.SpriteSource = this.West;
+            }
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouth;
+            
+            if(this.Owner.Sprite.SpriteSource != this.South)
+            {
+                this.Owner.Sprite.SpriteSource = this.South;
+            }
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.D))
+        {
+            this.Owner.Sprite.AnimationActive = true;
+            
+            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponEast;
+            
+            if(this.Owner.Sprite.SpriteSource != this.East)
+            {
+                this.Owner.Sprite.SpriteSource = this.East;
+            }
+        }
+        else
+        {
+            this.Owner.Sprite.AnimationActive = false;
+            
+            this.Owner.Sprite.CurrentFrame = 4;
+        }
+    }
+}

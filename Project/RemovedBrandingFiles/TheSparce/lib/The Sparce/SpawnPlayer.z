@@ -1,0 +1,15 @@
+class SpawnPlayer : ZilchComponent
+{
+    [Property]
+    var PlayerToSpawn : String = "Player";
+    
+    function Initialize(init : CogInitializer)
+    {
+        var player = Zero.ObjectStore.RestoreOrArchetype("PlayerSave.wcd", this.PlayerToSpawn, this.Space);
+        if(player != null)
+        { 
+            player.Transform.Translation = this.Owner.Transform.Translation;
+            this.LevelSettings.CameraViewport.Camera = player.FindChildByName("Camera");
+        }
+    }
+}

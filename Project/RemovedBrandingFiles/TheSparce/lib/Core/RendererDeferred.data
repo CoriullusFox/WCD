@@ -1,0 +1,11 @@
+Cog =
+{
+	Named =
+	{
+		string Name = "Renderer",
+	},
+	DeferredRenderer =
+	{
+	},
+}
+

@@ -1,0 +1,69 @@
+[ModelVertex][AutoBlock]
+class %FRAGMENTNAME%
+{
+    // Local to World matrix
+    [Input] var World : Real4x4 = Real4x4();
+    
+    // World to View matrix
+    [Input] var View : Real4x4 = Real4x4();
+    
+    // View to Projection (Clip space) matrix
+    [Input] var Projection : Real4x4 = Real4x4();
+    
+    // Local to View matrix
+    [Input] var WorldView : Real4x4 = Real4x4();
+    
+    // World to Projection matrix
+    [Input] var ViewProjection : Real4x4 = Real4x4();
+    
+    // Local to Projection matrix
+    [Input] var WorldViewProjection : Real4x4 = Real4x4();
+
+    // Vertex position in Local space
+    [Input] var Position : Real3 = Real3();
+    
+    // Time in seconds
+    [Input] var Time : Real = 0.0;
+
+    // First set of Uv's
+    [Input] var Uv : Real2 = Real2(0);
+    
+    // Second set of Uv's
+    [Input] var Uv1 : Real2 = Real2(0);
+    
+    // The color of the current vertex
+    [Input] var VertexColor : Real4 = Real4(0);
+
+    // These three outputs are required
+
+    // Input as the Normal in Local space
+    // Should be output as the Normal in View space
+    [Input][Output] var Normal : Real3 = Real3();
+
+    // Position in Clip space
+    [Output] var Projected : Real4 = Real4();
+    
+    // Position in View space
+    [Output] var PixelPosition : Real3 = Real3();
+    
+    function Main()
+    {
+        // Scrolling sin wave
+        var sinWave = Math.Sin(this.Time) * 0.1 + 0.1;
+
+        // Project the position out by its normal
+        var newPosView = this.Position + (this.Normal * sinWave);
+        
+        // Bring the Local position to the Clip space
+        // 1.0 needs to be the fourth element when multiplying by the matrix as it's a position
+        this.Projected = Math.Multiply(this.WorldViewProjection, Real4(newPosView, 1) );
+        
+        // Bring the Local normal to View space
+        // 0 needs to be the fourth element when multiplying by the matrix as it's a normal
+        this.Normal = Math.Multiply(this.WorldView, Real4(this.Normal, 0) ).XYZ;
+        
+        // Bring the Local position to View space
+        // 1.0 needs to be the fourth element when multiplying by the matrix as it's a position
+        this.PixelPosition = Math.Multiply(this.WorldView, Real4(newPosView, 1) ).XYZ;
+    }
+}

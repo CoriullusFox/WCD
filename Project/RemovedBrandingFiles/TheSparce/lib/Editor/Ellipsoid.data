@@ -1,0 +1,32 @@
+Cog = 
+{
+	Transform =
+	{
+		float[] Translation = [ 5.4 , 7 , 0.4 ] ,
+		float[] Scale = [ 1.5, 0.5, 1 ] ,	
+		float[] Rotation = [ 0 , 0 , 0 , 1 ] ,	
+	},
+	
+	Model =
+	{
+		string MaterialName =  Caution,
+		string MeshName =  Sphere,
+	},
+
+	RigidBody =
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+	},
+
+	EllipsoidCollider = 
+	{
+	    bool Ghost = false,
+		bool SendsMessages = false,
+		string MaterialName = HardMaterial ,
+		float[] Radii = [ 1.0 , 1.0 , 1.0 ] ,
+	},
+	
+}

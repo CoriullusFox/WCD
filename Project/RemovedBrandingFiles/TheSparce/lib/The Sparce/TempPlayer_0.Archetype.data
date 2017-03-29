@@ -1,0 +1,112 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "TempPlayer",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [0.11, 0, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = false,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	GunManager = 
+	{
+		string SelectedGun = "",
+		string PistleBullet = "",
+		string ShotgunBullet = "",
+		string MinigunBullet = "",
+		string RifleBullet = "",
+		string BeamBullet = "",
+	},
+	ShootManager = 
+	{
+		float AmmoSubtract = 1,
+		string ArchetypeAmmoBar = "585c1c0394829202:AmmoBar",
+		string ArchetypeCooldownBar = "585c3b17d1cfff7b:CooldownBar",
+	},
+	PlayerShooting = 
+	{
+		Vec3 Direction = [0, 0, 0],
+	},
+	BulletEject = 
+	{
+		float VerticalVelocity = 5,
+		float HorizontalVelocity = 5,
+		string ArchetypeBullet = "585c35d4ecab5a38:BulletMinigun",
+	},
+	MinigunBarrelDelayEffect = 
+	{
+	},
+	Health = 
+	{
+		float ConfiguredHealth = 50,
+		float DefaultHP = 50,
+		string ArchetypeAmmoBar = "585c326494ed3b45:HealthBar",
+		float RegenRate = 0.5,
+	},
+	Movement = 
+	{
+		float Speed = 250,
+		float RunSpeed = 500,
+	},
+	ChangeDirectionToPointAtMouse = 
+	{
+	},
+	DebugMode = 
+	{
+		bool DubugModeEnabled = true,
+	},
+	IgnoreSpaceEffects = 
+	{
+		bool Drag = false,
+		bool Flow = false,
+		bool Force = false,
+		bool Gravity = true,
+		bool Thrust = false,
+		bool Vortex = false,
+		bool Wind = false,
+		bool Invalid = false,
+		bool Torque = false,
+		bool PointGravity = false,
+		bool PointForce = false,
+		bool Buoyancy = false,
+	},
+	Hierarchy = 
+	{
+	},
+},

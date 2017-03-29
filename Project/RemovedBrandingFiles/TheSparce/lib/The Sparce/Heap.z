@@ -1,0 +1,128 @@
+class Heap
+{
+    
+    var Items : Array[Node];
+    var CurrItemCount : Integer;
+    
+    
+    
+    constructor(maxHeapSize : Integer)
+    {
+        
+        this.Items = new Array[Node]();
+        this.Items.Resize(maxHeapSize);
+        
+    }
+    
+
+    
+    
+    function Add(item : Node)
+    {
+        item.HeapIndex = this.CurrItemCount;
+        this.Items[this.CurrItemCount] = item;
+        this.SortUp(item);
+        ++this.CurrItemCount;
+    }
+    
+    function RemoveFirst() : Node
+    {
+        
+        var firstItem = this.Items[0];
+        --this.CurrItemCount;
+        this.Items[0] = this.Items[this.CurrItemCount];
+        this.Items[0].HeapIndex = 0;
+        this.SortDown(this.Items[0]);
+        return firstItem;
+        
+    }
+    
+    function UpdateItem(item : Node)
+    {
+        this.SortUp(item);
+    }
+    
+    var Count : Integer
+    {
+        get
+        {
+            return this.CurrItemCount;
+        }
+    }
+    
+    function Contains(item : Node) : Boolean
+    {
+        return this.Items[item.HeapIndex] == item;
+    }
+    
+    function SortDown(item : Node)
+    {
+        
+        while(true)
+        {
+            
+            var chIndexL = (item.HeapIndex *2) +1;
+            var chIndexR = (item.HeapIndex *2) +2;
+            var swapIndex = 0;
+            
+            
+            if(chIndexL <= this.CurrItemCount)
+            {
+                swapIndex = chIndexL;
+                
+                if(chIndexR <= this.CurrItemCount)
+                {
+                    if(this.Items[chIndexL].FCost > this.Items[chIndexR].FCost)
+                    {
+                        swapIndex = chIndexR;
+                    }
+                }
+                
+                if(item.FCost > this.Items[swapIndex].FCost)
+                {
+                    this.Swap(item, this.Items[swapIndex]);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+            
+        }
+        
+    }
+    
+    function SortUp(item : Node)
+    {
+        
+        var parentIndex = (item.HeapIndex-1)/2;
+        while (parentIndex >= 0)
+        {
+            var parentItem = this.Items[parentIndex];
+            if(item.FCost < parentItem.FCost)
+            {
+                this.Swap(item, parentItem);
+                
+            }
+            else
+            {
+                break;
+            }
+            parentIndex = (item.HeapIndex-1)/2;
+        }
+        
+    }
+    function Swap(itemA : Node, itemB : Node)
+    {
+        var indexA = itemA.HeapIndex;
+        var indexB = itemB.HeapIndex;
+        this.Items[indexA] = itemB;
+        this.Items[indexB] = itemA;
+        this.Items[indexA].HeapIndex = indexA;
+        this.Items[indexB].HeapIndex = indexB;
+    }
+}

@@ -1,0 +1,13 @@
+class SelectedStor : ZilchComponent
+{
+    var Selected : String = "Pistol";
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.GameSession, Events.SelectedGun, this.OnSelectedGun);
+    }
+
+    function OnSelectedGun(event : SelectedGun)
+    {
+        this.Selected = event.Selected;
+    }
+}

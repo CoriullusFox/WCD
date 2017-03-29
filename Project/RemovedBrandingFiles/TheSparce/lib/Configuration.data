@@ -1,0 +1,47 @@
+Cog  = 
+{
+	MainConfig  = 
+	{
+		string ApplicationName = "ZeroEditor",
+	},
+
+	TimeConfig =
+	{
+		bool LimitFrameRate = true,
+		int FrameRate = 60,
+	},
+	
+	MainWindowConfig = 
+	{
+		string Title = "Zero - Editor",
+		bool MaxSize = false,
+		int DesktopIndex = 0,
+		int Width = 1024,
+		int Height = 768,
+	},
+	
+	GraphicsConfig = 
+	{
+		PerformanceMode PerformanceMode = HighPerformance,
+		bool FullScreen = false,
+		bool VerticalSync = true,
+		int MultiSample = 0,
+		GraphicsQuality Quality = Low,
+		int FullscreenWidth = 0,
+		int FullscreenHeight = 0,
+	},
+	
+	ContentConfig = 
+	{
+		string ContentOutput = "",
+		string ToolsDirectory = "",
+		string ScratchLibrary = "",
+		Array LibraryDirectories = [],
+	}
+
+	TextEditorConfig =
+	{
+		bool ShowWhiteSpace = true,
+		bool AutoCompleteOnEnter = true,
+	}
+}

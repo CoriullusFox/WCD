@@ -1,0 +1,21 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "RotateTool",
+	},
+	Archetyped = 
+	{
+		string Name = "d2aa8633b5a34329:RotateTool",
+	},
+	MouseCapture = 
+	{
+	},
+	RotateTool = 
+	{
+	},
+},
