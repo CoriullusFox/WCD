@@ -1,7 +1,0 @@
-TileSet =
-{
-	Tile =
-	{
-		string TileDefinition = "4e289736e95f8ec3:DefaultTile",
-	},
-},

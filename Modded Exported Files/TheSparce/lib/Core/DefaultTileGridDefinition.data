@@ -1,5 +1,0 @@
-TileDefinition =
-{
-	bool Combine = true,
-	string ArchetypeName = "4e2fec218ae42ecc:DefaultTileGridArchetype",
-},
