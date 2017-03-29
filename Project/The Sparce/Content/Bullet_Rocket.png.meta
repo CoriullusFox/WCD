@@ -1,5 +1,12 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Bullet",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Bullet_Rocket",

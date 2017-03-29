@@ -129,7 +129,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.54567, 9.14285, 50],
+			Vec3 Translation = [8.47077, 10.9296, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -141,7 +141,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.08103,
+			float Size = 36.788,
 		},
 		EditorCameraController = 
 		{
@@ -149,7 +149,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.54567, 9.14285, -1.68435e-006],
+			Vec3 LookTarget = [8.47077, 10.9296, -1.09918e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -403,24 +403,6 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "585fac1532f16dbc:Entity_Sniper_Enemy",
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-2.91257, 8.80965, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
 		},
 	},
 },
