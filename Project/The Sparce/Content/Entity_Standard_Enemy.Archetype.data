@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-4.14903, 8.92096, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,9 +38,9 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 10,
-		float ShootProximity = 9,
-		int Speed = 100,
+		float ChaseProximity = 8,
+		float ShootProximity = 10,
+		int Speed = 80,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
 		bool Pathfind = true,
@@ -70,17 +70,17 @@ Cog =
 		string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 		string West = "58128bf533d431ee:EnemyWest_Anim",
 		string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-		int AnimationSpeed = 3,
+		float AnimationSpeed = 3,
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 50,
+		float ConfiguredHealth = 75,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
-		float RegenRate = 0.5,
-		float MaxHealth = 0,
+		float RegenRate = 0.25,
+		float MaxHealth = 75,
 		float HurtDuration = 0.1,
 	},
 	RigidBody = 
@@ -89,7 +89,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -97,8 +97,8 @@ Cog =
 	},
 	EnemyToutchDamage = 
 	{
-		float SecondsBetweenDamage = 0.25,
-		float Damage = 10,
+		float SecondsBetweenDamage = 0.5,
+		float Damage = 2.5,
 	},
 	Pistol = 
 	{
@@ -106,10 +106,10 @@ Cog =
 		float Damage = 5,
 		float EnergyUse = 1,
 		float Energy = 100,
-		float CooldownMax = 1,
+		float CooldownMax = 0.8,
 		bool Player = false,
 		float BulletSpeed = 10,
-		float LifeLength = 10,
-		float CamZoom = 10,
+		float LifeLength = 5,
+		float CamZoom = 20,
 	},
 },

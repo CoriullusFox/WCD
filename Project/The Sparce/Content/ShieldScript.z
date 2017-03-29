@@ -1,0 +1,55 @@
+class ShieldScript : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var moveDirectionX = this.Owner.Parent.EnemyAI.MoveDirection.X;
+        
+        var moveDirectionY = this.Owner.Parent.EnemyAI.MoveDirection.Y;
+        
+        if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(-1.0,1.0,0.0);
+        }
+        else if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(0.0,1.0,0.0);
+        }
+        
+        else if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(1.0,1.0,0.0);
+        }
+        
+        else if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(1.0,0.0,0.0);
+        }
+        
+        else if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(1.0,-1.0,0.0);
+        }
+        
+        else if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(0.0,-1.0,0.0);
+        }
+        
+        else if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(-1.0,-1.0,0.0);
+        }
+        
+        else if(moveDirectionX < 0.25 && moveDirectionX > 0.25 && moveDirectionY < 0.25 && moveDirectionY > 0.25)
+        {
+            this.Owner.BoxCollider.Offset = Real3(-1.0,0.0,0.0);
+        }
+        
+        
+    }
+}

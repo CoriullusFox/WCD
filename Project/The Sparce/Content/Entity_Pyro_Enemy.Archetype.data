@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-4.65887, 9.08163, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -33,14 +33,14 @@ Cog =
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 3,
+		float AnimationSpeed = 0.5,
 		uint StartFrame = 0,
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 10,
-		float ShootProximity = 9,
-		int Speed = 100,
+		float ChaseProximity = 8,
+		float ShootProximity = 10,
+		int Speed = 75,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
 		bool Pathfind = true,
@@ -70,18 +70,18 @@ Cog =
 		string SouthWest = "585fa21ab3566b17:Entity_PyroPig_SW_",
 		string West = "585fa05d59aec182:Entity_PyroPig_West_",
 		string NorthWest = "585f9f9a0936948d:Entity_PyroPig_NW_",
-		int AnimationSpeed = 3,
+		float AnimationSpeed = 0.5,
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 50,
+		float ConfiguredHealth = 150,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
-		float RegenRate = 0.5,
+		float RegenRate = 0.25,
 		float MaxHealth = 0,
-		float HurtDuration = 0.1,
+		float HurtDuration = 0.2,
 	},
 	RigidBody = 
 	{
@@ -98,18 +98,16 @@ Cog =
 	EnemyToutchDamage = 
 	{
 		float SecondsBetweenDamage = 0.25,
-		float Damage = 10,
+		float Damage = 2,
 	},
-	Pistol = 
+	FlameThrower = 
 	{
-		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
-		float Damage = 5,
-		float EnergyUse = 1,
+		string Bullet = "583c4a1e4237346f:Bullet_FlamethrowerAmmo",
+		float DPS = 2,
+		float EnergyUse = 5,
 		float Energy = 100,
 		float CooldownMax = 1,
 		bool Player = false,
-		float BulletSpeed = 10,
-		float LifeLength = 10,
-		float CamZoom = 10,
+		float CamZoom = 23,
 	},
 },

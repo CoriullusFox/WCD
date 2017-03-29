@@ -129,7 +129,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.136729, 6.80555, 50],
+			Vec3 Translation = [-3.54567, 9.14285, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -141,7 +141,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9569,
+			float Size = 6.08103,
 		},
 		EditorCameraController = 
 		{
@@ -149,7 +149,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.136729, 6.80555, -1.45768e-006],
+			Vec3 LookTarget = [-3.54567, 9.14285, -1.68435e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -405,121 +405,22 @@ Level =
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "585fac1532f16dbc:Entity_Sniper_Enemy",
 		LinkId = 
 		{
 			uint Id = 9,
 		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-		Archetyped = 
-		{
-			string Name = "585fac9f00ca99ba:Entity_Buff_Enemy",
-		},
 		Transform = 
 		{
-			Vec3 Translation = [-3, 9, 0],
+			Vec3 Translation = [-2.91257, 8.80965, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585f9b3987abc902:Entity_BuffPig_South",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 0.3,
-			uint StartFrame = 0,
-		},
-		EnemyAI = 
-		{
-			float ChaseProximity = 6,
-			float ShootProximity = 5,
-			int Speed = 50,
-			Vec3 LookDirection = [0, 1, 0],
-			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = true,
-			bool Debug = false,
-			float ResponceTime = 2,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5800bf6d54ec0d53:Slippery",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.35, 0.4, 0.5],
-		},
-		ChangeDirectionToPointAtPlayer = 
-		{
-		},
-		EnemyAnimations = 
-		{
-			string North = "585f9b4a9b98ef08:Entity_BuffPig_North",
-			string NorthEast = "585f9bfa687a3e29:Entity_BuffPig_NE",
-			string East = "585f9bcc67c75c57:Entity_BuffPig_East",
-			string SouthEast = "585f9b7b9cf92ccb:Entity_BuffPig_SE",
-			string South = "585f9b3987abc902:Entity_BuffPig_South",
-			string SouthWest = "585f9b1e80f97cad:Entity_BuffPig_SW",
-			string West = "585f9cc98c65c26b:Entity_BuffPig_West",
-			string NorthWest = "585f9b5397108311:Entity_BuffPig_NW",
-			float AnimationSpeed = 0.3,
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 200,
-			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
-			bool MiniHeathBar = true,
-			bool Player = false,
-			Vec4 HurtColor = [1, 0, 0.000599861, 1],
-			float RegenRate = 0.1,
-			float MaxHealth = 200,
-			float HurtDuration = 0.2,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		EnemyToutchDamage = 
-		{
-			float SecondsBetweenDamage = 0.8,
-			float Damage = 25,
-		},
-		Shotgun = 
-		{
-			string Bullet = "583c7e44dd4f1575:Bullet_TinyPellet",
-			int NumberOfShots = 5,
-			float DamagePerBullet = 2,
-			float DistBetweenShots = 0.1,
-			float EnergyUse = 12.5,
-			float Energy = 100,
-			float CooldownMax = 0.8,
-			bool Player = false,
-			float BulletSpeed = 0.001,
-			float LifeLength = 0.6,
-			float CamZoom = 10,
+			string Name = "Enemy",
 		},
 	},
 },
