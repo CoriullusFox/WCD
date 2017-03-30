@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "585123514e9dff4f:HorDoor",
+		string Name = "585123684cf5d900:VertDoor",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 4, 0],
+		Vec3 Translation = [4, 1.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5851291041a1bb74:Animated_HorDoor_Opening",
+		string SpriteSource = "585122f22c063b0b:Animated_VertDoor_Opening",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -43,13 +43,13 @@ Cog =
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [1, 1, 0.5],
+		Vec3 Offset = [0, -0.25, 0],
+		Vec3 Size = [1, 1.25, 0.5],
 	},
 	Doorscript = 
 	{
-		string DoorOpening = "5851291041a1bb74:Animated_HorDoor_Opening",
-		string DoorClosing = "58512a9cb0ae4e1c:Animated_HorDoor_Closing",
-		float DoorAnimationSpeed = 80,
+		string DoorOpening = "585122f22c063b0b:Animated_VertDoor_Opening",
+		string DoorClosing = "585122b35aa62649:Animated_VertDoor_Closing",
+		float DoorAnimationSpeed = 100,
 	},
 },

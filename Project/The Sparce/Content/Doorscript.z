@@ -1,13 +1,13 @@
 class Doorscript : ZilchComponent
 {
     [Property]
-    var DoorOpening : SpriteSource = SpriteSource.Animated_HorDoor_Opening;
+    var DoorOpening : SpriteSource = null;
     
     [Property]
-    var DoorClosing : SpriteSource = SpriteSource.Animated_HorDoor_Closing;
+    var DoorClosing : SpriteSource = null;
     
     [Property]
-    var DoorAnimationSpeed : Real = 60;
+    var DoorAnimationSpeed : Real = 80;
     
     function Initialize(init : CogInitializer)
     {
