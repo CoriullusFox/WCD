@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Doorscript",
+		uint64 ResourceId = 5851367b1c1e958b,
+	},
+},

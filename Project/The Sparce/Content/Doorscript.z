@@ -1,0 +1,44 @@
+class Doorscript : ZilchComponent
+{
+    [Property]
+    var DoorOpening : SpriteSource = SpriteSource.Animated_HorDoor_Opening;
+    
+    [Property]
+    var DoorClosing : SpriteSource = SpriteSource.Animated_HorDoor_Closing;
+    
+    [Property]
+    var DoorAnimationSpeed : Real = 60;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.Owner.Sprite.AnimationActive = false;
+        
+        this.Owner.Sprite.AnimationSpeed = this.DoorAnimationSpeed;
+        
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        Console.WriteLine("Started");
+        
+        this.Owner.Sprite.CurrentFrame = 0;
+        
+        this.Owner.Sprite.SpriteSource = this.DoorOpening;
+        
+        this.Owner.Sprite.AnimationActive = true;
+    }
+    
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        Console.WriteLine("Ended");
+        
+        this.Owner.Sprite.CurrentFrame = 0;
+        
+        this.Owner.Sprite.SpriteSource = this.DoorClosing;
+        
+        this.Owner.Sprite.AnimationActive = true;
+    }
+}
