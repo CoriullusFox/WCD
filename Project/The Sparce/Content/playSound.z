@@ -1,0 +1,41 @@
+class PlaySound : ZilchComponent
+{
+    [Property]
+    var Sound : SoundCue = null;
+    
+    [Dependency]
+    var SoundEmitter : SoundEmitter = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Space))
+        {
+            //if(this.Sound != null)
+            //{
+            //    this.Space.SoundSpace.PlayCue(this.Sound);
+            //}
+            //else
+            //{
+            //    this.Space.SoundSpace.PlayCue(SoundCue.DefaultCue);
+            //}
+            if(!this.SoundEmitter.IsPlaying())
+            {
+                if(this.Sound != null)
+                {
+                    this.SoundEmitter.PlayCue(this.Sound);
+                }
+                else
+                {
+                    this.SoundEmitter.PlayCue(SoundCue.DefaultCue);
+                }
+            }
+        }
+        
+    }
+}

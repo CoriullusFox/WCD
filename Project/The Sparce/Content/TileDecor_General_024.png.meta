@@ -1,5 +1,12 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Tile",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "TileDecor_General_024",

@@ -1,0 +1,27 @@
+ImageContent = 
+{
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Tile",
+		],
+	},
+	SpriteSourceBuilder = 
+	{
+		string Name = "Tile_FancyWalls_033",
+		uint64 ResourceId = 58583b48e17e1802,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 16,
+		uint FrameSizeY = 16,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333,
+		float OriginX = 8,
+		float OriginY = 8,
+		float PixelsPerUnit = 16,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

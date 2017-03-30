@@ -1,15 +1,22 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"SpriteSheet",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Tile_Wires",
-		uint64 ResourceId = 584fc517f87ef101,
+		uint64 ResourceId = 58584f7ee6f70f22,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 0,
-		uint FrameSizeY = 0,
+		uint FrameSizeX = 238,
+		uint FrameSizeY = 51,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
-		float OriginX = 68,
+		float OriginX = 119,
 		float OriginY = 25,
 		float PixelsPerUnit = 64,
 		bool Smoothing = true,

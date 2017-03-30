@@ -1,16 +1,23 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"SpriteSheet",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Tile_FancyWalls",
-		uint64 ResourceId = 5851298a9e8119cc,
+		uint64 ResourceId = 58583bbcf95dd5d1,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 0,
-		uint FrameSizeY = 0,
+		uint FrameSizeX = 102,
+		uint FrameSizeY = 136,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
 		float OriginX = 51,
-		float OriginY = 67,
+		float OriginY = 68,
 		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 		bool Looping = true,
