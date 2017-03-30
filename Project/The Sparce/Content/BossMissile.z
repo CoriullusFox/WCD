@@ -1,9 +1,38 @@
 class BossMissile : ZilchComponent
 {
-    function FireMissiles(amount : Real, damage : Real, speed : Real, turnSpeed : Real)
+    function FireMissiles(amount : Real, damage : Real, speed : Real, turnSpeed : Real, lifeLength : Real)
     {
         
-        
+        for (var i = 0; i < amount; ++i)
+        {
+            
+            var bullet = this.Space.CreateAtPosition(Archetype.Missile, this.Owner.Transform.Translation);
+            if(bullet != null)
+            {
+                
+                var randGen : Random = Random();
+                var angle = randGen.Range(180, -180);
+                
+                //generate direction for orientation component from angle
+                var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                
+                //apply direction and movement
+                bullet.Orientation.LookAtDirection(newDirection);
+                bullet.Transform.Translation += newDirection *1.5;
+                bullet.RigidBody.Velocity = Math.Normalize(newDirection) * speed;
+                
+                bullet.Despawn.LifeLength = lifeLength;
+                
+                //set whether or not the bullet is from the player
+                bullet.BulletScript.PlayerBullet = false;
+                
+                bullet.BulletScript.Damage = damage;
+                
+                bullet.MissileAI.Speed = speed;
+                bullet.MissileAI.TurnSpeed = turnSpeed;
+                bullet.MissileAI.Target = this.Space.FindObjectByName("TempPlayer");
+            }
+        }
         
     }
 }

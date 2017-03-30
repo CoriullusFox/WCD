@@ -145,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.48404, 4.99605, 50],
+			Vec3 Translation = [3.19512, 6.92026, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0993,
+			float Size = 13.3718,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.48404, 4.99605, 1.088e-007],
+			Vec3 LookTarget = [3.19512, 6.92026, 5.24596e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1351,7 +1351,7 @@ Level =
 			float BulletSpeed = 5,
 			float Damage = 10,
 			float LifeLength = 5,
-			float Randomness = 1,
+			float Randomness = 0.1,
 		},
 		SpinAttack = 
 		{
@@ -1372,7 +1372,7 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "Transform",
+					string Name = "Enemy",
 				},
 				Transform = 
 				{

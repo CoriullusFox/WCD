@@ -17,7 +17,7 @@ class MissileAI : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
-        this.Owner.RigidBody.Velocity = this.Owner.Orientation.LocalForward * this.Speed;
+        this.Owner.RigidBody.Velocity = this.Owner.Orientation.WorldForward * this.Speed;
         
         this.Owner.Transform.Rotation = Math.Slerp(this.Owner.Transform.Rotation, this.Owner.Orientation.GetLookAtPointRotation(this.Target.Transform.Translation), event.Dt * this.TurnSpeed);
         
