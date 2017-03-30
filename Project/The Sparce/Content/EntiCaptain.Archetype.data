@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.63099, 8.28809, 0],
+		Vec3 Translation = [2.35147, 8.09849, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -89,14 +89,14 @@ Cog =
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
-		float RegenRate = 0.5,
+		float RegenRate = 5,
 		float MaxHealth = 1000,
 		float HurtDuration = 0.1,
 	},
 	EnemyToutchDamage = 
 	{
 		float SecondsBetweenDamage = 0.25,
-		float Damage = 10,
+		float Damage = 25,
 	},
 	PassiveAttack = 
 	{
@@ -105,12 +105,9 @@ Cog =
 		float BulletSpeed = 5,
 		float Damage = 10,
 		float LifeLength = 5,
-		float Randomness = 0.1,
+		float Randomness = 5,
 	},
 	SpinAttack = 
-	{
-	},
-	TestBoss = 
 	{
 	},
 	BossMissile = 
