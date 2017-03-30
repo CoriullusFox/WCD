@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "BulletPellet",
+		string Name = "Bullet",
 	},
 	Archetyped = 
 	{
-		string Name = "583c7df4b951b687:BulletPellet",
+		string Name = "583c7df4b951b687:Bullet_Pellet",
 	},
 	Transform = 
 	{
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

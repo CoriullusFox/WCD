@@ -6,11 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Flame",
+		string Name = "Bullet",
 	},
 	Archetyped = 
 	{
-		string Name = "583c4a1e4237346f:FlamethrowerAmmo",
+		string Name = "583c4a1e4237346f:Bullet_FlamethrowerAmmo",
 	},
 	Transform = 
 	{

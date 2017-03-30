@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Tesla",
+		string Name = "Bullet",
 	},
 	Archetyped = 
 	{
-		string Name = "580340fa4b4bf62b:Tesla",
+		string Name = "580340fa4b4bf62b:Bullet_Tesla",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [31.622, 16.1756, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
