@@ -47,6 +47,12 @@ class Health : ZilchComponent
     var HurtTimer : Real = 0;
     var IsHurt : Boolean = false;
     
+    var HeathPercent : Real
+    {
+        get{
+            return this.ConfiguredHealth / this.MaxHealth;
+        }
+    }
     function Initialize(init : CogInitializer)
     {
         

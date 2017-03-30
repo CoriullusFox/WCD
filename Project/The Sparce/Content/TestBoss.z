@@ -10,7 +10,7 @@ class TestBoss : ZilchComponent
         if(event.Key == Keys.Space)
         {
             //this.Owner.SpinAttack.Attack(5, 0.1, 0.1, 0.5, Archetype.Bullet_TinyLaser);
-            this.Owner.BossMissile.FireMissiles(3, 10, 5, 5, 10);
+            //this.Owner.BossMissile.FireMissiles(3, 10, 5, 5, 10);
         }
     }
 }
