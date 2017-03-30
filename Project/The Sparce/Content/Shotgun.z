@@ -49,7 +49,6 @@ class Shotgun : ZilchComponent
     var CamZoom : Real = 5;
     function Initialize(init : CogInitializer)
     {
-        this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
@@ -62,6 +61,7 @@ class Shotgun : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.LevelSettings.CameraViewport.Camera.Camera.Size = Math.Lerp(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom, event.Dt * 10);
         //Cooldown logic
         this.Cooldown += event.Dt;
         if(this.Player)

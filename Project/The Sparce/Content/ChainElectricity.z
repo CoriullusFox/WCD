@@ -38,7 +38,7 @@ class ChainElectricity : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         this.Links = Array[Cog]();
-        this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom;
+
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.Energy, this.OnEnergy);
