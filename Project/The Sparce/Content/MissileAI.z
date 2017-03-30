@@ -12,6 +12,20 @@ class MissileAI : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Destroy, this.OnDestroy);
+    }
+
+    function OnDestroy(event : Destroy)
+    {
+        var expl = this.Space.CreateAtPosition(Archetype.Particle_Explosion, this.Owner.Transform.Translation);
+        if(expl != null)
+        {
+            
+            expl.FindChildByName("Warp").ScreenWarpRing.Intensity = 0.1;
+            expl.FindChildByName("Warp").ScreenWarpRing.Size = 100000;
+            expl.Despawn.LifeLength = 0.1;
+            
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)

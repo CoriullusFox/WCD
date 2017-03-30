@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "582a5189640c82f4:Bullet_TinyLaser",
+		string SpriteSource = "582a5189641020d5:Bullet_LongLaser",
 		bool RenderMask = false,
 		bool FlipX = true,
 		bool FlipY = true,
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -85,7 +85,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.025, 0.09, 0.5],
+		Vec3 Size = [0.025, 0.15, 0.5],
 	},
 	Hierarchy = 
 	{

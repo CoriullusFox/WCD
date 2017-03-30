@@ -145,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.19512, 6.92026, 50],
+			Vec3 Translation = [-0.290474, 8.1764, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.3718,
+			float Size = 18.05,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.19512, 6.92026, 5.24596e-008],
+			Vec3 LookTarget = [-0.290474, 8.1764, -9.99008e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1258,9 +1258,13 @@ Level =
 		{
 			string Name = "Enemy",
 		},
+		Archetyped = 
+		{
+			string Name = "58586e025f680300:EntiCaptain",
+		},
 		Transform = 
 		{
-			Vec3 Translation = [1.63099, 8.28809, 0],
+			Vec3 Translation = [2.35147, 8.09849, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1329,14 +1333,14 @@ Level =
 		},
 		Health = 
 		{
-			float ConfiguredHealth = 200,
-			string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
+			float ConfiguredHealth = 1000,
+			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
 			string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
-			float RegenRate = 0.5,
-			float MaxHealth = 200,
+			float RegenRate = 5,
+			float MaxHealth = 1000,
 			float HurtDuration = 0.1,
 		},
 		EnemyToutchDamage = 
@@ -1360,6 +1364,9 @@ Level =
 		{
 		},
 		BossMissile = 
+		{
+		},
+		BossShootMngr = 
 		{
 		},
 		Hierarchy = 

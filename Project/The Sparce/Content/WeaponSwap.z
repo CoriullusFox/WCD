@@ -68,7 +68,10 @@ class WeaponSwap : ZilchComponent
             Console.WriteLine(this.Selected);
             //remove components and clamp selected
             this.RemoveComponents();
-            this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+            if(event.Scroll.Y > 0)
+                ++this.Selected;
+            else
+                --this.Selected;
             if(this.Selected > this.NumberOfWeapons - 1)
             {
                 this.Selected = 0;
@@ -79,7 +82,6 @@ class WeaponSwap : ZilchComponent
                 this.Selected = this.NumberOfWeapons - 1;
                 //this.PrevSelected = 0;
             }
-            
             //add new components and check if unlocked
             var init : CogInitializer = null;
             if(this.Selected == 0)
@@ -96,7 +98,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.ShotgunUnlocked);
@@ -110,7 +115,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.MinigunUnlocked);
@@ -124,7 +132,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.BeamLaserUnlocked);
@@ -138,7 +149,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.RifleUnlocked);
@@ -152,7 +166,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.FlamethrowerUnlocked);
@@ -166,7 +183,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.BouncerUnlocked);
@@ -180,7 +200,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.TeslaUnlocked);
@@ -194,8 +217,10 @@ class WeaponSwap : ZilchComponent
                 }
                 else
                 {
-                    Console.WriteLine(event.Scroll.Y as Integer);
-                    this.Selected += Math.Clamp(-1, 1, event.Scroll.Y as Integer);
+                    if(event.Scroll.Y > 0)
+                        ++this.Selected;
+                    else
+                        --this.Selected;
                     continue;
                 }
                 //this.IsSelectableWeapon(this.TeslaUnlocked);
