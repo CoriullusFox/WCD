@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Entity_Buff_Enemy",
-		uint64 ResourceId = 585fac9f00ca99ba,
+		string Name = "Entity_Enemy_Default",
+		uint64 ResourceId = 585848b27a4d3c71,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
@@ -12,7 +12,8 @@ DataContent =
 	{
 		Array Tags = 
 		[
-			"Enemy",
+			"Archetype",
+			"Entity",
 		],
 	},
 },

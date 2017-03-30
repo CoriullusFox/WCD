@@ -180,7 +180,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [3, 3, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -508,7 +508,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -568,7 +568,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{

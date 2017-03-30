@@ -8,14 +8,10 @@ Cog =
 	{
 		string Name = "Enemy",
 	},
-	Archetyped = 
-	{
-		string Name = "585faa98d5e05e26:Entity_Standard_Enemy",
-	},
 	Transform = 
 	{
-		Vec3 Translation = [-4.14903, 8.92096, 0],
-		Vec3 Scale = [4, 4, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,19 +24,19 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
+		string SpriteSource = "585fa11d6aa4e5d5:Entity_PyroPig_South_",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 3,
+		float AnimationSpeed = 0.5,
 		uint StartFrame = 0,
 	},
 	EnemyAI = 
 	{
 		float ChaseProximity = 8,
 		float ShootProximity = 10,
-		int Speed = 80,
+		int Speed = 75,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
 		bool Pathfind = true,
@@ -55,33 +51,33 @@ Cog =
 		string MaterialName = "5800bf6d54ec0d53:Slippery",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.065, 0.09, 0.5],
+		Vec3 Size = [0.3, 0.4, 0.5],
 	},
 	ChangeDirectionToPointAtPlayer = 
 	{
 	},
 	EnemyAnimations = 
 	{
-		string North = "58128ac7e63298e0:EnemyNorth_Anim",
-		string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-		string East = "58128986ce447b92:EnemyEast_Anim",
-		string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-		string South = "58128b1d3c322a60:EnemySouth_Anim",
-		string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-		string West = "58128bf533d431ee:EnemyWest_Anim",
-		string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-		float AnimationSpeed = 3,
+		string North = "585f9f7237c956f8:Entity_PyroPig_North_",
+		string NorthEast = "585f9fe70531f31b:Entity_PyroPig_NE",
+		string East = "585f9fc001dc2cdc:Entity_PyroPig_East_",
+		string SouthEast = "585f9f323e240fb1:Entity_PyroPig_SE_",
+		string South = "585fa11d6aa4e5d5:Entity_PyroPig_South_",
+		string SouthWest = "585fa21ab3566b17:Entity_PyroPig_SW_",
+		string West = "585fa05d59aec182:Entity_PyroPig_West_",
+		string NorthWest = "585f9f9a0936948d:Entity_PyroPig_NW_",
+		float AnimationSpeed = 0.5,
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 75,
+		float ConfiguredHealth = 150,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		float RegenRate = 0.25,
-		float MaxHealth = 75,
-		float HurtDuration = 0.1,
+		float MaxHealth = 0,
+		float HurtDuration = 0.2,
 	},
 	RigidBody = 
 	{
@@ -89,7 +85,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -97,19 +93,17 @@ Cog =
 	},
 	EnemyToutchDamage = 
 	{
-		float SecondsBetweenDamage = 0.5,
-		float Damage = 2.5,
+		float SecondsBetweenDamage = 0.25,
+		float Damage = 2,
 	},
-	Pistol = 
+	FlameThrower = 
 	{
-		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
-		float Damage = 5,
-		float EnergyUse = 1,
+		string Bullet = "583c4a1e4237346f:Bullet_FlamethrowerAmmo",
+		float DPS = 2,
+		float EnergyUse = 5,
 		float Energy = 100,
-		float CooldownMax = 0.8,
+		float CooldownMax = 1,
 		bool Player = false,
-		float BulletSpeed = 10,
-		float LifeLength = 5,
-		float CamZoom = 20,
+		float CamZoom = 23,
 	},
 },
