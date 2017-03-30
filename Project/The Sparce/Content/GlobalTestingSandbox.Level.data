@@ -145,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.28978, 7.79, 50],
+			Vec3 Translation = [1.96024, 8.27018, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96339,
+			float Size = 29.7595,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.28978, 7.79, 1.28857e-008],
+			Vec3 LookTarget = [1.96024, 8.27018, -1.5188e-009],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1258,6 +1258,10 @@ Level =
 		{
 			string Name = "Enemy",
 		},
+		Archetyped = 
+		{
+			string Name = "58586e025f680300:EntiCaptain",
+		},
 		Transform = 
 		{
 			Vec3 Translation = [1.63099, 8.28809, 0],
@@ -1330,12 +1334,12 @@ Level =
 		Health = 
 		{
 			float ConfiguredHealth = 1000,
-			string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
+			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
 			string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
-			float RegenRate = 0.5,
+			float RegenRate = 5,
 			float MaxHealth = 1000,
 			float HurtDuration = 0.1,
 		},

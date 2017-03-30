@@ -1,5 +1,8 @@
 class DetectVictory : ZilchComponent
 {
+    
+    var Win : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -7,7 +10,7 @@ class DetectVictory : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(!this.Space.FindAllObjectsByName("Enemy").IsNotEmpty)
+        if(!this.Space.FindAllObjectsByName("Enemy").IsNotEmpty || this.Win)
         {
             
             

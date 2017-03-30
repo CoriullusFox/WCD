@@ -149,7 +149,7 @@ class Health : ZilchComponent
                 this.Space.CreateAtPosition(Archetype.Particle_BlackDots, this.Owner.Transform.Translation);
                 
                 this.Space.CreateAtPosition(this.Explosion, this.Owner.Transform.Translation);
-                
+                this.Owner.DispatchEvent(Events.Destroy, Destroy());
                 this.Owner.Destroy();
             }
             

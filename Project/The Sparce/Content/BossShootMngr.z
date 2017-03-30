@@ -10,6 +10,12 @@ class BossShootMngr : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Destroy, this.OnDestroy);
+    }
+
+    function OnDestroy(event : Destroy)
+    {
+        this.LevelSettings.DetectVictory.Win = true;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -61,17 +67,17 @@ class BossShootMngr : ZilchComponent
                 this.Owner.BossMissile.FireMissiles(3, 5, 5, 1, 3);
             }
         }
-        if(this.Stage == 2)
+        if(this.Stage == 3)
         {
             if(this.Timer <= 0)
             {
                 this.Timer = 10;
-                this.Owner.SpinAttack.Attack(7, 0.1, 0.1, 1, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(7, 0.05, 0.05, 1, Archetype.Bullet_TinyLaser);
             }
             if(this.Timer2 <= 0)
             {
                 this.Timer2 = 7;
-                this.Owner.BossMissile.FireMissiles(8, 7, 5, 1, 3);
+                this.Owner.BossMissile.FireMissiles(5, 5, 8, 3, 10);
             }
         }
         
