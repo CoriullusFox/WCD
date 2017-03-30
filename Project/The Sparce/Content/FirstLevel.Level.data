@@ -129,7 +129,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.304203, 0.684215, 50],
+			Vec3 Translation = [-0.165733, 0.432751, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -141,7 +141,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.20852,
+			float Size = 16.5299,
 		},
 		EditorCameraController = 
 		{
@@ -149,7 +149,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.304203, 0.684215, -1.61437e-006],
+			Vec3 LookTarget = [-0.165733, 0.432751, -1.67191e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -618,7 +618,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Animated_HorDoor",
+			string Name = "Animated_VertDoor",
 		},
 	},
 	ArchetypeInstance = 
@@ -636,7 +636,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Animated_HorDoor",
+			string Name = "Animated_VertDoor",
 		},
 	},
 	ArchetypeInstance = 
@@ -654,7 +654,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Animated_HorDoor",
+			string Name = "Animated_VertDoor",
 		},
 	},
 	ArchetypeInstance = 
@@ -672,7 +672,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Animated_HorDoor",
+			string Name = "Animated_VertDoor",
 		},
 	},
 	ArchetypeInstance = 
@@ -690,7 +690,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Animated_HorDoor",
+			string Name = "Animated_VertDoor",
 		},
 	},
 	Cog = 
