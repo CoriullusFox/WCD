@@ -32,7 +32,6 @@ class BossShootMngr : ZilchComponent
         {
             this.Stage = 0;
         }
-        Console.WriteLine(this.Stage);
         if(this.Stage == 0)
         {
             if(this.Timer <= 0)
