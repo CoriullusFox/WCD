@@ -8,58 +8,46 @@
 ** - Sage Dupuy
 **
 ** Contributors:
-** - Brandon Wolenetz
+** - Brandon Wolenetz, Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class PlayerAnimations : ZilchComponent
 {
     [Property]
     var North : SpriteSource = null;
-    
     [Property]
     var NorthEast : SpriteSource = null;
-    
     [Property]
     var East : SpriteSource = null;
-    
     [Property]
     var SouthEast : SpriteSource = null;
-    
     [Property]
     var South : SpriteSource = null;
-    
     [Property]
     var SouthWest : SpriteSource = null;
-    
     [Property]
     var West : SpriteSource = null;
-    
     [Property]
     var NorthWest : SpriteSource = null;
     
-    [Property]
+    /*[Property]
     var WeaponNorth : SpriteSource = null;
-    
     [Property]
     var WeaponNorthEast : SpriteSource = null;
-    
     [Property]
     var WeaponEast : SpriteSource = null;
-    
     [Property]
     var WeaponSouthEast : SpriteSource = null;
-    
     [Property]
     var WeaponSouth : SpriteSource = null;
-    
     [Property]
     var WeaponSouthWest : SpriteSource = null;
-    
     [Property]
     var WeaponWest : SpriteSource = null;
-    
     [Property]
-    var WeaponNorthWest : SpriteSource = null;
+    var WeaponNorthWest : SpriteSource = null;*/
+    
+    var DirectionFrame : Integer = 1;
     
     [Property]
     var CurrentWalkingAnimationSpeed : Integer = 2;
@@ -72,15 +60,31 @@ class PlayerAnimations : ZilchComponent
     var RunningAnimationSpeed : Integer = 4;
     
     var WeaponS : CogPath = CogPath("Weapon");
+    
     function Initialize(init : CogInitializer)
     {
+        Zero.Connect(this.GameSession, Events.SelectedGun, this.WeaponChange);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function WeaponChange(event : SelectedGun)
+    {
+        
+        var selectedWeaponSprite = "Weapon_`event.Selected`";
+        var selectedWeapon = this.Owner.FindChildByName("Weapon");
+        
+        selectedWeapon.Sprite.SpriteSource = SpriteSource.Find(selectedWeaponSprite);
+        selectedWeapon.Sprite.AnimationActive = false;
+        selectedWeapon.Sprite.CurrentFrame = 6;
+        
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
         
+        var selectedWeapon = this.Owner.FindChildByName("Weapon");
+        
+        this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
         
         if(Zero.Keyboard.KeyIsDown(Keys.Shift))
         {
@@ -94,7 +98,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouthWest;
+            selectedWeapon.Sprite.CurrentFrame = 5;
             
             if(this.Owner.Sprite.SpriteSource != this.SouthWest)
             {
@@ -105,7 +109,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouthEast;
+            selectedWeapon.Sprite.CurrentFrame = 7;
             
             if(this.Owner.Sprite.SpriteSource != this.SouthEast)
             {
@@ -116,7 +120,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthWest;
+            selectedWeapon.Sprite.CurrentFrame = 3;
             
             if(this.Owner.Sprite.SpriteSource != this.NorthWest)
             {
@@ -127,7 +131,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorthEast;
+            selectedWeapon.Sprite.CurrentFrame = 1;
             
             if(this.Owner.Sprite.SpriteSource != this.NorthEast)
             {
@@ -138,7 +142,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponNorth;
+            selectedWeapon.Sprite.CurrentFrame = 2;
             
             if(this.Owner.Sprite.SpriteSource != this.North)
             {
@@ -149,7 +153,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponWest;
+            selectedWeapon.Sprite.CurrentFrame = 4;
             
             if(this.Owner.Sprite.SpriteSource != this.West)
             {
@@ -160,7 +164,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponSouth;
+            selectedWeapon.Sprite.CurrentFrame = 6;
             
             if(this.Owner.Sprite.SpriteSource != this.South)
             {
@@ -171,7 +175,7 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = true;
             
-            this.WeaponS.Cog.Sprite.SpriteSource = this.WeaponEast;
+            selectedWeapon.Sprite.CurrentFrame = 0;
             
             if(this.Owner.Sprite.SpriteSource != this.East)
             {
@@ -182,7 +186,64 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationActive = false;
             
-            this.Owner.Sprite.CurrentFrame = 4;
+            //this.Owner.Sprite.CurrentFrame = 4;
         }
+        
+        if(this.Owner.Sprite.AnimationActive)
+        {
+            
+            /*if(this.BounceEffect >= 0.2)
+            {
+                this.BounceDirection = false;
+            }
+            else if(this.BounceEffect <= 0) 
+            {
+                this.BounceDirection = true;
+            }
+            
+            if(this.BounceDirection)
+            {
+                this.BounceEffect += 0.01;
+                selectedWeapon.Transform.Translation += Real3(0, this.BounceEffect, 0);
+            }
+            
+            if(!this.BounceDirection)
+            {
+                this.BounceEffect -= 0.01;
+                selectedWeapon.Transform.Translation -= Real3(0, this.BounceEffect, 0);
+            }*/
+            
+            /*if(this.BounceEffect < 2 && this.BounceEffect >= 0)
+            {
+                this.BounceEffect += 0.2;
+                selectedWeapon.Transform.Translation += Real3(0, 0.01, 0);
+            }
+            
+            if(this.BounceEffect > 2)
+            {
+                this.BounceEffect = -0.01;
+            }
+            else if(this.BounceEffect < -2)
+            {
+                this.BounceEffect = 0.01;
+            }
+            
+            if(this.BounceEffect < 0 && this.BounceEffect > -2)
+            {
+                this.BounceEffect -= 0.2;
+                selectedWeapon.Transform.Translation -= Real3(0, 0.01, 0);
+            }*/
+            
+            if(this.Owner.Sprite.CurrentFrame % 2 == 0)
+            {
+                selectedWeapon.Transform.Translation = Real3(0, 0.02, 0);
+            }
+            else
+            {
+                selectedWeapon.Transform.Translation = Real3(0, -0.02, 0);
+            }
+            
+        }
+        
     }
 }

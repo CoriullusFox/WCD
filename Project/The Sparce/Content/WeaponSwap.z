@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 
@@ -33,7 +33,6 @@ class WeaponSwap : ZilchComponent
     [Property]
     var DisableLockedWeaponSelect : Boolean = true;
     
-    
     var NumberOfWeapons : Integer = 9;
     //var PrevSelected : Integer = 0;
     
@@ -45,6 +44,7 @@ class WeaponSwap : ZilchComponent
     var Selected : Integer = 0;
     
     var Once : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
@@ -282,7 +282,9 @@ class WeaponSwap : ZilchComponent
             this.Owner.DispatchEvent(Events.Shoot, toSend);
         
         }
+        
         var sendSelected = SelectedGun();
+        
         sendSelected.Selected = name;
         sendSelected.Unlocked = unlocked;
         this.GameSession.DispatchEvent(Events.SelectedGun, sendSelected);
