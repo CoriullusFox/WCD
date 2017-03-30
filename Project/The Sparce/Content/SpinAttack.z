@@ -1,0 +1,57 @@
+class SpinAttack : ZilchComponent
+{
+    
+    var Timer : Real = 0;
+    
+    var Once : Boolean = false;
+    
+    var FireRate : Real = 0.1;
+    
+    var FireRateStor : Real = 0;
+    
+    var Rand : Real = 0.1;
+    
+    var RandStor : Real = 0;
+    
+    var BulletSor : Archetype = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.Timer > 0)
+        {
+            
+            this.Timer -= event.Dt;
+            
+        }
+        else if(this.Once)
+        {
+            this.Once = false;
+            this.Owner.PassiveAttack.FireRate = this.FireRateStor;
+            this.Owner.PassiveAttack.Randomness = this.RandStor;
+            this.Owner.PassiveAttack.Bullet = this.BulletSor;
+        }
+        
+    }
+    function Attack(time : Real, speed : Real, fireRate : Real, randomness : Real, bullet : Archetype)
+    {
+        
+        this.BulletSor = this.Owner.PassiveAttack.Bullet;
+        this.Owner.PassiveAttack.Bullet = bullet;
+        this.Rand = randomness;
+        this.RandStor = this.Owner.PassiveAttack.Randomness;
+        this.Owner.PassiveAttack.Randomness = this.Rand;
+        this.FireRate = fireRate;
+        this.FireRateStor = this.Owner.PassiveAttack.FireRate;
+        this.Owner.PassiveAttack.FireRate = this.FireRate;
+        this.Timer = time;
+        this.Once = true;
+        this.Owner.BossAnim.Spin(time, speed);
+        
+    }
+}

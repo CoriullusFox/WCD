@@ -1,0 +1,25 @@
+class MissileAI : ZilchComponent
+{
+    
+    [Property]
+    var Speed : Real;
+    
+    [Property]
+    var TurnSpeed : Real;
+    
+    var Target : Cog;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        this.Owner.RigidBody.Velocity = this.Owner.Orientation.LocalForward * this.Speed;
+        
+        this.Owner.Transform.Rotation = Math.Slerp(this.Owner.Transform.Rotation, this.Owner.Orientation.GetLookAtPointRotation(this.Target.Transform.Translation), event.Dt * this.TurnSpeed);
+        
+    }
+}

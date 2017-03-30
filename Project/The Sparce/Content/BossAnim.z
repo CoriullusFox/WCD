@@ -45,6 +45,10 @@ class BossAnim : ZilchComponent
     
     var Spinning : Boolean = false;
     
+    var Speed : Real = 0;
+    
+    var SpeedTimer : Real = 0;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -112,14 +116,77 @@ class BossAnim : ZilchComponent
                 
             }
         }
+        else
+        {
+            if(this.SpeedTimer <= 0)
+            {
+                this.SpeedTimer = this.Speed;
+                if(this.Owner.Sprite.SpriteSource == this.North)
+                {
+                    this.Owner.Sprite.SpriteSource = this.NorthEast;
+                }
+                else if(this.Owner.Sprite.SpriteSource == this.NorthEast)
+                {
+                    this.Owner.Sprite.SpriteSource = this.East;
+                }
+                else if(this.Owner.Sprite.SpriteSource == this.East)
+                {
+                    this.Owner.Sprite.SpriteSource = this.SouthEast;
+                }
+                else if(this.Owner.Sprite.SpriteSource == this.SouthEast)
+                {
+                    this.Owner.Sprite.SpriteSource = this.South;
+                }
+                else if(this.Owner.Sprite.SpriteSource == this.South)
+                {
+                    this.Owner.Sprite.SpriteSource = this.SouthWest;
+                }
+                else if(this.Owner.Sprite.SpriteSource == this.SouthWest)
+                {
+                    this.Owner.Sprite.SpriteSource = this.West;
+                }
+                else if(this.Owner.Sprite.SpriteSource == this.West)
+                {
+                    this.Owner.Sprite.SpriteSource = this.NorthWest;
+                }
+                else if(this.Owner.Sprite.SpriteSource == this.NorthWest)
+                {
+                    this.Owner.Sprite.SpriteSource = this.North;
+                }
+            }
+            
+            this.SpeedTimer -= event.Dt;
+            this.Timer -= event.Dt;
+            if(this.Timer <= 0)
+            {
+                this.SpeedTimer = 0;
+                this.Spinning = false;
+            }
+            
+        }
         
     }
     
-    function Spin(time : Real, speed : Real)
+    function Spin(time : Real, speedControl : Real)
     {
         
         this.Owner.BossMovement.Freeze(time);
+        this.Spinning = true;
+        this.Timer = time;
+        this.Speed = speedControl;
         
     }
     
+    function GetDiagnal() : Boolean
+    {
+        
+        if(this.Owner.Sprite.SpriteSource == this.West || this.Owner.Sprite.SpriteSource == this.East || this.Owner.Sprite.SpriteSource == this.North || this.Owner.Sprite.SpriteSource == this.South)
+        {
+            
+            return false;
+            
+        }
+        return true;
+    }
+
 }

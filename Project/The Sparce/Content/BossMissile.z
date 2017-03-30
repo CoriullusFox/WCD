@@ -1,0 +1,7 @@
+class BossMissile : ZilchComponent
+{
+    function FireMissiles(amount : Real, damage : Real, speed : Real, turnSpeed : Real)
+    {
+        
+    }
+}

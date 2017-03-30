@@ -30,6 +30,9 @@ class Health : ZilchComponent
     [Property]
     var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
     
+    [Property]
+    var Explosion           : Archetype = Archetype.Particle_WhiteExplosion;
+    
     //REGEN
     [Property]
     var RegenRate : Real = 0.5;
@@ -131,7 +134,7 @@ class Health : ZilchComponent
             {
                 //This is temporary until we decide to make the enemies deaths perminent
                 
-                this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
+                //this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
                 
                 this.Owner.Sprite.AnimationActive = false;
                 
@@ -139,7 +142,7 @@ class Health : ZilchComponent
                 
                 this.Space.CreateAtPosition(Archetype.Particle_BlackDots, this.Owner.Transform.Translation);
                 
-                this.Space.CreateAtPosition(Archetype.Particle_WhiteExplosion, this.Owner.Transform.Translation);
+                this.Space.CreateAtPosition(this.Explosion, this.Owner.Transform.Translation);
                 
                 this.Owner.Destroy();
             }

@@ -1,0 +1,62 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Missile",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [4.11754, 4.94098, 9.27805e-008],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	BulletScript = 
+	{
+	},
+	MissileAI = 
+	{
+		float Speed = 5,
+		float TurnSpeed = 0.1,
+	},
+	Orientation = 
+	{
+		Vec3 GlobalUp = [0, 1, 0],
+		Vec3 UpVector = [0, 1, 0],
+		Vec3 ForwardVector = [1, 0, 0],
+		OrientationBases DefaultBases = ForwardXUpY,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = false,
+		bool Mode2D = true,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+},

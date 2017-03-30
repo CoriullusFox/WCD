@@ -145,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.37754, -5.08347, 50],
+			Vec3 Translation = [4.48404, 4.99605, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457,
+			float Size = 12.0993,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.37754, -5.08347, -3.22263e-007],
+			Vec3 LookTarget = [4.48404, 4.99605, 1.088e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -371,6 +371,7 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.5,
 			float MaxHealth = 0,
 			float HurtDuration = 0.1,
@@ -651,6 +652,7 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.5,
 			float MaxHealth = 0,
 			float HurtDuration = 0.1,
@@ -754,6 +756,7 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.5,
 			float MaxHealth = 0,
 			float HurtDuration = 0.1,
@@ -857,6 +860,7 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.5,
 			float MaxHealth = 0,
 			float HurtDuration = 0.1,
@@ -960,6 +964,7 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.5,
 			float MaxHealth = 0,
 			float HurtDuration = 0.1,
@@ -1063,6 +1068,7 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.5,
 			float MaxHealth = 0,
 			float HurtDuration = 0.1,
@@ -1166,6 +1172,7 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.5,
 			float MaxHealth = 0,
 			float HurtDuration = 0.1,
@@ -1249,7 +1256,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Enemy",
 		},
 		Transform = 
 		{
@@ -1263,7 +1270,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.45098, 0.482353, 0.533333, 0],
+			Vec4 Color = [1, 1, 1, 0.9999],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1305,10 +1312,85 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			Vec3 MoveDirection = [0, 0, 0],
-			int Speed = 250,
+			int Speed = 100,
 		},
 		ChangeDirectionToPointAtPlayer = 
 		{
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.4, 0.45, 0.5],
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 200,
+			string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0, 1],
+			string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
+			float RegenRate = 0.5,
+			float MaxHealth = 200,
+			float HurtDuration = 0.1,
+		},
+		EnemyToutchDamage = 
+		{
+			float SecondsBetweenDamage = 0.25,
+			float Damage = 10,
+		},
+		PassiveAttack = 
+		{
+			float FireRate = 1,
+			string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
+			float BulletSpeed = 5,
+			float Damage = 10,
+			float LifeLength = 5,
+			float Randomness = 1,
+		},
+		SpinAttack = 
+		{
+		},
+		TestBoss = 
+		{
+		},
+		BossMissile = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 19,
+				},
+				Named = 
+				{
+					string Name = "Transform",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.25, 0.25, 0.5],
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
@@ -1316,7 +1398,7 @@ Level =
 		string Name = "580ad9c286542aaa:Teleporter",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -1333,7 +1415,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -1379,7 +1461,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 19,
+				uint ResolvedCog = 20,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1391,7 +1473,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -1437,7 +1519,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 22,
+				uint ResolvedCog = 23,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1449,7 +1531,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -1495,7 +1577,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 21,
+				uint ResolvedCog = 22,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,

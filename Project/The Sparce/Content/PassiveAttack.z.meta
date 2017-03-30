@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "PassiveAttack",
+		uint64 ResourceId = 5858453a0cd24c6f,
+	},
+},

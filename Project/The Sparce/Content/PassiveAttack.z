@@ -1,0 +1,131 @@
+class PassiveAttack : ZilchComponent
+{
+    [Property]
+    var FireRate : Real = 1;
+    
+    [Property]
+    var Bullet : Archetype;
+    
+    [Property]
+    var BulletSpeed : Real = 5;
+    
+    [Property]
+    var Damage : Real = 10;
+    
+    [Property]
+    var LifeLength : Real = 5;
+    
+    [Property]
+    var Randomness : Real = 0.1;
+    
+    var Direction : Real3 = Real3(0,0,0);
+    
+    var Timer : Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        if(this.Timer <= 0)
+        {
+            this.Timer = this.FireRate;
+            if(this.Owner.BossAnim.GetDiagnal())
+            {
+                
+                for (var i = 0; i < 4; ++i)
+                {
+                    if(i == 0)
+                    {
+                        this.Direction = Real3(1,0,0);
+                    }
+                    else if(i == 1)
+                    {
+                        this.Direction = Real3(-1,0,0);
+                    }
+                    else if(i == 2)
+                    {
+                        this.Direction = Real3(0,1,0);
+                    }
+                    else if(i == 3)
+                    {
+                        this.Direction = Real3(0,-1,0);
+                    }
+                    var bullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
+                    if(bullet != null)
+                    {
+                        
+                        var randGen : Random = Random();
+                        var angle = Math.Angle2D(this.Direction) + randGen.Range(this.Randomness, this.Randomness *-1);
+                        
+                        //generate direction for orientation component from angle
+                        var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                        
+                        //apply direction and movement
+                        bullet.Orientation.LookAtDirection(newDirection);
+                        bullet.Transform.Translation += newDirection *1.5;
+                        bullet.RigidBody.Velocity = Math.Normalize(newDirection) * this.BulletSpeed;
+                        
+                        bullet.Despawn.LifeLength = this.LifeLength;
+                        
+                        //set whether or not the bullet is from the player
+                        bullet.BulletScript.PlayerBullet = false;
+                        
+                        bullet.BulletScript.Damage = this.Damage;
+                        
+                    }
+                    
+                }
+                
+            }
+            else
+            {
+                
+                for (var i = 0; i < 4; ++i)
+                {
+                    if(i == 0)
+                    {
+                        this.Direction = Real3(0.5,0.5,0);
+                    }
+                    else if(i == 1)
+                    {
+                        this.Direction = Real3(-0.5,-0.5,0);
+                    }
+                    else if(i == 2)
+                    {
+                        this.Direction = Real3(0.5,-0.5,0);
+                    }
+                    else if(i == 3)
+                    {
+                        this.Direction = Real3(-0.5,0.5,0);
+                    }
+                    var bullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
+                    if(bullet != null)
+                    {
+                        var randGen : Random = Random();
+                        var angle = Math.Angle2D(this.Direction) + randGen.Range(this.Randomness, this.Randomness *-1);
+                        
+                        //generate direction for orientation component from angle
+                        var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                        
+                        //apply direction and movement
+                        bullet.Orientation.LookAtDirection(newDirection);
+                        bullet.Transform.Translation += newDirection *1.5;
+                        bullet.RigidBody.Velocity = Math.Normalize(newDirection) * this.BulletSpeed;
+                        
+                        bullet.Despawn.LifeLength = this.LifeLength;
+                        
+                        //set whether or not the bullet is from the player
+                        bullet.BulletScript.PlayerBullet = false;
+                        
+                        bullet.BulletScript.Damage = this.Damage;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
