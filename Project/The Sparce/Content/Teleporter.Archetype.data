@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Teleporter1",
+		string Name = "Teleporter2",
 	},
 	Archetyped = 
 	{
@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-8.67981, -1.76837, 0],
+		Vec3 Translation = [2.5, -2.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -33,14 +33,14 @@ Cog =
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 1,
+		float AnimationSpeed = 50,
 		uint StartFrame = 0,
 	},
 	Teleporter = 
 	{
 		CogPath Position = 
 		{
-			string Path = ":/Teleporter2",
+			string Path = ":/Teleporter1",
 			bool ErrorOnResolveToNull = false,
 			bool ErrorOnPathCantCompute = false,
 			bool ErrorOnDirectLinkFail = false,
