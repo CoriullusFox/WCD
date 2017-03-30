@@ -69,6 +69,7 @@ Cog =
 		bool MiniHeathBar = false,
 		bool Player = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		float RegenRate = 1.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
@@ -184,15 +185,12 @@ Cog =
 				bool Active = true,
 			},
 		},
-		Cog = 
+		ArchetypeInstance = 
 		{
+			string Name = "5858639d4a7e270b:Weapon_Holding",
 			LinkId = 
 			{
 				uint Id = 3,
-			},
-			Named = 
-			{
-				string Name = "Weapon",
 			},
 			Transform = 
 			{
@@ -200,23 +198,9 @@ Cog =
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			Sprite = 
+			Named = 
 			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "580db89c89382171:PistolSouth",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
+				string Name = "Weapon",
 			},
 		},
 	},
