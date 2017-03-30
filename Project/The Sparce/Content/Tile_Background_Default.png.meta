@@ -1,5 +1,12 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"SpriteSheet",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Tile_Background_Default",

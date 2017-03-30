@@ -1,12 +1,19 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"SpriteSheet",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Tile_Monitors",
 		uint64 ResourceId = 585129b98038fbd1,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 0,
-		uint FrameSizeY = 0,
+		uint FrameSizeX = 68,
+		uint FrameSizeY = 68,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
 		float OriginX = 34,

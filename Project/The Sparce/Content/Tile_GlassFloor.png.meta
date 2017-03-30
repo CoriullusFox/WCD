@@ -1,12 +1,19 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"SpriteSheet",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Tile_GlassFloor",
 		uint64 ResourceId = 584fc517f87eaf65,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 0,
-		uint FrameSizeY = 0,
+		uint FrameSizeX = 85,
+		uint FrameSizeY = 50,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
 		float OriginX = 42,

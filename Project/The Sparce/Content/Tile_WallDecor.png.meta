@@ -1,12 +1,19 @@
 ImageContent = 
 {
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"SpriteSheet",
+		],
+	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Tile_WallDecor",
 		uint64 ResourceId = 584fc514f8ef3fbb,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 0,
-		uint FrameSizeY = 0,
+		uint FrameSizeX = 84,
+		uint FrameSizeY = 16,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
 		float OriginX = 42,
