@@ -120,7 +120,7 @@ class WeaponSwap : ZilchComponent
             {
                 if(this.BeamLaserUnlocked)
                 {
-                this.AddNewComponent("\"Laser\"", this.BeamLaserUnlocked);
+                this.AddNewComponent("BeamLaser", this.BeamLaserUnlocked);
                 }
                 else
                 {
@@ -204,7 +204,6 @@ class WeaponSwap : ZilchComponent
             Console.WriteLine(this.Selected);
             if(this.Selected > this.NumberOfWeapons -1)
             {
-                Console.WriteLine("hello");
                 this.Selected = 0;
                 continue;
             }

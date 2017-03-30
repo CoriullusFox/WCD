@@ -145,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.20638, 5.48309, 50],
+			Vec3 Translation = [-5.37754, -5.08347, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.08102,
+			float Size = 12.2457,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.20638, 5.48309, -3.44709e-008],
+			Vec3 LookTarget = [-5.37754, -5.08347, -3.22263e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -302,7 +302,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -362,7 +362,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
@@ -423,7 +423,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "4e07948c35993095:DefaultSprite",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -476,7 +476,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "4e07948c35993095:DefaultSprite",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -529,7 +529,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "4e07948c35993095:DefaultSprite",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -552,19 +552,12 @@ Level =
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5820e8f49dbffcb3:WeaponPickup",
 		LinkId = 
 		{
 			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "WeaponPickup",
-		},
-		Archetyped = 
-		{
-			string Name = "5820e8f49dbffcb3:WeaponPickup",
 		},
 		Transform = 
 		{
@@ -572,37 +565,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 0.75, 0, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "4e07948c35993095:DefaultSprite",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		WeaponPickup = 
-		{
-			string Unlocked = "Shotgun",
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			string Name = "WeaponPickup",
 		},
 	},
 	Cog = 
@@ -617,7 +582,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -677,7 +642,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
@@ -720,7 +685,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -780,7 +745,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
@@ -823,7 +788,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -883,7 +848,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
@@ -926,7 +891,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -986,7 +951,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
@@ -1029,7 +994,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -1089,7 +1054,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
@@ -1132,7 +1097,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5819e0dc33f34ca0:Entity_Enemy",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -1192,7 +1157,7 @@ Level =
 			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
 			string West = "58128bf533d431ee:EnemyWest_Anim",
 			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			int AnimationSpeed = 3,
+			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
@@ -1253,7 +1218,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "4e07948c35993095:DefaultSprite",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
