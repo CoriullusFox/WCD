@@ -20,6 +20,7 @@ class BulletScript : ZilchComponent
                 var toSend = Hurt();
                 toSend.Damage = this.Damage;
                 event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                this.Owner.DispatchEvent(Events.Destroy, Destroy());
                 this.Owner.Destroy();
                 
             }
@@ -32,6 +33,7 @@ class BulletScript : ZilchComponent
                 var toSend = Hurt();
                 toSend.Damage = this.Damage;
                 event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                this.Owner.DispatchEvent(Events.Destroy, Destroy());
                 this.Owner.Destroy();
                 
             }

@@ -86,3 +86,10 @@ class UnlockorUpgrade : ZilchEvent
     var Name : String;
     var Tier : Integer;
 }
+
+class Destroy : ZilchEvent
+{
+    
+    sends Destroy : Destroy;
+    
+}
