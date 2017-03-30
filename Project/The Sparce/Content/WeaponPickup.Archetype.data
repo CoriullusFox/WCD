@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [9.30724, 12.9187, 0],
+		Vec3 Translation = [-5.76965, -5.32241, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "4e07948c35993095:DefaultSprite",
+		string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,7 +38,7 @@ Cog =
 	},
 	WeaponPickup = 
 	{
-		string Unlocked = "Bouncer",
+		string Unlocked = "Shotgun",
 	},
 	BoxCollider = 
 	{
