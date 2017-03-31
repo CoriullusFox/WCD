@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0.0076724, 14.3648, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -104,8 +104,8 @@ Cog =
 		string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
 		float BulletSpeed = 8,
 		float Damage = 5,
-		float LifeLength = 2.5,
-		float Randomness = 0.5,
+		float LifeLength = 50,
+		float Randomness = 0.2,
 	},
 	SpinAttack = 
 	{

@@ -22,7 +22,7 @@ class MissileAI : ZilchComponent
         {
             
             expl.FindChildByName("Warp").ScreenWarpRing.Intensity = 0.1;
-            expl.FindChildByName("Warp").ScreenWarpRing.Size = 100000;
+            expl.FindChildByName("Warp").ScreenWarpRing.Size = 1000;
             expl.Despawn.LifeLength = 0.1;
             
         }
