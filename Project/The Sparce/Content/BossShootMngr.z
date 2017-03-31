@@ -3,7 +3,7 @@ class BossShootMngr : ZilchComponent
     
     var Stage : Integer = 0;
     
-    var Timer : Real = 5;
+    var Timer : Real = 10;
     
     var Timer2 : Real = 0;
     
@@ -44,7 +44,7 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer = 13;
                 //Time, Speed, Firefate, Randomness, Bullet
-                this.Owner.SpinAttack.Attack(5, 0.1, 0.20, 0.5, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(6, 0.1, 0.08, 0.5, Archetype.Bullet_TinyLaser);
             }
         }
         if(this.Stage == 1)
@@ -53,7 +53,7 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer = 13;
                 //Time, Speed, Firefate, Randomness, Bullet
-                this.Owner.SpinAttack.Attack(6, 0.1, 0.18, 0.8, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(6, 0.05, 0.05, 0.8, Archetype.Bullet_TinyLaser);
             }
         }
         if(this.Stage == 2)
@@ -62,13 +62,13 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer = 14;
                 //Time, Speed, Firefate, Randomness, Bullet
-                this.Owner.SpinAttack.Attack(6, 0.1, 0.15, 1.0, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(8, 0.05, 0.05, 1.0, Archetype.Bullet_TinyLaser);
             }
             if(this.Timer2 <= 0)
             {
                 this.Timer2 = 14;
                 //Amount, Damage, Speed, TurnSpeed, LifeLength
-                this.Owner.BossMissile.FireMissiles(8, 5, 10, 1, 10);
+                this.Owner.BossMissile.FireMissiles(10, 15, 8, 5, 5);
             }
         }
         if(this.Stage == 3)
@@ -77,13 +77,13 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer = 16;
                 //Time, Speed, Firefate, Randomness, Bullet
-                this.Owner.SpinAttack.Attack(3, 0.05, 0.05, 0.8, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(3, 0.05, 0.05, 1.0, Archetype.Bullet_TinyLaser);
             }
             if(this.Timer2 <= 0)
             {
                 this.Timer2 = 12;
                 //Amount, Damage, Speed, TurnSpeed, LifeLength
-                this.Owner.BossMissile.FireMissiles(18, 1, 5, 1, 50);
+                this.Owner.BossMissile.FireMissiles(20, 5, 10, 2.5, 10);
             }
         }
         

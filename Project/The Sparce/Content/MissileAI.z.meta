@@ -5,4 +5,11 @@ TextContent =
 		string Name = "MissileAI",
 		uint64 ResourceId = 5858538e0509cd59,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Bullet",
+		],
+	},
 },

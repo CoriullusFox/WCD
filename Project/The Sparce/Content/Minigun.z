@@ -22,7 +22,7 @@ class Minigun : ZilchComponent
     var DamagePerBullet : Real = 10;
     
     [Property]
-    var EnergyUse : Real = 2;
+    var EnergyUse : Real = 5;
     
     [Property]
     var Energy : Real = 100;

@@ -19,7 +19,7 @@ class FlameThrower : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_FlamethrowerAmmo;
     
     [Property]
-    var DPS : Real = 10;
+    var DPS : Real = 5;
     
     [Property]
     var EnergyUse : Real = 10.0;
