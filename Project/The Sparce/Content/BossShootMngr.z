@@ -43,7 +43,7 @@ class BossShootMngr : ZilchComponent
             if(this.Timer <= 0)
             {
                 this.Timer = 10;
-                this.Owner.SpinAttack.Attack(5, 0.1, 0.1, 1.0, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(2.5, 0.15, 0.15, 0.3, Archetype.Bullet_TinyLaser);
             }
         }
         if(this.Stage == 1)
@@ -51,7 +51,7 @@ class BossShootMngr : ZilchComponent
             if(this.Timer <= 0)
             {
                 this.Timer = 10;
-                this.Owner.SpinAttack.Attack(6, 0.1, 0.1, 0.4, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(6, 0.05, 0.1, 0.5, Archetype.Bullet_TinyLaser);
             }
         }
         if(this.Stage == 2)

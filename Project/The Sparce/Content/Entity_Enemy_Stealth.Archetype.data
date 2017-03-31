@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "585facb807e69906:Entity_Stealth_Enemy",
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [12.9028, 12.1594, 0],
+		Vec3 Translation = [1.8087, -15.5676, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -33,14 +33,14 @@ Cog =
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 3,
+		float AnimationSpeed = 5,
 		uint StartFrame = 0,
 	},
 	EnemyAI = 
 	{
 		float ChaseProximity = 10,
 		float ShootProximity = 9,
-		int Speed = 100,
+		int Speed = 120,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
 		bool Pathfind = true,
@@ -74,11 +74,12 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 50,
+		float ConfiguredHealth = 10,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		float RegenRate = 0.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
@@ -97,19 +98,7 @@ Cog =
 	},
 	EnemyToutchDamage = 
 	{
-		float SecondsBetweenDamage = 0.25,
-		float Damage = 10,
-	},
-	Pistol = 
-	{
-		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
-		float Damage = 5,
-		float EnergyUse = 1,
-		float Energy = 100,
-		float CooldownMax = 1,
-		bool Player = false,
-		float BulletSpeed = 10,
-		float LifeLength = 10,
-		float CamZoom = 10,
+		float SecondsBetweenDamage = 0.1,
+		float Damage = 1,
 	},
 },

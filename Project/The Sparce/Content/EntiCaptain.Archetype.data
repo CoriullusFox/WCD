@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.35147, 8.09849, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -76,7 +76,7 @@ Cog =
 		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string MaterialName = "5800bf6d54ec0d53:Slippery",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.4, 0.45, 0.5],
@@ -87,25 +87,25 @@ Cog =
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
-		Vec4 HurtColor = [1, 0, 0, 1],
+		Vec4 HurtColor = [0.27, 0, 0, 1],
 		string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
 		float RegenRate = 5,
 		float MaxHealth = 1000,
-		float HurtDuration = 0.1,
+		float HurtDuration = 0.2,
 	},
 	EnemyToutchDamage = 
 	{
-		float SecondsBetweenDamage = 0.25,
+		float SecondsBetweenDamage = 1,
 		float Damage = 25,
 	},
 	PassiveAttack = 
 	{
-		float FireRate = 1,
+		float FireRate = 2,
 		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
 		float BulletSpeed = 5,
 		float Damage = 10,
-		float LifeLength = 5,
-		float Randomness = 5,
+		float LifeLength = 2.5,
+		float Randomness = 2.5,
 	},
 	SpinAttack = 
 	{

@@ -91,14 +91,23 @@ Level =
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
 		},
-		ForwardRenderer = 
+		DeferredRenderer = 
 		{
 			Vec4 ClearColor = [0, 0, 0, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
 			bool EditorIconDepth = true,
-			bool Wireframe = false,
+			bool Hdr = true,
+			bool Shadows = true,
+			bool AntiAliasing = true,
+			bool Refraction = true,
+			bool Reflections = true,
+			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
+			bool GodRays = true,
+			bool RenderMasks = false,
+			bool Glow = false,
+			float GlowThreshold = 1,
 		},
 		GameStateManager = 
 		{
@@ -129,7 +138,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.165733, -0.399221, 50],
+			Vec3 Translation = [4.23808, 2.16219, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -141,7 +150,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.657,
+			float Size = 49.6586,
 		},
 		EditorCameraController = 
 		{
@@ -149,7 +158,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.165733, -0.399221, -1.67191e-006],
+			Vec3 LookTarget = [4.23808, 2.16219, -1.38968e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -877,6 +886,636 @@ Level =
 			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 29,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-22.55, 3.97877, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.89333, 8.70173, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-20.1541, 10.2836, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.67908, 5.79039, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.53947, 10.4975, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.94473, -0.91188, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-16.614, 1.66411, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-16.614, 1.66411, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 37,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.5687, 7.04009, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 38,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.5154, -0.538548, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
+		LinkId = 
+		{
+			uint Id = 39,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19.9686, 5.82267, -3.8147e-006],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
+		LinkId = 
+		{
+			uint Id = 40,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-21.4619, -0.075974, -3.8147e-006],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 41,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.73797, 34.3826, -3.8147e-006],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
+		LinkId = 
+		{
+			uint Id = 42,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.1384, 20.9958, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 43,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.2463, 4.76111, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
+		LinkId = 
+		{
+			uint Id = 44,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21.4486, 11.3435, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 45,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [20.5912, 3.65482, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 46,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.4675, -0.963917, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 47,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.4675, -0.963917, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 48,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.6303, 0.142367, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 49,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.6303, 0.142367, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 50,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.1238, 6.33756, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 51,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.1238, 6.33756, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 52,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.25615, 8.77139, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
+		LinkId = 
+		{
+			uint Id = 53,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [21.4486, 11.3435, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
+		LinkId = 
+		{
+			uint Id = 54,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [12.9026, 12.5051, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
+		LinkId = 
+		{
+			uint Id = 55,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [12.9026, 12.5051, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
+		LinkId = 
+		{
+			uint Id = 56,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.97964, 16.9579, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 57,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.2463, 4.76111, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 58,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.3417, -0.812667, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 59,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.3417, -0.812667, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.79524, -1.58962, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
+		LinkId = 
+		{
+			uint Id = 61,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.5032, -15.2974, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 62,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.8087, -15.5676, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
+		LinkId = 
+		{
+			uint Id = 63,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.1628, -7.78275, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },

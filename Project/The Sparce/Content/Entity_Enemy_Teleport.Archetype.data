@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "585fac8c02e09c2f:Entity_Teleport_Enemy",
+		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-15.1628, -7.78275, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -33,7 +33,7 @@ Cog =
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 3,
+		float AnimationSpeed = 2,
 		uint StartFrame = 0,
 	},
 	EnemyAI = 
@@ -70,7 +70,7 @@ Cog =
 		string SouthWest = "585fa733765d8b2e:Entity_TelePig_SW",
 		string West = "585fa8d77a2d5d19:Entity_TelePig_West_",
 		string NorthWest = "585fa71173936243:Entity_TelePig_NW_",
-		int AnimationSpeed = 3,
+		float AnimationSpeed = 3,
 	},
 	Health = 
 	{
@@ -79,6 +79,7 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		float RegenRate = 0.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
@@ -98,18 +99,18 @@ Cog =
 	EnemyToutchDamage = 
 	{
 		float SecondsBetweenDamage = 0.25,
-		float Damage = 10,
+		float Damage = 2,
 	},
-	Pistol = 
+	Bouncer = 
 	{
-		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
+		string Bullet = "582a50e058efc8d0:Bullet_Bouncy",
 		float Damage = 5,
-		float EnergyUse = 1,
+		float EnergyUse = 2.5,
 		float Energy = 100,
-		float CooldownMax = 1,
+		float CooldownMax = 0.5,
 		bool Player = false,
-		float BulletSpeed = 10,
+		float BulletSpeed = 20,
 		float LifeLength = 10,
-		float CamZoom = 10,
+		float CamZoom = 15,
 	},
 },

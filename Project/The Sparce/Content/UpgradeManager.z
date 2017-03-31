@@ -49,7 +49,7 @@ class UpgradeManager : ZilchComponent
                     
                     //this.Owner.Pistol.CamZoom = 20;
                     //this.Owner.Pistol.EnergyUse = 2;
-                    //this.Owner.Pistol.Damage = 99999;
+                    //this.Owner.Pistol.Damage = 66666666;
                     //this.Owner.Pistol.BulletSpeed = 100;
                 }
                 

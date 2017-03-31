@@ -14,13 +14,13 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, -10, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	SpawnPlayer = 
 	{
-		string PlayerToSpawn = "Player",
+		string PlayerToSpawn = "Entity_Player",
 	},
 	Grid = 
 	{
