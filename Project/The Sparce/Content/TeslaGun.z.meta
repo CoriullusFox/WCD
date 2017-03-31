@@ -5,4 +5,11 @@ TextContent =
 		string Name = "TeslaGun",
 		uint64 ResourceId = 58037ef7bea3098d,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Gun",
+		],
+	},
 },

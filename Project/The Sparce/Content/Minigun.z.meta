@@ -5,4 +5,11 @@ TextContent =
 		string Name = "Minigun",
 		uint64 ResourceId = 5819b1c583398bd2,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Gun",
+		],
+	},
 },

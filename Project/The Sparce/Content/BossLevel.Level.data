@@ -57,7 +57,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -127,7 +127,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 2,
 		},
 		Named = 
 		{
@@ -135,7 +135,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0365505, -3.447, 50],
+			Vec3 Translation = [0.798453, -0.251036, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -147,7 +147,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.8164,
+			float Size = 24.365,
 		},
 		EditorCameraController = 
 		{
@@ -155,7 +155,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0365505, -3.447, 3.04752e-008],
+			Vec3 LookTarget = [0.798453, -0.251036, -2.43049e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -171,7 +171,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -206,7 +206,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -241,7 +241,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -276,7 +276,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -312,7 +312,7 @@ Level =
 		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -325,22 +325,153 @@ Level =
 			string Name = "PlayerSpawnPoint",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "58586e025f680300:Entity_Captain",
 		LinkId = 
 		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			uint Id = 8,
 		},
 		Named = 
 		{
 			string Name = "Enemy",
+		},
+		Archetyped = 
+		{
+			string Name = "58586e025f680300:Entity_Captain",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.195627, -0.264293, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0.9999],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585f9d0af09c5e32:BossCaptain_South",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BossAnim = 
+		{
+			string North = "585f9d70c9583a59:BossCaptain_North",
+			string NorthEast = "585f9d98da9dd979:BossCaptain_NE",
+			string East = "585f9dddd0be4b3e:BossCaptain_East",
+			string SouthEast = "585f9d60caf88c99:BossCaptain_SE",
+			string South = "585f9d0af09c5e32:BossCaptain_South",
+			string SouthWest = "585f9d06ce81fa88:BossCaptain_SW",
+			string West = "585f9d38f29c2404:BossCaptain_West",
+			string NorthWest = "585f9d44c47611cc:BossCaptain_NW",
+			int AnimationSpeed = 1,
+		},
+		BossMovement = 
+		{
+			float ResponceTime = 2,
+			bool Pathfind = true,
+			bool Debug = false,
+			Vec3 MoveDirection = [0, 0, 0],
+			int Speed = 100,
+		},
+		ChangeDirectionToPointAtPlayer = 
+		{
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5800bf6d54ec0d53:Slippery",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.4, 0.45, 0.5],
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 1000,
+			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			Vec4 HurtColor = [0.27, 0, 0, 1],
+			string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
+			float RegenRate = 5,
+			float MaxHealth = 1000,
+			float HurtDuration = 0.2,
+		},
+		EnemyToutchDamage = 
+		{
+			float SecondsBetweenDamage = 1,
+			float Damage = 25,
+		},
+		PassiveAttack = 
+		{
+			float FireRate = 1,
+			string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
+			float BulletSpeed = 8,
+			float Damage = 5,
+			float LifeLength = 50,
+			float Randomness = 0.2,
+		},
+		SpinAttack = 
+		{
+		},
+		BossMissile = 
+		{
+		},
+		BossShootMngr = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 9,
+				},
+				Named = 
+				{
+					string Name = "Enemy",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.25, 0.25, 0.5],
+				},
+			},
 		},
 	},
 },

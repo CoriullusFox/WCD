@@ -28,19 +28,19 @@ class Bouncer : ZilchComponent
     var Energy : Real = 100.0;
     
     [Property]
-    var CooldownMax : Real = 0.5;
+    var CooldownMax : Real = 1;
     
     [Property]
     var Player : Boolean = false;
     
     [Property]
-    var BulletSpeed : Real = 5;
+    var BulletSpeed : Real = 8;
     
     [Property]
-    var LifeLength : Real = 20;
+    var LifeLength : Real = 5;
     
     [Property]
-    var CamZoom : Real = 15;
+    var CamZoom : Real = 20;
     
     function Initialize(init : CogInitializer)
     {

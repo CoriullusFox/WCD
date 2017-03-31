@@ -83,7 +83,7 @@ Cog =
 		bool FlamethrowerUnlocked = true,
 		bool BouncerUnlocked = true,
 		bool TeslaUnlocked = true,
-		bool ChainEUnlocked = true,
+		bool ChainEUnlocked = false,
 		bool DisableLockedWeaponSelect = true,
 	},
 	EnergyStor = 
@@ -118,7 +118,7 @@ Cog =
 	},
 	Pistol = 
 	{
-		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
+		string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
 		float Damage = 25,
 		float EnergyUse = 5,
 		float Energy = 0,

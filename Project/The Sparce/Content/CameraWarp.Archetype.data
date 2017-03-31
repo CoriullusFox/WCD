@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.0128384, 4.95976, 0],
-		Vec3 Scale = [0.25, 0.25, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [2.5, 2.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Camera = 
@@ -31,7 +31,11 @@ Cog =
 	ScreenWarpRing = 
 	{
 		float Size = 0.005,
-		float Thickness = 5,
+		float Thickness = 2,
 		float Intensity = -0.05,
+	},
+	Despawn = 
+	{
+		float LifeLength = 0.1,
 	},
 },

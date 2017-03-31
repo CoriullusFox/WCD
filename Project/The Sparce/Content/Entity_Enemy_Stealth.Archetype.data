@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.8087, -15.5676, 0],
+		Vec3 Translation = [-0.131528, 3.34539, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -40,7 +40,7 @@ Cog =
 	{
 		float ChaseProximity = 10,
 		float ShootProximity = 9,
-		int Speed = 120,
+		int Speed = 200,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
 		bool Pathfind = true,
@@ -55,7 +55,7 @@ Cog =
 		string MaterialName = "5800bf6d54ec0d53:Slippery",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.065, 0.09, 0.5],
+		Vec3 Size = [0.3, 0.4, 0.5],
 	},
 	ChangeDirectionToPointAtPlayer = 
 	{

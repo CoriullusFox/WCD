@@ -13,6 +13,7 @@ DataContent =
 		Array Tags = 
 		[
 			"Archetype",
+			"Enemy",
 			"Entity",
 		],
 	},

@@ -5,4 +5,11 @@ TextContent =
 		string Name = "BeamLaser",
 		uint64 ResourceId = 5819b1c58333fab5,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Gun",
+		],
+	},
 },

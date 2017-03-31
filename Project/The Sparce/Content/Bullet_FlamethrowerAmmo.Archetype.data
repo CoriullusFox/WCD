@@ -32,7 +32,7 @@ Cog =
 		ParticleRenderMode RenderMode = Additive,
 		ParticleSortMode SortMode = Sorted,
 		ParticleAnimation ParticleAnimation = Single,
-		string Texture = "5310e87946edb371:WhiteCloud",
+		string Texture = "5844c6e04b5c8f44:Bullet_Fire",
 		Vec4 Tint = [1, 1, 1, 1],
 		float VelocityScale = 1,
 		float LengthScale = 1,
@@ -59,20 +59,20 @@ Cog =
 	SphericalParticleEmitter = 
 	{
 		bool Active = true,
-		uint EmitCount = 0,
-		float EmitRate = 1000,
+		uint EmitCount = 250,
+		float EmitRate = 750,
 		float EmitVariance = 0,
-		float Size = 0.3,
-		float SizeVariance = 0.5,
-		float Lifetime = 0.8,
+		float Size = 0.2,
+		float SizeVariance = 0.2,
+		float Lifetime = 0.3,
 		float LifetimeVariance = 0.2,
-		float Spin = 0,
+		float Spin = 5,
 		float SpinVariance = 400,
 		bool RandomSpin = true,
 		float Fill = 1,
 		float EmitterVelocityPercent = 0,
 		Vec3 StartVelocity = [10, 0, 0],
-		Vec3 RandomVelocity = [1, 2, 1],
+		Vec3 RandomVelocity = [0.1, 3, 1],
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
 		bool FastMovingEmitter = false,
@@ -86,21 +86,11 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 100,
+		float LifeLength = 3.23332,
 	},
 	Flame = 
 	{
-		float DPS = 25,
-	},
-	BoxCollider = 
-	{
-		bool Ghost = true,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [5, 0, 0],
-		Vec3 Size = [4.5, 1.5, 2.5],
+		float DPS = 10,
 	},
 	RigidBody = 
 	{
@@ -108,11 +98,11 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
-		Vec3 Velocity = [0, 0, 0],
-		Vec3 AngularVelocity = [0, 0, 0],
+		Vec3 Velocity = [-0.000417829, 0.0013152, 0],
+		Vec3 AngularVelocity = [0, 0, -2.00871e-005],
 	},
 	IgnoreSpaceEffects = 
 	{
@@ -131,5 +121,15 @@ Cog =
 	},
 	ChangeDirectionToPointAtPlayer = 
 	{
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [2.25, 0, 0],
+		Vec3 Size = [2.125, 1.25, 1.25],
 	},
 },

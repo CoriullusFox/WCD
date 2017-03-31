@@ -5,4 +5,11 @@ TextContent =
 		string Name = "Beam",
 		uint64 ResourceId = 580e63ae4c295d19,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Bullet",
+		],
+	},
 },

@@ -5,4 +5,11 @@ TextContent =
 		string Name = "FreezeBulletScript",
 		uint64 ResourceId = 584d510ee3a737b4,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Gun",
+		],
+	},
 },

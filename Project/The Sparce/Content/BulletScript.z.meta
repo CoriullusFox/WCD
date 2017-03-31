@@ -5,4 +5,11 @@ TextContent =
 		string Name = "BulletScript",
 		uint64 ResourceId = 5819ebbabd1277be,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Bullet",
+		],
+	},
 },

@@ -19,7 +19,7 @@ class BeamLaser : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_Beam;
     
     [Property]
-    var DPS : Real = 100;
+    var DPS : Real = 50;
     
     [Property]
     var EnergyUse : Real = 49;
@@ -34,10 +34,10 @@ class BeamLaser : ZilchComponent
     var Player : Boolean = false;
     
     [Property]
-    var LifeLength : Real = 3.5;
+    var LifeLength : Real = 3.0;
     
     [Property]
-    var CamZoom : Real = 35;
+    var CamZoom : Real = 25;
     
     function Initialize(init : CogInitializer)
     {

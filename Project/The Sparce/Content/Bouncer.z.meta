@@ -5,4 +5,11 @@ TextContent =
 		string Name = "Bouncer",
 		uint64 ResourceId = 580b0061e2a7a15b,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Gun",
+		],
+	},
 },

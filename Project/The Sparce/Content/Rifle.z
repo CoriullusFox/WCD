@@ -27,7 +27,7 @@ class Rifle : ZilchComponent
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 2.5;
+    var CooldownMax : Real = 2.0;
     
     [Property]
     var Player : Boolean = false;
@@ -39,7 +39,7 @@ class Rifle : ZilchComponent
     var LifeLength : Real = 3.0;
     
     [Property]
-    var CamZoom : Real = 20.0;
+    var CamZoom : Real = 40.0;
     function Initialize(init : CogInitializer)
     {
 

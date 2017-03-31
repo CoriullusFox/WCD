@@ -75,19 +75,12 @@ Cog =
 	},
 	Hierarchy = 
 	{
-		Cog = 
+		ArchetypeInstance = 
 		{
+			string Name = "580db526cbf2b7c2:CameraWarp",
 			LinkId = 
 			{
 				uint Id = 2,
-			},
-			Named = 
-			{
-				string Name = "Warp",
-			},
-			Archetyped = 
-			{
-				string Name = "580db526cbf2b7c2:CameraWarp",
 			},
 			Transform = 
 			{
@@ -95,25 +88,9 @@ Cog =
 				Vec3 Scale = [2.5, 2.5, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			Camera = 
+			Named = 
 			{
-				ProjectionMode ProjectionMode = Orthographic,
-				Facing Facing = NegativeZ,
-				CameraTransparentSort TransparentSort = InheritFromSpace,
-				float FieldOfView = 45,
-				float NearPlane = 0.5,
-				float FarPlane = 200,
-				float Size = 20,
-			},
-			ScreenWarpRing = 
-			{
-				float Size = 0.005,
-				float Thickness = 5,
-				float Intensity = -0.05,
-			},
-			Despawn = 
-			{
-				float LifeLength = 0.1,
+				string Name = "Warp",
 			},
 		},
 	},

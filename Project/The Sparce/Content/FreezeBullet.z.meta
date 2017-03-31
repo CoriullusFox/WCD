@@ -5,4 +5,11 @@ TextContent =
 		string Name = "FreezeBullet",
 		uint64 ResourceId = 5819c71ed179b081,
 	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Bullet",
+		],
+	},
 },
