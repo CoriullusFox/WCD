@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "58586e025f680300:EntiCaptain",
+		string Name = "58586e025f680300:Entity_Captain",
 	},
 	Transform = 
 	{
@@ -100,12 +100,12 @@ Cog =
 	},
 	PassiveAttack = 
 	{
-		float FireRate = 2,
-		string Bullet = "583c4110d1935b64:Bullet_LargeLaser",
-		float BulletSpeed = 5,
-		float Damage = 10,
+		float FireRate = 1,
+		string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
+		float BulletSpeed = 8,
+		float Damage = 5,
 		float LifeLength = 2.5,
-		float Randomness = 2.5,
+		float Randomness = 0.5,
 	},
 	SpinAttack = 
 	{

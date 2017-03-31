@@ -16,7 +16,7 @@ class Health : ZilchComponent
     
     // CONFIGURABLE HEALTH PROPERTY
     [Property]
-    var ConfiguredHealth    : Real = 50;
+    var ConfiguredHealth    : Real = 100.0;
     
     [Property]
     var ArchetypeAmmoBar    : Archetype = Archetype.UI_HealthBar;
@@ -38,25 +38,30 @@ class Health : ZilchComponent
     var RegenRate : Real = 0.5;
     
     [Property]
-    var MaxHealth : Real;
+    var MaxHealth : Real = 100.0;
     
-    var FreezeTimer : Real = 0;
+    var FreezeTimer : Real = 0.0;
     
     [Property]
     var HurtDuration : Real = 0.1;
-    var HurtTimer : Real = 0;
+    var HurtTimer : Real = 0.0;
     var IsHurt : Boolean = false;
     
     var HeathPercent : Real
     {
-        get{
+        get
+        {
             return this.ConfiguredHealth / this.MaxHealth;
         }
     }
     function Initialize(init : CogInitializer)
     {
         
+        Console.WriteLine("`this.MaxHealth`");
+        
         this.MaxHealth = this.ConfiguredHealth;
+        
+        Console.WriteLine("`this.MaxHealth`");
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.Hurt, this.OnHurt);
@@ -115,7 +120,7 @@ class Health : ZilchComponent
         //REGEN
         if(this.ConfiguredHealth < this.MaxHealth)
         {
-            this.ConfiguredHealth += this.RegenRate * event.Dt;
+            //this.ConfiguredHealth += this.RegenRate * event.Dt;
             if(this.Player)
             {
                 var toSend = HealthToUI();

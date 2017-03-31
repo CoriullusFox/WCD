@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "EntiCaptain",
+		string Name = "Entity_Captain",
 		uint64 ResourceId = 58586e025f680300,
 		string LoaderType = "Cog",
 		uint Version = 0,

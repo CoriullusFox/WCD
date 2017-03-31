@@ -70,7 +70,7 @@ Cog =
 		bool Player = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-		float RegenRate = 1.5,
+		float RegenRate = 0,
 		float MaxHealth = 100,
 		float HurtDuration = 0.1,
 	},

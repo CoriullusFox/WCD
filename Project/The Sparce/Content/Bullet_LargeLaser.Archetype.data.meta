@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Bullet_LargeLaser",
+		string Name = "Bullet_TinyLaser",
 		uint64 ResourceId = 583c4110d1935b64,
 		string LoaderType = "Cog",
 		uint Version = 0,

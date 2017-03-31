@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "583c4159a57683aa:Bullet_TinyLaser",
+		string Name = "583c4159a57683aa:Bullet_LargeLaser",
 	},
 	Transform = 
 	{
@@ -72,10 +72,11 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 10,
+		float LifeLength = 40,
 	},
 	BulletScript = 
 	{
+		bool ClipThru = false,
 	},
 	BoxCollider = 
 	{

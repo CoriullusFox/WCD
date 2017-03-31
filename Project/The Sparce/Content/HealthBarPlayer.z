@@ -14,10 +14,10 @@
 class HealthBarPlayer : ZilchComponent
 {
     [Property]
-    var MaxHealth : Real = 100;
-    var Health : Real;
+    var MaxHealth : Real = 100.0;
+    var Health : Real = 100.0;
     [Property]
-    var HealthbarSpeed : Real = 10;
+    var HealthbarSpeed : Real = 10.0;
     function Initialize(init : CogInitializer)
     {
         this.Health = this.MaxHealth;
