@@ -2,12 +2,12 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Animated_HorDoor_Closing",
-		uint64 ResourceId = 58512a9cb0ae4e1c,
+		string Name = "Animated_HorDoor_Unlocked_ Opening",
+		uint64 ResourceId = 585277474e1b3c0f,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
 		uint FrameSizeY = 16,
-		uint FrameCount = 16,
+		uint FrameCount = 14,
 		float FrameDelay = 1,
 		float OriginX = 16,
 		float OriginY = 8,

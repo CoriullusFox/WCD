@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Animated_HorDoor",
-		uint64 ResourceId = 585134cfd80c33fe,
+		string Name = "Animated_VertDoor_Unlocked",
+		uint64 ResourceId = 585276eb2e1471ec,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333,
-		float OriginX = 256,
-		float OriginY = 8,
+		float OriginX = 60,
+		float OriginY = 24,
 		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 		bool Looping = true,

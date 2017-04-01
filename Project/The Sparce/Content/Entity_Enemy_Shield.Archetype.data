@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.28476, 5.17998, 0],
+		Vec3 Translation = [-19.9686, 5.82267, -3.8147e-006],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -99,6 +99,6 @@ Cog =
 	EnemyToutchDamage = 
 	{
 		float SecondsBetweenDamage = 1,
-		float Damage = 50,
+		float Damage = 25,
 	},
 },

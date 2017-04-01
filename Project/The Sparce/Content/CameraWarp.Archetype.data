@@ -31,7 +31,7 @@ Cog =
 	ScreenWarpRing = 
 	{
 		float Size = 0.005,
-		float Thickness = 2,
+		float Thickness = 0.5,
 		float Intensity = -0.05,
 	},
 	Despawn = 

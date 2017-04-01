@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "585fac1532f16dbc:Entity_Sniper_Enemy",
+		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [15.4479, 21.0033, 0],
+		Vec3 Translation = [15.1965, -11.7507, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -79,6 +79,7 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		float RegenRate = 0.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
@@ -102,14 +103,14 @@ Cog =
 	},
 	Rifle = 
 	{
-		string Bullet = "583c4159a57683aa:Bullet_TinyLaser",
+		string Bullet = "583c4159a57683aa:Bullet_LargeLaser",
 		float Damage = 49,
-		float EnergyUse = 99,
+		float EnergyUse = 49,
 		float Energy = 100,
 		float CooldownMax = 1.5,
 		bool Player = false,
 		float BulletSpeed = 25,
 		float LifeLength = 3,
-		float CamZoom = 50,
+		float CamZoom = 40,
 	},
 },

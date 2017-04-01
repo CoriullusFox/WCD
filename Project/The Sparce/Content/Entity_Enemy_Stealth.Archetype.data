@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.131528, 3.34539, 0],
+		Vec3 Translation = [4.75802, -12.5809, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -39,7 +39,7 @@ Cog =
 	EnemyAI = 
 	{
 		float ChaseProximity = 10,
-		float ShootProximity = 9,
+		float ShootProximity = 0,
 		int Speed = 200,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],

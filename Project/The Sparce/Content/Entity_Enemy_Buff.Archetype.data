@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Enemy",
 	},
+	Archetyped = 
+	{
+		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-4.89333, 8.70173, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -75,6 +79,7 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		float RegenRate = 0.1,
 		float MaxHealth = 150,
 		float HurtDuration = 0.2,
@@ -85,7 +90,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

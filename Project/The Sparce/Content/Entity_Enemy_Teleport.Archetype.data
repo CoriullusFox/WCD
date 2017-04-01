@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-15.1628, -7.78275, 0],
+		Vec3 Translation = [-4.18684, -9.46274, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -98,19 +98,19 @@ Cog =
 	},
 	EnemyToutchDamage = 
 	{
-		float SecondsBetweenDamage = 0.25,
-		float Damage = 2,
+		float SecondsBetweenDamage = 0.2,
+		float Damage = 1,
 	},
 	Bouncer = 
 	{
 		string Bullet = "582a50e058efc8d0:Bullet_Bouncy",
-		float Damage = 5,
+		float Damage = 3,
 		float EnergyUse = 2.5,
 		float Energy = 100,
 		float CooldownMax = 0.5,
 		bool Player = false,
-		float BulletSpeed = 20,
-		float LifeLength = 10,
+		float BulletSpeed = 25,
+		float LifeLength = 6,
 		float CamZoom = 15,
 	},
 },

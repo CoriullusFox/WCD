@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.683, -11.4575, 152.501],
+			Vec3 Translation = [-1.56246, -2.63918, 152.501],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5336,
+			float Size = 18.2684,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-10.683, -11.4575, 102.501],
+			Vec3 LookTarget = [-1.56246, -2.63918, 102.501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -521,13 +521,6 @@ Level =
 							bool Active = true,
 							bool CaptureMouse = false,
 						},
-						SelectableScale = 
-						{
-							Vec3 ScaleDirection = [1, 1, 0],
-							Vec3 MaxScale = [4.1, 4.1, 0],
-							Vec3 MinScale = [4, 4, 0],
-							float ScaleSpeed = 0.01,
-						},
 						RestartButton = 
 						{
 						},
@@ -541,6 +534,13 @@ Level =
 							bool ChangeOwnerColor = true,
 							Vec4 SelectedChildColor = [0.0784314, 0, 1, 1],
 							bool ChangeChildColor = true,
+						},
+						SelectableScale = 
+						{
+							Vec3 ScaleDirection = [1, 1, 0],
+							Vec3 MaxScale = [4.5, 4.5, 1],
+							Vec3 MinScale = [4, 4, 1],
+							float ScaleSpeed = 2,
 						},
 						Hierarchy = 
 						{
@@ -622,13 +622,6 @@ Level =
 							bool Active = true,
 							bool CaptureMouse = false,
 						},
-						SelectableScale = 
-						{
-							Vec3 ScaleDirection = [1, 1, 0],
-							Vec3 MaxScale = [4.9, 4.1, 0],
-							Vec3 MinScale = [4, 4, 0],
-							float ScaleSpeed = 0.01,
-						},
 						LevelSwapButton = 
 						{
 							string LevelToLoad = "580f2d187401da74:MainMenu",
@@ -644,6 +637,13 @@ Level =
 							bool ChangeOwnerColor = true,
 							Vec4 SelectedChildColor = [0.0784314, 0, 1, 1],
 							bool ChangeChildColor = true,
+						},
+						SelectableScale = 
+						{
+							Vec3 ScaleDirection = [1, 1, 0],
+							Vec3 MaxScale = [4.3, 4.5, 1],
+							Vec3 MinScale = [4.8, 4, 1],
+							float ScaleSpeed = 5,
 						},
 						Hierarchy = 
 						{
