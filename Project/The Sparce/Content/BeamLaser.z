@@ -73,6 +73,7 @@ class BeamLaser : ZilchComponent
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
         {
+            this.Owner.DispatchEvent(Events.Fire, Fire());
             if(this.Player)
             {
                 //use energy

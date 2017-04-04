@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "583a04ce746741f7:MuzzleFire",
+		string Name = "583a04ce746741f7:Particle_MuzzleFire",
 	},
 	Transform = 
 	{
@@ -25,7 +25,7 @@ Cog =
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
 		SystemChildMode ChildMode = Independent,
-		SystemSpace SystemSpace = WorldSpace,
+		SystemSpace SystemSpace = LocalSpace,
 		uint DrawOrder = 0,
 		float WarmUpTime = 0,
 		ParticleGeometry GeometryMode = Billboarded,
@@ -36,21 +36,21 @@ Cog =
 		Vec4 Tint = [1, 1, 1, 1],
 		float VelocityScale = 1,
 		float LengthScale = 1,
-		float MaxParticleSize = 100,
+		float MaxParticleSize = 10000,
 		Vec3 SystemSize = [4, 4, 4],
 	},
 	SphericalParticleEmitter = 
 	{
 		bool Active = true,
 		uint EmitCount = 0,
-		float EmitRate = 450,
-		float EmitVariance = 0,
+		float EmitRate = 10000,
+		float EmitVariance = 10,
 		float Size = 0.4,
-		float SizeVariance = 0,
+		float SizeVariance = 0.1,
 		float Lifetime = 0.02,
 		float LifetimeVariance = 0.02,
 		float Spin = 0,
-		float SpinVariance = 50,
+		float SpinVariance = 1000,
 		bool RandomSpin = true,
 		float Fill = 1,
 		float EmitterVelocityPercent = 0,
@@ -65,14 +65,14 @@ Cog =
 		Vec3 Force = [0, 0, 0],
 		Vec3 RandomForce = [0, 0, 0],
 		float Torque = 0,
-		float Growth = 0,
+		float Growth = 0.1,
 		float Dampening = 0,
 		Vec3 Twist = [0, 0, 0],
 	},
 	ParticleColorAnimator = 
 	{
 		Vec4 Color0 = [1, 1, 1, 0],
-		Vec4 Color1 = [0.48, 0.8128, 1, 1],
+		Vec4 Color1 = [0.48, 0.8128, 1, 0.9999],
 		Vec4 Color2 = [0, 0.61, 1, 1],
 		Vec4 Color3 = [0.17, 0, 1, 1],
 		Vec4 Color4 = [0.322, 0, 0.575, 0],

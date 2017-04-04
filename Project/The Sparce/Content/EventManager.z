@@ -93,3 +93,10 @@ class Destroy : ZilchEvent
     sends Destroy : Destroy;
     
 }
+
+class Fire : ZilchEvent
+{
+    
+    sends Fire : Fire;
+    
+}

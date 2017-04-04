@@ -36,6 +36,9 @@ class FlameThrower : ZilchComponent
     [Property]
     var CamZoom : Real = 22.5;
     
+    [Property]
+    var LifeLength : Real = 0.5;
+    
     function Initialize(init : CogInitializer) 
     {
 
@@ -69,7 +72,7 @@ class FlameThrower : ZilchComponent
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
         {
-            
+            this.Owner.DispatchEvent(Events.Fire, Fire());
             
             if(this.Player)
             {
@@ -102,7 +105,7 @@ class FlameThrower : ZilchComponent
                     //apply direction and movement
                     createdBullet.Orientation.LookAtDirection(newDirection);
                     
-                    createdBullet.Despawn.LifeLength = 5;
+                    createdBullet.Despawn.LifeLength = this.LifeLength;
                     
                     //tell the flame that it is whether it's from the player
                     if(createdBullet.Flame != null)

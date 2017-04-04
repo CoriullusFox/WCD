@@ -61,10 +61,18 @@ class PlayerAnimations : ZilchComponent
     
     var WeaponS : CogPath = CogPath("Weapon");
     
+    var Shooting : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.GameSession, Events.SelectedGun, this.WeaponChange);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
+    }
+
+    function OnShoot(event : Shoot)
+    {
+        this.Shooting = true;
     }
 
     function WeaponChange(event : SelectedGun)
@@ -94,100 +102,182 @@ class PlayerAnimations : ZilchComponent
         {
             this.Owner.Sprite.AnimationSpeed = this.WalkingAnimationSpeed;
         }
-        if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
+        if(!this.Shooting)
         {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 5;
-            
-            if(this.Owner.Sprite.SpriteSource != this.SouthWest)
+            if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
             {
-                this.Owner.Sprite.SpriteSource = this.SouthWest;
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 5;
+                
+                if(this.Owner.Sprite.SpriteSource != this.SouthWest && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.SouthWest;
+                }
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
+            {
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 7;
+                
+                if(this.Owner.Sprite.SpriteSource != this.SouthEast && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.SouthEast;
+                }
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
+            {
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 3;
+                
+                if(this.Owner.Sprite.SpriteSource != this.NorthWest && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.NorthWest;
+                }
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
+            {
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 1;
+                
+                if(this.Owner.Sprite.SpriteSource != this.NorthEast && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.NorthEast;
+                }
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.W))
+            {
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 2;
+                
+                if(this.Owner.Sprite.SpriteSource != this.North && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.North;
+                }
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.A))
+            {
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 4;
+                
+                if(this.Owner.Sprite.SpriteSource != this.West && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.West;
+                }
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.S))
+            {
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 6;
+                
+                if(this.Owner.Sprite.SpriteSource != this.South && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.South;
+                }
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.D))
+            {
+                this.Owner.Sprite.AnimationActive = true;
+                
+                selectedWeapon.Sprite.CurrentFrame = 0;
+                
+                if(this.Owner.Sprite.SpriteSource != this.East && !this.Shooting)
+                {
+                    this.Owner.Sprite.SpriteSource = this.East;
+                }
+            }
+            else
+            {
+                this.Owner.Sprite.AnimationActive = false;
+                
+                //this.Owner.Sprite.CurrentFrame = 4;
             }
         }
-        else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
+        
+        
+        if(this.Shooting)
         {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 7;
-            
-            if(this.Owner.Sprite.SpriteSource != this.SouthEast)
+            if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.D))
             {
-                this.Owner.Sprite.SpriteSource = this.SouthEast;
+                this.Owner.Sprite.AnimationActive = true;
             }
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
-        {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 3;
-            
-            if(this.Owner.Sprite.SpriteSource != this.NorthWest)
+            else
             {
-                this.Owner.Sprite.SpriteSource = this.NorthWest;
+                this.Owner.Sprite.AnimationActive = false;
             }
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
-        {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 1;
-            
-            if(this.Owner.Sprite.SpriteSource != this.NorthEast)
+            var angle = Math.Angle2D(this.Owner.PlayerShooting.Direction);
+            if(angle > -0.25 && angle < 0.25 && this.Owner.Sprite.SpriteSource != this.East)
             {
-                this.Owner.Sprite.SpriteSource = this.NorthEast;
-            }
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.W))
-        {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 2;
-            
-            if(this.Owner.Sprite.SpriteSource != this.North)
-            {
-                this.Owner.Sprite.SpriteSource = this.North;
-            }
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.A))
-        {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 4;
-            
-            if(this.Owner.Sprite.SpriteSource != this.West)
-            {
-                this.Owner.Sprite.SpriteSource = this.West;
-            }
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.S))
-        {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 6;
-            
-            if(this.Owner.Sprite.SpriteSource != this.South)
-            {
-                this.Owner.Sprite.SpriteSource = this.South;
-            }
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.D))
-        {
-            this.Owner.Sprite.AnimationActive = true;
-            
-            selectedWeapon.Sprite.CurrentFrame = 0;
-            
-            if(this.Owner.Sprite.SpriteSource != this.East)
-            {
+                
                 this.Owner.Sprite.SpriteSource = this.East;
+                selectedWeapon.Sprite.CurrentFrame = 0;
+                
+            }
+            else if(angle > 0.25 && angle < 1.25 && this.Owner.Sprite.SpriteSource != this.NorthEast)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.NorthEast;
+                selectedWeapon.Sprite.CurrentFrame = 1;
+                
+            }
+            else if(angle > 1.25 && angle < 1.75 && this.Owner.Sprite.SpriteSource != this.North)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.North;
+                selectedWeapon.Sprite.CurrentFrame = 2;
+                
+            }
+            else if(angle > 1.75 && angle < 2.75 && this.Owner.Sprite.SpriteSource != this.NorthWest)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.NorthWest;
+                selectedWeapon.Sprite.CurrentFrame = 3;
+                
+            }
+            else if(angle > 2.75 && angle > -2.75 && this.Owner.Sprite.SpriteSource != this.West)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.West;
+                selectedWeapon.Sprite.CurrentFrame = 4;
+                
+            }
+            else if(angle > -2.75 && angle < -1.75 && this.Owner.Sprite.SpriteSource != this.SouthWest)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.SouthWest;
+                selectedWeapon.Sprite.CurrentFrame = 5;
+                
+            }
+            else if(angle > -1.75 && angle < -1.25 && this.Owner.Sprite.SpriteSource != this.South)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.South;
+                selectedWeapon.Sprite.CurrentFrame = 6;
+                
+            }
+            else if(angle > -1.25 && angle < -0.25 && this.Owner.Sprite.SpriteSource != this.SouthEast)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.SouthEast;
+                selectedWeapon.Sprite.CurrentFrame = 7;
+                
+            }
+            if(this.Owner.PlayerShooting.Direction.X < 0.1 && this.Owner.PlayerShooting.Direction.Y < 0.1 && this.Owner.PlayerShooting.Direction.X > -0.1 && this.Owner.PlayerShooting.Direction.Y > -0.1)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.South;
+                selectedWeapon.Sprite.CurrentFrame = 6;
+                
             }
         }
-        else
-        {
-            this.Owner.Sprite.AnimationActive = false;
-            
-            //this.Owner.Sprite.CurrentFrame = 4;
-        }
+        
+        
         
         if(this.Owner.Sprite.AnimationActive)
         {
@@ -244,6 +334,6 @@ class PlayerAnimations : ZilchComponent
             }
             
         }
-        
+        this.Shooting = false;
     }
 }

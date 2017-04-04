@@ -9,15 +9,14 @@ class MuzzleFire : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
+        Zero.Connect(this.Owner, Events.Fire, this.OnFire);
     }
 
-    function OnShoot(event : Shoot)
+    function OnFire(event : Fire)
     {
+        var currentDirection = Math.Normalize(this.Owner.PlayerShooting.Direction);
         
-        var currentDirection = this.SpriteDirection.CurrentDirection;       // CURRENT DIRECTION
-        
-        var muzzleParticle = this.Space.CreateAtPosition(this.MuzzleFireParticle, currentDirection / 4);
+        var muzzleParticle = this.Space.CreateAtPosition(this.MuzzleFireParticle, currentDirection / 2.5);
         if(muzzleParticle != null)
         {
             
@@ -25,5 +24,4 @@ class MuzzleFire : ZilchComponent
             
         }
     }
-    
 }

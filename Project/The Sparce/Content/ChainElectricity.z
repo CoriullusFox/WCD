@@ -69,7 +69,7 @@ class ChainElectricity : ZilchComponent
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUsePer)
         {
-            
+            this.Owner.DispatchEvent(Events.Fire, Fire());
             this.Cooldown = 0;
             
             /** SHOOTING LOGIC HERE **/
