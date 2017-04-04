@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -147,7 +147,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 3,
+				float EmitRate = 6,
 				float EmitVariance = 1,
 				float Size = 0.2,
 				float SizeVariance = 0,
@@ -223,7 +223,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 50,
+				float EmitRate = 100,
 				float EmitVariance = 1,
 				float Size = 0.2,
 				float SizeVariance = 0,

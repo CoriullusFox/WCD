@@ -148,7 +148,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 4,
+				float EmitRate = 8,
 				float EmitVariance = 1,
 				float Size = 0.2,
 				float SizeVariance = 0,
@@ -224,7 +224,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 110,
+				float EmitRate = 220,
 				float EmitVariance = 1,
 				float Size = 0.2,
 				float SizeVariance = 0,
