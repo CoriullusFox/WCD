@@ -8,15 +8,28 @@
 ** - Hudson Green
 **
 ** Contributors:
-** - NONE
+** - Sage
 ** --------------------------------------------------------------------------*/
 
 class CustomCursor : ZilchComponent
 {
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.MouseMove, this.OnMouseMove);
+        
+        Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
+        
+        Zero.Connect(this.Space, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        this.Owner.Children.Current.Sprite.SpriteSource = SpriteSource.Cursor_Closing;
+    }
+
+    function OnMouseUp(event : ViewportMouseEvent)
+    {
+        this.Owner.Children.Current.Sprite.SpriteSource = SpriteSource.Cursor_Opening;
     }
 
     function OnMouseMove(event : ViewportMouseEvent)

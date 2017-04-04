@@ -10,12 +10,12 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5819b1bffeb885d8:Cursor",
+		string Name = "5819b1bffeb885d8:UI_Cursor",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.00294619, -5.74414, 5],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 39],
+		Vec3 Scale = [6, 6, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,15 +28,12 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5819de4b41109e1b:cursor",
+		string SpriteSource = "5866d364b19a104f:Cursor_Opening",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 1,
+		float AnimationSpeed = 12,
 		uint StartFrame = 0,
-	},
-	CustomCursor = 
-	{
 	},
 },
