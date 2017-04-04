@@ -44,7 +44,7 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer = 13;
                 //Time, Speed, Firefate, Randomness, Bullet
-                this.Owner.SpinAttack.Attack(6, 0.1, 0.08, 0.5, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(6, 0.1, 0.08, 0.2, Archetype.Bullet_TinyLaser);
             }
         }
         if(this.Stage == 1)
@@ -53,7 +53,7 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer = 13;
                 //Time, Speed, Firefate, Randomness, Bullet
-                this.Owner.SpinAttack.Attack(6, 0.05, 0.05, 0.8, Archetype.Bullet_TinyLaser);
+                this.Owner.SpinAttack.Attack(6, 0.05, 0.05, 0.5, Archetype.Bullet_TinyLaser);
             }
         }
         if(this.Stage == 2)
@@ -68,7 +68,7 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer2 = 14;
                 //Amount, Damage, Speed, TurnSpeed, LifeLength
-                this.Owner.BossMissile.FireMissiles(10, 15, 8, 5, 5);
+                this.Owner.BossMissile.FireMissiles(10, 2, 8, 5, 5);
             }
         }
         if(this.Stage == 3)

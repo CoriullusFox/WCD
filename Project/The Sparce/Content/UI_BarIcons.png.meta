@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "UI_BarIcons",
+		uint64 ResourceId = 5866feb2f768a65e,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 8,
+		uint FrameSizeY = 8,
+		uint FrameCount = 3,
+		float FrameDelay = 0.0833333,
+		float OriginX = 4,
+		float OriginY = 4,
+		float PixelsPerUnit = 16,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

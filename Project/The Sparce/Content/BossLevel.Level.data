@@ -78,7 +78,7 @@ Level =
 			bool AntiAliasing = true,
 			bool Refraction = true,
 			bool Reflections = true,
-			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
+			string ReflectionEnvironmentName = "5310e87946eb1d76:Cloud",
 			bool GodRays = true,
 			bool RenderMasks = false,
 			bool Glow = false,
@@ -135,7 +135,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.24228, -0.13674, 50],
+			Vec3 Translation = [2.96017, -15.5751, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -147,7 +147,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.3483,
+			float Size = 29.7595,
 		},
 		EditorCameraController = 
 		{
@@ -155,7 +155,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.24228, -0.13674, -1.14203e-007],
+			Vec3 LookTarget = [2.96017, -15.5751, 6.94917e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -307,12 +307,19 @@ Level =
 			float MeshThickness = 1.2,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		LinkId = 
 		{
 			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "PlayerSpawnPoint",
+		},
+		Archetyped = 
+		{
+			string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		},
 		Transform = 
 		{
@@ -320,9 +327,35 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		SpawnPlayer = 
 		{
-			string Name = "PlayerSpawnPoint",
+			string PlayerToSpawn = "Entity_Player",
+		},
+		Grid = 
+		{
+			Vec2 GridWorldSize = [100, 100],
+			bool Debug = false,
+		},
+		AStarPathfind = 
+		{
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0.9999],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5812ef7faa1505fd:PlayerNorth_Anim",
+			bool RenderMask = false,
+			bool FlipX = true,
+			bool FlipY = true,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 	ArchetypeInstance = 

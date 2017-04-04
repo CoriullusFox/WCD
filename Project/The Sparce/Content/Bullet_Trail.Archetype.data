@@ -6,46 +6,38 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "PlayerSpawnPoint",
+		string Name = "Trail",
 	},
 	Archetyped = 
 	{
-		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
+		string Name = "5861086960aa8f7d:Bullet_Trail",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -14.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
-	SpawnPlayer = 
-	{
-		string PlayerToSpawn = "Entity_Player",
-	},
-	Grid = 
-	{
-		Vec2 GridWorldSize = [100, 100],
-		bool Debug = false,
-	},
-	AStarPathfind = 
-	{
-	},
 	Sprite = 
 	{
-		bool Visible = false,
+		bool Visible = true,
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 0.9999],
+		Vec4 Color = [1, 1, 1, 0.5],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5812ef7faa1505fd:PlayerNorth_Anim",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool RenderMask = false,
-		bool FlipX = true,
-		bool FlipY = true,
-		bool AnimationActive = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
+	},
+	Trail = 
+	{
+		float FadeRate = 1,
 	},
 },

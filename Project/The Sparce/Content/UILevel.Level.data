@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0834404, 1.22869, 152.501],
+			Vec3 Translation = [-14.4069, -11.6294, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.0259,
+			float Size = 3.33733,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0834404, 1.22869, 102.501],
+			Vec3 LookTarget = [-14.4069, -11.6294, -0.000999832],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -741,7 +741,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5866d364b19a104f:cursor_Anim",
+					string SpriteSource = "5866d364b19a104f:Cursor_Opening",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1066,13 +1066,138 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 28,
+				},
+				Named = 
+				{
+					string Name = "Icons",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 29,
+						},
+						Named = 
+						{
+							string Name = "Health",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [3.7, 1.2, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5866feb2f768a65e:UI_BarIcons",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = false,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 30,
+						},
+						Named = 
+						{
+							string Name = "Energy",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [3.7, 0.7, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5866feb2f768a65e:UI_BarIcons",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = false,
+							float AnimationSpeed = 1,
+							uint StartFrame = 1,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 31,
+						},
+						Named = 
+						{
+							string Name = "Cooldown",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [3.7, 0.2, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5866feb2f768a65e:UI_BarIcons",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = false,
+							float AnimationSpeed = 1,
+							uint StartFrame = 2,
+						},
+					},
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 32,
 		},
 		Named = 
 		{

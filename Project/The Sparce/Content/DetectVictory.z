@@ -3,6 +3,8 @@ class DetectVictory : ZilchComponent
     
     var Win : Boolean = false;
     
+    var Timer : Real = 1;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -12,13 +14,13 @@ class DetectVictory : ZilchComponent
     {
         if(!this.Space.FindAllObjectsByName("Enemy").IsNotEmpty || this.Win)
         {
-            
-            
+            this.Timer -= event.Dt;
+        }
+        if(this.Timer <= 0)
+        {
             Zero.ObjectStore.Store("PlayerSave.wcd", this.Space.FindObjectByName("TempPlayer"));
             Console.WriteLine("VICTORY!");
             this.Space.TimeSpace.Paused = true;
-            
         }
-        
     }
 }

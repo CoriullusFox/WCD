@@ -145,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.79068, 7.82322, 50],
+			Vec3 Translation = [0.904466, -0.384146, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.3482,
+			float Size = 12.0993,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +165,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.79068, 7.82322, 3.47809e-008],
+			Vec3 LookTarget = [0.904466, -0.384146, -4.76684e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1248,12 +1248,19 @@ Level =
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "580ad9c286542aaa:Teleporter",
 		LinkId = 
 		{
 			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "Teleporter1",
+		},
+		Archetyped = 
+		{
+			string Name = "580ad9c286542aaa:Teleporter",
 		},
 		Transform = 
 		{
@@ -1261,16 +1268,49 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Teleporter1",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512a90a3d96f00:Decor_Animated_Teleporter_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 50,
+			uint StartFrame = 0,
+		},
+		Teleporter = 
+		{
+			CogPath Position = 
+			{
+				string Path = ":/Teleporter3",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 19,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float Proximity = 1,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -1282,7 +1322,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-24.4989, -1.45199, 0],
+			Vec3 Translation = [-24.4989, -1.52783, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1308,7 +1348,7 @@ Level =
 		{
 			CogPath Position = 
 			{
-				string Path = ":/Teleporter1",
+				string Path = ":/Teleporter4",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -1316,7 +1356,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 18,
+				uint ResolvedCog = 21,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1328,7 +1368,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -1366,7 +1406,7 @@ Level =
 		{
 			CogPath Position = 
 			{
-				string Path = ":/Teleporter4",
+				string Path = ":/Teleporter1",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -1374,7 +1414,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 21,
+				uint ResolvedCog = 18,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1424,7 +1464,7 @@ Level =
 		{
 			CogPath Position = 
 			{
-				string Path = ":/Teleporter3",
+				string Path = ":/Teleporter2",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,

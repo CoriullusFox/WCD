@@ -58,13 +58,13 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 0.75,
+		float LifeLength = 3,
 	},
 	SphericalParticleEmitter = 
 	{
 		bool Active = true,
 		uint EmitCount = 500,
-		float EmitRate = 0,
+		float EmitRate = 10000,
 		float EmitVariance = 500,
 		float Size = 1.25,
 		float SizeVariance = 0.5,
@@ -116,7 +116,7 @@ Cog =
 			ScreenWarpRing = 
 			{
 				float Size = 0.005,
-				float Thickness = 2,
+				float Thickness = 1,
 				float Intensity = -0.1,
 			},
 			Despawn = 

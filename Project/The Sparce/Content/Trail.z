@@ -1,0 +1,24 @@
+class Trail : ZilchComponent
+{
+    
+    [Property]
+    var FadeRate : Real = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.Owner.Sprite.Color.W > 0.1)
+        {
+            this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt * this.FadeRate);
+        }
+        else
+        {
+            this.Owner.Sprite.Color = Real4(0,0,0,0);
+        }
+    }
+}

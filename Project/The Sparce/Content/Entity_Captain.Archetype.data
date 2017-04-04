@@ -83,14 +83,14 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 1000,
+		float ConfiguredHealth = 500,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
-		Vec4 HurtColor = [0.27, 0, 0, 1],
+		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
 		float RegenRate = 5,
-		float MaxHealth = 1000,
+		float MaxHealth = 500,
 		float HurtDuration = 0.2,
 	},
 	EnemyToutchDamage = 

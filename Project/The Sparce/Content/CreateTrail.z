@@ -1,0 +1,35 @@
+class CreateTrail : ZilchComponent
+{
+    
+    [Property]
+    var Rate : Real = 0.1;
+    
+    var Timer : Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.Timer <= 0)
+        {
+            
+            this.Timer = this.Rate;
+            var trail = this.Space.CreateAtPosition(Archetype.Bullet_Trail, this.Owner.Transform.Translation);
+            if(trail != null)
+            {
+                
+                trail.Sprite.SpriteSource = this.Owner.Sprite.SpriteSource;
+                trail.Transform.Scale = this.Owner.Transform.Scale;
+                trail.Transform.Rotation = this.Owner.Transform.Rotation;
+                
+            }
+        }
+        
+        this.Timer -= event.Dt;
+        
+    }
+}

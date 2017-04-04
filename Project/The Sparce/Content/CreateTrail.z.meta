@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "CreateTrail",
+		uint64 ResourceId = 58610c7dc808a666,
+	},
+},
