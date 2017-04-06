@@ -26,12 +26,12 @@ Level =
 		},
 		CameraViewport = 
 		{
-			bool Background = true,
+			bool Background = false,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
 			int Layer = 0,
 			bool Active = true,
-			bool Blocking = true,
+			bool Blocking = false,
 			CogPath Renderer = 
 			{
 				string Path = ".",
@@ -135,27 +135,27 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.93166, 5.90705, 50],
+			Vec3 Translation = [12.5497, 3.40162, -1.68504],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, -1.09278e-008, 0, 1],
+			Quat Rotation = [-0.0968174, 0.753535, 0.113961, 0.640175],
 		},
 		Camera = 
 		{
-			ProjectionMode ProjectionMode = Orthographic,
+			ProjectionMode ProjectionMode = Perspective,
 			Facing Facing = NegativeZ,
 			CameraTransparentSort TransparentSort = ZDepth,
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.2253,
+			float Size = 29.7595,
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = ZPlane,
-			float LookDistance = 50,
-			float VerticalAngle = 0,
-			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.93166, 5.90705, -2.3176e-007],
+			ControlMode ControlMode = Orbit,
+			float LookDistance = 12.3299,
+			float VerticalAngle = 0.300197,
+			float HorizontalAngle = -1.73311,
+			Vec3 LookTarget = [0.926025, -0.244422, 0.218412],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

@@ -145,27 +145,27 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.1831, 3.21046, 50],
+			Vec3 Translation = [2.38649, 3.06302, 10.0664],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, -1.09278e-008, 0, 1],
+			Quat Rotation = [-0.136909, 0.177912, 0.0250039, 0.974155],
 		},
 		Camera = 
 		{
-			ProjectionMode ProjectionMode = Orthographic,
+			ProjectionMode ProjectionMode = Perspective,
 			Facing Facing = NegativeZ,
 			CameraTransparentSort TransparentSort = ZDepth,
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.02751,
+			float Size = 14.7781,
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = ZPlane,
-			float LookDistance = 50,
-			float VerticalAngle = 0,
-			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.1831, 3.21046, -9.52074e-008],
+			ControlMode ControlMode = Orbit,
+			float LookDistance = 11.1565,
+			float VerticalAngle = 0.279253,
+			float HorizontalAngle = -0.361283,
+			Vec3 LookTarget = [-1.40429, -0.0121371, 0.0343569],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -211,8 +211,8 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5812c6bda55446fb:GlobalTestingSandbox_TileMap01",
-			string PaletteName = "5812cb923a82b921:SpaceStationTileSet",
+			string SourceName = "5863a6ad5c7dd7ea:GlobalTestingSandbox_TileMap02",
+			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
 			float UnitsPerTile = 1,
 			float MeshThickness = 2,
 		},
@@ -285,7 +285,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5812c6bda55446fb:GlobalTestingSandbox_TileMap01",
-			string PaletteName = "5812cb923a82b921:SpaceStationTileSet",
+			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
 			float UnitsPerTile = 1,
 			float MeshThickness = 2,
 		},

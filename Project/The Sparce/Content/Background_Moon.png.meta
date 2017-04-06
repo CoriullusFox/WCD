@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Background_Moon",
+		uint64 ResourceId = 5863a33038a5cff6,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 49,
+		uint FrameSizeY = 49,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333,
+		float OriginX = 24,
+		float OriginY = 24,
+		float PixelsPerUnit = 32,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

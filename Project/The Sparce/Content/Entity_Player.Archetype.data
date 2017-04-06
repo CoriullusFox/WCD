@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -55,6 +55,7 @@ Cog =
 	{
 		float Speed = 300,
 		float RunSpeed = 600,
+		float RunEnergy = 35,
 	},
 	ChangeDirectionToPointAtMouse = 
 	{
@@ -193,6 +194,76 @@ Cog =
 			Named = 
 			{
 				string Name = "Weapon",
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "Earth",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.5517, 0.42031, -3.30237],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5863a33038a58995:Background_Earth",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 5,
+			},
+			Named = 
+			{
+				string Name = "Moon",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [12.4826, 4.89936, -3.30237],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5863a33038a5cff6:Background_Moon",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
 			},
 		},
 	},
