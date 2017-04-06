@@ -101,11 +101,11 @@ Cog =
 	PassiveAttack = 
 	{
 		float FireRate = 0.5,
-		string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
+		string Bullet = "58638be9705e178b:Bullet_LargeBoss",
 		float BulletSpeed = 8,
 		float Damage = 2.5,
 		float LifeLength = 75,
-		float Randomness = 0.1,
+		float Randomness = 0.01,
 	},
 	SpinAttack = 
 	{
