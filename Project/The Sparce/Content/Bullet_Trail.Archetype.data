@@ -40,4 +40,8 @@ Cog =
 	{
 		float FadeRate = 1,
 	},
+	Despawn = 
+	{
+		float LifeLength = 2,
+	},
 },
