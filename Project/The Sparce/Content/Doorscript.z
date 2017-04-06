@@ -20,14 +20,12 @@ class Doorscript : ZilchComponent
         this.Owner.Sprite.AnimationSpeed = this.DoorAnimationSpeed;
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-        
-        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.EntityDetected = false;
+        
         var filter : CastFilter = CastFilter();
         
         filter.IgnoreKinematic = true;
@@ -36,80 +34,40 @@ class Doorscript : ZilchComponent
         filter.IgnoreChildren = true;
         filter.IgnoreDynamic = false;
         
-        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,12,10, filter);
+        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,3,10, filter);
         
         while(!cast.Empty())
         {
-            
             if(cast.Current.ObjectHit.Name == "TempPlayer" || cast.Current.ObjectHit.Name == "Enemy")
             {
+                this.RanOnce = false;
                 this.EntityDetected = true;
                 break;
             }
             else
             {
+                this.RanOnce = false;
                 this.EntityDetected = false;
             }
             cast.PopFront();
-            
         }
         
         
         
         if(this.EntityDetected)
         {
-            if(this.RanOnce == false)
+            if(this.Owner.Sprite.SpriteSource != this.DoorOpening)
             {
                 this.Owner.Sprite.CurrentFrame = 0;
-                
-                this.RanOnce = true;
+                this.Owner.Sprite.SpriteSource = this.DoorOpening;
+                this.Owner.Sprite.AnimationActive = true;
             }
-            
-            this.Owner.Sprite.SpriteSource = this.DoorOpening;
-            
-            this.Owner.Sprite.AnimationActive = true;
         }
-        else
+        else if(this.Owner.Sprite.SpriteSource != this.DoorClosing)
         {
-            if(this.RanOnce == false)
-            {
-                this.Owner.Sprite.CurrentFrame = 0;
-                
-                this.RanOnce = true;
-            }
-            
+            this.Owner.Sprite.CurrentFrame = 0;
             this.Owner.Sprite.SpriteSource = this.DoorClosing;
-            
             this.Owner.Sprite.AnimationActive = true;
         }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-        //Console.WriteLine("Started");
-        
-        //this.Owner.Sprite.CurrentFrame = 0;
-        
-        //this.Owner.Sprite.SpriteSource = this.DoorOpening;
-        
-        //this.Owner.Sprite.AnimationActive = true;
-    }
-    
-    function OnCollisionEnded(event : CollisionEvent)
-    {
-        //Console.WriteLine("Ended");
-        
-        //this.Owner.Sprite.CurrentFrame = 0;
-        
-        //this.Owner.Sprite.SpriteSource = this.DoorClosing;
-        
-        //this.Owner.Sprite.AnimationActive = true;
     }
 }
