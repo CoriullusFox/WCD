@@ -94,7 +94,7 @@ class PlayerAnimations : ZilchComponent
         
         this.WalkingAnimationSpeed = this.CurrentWalkingAnimationSpeed;
         
-        if(Zero.Keyboard.KeyIsDown(Keys.Shift))
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && this.Owner.EnergyStor.Energy > event.Dt * this.Owner.Movement.RunEnergy)
         {
             this.Owner.Sprite.AnimationSpeed = this.RunningAnimationSpeed;
         }

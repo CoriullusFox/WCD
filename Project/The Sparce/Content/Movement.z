@@ -17,6 +17,8 @@ class Movement : ZilchComponent
     var Speed : Real = 10;
     [Property]
     var RunSpeed : Real = 10;
+    [Property]
+    var RunEnergy : Real = 35;
     //[Property]
     var Scale : Real3 = Real3(4, 4, 4);
     
@@ -32,9 +34,14 @@ class Movement : ZilchComponent
     {
         this.Owner.RigidBody.Velocity = Real3(0,0,0);
         var r3Speed = Real3(0,0,0);
-        if(Zero.Keyboard.KeyIsDown(Keys.Shift))
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && this.Owner.EnergyStor.Energy > (event.Dt * this.RunEnergy) + 1)
         {
             r3Speed = Real3(this.RunSpeed *event.Dt, this.RunSpeed *event.Dt, this.RunSpeed *event.Dt);
+        }
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && this.Owner.EnergyStor.Energy > event.Dt * this.RunEnergy)
+        {
+            
+            this.Owner.EnergyStor.Energy -= event.Dt * this.RunEnergy;
         }
         else
         {
