@@ -1,0 +1,69 @@
+class MusicManager : ZilchComponent
+{
+    var MusicSpace : Space = null;
+    
+    var CurrentEmitter : SoundEmitter = null;
+    var CurrentEmitterIsPlaying : Boolean = false;
+    
+    [Property]
+    var NextCue : SoundCue = null;
+    
+    [Property]
+    var FadeTime : Real = 2;
+    var TimeSinceFadeStart : Real = 0;
+    
+    [Property]
+    var MusicVolume : Real = 1;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Create Music Universe
+        this.MusicSpace = this.GameSession.CreateNamedSpace("MuscSpace",Archetype.Space);
+        this.MusicSpace.LoadLevel(Level.MusicLevel);
+        Zero.Connect(this.MusicSpace, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        //Save emitter for the laterz
+        this.CurrentEmitter = this.MusicSpace.FindObjectByName("Camera").SoundEmitter;
+        
+        //Start with the fade finished
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //Trying to Fade
+        if (this.NextCue != null)
+        {
+            this.TimeSinceFadeStart += event.Dt;
+            this.CurrentEmitter.Volume =
+                Math.Lerp(this.MusicVolume, 0, this.TimeSinceFadeStart / this.FadeTime);
+                
+            if (this.CurrentEmitter.Volume <= 0)
+            {
+                //Done with fading
+                this.CurrentEmitter.Volume = this.MusicVolume;
+                this.CurrentEmitter.Stop();
+                this.CurrentEmitter.PlayCue(this.NextCue);
+                this.NextCue = null;
+            }
+        }
+    }
+    
+    //Switch Music Tracks
+    function SwitchTracks(cue : SoundCue)
+    {
+        if (this.CurrentEmitterIsPlaying == false)
+        {
+            this.CurrentEmitter.PlayCue(cue);
+            this.CurrentEmitterIsPlaying = true;
+            this.NextCue = null;
+        }
+        else
+        {
+            this.NextCue = cue;
+            this.TimeSinceFadeStart = 0;
+        }
+    }
+    
+    
+}
