@@ -40,6 +40,6 @@ Cog =
 	{
 		string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
 		string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
-		float DoorAnimationSpeed = 80,
+		float DoorAnimationSpeed = 100,
 	},
 },

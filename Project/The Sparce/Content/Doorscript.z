@@ -34,7 +34,7 @@ class Doorscript : ZilchComponent
         filter.IgnoreChildren = true;
         filter.IgnoreDynamic = false;
         
-        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,3,10, filter);
+        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,1,10, filter);
         
         while(!cast.Empty())
         {

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-4, 0.5, 0],
+		Vec3 Translation = [4, 1.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -36,20 +36,10 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	BoxCollider = 
-	{
-		bool Ghost = true,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, -0.25, 0],
-		Vec3 Size = [0.8, 1.25, 0.5],
-	},
 	Doorscript = 
 	{
 		string DoorOpening = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
 		string DoorClosing = "5852701e8e9813d9:Animated_VertDoor_Unlocked_Closing",
-		float DoorAnimationSpeed = 100,
+		float DoorAnimationSpeed = 120,
 	},
 },
