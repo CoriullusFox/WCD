@@ -3,7 +3,7 @@ ImageContent =
 	SpriteSourceBuilder = 
 	{
 		string Name = "sprite_walls001",
-		uint64 ResourceId = 5820ef29ed75eadc,
+		uint64 ResourceId = 5868388d7f81b86c,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 16,
 		uint FrameSizeY = 16,
