@@ -3,11 +3,12 @@ Copying ANYTHING is ILLEGAL! We are too broke to pay for the plan that lets us p
 
 # W.C.D. - We Can't Decide
 subscrib to keemstar rooiiiiiiiiiight now (jk screw him)
+
 #The Sparce
 
 <h3>Team Usernames:</h3>
 
- &nbsp; <b>CEO, Producer, Product Manager, Ad Guy & Sound Manager</b>   - *HudsonGTV*  
+ &nbsp; <b>CEO, Producer, Product Manager, Ad Guy</b>   - *HudsonGTV*  
 
  &nbsp; <b>Art Director</b>                   - *ReallyNotSam* (The 10th Doctor)
 
