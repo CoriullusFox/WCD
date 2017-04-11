@@ -9,14 +9,14 @@ https://WCD.GitHub.io/
 
  &nbsp; <b>CEO, Producer, Product Manager, Ad Guy</b>   - *HudsonGTV*  
 
- &nbsp; <b>Art Director</b>                   - *ReallyNotSam* (The 10th Doctor)
-
- &nbsp; <b>Design Director</b>                - *Sagedupuy* (Sage Plant)
-
- &nbsp; <b>Tech Director/Tester</b> - *iMajesticButter* (Techno man of amazingness!) 
+ &nbsp; <b>Art Director</b>                             - *ReallyNotSam* (The 10th Doctor)
+          
+ &nbsp; <b>Design Director</b>                          - *Sagedupuy* (Sage Plant)
+          
+ &nbsp; <b>Tech Director/Tester</b>                     - *iMajesticButter* (Techno man of amazingness!) 
 
 #<h3>Teacher Guy:</h3>
- &nbsp; <b>Matt</b>                           - *cehnehd3h* (Floor Matt)
+ &nbsp; <b>Matt</b>                                     - *cehnehd3h* (Floor Matt)
 
 #<h3>Communication:</h3>
- &nbsp; <b>Discord</b>                        - *https://discord.gg/P2NUz9d*
+ &nbsp; <b>Discord</b>                                  - *https://discord.gg/P2NUz9d*
