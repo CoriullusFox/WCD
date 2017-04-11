@@ -604,22 +604,4 @@ Level =
 			string Name = "Enemy",
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
-		LinkId = 
-		{
-			uint Id = 14,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
 },
