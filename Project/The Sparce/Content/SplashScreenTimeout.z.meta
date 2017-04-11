@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "SplashScreenTimeout",
+		uint64 ResourceId = 586849ad5157fe69,
+	},
+},

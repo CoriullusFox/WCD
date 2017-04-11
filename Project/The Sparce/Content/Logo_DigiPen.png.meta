@@ -1,0 +1,27 @@
+ImageContent = 
+{
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Logo",
+		],
+	},
+	SpriteSourceBuilder = 
+	{
+		string Name = "Logo_DigiPen",
+		uint64 ResourceId = 5868485c755f3c54,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 1525,
+		uint FrameSizeY = 445,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333,
+		float OriginX = 762,
+		float OriginY = 222,
+		float PixelsPerUnit = 64,
+		bool Smoothing = true,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
