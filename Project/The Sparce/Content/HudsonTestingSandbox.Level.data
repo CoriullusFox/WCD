@@ -131,7 +131,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [6.63011, 0.231957, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -143,7 +143,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3323,
+			float Size = 18.05,
 		},
 		EditorCameraController = 
 		{
@@ -151,7 +151,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [6.63011, 0.231957, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -479,7 +479,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-11, 0, 0],
+			Vec3 Translation = [-11, 0.03438, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -596,6 +596,24 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [6.63011, 0.231957, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5, 1, 0],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

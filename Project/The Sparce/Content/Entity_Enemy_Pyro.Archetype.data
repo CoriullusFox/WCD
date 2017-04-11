@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "Enemy",
 	},
+	Archetyped = 
+	{
+		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -75,6 +79,7 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		float RegenRate = 0.25,
 		float MaxHealth = 0,
 		float HurtDuration = 0.2,
@@ -104,6 +109,7 @@ Cog =
 		float Energy = 100,
 		float CooldownMax = 1,
 		bool Player = false,
-		float CamZoom = 23,
+		float CamZoom = 0,
+		float LifeLength = 0.5,
 	},
 },

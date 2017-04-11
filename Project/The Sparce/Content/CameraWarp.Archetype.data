@@ -26,13 +26,13 @@ Cog =
 		float FieldOfView = 45,
 		float NearPlane = 0.5,
 		float FarPlane = 200,
-		float Size = 20,
+		float Size = 0.01,
 	},
 	ScreenWarpRing = 
 	{
 		float Size = 0.005,
 		float Thickness = 0.5,
-		float Intensity = -0.05,
+		float Intensity = -0.01,
 	},
 	Despawn = 
 	{
