@@ -3,8 +3,7 @@ Copying ANYTHING is ILLEGAL! We are too broke to pay for the plan that lets us p
 
 # W.C.D. - We Can't Decide
 subscrib to keemstar rooiiiiiiiiiight now (jk screw him)
-
-#The Sparce
+# The Sparce
 
 <h3>Team Usernames:</h3>
 
