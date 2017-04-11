@@ -19,7 +19,7 @@ class MusicManager : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         //Create Music Universe
-        this.MusicSpace = this.GameSession.CreateNamedSpace("MuscSpace",Archetype.Space);
+        this.MusicSpace = this.GameSession.CreateNamedSpace("MusicSpace",Archetype.Space);
         this.MusicSpace.LoadLevel(Level.MusicLevel);
         Zero.Connect(this.MusicSpace, Events.LogicUpdate, this.OnLogicUpdate);
         
