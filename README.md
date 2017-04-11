@@ -2,7 +2,7 @@
 Copying ANYTHING is ILLEGAL! We are too broke to pay for the plan that lets us private repos... :(
 
 # W.C.D. - We Can't Decide
-subscrib to keemstar rooiiiiiiiiiight now (jk screw him)
+https://WCD.GitHub.io/
 # The Sparce
 
 <h3>Team Usernames:</h3>
