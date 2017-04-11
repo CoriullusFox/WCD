@@ -57,7 +57,8 @@ class Pistol : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.LevelSettings.CameraViewport.Camera.Camera.Size = Math.Lerp(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom, event.Dt * 10);
+        this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom / 2;
+        Console.WriteLine(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom);
         //Cooldown logic
         this.Cooldown += event.Dt;
         if(this.Player)
@@ -66,6 +67,10 @@ class Pistol : ZilchComponent
             toSend.Cooldown = this.CooldownMax - this.Cooldown;
             toSend.MaxCooldown = this.CooldownMax;
             this.GameSession.DispatchEvent(Events.Cooldown, toSend);
+        }
+        else
+        {
+            this.CamZoom = 0;
         }
     }
     

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-3.67908, 5.79039, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -111,6 +111,6 @@ Cog =
 		bool Player = false,
 		float BulletSpeed = 10,
 		float LifeLength = 5,
-		float CamZoom = 20,
+		float CamZoom = 0,
 	},
 },
