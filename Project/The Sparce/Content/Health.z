@@ -56,12 +56,7 @@ class Health : ZilchComponent
     }
     function Initialize(init : CogInitializer)
     {
-        
-        Console.WriteLine("`this.MaxHealth`");
-        
         this.MaxHealth = this.ConfiguredHealth;
-        
-        Console.WriteLine("`this.MaxHealth`");
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.Hurt, this.OnHurt);
@@ -96,8 +91,6 @@ class Health : ZilchComponent
         var healthDecrease = this.MaxHealth - this.ConfiguredHealth;
         
         var healthInPercent = 100 - (healthDecrease / (this.MaxHealth + 0.001) * 100);
-        
-        //Console.WriteLine("% Ammo", cooldownInPercent);
         
         if(this.FreezeTimer > 0)
         {
@@ -160,8 +153,6 @@ class Health : ZilchComponent
             
             
         }
-        
-        //Console.WriteLine("HP", this.ConfiguredHealth);
         
     }
     

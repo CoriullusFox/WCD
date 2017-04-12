@@ -168,19 +168,13 @@ class ShootManager : ZilchComponent
                     this.CurrAmmoCount -= this.AmmoSubtract;
                 }
                 
-                Console.WriteLine("Ammo Count", this.CurrAmmoCount);
-                
                 var createdBullet = this.Space.CreateAtPosition(this.GunTexture, this.Owner.Transform.Translation);
                 
                 if(createdBullet != null)
                 {
-                    
-                    Console.WriteLine("boom");
                     var randGen : Random = Random();
                     //angle of rotation
                     var angle = Math.Angle2D(event.Direction) + randGen.Range(this.SpreadAmount, -this.SpreadAmount);
-                    Console.WriteLine("Spread", this.SpreadAmount);
-                    Console.WriteLine("Cooldown", this.ModifiableCooldown);
                     
                     //generate direction for orientation component from angle
                     var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);

@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "StatsPickup",
+		uint64 ResourceId = 58603e9f87bb3119,
+	},
+},

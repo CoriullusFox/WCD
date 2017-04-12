@@ -54,7 +54,6 @@ class BeamLaser : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom / 2;
-        Console.WriteLine(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom);
                 //Cooldown logic
         this.Cooldown += event.Dt;
         if(this.Player)
@@ -88,7 +87,6 @@ class BeamLaser : ZilchComponent
             if(this.Bullet != null)
             {
                 this.Owner.Health.Freeze(0, SpriteSource.PlayerSouth_Anim, 2);
-                Console.WriteLine("bla");
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
                 
                 if(createdBullet != null)

@@ -13,6 +13,9 @@
 
 class EnergyStor : ZilchComponent
 {
+    [Property]
+    var MaxEnergy : Real = 100;
+    [Property]
     var Energy : Real = 100;
     [Property]
     var EnergyRegenRate : Real = 10;

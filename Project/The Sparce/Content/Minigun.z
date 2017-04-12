@@ -58,7 +58,6 @@ class Minigun : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom / 2;
-        Console.WriteLine(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom);
         //Cooldown logic
         this.Cooldown += event.Dt;
         if(this.Player)

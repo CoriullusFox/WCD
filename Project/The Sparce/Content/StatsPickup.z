@@ -1,0 +1,54 @@
+class StatsPickup : ZilchComponent
+{
+    [Property]
+    var ChangeAmount : Integer = 0;
+    
+    [Property]
+    var Stat : String = "Put Stat Here";
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        //create easy access other object
+        var otherObject = event.OtherObject;
+        
+        //check if other object is the player
+        if(otherObject.Name == "TempPlayer")
+        {
+            //if stat equal to Health
+            if(this.Stat == "Health")
+            {
+                //check if stat is full
+                if(otherObject.Health.ConfiguredHealth >= otherObject.Health.MaxHealth)
+                {
+                    Console.WriteLine("Energy Full");
+                }
+                //else if the stat level less than itself plus pickup number
+                else if( otherObject.Health.ConfiguredHealth + this.ChangeAmount <= otherObject.Health.MaxHealth)
+                {
+                    otherObject.Health.ConfiguredHealth = otherObject.Health.ConfiguredHealth + this.ChangeAmount;
+                    this.Owner.Destroy();
+                }
+            }
+            //if stat equal to Energy
+            if(this.Stat == "Energy")
+            {
+                //check if stat is full
+                if(otherObject.EnergyStor.Energy >= otherObject.EnergyStor.MaxEnergy)
+                {
+                    Console.WriteLine("Health Full");
+                }
+                //else if the stat level less than itself plus pickup number
+                else if((otherObject.EnergyStor.Energy + this.ChangeAmount) <= otherObject.EnergyStor.MaxEnergy)
+                {
+                    otherObject.EnergyStor.Energy = otherObject.EnergyStor.Energy + this.ChangeAmount;
+                    this.Owner.Destroy();
+                }
+            }
+        }
+    }
+}

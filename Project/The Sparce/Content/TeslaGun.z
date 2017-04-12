@@ -47,7 +47,6 @@ class TeslaGun : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom / 2;
-        Console.WriteLine(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom);
         //Cooldown logic
         this.Cooldown += event.Dt;
         if(this.Player)
@@ -82,7 +81,6 @@ class TeslaGun : ZilchComponent
             var filter = CastFilter();
             filter.IgnoreStatic = true;
             var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation, 10, 10, filter);
-            Console.WriteLine(cast.Size());
             while (cast.Size() > 0)
             {
                 if(this.Player)

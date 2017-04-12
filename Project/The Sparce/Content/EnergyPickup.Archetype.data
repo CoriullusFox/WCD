@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Medkit",
+		string Name = "Pickup",
 	},
 	Archetyped = 
 	{
-		string Name = "586101df0958c576:Pickup_Health",
+		string Name = "586036d82add3805:EnergyPickup",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-1, 2.5, 0],
+		Vec3 Translation = [-2.5, 2.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+		string SpriteSource = "586100bc22d1bc40:Pickup_Energykit",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,8 +38,8 @@ Cog =
 	},
 	StatsPickup = 
 	{
-		int ChangeAmount = 25,
-		string Stat = "Health",
+		int ChangeAmount = 10,
+		string Stat = "Energy",
 	},
 	BoxCollider = 
 	{
