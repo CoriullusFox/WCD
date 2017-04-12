@@ -36,10 +36,25 @@ class Movement : ZilchComponent
     {
         this.Owner.RigidBody.Velocity = Real3(0,0,0);
         var r3Speed = Real3(0,0,0);
-        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && this.Owner.EnergyStor.Energy > (event.Dt * this.RunEnergy) + 1)
+        var velocity = this.Owner.RigidBody.Velocity;
+        
+        //if pressing shift
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && velocity.X < 0.2 && velocity.Y < 0.2)
         {
-            r3Speed = Real3(this.RunSpeed *event.Dt, this.RunSpeed *event.Dt, this.RunSpeed *event.Dt);
+            //if energy is not depleted
+            if(this.Owner.EnergyStor.Energy >= 1.0)
+            {
+                //deplete energy by RunEnergy
+                this.Owner.EnergyStor.Energy -= event.Dt * this.RunEnergy;
+                
+                r3Speed = Real3(this.RunSpeed * event.Dt, this.RunSpeed * event.Dt, this.RunSpeed * event.Dt);
+            }
+            //else
+            //}
+            //    this.Owner.Health.ConfiguredHealth -= this.EmptyRunEnergyDamage;
+            //}
         }
+        
         if(Zero.Keyboard.KeyIsDown(Keys.Shift) && this.Owner.EnergyStor.Energy > event.Dt * this.RunEnergy)
         {
             if(this.Owner.EnergyStor.Energy >= 1.0)
