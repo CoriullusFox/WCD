@@ -1,0 +1,19 @@
+class SniperAIMod : ZilchComponent
+{
+    var MinPlayerDist : Real = 15;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation) < this.MinPlayerDist)
+        {
+            this.Owner.EnemyAI.MoveDirection *= -1;
+            this.Owner.EnemyAI.Move(this.Owner.EnemyAI.MoveDirection);
+        }
+        
+    }
+}

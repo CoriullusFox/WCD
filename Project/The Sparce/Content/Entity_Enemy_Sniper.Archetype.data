@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [16.5013, 2.00591, 0.0343571],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,8 +38,8 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 5,
-		float ShootProximity = 20,
+		float ChaseProximity = 20,
+		float ShootProximity = 17,
 		int Speed = 150,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
@@ -90,7 +90,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -112,5 +112,8 @@ Cog =
 		float BulletSpeed = 25,
 		float LifeLength = 3,
 		float CamZoom = 0,
+	},
+	SniperAIMod = 
+	{
 	},
 },
