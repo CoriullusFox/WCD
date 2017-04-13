@@ -145,9 +145,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.38649, 3.06302, 10.0664],
+			Vec3 Translation = [-9.62046, 3.64654, 12.3642],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.136909, 0.177912, 0.0250039, 0.974155],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -161,11 +161,11 @@ Level =
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = Orbit,
-			float LookDistance = 11.1565,
-			float VerticalAngle = 0.279253,
-			float HorizontalAngle = -0.361283,
-			Vec3 LookTarget = [-1.40429, -0.0121371, 0.0343569],
+			ControlMode ControlMode = ZPlane,
+			float LookDistance = 12.3298,
+			float VerticalAngle = 0,
+			float HorizontalAngle = 0,
+			Vec3 LookTarget = [-9.62046, 3.64654, 0.0343565],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -212,9 +212,12 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5863a6ad5c7dd7ea:GlobalTestingSandbox_TileMap02",
-			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
+			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 2,
+		},
+		Hierarchy = 
+		{
 		},
 	},
 	Cog = 
@@ -1304,6 +1307,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			float Proximity = 1,
+			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
 		},
 	},
 	Cog = 
@@ -1362,6 +1366,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			float Proximity = 1,
+			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
 		},
 	},
 	Cog = 
@@ -1420,6 +1425,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			float Proximity = 1,
+			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
 		},
 	},
 	Cog = 
@@ -1478,6 +1484,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			float Proximity = 1,
+			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
 		},
 	},
 },
