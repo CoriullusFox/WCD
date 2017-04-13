@@ -8,7 +8,7 @@
 ** - Hudson Green
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - none
 ** --------------------------------------------------------------------------*/
 
 class DebugMode : ZilchComponent

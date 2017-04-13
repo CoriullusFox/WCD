@@ -1,3 +1,16 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Brandon Wolenetz
+**
+** Contributors:
+** - Sage Dupuy
+** --------------------------------------------------------------------------*/
+
 class BouncyBullet : ZilchComponent
 {
     var PlayerBullet : Boolean = false;

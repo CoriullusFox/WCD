@@ -1,3 +1,16 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Sam {Last Name}
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
 class MusicManager : ZilchComponent
 {
     var MusicSpace : Space = null;

@@ -8,7 +8,7 @@
 ** - Sage Dupuy
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - none
 ** --------------------------------------------------------------------------*/
 
 class PlayerMovement : ZilchComponent

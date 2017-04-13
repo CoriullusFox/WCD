@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - <list in same format as author if applicable>
+** - none
 ** --------------------------------------------------------------------------*/
 
 class HealthBarPlayer : ZilchComponent
