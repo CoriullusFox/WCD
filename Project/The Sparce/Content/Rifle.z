@@ -55,7 +55,8 @@ class Rifle : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.LevelSettings.CameraViewport.Camera.Camera.Size = this.CamZoom / 2;
+        if (this.Player)
+            this.LevelSettings.CameraViewport.Camera.Camera.Size = Math.Lerp(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom, event.Dt * 10);
         //Console.WriteLine(this.LevelSettings.CameraViewport.Camera.Camera.Size, this.CamZoom);
         //Cooldown logic
         this.Cooldown += event.Dt;
