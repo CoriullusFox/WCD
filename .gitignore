@@ -256,7 +256,7 @@ paket-files/
 *.sln.iml
 
 # Stop Sage from uploading ProjectScreenshot.png
-ProjectScreenshot.png
+Project/The Sparce/EditorContent/ProjectScreenshot.png
 
 # Important Gitignore Stuff -Matt
 *.hkgbrnd
