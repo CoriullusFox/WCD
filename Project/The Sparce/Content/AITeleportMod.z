@@ -1,0 +1,91 @@
+class AITeleportMod : ZilchComponent
+{
+    [Property]
+    var TPRangeLarge : Real = 10;
+    
+    [Property]
+    var TPRangeSmall : Real = 3;
+    
+    [Editable]
+    var Cooldown : Real = 10;
+    
+    [Editable]
+    var CooldownHit : Real = 3;
+    
+    var Timer : Real;
+    var TimerHit : Real;
+    function Initialize(init : CogInitializer)
+    {
+        this.Cooldown += 15;
+        this.Timer = this.Cooldown;
+        this.TimerHit = this.CooldownHit;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Hurt, this.OnHurt);
+    }
+
+    function OnHurt(event : Hurt)
+    {
+        if(this.TimerHit <= 0)
+        {
+            if(this.Teleport(this.TPRangeLarge))
+            {
+                this.TimerHit = this.CooldownHit;
+            }
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        this.TimerHit -= event.Dt;
+        if(this.Timer <= 0)
+        {
+            if(this.Teleport(this.TPRangeLarge))
+            {
+                this.Timer = this.Cooldown;
+            }
+        }
+        if(this.Timer <= 15 && Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation) <= this.TPRangeSmall)
+        {
+            if(this.Teleport(this.TPRangeSmall))
+            {
+                this.Timer = this.Cooldown;
+            }
+        }
+    }
+    
+    function Teleport(range : Real) : Boolean
+    {
+        var positions = Array[Real3]();
+        var filter : CastFilter = CastFilter();
+        for(var i = (range/2)*-1; i < range/2; ++i)
+        {
+            for(var l = (range/2)*-1; l < range/2; ++l)
+            {
+                var pos = Real3(0,0,0);
+                if(Math.Distance(this.Owner.Transform.Translation, this.Space.FindObjectByName("TempPlayer").Transform.Translation) <= this.Owner.EnemyAI.ShootProximity)
+                {
+                    pos = this.Owner.Transform.Translation + Real3(i, l, 0);
+                }
+                else
+                {
+                    pos = this.Space.FindObjectByName("TempPlayer").Transform.Translation + Real3(i, l, 0);
+                }
+                var cast = this.Space.PhysicsSpace.CastSphereResults(pos, 1, 1, filter);
+                if(cast.Empty())
+                {
+                    positions.Add(pos);
+                }
+            }
+        }
+        if(positions.Count <= 0)
+        {
+            return false;
+        }
+        var rand = Random();
+        this.Space.CreateAtPosition(Archetype.TeleEffect, this.Owner.Transform.Translation);
+        this.Owner.Transform.Translation = positions[rand.DieRoll(positions.Count)-1];
+        this.Owner.EnemyAI.PathFindTimer = 0;
+        return true;
+    }
+}

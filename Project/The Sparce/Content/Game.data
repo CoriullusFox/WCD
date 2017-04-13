@@ -19,4 +19,10 @@ GameSession =
 	CameraViewports = 
 	{
 	},
+	MusicManager = 
+	{
+		string NextCue = "58436263819bc360:MainMusic",
+		float FadeTime = 2,
+		float MusicVolume = 1,
+	},
 },

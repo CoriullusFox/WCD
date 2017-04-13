@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "HudsonTestingSandbox_TileMap09",
+		uint64 ResourceId = 586ac16bcd346b19,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5812ce011ea8c7e4:HudsonTestingSandbox",
+	},
+},
