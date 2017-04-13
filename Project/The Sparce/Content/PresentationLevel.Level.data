@@ -112,7 +112,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-19.2913, 38.0262, 49.999],
+			Vec3 Translation = [-0.240468, 36.5635, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -124,7 +124,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9569,
+			float Size = 36.3483,
 		},
 		EditorCameraController = 
 		{
@@ -132,7 +132,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-19.2913, 38.0262, -0.00100002],
+			Vec3 LookTarget = [-0.240468, 36.5635, -0.000999187],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1989,24 +1989,6 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_VertDoor",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "58620f152fd63a17:BulletExplosion",
-		LinkId = 
-		{
-			uint Id = 50,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-19.2949, 37.836, -0.00100034],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Bullet Explosion",
 		},
 	},
 },

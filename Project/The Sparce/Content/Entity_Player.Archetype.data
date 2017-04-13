@@ -78,14 +78,14 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = false,
-		bool MinigunUnlocked = false,
-		bool BeamLaserUnlocked = false,
-		bool RifleUnlocked = false,
-		bool FlamethrowerUnlocked = false,
-		bool BouncerUnlocked = false,
-		bool TeslaUnlocked = false,
-		bool ChainEUnlocked = false,
+		bool ShotgunUnlocked = true,
+		bool MinigunUnlocked = true,
+		bool BeamLaserUnlocked = true,
+		bool RifleUnlocked = true,
+		bool FlamethrowerUnlocked = true,
+		bool BouncerUnlocked = true,
+		bool TeslaUnlocked = true,
+		bool ChainEUnlocked = true,
 		bool DisableLockedWeaponSelect = true,
 	},
 	EnergyStor = 

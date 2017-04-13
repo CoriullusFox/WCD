@@ -22,7 +22,7 @@ class Bouncer : ZilchComponent
     var Damage : Real = 12.5;
     
     [Property]
-    var EnergyUse : Real = 2.5;
+    var EnergyUse : Real = 20.0;
     
     [Property]
     var Energy : Real = 100.0;
