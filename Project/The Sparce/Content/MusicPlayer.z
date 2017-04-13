@@ -1,0 +1,23 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** FILE NAME
+**
+** Author:
+** - Sam Stearns
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+class MusicScr_Stage : ZilchComponent
+{
+    [Property]
+    var MusicToPlay : SoundCue = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Put this script on Level Settings
+        this.GameSession.MusicManager.SwitchTracks(this.MusicToPlay);
+    }
+}
