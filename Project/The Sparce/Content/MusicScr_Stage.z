@@ -1,0 +1,10 @@
+class MusicScr_Stage : ZilchComponent
+{
+    [Property]
+    var MusicToPlay : SoundCue = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.GameSession.MusicManager.SwitchTracks(this.MusicToPlay);
+    }
+}
