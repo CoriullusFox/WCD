@@ -2,10 +2,17 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "EnergyPickup",
+		string Name = "Pickup_Energy",
 		uint64 ResourceId = 586036d82add3805,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Pickup",
+		],
 	},
 },

@@ -112,7 +112,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.945835, 2.85789, 49.999],
+			Vec3 Translation = [1.05892, 22.6852, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -124,7 +124,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457,
+			float Size = 81.8731,
 		},
 		EditorCameraController = 
 		{
@@ -132,7 +132,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.945835, 2.85789, -0.000999136],
+			Vec3 LookTarget = [1.05892, 22.6852, -0.000999131],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -226,7 +226,7 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "",
+			string SourceName = "58626105a08bf078:PresentationLevel_TileMap02",
 			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
@@ -550,7 +550,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20, 46.5, 2],
+			Vec3 Translation = [-19, 46.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -618,7 +618,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20, 32.5, 2],
+			Vec3 Translation = [-19, 32.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -652,7 +652,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21, 32.5, 2],
+			Vec3 Translation = [20, 32.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -686,7 +686,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21, 46.5, 2],
+			Vec3 Translation = [20, 46.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -754,7 +754,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.25, 5.25, 2],
+			Vec3 Translation = [3, 5.5, 2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -944,7 +944,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20, 31, 0],
+			Vec3 Translation = [-19, 31, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1142,7 +1142,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21, 45, 0],
+			Vec3 Translation = [20, 45, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1289,7 +1289,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20, 45, 0],
+			Vec3 Translation = [-19, 45, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1586,7 +1586,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21, 31, 0],
+			Vec3 Translation = [20, 31, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1671,7 +1671,7 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "586036d82add3805:EnergyPickup",
+		string Name = "586036d82add3805:Pickup_Energy",
 		LinkId = 
 		{
 			uint Id = 33,
@@ -1725,7 +1725,7 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "586036d82add3805:EnergyPickup",
+		string Name = "586036d82add3805:Pickup_Energy",
 		LinkId = 
 		{
 			uint Id = 36,
@@ -1773,6 +1773,222 @@ Level =
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = false,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 38,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 39,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 32, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 40,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [20, 35, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 41,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [20, 41, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 42,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 44, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 43,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19, 41, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 44,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19, 35, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 45,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 54, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123684cf5d900:VertDoor",
+		LinkId = 
+		{
+			uint Id = 46,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-23, 38.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_VertDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123684cf5d900:VertDoor",
+		LinkId = 
+		{
+			uint Id = 47,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9, 38.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_VertDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123684cf5d900:VertDoor",
+		LinkId = 
+		{
+			uint Id = 48,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9, 38.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_VertDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123684cf5d900:VertDoor",
+		LinkId = 
+		{
+			uint Id = 49,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24, 38.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_VertDoor",
 		},
 	},
 },
