@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Teleporter2",
+		string Name = "Teleporter1",
 	},
 	Archetyped = 
 	{
@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.5, -2.5, 0],
+		Vec3 Translation = [0, 18.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -32,7 +32,7 @@ Cog =
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
-		bool AnimationActive = true,
+		bool AnimationActive = false,
 		float AnimationSpeed = 50,
 		uint StartFrame = 0,
 	},
@@ -40,7 +40,7 @@ Cog =
 	{
 		CogPath Position = 
 		{
-			string Path = ":/Teleporter1",
+			string Path = ":/Teleporter2",
 			bool ErrorOnResolveToNull = false,
 			bool ErrorOnPathCantCompute = false,
 			bool ErrorOnDirectLinkFail = false,
@@ -48,11 +48,12 @@ Cog =
 			bool UpdatePathOnCogChange = true,
 			bool UpdateCogOnInitialize = true,
 			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 2,
+			uint ResolvedCog = 1,
 			CogPathPreference PathPreference0 = CogRelative,
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
 		float Proximity = 1,
+		string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
 	},
 },

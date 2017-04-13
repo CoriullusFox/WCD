@@ -9,6 +9,17 @@ class Doorscript : ZilchComponent
     [Property]
     var DoorAnimationSpeed : Real = 80;
     
+    [Property]
+    var Locked : Boolean = false;
+    
+    [Property]
+    var Condition : String = "Chioces: EnemiesKilled, Key, None";
+    
+    [Property]
+    var EnemyDeathUnlockNumber : Integer = 0;
+    
+    var TotalEnemies : Integer = 0;
+    
     var EntityDetected : Boolean = false;
     
     var RanOnce : Boolean = false;
@@ -34,7 +45,7 @@ class Doorscript : ZilchComponent
         filter.IgnoreChildren = true;
         filter.IgnoreDynamic = false;
         
-        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,1,10, filter);
+        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,0.5,10, filter);
         
         while(!cast.Empty())
         {
@@ -52,19 +63,37 @@ class Doorscript : ZilchComponent
             cast.PopFront();
         }
         
-        
+        if(this.Condition == "EnemiesKilled")
+        {
+            //not sure how to do this.
+        }
+        else if(this.Condition == "Key")
+        {
+            //i know how just need a key visual
+        }
+        else
+        {
+            this.Locked = false;
+        }
         
         if(this.EntityDetected)
         {
             if(this.Owner.Sprite.SpriteSource != this.DoorOpening)
             {
-                this.Owner.Sprite.CurrentFrame = 0;
-                this.Owner.Sprite.SpriteSource = this.DoorOpening;
-                this.Owner.Sprite.AnimationActive = true;
+                if(!this.Locked)
+                {
+                    this.Owner.BoxCollider.Ghost = true;
+                    this.Owner.BoxCollider.SendsEvents = false;
+                    this.Owner.Sprite.CurrentFrame = 0;
+                    this.Owner.Sprite.SpriteSource = this.DoorOpening;
+                    this.Owner.Sprite.AnimationActive = true;
+                }
             }
         }
         else if(this.Owner.Sprite.SpriteSource != this.DoorClosing)
         {
+            this.Owner.BoxCollider.Ghost = false;
+            this.Owner.BoxCollider.SendsEvents = true;
             this.Owner.Sprite.CurrentFrame = 0;
             this.Owner.Sprite.SpriteSource = this.DoorClosing;
             this.Owner.Sprite.AnimationActive = true;

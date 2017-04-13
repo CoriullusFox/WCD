@@ -38,7 +38,7 @@ Cog =
 	},
 	StatsPickup = 
 	{
-		int ChangeAmount = 10,
+		int ChangeAmount = 25,
 		string Stat = "Energy",
 	},
 	BoxCollider = 

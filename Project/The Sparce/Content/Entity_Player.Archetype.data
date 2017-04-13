@@ -56,6 +56,7 @@ Cog =
 		float Speed = 300,
 		float RunSpeed = 600,
 		float RunEnergy = 35,
+		float EmptyRunEnergyDamage = 0.1,
 	},
 	ChangeDirectionToPointAtMouse = 
 	{
@@ -77,18 +78,20 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = true,
-		bool MinigunUnlocked = true,
-		bool BeamLaserUnlocked = true,
-		bool RifleUnlocked = true,
-		bool FlamethrowerUnlocked = true,
-		bool BouncerUnlocked = true,
-		bool TeslaUnlocked = true,
+		bool ShotgunUnlocked = false,
+		bool MinigunUnlocked = false,
+		bool BeamLaserUnlocked = false,
+		bool RifleUnlocked = false,
+		bool FlamethrowerUnlocked = false,
+		bool BouncerUnlocked = false,
+		bool TeslaUnlocked = false,
 		bool ChainEUnlocked = false,
 		bool DisableLockedWeaponSelect = true,
 	},
 	EnergyStor = 
 	{
+		float MaxEnergy = 100,
+		float Energy = 100,
 		float EnergyRegenRate = 10,
 	},
 	BoxCollider = 
@@ -208,7 +211,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.5517, 0.42031, -3.30237],
+				Vec3 Translation = [5, -3.75, -3.25],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -243,7 +246,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [12.4826, 4.89936, -3.30237],
+				Vec3 Translation = [-8.25, -2.5, -3.25],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},

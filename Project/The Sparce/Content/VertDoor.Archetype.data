@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [4, 1.5, 0],
+		Vec3 Translation = [9.61616, -6.12428, -0.000999451],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -41,5 +41,18 @@ Cog =
 		string DoorOpening = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
 		string DoorClosing = "5852701e8e9813d9:Animated_VertDoor_Unlocked_Closing",
 		float DoorAnimationSpeed = 120,
+		bool Locked = false,
+		string Condition = "Chioces: EnemiesKilled, Key, None",
+		int EnemyDeathUnlockNumber = 0,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.15, 1.5, 0.5],
 	},
 },
