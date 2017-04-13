@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [11.4951, -0.325096, 0.0343571],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -90,7 +90,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -112,5 +112,10 @@ Cog =
 		float BulletSpeed = 25,
 		float LifeLength = 6,
 		float CamZoom = 0,
+	},
+	AITeleportMod = 
+	{
+		float TPRangeLarge = 10,
+		float TPRangeSmall = 3,
 	},
 },
