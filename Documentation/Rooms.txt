@@ -75,3 +75,12 @@ Engineer Room:
 	Table
 	Hover Chairs
 	Hover Chair Mods
+Common Room:
+	Table
+	Chairs
+	Computer
+	Ping Pong Table
+	Pool Table
+Corridoor:
+	Signs
+	Holograms
