@@ -17,6 +17,10 @@ class DebugMode : ZilchComponent
     [Property]
     var DubugModeEnabled : Boolean = false;
     
+    var FpsTimer : Real = 1;
+    
+    var Fps : Real = 0;
+    
     var DebugText : Archetype = Archetype.DebugModeText;
     
     function Initialize(init : CogInitializer)
@@ -28,6 +32,17 @@ class DebugMode : ZilchComponent
     {
         if(this.DubugModeEnabled)
         {
+            this.FpsTimer -= event.Dt;
+            
+            this.Fps += 1;
+            
+            if(this.FpsTimer <=0)
+            {
+                this.FpsTimer = 1;
+                Console.WriteLine("FPS: `this.Fps`");
+                this.Fps = 0;
+            }
+            
             if(Zero.Keyboard.KeyIsPressed(Keys.Equal))
                 this.Space.TimeSpace.TimeScale += 0.05;
             if(Zero.Keyboard.KeyIsPressed(Keys.Minus))

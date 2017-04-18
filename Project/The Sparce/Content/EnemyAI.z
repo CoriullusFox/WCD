@@ -145,8 +145,12 @@ class EnemyAI : ZilchComponent
         else if(this.Pathfind && this.Path == null && this.WaunderTimer <= 0)
         {
             var rand : Random = Random();
-            this.WaunderTimer = this.WaunderCooldown + rand.Range(-1, 1);
-            this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Owner.Transform.Translation + Real3(rand.Range(this.WaunderRange, this.WaunderRange*-1), rand.Range(this.WaunderRange, this.WaunderRange*-1), 0));
+            var pos = this.Owner.Transform.Translation + Real3(rand.Range(this.WaunderRange, this.WaunderRange*-1), rand.Range(this.WaunderRange, this.WaunderRange*-1), 0);
+            if(this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(pos).Walkable)
+            {
+                this.WaunderTimer = this.WaunderCooldown + rand.Range(-1, 1);
+                this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, pos);
+            }
         }
         else if(this.Path == null)
         {

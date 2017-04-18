@@ -65,7 +65,7 @@ class WeaponSwap : ZilchComponent
     {
         while(true)
         {
-            Console.WriteLine(this.Selected);
+            
             //remove components and clamp selected
             this.RemoveComponents();
             if(event.Scroll.Y > 0)
@@ -226,7 +226,7 @@ class WeaponSwap : ZilchComponent
                 //this.IsSelectableWeapon(this.TeslaUnlocked);
                 //this.PrevSelected = 7;
             }
-            Console.WriteLine(this.Selected);
+            
             if(this.Selected > this.NumberOfWeapons -1)
             {
                 this.Selected = 0;
