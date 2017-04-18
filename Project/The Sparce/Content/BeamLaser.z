@@ -39,6 +39,7 @@ class BeamLaser : ZilchComponent
     [Property]
     var CamZoom : Real = 25;
     
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);
@@ -85,8 +86,11 @@ class BeamLaser : ZilchComponent
             this.Cooldown = 0;
             /** SHOOTING LOGIC HERE **/
             
+            
             if(this.Bullet != null)
             {
+                this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_WahwahLaser"));
+                
                 this.Owner.Health.Freeze(0, SpriteSource.PlayerSouth_Anim, 2);
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
                 

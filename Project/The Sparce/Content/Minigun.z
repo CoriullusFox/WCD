@@ -91,6 +91,8 @@ class Minigun : ZilchComponent
             
             if(this.Bullet != null)
             {
+                this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_AutoLaser"));
+                
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
                 
                 if(createdBullet != null)

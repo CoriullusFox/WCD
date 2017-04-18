@@ -81,6 +81,8 @@ class Shotgun : ZilchComponent
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
         {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_EchoLaser"));
+            
             this.Owner.DispatchEvent(Events.Fire, Fire());
             if(this.Player)
             {

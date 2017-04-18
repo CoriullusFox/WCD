@@ -99,6 +99,10 @@ Level =
 		{
 			string MusicToPlay = "58436263819bc360:MainMusic",
 		},
+		DebugMode = 
+		{
+			bool DubugModeEnabled = false,
+		},
 	},
 	Cog = 
 	{
@@ -112,7 +116,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.76164, -2.32487, 50],
+			Vec3 Translation = [0, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -124,7 +128,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.428,
+			float Size = 13.4064,
 		},
 		EditorCameraController = 
 		{
@@ -132,7 +136,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.76164, -2.32487, -2.51849e-007],
+			Vec3 LookTarget = [0, 0, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -250,12 +254,19 @@ Level =
 			string Name = "Animated_VertDoor",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
 			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "Animated_VertDoor",
+		},
+		Archetyped = 
+		{
+			string Name = "585123684cf5d900:VertDoor",
 		},
 		Transform = 
 		{
@@ -263,9 +274,45 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Animated_VertDoor",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Doorscript = 
+		{
+			string DoorOpening = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+			string DoorClosing = "5852701e8e9813d9:Animated_VertDoor_Unlocked_Closing",
+			float DoorAnimationSpeed = 120,
+			bool Locked = false,
+			string Condition = "Chioces: EnemiesKilled, Key, None",
+			int EnemyDeathUnlockNumber = 0,
+			float RequiredEnemiesKilled = 3,
+			string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
+			bool Vert = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.15, 1.5, 0.5],
 		},
 	},
 	ArchetypeInstance = 
