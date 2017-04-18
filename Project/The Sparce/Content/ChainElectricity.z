@@ -164,7 +164,7 @@ class ChainElectricity : ZilchComponent
             //check is found somthin
             if(this.Links.Count != 1)
             {
-                this.Owner.Health.Freeze(0, SpriteSource.PlayerSouth_Anim, this.FreezeTime);
+                this.Owner.Health.Freeze(0, this.FreezeTime);
             }
             else
             {
@@ -181,7 +181,7 @@ class ChainElectricity : ZilchComponent
                 if(this.Owner.EnergyStor.Energy >= this.EnergyUsePer)
                 {
                     this.Owner.EnergyStor.Energy -= this.EnergyUsePer;
-                    this.Links[i].Health.Freeze(this.Damage, SpriteSource.EnemySouth_Anim, this.FreezeTime);
+                    this.Links[i].Health.Freeze(this.Damage, this.FreezeTime);
                 }
                 else
                 {

@@ -33,7 +33,7 @@ class FreezeBulletScript : ZilchComponent
         {
             if(event.OtherObject.Name == "Enemy")
             {
-                event.OtherObject.Health.Freeze(this.Damage, this.NewSpriteSouce, this.FreezeTime);
+                event.OtherObject.Health.Freeze(this.Damage, this.FreezeTime);
                 this.Owner.Destroy();
             }
         }
@@ -41,7 +41,7 @@ class FreezeBulletScript : ZilchComponent
         {
             if(event.OtherObject.Name == "TempPlayer")
             {
-                event.OtherObject.Health.Freeze(this.Damage, this.NewSpriteSouce, this.FreezeTime);
+                event.OtherObject.Health.Freeze(this.Damage, this.FreezeTime);
                 this.Owner.Destroy();
             }
         }

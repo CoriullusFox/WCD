@@ -40,6 +40,8 @@ class EnemyAnimations : ZilchComponent
     [Property]
     var AnimationSpeed : Real = 1.0;
     
+    var Frozen : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -47,62 +49,64 @@ class EnemyAnimations : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var angle = Math.Angle2D(this.Owner.RigidBody.Velocity);
-        
-        if(angle > -0.25 && angle < 0.25 && this.Owner.Sprite.SpriteSource != this.East)
+        if(!this.Frozen)
         {
+            var angle = Math.Angle2D(this.Owner.RigidBody.Velocity);
             
-            this.Owner.Sprite.SpriteSource = this.East;
-            
+            if(angle > -0.25 && angle < 0.25 && this.Owner.Sprite.SpriteSource != this.East)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.East;
+                
+            }
+            else if(angle > 0.25 && angle < 1.25 && this.Owner.Sprite.SpriteSource != this.NorthEast)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.NorthEast;
+                
+            }
+            else if(angle > 1.25 && angle < 1.75 && this.Owner.Sprite.SpriteSource != this.North)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.North;
+                
+            }
+            else if(angle > 1.75 && angle < 2.75 && this.Owner.Sprite.SpriteSource != this.NorthWest)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.NorthWest;
+                
+            }
+            else if(angle > 2.75 && angle > -2.75 && this.Owner.Sprite.SpriteSource != this.West)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.West;
+                
+            }
+            else if(angle > -2.75 && angle < -1.75 && this.Owner.Sprite.SpriteSource != this.SouthWest)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.SouthWest;
+                
+            }
+            else if(angle > -1.75 && angle < -1.25 && this.Owner.Sprite.SpriteSource != this.South)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.South;
+                
+            }
+            else if(angle > -1.25 && angle < -0.25 && this.Owner.Sprite.SpriteSource != this.SouthEast)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.SouthEast;
+                
+            }
+            if(this.Owner.RigidBody.Velocity.X < 0.1 && this.Owner.RigidBody.Velocity.Y < 0.1 && this.Owner.RigidBody.Velocity.X > -0.1 && this.Owner.RigidBody.Velocity.Y > -0.1)
+            {
+                
+                this.Owner.Sprite.SpriteSource = this.South;
+                
+            }
         }
-        else if(angle > 0.25 && angle < 1.25 && this.Owner.Sprite.SpriteSource != this.NorthEast)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.NorthEast;
-            
-        }
-        else if(angle > 1.25 && angle < 1.75 && this.Owner.Sprite.SpriteSource != this.North)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.North;
-            
-        }
-        else if(angle > 1.75 && angle < 2.75 && this.Owner.Sprite.SpriteSource != this.NorthWest)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.NorthWest;
-            
-        }
-        else if(angle > 2.75 && angle > -2.75 && this.Owner.Sprite.SpriteSource != this.West)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.West;
-            
-        }
-        else if(angle > -2.75 && angle < -1.75 && this.Owner.Sprite.SpriteSource != this.SouthWest)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.SouthWest;
-            
-        }
-        else if(angle > -1.75 && angle < -1.25 && this.Owner.Sprite.SpriteSource != this.South)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.South;
-            
-        }
-        else if(angle > -1.25 && angle < -0.25 && this.Owner.Sprite.SpriteSource != this.SouthEast)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.SouthEast;
-            
-        }
-        if(this.Owner.RigidBody.Velocity.X < 0.1 && this.Owner.RigidBody.Velocity.Y < 0.1 && this.Owner.RigidBody.Velocity.X > -0.1 && this.Owner.RigidBody.Velocity.Y > -0.1)
-        {
-            
-            this.Owner.Sprite.SpriteSource = this.South;
-            
-        }
-        
     }
 }
