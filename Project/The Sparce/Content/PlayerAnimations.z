@@ -109,6 +109,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 5;
+                selectedWeapon.Transform.Translation.Z = 1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.SouthWest && !this.Shooting)
                 {
@@ -120,6 +121,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 7;
+                selectedWeapon.Transform.Translation.Z = 1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.SouthEast && !this.Shooting)
                 {
@@ -131,6 +133,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 3;
+                selectedWeapon.Transform.Translation.Z = -1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.NorthWest && !this.Shooting)
                 {
@@ -142,6 +145,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 1;
+                selectedWeapon.Transform.Translation.Z = -1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.NorthEast && !this.Shooting)
                 {
@@ -153,6 +157,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 2;
+                selectedWeapon.Transform.Translation.Z = -1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.North && !this.Shooting)
                 {
@@ -164,6 +169,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 4;
+                selectedWeapon.Transform.Translation.Z = 1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.West && !this.Shooting)
                 {
@@ -175,6 +181,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 6;
+                selectedWeapon.Transform.Translation.Z = 1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.South && !this.Shooting)
                 {
@@ -186,6 +193,7 @@ class PlayerAnimations : ZilchComponent
                 this.Owner.Sprite.AnimationActive = true;
                 
                 selectedWeapon.Sprite.CurrentFrame = 0;
+                selectedWeapon.Transform.Translation.Z = 1;
                 
                 if(this.Owner.Sprite.SpriteSource != this.East && !this.Shooting)
                 {

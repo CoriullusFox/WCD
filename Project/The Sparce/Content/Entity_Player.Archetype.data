@@ -86,6 +86,7 @@ Cog =
 		bool BouncerUnlocked = true,
 		bool TeslaUnlocked = true,
 		bool ChainEUnlocked = true,
+		bool FreezeUnlocked = false,
 		bool DisableLockedWeaponSelect = true,
 	},
 	EnergyStor = 
@@ -147,6 +148,7 @@ Cog =
 		int BouncerTier = 1,
 		int TeslaTier = 1,
 		int ChainETier = 1,
+		int FreezeTier = 1,
 	},
 	Hierarchy = 
 	{
@@ -190,7 +192,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 0],
+				Vec3 Translation = [0, 0, 1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
