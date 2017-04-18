@@ -99,6 +99,13 @@ class Health : ZilchComponent
             this.Owner.RigidBody.Velocity = Real3(0,0,0);
             
         }
+        else
+        {
+            if(this.Player)
+                this.Owner.PlayerAnimations.Frozen = false;
+            else
+                this.Owner.EnemyAnimations.Frozen = false;
+        }
         
         if(healthInPercent > 100)
         {
@@ -160,13 +167,19 @@ class Health : ZilchComponent
     }
     
     
-    function Freeze(damage : Real, sprite : SpriteSource, time : Real)
+    function Freeze(damage : Real, time : Real)
     {
         
         this.FreezeTimer = time;
-        this.Owner.Sprite.SpriteSource = sprite;
         this.ConfiguredHealth -= damage;
-        
+        if(this.Player)
+        {
+            this.Owner.PlayerAnimations.Frozen = true;
+        }
+        else
+        {
+            this.Owner.EnemyAnimations.Frozen = true;
+        }
     }
     
     
