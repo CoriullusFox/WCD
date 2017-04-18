@@ -1,0 +1,21 @@
+class Key : ZilchComponent
+{
+    
+    [Property]
+    var DoorToUnlock : CogPath = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "TempPlayer")
+        {
+            this.DoorToUnlock.Cog.Doorscript.Locked = false;
+            this.DoorToUnlock.Cog.Doorscript.Condition = "none";
+            this.Owner.Destroy();
+        }
+    }
+}

@@ -27,6 +27,9 @@ class AStarPathfind : ZilchComponent
     
     function PathFind(start : Real3, goal : Real3) : Array[Node]
     {
+        
+        var loopCount : Integer = 0;
+        
         var startNode = this.Grid.NodeFromWorldPos(start);
         var targetNode = this.Grid.NodeFromWorldPos(goal);
         
@@ -48,7 +51,11 @@ class AStarPathfind : ZilchComponent
         
         while (openSet.Count > 0)
         {
-            
+            ++loopCount;
+            if(loopCount >= 50)
+            {
+                return null;
+            }
             //do some checking on the current node
             if(targetNode != null){
                 

@@ -136,9 +136,12 @@ class Health : ZilchComponent
             }
             else
             {
+                //this is not temporary
+                this.LevelSettings.EnemiesKilldstor.EnemiesKilled += 1;
                 //This is temporary until we decide to make the enemies deaths perminent
                 
                 //this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
+                
                 
                 this.Owner.Sprite.AnimationActive = false;
                 

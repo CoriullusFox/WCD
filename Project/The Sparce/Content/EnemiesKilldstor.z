@@ -1,0 +1,4 @@
+class EnemiesKilldstor : ZilchComponent
+{
+    var EnemiesKilled : Real = 0;
+}

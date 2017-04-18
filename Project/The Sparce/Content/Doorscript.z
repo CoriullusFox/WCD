@@ -8,7 +8,7 @@
 ** - Sage Dupuy
 **
 ** Contributors:
-** - none
+** - Brandon
 ** --------------------------------------------------------------------------*/
 
 class Doorscript : ZilchComponent
@@ -31,14 +31,25 @@ class Doorscript : ZilchComponent
     [Property]
     var EnemyDeathUnlockNumber : Integer = 0;
     
+    [Property]
+    var RequiredEnemiesKilled : Real = 3;
+    
+    [Property]
+    var LockedVisual : SpriteSource = null;
+    
+    var UnlockedVisual : SpriteSource = null;
+    
     var TotalEnemies : Integer = 0;
     
     var EntityDetected : Boolean = false;
     
     var RanOnce : Boolean = false;
     
+    var Once : Boolean = false;
     function Initialize(init : CogInitializer)
     {
+        this.UnlockedVisual = this.Owner.Sprite.SpriteSource;
+        
         this.Owner.Sprite.AnimationActive = false;
         
         this.Owner.Sprite.AnimationSpeed = this.DoorAnimationSpeed;
@@ -48,17 +59,15 @@ class Doorscript : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.EntityDetected = false;
-        
         var filter : CastFilter = CastFilter();
-        
         filter.IgnoreKinematic = true;
         filter.IgnoreStatic = true;
         filter.IgnoreGhost = true;
         filter.IgnoreChildren = true;
         filter.IgnoreDynamic = false;
+        this.EntityDetected = false;
         
-        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,0.5,10, filter);
+        var cast = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.Translation,1.5,10, filter);
         
         while(!cast.Empty())
         {
@@ -78,15 +87,33 @@ class Doorscript : ZilchComponent
         
         if(this.Condition == "EnemiesKilled")
         {
-            //not sure how to do this.
+            if(this.LevelSettings.EnemiesKilldstor.EnemiesKilled >= this.RequiredEnemiesKilled)
+            {
+                this.Locked = false;
+            }
+            else
+            {
+                this.Locked = true;
+            }
         }
         else if(this.Condition == "Key")
         {
-            //i know how just need a key visual
+            this.Locked = true;
         }
         else
         {
             this.Locked = false;
+        }
+        
+        if(this.Locked)
+        {
+            this.Owner.Sprite.SpriteSource = this.LockedVisual;
+            this.Once = true;
+        }
+        else if(this.Once)
+        {
+            this.Owner.Sprite.SpriteSource = this.UnlockedVisual;
+            this.Once = false;
         }
         
         if(this.EntityDetected)
@@ -108,7 +135,10 @@ class Doorscript : ZilchComponent
             this.Owner.BoxCollider.Ghost = false;
             this.Owner.BoxCollider.SendsEvents = true;
             this.Owner.Sprite.CurrentFrame = 0;
-            this.Owner.Sprite.SpriteSource = this.DoorClosing;
+            if(!this.Locked)
+            {
+                this.Owner.Sprite.SpriteSource = this.DoorClosing;
+            }
             this.Owner.Sprite.AnimationActive = true;
         }
     }
