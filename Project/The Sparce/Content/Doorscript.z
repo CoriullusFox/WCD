@@ -37,6 +37,13 @@ class Doorscript : ZilchComponent
     [Property]
     var LockedVisual : SpriteSource = null;
     
+    [Property]
+    var Vert : Boolean = false;
+    
+    var G1 : Node = null;
+    
+    var G2 : Node = null;
+    
     var UnlockedVisual : SpriteSource = null;
     
     var TotalEnemies : Integer = 0;
@@ -45,7 +52,9 @@ class Doorscript : ZilchComponent
     
     var RanOnce : Boolean = false;
     
-    var Once : Boolean = false;
+    var Once : Boolean = true;
+    
+    var Ginit : Boolean = true;
     function Initialize(init : CogInitializer)
     {
         this.UnlockedVisual = this.Owner.Sprite.SpriteSource;
@@ -59,6 +68,22 @@ class Doorscript : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        if(this.Ginit)
+        {
+            this.Ginit = false;
+            if(this.Vert)
+            {
+                this.G1 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(0, 0, 0.5));
+                this.G2 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(0, 0, -0.5));
+            }
+            else
+            {
+                this.G1 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(0.5, 0, 0));
+                this.G2 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(-0.5, 0, 0));
+            }
+        }
+        
         var filter : CastFilter = CastFilter();
         filter.IgnoreKinematic = true;
         filter.IgnoreStatic = true;
@@ -105,15 +130,21 @@ class Doorscript : ZilchComponent
             this.Locked = false;
         }
         
+        Console.WriteLine(this.G1.WorldPos);
+        
         if(this.Locked)
         {
             this.Owner.Sprite.SpriteSource = this.LockedVisual;
             this.Once = true;
+            this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G1, true, false);
+            this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G2, true, false);
         }
         else if(this.Once)
         {
-            this.Owner.Sprite.SpriteSource = this.UnlockedVisual;
+            this.Owner.Sprite.SpriteSource = this.DoorClosing;
             this.Once = false;
+            this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G1, true, true);
+            this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G2, true, true);
         }
         
         if(this.EntityDetected)

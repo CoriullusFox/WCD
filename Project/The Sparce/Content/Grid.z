@@ -16,10 +16,6 @@ class Grid : ZilchComponent
     
     [Property]
     var GridWorldSize : Real2 = Real2(25,25);
-    [Property]
-    var Debug : Boolean = false;
-    [Property]
-    var UpdateCooldown : Real = 1;
     var NodeRadius : Real = 0.5;
     var Grid : Array[Array[Node]];
     
@@ -28,8 +24,6 @@ class Grid : ZilchComponent
     var GridSizeY : Integer;
     
     var Once : Boolean = false;
-    
-    var Timer : Real = 0;
     
     
     function Initialize(init : CogInitializer)
@@ -61,16 +55,10 @@ class Grid : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Timer -= event.Dt;
         
         if(!this.Once){
             this.CreateGrid();
             this.Once = true;
-        }
-        if(this.Timer <= 0)
-        {
-            this.Timer = this.UpdateCooldown;
-            this.UpdateGrid();
         }
     }
     function CreateGrid()
@@ -88,7 +76,6 @@ class Grid : ZilchComponent
         
         for (var i = 0; i < this.GridSizeX; ++i)
         {
-            
             for (var l = 0; l < this.GridSizeY; ++l)
             {
                 var worldPoint = bottomL + Real3(1,0,0) * (i * this.NodeDiameter + this.NodeRadius) + Real3(0,1,0) * (l * this.NodeDiameter + this.NodeRadius);
@@ -97,67 +84,26 @@ class Grid : ZilchComponent
                 var walkable : Boolean = this.Space.PhysicsSpace.CastSphereResults(worldPoint + Real3(0,0,0.5), this.NodeRadius-0.3, 1, filter).Empty();
                 var closeToWall : Boolean = !this.Space.PhysicsSpace.CastSphereResults(worldPoint + Real3(0,0,0.5), this.NodeDiameter, 1, filter).Empty();
                 this.Grid[i][l] = (new Node(walkable, worldPoint, i, l, closeToWall));
-                
-                if(this.Debug){
-                    if(!this.Grid[i][l].Walkable)
-                    {
-                        this.Space.CreateAtPosition(Archetype.MissingTexture, worldPoint);
-                    }
-                    else
-                    {
-                        var box = this.Space.CreateAtPosition(Archetype.MissingTexture, worldPoint);
-                        if(box != null)
-                        {
-                            box.Sprite.Color = Real4(1,1,1,0.2);
-                            box.Transform.Scale = Real3(this.NodeRadius*2,this.NodeRadius*2,1);
-                            if(this.Grid[i][l].CloseToWall) box.Sprite.Color = Real4(1,1,0,0.2);
-                        }
-                    }
-                }
-                
             }
-            
-            
-            
         }
     }
     
-    function UpdateGrid()
+    function UpdateGrid(node : Node, manual : Boolean, walkable : Boolean)
     {
-        for (var i = 0; i < this.GridSizeX; ++i)
+        var filter = CastFilter();
+        filter.IgnoreDynamic = true;
+        var walk : Boolean = false;
+        if(manual)
         {
-            
-            for (var l = 0; l < this.GridSizeY; ++l)
-            {
-                
-                var filter = CastFilter();
-                filter.IgnoreDynamic = true;
-                var walkable : Boolean = this.Space.PhysicsSpace.CastSphereResults(this.Grid[i][l].WorldPos + Real3(0,0,0.5), this.NodeRadius-0.3, 1, filter).Empty();
-                var closeToWall : Boolean = !this.Space.PhysicsSpace.CastSphereResults(this.Grid[i][l].WorldPos + Real3(0,0,0.5), this.NodeDiameter, 1, filter).Empty();
-                this.Grid[i][l].Walkable = walkable;
-                this.Grid[i][l].CloseToWall = closeToWall;
-                
-                if(this.Debug){
-                    if(!this.Grid[i][l].Walkable)
-                    {
-                        this.Space.CreateAtPosition(Archetype.MissingTexture, this.Grid[i][l].WorldPos);
-                    }
-                    else
-                    {
-                        var box = this.Space.CreateAtPosition(Archetype.MissingTexture, this.Grid[i][l].WorldPos);
-                        if(box != null)
-                        {
-                            box.Sprite.Color = Real4(1,1,1,0.2);
-                            box.Transform.Scale = Real3(this.NodeRadius*2,this.NodeRadius*2,1);
-                            if(this.Grid[i][l].CloseToWall) box.Sprite.Color = Real4(1,1,0,0.2);
-                        }
-                    }
-                }
-            }
-            
+            walk = walkable;
         }
-        
-        
+        else
+        {
+            walk = this.Space.PhysicsSpace.CastSphereResults(node.WorldPos + Real3(0,0,0.5), this.NodeRadius-0.3, 1, filter).Empty();
+        }
+        var closeToWall : Boolean = !this.Space.PhysicsSpace.CastSphereResults(node.WorldPos + Real3(0,0,0.5), this.NodeDiameter, 1, filter).Empty();
+        node.Walkable = walk;
+        node.CloseToWall = closeToWall;
     }
     
     function GetNeighbours(node : Node) : Array[Node]
