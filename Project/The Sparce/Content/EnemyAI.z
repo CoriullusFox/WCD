@@ -37,6 +37,14 @@ class EnemyAI : ZilchComponent
     [Property]
     var ResponceTime : Real = 2;
     
+    [Property]
+    var WaunderRange : Real = 2.5;
+    
+    [Property]
+    var WaunderCooldown : Real = 5;
+    
+    var WaunderTimer : Real = 0;
+    
     var Timer : Real;
     
     var PathFindTimer : Real = 0.25;
@@ -55,6 +63,7 @@ class EnemyAI : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.WaunderTimer -= event.Dt;
         this.PathFindTimer -= event.Dt;
         this.Timer -= event.Dt;
         var player = this.Space.FindObjectByName("TempPlayer");
@@ -131,6 +140,17 @@ class EnemyAI : ZilchComponent
                 this.MoveDirection = this.Space.FindObjectByName("TempPlayer").Transform.Translation - this.Owner.Transform.Translation;
                 this.Move(this.MoveDirection);
             }
+        }
+        //wandering
+        else if(this.Pathfind && this.Path == null && this.WaunderTimer <= 0)
+        {
+            var rand : Random = Random();
+            this.WaunderTimer = this.WaunderCooldown + rand.Range(-1, 1);
+            this.Path = this.Space.FindObjectByName("PlayerSpawnPoint").AStarPathfind.PathFind(this.Owner.Transform.Translation, this.Owner.Transform.Translation + Real3(rand.Range(this.WaunderRange, this.WaunderRange*-1), rand.Range(this.WaunderRange, this.WaunderRange*-1), 0));
+        }
+        else if(this.Path == null)
+        {
+            this.Owner.RigidBody.Velocity = Real3(0,0,0);
         }
         
         if(distanceFromPlayer < this.ShootProximity)
