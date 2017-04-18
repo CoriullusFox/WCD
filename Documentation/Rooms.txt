@@ -1,0 +1,77 @@
+Rooms:
+
+Incinerator:
+	Giant Incinerator
+	Small Incinerator
+	Garbage Cans
+	Garbage Bags
+	Trash Cans
+Armory(Only the top half should be done not the bottom):
+	Armor Stand
+	Pyro Armor variations
+	Buff Armor variations
+	Shield Armor variations
+Food Court:
+	Chairs
+	Table
+	Food
+	Drinks
+Storage Room:
+	Crates
+	Giant Crates
+	Random Junk
+Engine Room:
+	Engine
+	Pipes
+	Reactor
+	Wires
+Bar:
+	Table
+	Bar Stool
+	Drink Rack
+Med Bay:
+	Medical Table
+	Medical Bed
+	Medical Mechanic
+	Medical Tools
+Loading Dock:
+	Crate
+	Giant Crate
+	Crane
+	ForkLift
+	Tool Bench
+Crew Quarters:
+	Bed
+	Bed Side table
+	Tables
+	Dresser
+Control Deck:
+	Control Table
+	Control Keyboard
+	Seats
+Map Room:
+	Holographic Map of Station
+	LARGE HOLOGRAGH DISPLAY
+	Seats
+Weapon Bay:
+	Weapon Rack
+	Weapon Mod Table
+	Random Weapon parts on floor
+Ship Bay:
+	Fighter ship
+	Carrier ship
+	Escort Ship
+	Battle Ship
+	Cruise Ship
+	Jail Transporter
+	Passenger Ship
+Exercise Room:
+	Weights
+	TreadMill
+	Pull Up Bar
+	Bench Press
+Engineer Room:
+	Engineers Tools
+	Table
+	Hover Chairs
+	Hover Chair Mods
