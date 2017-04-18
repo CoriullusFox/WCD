@@ -127,6 +127,9 @@ Level =
 		DetectVictory = 
 		{
 		},
+		EnemiesKilldstor = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -145,7 +148,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.61084, -0.776283, 5.5745],
+			Vec3 Translation = [10.625, -2.62601, 5.5745],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -157,7 +160,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.00833,
+			float Size = 18.05,
 		},
 		EditorCameraController = 
 		{
@@ -165,7 +168,7 @@ Level =
 			float LookDistance = 5.54014,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [9.61084, -0.776283, 0.0343574],
+			Vec3 LookTarget = [10.625, -2.62601, 0.0343575],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -247,7 +250,6 @@ Level =
 		Grid = 
 		{
 			Vec2 GridWorldSize = [100, 100],
-			bool Debug = false,
 		},
 		AStarPathfind = 
 		{
@@ -341,6 +343,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -556,22 +560,57 @@ Level =
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5820e8f49dbffcb3:WeaponPickup",
 		LinkId = 
 		{
 			uint Id = 10,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [-5.76965, -5.32241, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.29807, -7.1982, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "FreezeRay",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 	Cog = 
@@ -622,6 +661,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -726,6 +767,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -830,6 +873,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -934,6 +979,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -1038,6 +1085,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -1110,7 +1159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.1974, 1.71705, -3.8147e-006],
+			Vec3 Translation = [23.0198, 1.71705, -3.8147e-006],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1142,6 +1191,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -1503,7 +1554,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.4951, -0.325096, 0.0343571],
+			Vec3 Translation = [24.3175, -0.325096, 0.0343571],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1535,6 +1586,8 @@ Level =
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -1606,7 +1659,24 @@ Level =
 		{
 			float TPRangeLarge = 10,
 			float TPRangeSmall = 3,
-			float Cooldown = 25,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5820e8f49dbffcb3:WeaponPickup",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.65386, -5.41504, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
 		},
 	},
 },

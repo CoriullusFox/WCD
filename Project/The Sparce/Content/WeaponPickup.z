@@ -139,6 +139,19 @@ class WeaponPickup : ZilchComponent
                 toSend.Name = "ChainElectricity";
                 toSend.Tier = event.OtherObject.UpgradeManager.ChainETier;
             }
+            else if(this.Unlocked == "FreezeRay")
+            {
+                if(!event.OtherObject.WeaponSwap.FreezeUnlocked)
+                {
+                    event.OtherObject.WeaponSwap.FreezeUnlocked = true;
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.FreezeTier += 1;
+                }
+                toSend.Name = "FreezeRay";
+                toSend.Tier = event.OtherObject.UpgradeManager.FreezeTier;
+            }
             
             this.GameSession.DispatchEvent(Events.UnlockorUpgrade, toSend);
             this.Owner.Destroy();

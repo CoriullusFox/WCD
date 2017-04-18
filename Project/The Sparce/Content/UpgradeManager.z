@@ -41,6 +41,9 @@ class UpgradeManager : ZilchComponent
     [Property]
     var ChainETier : Integer = 1;
     
+    [Property]
+    var FreezeTier : Integer = 1;
+    
     var TierBalancer : Integer = 3;
     
     function Initialize(init : CogInitializer)
@@ -187,6 +190,21 @@ class UpgradeManager : ZilchComponent
                 
                 toSend.Tier = this.ChainETier;
                 if(this.ChainETier == 2)
+                {
+                    
+                }
+                
+                // CALCULATE WEAPON PROPERTIES BASED ON TIER
+                //this.Owner.ChainElectricity.CamZoom          = this.Owner.ChainElectricity.CamZoom         + this.ChainETier;
+                //this.Owner.ChainElectricity.EnergyUsePer     = this.Owner.ChainElectricity.EnergyUsePer    - this.ChainETier / this.TierBalancer;
+                //this.Owner.ChainElectricity.Damage           = this.Owner.ChainElectricity.Damage          + this.ChainETier * this.TierBalancer;
+                
+            }
+            else if(event.Selected == "FreezeRay")
+            {
+                
+                toSend.Tier = this.FreezeTier;
+                if(this.FreezeTier == 2)
                 {
                     
                 }
