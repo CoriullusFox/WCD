@@ -141,7 +141,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.0901, -4.86496, 50],
+			Vec3 Translation = [-34.1971, 36.8133, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -153,7 +153,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299,
+			float Size = 54.8812,
 		},
 		EditorCameraController = 
 		{
@@ -161,7 +161,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [11.0901, -4.86496, 1.42309e-006],
+			Vec3 LookTarget = [-34.1971, 36.8133, 1.42309e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -363,12 +363,47 @@ Level =
 			float MeshThickness = 1.2,
 		},
 	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "Decor OverLay Tileset",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "587c0c7f479d4eae:FirstLevel_TileMap05",
+			string PaletteName = "584fd7da8bf9792b:TileDecor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
 	ArchetypeInstance = 
 	{
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Transform = 
 		{
@@ -386,7 +421,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -404,7 +439,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -421,7 +456,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -482,7 +517,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -543,7 +578,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -561,7 +596,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 15,
 				},
 				Named = 
 				{
@@ -595,7 +630,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 16,
 				},
 				Named = 
 				{
@@ -629,7 +664,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 17,
 				},
 				Named = 
 				{
@@ -663,7 +698,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
+					uint Id = 18,
 				},
 				Named = 
 				{
@@ -697,7 +732,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 18,
+					uint Id = 19,
 				},
 				Named = 
 				{
@@ -731,7 +766,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 19,
+					uint Id = 20,
 				},
 				Named = 
 				{
@@ -765,7 +800,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 20,
+					uint Id = 21,
 				},
 				Named = 
 				{
@@ -799,7 +834,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 22,
 				},
 				Named = 
 				{
@@ -833,7 +868,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 23,
 				},
 				Named = 
 				{
@@ -867,7 +902,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
+					uint Id = 24,
 				},
 				Named = 
 				{
@@ -901,7 +936,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 24,
+					uint Id = 25,
 				},
 				Named = 
 				{
@@ -935,7 +970,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 25,
+					uint Id = 26,
 				},
 				Named = 
 				{
@@ -969,7 +1004,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 27,
 				},
 				Named = 
 				{
@@ -1003,7 +1038,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 27,
+					uint Id = 28,
 				},
 				Named = 
 				{
@@ -1037,7 +1072,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 28,
+					uint Id = 29,
 				},
 				Named = 
 				{
@@ -1071,7 +1106,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 29,
+					uint Id = 30,
 				},
 				Named = 
 				{
@@ -1105,7 +1140,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 30,
+					uint Id = 31,
 				},
 				Named = 
 				{
@@ -1139,7 +1174,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 31,
+					uint Id = 32,
 				},
 				Named = 
 				{
@@ -1173,7 +1208,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 32,
+					uint Id = 33,
 				},
 				Named = 
 				{
@@ -1207,7 +1242,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 33,
+					uint Id = 34,
 				},
 				Named = 
 				{
@@ -1241,7 +1276,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 34,
+					uint Id = 35,
 				},
 				Named = 
 				{
@@ -1275,7 +1310,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 35,
+					uint Id = 36,
 				},
 				Named = 
 				{
@@ -1309,7 +1344,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 36,
+					uint Id = 37,
 				},
 				Named = 
 				{
@@ -1343,7 +1378,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 37,
+					uint Id = 38,
 				},
 				Named = 
 				{
@@ -1377,7 +1412,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 38,
+					uint Id = 39,
 				},
 				Named = 
 				{
@@ -1411,7 +1446,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 39,
+					uint Id = 40,
 				},
 				Named = 
 				{
@@ -1445,7 +1480,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 40,
+					uint Id = 41,
 				},
 				Named = 
 				{
@@ -1479,7 +1514,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 41,
+					uint Id = 42,
 				},
 				Named = 
 				{
@@ -1513,7 +1548,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 42,
+					uint Id = 43,
 				},
 				Named = 
 				{
@@ -1547,7 +1582,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 43,
+					uint Id = 44,
 				},
 				Named = 
 				{
@@ -1581,7 +1616,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 44,
+					uint Id = 45,
 				},
 				Named = 
 				{
@@ -1615,7 +1650,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 45,
+					uint Id = 46,
 				},
 				Named = 
 				{
@@ -1649,7 +1684,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 46,
+					uint Id = 47,
 				},
 				Named = 
 				{
@@ -1683,7 +1718,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 47,
+					uint Id = 48,
 				},
 				Named = 
 				{
@@ -1717,7 +1752,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 48,
+					uint Id = 49,
 				},
 				Named = 
 				{
@@ -1751,7 +1786,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 49,
+					uint Id = 50,
 				},
 				Named = 
 				{
@@ -1785,7 +1820,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 50,
+					uint Id = 51,
 				},
 				Named = 
 				{
@@ -1819,40 +1854,6 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 51,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-52.5, 33, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Crew Quarters",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
 					uint Id = 52,
 				},
 				Named = 
@@ -1861,7 +1862,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [62.5, -2.5, 0],
+					Vec3 Translation = [-52.5, 33, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1895,6 +1896,40 @@ Level =
 				},
 				Transform = 
 				{
+					Vec3 Translation = [62.5, -2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 50,
+					string Text = "Crew Quarters",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 54,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
 					Vec3 Translation = [27, 1.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
@@ -1921,7 +1956,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 54,
+					uint Id = 55,
 				},
 				Named = 
 				{
@@ -1955,7 +1990,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 55,
+					uint Id = 56,
 				},
 				Named = 
 				{
@@ -1989,7 +2024,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 56,
+					uint Id = 57,
 				},
 				Named = 
 				{
@@ -2023,7 +2058,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 57,
+					uint Id = 58,
 				},
 				Named = 
 				{
@@ -2057,7 +2092,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 58,
+					uint Id = 59,
 				},
 				Named = 
 				{
@@ -2091,7 +2126,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 59,
+					uint Id = 60,
 				},
 				Named = 
 				{
@@ -2099,7 +2134,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9, -4.5, 0],
+					Vec3 Translation = [11, -1, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2125,7 +2160,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 60,
+					uint Id = 61,
 				},
 				Named = 
 				{
@@ -2159,7 +2194,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 61,
+					uint Id = 62,
 				},
 				Named = 
 				{
@@ -2193,7 +2228,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 62,
+					uint Id = 63,
 				},
 				Named = 
 				{
@@ -2227,7 +2262,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 63,
+					uint Id = 64,
 				},
 				Named = 
 				{
@@ -2261,7 +2296,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 64,
+					uint Id = 65,
 				},
 				Named = 
 				{
@@ -2295,7 +2330,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 65,
+					uint Id = 66,
 				},
 				Named = 
 				{
@@ -2329,40 +2364,6 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 66,
-				},
-				Named = 
-				{
-					string Name = "SpriteText",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2, -30, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Lobby",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
 					uint Id = 67,
 				},
 				Named = 
@@ -2371,7 +2372,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [2, -30, 0],
+					Vec3 Translation = [3.5, -28.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
