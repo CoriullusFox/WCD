@@ -215,7 +215,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [5, -3.75, -3.25],
+				Vec3 Translation = [7.64278, 3.65156, -3.08083],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -250,7 +250,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-8.25, -2.5, -3.25],
+				Vec3 Translation = [-4.02771, -0.482016, -3.26635],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -265,6 +265,41 @@ Cog =
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string SpriteSource = "5863a33038a5cff6:Background_Moon",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 6,
+			},
+			Named = 
+			{
+				string Name = "Stars",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -8.27157],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "587dfc91ad4dac70:Background_Stars",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,

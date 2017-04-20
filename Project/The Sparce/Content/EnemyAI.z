@@ -43,14 +43,21 @@ class EnemyAI : ZilchComponent
     [Property]
     var WaunderCooldown : Real = 5;
     
+    [Property]
+    var Cooldown : Real = 5;
+    
     var WaunderTimer : Real = 0;
     
     var Timer : Real;
+    
+    var CooldownTimer : Real = 0;
     
     var PathFindTimer : Real = 0.25;
     
     
     var Path : Array[Node] = Array[Node]();
+    
+    var Shoot : Boolean = true;
     
     
     
@@ -156,8 +163,13 @@ class EnemyAI : ZilchComponent
         {
             this.Owner.RigidBody.Velocity = Real3(0,0,0);
         }
-        
-        if(distanceFromPlayer < this.ShootProximity)
+        this.CooldownTimer -= event.Dt;
+        if(this.CooldownTimer <= 0)
+        {
+            this.Shoot = !this.Shoot;
+            this.CooldownTimer = this.Cooldown;
+        }
+        if(distanceFromPlayer < this.ShootProximity && this.Shoot)
         {
             //raycast for shooting
             var ray = Ray();

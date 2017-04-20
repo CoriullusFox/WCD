@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "TutorialLevelCut1",
+		uint64 ResourceId = 587df8dbc8d3a5d6,
+	},
+},
