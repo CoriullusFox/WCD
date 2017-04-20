@@ -97,7 +97,7 @@ Level =
 		},
 		MusicScr_Stage = 
 		{
-			string MusicToPlay = "58436263819bc360:MainMusic",
+			string MusicToPlay = "5857201d22f95a2c:Silence",
 		},
 		DebugMode = 
 		{
