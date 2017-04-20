@@ -1,0 +1,40 @@
+class LaunchCD : ZilchComponent
+{
+    
+    var Go : Boolean = false;
+    
+    var Timer : Real = 5;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(this.Go)
+        {
+            
+            this.Timer -= event.Dt;
+            if(this.Timer <=0)
+            {
+                this.Owner.SpriteText.Text = "LAUNCH";
+            }
+            else if(this.Timer <=1)
+            {
+                this.Owner.SpriteText.Text = "1";
+            }
+            else if(this.Timer <=2)
+            {
+                this.Owner.SpriteText.Text = "2";
+            }
+            else if(this.Timer <=3)
+            {
+                this.Owner.SpriteText.Text = "3";
+            }
+            
+        }
+        
+    }
+}

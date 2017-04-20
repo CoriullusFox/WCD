@@ -93,7 +93,6 @@ Level =
 		TutorialLevelCut1 = 
 		{
 			string NextLvl = "587c16e3bb952a51:TutorialLevelCut2",
-			float Time = 25,
 		},
 	},
 	Cog = 
@@ -108,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0724989, 1.03917, 4.38348],
+			Vec3 Translation = [0.221428, -0.0808606, 4.36059],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0803,
+			float Size = 19.9484,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +127,7 @@ Level =
 			float LookDistance = 4.5359,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0724989, 1.03917, -0.15242],
+			Vec3 LookTarget = [0.221428, -0.0808606, -0.175315],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -415,6 +414,11 @@ Level =
 		{
 			string Name = "fade",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 3],
@@ -438,6 +442,231 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Fade = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "LaunchCountDown",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.0477398, -3.73485, 3],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0.94, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 10000,
+			bool Smoothing = true,
+		},
+		LaunchCD = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "l1",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 2, 3.1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "StoryStoryStoryStoryStoryStoryStory",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 10000,
+			bool Smoothing = true,
+		},
+		Fade = 
+		{
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "l2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 1, 3.1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "StoryStoryStoryStoryStoryStoryStory",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 10000,
+			bool Smoothing = true,
+		},
+		Fade = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "l3",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 3.1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "StoryStoryStoryStoryStoryStoryStory",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 10000,
+			bool Smoothing = true,
+		},
+		Fade = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "l4",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -1, 3.1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "StoryStoryStoryStoryStoryStoryStory",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 10000,
+			bool Smoothing = true,
+		},
+		Fade = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "l5",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -2, 3.1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "StoryStoryStoryStoryStoryStoryStory",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 10000,
+			bool Smoothing = true,
 		},
 		Fade = 
 		{

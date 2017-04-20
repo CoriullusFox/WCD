@@ -1,6 +1,6 @@
 class Fade : ZilchComponent
 {
-    var Target : Real4 = Real4(0,0,0,0);
+    var Target : Real = 0;
     
     var Faded : Boolean = true;
     
@@ -11,13 +11,23 @@ class Fade : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Owner.Sprite != null)
+        {
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X,this.Owner.Sprite.Color.Y,this.Owner.Sprite.Color.Z,Math.Lerp(this.Owner.Sprite.Color.W, this.Target, event.Dt*2));
         
-        this.Owner.Sprite.Color = Math.Lerp(this.Owner.Sprite.Color, this.Target, event.Dt*2);
-        
-        if(this.Faded)
-            this.Target = Real4(0,0,0,0);
+        }
         else
-            this.Target = Real4(0,0,0,1);
+        {
+            this.Owner.SpriteText.Color = Real4(this.Owner.SpriteText.Color.X,this.Owner.SpriteText.Color.Y,this.Owner.SpriteText.Color.Z,Math.Lerp(this.Owner.SpriteText.Color.W, this.Target, event.Dt*2));
+        }
+        if(this.Faded)
+        {
+            this.Target = 0;
+        }
+        else
+        {
+            this.Target = 1;
+        }
         
     }
 }

@@ -18,7 +18,7 @@ class CamShake : ZilchComponent
         var rand = Random();
         this.Owner.Transform.Translation = this.CenterPos + Real3(rand.Range(this.Amount, this.Amount*-1), rand.Range(this.Amount, this.Amount*-1), 0);
         
-        this.Amount += event.Dt*0.01;
+        this.Amount -= event.Dt*0.05;
         
     }
 }

@@ -11,7 +11,6 @@ class TutorialLevelCut1 : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
         this.Time -= event.Dt;
         if(this.Time <= 0)
         {
@@ -20,18 +19,67 @@ class TutorialLevelCut1 : ZilchComponent
             
         }
         if(this.Time <= 1.5)
+        {
             this.Space.FindObjectByName("fade").Fade.Faded = false;
+            this.Space.FindObjectByName("LaunchCountDown").LaunchCD.Go = false;
+            this.Space.FindObjectByName("LaunchCountDown").SpriteText.Text = "";
+        }
         if(this.Time <= 8)
+        {
             this.Launch = true;
-        if(this.Time >13)
-            this.Space.FindObjectByName("fade").Fade.Faded = false;
+        }
+        
+        if(this.Time <= 11)
+        {
+            if(this.Time >10)
+            {
+                this.Space.FindObjectByName("Camera").CamShake.Amount = 0.1;
+            }
+            else if(this.Time >9)
+            {
+                this.Space.FindObjectByName("Camera").CamShake.Amount = 0.2;
+            }
+            else if(this.Time >8)
+            {
+                this.Space.FindObjectByName("Camera").CamShake.Amount = 0.3;
+            }
+        }
         else
+        {
+            this.Space.FindObjectByName("Camera").CamShake.Amount = 0;
+        }
+        
+        if(this.Time <= 15)
+        {
+            this.Space.FindObjectByName("l1").Fade.Faded = true;
+            this.Space.FindObjectByName("l2").Fade.Faded = true;
+            this.Space.FindObjectByName("l3").Fade.Faded = true;
+            this.Space.FindObjectByName("l4").Fade.Faded = true;
+            this.Space.FindObjectByName("l5").Fade.Faded = true;
+        }
+        else if(this.Time <= 24)
+        {
+            this.Space.FindObjectByName("l1").Fade.Faded = false;
+            this.Space.FindObjectByName("l2").Fade.Faded = false;
+            this.Space.FindObjectByName("l3").Fade.Faded = false;
+            this.Space.FindObjectByName("l4").Fade.Faded = false;
+            this.Space.FindObjectByName("l5").Fade.Faded = false;
+        }
+        
+        if(this.Time >13)
+        {
+            this.Space.FindObjectByName("fade").Fade.Faded = false;
+        }
+        else if(this.Time > 1.5)
+        {
             this.Space.FindObjectByName("fade").Fade.Faded = true;
+            this.Space.FindObjectByName("LaunchCountDown").LaunchCD.Go = true;
+        }
+        
         if(!this.Launch)
         {
             
             this.Space.FindObjectByName("Spaceship").Rocket.Rate = 0;
-            this.Space.FindObjectByName("Camera").CamShake.Amount = 0;
             
         }
         else if(this.Time > 1.5)

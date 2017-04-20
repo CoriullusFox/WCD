@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "LaunchCD",
+		uint64 ResourceId = 587c1e02f6af8027,
+	},
+},
