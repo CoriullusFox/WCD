@@ -122,6 +122,9 @@ Level =
 		DetectVictory = 
 		{
 		},
+		EnemiesKilldstor = 
+		{
+		},
 	},
 	Cog = 
 	{
