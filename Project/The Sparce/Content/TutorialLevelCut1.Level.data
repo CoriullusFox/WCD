@@ -93,7 +93,7 @@ Level =
 		TutorialLevelCut1 = 
 		{
 			string NextLvl = "587c16e3bb952a51:TutorialLevelCut2",
-			float Time = 7,
+			float Time = 25,
 		},
 	},
 	Cog = 
@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.23137, 0.558371, 4.38348],
+			Vec3 Translation = [0.0724989, 1.03917, 4.38348],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.365,
+			float Size = 11.0803,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 4.5359,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.23137, 0.558371, -0.15242],
+			Vec3 LookTarget = [0.0724989, 1.03917, -0.15242],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -314,6 +314,21 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = false,
+			bool Flow = false,
+			bool Force = false,
+			bool Gravity = true,
+			bool Thrust = false,
+			bool Vortex = false,
+			bool Wind = false,
+			bool Invalid = false,
+			bool Torque = false,
+			bool PointGravity = false,
+			bool PointForce = false,
+			bool Buoyancy = false,
+		},
 		Hierarchy = 
 		{
 			ArchetypeInstance = 
@@ -423,6 +438,9 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Fade = 
+		{
 		},
 	},
 },

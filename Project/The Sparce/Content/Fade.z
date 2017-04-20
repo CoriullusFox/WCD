@@ -1,5 +1,9 @@
 class Fade : ZilchComponent
 {
+    var Target : Real4 = Real4(0,0,0,0);
+    
+    var Faded : Boolean = true;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -7,5 +11,13 @@ class Fade : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        this.Owner.Sprite.Color = Math.Lerp(this.Owner.Sprite.Color, this.Target, event.Dt*2);
+        
+        if(this.Faded)
+            this.Target = Real4(0,0,0,0);
+        else
+            this.Target = Real4(0,0,0,1);
+        
     }
 }

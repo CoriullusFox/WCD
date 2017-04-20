@@ -2,8 +2,8 @@ class TutorialLevelCut1 : ZilchComponent
 {
     [Property]
     var NextLvl : Level = null;
-    [Property]
-    var Time : Real = 8;
+    var Time : Real = 25;
+    var Launch : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -19,6 +19,26 @@ class TutorialLevelCut1 : ZilchComponent
             this.Space.LoadLevel(this.NextLvl);
             
         }
-        
+        if(this.Time <= 1.5)
+            this.Space.FindObjectByName("fade").Fade.Faded = false;
+        if(this.Time <= 8)
+            this.Launch = true;
+        if(this.Time >13)
+            this.Space.FindObjectByName("fade").Fade.Faded = false;
+        else
+            this.Space.FindObjectByName("fade").Fade.Faded = true;
+        if(!this.Launch)
+        {
+            
+            this.Space.FindObjectByName("Spaceship").Rocket.Rate = 0;
+            this.Space.FindObjectByName("Camera").CamShake.Amount = 0;
+            
+        }
+        else if(this.Time > 1.5)
+        {
+            
+            this.Space.FindObjectByName("Spaceship").IgnoreSpaceEffects.IgnoreGravity = false;
+            
+        }
     }
 }
