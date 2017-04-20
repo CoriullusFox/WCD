@@ -1,0 +1,19 @@
+class Rocket : ZilchComponent
+{
+    
+    var Rate : Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        this.Owner.Orientation.LookAtDirectionWithUp(this.Owner.RigidBody.Velocity, Real3(0,0,1));
+        this.Owner.RigidBody.Velocity += Real3(event.Dt*this.Rate,0,0);
+        this.Rate += event.Dt*0.3;
+        
+    }
+}

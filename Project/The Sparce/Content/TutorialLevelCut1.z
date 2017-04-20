@@ -1,11 +1,24 @@
 class TutorialLevelCut1 : ZilchComponent
 {
+    [Property]
+    var NextLvl : Level = null;
+    [Property]
+    var Time : Real = 8;
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        this.Time -= event.Dt;
+        if(this.Time <= 0)
+        {
+            
+            this.Space.LoadLevel(this.NextLvl);
+            
+        }
+        
     }
 }

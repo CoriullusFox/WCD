@@ -15,8 +15,8 @@ Level =
 			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
-			float Strength = 10,
-			Vec3 Direction = [0, -1, 0],
+			float Strength = 3,
+			Vec3 Direction = [0, 1, 0],
 		},
 		DragEffect = 
 		{
@@ -92,6 +92,8 @@ Level =
 		},
 		TutorialLevelCut1 = 
 		{
+			string NextLvl = "587c16e3bb952a51:TutorialLevelCut2",
+			float Time = 7,
 		},
 	},
 	Cog = 
@@ -106,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.196711, -1.08321, 4.38348],
+			Vec3 Translation = [1.23137, 0.558371, 4.38348],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -118,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.8893,
+			float Size = 24.365,
 		},
 		EditorCameraController = 
 		{
@@ -126,7 +128,7 @@ Level =
 			float LookDistance = 4.5359,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.196711, -1.08321, -0.15242],
+			Vec3 LookTarget = [1.23137, 0.558371, -0.15242],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -167,6 +169,10 @@ Level =
 		Microphone = 
 		{
 			bool Active = true,
+		},
+		CamShake = 
+		{
+			float Amount = 0,
 		},
 	},
 	Cog = 
@@ -254,7 +260,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -0.638312, 0.231822],
+			Vec3 Translation = [0, -5.06667, 0.231822],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -276,6 +282,38 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
+		Orientation = 
+		{
+			Vec3 GlobalUp = [0, 1, 0],
+			Vec3 UpVector = [0, 0, 1],
+			Vec3 ForwardVector = [0, 1, 0],
+			OrientationBases DefaultBases = ForwardYUpZ,
+		},
+		Rocket = 
+		{
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
 		Hierarchy = 
 		{
 			ArchetypeInstance = 
@@ -287,7 +325,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.0595819, -0.308182, -0.00376672],
+					Vec3 Translation = [-0.242324, -1.25044, -0.00376672],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -305,7 +343,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.0595819, -0.308182, -0.00376672],
+					Vec3 Translation = [0.259455, -1.25044, -0.00376672],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -323,7 +361,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.196137, -0.123308, -0.00376672],
+					Vec3 Translation = [0.778626, -0.511634, -0.00376672],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -341,7 +379,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.196137, -0.123308, -0.00376672],
+					Vec3 Translation = [-0.790047, -0.511634, -0.00376672],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -350,6 +388,41 @@ Level =
 					string Name = "Thrust",
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "fade",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 3],
+			Vec3 Scale = [100, 100, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

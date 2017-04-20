@@ -1,0 +1,24 @@
+class CamShake : ZilchComponent
+{
+    
+    [Property]
+    var Amount : Real = 0;
+    
+    var CenterPos : Real3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.CenterPos = this.Owner.Transform.Translation;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        var rand = Random();
+        this.Owner.Transform.Translation = this.CenterPos + Real3(rand.Range(this.Amount, this.Amount*-1), rand.Range(this.Amount, this.Amount*-1), 0);
+        
+        this.Amount += event.Dt*0.01;
+        
+    }
+}
