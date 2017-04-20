@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "582a50e058efc8d0:Bullet_Bouncy",
+		string Name = "587c04c6f8e6fb7b:Bullet_BouncyEnemy",
 	},
 	Transform = 
 	{
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "582a4f382fc0acaf:Bullet_Bouncer",
+		string SpriteSource = "585606d4655814da:Bullet_BouncerRed",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -210,11 +210,11 @@ Cog =
 			},
 			ParticleColorAnimator = 
 			{
-				Vec4 Color0 = [0.26, 0.4672, 1, 0.1],
-				Vec4 Color1 = [0.226875, 0.39435, 0.825, 0.5],
-				Vec4 Color2 = [0.184175, 0.342531, 0.695, 1],
-				Vec4 Color3 = [0.1344, 0.231168, 0.48, 1],
-				Vec4 Color4 = [0.097625, 0.208296, 0.355, 1],
+				Vec4 Color0 = [1, 0.26, 0.260444, 0.1],
+				Vec4 Color1 = [0.825, 0.226875, 0.227234, 0.5],
+				Vec4 Color2 = [0.695, 0.184175, 0.184481, 1],
+				Vec4 Color3 = [0.48, 0.1344, 0.134607, 1],
+				Vec4 Color4 = [0.355, 0.097625, 0.0977794, 1],
 			},
 			LinearParticleAnimator = 
 			{

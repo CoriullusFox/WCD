@@ -10,12 +10,12 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "582a50e058efc8d0:Bullet_Bouncy",
+		string Name = "587c0333866329b3:Bullet_PelletEnemy",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "582a4f382fc0acaf:Bullet_Bouncer",
+		string SpriteSource = "582a5189641064e9:Bullet_Pellet",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -72,26 +72,27 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 2,
+		float LifeLength = 10,
 		bool Explode = true,
 		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
-	SphereCollider = 
+	BulletScript = 
 	{
-		bool Ghost = false,
+		bool ClipThru = false,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
-		string MaterialName = "580b0045e6dd168a:Bouncy",
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.25,
-	},
-	BouncyBullet = 
-	{
+		Vec3 Size = [0.02, 0.05, 0.5],
 	},
 	CreateTrail = 
 	{
-		float Rate = 0.05,
+		float Rate = 5,
 	},
 	Hierarchy = 
 	{
@@ -108,7 +109,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -0.1],
-				Vec3 Scale = [1.66667, 1.66667, 1],
+				Vec3 Scale = [0.25, 0.25, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteParticleSystem = 
@@ -153,7 +154,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 6,
+				float EmitRate = 4,
 				float EmitVariance = 1,
 				float Size = 0.2,
 				float SizeVariance = 0,
@@ -184,7 +185,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -0.1],
-				Vec3 Scale = [1.66667, 1.66667, 1],
+				Vec3 Scale = [0.25, 0.25, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteParticleSystem = 
@@ -229,8 +230,8 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 100,
-				float EmitVariance = 1,
+				float EmitRate = 150,
+				float EmitVariance = 10,
 				float Size = 0.2,
 				float SizeVariance = 0,
 				float Lifetime = 0.2,

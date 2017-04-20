@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [16.5013, 2.00591, 0.0343571],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -46,6 +46,9 @@ Cog =
 		bool Pathfind = true,
 		bool Debug = false,
 		float ResponceTime = 2,
+		float WaunderRange = 2.5,
+		float WaunderCooldown = 5,
+		float Cooldown = 5,
 	},
 	BoxCollider = 
 	{
@@ -83,6 +86,7 @@ Cog =
 		float RegenRate = 0.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
+		float RegenCooldown = 1,
 	},
 	RigidBody = 
 	{
@@ -90,7 +94,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -103,7 +107,7 @@ Cog =
 	},
 	Rifle = 
 	{
-		string Bullet = "583c4159a57683aa:Bullet_LargeLaser",
+		string Bullet = "587c048cf550c558:Bullet_LargeLaserEnemy",
 		float Damage = 49,
 		float EnergyUse = 49,
 		float Energy = 100,

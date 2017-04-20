@@ -1,0 +1,86 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Bullet",
+	},
+	Archetyped = 
+	{
+		string Name = "587c04f0fdbecf2f:Bullet_TeslaEnemy",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteParticleSystem = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		SystemChildMode ChildMode = Independent,
+		SystemSpace SystemSpace = WorldSpace,
+		uint DrawOrder = 0,
+		float WarmUpTime = 0,
+		ParticleGeometry GeometryMode = Billboarded,
+		ParticleRenderMode RenderMode = Additive,
+		ParticleSortMode SortMode = Youngest,
+		ParticleAnimation ParticleAnimation = Single,
+		string Texture = "580db89c8939a5dd:PistolSouthEast",
+		Vec4 Tint = [1, 1, 1, 0.9999],
+		float VelocityScale = 1,
+		float LengthScale = 1,
+		float MaxParticleSize = 100,
+		Vec3 SystemSize = [4, 4, 4],
+	},
+	SphericalParticleEmitter = 
+	{
+		bool Active = true,
+		uint EmitCount = 2000,
+		float EmitRate = 2000,
+		float EmitVariance = 0,
+		float Size = 1,
+		float SizeVariance = 0.5,
+		float Lifetime = 3,
+		float LifetimeVariance = 0.2,
+		float Spin = 4,
+		float SpinVariance = 50,
+		bool RandomSpin = true,
+		float Fill = 1,
+		float EmitterVelocityPercent = 0,
+		Vec3 StartVelocity = [0, 0, 0],
+		Vec3 RandomVelocity = [2, 2, 0],
+		Vec3 TangentVelocity = [0, 0, 0],
+		Vec3 EmitterSize = [2, 2, 0],
+		bool FastMovingEmitter = true,
+	},
+	LinearParticleAnimator = 
+	{
+		Vec3 Force = [0, 0, 0],
+		Vec3 RandomForce = [1, 1, 0],
+		float Torque = 0,
+		float Growth = 0,
+		float Dampening = 0,
+		Vec3 Twist = [0, 0, 0],
+	},
+	ParticleColorAnimator = 
+	{
+		Vec4 Color0 = [1, 0, 0.000599861, 0.9999],
+		Vec4 Color1 = [1, 0, 0.000599861, 1],
+		Vec4 Color2 = [1, 0, 0.000599861, 0.7],
+		Vec4 Color3 = [1, 0, 0.000599861, 0.38],
+		Vec4 Color4 = [1, 0, 0.000599861, 0],
+	},
+	Despawn = 
+	{
+		float LifeLength = 0.5,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
+	},
+},

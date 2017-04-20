@@ -10,12 +10,12 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "582a50e058efc8d0:Bullet_Bouncy",
+		string Name = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "582a4f382fc0acaf:Bullet_Bouncer",
+		string SpriteSource = "585606d565473527:Bullet_TinyLaserRed",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -72,26 +72,27 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 2,
+		float LifeLength = 40,
 		bool Explode = true,
 		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
-	SphereCollider = 
+	BulletScript = 
 	{
-		bool Ghost = false,
+		bool ClipThru = false,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
-		string MaterialName = "580b0045e6dd168a:Bouncy",
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.25,
-	},
-	BouncyBullet = 
-	{
+		Vec3 Size = [0.03, 0.1, 0.5],
 	},
 	CreateTrail = 
 	{
-		float Rate = 0.05,
+		float Rate = 0.1,
 	},
 	Hierarchy = 
 	{
@@ -108,7 +109,83 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -0.1],
-				Vec3 Scale = [1.66667, 1.66667, 1],
+				Vec3 Scale = [0.25, 0.25, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteParticleSystem = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				SystemChildMode ChildMode = Independent,
+				SystemSpace SystemSpace = WorldSpace,
+				uint DrawOrder = 0,
+				float WarmUpTime = 0,
+				ParticleGeometry GeometryMode = Billboarded,
+				ParticleRenderMode RenderMode = Blended,
+				ParticleSortMode SortMode = Youngest,
+				ParticleAnimation ParticleAnimation = Single,
+				string Texture = "58511bfa7a796e09:Particle_Muzzle",
+				Vec4 Tint = [1, 1, 1, 1],
+				float VelocityScale = 1,
+				float LengthScale = 1,
+				float MaxParticleSize = 100,
+				Vec3 SystemSize = [4, 4, 4],
+			},
+			ParticleColorAnimator = 
+			{
+				Vec4 Color0 = [1, 0.26, 0.260444, 0.1],
+				Vec4 Color1 = [0.825, 0.226875, 0.227234, 0.5],
+				Vec4 Color2 = [0.695, 0.184175, 0.184481, 1],
+				Vec4 Color3 = [0.48, 0.1344, 0.134607, 1],
+				Vec4 Color4 = [0.355, 0.097625, 0.0977794, 1],
+			},
+			LinearParticleAnimator = 
+			{
+				Vec3 Force = [0, 0, 0],
+				Vec3 RandomForce = [0, 0, 0],
+				float Torque = 0,
+				float Growth = -0.5,
+				float Dampening = 1,
+				Vec3 Twist = [0, 0, 0],
+			},
+			SphericalParticleEmitter = 
+			{
+				bool Active = true,
+				uint EmitCount = 0,
+				float EmitRate = 200,
+				float EmitVariance = 1,
+				float Size = 0.2,
+				float SizeVariance = 0,
+				float Lifetime = 0.2,
+				float LifetimeVariance = 0.2,
+				float Spin = 10,
+				float SpinVariance = 50,
+				bool RandomSpin = true,
+				float Fill = 1,
+				float EmitterVelocityPercent = 0,
+				Vec3 StartVelocity = [0, 0, 0],
+				Vec3 RandomVelocity = [0.5, 0.5, 2],
+				Vec3 TangentVelocity = [0, 0, 0],
+				Vec3 EmitterSize = [0.05, 0.05, 0],
+				bool FastMovingEmitter = false,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Particle Emitter",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -0.1],
+				Vec3 Scale = [0.25, 0.25, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteParticleSystem = 
@@ -153,7 +230,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 6,
+				float EmitRate = 10,
 				float EmitVariance = 1,
 				float Size = 0.2,
 				float SizeVariance = 0,
@@ -168,82 +245,6 @@ Cog =
 				Vec3 RandomVelocity = [1, 1, 2],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0.1, 0.1, 0],
-				bool FastMovingEmitter = false,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
-				string Name = "Particle Emitter",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 0, -0.1],
-				Vec3 Scale = [1.66667, 1.66667, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteParticleSystem = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				SystemChildMode ChildMode = Independent,
-				SystemSpace SystemSpace = WorldSpace,
-				uint DrawOrder = 0,
-				float WarmUpTime = 0,
-				ParticleGeometry GeometryMode = Billboarded,
-				ParticleRenderMode RenderMode = Blended,
-				ParticleSortMode SortMode = Youngest,
-				ParticleAnimation ParticleAnimation = Single,
-				string Texture = "58511bfa7a796e09:Particle_Muzzle",
-				Vec4 Tint = [1, 1, 1, 1],
-				float VelocityScale = 1,
-				float LengthScale = 1,
-				float MaxParticleSize = 100,
-				Vec3 SystemSize = [4, 4, 4],
-			},
-			ParticleColorAnimator = 
-			{
-				Vec4 Color0 = [0.26, 0.4672, 1, 0.1],
-				Vec4 Color1 = [0.226875, 0.39435, 0.825, 0.5],
-				Vec4 Color2 = [0.184175, 0.342531, 0.695, 1],
-				Vec4 Color3 = [0.1344, 0.231168, 0.48, 1],
-				Vec4 Color4 = [0.097625, 0.208296, 0.355, 1],
-			},
-			LinearParticleAnimator = 
-			{
-				Vec3 Force = [0, 0, 0],
-				Vec3 RandomForce = [0, 0, 0],
-				float Torque = 0,
-				float Growth = -0.5,
-				float Dampening = 1,
-				Vec3 Twist = [0, 0, 0],
-			},
-			SphericalParticleEmitter = 
-			{
-				bool Active = true,
-				uint EmitCount = 0,
-				float EmitRate = 100,
-				float EmitVariance = 1,
-				float Size = 0.2,
-				float SizeVariance = 0,
-				float Lifetime = 0.2,
-				float LifetimeVariance = 0.2,
-				float Spin = 10,
-				float SpinVariance = 50,
-				bool RandomSpin = true,
-				float Fill = 1,
-				float EmitterVelocityPercent = 0,
-				Vec3 StartVelocity = [0, 0, 0],
-				Vec3 RandomVelocity = [0.5, 0.5, 2],
-				Vec3 TangentVelocity = [0, 0, 0],
-				Vec3 EmitterSize = [0.05, 0.05, 0],
 				bool FastMovingEmitter = false,
 			},
 		},

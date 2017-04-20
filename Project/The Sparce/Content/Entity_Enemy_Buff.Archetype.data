@@ -46,6 +46,9 @@ Cog =
 		bool Pathfind = true,
 		bool Debug = false,
 		float ResponceTime = 2,
+		float WaunderRange = 2.5,
+		float WaunderCooldown = 5,
+		float Cooldown = 5,
 	},
 	BoxCollider = 
 	{
@@ -83,6 +86,7 @@ Cog =
 		float RegenRate = 0.1,
 		float MaxHealth = 150,
 		float HurtDuration = 0.2,
+		float RegenCooldown = 1,
 	},
 	RigidBody = 
 	{
@@ -103,7 +107,7 @@ Cog =
 	},
 	Shotgun = 
 	{
-		string Bullet = "583c7e44dd4f1575:Bullet_TinyPellet",
+		string Bullet = "587c04eef2ec5c20:Bullet_TinyPelletEnemy",
 		int NumberOfShots = 5,
 		float DamagePerBullet = 2,
 		float DistBetweenShots = 0.1,

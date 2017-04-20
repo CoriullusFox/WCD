@@ -10,12 +10,12 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "582a50e058efc8d0:Bullet_Bouncy",
+		string Name = "587c04eef2ec5c20:Bullet_TinyPelletEnemy",
 	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "582a4f382fc0acaf:Bullet_Bouncer",
+		string SpriteSource = "585606d565477768:Bullet_TinyPelletRed",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -72,22 +72,23 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 2,
+		float LifeLength = 10,
 		bool Explode = true,
 		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
-	SphereCollider = 
+	BulletScript = 
 	{
-		bool Ghost = false,
+		bool ClipThru = false,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = true,
 		bool SendsMessages = true,
 		bool Seamless = true,
-		string MaterialName = "580b0045e6dd168a:Bouncy",
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.25,
-	},
-	BouncyBullet = 
-	{
+		Vec3 Size = [0.025, 0.025, 0.5],
 	},
 	CreateTrail = 
 	{
@@ -108,7 +109,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -0.1],
-				Vec3 Scale = [1.66667, 1.66667, 1],
+				Vec3 Scale = [0.25, 0.25, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteParticleSystem = 
@@ -184,7 +185,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -0.1],
-				Vec3 Scale = [1.66667, 1.66667, 1],
+				Vec3 Scale = [0.25, 0.25, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteParticleSystem = 
@@ -210,11 +211,11 @@ Cog =
 			},
 			ParticleColorAnimator = 
 			{
-				Vec4 Color0 = [0.26, 0.4672, 1, 0.1],
-				Vec4 Color1 = [0.226875, 0.39435, 0.825, 0.5],
-				Vec4 Color2 = [0.184175, 0.342531, 0.695, 1],
-				Vec4 Color3 = [0.1344, 0.231168, 0.48, 1],
-				Vec4 Color4 = [0.097625, 0.208296, 0.355, 1],
+				Vec4 Color0 = [1, 0, 0.000599861, 0],
+				Vec4 Color1 = [1, 0, 0.000599861, 1],
+				Vec4 Color2 = [1, 0, 0.000599861, 1],
+				Vec4 Color3 = [0.675, 0.00337499, 0.00377788, 1],
+				Vec4 Color4 = [0.365, 0, 0.000218949, 0],
 			},
 			LinearParticleAnimator = 
 			{
@@ -229,7 +230,7 @@ Cog =
 			{
 				bool Active = true,
 				uint EmitCount = 0,
-				float EmitRate = 100,
+				float EmitRate = 200,
 				float EmitVariance = 1,
 				float Size = 0.2,
 				float SizeVariance = 0,
@@ -241,9 +242,9 @@ Cog =
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
 				Vec3 StartVelocity = [0, 0, 0],
-				Vec3 RandomVelocity = [0.5, 0.5, 2],
+				Vec3 RandomVelocity = [1, 1, 2],
 				Vec3 TangentVelocity = [0, 0, 0],
-				Vec3 EmitterSize = [0.05, 0.05, 0],
+				Vec3 EmitterSize = [0.1, 0.1, 0],
 				bool FastMovingEmitter = false,
 			},
 		},

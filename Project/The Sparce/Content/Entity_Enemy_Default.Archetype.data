@@ -46,6 +46,9 @@ Cog =
 		bool Pathfind = true,
 		bool Debug = false,
 		float ResponceTime = 2,
+		float WaunderRange = 2.5,
+		float WaunderCooldown = 5,
+		float Cooldown = 5,
 	},
 	BoxCollider = 
 	{
@@ -83,6 +86,7 @@ Cog =
 		float RegenRate = 0.25,
 		float MaxHealth = 75,
 		float HurtDuration = 0.1,
+		float RegenCooldown = 1,
 	},
 	RigidBody = 
 	{
@@ -90,7 +94,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -103,7 +107,7 @@ Cog =
 	},
 	Pistol = 
 	{
-		string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
+		string Bullet = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
 		float Damage = 2,
 		float EnergyUse = 1,
 		float Energy = 100,
