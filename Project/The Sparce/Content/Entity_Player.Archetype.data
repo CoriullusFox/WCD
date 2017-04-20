@@ -75,6 +75,7 @@ Cog =
 		float RegenRate = 0,
 		float MaxHealth = 100,
 		float HurtDuration = 0.1,
+		float RegenCooldown = 1,
 	},
 	WeaponSwap = 
 	{
@@ -94,6 +95,7 @@ Cog =
 		float MaxEnergy = 100,
 		float Energy = 100,
 		float EnergyRegenRate = 10,
+		float RegenCooldown = 1,
 	},
 	BoxCollider = 
 	{

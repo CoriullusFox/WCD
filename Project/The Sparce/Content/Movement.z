@@ -49,21 +49,9 @@ class Movement : ZilchComponent
                 
                 r3Speed = Real3(this.RunSpeed * event.Dt, this.RunSpeed * event.Dt, this.RunSpeed * event.Dt);
             }
-            //else
-            //}
-            //    this.Owner.Health.ConfiguredHealth -= this.EmptyRunEnergyDamage;
-            //}
-        }
-        
-        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && this.Owner.EnergyStor.Energy > event.Dt * this.RunEnergy)
-        {
-            if(this.Owner.EnergyStor.Energy >= 1.0)
-            {
-                this.Owner.EnergyStor.Energy -= event.Dt * this.RunEnergy;
-            }
             else
             {
-                this.Owner.Health.ConfiguredHealth -= this.EmptyRunEnergyDamage;
+                r3Speed = Real3(this.Speed *event.Dt, this.Speed *event.Dt, this.Speed *event.Dt);
             }
         }
         else

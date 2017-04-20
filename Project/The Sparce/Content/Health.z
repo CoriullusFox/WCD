@@ -44,8 +44,19 @@ class Health : ZilchComponent
     
     [Property]
     var HurtDuration : Real = 0.1;
+    
+    [Property]
+    var RegenCooldown : Real = 1;
+    
+    var RegenTimer : Real = 0;
+    
     var HurtTimer : Real = 0.0;
+    
     var IsHurt : Boolean = false;
+    
+    var Regen : Boolean = true;
+    
+    var PrevHealth : Real = 100;
     
     var HeathPercent : Real
     {
@@ -75,6 +86,21 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.RegenTimer -= event.Dt;
+        if(this.PrevHealth > this.ConfiguredHealth)
+        {
+            
+            this.Regen = false;
+            this.RegenTimer = this.RegenCooldown;
+            
+        }
+        this.PrevHealth = this.ConfiguredHealth;
+        
+        if(this.RegenTimer <= 0)
+        {
+            this.Regen = true;
+        }
+        
         if (this.IsHurt)
         {
             if (this.HurtTimer > 0)
@@ -120,7 +146,10 @@ class Health : ZilchComponent
         //REGEN
         if(this.ConfiguredHealth < this.MaxHealth)
         {
-            //this.ConfiguredHealth += this.RegenRate * event.Dt;
+            if(this.Regen)
+            {
+                this.ConfiguredHealth += this.RegenRate * event.Dt;
+            }
             if(this.Player)
             {
                 var toSend = HealthToUI();

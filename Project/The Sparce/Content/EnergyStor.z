@@ -19,6 +19,15 @@ class EnergyStor : ZilchComponent
     var Energy : Real = 100;
     [Property]
     var EnergyRegenRate : Real = 10;
+    [Property]
+    var RegenCooldown : Real = 1;
+    
+    var Timer : Real = 0;
+    
+    var Regen : Boolean = true;
+    
+    var PrevEnergy : Real = 100;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -26,10 +35,28 @@ class EnergyStor : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Energy < 100)
+        
+        this.Timer -= event.Dt;
+        
+        if(this.Energy < 100 && this.Regen)
         {
             this.Energy += this.EnergyRegenRate * event.Dt;
         }
+        
+        if(this.PrevEnergy > this.Energy)
+        {
+            
+            this.Regen = false;
+            this.Timer = this.RegenCooldown;
+            
+        }
+        this.PrevEnergy = this.Energy;
+        
+        if(this.Timer <= 0)
+        {
+            this.Regen = true;
+        }
+        
         var toSend = Energy();
         toSend.Energy = this.Energy;
         this.GameSession.DispatchEvent(Events.Energy, toSend);
