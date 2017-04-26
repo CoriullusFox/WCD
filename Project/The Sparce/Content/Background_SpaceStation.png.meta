@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Background_SpaceStation",
+		uint64 ResourceId = 59a868d9e8ee9900,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 192,
+		uint FrameSizeY = 128,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333,
+		float OriginX = 96,
+		float OriginY = 64,
+		float PixelsPerUnit = 16,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
