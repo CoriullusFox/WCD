@@ -89,7 +89,7 @@ Level =
 		UICreator = 
 		{
 			string UILevel = "5819b1c5833d962d:UILevel",
-			string UIArchtype = "5819b167eb57c437:UISpace",
+			string UIArchtype = "5819b167eb57c437:UI_Space",
 		},
 		ForwardRenderer = 
 		{
@@ -150,52 +150,12 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 3,
-		},
-		Named = 
-		{
-			string Name = "TileMap",
-		},
-		EditorFlags = 
-		{
-			bool Locked = true,
-			bool Hidden = false,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "584f5982812bfcdf:SageTestingSandbox_TileMap00",
-			string PaletteName = "5812cb923a82b921:SpaceStationTileSet",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.2,
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Transform = 
 		{
