@@ -18,7 +18,7 @@ class EnergyStor : ZilchComponent
     [Property]
     var Energy : Real = 100;
     [Property]
-    var EnergyRegenRate : Real = 10;
+    var EnergyRegenRate : Real = 50;
     [Property]
     var RegenCooldown : Real = 1;
     

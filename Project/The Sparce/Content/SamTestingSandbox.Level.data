@@ -57,7 +57,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
+				uint ResolvedCog = 2,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -111,7 +111,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -155,7 +155,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -190,7 +190,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -226,7 +226,7 @@ Level =
 		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -244,7 +244,7 @@ Level =
 		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -261,7 +261,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -323,7 +323,7 @@ Level =
 		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Transform = 
 		{
@@ -341,7 +341,7 @@ Level =
 		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -359,7 +359,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -377,7 +377,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Transform = 
 		{
@@ -395,7 +395,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -413,7 +413,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 14,
 		},
 		Transform = 
 		{

@@ -83,6 +83,8 @@ class ChainElectricity : ZilchComponent
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUsePer)
         {
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_ElecLong"));
+            
             this.Owner.DispatchEvent(Events.Fire, Fire());
             this.Cooldown = 0;
             

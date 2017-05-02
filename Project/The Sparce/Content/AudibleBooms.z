@@ -1,0 +1,7 @@
+class AudibleBooms : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_Explosion"));
+    }
+}

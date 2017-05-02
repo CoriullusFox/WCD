@@ -59,6 +59,8 @@ Cog =
 	Despawn = 
 	{
 		float LifeLength = 3,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
 	SphericalParticleEmitter = 
 	{
@@ -80,6 +82,9 @@ Cog =
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0.1, 0.1, 0],
 		bool FastMovingEmitter = true,
+	},
+	AudibleBooms = 
+	{
 	},
 	Hierarchy = 
 	{
@@ -122,6 +127,8 @@ Cog =
 			Despawn = 
 			{
 				float LifeLength = 0.1,
+				bool Explode = false,
+				string Explosion = "58620f152fd63a17:BulletExplosion",
 			},
 		},
 	},

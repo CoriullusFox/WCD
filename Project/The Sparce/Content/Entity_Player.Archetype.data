@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -94,8 +94,8 @@ Cog =
 	{
 		float MaxEnergy = 100,
 		float Energy = 100,
-		float EnergyRegenRate = 10,
-		float RegenCooldown = 1,
+		float EnergyRegenRate = 50,
+		float RegenCooldown = 0.5,
 	},
 	BoxCollider = 
 	{

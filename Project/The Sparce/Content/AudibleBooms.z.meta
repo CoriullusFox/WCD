@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "AudibleBooms",
+		uint64 ResourceId = 598dd5e0b5408d5d,
+	},
+},
