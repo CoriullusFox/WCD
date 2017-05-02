@@ -70,10 +70,16 @@ class WeaponSwap : ZilchComponent
             
             //remove components and clamp selected
             this.RemoveComponents();
+            
             if(event.Scroll.Y > 0)
+            {
                 ++this.Selected;
-            else
+            }
+            else if(event.Scroll.Y < 0)
+            {
                 --this.Selected;
+            }
+            
             if(this.Selected > this.NumberOfWeapons - 1)
             {
                 this.Selected = 0;
@@ -102,7 +108,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -119,7 +125,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -136,7 +142,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -153,7 +159,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -170,7 +176,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -187,7 +193,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -204,7 +210,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -221,7 +227,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }
@@ -239,7 +245,7 @@ class WeaponSwap : ZilchComponent
                 {
                     if(event.Scroll.Y > 0)
                         ++this.Selected;
-                    else
+                    else if(event.Scroll.Y < 0)
                         --this.Selected;
                     continue;
                 }

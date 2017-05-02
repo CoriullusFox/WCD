@@ -27,6 +27,8 @@ class StartupResolutionSettings : ZilchComponent
         
         //this.GameSession.ChangeResolution(false, Real2(1024, 576));
         
+        ///this.GameSession.ChangeResolution(false, Real2(808, 520));
+        
     }
 
     function OnLogicUpdate(event : UpdateEvent)
