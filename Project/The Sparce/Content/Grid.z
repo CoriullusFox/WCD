@@ -101,6 +101,7 @@ class Grid : ZilchComponent
         {
             walk = this.Space.PhysicsSpace.CastSphereResults(node.WorldPos + Real3(0,0,0.5), this.NodeRadius-0.3, 1, filter).Empty();
         }
+    
         var closeToWall : Boolean = !this.Space.PhysicsSpace.CastSphereResults(node.WorldPos + Real3(0,0,0.5), this.NodeDiameter, 1, filter).Empty();
         node.Walkable = walk;
         node.CloseToWall = closeToWall;

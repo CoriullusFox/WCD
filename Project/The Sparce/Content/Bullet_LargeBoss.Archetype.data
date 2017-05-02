@@ -8,10 +8,14 @@ Cog =
 	{
 		string Name = "Bullet",
 	},
+	Archetyped = 
+	{
+		string Name = "58638be9705e178b:Bullet_LargeBoss",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-2.94868, 1.24899, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -69,6 +73,8 @@ Cog =
 	Despawn = 
 	{
 		float LifeLength = 40,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
 	BulletScript = 
 	{
@@ -98,7 +104,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1],
+				Vec3 Translation = [0, 0, -0.01],
 				Vec3 Scale = [0.25, 0.25, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -174,7 +180,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1],
+				Vec3 Translation = [0, 0, -0.01],
 				Vec3 Scale = [0.25, 0.25, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -201,11 +207,11 @@ Cog =
 			},
 			ParticleColorAnimator = 
 			{
-				Vec4 Color0 = [0.26, 0.4672, 1, 0.1],
-				Vec4 Color1 = [0.226875, 0.39435, 0.825, 0.5],
-				Vec4 Color2 = [0.184175, 0.342531, 0.695, 1],
-				Vec4 Color3 = [0.1344, 0.231168, 0.48, 1],
-				Vec4 Color4 = [0.097625, 0.208296, 0.355, 1],
+				Vec4 Color0 = [1, 0.26, 0.260444, 0.1],
+				Vec4 Color1 = [0.825, 0.226875, 0.227234, 0.5],
+				Vec4 Color2 = [0.695, 0.184175, 0.184481, 1],
+				Vec4 Color3 = [0.48, 0.1344, 0.134607, 1],
+				Vec4 Color4 = [0.355, 0.097625, 0.0977794, 1],
 			},
 			LinearParticleAnimator = 
 			{

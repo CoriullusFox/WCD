@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Animated_HorDoor",
+		string Name = "Animated_HorDoor1",
 	},
 	Archetyped = 
 	{
@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [7.37453, -5.84762, -0.000999451],
+		Vec3 Translation = [0, 5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -44,6 +44,9 @@ Cog =
 		bool Locked = false,
 		string Condition = "Chioces: EnemiesKilled, Key, None",
 		int EnemyDeathUnlockNumber = 0,
+		float RequiredEnemiesKilled = 3,
+		string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+		bool Vert = false,
 	},
 	BoxCollider = 
 	{

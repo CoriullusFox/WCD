@@ -33,11 +33,6 @@ class Despawn : ZilchComponent
         this.LifeLength -= event.Dt;
         if(this.LifeLength <= 0)
         {
-            if(this.Explode)
-            {
-                this.Space.CreateAtPosition(this.Explosion, this.Owner.Transform.Translation);
-            }
-            
             this.Owner.Destroy();
         }
     }

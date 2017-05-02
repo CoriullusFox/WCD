@@ -129,10 +129,10 @@ class Health : ZilchComponent
         }
         else
         {
-            //if(this.Player)
-                //this.Owner.PlayerAnimations.Frozen = false;
-            //else
-                //this.Owner.EnemyAnimations.Frozen = false;
+            if(this.Player)
+                this.Owner.PlayerAnimations.Frozen = false;
+            else
+                this.Owner.EnemyAnimations.Frozen = false;
         }
         
         if(healthInPercent > 100)

@@ -14,6 +14,9 @@ class AITeleportMod : ZilchComponent
     
     var Timer : Real;
     var TimerHit : Real;
+    var TpTimer : Real = 0;
+    var Once : Boolean = false;
+    var Tppos : Real3;
     function Initialize(init : CogInitializer)
     {
         this.Cooldown += 15;
@@ -36,8 +39,19 @@ class AITeleportMod : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.TpTimer -= event.Dt;
         this.Timer -= event.Dt;
         this.TimerHit -= event.Dt;
+        
+        if(this.TpTimer <= 0 && this.Once)
+        {
+            this.Once = false;
+            
+            this.Owner.Transform.Translation = this.Tppos;
+            this.Owner.EnemyAI.PathFindTimer = 0;
+            
+        }
+        
         if(this.Timer <= 0)
         {
             if(this.Teleport(this.TPRangeLarge))
@@ -83,9 +97,12 @@ class AITeleportMod : ZilchComponent
             return false;
         }
         var rand = Random();
+        this.Tppos = positions[rand.DieRoll(positions.Count)-1];
         this.Space.CreateAtPosition(Archetype.TeleEffect, this.Owner.Transform.Translation);
-        this.Owner.Transform.Translation = positions[rand.DieRoll(positions.Count)-1];
-        this.Owner.EnemyAI.PathFindTimer = 0;
+        this.Space.CreateAtPosition(Archetype.TeleEffect2, this.Tppos);
+        this.Owner.Transform.Translation = Real3 (999,999,999);
+        this.TpTimer = 1;
+        this.Once = true;
         return true;
     }
 }

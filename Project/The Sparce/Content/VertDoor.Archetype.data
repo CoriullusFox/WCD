@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [9.61616, -6.12428, -0.000999451],
+		Vec3 Translation = [-5, 2.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -44,6 +44,9 @@ Cog =
 		bool Locked = false,
 		string Condition = "Chioces: EnemiesKilled, Key, None",
 		int EnemyDeathUnlockNumber = 0,
+		float RequiredEnemiesKilled = 3,
+		string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
+		bool Vert = true,
 	},
 	BoxCollider = 
 	{

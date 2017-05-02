@@ -67,7 +67,14 @@ class Beam : ZilchComponent
         if(this.Extend)
         {
             this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
-            this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
+            if(this.Owner.Sprite.Color.W > 0.1)
+            {
+                this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
+            }
+            else
+            {
+                this.Owner.Sprite.Color -= Real4(0,0,0,0);
+            }
         }
     }
 }

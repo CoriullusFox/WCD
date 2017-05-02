@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [13.9995, -11.4665, 0.0343571],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -94,7 +94,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -113,7 +113,7 @@ Cog =
 		float Energy = 100,
 		float CooldownMax = 0.5,
 		bool Player = false,
-		float BulletSpeed = 25,
+		float BulletSpeed = 7,
 		float LifeLength = 6,
 		float CamZoom = 0,
 	},

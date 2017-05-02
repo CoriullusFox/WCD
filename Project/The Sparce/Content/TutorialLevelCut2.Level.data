@@ -62,8 +62,8 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Fill,
-			Vec2 Resolution = [1280, 720],
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [1920, 1080],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [81.4055, -0.531076, 14.3483],
+			Vec3 Translation = [-0.0433835, 0.84791, 18.3465],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0803,
+			float Size = 20.1897,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 15.0597,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [81.4055, -0.531076, -0.711388],
+			Vec3 LookTarget = [-0.0433835, 0.84791, 3.28681],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -147,7 +147,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [2.6692, -2.45537, 7.74495],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -223,7 +223,7 @@ Level =
 		{
 			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.00078505, -0.000726755, -0.0385317, 0.999257],
+			Quat Rotation = [-0.000827219, -0.00067837, -0.0983856, 0.995148],
 		},
 		Sprite = 
 		{
@@ -355,9 +355,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.57321, 0.235707, 0.05],
+			Vec3 Translation = [5.78418, 0.235707, 0.05],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, -0.372939, 0.927856],
+			Quat Rotation = [0, 0, -0.700547, 0.713607],
 		},
 		Sprite = 
 		{
@@ -383,7 +383,7 @@ Level =
 			AnimPlayMode PlayMode = PlayOnce,
 			float TimeScale = 1,
 			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 4048df073e800000,
+			uint64 DebugPreviewId = 598db8610955b3c9,
 		},
 		SimpleAnimation = 
 		{
@@ -403,9 +403,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.17624, 0.0423851, 0.05],
+			Vec3 Translation = [-8.11409, 0.0423851, 0.05],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, -0.0540607, 0.998538],
+			Quat Rotation = [0, 0, -0.0131412, 0.999914],
 		},
 		Sprite = 
 		{
@@ -451,9 +451,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.95748, 3.96828, 0.05],
+			Vec3 Translation = [8.93624, 3.03178, 0.05],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0.0688309, 0.0406037, -0.85855, 0.506463],
+			Quat Rotation = [-0.0164374, 0.0782059, 0.205029, 0.975488],
 		},
 		Sprite = 
 		{
@@ -501,7 +501,7 @@ Level =
 		{
 			Vec3 Translation = [6.18851, -4.60551, 0.05],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, -0.0225526, 0.999746],
+			Quat Rotation = [0, 0, 0.976073, 0.217444],
 		},
 		Sprite = 
 		{
@@ -547,9 +547,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.48532, 5.17918, 0.05],
+			Vec3 Translation = [-6.5531, 4.43341, 0.05],
 			Vec3 Scale = [1.29777, 1.29777, 1.29777],
-			Quat Rotation = [0, 0, -0.0827922, 0.996567],
+			Quat Rotation = [0, 0, -0.0965725, 0.995326],
 		},
 		Sprite = 
 		{
@@ -629,6 +629,76 @@ Level =
 		{
 			string AnimationName = "59a870ffd7253811:ast6",
 			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "Background_Earth",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.49459, 4.77608, -0.001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5863a33038a58995:Background_Earth",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "Background_Moon",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.98786, -6.51199, -0.001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5863a33038a5cff6:Background_Moon",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

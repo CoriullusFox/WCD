@@ -1,0 +1,86 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Teleporting Effect",
+	},
+	Archetyped = 
+	{
+		string Name = "598dd87f3fdf9032:TeleEffect2",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [9.58938, -10.8342, 0.0343575],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteParticleSystem = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		SystemChildMode ChildMode = Independent,
+		SystemSpace SystemSpace = WorldSpace,
+		uint DrawOrder = 0,
+		float WarmUpTime = 0,
+		ParticleGeometry GeometryMode = Billboarded,
+		ParticleRenderMode RenderMode = Blended,
+		ParticleSortMode SortMode = Youngest,
+		ParticleAnimation ParticleAnimation = Single,
+		string Texture = "58511bfa7a796e09:Particle_Muzzle",
+		Vec4 Tint = [1, 1, 1, 1],
+		float VelocityScale = 1,
+		float LengthScale = 1,
+		float MaxParticleSize = 1,
+		Vec3 SystemSize = [2, 2, 2],
+	},
+	SphericalParticleEmitter = 
+	{
+		bool Active = true,
+		uint EmitCount = 10000,
+		float EmitRate = 10000,
+		float EmitVariance = 0,
+		float Size = 0.1,
+		float SizeVariance = 0.1,
+		float Lifetime = 0.5,
+		float LifetimeVariance = 0.2,
+		float Spin = 0,
+		float SpinVariance = 0,
+		bool RandomSpin = false,
+		float Fill = 1,
+		float EmitterVelocityPercent = 0,
+		Vec3 StartVelocity = [0, 0, 0],
+		Vec3 RandomVelocity = [5, 5, 0],
+		Vec3 TangentVelocity = [0, 0, 0],
+		Vec3 EmitterSize = [0, 0, 0],
+		bool FastMovingEmitter = true,
+	},
+	LinearParticleAnimator = 
+	{
+		Vec3 Force = [0, 0, 0],
+		Vec3 RandomForce = [1, 1, 0],
+		float Torque = 0,
+		float Growth = -0.1,
+		float Dampening = 1,
+		Vec3 Twist = [0, 0, 0],
+	},
+	ParticleColorAnimator = 
+	{
+		Vec4 Color0 = [0, 0.713567, 0.755, 0.5],
+		Vec4 Color1 = [0, 0.808079, 0.855, 0.75],
+		Vec4 Color2 = [0, 0.876994, 0.93, 1],
+		Vec4 Color3 = [0, 0.943005, 1, 0.75],
+		Vec4 Color4 = [0, 0.55251, 0.756863, 0.5],
+	},
+	Despawn = 
+	{
+		float LifeLength = 3,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
+	},
+},

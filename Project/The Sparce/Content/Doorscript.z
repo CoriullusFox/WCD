@@ -71,14 +71,17 @@ class Doorscript : ZilchComponent
         
         if(this.Ginit)
         {
+            Console.WriteLine("Ginit");
             this.Ginit = false;
             if(this.Vert)
             {
+                Console.WriteLine("Vert");
                 this.G1 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(0, 0, 0.5));
                 this.G2 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(0, 0, -0.5));
             }
             else
             {
+                Console.WriteLine("Hor");
                 this.G1 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(0.5, 0, 0));
                 this.G2 = this.Space.FindObjectByName("PlayerSpawnPoint").Grid.NodeFromWorldPos(this.Owner.Transform.Translation + Real3(-0.5, 0, 0));
             }
@@ -134,15 +137,23 @@ class Doorscript : ZilchComponent
         {
             this.Owner.Sprite.SpriteSource = this.LockedVisual;
             this.Once = true;
+            
             this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G1, true, false);
             this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G2, true, false);
+            
         }
         else if(this.Once)
         {
+            this.Owner.BoxCollider.Ghost = false;
+            this.Owner.BoxCollider.SendsEvents = true;
             this.Owner.Sprite.SpriteSource = this.DoorClosing;
+            this.Owner.Sprite.CurrentFrame = 13;
+            this.Owner.Sprite.AnimationActive = true;
             this.Once = false;
+            
             this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G1, true, true);
             this.Space.FindObjectByName("PlayerSpawnPoint").Grid.UpdateGrid(this.G2, true, true);
+            
         }
         
         if(this.EntityDetected)
@@ -151,6 +162,7 @@ class Doorscript : ZilchComponent
             {
                 if(!this.Locked)
                 {
+                    Console.WriteLine("hi");
                     this.Owner.BoxCollider.Ghost = true;
                     this.Owner.BoxCollider.SendsEvents = false;
                     this.Owner.Sprite.CurrentFrame = 0;
