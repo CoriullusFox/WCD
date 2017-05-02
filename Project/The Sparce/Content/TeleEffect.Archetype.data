@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [7.15013, 5.8204, 0.0343575],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,8 +42,8 @@ Cog =
 	SphericalParticleEmitter = 
 	{
 		bool Active = true,
-		uint EmitCount = 2000,
-		float EmitRate = 10000,
+		uint EmitCount = 20,
+		float EmitRate = 100,
 		float EmitVariance = 0,
 		float Size = 0.1,
 		float SizeVariance = 0.1,
@@ -55,7 +55,7 @@ Cog =
 		float Fill = 1,
 		float EmitterVelocityPercent = 0,
 		Vec3 StartVelocity = [0, 0, 0],
-		Vec3 RandomVelocity = [5, 5, 0],
+		Vec3 RandomVelocity = [3, 2, 0],
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
 		bool FastMovingEmitter = true,
@@ -66,7 +66,7 @@ Cog =
 		Vec3 RandomForce = [1, 1, 0],
 		float Torque = 0,
 		float Growth = -0.1,
-		float Dampening = 1,
+		float Dampening = 2,
 		Vec3 Twist = [0, 0, 0],
 	},
 	ParticleColorAnimator = 
@@ -80,5 +80,256 @@ Cog =
 	Despawn = 
 	{
 		float LifeLength = 0.75,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Teleporting Effect",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [4.76837e-007, -1.90735e-006, -4.84288e-008],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteParticleSystem = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				SystemChildMode ChildMode = Independent,
+				SystemSpace SystemSpace = WorldSpace,
+				uint DrawOrder = 0,
+				float WarmUpTime = 0,
+				ParticleGeometry GeometryMode = Billboarded,
+				ParticleRenderMode RenderMode = Blended,
+				ParticleSortMode SortMode = Youngest,
+				ParticleAnimation ParticleAnimation = Single,
+				string Texture = "58511bfa7a796e09:Particle_Muzzle",
+				Vec4 Tint = [1, 1, 1, 1],
+				float VelocityScale = 1,
+				float LengthScale = 1,
+				float MaxParticleSize = 1,
+				Vec3 SystemSize = [2, 2, 2],
+			},
+			SphericalParticleEmitter = 
+			{
+				bool Active = true,
+				uint EmitCount = 20,
+				float EmitRate = 100,
+				float EmitVariance = 0,
+				float Size = 0.1,
+				float SizeVariance = 0.1,
+				float Lifetime = 0.5,
+				float LifetimeVariance = 0.2,
+				float Spin = 0,
+				float SpinVariance = 0,
+				bool RandomSpin = false,
+				float Fill = 1,
+				float EmitterVelocityPercent = 0,
+				Vec3 StartVelocity = [0, 3, 0],
+				Vec3 RandomVelocity = [0, 1.5, 0],
+				Vec3 TangentVelocity = [0, 0, 0],
+				Vec3 EmitterSize = [0, 0, 0],
+				bool FastMovingEmitter = true,
+			},
+			LinearParticleAnimator = 
+			{
+				Vec3 Force = [0, 0, 0],
+				Vec3 RandomForce = [1, 1, 0],
+				float Torque = 0,
+				float Growth = -0.1,
+				float Dampening = 1,
+				Vec3 Twist = [0, 0, 0],
+			},
+			ParticleColorAnimator = 
+			{
+				Vec4 Color0 = [0.62865, 0.97017, 0.99, 0.5],
+				Vec4 Color1 = [0.79325, 0.941398, 0.95, 0.75],
+				Vec4 Color2 = [1, 1, 1, 1],
+				Vec4 Color3 = [0.7663, 0.95839, 0.97, 0.75],
+				Vec4 Color4 = [0.4296, 0.769342, 0.895, 0.5],
+			},
+			Despawn = 
+			{
+				float LifeLength = 0.75,
+				bool Explode = false,
+				string Explosion = "58620f152fd63a17:BulletExplosion",
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Teleporting Effect",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [4.76837e-007, -1.90735e-006, -4.84288e-008],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteParticleSystem = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				SystemChildMode ChildMode = Independent,
+				SystemSpace SystemSpace = WorldSpace,
+				uint DrawOrder = 0,
+				float WarmUpTime = 0,
+				ParticleGeometry GeometryMode = Billboarded,
+				ParticleRenderMode RenderMode = Blended,
+				ParticleSortMode SortMode = Youngest,
+				ParticleAnimation ParticleAnimation = Single,
+				string Texture = "58511bfa7a796e09:Particle_Muzzle",
+				Vec4 Tint = [1, 1, 1, 1],
+				float VelocityScale = 1,
+				float LengthScale = 1,
+				float MaxParticleSize = 1,
+				Vec3 SystemSize = [2, 2, 2],
+			},
+			SphericalParticleEmitter = 
+			{
+				bool Active = true,
+				uint EmitCount = 20,
+				float EmitRate = 100,
+				float EmitVariance = 0,
+				float Size = 0.1,
+				float SizeVariance = 0.1,
+				float Lifetime = 0.5,
+				float LifetimeVariance = 0.2,
+				float Spin = 0,
+				float SpinVariance = 0,
+				bool RandomSpin = false,
+				float Fill = 1,
+				float EmitterVelocityPercent = 0,
+				Vec3 StartVelocity = [0, 3, 0],
+				Vec3 RandomVelocity = [0, 1.5, 0],
+				Vec3 TangentVelocity = [0, 0, 0],
+				Vec3 EmitterSize = [0, 0, 0],
+				bool FastMovingEmitter = true,
+			},
+			LinearParticleAnimator = 
+			{
+				Vec3 Force = [0, 0, 0],
+				Vec3 RandomForce = [1, 1, 0],
+				float Torque = 0,
+				float Growth = -0.1,
+				float Dampening = 1,
+				Vec3 Twist = [0, 0, 0],
+			},
+			ParticleColorAnimator = 
+			{
+				Vec4 Color0 = [0.62865, 0.97017, 0.99, 0.5],
+				Vec4 Color1 = [0.79325, 0.941398, 0.95, 0.75],
+				Vec4 Color2 = [1, 1, 1, 1],
+				Vec4 Color3 = [0.7663, 0.95839, 0.97, 0.75],
+				Vec4 Color4 = [0.4296, 0.769342, 0.895, 0.5],
+			},
+			Despawn = 
+			{
+				float LifeLength = 0.75,
+				bool Explode = false,
+				string Explosion = "58620f152fd63a17:BulletExplosion",
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "Teleporting Effect",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [4.76837e-007, -1.90735e-006, -4.84288e-008],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteParticleSystem = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				SystemChildMode ChildMode = Independent,
+				SystemSpace SystemSpace = WorldSpace,
+				uint DrawOrder = 0,
+				float WarmUpTime = 0,
+				ParticleGeometry GeometryMode = Billboarded,
+				ParticleRenderMode RenderMode = Blended,
+				ParticleSortMode SortMode = Youngest,
+				ParticleAnimation ParticleAnimation = Single,
+				string Texture = "5844c6737a078722:Particle_Burst_Anim",
+				Vec4 Tint = [1, 1, 1, 1],
+				float VelocityScale = 1,
+				float LengthScale = 1,
+				float MaxParticleSize = 1,
+				Vec3 SystemSize = [2, 2, 2],
+			},
+			SphericalParticleEmitter = 
+			{
+				bool Active = true,
+				uint EmitCount = 1,
+				float EmitRate = 50000,
+				float EmitVariance = 0,
+				float Size = 1,
+				float SizeVariance = 0.1,
+				float Lifetime = 0.2,
+				float LifetimeVariance = 0.2,
+				float Spin = 0,
+				float SpinVariance = 0,
+				bool RandomSpin = false,
+				float Fill = 1,
+				float EmitterVelocityPercent = 0,
+				Vec3 StartVelocity = [0, 0, 0],
+				Vec3 RandomVelocity = [0, 0, 0],
+				Vec3 TangentVelocity = [0, 0, 0],
+				Vec3 EmitterSize = [0, 0, 0],
+				bool FastMovingEmitter = true,
+			},
+			LinearParticleAnimator = 
+			{
+				Vec3 Force = [0, 0, 0],
+				Vec3 RandomForce = [1, 1, 0],
+				float Torque = 0,
+				float Growth = -0.1,
+				float Dampening = 1,
+				Vec3 Twist = [0, 0, 0],
+			},
+			ParticleColorAnimator = 
+			{
+				Vec4 Color0 = [0.62865, 0.97017, 0.99, 0.5],
+				Vec4 Color1 = [0.79325, 0.941398, 0.95, 0.75],
+				Vec4 Color2 = [1, 1, 1, 1],
+				Vec4 Color3 = [0.7663, 0.95839, 0.97, 0.75],
+				Vec4 Color4 = [0.4296, 0.769342, 0.895, 0.5],
+			},
+			Despawn = 
+			{
+				float LifeLength = 0.75,
+				bool Explode = false,
+				string Explosion = "58620f152fd63a17:BulletExplosion",
+			},
+		},
 	},
 },

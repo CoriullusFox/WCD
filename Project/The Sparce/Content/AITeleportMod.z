@@ -47,6 +47,7 @@ class AITeleportMod : ZilchComponent
         {
             this.Once = false;
             
+            this.Space.CreateAtPosition(Archetype.TeleEffect, this.Tppos + Real3(0,0,0.1));
             this.Owner.Transform.Translation = this.Tppos;
             this.Owner.EnemyAI.PathFindTimer = 0;
             
@@ -98,8 +99,8 @@ class AITeleportMod : ZilchComponent
         }
         var rand = Random();
         this.Tppos = positions[rand.DieRoll(positions.Count)-1];
-        this.Space.CreateAtPosition(Archetype.TeleEffect, this.Owner.Transform.Translation);
-        this.Space.CreateAtPosition(Archetype.TeleEffect2, this.Tppos);
+        this.Space.CreateAtPosition(Archetype.TeleEffect, this.Owner.Transform.Translation + Real3(0,0,0.1));
+        this.Space.CreateAtPosition(Archetype.TeleEffect2, this.Tppos + Real3(0,0,0.1));
         this.Owner.Transform.Translation = Real3 (999,999,999);
         this.TpTimer = 1;
         this.Once = true;

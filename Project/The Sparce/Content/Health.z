@@ -131,7 +131,7 @@ class Health : ZilchComponent
         {
             if(this.Player)
                 this.Owner.PlayerAnimations.Frozen = false;
-            else
+            else if (this.Owner.EnemyAnimations != null)
                 this.Owner.EnemyAnimations.Frozen = false;
         }
         
@@ -165,14 +165,14 @@ class Health : ZilchComponent
         // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
         if(this.ConfiguredHealth <= 0)
         {
-            if(this.Player)
+            if(this.Player && !this.LevelSettings.DebugMode.DubugModeEnabled)
             {
                 //Death screen
                 var toSend = PlayerDeath();
                 this.GameSession.DispatchEvent(Events.PlayerDeath, toSend);
                 this.Space.TimeSpace.Paused = true;
             }
-            else
+            else if(!this.Player)
             {
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("PigSFX_KillPig"));
                 

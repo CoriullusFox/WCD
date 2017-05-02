@@ -56,7 +56,7 @@ class Teleporter : ZilchComponent
             {
                 if(!this.RanOnce)
                 {
-                    this.Space.CreateAtPosition(this.TeleportingEffect, this.Owner.Transform.Translation);
+                    this.Space.CreateAtPosition(this.TeleportingEffect, this.Owner.Transform.Translation + Real3(0,0,0.1));
                     
                     this.RanOnce = true;
                 }
@@ -70,6 +70,7 @@ class Teleporter : ZilchComponent
                 if(this.CoolDown >= this.CoolDownMax)
                 {
                     //Set player's position to Position
+                    this.Space.CreateAtPosition(this.TeleportingEffect, this.Position.Cog.Transform.Translation + Real3(0,0,0.1));
                     player.Transform.Translation = this.Position.Cog.Transform.Translation;
                     player.Sprite.Visible = true;
                     player.FindChildByName("Weapon").Sprite.Visible = true;
