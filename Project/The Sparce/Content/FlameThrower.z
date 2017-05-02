@@ -88,6 +88,7 @@ class FlameThrower : ZilchComponent
             if(this.Bullet != null)
             {
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, Real3(0,0,0));
+                this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_Flamethrower"));
                 
                 if(createdBullet != null)
                 {

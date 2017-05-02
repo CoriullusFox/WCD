@@ -18,7 +18,7 @@ class BossMissile : ZilchComponent
         
         for (var i = 0; i < amount; ++i)
         {
-            
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_RocketLaunch"));
             var bullet = this.Space.CreateAtPosition(Archetype.Missile, this.Owner.Transform.Translation);
             if(bullet != null)
             {
