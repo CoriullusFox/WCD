@@ -56,6 +56,8 @@ class Teleporter : ZilchComponent
             {
                 if(!this.RanOnce)
                 {
+                    this.Space.SoundSpace.PlayCue(SoundCue.Find("Environment_Appear"));
+                    
                     this.Space.CreateAtPosition(this.TeleportingEffect, this.Owner.Transform.Translation + Real3(0,0,0.1));
                     
                     this.RanOnce = true;
