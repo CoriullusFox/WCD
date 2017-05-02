@@ -15,19 +15,19 @@ class SplashScreenTimeout : ZilchComponent
 {
     
     [Property]
-    var EnableFadeEffect : Boolean = true;
-    
+    var EnableFadeEffect    : Boolean   = true;
     [Property]
-    var NextLevel : Level = Level.MainMenu;
-    
+    var UserCanSkip         : Boolean   = true;
     [Property]
-    var Timeout : Real = 4.0;
+    var NextLevel           : Level     = Level.MainMenu;
     [Property]
-    var FadeTime : Real = 0.25;
+    var Timeout             : Real      = 4.0;
+    [Property]
+    var FadeTime            : Real      = 0.25;
     
-    var CurrTimeout : Real = 0.0;
-    var CurrColor : Real = 0.0;
-    var StaticTime : Real = 0.0;
+    var CurrTimeout         : Real      = 0.0;
+    var CurrColor           : Real      = 0.0;
+    var StaticTime          : Real      = 0.0;
     
     function Initialize(init : CogInitializer)
     {
@@ -59,7 +59,14 @@ class SplashScreenTimeout : ZilchComponent
             
         }
         
-        if(this.CurrTimeout >= this.Timeout + 0.05)
+        var userPressedSkipKey = false;
+        
+        if(this.UserCanSkip && (Zero.Keyboard.KeyIsReleased(Keys.Tab) || Zero.Mouse.IsButtonDown(MouseButtons.Left)))
+        {
+            userPressedSkipKey = true;
+        }
+        
+        if(this.CurrTimeout >= this.Timeout + 0.05 || userPressedSkipKey)
         {
             this.Space.LoadLevel(Level.MainMenu);
         }
