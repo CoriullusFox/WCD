@@ -141,7 +141,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [19.6148, -1.02059, 50],
+			Vec3 Translation = [-0.849872, 6.55639, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -161,7 +161,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [19.6148, -1.02059, 4.03136e-006],
+			Vec3 LookTarget = [-0.849872, 6.55639, 3.13683e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -178,6 +178,206 @@ Level =
 		LinkId = 
 		{
 			uint Id = 3,
+		},
+		Named = 
+		{
+			string Name = "Floor TileSet",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "584fcb0cc574d09c:FirstLevel_TileMap00",
+			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Floor Decor TileMap",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -0.1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "58548f053492ab15:FirstLevel_TileMap04",
+			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
+			string Name = "Walls TileMap",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -0.2],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "585472dcb7194604:FirstLevel_TileMap02",
+			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "Wall Decor TileMap",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -0.1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "58547260d11fbefe:FirstLevel_TileMap03",
+			string PaletteName = "584fd7da8bf9792b:TileDecor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "Decor OverLay Tileset",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "587c0c7f479d4eae:FirstLevel_TileMap05",
+			string PaletteName = "584fd7da8bf9792b:TileDecor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -227,312 +427,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
-		},
-		Named = 
-		{
-			string Name = "Floor TileSet",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "584fcb0cc574d09c:FirstLevel_TileMap00",
-			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.2,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Named = 
-		{
-			string Name = "Floor Decor TileMap",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -0.1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "58548f053492ab15:FirstLevel_TileMap04",
-			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.2,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 6,
-		},
-		Named = 
-		{
-			string Name = "Walls TileMap",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -0.2],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "585472dcb7194604:FirstLevel_TileMap02",
-			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.2,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 7,
-		},
-		Named = 
-		{
-			string Name = "Wall Decor TileMap",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -0.1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "58547260d11fbefe:FirstLevel_TileMap03",
-			string PaletteName = "584fd7da8bf9792b:TileDecor",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.2,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "Decor OverLay Tileset",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "587c0c7f479d4eae:FirstLevel_TileMap05",
-			string PaletteName = "584fd7da8bf9792b:TileDecor",
-			float UnitsPerTile = 1,
-			float MeshThickness = 1.2,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
 			uint Id = 9,
 		},
 		Named = 
 		{
-			string Name = "Animated_HorDoor",
-		},
-		Archetyped = 
-		{
-			string Name = "585123514e9dff4f:HorDoor",
+			string Name = "Doors",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, 15, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Doorscript = 
-		{
-			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
-			float DoorAnimationSpeed = 100,
-			bool Locked = true,
-			string Condition = "EnemiesKilled",
-			int EnemyDeathUnlockNumber = 0,
-			float RequiredEnemiesKilled = 1,
-			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
-			bool Vert = false,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0.25, 0],
-			Vec3 Size = [1, 0.25, 0.5],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "Animated_VertDoor",
-		},
-		Archetyped = 
-		{
-			string Name = "585123684cf5d900:VertDoor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [5, 10.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Doorscript = 
-		{
-			string DoorOpening = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
-			string DoorClosing = "5852701e8e9813d9:Animated_VertDoor_Unlocked_Closing",
-			float DoorAnimationSpeed = 120,
-			bool Locked = true,
-			string Condition = "EnemiesKilled",
-			int EnemyDeathUnlockNumber = 0,
-			float RequiredEnemiesKilled = 3,
-			string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
-			bool Vert = false,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.15, 1.5, 0.5],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Named = 
-		{
-			string Name = "Labels",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [22.1345, 40.3622, 4.14151e-006],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -542,19 +445,23 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 12,
+					uint Id = 10,
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [40, -35, 0],
+					Vec3 Translation = [-43.1345, -38.3622, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -564,12 +471,157 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [27.8655, -48.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 12,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-26.1345, -25.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -580,15 +632,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-10.5, 32.5, 0],
+					Vec3 Translation = [-16.1345, -1.3622, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -598,12 +654,35 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Med Bay",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -614,15 +693,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-40, -37, 0],
+					Vec3 Translation = [-22.1345, -35.3622, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -632,12 +715,35 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "loading Bay",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -648,15 +754,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [40, 2, 0],
+					Vec3 Translation = [8.8655, -53.3622, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -666,12 +776,35 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Easter Egg",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -682,15 +815,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-14.5, 10.5, 0],
+					Vec3 Translation = [3.8655, 0.637798, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -700,12 +837,35 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Lobby",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -716,15 +876,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-42.5, 11, 0],
+					Vec3 Translation = [-61.1345, -13.3622, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -734,12 +898,35 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Ship Bay",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -750,15 +937,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [27, 1.5, 0],
+					Vec3 Translation = [17.8655, -67.3622, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -768,12 +959,35 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Control Deck",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -784,15 +998,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [53.5, -10.5, 0],
+					Vec3 Translation = [-61.1345, -7.3622, -4.14151e-006],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -802,12 +1020,35 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Ship Bay",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
 			Cog = 
@@ -818,15 +1059,19 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "SpriteText",
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-41, -14, 0],
+					Vec3 Translation = [20, -0.500015, -2.27374e-012],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				SpriteText = 
+				Sprite = 
 				{
 					bool Visible = true,
 					bool VisibilityCulling = true,
@@ -836,14 +1081,1536 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 50,
-					string Text = "Control Deck",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 21,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-36.1345, -14.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 22,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.1345, 6.6378, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 23,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [11.8655, -26.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 24,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-69.1345, -13.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 25,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-30.1345, -67.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 26,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-11.1345, -65.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 27,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-48.1345, -67.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 28,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-47.1345, -1.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 29,
+				},
+				Named = 
+				{
+					string Name = "Animated_HorDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123514e9dff4f:HorDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [19.8655, -11.3622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+					string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 100,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0.25, 0],
+					Vec3 Size = [1, 0.25, 0.5],
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 30,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-57.1345, -73.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 31,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-39.1345, -40.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 32,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-17.1345, -41.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 33,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-33.1345, -29.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 34,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-9.1345, -79.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 35,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.8655, -18.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 36,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [14.8655, -44.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 37,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-38.1345, 2.1378, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 38,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-39.1345, -63.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 39,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.865499, -69.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 40,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-27.1345, -47.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 41,
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123684cf5d900:VertDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-23.1345, -21.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+					string DoorClosing = "5852701e8e9813d9:Animated_VertDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 120,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.15, 1.5, 0.5],
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 42,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-39.1345, -49.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 43,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-33.1345, -29.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 44,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.8655, -25.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 45,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-17.1345, -41.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 46,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [34.8655, -44.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 47,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.8655, -38.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 48,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-17.1345, -29.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 49,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [14.8655, -32.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 50,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-72.1345, -7.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 51,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-17.1345, -56.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 52,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-51.1345, -46.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 53,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.8655, 5.1378, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 54,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.8655, -5.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 55,
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+				Archetyped = 
+				{
+					string Name = "585123684cf5d900:VertDoor",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.1345, -47.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Doorscript = 
+				{
+					string DoorOpening = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+					string DoorClosing = "5852701e8e9813d9:Animated_VertDoor_Unlocked_Closing",
+					float DoorAnimationSpeed = 120,
+					bool Locked = false,
+					string Condition = "Chioces: EnemiesKilled, Key, None",
+					int EnemyDeathUnlockNumber = 0,
+					float RequiredEnemiesKilled = 3,
+					string LockedVisual = "",
+					bool Vert = false,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.15, 1.5, 0.5],
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 56,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [34.8655, -21.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 57,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.865499, -80.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 58,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-27.1345, -79.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 59,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-66.1345, 7.1378, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 60,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-72.1345, 4.1378, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 61,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [14.8655, -63.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 62,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-53.1345, -34.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 63,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-39.1345, -18.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 64,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-27.1345, -37.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 65,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-19.1345, 3.1378, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 66,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-27.1345, -55.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 67,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-56.1345, -9.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 68,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-47.1345, -25.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 69,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-9.1345, -70.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 70,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-13.1345, 4.1378, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "585123684cf5d900:VertDoor",
+				LinkId = 
+				{
+					uint Id = 71,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [34.8655, -33.8622, -4.14151e-006],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Animated_VertDoor",
+				},
+			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 72,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.56556, 10.557, 3.8147e-006],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 73,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8.32769, -1.3323, 3.8147e-006],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 74,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.4693, -10.3255, 3.8147e-006],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 75,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [22.6149, 9.39852, 3.8147e-006],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 76,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [30.0228, -7.18547, 3.8147e-006],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585facb807e69906:Entity_Enemy_Stealth",
+		LinkId = 
+		{
+			uint Id = 77,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [32.614, 9.18512, 3.8147e-006],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },

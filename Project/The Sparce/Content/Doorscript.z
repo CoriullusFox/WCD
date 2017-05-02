@@ -130,8 +130,6 @@ class Doorscript : ZilchComponent
             this.Locked = false;
         }
         
-        Console.WriteLine(this.G1.WorldPos);
-        
         if(this.Locked)
         {
             this.Owner.Sprite.SpriteSource = this.LockedVisual;

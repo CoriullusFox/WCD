@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "HologramLogic",
+		uint64 ResourceId = 59856522664c9df7,
+	},
+},
