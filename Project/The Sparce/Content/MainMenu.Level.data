@@ -127,7 +127,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897,
+			float Size = 16.5299,
 		},
 		EditorCameraController = 
 		{
@@ -190,26 +190,27 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 7, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [0, 5, 0],
+			Vec3 Scale = [5, 5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.22425, 0, 0.345, 1],
-			BlendMode BlendMode = Additive,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
-			uint FontSize = 150,
-			string Text = "The Sparce",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 35,
-			bool Smoothing = false,
+			string SpriteSource = "586848777033c99f:Logo_Sparce",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 	Cog = 
@@ -366,7 +367,7 @@ Level =
 				},
 				ButtonLevelChange = 
 				{
-					string Level = "584fedc2561f6c6e:TutorialLevel",
+					string Level = "587df8cacd0a97cf:TutorialLevelCut1",
 				},
 				Hierarchy = 
 				{

@@ -21,15 +21,17 @@ class SplashScreenTimeout : ZilchComponent
     var NextLevel : Level = Level.MainMenu;
     
     [Property]
-    var Timeout : Real = 1.0;
+    var Timeout : Real = 4.0;
     [Property]
     var FadeTime : Real = 0.25;
     
     var CurrTimeout : Real = 0.0;
     var CurrColor : Real = 0.0;
+    var StaticTime : Real = 0.0;
     
     function Initialize(init : CogInitializer)
     {
+        this.StaticTime = this.Timeout - (this.FadeTime * 2);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
@@ -39,21 +41,25 @@ class SplashScreenTimeout : ZilchComponent
         
         if(this.EnableFadeEffect)
         {
+            
             var color = this.Owner.Sprite.Color;
-            if(this.CurrTimeout <= this.Timeout / this.FadeTime)
+            
+            if(this.CurrTimeout < this.Timeout - this.StaticTime)
             {
-                this.CurrColor = Math.Lerp(this.CurrColor, 1.0, event.Dt * this.Timeout * this.FadeTime);
+                this.CurrColor = Math.Lerp(this.CurrColor, 1.0, event.Dt * this.FadeTime);
             }
-            else
+            else if(this.CurrTimeout > this.Timeout - this.FadeTime)
             {
-                this.CurrColor = Math.Lerp(this.CurrColor, 0.0, event.Dt * this.Timeout * this.FadeTime);
+                this.CurrColor = Math.Lerp(this.CurrColor, 0.0, event.Dt * this.FadeTime);
             }
+            
             Console.WriteLine(this.CurrColor);
+            
             this.Owner.Sprite.Color = Real4(color.W, color.X, color.Y, this.CurrColor);
             
         }
         
-        if(this.CurrTimeout >= this.Timeout)
+        if(this.CurrTimeout >= this.Timeout + 0.05)
         {
             this.Space.LoadLevel(Level.MainMenu);
         }
