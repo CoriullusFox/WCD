@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.98806, -1.59634, 49.4573],
+			Vec3 Translation = [-4.06731, -0.365762, 49.4573],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.98806, -1.59634, -0.542691],
+			Vec3 LookTarget = [-4.06731, -0.365762, -0.542691],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -216,7 +216,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "Minigun",
+			string Unlocked = "FreezeRay",
 		},
 		Hierarchy = 
 		{
