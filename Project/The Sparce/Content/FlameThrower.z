@@ -34,7 +34,7 @@ class FlameThrower : ZilchComponent
     var Player : Boolean = false;
     
     [Property]
-    var CamZoom : Real = 22.5;
+    var CamZoom : Real = 20.0;
     
     [Property]
     var LifeLength : Real = 0.5;

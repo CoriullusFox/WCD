@@ -46,7 +46,7 @@ class Shotgun : ZilchComponent
     var LifeLength : Real = 0.35;
     
     [Property]
-    var CamZoom : Real = 10;
+    var CamZoom : Real = 18;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);

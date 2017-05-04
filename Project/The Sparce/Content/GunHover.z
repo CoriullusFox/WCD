@@ -1,0 +1,24 @@
+class GunHover : ZilchComponent
+{
+    [Property]
+    var Speed : Real = 1.0;
+    
+    [Property]
+    var HalfHeight : Real = 0.5;
+    
+    var OriginalLocation : Real3 = Real3();
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        this.OriginalLocation = this.Owner.Transform.WorldTranslation;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var hoverHeight = Math.Sin(event.TimePassed * this.Speed) * this.HalfHeight;
+        
+        this.Owner.Transform.WorldTranslation = this.OriginalLocation + Real3(0, hoverHeight, 0);
+    }
+}

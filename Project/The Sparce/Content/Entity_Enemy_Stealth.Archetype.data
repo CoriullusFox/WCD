@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [4.75802, -12.5809, 0],
+		Vec3 Translation = [-3.54566, 11.5385, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -46,6 +46,9 @@ Cog =
 		bool Pathfind = true,
 		bool Debug = false,
 		float ResponceTime = 2,
+		float WaunderRange = 2.5,
+		float WaunderCooldown = 5,
+		float Cooldown = 5,
 	},
 	BoxCollider = 
 	{
@@ -83,6 +86,7 @@ Cog =
 		float RegenRate = 0.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
+		float RegenCooldown = 1,
 	},
 	RigidBody = 
 	{
@@ -99,6 +103,6 @@ Cog =
 	EnemyToutchDamage = 
 	{
 		float SecondsBetweenDamage = 0.1,
-		float Damage = 1,
+		float Damage = 5,
 	},
 },

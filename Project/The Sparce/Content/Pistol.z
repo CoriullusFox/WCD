@@ -19,10 +19,10 @@ class Pistol : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_TinyLaser;
     
     [Property]
-    var Damage : Real = 20.0;
+    var Damage : Real = 5.0;
     
     [Property]
-    var EnergyUse : Real = 2;
+    var EnergyUse : Real = 1;
     
     [Property]
     var Energy : Real = 100;
@@ -40,7 +40,7 @@ class Pistol : ZilchComponent
     var LifeLength : Real = 1.5;
     
     [Property]
-    var CamZoom : Real = 18;
+    var CamZoom : Real = 20;
     
     var Once : Boolean = false;
     function Initialize(init : CogInitializer)

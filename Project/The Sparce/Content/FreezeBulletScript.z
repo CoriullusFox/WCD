@@ -18,7 +18,7 @@ class FreezeBulletScript : ZilchComponent
     
     var NewSpriteSouce : SpriteSource;
     
-    var FreezeTime : Real = 5;
+    var FreezeTime : Real = 3;
     
     var Damage : Real = 10;
     
