@@ -19,7 +19,7 @@ class Minigun : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_Minigun;
     
     [Property]
-    var DamagePerBullet : Real = 5;
+    var DamagePerBullet : Real = 8;
     
     [Property]
     var EnergyUse : Real = 5;

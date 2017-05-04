@@ -21,13 +21,13 @@ class Rifle : ZilchComponent
     var Damage : Real = 100;
     
     [Property]
-    var EnergyUse : Real = 25;
+    var EnergyUse : Real = 50;
     
     [Property]
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 0.8;
+    var CooldownMax : Real = 1.0;
     
     [Property]
     var Player : Boolean = false;
