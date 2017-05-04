@@ -17,8 +17,8 @@ class MuzzleFire : ZilchComponent
     [Property]
     var MuzzleFireParticle : Archetype = Archetype.Particle_MuzzleFire;
     
-    [Dependency]
-    var SpriteDirection : Movement = null;
+    var Scale               : Real3 = Real3(4, 4, 4);
+    var CurrentDirection    : Real3 = Real3(0.42, -0.08, 0) * Real3(4, 4, 4);
     
     function Initialize(init : CogInitializer)
     {
@@ -27,9 +27,46 @@ class MuzzleFire : ZilchComponent
 
     function OnFire(event : Fire)
     {
-        var currentDirection = Math.Normalize(this.Owner.PlayerShooting.Direction);
         
-        var muzzleParticle = this.Space.CreateAtPosition(this.MuzzleFireParticle, currentDirection / 2.5);
+        var selectedWeapon = this.Owner.FindChildByName("Weapon");
+        
+        if(selectedWeapon.Sprite.CurrentFrame == 5)
+        {
+            this.CurrentDirection = Real3(-0.15, -0.25, 0) * this.Scale;
+        }
+        else if(selectedWeapon.Sprite.CurrentFrame == 7)
+        {
+            this.CurrentDirection = Real3(0.38, -0.25, 0) * this.Scale;
+        }
+        else if(selectedWeapon.Sprite.CurrentFrame == 3)
+        {
+            this.CurrentDirection = Real3(-0.35, 0.1, 0) * this.Scale;
+        }
+        else if(selectedWeapon.Sprite.CurrentFrame == 1)
+        {
+            this.CurrentDirection = Real3(0.35, 0.1, 0) * this.Scale;
+        }
+        else if(selectedWeapon.Sprite.CurrentFrame == 2)
+        {
+            this.CurrentDirection = Real3(-0.35, 0.3, 0) * this.Scale;
+        }
+        else if(selectedWeapon.Sprite.CurrentFrame == 4)
+        {
+            this.CurrentDirection = Real3(-0.42, -0.08, 0) * this.Scale;
+        }
+        else if(selectedWeapon.Sprite.CurrentFrame == 6)
+        {
+            this.CurrentDirection = Real3(0.25, -0.25, 0) * this.Scale;
+        }
+        else if(selectedWeapon.Sprite.CurrentFrame == 0)
+        {
+            this.CurrentDirection = Real3(0.42, -0.08, 0) * this.Scale;
+        }
+        
+        //var currentDirection = Math.Normalize(this.Owner.PlayerShooting.Direction);
+        var currentDirection = this.Owner.Movement.CurrentDirection;
+        
+        var muzzleParticle = this.Space.CreateAtPosition(this.MuzzleFireParticle, this.CurrentDirection / 4);
         if(muzzleParticle != null)
         {
             

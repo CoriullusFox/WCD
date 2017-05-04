@@ -22,7 +22,7 @@ class Movement : ZilchComponent
     [Property]
     var EmptyRunEnergyDamage : Real = 0.1;
     //[Property]
-    var Scale : Real3 = Real3(4, 4, 4);
+    //var Scale : Real3 = Real3(4, 4, 4);
     
     // DEFAULT IS FACING DOWN
     var CurrentDirection : Real3 = Real3(0, -1, 0);
@@ -61,46 +61,46 @@ class Movement : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.RigidBody.Velocity = Real3(-0.5,-0.5,0) * r3Speed;
-            this.CurrentDirection = Real3(-0.15, -0.25, 0) * this.Scale;
+            //this.CurrentDirection = Real3(-0.15, -0.25, 0) * this.Scale;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.RigidBody.Velocity = Real3(0.5,-0.5,0) * r3Speed;
-            this.CurrentDirection = Real3(0.38, -0.25, 0) * this.Scale;
+            //this.CurrentDirection = Real3(0.38, -0.25, 0) * this.Scale;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
             this.Owner.RigidBody.Velocity = Real3(-0.5,0.5,0) * r3Speed;
-            this.CurrentDirection = Real3(-0.35, 0.1, 0) * this.Scale;
+            //this.CurrentDirection = Real3(-0.35, 0.1, 0) * this.Scale;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D) && Zero.Keyboard.KeyIsDown(Keys.W))
         {
             this.Owner.RigidBody.Velocity = Real3(0.5,0.5,0) * r3Speed;
-            this.CurrentDirection = Real3(0.35, 0.1, 0) * this.Scale;
+            //this.CurrentDirection = Real3(0.35, 0.1, 0) * this.Scale;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
             this.Owner.RigidBody.Velocity = Real3(0,1,0) * r3Speed;
-            this.CurrentDirection = Real3(-0.35, 0.3, 0) * this.Scale;
+            //this.CurrentDirection = Real3(-0.35, 0.3, 0) * this.Scale;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.A))
         {
             this.Owner.RigidBody.Velocity = Real3(-1,0,0) * r3Speed;
-            this.CurrentDirection = Real3(-0.42, -0.08, 0) * this.Scale;
+            //this.CurrentDirection = Real3(-0.42, -0.08, 0) * this.Scale;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.S))
         {
             this.Owner.RigidBody.Velocity = Real3(0,-1,0) * r3Speed;
-            this.CurrentDirection = Real3(0.25, -0.25, 0) * this.Scale;
+            //this.CurrentDirection = Real3(0.25, -0.25, 0) * this.Scale;
         }
         else if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
             this.Owner.RigidBody.Velocity = Real3(1,0,0) * r3Speed;
-            this.CurrentDirection = Real3(0.42, -0.08, 0) * this.Scale;
+            //this.CurrentDirection = Real3(0.42, -0.08, 0) * this.Scale;
         }
         else
         {
-            this.Owner.RigidBody.Velocity = Real3(0,0,0) * this.Scale;
+            this.Owner.RigidBody.Velocity = Real3(0,0,0);
         }
         
     }
