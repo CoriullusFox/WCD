@@ -144,8 +144,7 @@ class Doorscript : ZilchComponent
         }
         else if(this.Once)
         {
-            this.Owner.BoxCollider.Ghost = false;
-            this.Owner.BoxCollider.SendsEvents = true;
+            this.Owner.AddComponentByName("BoxCollider");
             this.Owner.Sprite.SpriteSource = this.DoorClosing;
             this.Owner.Sprite.CurrentFrame = 13;
             this.Owner.Sprite.AnimationActive = true;
@@ -163,8 +162,7 @@ class Doorscript : ZilchComponent
                 if(!this.Locked)
                 {
                     Console.WriteLine("hi");
-                    this.Owner.BoxCollider.Ghost = true;
-                    this.Owner.BoxCollider.SendsEvents = false;
+                    this.Owner.RemoveComponentByName("BoxCollider");
                     this.Owner.Sprite.CurrentFrame = 0;
                     this.Owner.Sprite.SpriteSource = this.DoorOpening;
                     this.Owner.Sprite.AnimationActive = true;
@@ -173,8 +171,7 @@ class Doorscript : ZilchComponent
         }
         else if(this.Owner.Sprite.SpriteSource != this.DoorClosing)
         {
-            this.Owner.BoxCollider.Ghost = false;
-            this.Owner.BoxCollider.SendsEvents = true;
+            this.Owner.AddComponentByName("BoxCollider");
             this.Owner.Sprite.CurrentFrame = 0;
             if(!this.Locked)
             {

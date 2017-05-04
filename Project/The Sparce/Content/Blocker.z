@@ -1,0 +1,22 @@
+class Blocker : ZilchComponent
+{
+    
+    var UnlockDist : Real = 5;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var player = Real2(this.Space.FindObjectByName("TempPlayer").Transform.Translation.X, this.Space.FindObjectByName("TempPlayer").Transform.Translation.Y);
+        var blocker = Real2(this.Owner.Transform.Translation.X, this.Owner.Transform.Translation.Y);
+        if(Math.Distance(player, blocker) <= this.UnlockDist)
+        {
+            
+            this.Owner.Destroy();
+            
+        }
+    }
+}
