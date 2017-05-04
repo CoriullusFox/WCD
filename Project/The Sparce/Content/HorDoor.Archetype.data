@@ -6,15 +6,20 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Animated_HorDoor1",
+		string Name = "Animated_HorDoor",
 	},
 	Archetyped = 
 	{
 		string Name = "585123514e9dff4f:HorDoor",
 	},
+	EditorFlags = 
+	{
+		bool Locked = false,
+		bool Hidden = true,
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 5, 0],
+		Vec3 Translation = [26, 41, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},

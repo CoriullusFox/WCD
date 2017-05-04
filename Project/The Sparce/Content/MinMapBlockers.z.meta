@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "MinMapBlockers",
+		uint64 ResourceId = 598e6758e9d37eb9,
+	},
+},

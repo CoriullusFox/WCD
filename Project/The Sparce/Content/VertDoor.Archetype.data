@@ -12,9 +12,14 @@ Cog =
 	{
 		string Name = "585123684cf5d900:VertDoor",
 	},
+	EditorFlags = 
+	{
+		bool Locked = false,
+		bool Hidden = true,
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-5, 2.5, 0],
+		Vec3 Translation = [51, 21.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},

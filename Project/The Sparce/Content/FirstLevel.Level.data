@@ -123,6 +123,9 @@ Level =
 		EnemiesKilldstor = 
 		{
 		},
+		DetectVictory = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -141,9 +144,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [112.102, 109.041, -0.790348],
+			Vec3 Translation = [-15.5344, 97.6531, 30.631],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.255245, 0.520802, 0.16671, 0.797385],
+			Quat Rotation = [-0.305673, -0.0994677, -0.0321272, 0.946382],
 		},
 		Camera = 
 		{
@@ -158,10 +161,10 @@ Level =
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = Orbit,
-			float LookDistance = 150.208,
-			float VerticalAngle = 0.619593,
-			float HorizontalAngle = -1.15716,
-			Vec3 LookTarget = [0.128566, 21.8142, -49.943],
+			float LookDistance = 166.006,
+			float VerticalAngle = 0.624827,
+			float HorizontalAngle = 0.209437,
+			Vec3 LookTarget = [12.4589, 0.546622, -101.068],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -383,24 +386,12 @@ Level =
 			uint StartFrame = 0,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "585123514e9dff4f:HorDoor",
 		LinkId = 
 		{
 			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "Animated_HorDoor",
-		},
-		Archetyped = 
-		{
-			string Name = "585123514e9dff4f:HorDoor",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
 		},
 		Transform = 
 		{
@@ -408,45 +399,14 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			string Name = "Animated_HorDoor",
 		},
-		Doorscript = 
+		EditorFlags = 
 		{
-			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
-			float DoorAnimationSpeed = 100,
 			bool Locked = false,
-			string Condition = "Chioces: EnemiesKilled, Key, None",
-			int EnemyDeathUnlockNumber = 0,
-			float RequiredEnemiesKilled = 3,
-			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
-			bool Vert = false,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0.25, 0],
-			Vec3 Size = [1, 0.25, 0.5],
+			bool Hidden = true,
 		},
 	},
 	ArchetypeInstance = 
@@ -2669,19 +2629,12 @@ Level =
 			Vec3 Size = [1, 0.25, 0.5],
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
 			uint Id = 70,
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-		Archetyped = 
-		{
-			string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		},
 		Transform = 
 		{
@@ -2689,119 +2642,17 @@ Level =
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
-			uint StartFrame = 0,
-		},
-		EnemyAI = 
-		{
-			float ChaseProximity = 8,
-			float ShootProximity = 10,
-			int Speed = 80,
-			Vec3 LookDirection = [0, 1, 0],
-			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = true,
-			bool Debug = false,
-			float ResponceTime = 2,
-			float WaunderRange = 2.5,
-			float WaunderCooldown = 5,
-			float Cooldown = 5,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5800bf6d54ec0d53:Slippery",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.065, 0.09, 0.5],
-		},
-		ChangeDirectionToPointAtPlayer = 
-		{
-		},
-		EnemyAnimations = 
-		{
-			string North = "58128ac7e63298e0:EnemyNorth_Anim",
-			string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-			string East = "58128986ce447b92:EnemyEast_Anim",
-			string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-			string South = "58128b1d3c322a60:EnemySouth_Anim",
-			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-			string West = "58128bf533d431ee:EnemyWest_Anim",
-			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			float AnimationSpeed = 3,
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 75,
-			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
-			bool MiniHeathBar = true,
-			bool Player = false,
-			Vec4 HurtColor = [1, 0, 0.000599861, 1],
-			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-			float RegenRate = 0.25,
-			float MaxHealth = 75,
-			float HurtDuration = 0.1,
-			float RegenCooldown = 1,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		EnemyToutchDamage = 
-		{
-			float SecondsBetweenDamage = 0.5,
-			float Damage = 2.5,
-		},
-		Pistol = 
-		{
-			string Bullet = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
-			float Damage = 2,
-			float EnergyUse = 1,
-			float Energy = 100,
-			float CooldownMax = 0.8,
-			bool Player = false,
-			float BulletSpeed = 10,
-			float LifeLength = 5,
-			float CamZoom = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 71,
-		},
 		Named = 
 		{
 			string Name = "Enemy",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
 		{
-			string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+			uint Id = 71,
 		},
 		Transform = 
 		{
@@ -2809,119 +2660,17 @@ Level =
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
-			uint StartFrame = 0,
-		},
-		EnemyAI = 
-		{
-			float ChaseProximity = 8,
-			float ShootProximity = 10,
-			int Speed = 80,
-			Vec3 LookDirection = [0, 1, 0],
-			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = true,
-			bool Debug = false,
-			float ResponceTime = 2,
-			float WaunderRange = 2.5,
-			float WaunderCooldown = 5,
-			float Cooldown = 5,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5800bf6d54ec0d53:Slippery",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.065, 0.09, 0.5],
-		},
-		ChangeDirectionToPointAtPlayer = 
-		{
-		},
-		EnemyAnimations = 
-		{
-			string North = "58128ac7e63298e0:EnemyNorth_Anim",
-			string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-			string East = "58128986ce447b92:EnemyEast_Anim",
-			string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-			string South = "58128b1d3c322a60:EnemySouth_Anim",
-			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-			string West = "58128bf533d431ee:EnemyWest_Anim",
-			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			float AnimationSpeed = 3,
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 75,
-			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
-			bool MiniHeathBar = true,
-			bool Player = false,
-			Vec4 HurtColor = [1, 0, 0.000599861, 1],
-			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-			float RegenRate = 0.25,
-			float MaxHealth = 75,
-			float HurtDuration = 0.1,
-			float RegenCooldown = 1,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		EnemyToutchDamage = 
-		{
-			float SecondsBetweenDamage = 0.5,
-			float Damage = 2.5,
-		},
-		Pistol = 
-		{
-			string Bullet = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
-			float Damage = 2,
-			float EnergyUse = 1,
-			float Energy = 100,
-			float CooldownMax = 0.8,
-			bool Player = false,
-			float BulletSpeed = 10,
-			float LifeLength = 5,
-			float CamZoom = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 72,
-		},
 		Named = 
 		{
 			string Name = "Enemy",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
 		{
-			string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+			uint Id = 72,
 		},
 		Transform = 
 		{
@@ -2929,104 +2678,9 @@ Level =
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
-			uint StartFrame = 0,
-		},
-		EnemyAI = 
-		{
-			float ChaseProximity = 8,
-			float ShootProximity = 10,
-			int Speed = 80,
-			Vec3 LookDirection = [0, 1, 0],
-			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = true,
-			bool Debug = false,
-			float ResponceTime = 2,
-			float WaunderRange = 2.5,
-			float WaunderCooldown = 5,
-			float Cooldown = 5,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5800bf6d54ec0d53:Slippery",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.065, 0.09, 0.5],
-		},
-		ChangeDirectionToPointAtPlayer = 
-		{
-		},
-		EnemyAnimations = 
-		{
-			string North = "58128ac7e63298e0:EnemyNorth_Anim",
-			string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-			string East = "58128986ce447b92:EnemyEast_Anim",
-			string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-			string South = "58128b1d3c322a60:EnemySouth_Anim",
-			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-			string West = "58128bf533d431ee:EnemyWest_Anim",
-			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			float AnimationSpeed = 3,
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 75,
-			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
-			bool MiniHeathBar = true,
-			bool Player = false,
-			Vec4 HurtColor = [1, 0, 0.000599861, 1],
-			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-			float RegenRate = 0.25,
-			float MaxHealth = 75,
-			float HurtDuration = 0.1,
-			float RegenCooldown = 1,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		EnemyToutchDamage = 
-		{
-			float SecondsBetweenDamage = 0.5,
-			float Damage = 2.5,
-		},
-		Pistol = 
-		{
-			string Bullet = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
-			float Damage = 2,
-			float EnergyUse = 1,
-			float Energy = 100,
-			float CooldownMax = 0.8,
-			bool Player = false,
-			float BulletSpeed = 10,
-			float LifeLength = 5,
-			float CamZoom = 0,
+			string Name = "Enemy",
 		},
 	},
 	Cog = 
@@ -3148,20 +2802,51 @@ Level =
 			float LifeLength = 5,
 			float CamZoom = 0,
 		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 74,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -70],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.66],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5274db4c2e7c11f9:Circle",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 74,
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-		Archetyped = 
-		{
-			string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+			uint Id = 75,
 		},
 		Transform = 
 		{
@@ -3169,111 +2854,16 @@ Level =
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
-			uint StartFrame = 0,
-		},
-		EnemyAI = 
-		{
-			float ChaseProximity = 8,
-			float ShootProximity = 10,
-			int Speed = 80,
-			Vec3 LookDirection = [0, 1, 0],
-			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = true,
-			bool Debug = false,
-			float ResponceTime = 2,
-			float WaunderRange = 2.5,
-			float WaunderCooldown = 5,
-			float Cooldown = 5,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5800bf6d54ec0d53:Slippery",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.065, 0.09, 0.5],
-		},
-		ChangeDirectionToPointAtPlayer = 
-		{
-		},
-		EnemyAnimations = 
-		{
-			string North = "58128ac7e63298e0:EnemyNorth_Anim",
-			string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-			string East = "58128986ce447b92:EnemyEast_Anim",
-			string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-			string South = "58128b1d3c322a60:EnemySouth_Anim",
-			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-			string West = "58128bf533d431ee:EnemyWest_Anim",
-			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			float AnimationSpeed = 3,
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 75,
-			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
-			bool MiniHeathBar = true,
-			bool Player = false,
-			Vec4 HurtColor = [1, 0, 0.000599861, 1],
-			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-			float RegenRate = 0.25,
-			float MaxHealth = 75,
-			float HurtDuration = 0.1,
-			float RegenCooldown = 1,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		EnemyToutchDamage = 
-		{
-			float SecondsBetweenDamage = 0.5,
-			float Damage = 2.5,
-		},
-		Pistol = 
-		{
-			string Bullet = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
-			float Damage = 2,
-			float EnergyUse = 1,
-			float Energy = 100,
-			float CooldownMax = 0.8,
-			bool Player = false,
-			float BulletSpeed = 10,
-			float LifeLength = 5,
-			float CamZoom = 0,
+			string Name = "Enemy",
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 76,
 		},
 		Named = 
 		{
@@ -3376,21 +2966,59 @@ Level =
 			float SecondsBetweenDamage = 0.1,
 			float Damage = 1,
 		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 77,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -70],
+					Vec3 Scale = [2, 2, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.175],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5274db4c2e7c11f9:Circle",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 76,
+			uint Id = 78,
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Minimap",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.29136, 3.52833, -81.2026],
-			Vec3 Scale = [1.3, 1.3, 1],
+			Vec3 Translation = [3.36027, 3.61905, -80],
+			Vec3 Scale = [24.5, 25, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -3403,7 +3031,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "598dff10d025111e:MiniMap Base",
+			string SpriteSource = "598e6029ee47ce83:UI_MinimapBK",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -3411,12 +3039,19 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
+		MinMapBlockers = 
+		{
+			float SeeableRange = 15,
+			float Xnum = 15,
+			float Ynum = 15,
+			float Scale = 10,
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 77,
+			uint Id = 79,
 		},
 		Named = 
 		{
@@ -3449,12 +3084,12 @@ Level =
 		},
 		CameraViewport = 
 		{
-			bool Background = true,
-			Vec2 Offset = [0, 0],
-			Vec2 Size = [0.2, 0.2],
+			bool Background = false,
+			Vec2 Offset = [0.7, 0.7],
+			Vec2 Size = [0.3, 0.3],
 			int Layer = 0,
 			bool Active = true,
-			bool Blocking = true,
+			bool Blocking = false,
 			CogPath Renderer = 
 			{
 				string Path = ".",
@@ -3465,7 +3100,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 77,
+				uint ResolvedCog = 79,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3480,14 +3115,49 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 77,
+				uint ResolvedCog = 79,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			ViewportScaling Scaling = Letterbox,
 			Vec2 Resolution = [1024, 1024],
-			Vec4 MarginColor = [0.156863, 0.156863, 0.156863, 1],
+			Vec4 MarginColor = [0, 0, 0, 1],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 80,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -100],
+			Vec3 Scale = [1000, 1000, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },
