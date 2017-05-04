@@ -144,9 +144,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.625589, -6.32854, 9.13418],
+			Vec3 Translation = [187.693, 120.48, -21.0529],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, -1.09278e-008, 0, 1],
+			Quat Rotation = [-0.20959, 0.589046, 0.161697, 0.763512],
 		},
 		Camera = 
 		{
@@ -160,11 +160,11 @@ Level =
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = ZPlane,
-			float LookDistance = 9.13418,
-			float VerticalAngle = 0,
-			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.625589, -6.32854, 2.04937e-006],
+			ControlMode ControlMode = Orbit,
+			float LookDistance = 202.76,
+			float VerticalAngle = 0.535816,
+			float HorizontalAngle = -1.31423,
+			Vec3 LookTarget = [19.0557, 16.9623, -65.2939],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2689,8 +2689,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.29136, 3.52833, -81.2026],
-			Vec3 Scale = [1.3, 1.3, 1],
+			Vec3 Translation = [3.34599, 3.9485, -80],
+			Vec3 Scale = [1.52, 1.52, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -2703,13 +2703,20 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "598dff10d025111e:MiniMap Base",
+			string SpriteSource = "598e6029ee47ce83:UI_MinimapBK",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		MinMapBlockers = 
+		{
+			float SeeableRange = 8,
+			float Xnum = 15,
+			float Ynum = 15,
+			float Scale = 10,
 		},
 	},
 	Cog = 
@@ -2754,9 +2761,9 @@ Level =
 		},
 		CameraViewport = 
 		{
-			bool Background = true,
-			Vec2 Offset = [0, 0],
-			Vec2 Size = [0.2, 0.2],
+			bool Background = false,
+			Vec2 Offset = [0.7, 0.7],
+			Vec2 Size = [0.3, 0.3],
 			int Layer = 0,
 			bool Active = true,
 			bool Blocking = true,
@@ -2907,6 +2914,41 @@ Level =
 		Named = 
 		{
 			string Name = "Enemy",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 75,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -100],
+			Vec3 Scale = [1000, 1000, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },
