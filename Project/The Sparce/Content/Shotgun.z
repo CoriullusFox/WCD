@@ -22,7 +22,7 @@ class Shotgun : ZilchComponent
     var NumberOfShots : Integer = 5;
     
     [Property]
-    var DamagePerBullet : Real = 5;
+    var DamagePerBullet : Real = 10;
     
     [Property]
     var DistBetweenShots : Real = 0.1;

@@ -65,20 +65,21 @@ class WeaponSwap : ZilchComponent
     
     function OnMouseScroll(event : ViewportMouseEvent)
     {
+        
+        if(event.Scroll.Y > 0)
+        {
+            ++this.Selected;
+        }
+        else if(event.Scroll.Y < 0)
+        {
+            --this.Selected;
+        }
+        
         while(true)
         {
             
             //remove components and clamp selected
             this.RemoveComponents();
-            
-            if(event.Scroll.Y > 0)
-            {
-                ++this.Selected;
-            }
-            else if(event.Scroll.Y < 0)
-            {
-                --this.Selected;
-            }
             
             if(this.Selected > this.NumberOfWeapons - 1)
             {
@@ -253,13 +254,14 @@ class WeaponSwap : ZilchComponent
                 //this.PrevSelected = 7;
             }
             
-            if(this.Selected > this.NumberOfWeapons -1)
+            if(this.Selected > this.NumberOfWeapons - 1)
             {
                 this.Selected = 0;
                 continue;
             }
             
             break;
+            
         }
         //INSTRUCTIONS! add a new else if statement here! that looks exactly like the one above it but the name being the name of your gun component, and the boolean being the unlocked bool for your gun!
     }
