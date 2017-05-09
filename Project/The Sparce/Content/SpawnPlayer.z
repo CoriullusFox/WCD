@@ -23,6 +23,7 @@ class SpawnPlayer : ZilchComponent
         { 
             player.Transform.Translation = this.Owner.Transform.Translation;
             this.LevelSettings.CameraViewport.Camera = player.FindChildByName("Camera");
+            player.Health.ConfiguredHealth = player.Health.MaxHealth;
             
         }
     }

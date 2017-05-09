@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -63,12 +63,6 @@ Cog =
 	},
 	DebugPlayerDamage = 
 	{
-	},
-	Health = 
-	{
-		float RegenRate = 0,
-		float MaxHealth = 100,
-		float RegenCooldown = 1,
 	},
 	WeaponSwap = 
 	{
@@ -144,6 +138,19 @@ Cog =
 		int TeslaTier = 1,
 		int ChainETier = 1,
 		int FreezeTier = 1,
+	},
+	Health = 
+	{
+		float ConfiguredHealth = 100,
+		string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
+		bool MiniHeathBar = true,
+		bool Player = true,
+		Vec4 HurtColor = [1, 0, 0, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+		float RegenRate = 0.5,
+		float MaxHealth = 100,
+		float HurtDuration = 0.1,
+		float RegenCooldown = 1,
 	},
 	Hierarchy = 
 	{
