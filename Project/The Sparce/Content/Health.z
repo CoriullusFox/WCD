@@ -15,22 +15,22 @@ class Health : ZilchComponent
 {
     
     // CONFIGURABLE HEALTH PROPERTY
-    [Property]
+    [Editable]
     var ConfiguredHealth    : Real = 100.0;
     
-    [Property]
+    [Editable]
     var ArchetypeAmmoBar    : Archetype = Archetype.UI_HealthBar;
     
-    [Property]
+    [Editable]
     var MiniHeathBar        : Boolean = true;
     
-    [Property]
+    [Editable]
     var Player              : Boolean = false;
     
-    [Property]
+    [Editable]
     var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
     
-    [Property]
+    [Editable]
     var Explosion           : Archetype = Archetype.Particle_WhiteExplosion;
     
     //REGEN
@@ -42,7 +42,7 @@ class Health : ZilchComponent
     
     var FreezeTimer : Real = 0.0;
     
-    [Property]
+    [Editable]
     var HurtDuration : Real = 0.1;
     
     [Property]

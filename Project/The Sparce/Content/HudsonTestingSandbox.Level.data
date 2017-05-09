@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.06731, -0.365762, 49.4573],
+			Vec3 Translation = [-0.202743, -2.69145, 49.4573],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.9479,
+			float Size = 3.64424,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-4.06731, -0.365762, -0.542691],
+			Vec3 LookTarget = [-0.202743, -2.69145, -0.542691],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -657,6 +657,183 @@ Level =
 		Named = 
 		{
 			string Name = "Enemy",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "TripleMonitor",
+		},
+		Archetyped = 
+		{
+			string Name = "580a7760db23c84f:Decor_TripleMonitor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -2, 1],
+			Vec3 Scale = [2.5, 2.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "580a76569c6d5ecd:Decor_Monitor_3",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 17,
+				},
+				Named = 
+				{
+					string Name = "Light",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Light = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					LightType LightType = Point,
+					Vec4 Color = [1, 1, 1, 1],
+					float Intensity = 1,
+					float Range = 50,
+					float Falloff = 1,
+					float Angle = 10,
+					float Size = 20,
+				},
+				GodRayLight = 
+				{
+					GodRayLightType LightType = Point,
+					bool Active = true,
+					int Samples = 80,
+					Vec4 Color = [0, 0.43, 1, 1],
+					float Intensity = 0.5,
+					float ScreenRadius = 0.22,
+					float OccluderClarity = 0.1,
+					bool ScreenEdgeFade = false,
+					float BeginFade = -0.1,
+					float EndFade = 0.1,
+					float DepthOffset = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 18,
+				},
+				Named = 
+				{
+					string Name = "Light",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Light = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					LightType LightType = Point,
+					Vec4 Color = [1, 1, 1, 1],
+					float Intensity = 1,
+					float Range = 50,
+					float Falloff = 1,
+					float Angle = 10,
+					float Size = 20,
+				},
+				GodRayLight = 
+				{
+					GodRayLightType LightType = Point,
+					bool Active = true,
+					int Samples = 80,
+					Vec4 Color = [0, 1, 0.16, 1],
+					float Intensity = 0.68,
+					float ScreenRadius = 0.23,
+					float OccluderClarity = 0.28,
+					bool ScreenEdgeFade = false,
+					float BeginFade = -0.1,
+					float EndFade = 0.1,
+					float DepthOffset = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 19,
+				},
+				Named = 
+				{
+					string Name = "Light",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Light = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					LightType LightType = Point,
+					Vec4 Color = [1, 1, 1, 1],
+					float Intensity = 1,
+					float Range = 50,
+					float Falloff = 1,
+					float Angle = 10,
+					float Size = 20,
+				},
+				GodRayLight = 
+				{
+					GodRayLightType LightType = Point,
+					bool Active = true,
+					int Samples = 80,
+					Vec4 Color = [1, 0, 0.000599861, 1],
+					float Intensity = 0.5,
+					float ScreenRadius = 0.22,
+					float OccluderClarity = 0.1,
+					bool ScreenEdgeFade = false,
+					float BeginFade = -0.1,
+					float EndFade = 0.1,
+					float DepthOffset = 0,
+				},
+			},
 		},
 	},
 },
