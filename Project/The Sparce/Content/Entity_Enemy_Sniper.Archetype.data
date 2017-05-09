@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-3.49618, 11.7958, 0],
+		Vec3 Translation = [-41.4964, -1.53874, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -108,10 +108,10 @@ Cog =
 	Rifle = 
 	{
 		string Bullet = "587c048cf550c558:Bullet_LargeLaserEnemy",
-		float Damage = 49,
+		float Damage = 25,
 		float EnergyUse = 49,
 		float Energy = 100,
-		float CooldownMax = 3,
+		float CooldownMax = 2,
 		bool Player = false,
 		float BulletSpeed = 25,
 		float LifeLength = 3,

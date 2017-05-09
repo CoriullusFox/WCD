@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-7.56556, 10.557, 3.8147e-006],
+		Vec3 Translation = [-0.13258, 33.9031, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -47,8 +47,8 @@ Cog =
 		bool Debug = false,
 		float ResponceTime = 2,
 		float WaunderRange = 2.5,
-		float WaunderCooldown = 5,
-		float Cooldown = 5,
+		float WaunderCooldown = 4,
+		float Cooldown = 1,
 	},
 	BoxCollider = 
 	{
@@ -77,7 +77,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 75,
+		float ConfiguredHealth = 25,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
