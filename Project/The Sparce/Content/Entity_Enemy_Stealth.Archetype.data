@@ -38,7 +38,7 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 10,
+		float ChaseProximity = 7,
 		float ShootProximity = 0,
 		int Speed = 200,
 		Vec3 LookDirection = [0, 1, 0],

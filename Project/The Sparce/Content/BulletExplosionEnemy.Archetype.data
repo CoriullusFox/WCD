@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "58620f152fd63a17:BulletExplosion",
+		string Name = "599720f52330e0fc:BulletExplosionEnemy",
 	},
 	Transform = 
 	{
@@ -71,10 +71,10 @@ Cog =
 	},
 	ParticleColorAnimator = 
 	{
-		Vec4 Color0 = [0, 0.31, 1, 0.5],
-		Vec4 Color1 = [0, 0.39345, 0.915, 0.75],
-		Vec4 Color2 = [0, 0.31, 1, 1],
-		Vec4 Color3 = [0, 0.283255, 0.913726, 0.75],
-		Vec4 Color4 = [0, 0.28, 1, 0.75],
+		Vec4 Color0 = [1, 0, 0.000599861, 0.5],
+		Vec4 Color1 = [0.915, 0, 0.000548873, 0.75],
+		Vec4 Color2 = [1, 0, 0.000599861, 1],
+		Vec4 Color3 = [0.913726, 0, 0.000548109, 0.75],
+		Vec4 Color4 = [1, 0, 0.000599861, 0.75],
 	},
 },

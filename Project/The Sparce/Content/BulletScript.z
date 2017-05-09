@@ -19,6 +19,12 @@ class BulletScript : ZilchComponent
     [Property]
     var ClipThru : Boolean = false;
     
+    [Property]
+    var Explosion : Archetype = Archetype.BulletExplosion;
+    
+    [Property]
+    var ExplosionEnemy : Archetype = Archetype.BulletExplosionEnemy;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
@@ -26,8 +32,12 @@ class BulletScript : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
+        
+        
         if(this.PlayerBullet)
         {
+            this.Space.CreateAtPosition(this.Explosion, this.Owner.Transform.Translation);
+            
             if(event.OtherObject.Name != "TempPlayer" && event.OtherObject.Name != this.Owner.Name && event.OtherObject.Name != "Bullet")
             {
                 var toSend = Hurt();
@@ -40,6 +50,7 @@ class BulletScript : ZilchComponent
         }
         else
         {
+            this.Space.CreateAtPosition(this.ExplosionEnemy, this.Owner.Transform.Translation);
             
             if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != this.Owner.Name && event.OtherObject.Name != "Bullet")
             {

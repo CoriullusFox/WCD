@@ -119,7 +119,7 @@ Cog =
 	},
 	AITeleportMod = 
 	{
-		float TPRangeLarge = 4,
+		float TPRangeLarge = 3,
 		float TPRangeSmall = 2,
 	},
 	Hierarchy = 

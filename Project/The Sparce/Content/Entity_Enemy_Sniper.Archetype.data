@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5.5317, 6.44214, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 20,
+		float ChaseProximity = 10,
 		float ShootProximity = 17,
 		int Speed = 150,
 		Vec3 LookDirection = [0, 1, 0],
@@ -77,7 +77,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 25,
+		float ConfiguredHealth = 15,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,

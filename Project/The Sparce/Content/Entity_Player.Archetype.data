@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -141,7 +141,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 100,
+		float ConfiguredHealth = 200,
 		string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
 		bool MiniHeathBar = false,
 		bool Player = true,
