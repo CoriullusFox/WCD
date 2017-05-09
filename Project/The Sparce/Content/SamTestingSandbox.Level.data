@@ -119,7 +119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.480514, 0.381907, 50],
+			Vec3 Translation = [-5.92019, -3.7415, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.4064,
+			float Size = 22.1034,
 		},
 		EditorCameraController = 
 		{
@@ -139,7 +139,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.480514, 0.381907, 2.30336e-007],
+			Vec3 LookTarget = [-5.92019, -3.7415, -6.20783e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -369,65 +369,11 @@ Level =
 			bool Hidden = true,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [2.2401, -1.28282, 0],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7.12161, -1.43505, 0],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-15.8416, -4.09901, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -435,12 +381,12 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
+			string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5967, -8.11978, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-5.55607, -8.43645, 0],
+			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -453,27 +399,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585fa722782335de:Entity_TelePig_South_",
+			string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 2,
+			float AnimationSpeed = 3,
 			uint StartFrame = 0,
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 10,
-			float ShootProximity = 9,
-			int Speed = 100,
+			float ChaseProximity = 4,
+			float ShootProximity = 10,
+			int Speed = 80,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
 			float WaunderRange = 2.5,
-			float WaunderCooldown = 5,
-			float Cooldown = 5,
+			float WaunderCooldown = 4,
+			float Cooldown = 1,
 		},
 		BoxCollider = 
 		{
@@ -483,33 +429,33 @@ Level =
 			string MaterialName = "5800bf6d54ec0d53:Slippery",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.3, 0.4, 0.5],
+			Vec3 Size = [0.065, 0.09, 0.5],
 		},
 		ChangeDirectionToPointAtPlayer = 
 		{
 		},
 		EnemyAnimations = 
 		{
-			string North = "585fa70475e5e8dc:Entity_TelePig_North_",
-			string NorthEast = "585fa7604e141542:Entity_TelePig_NE_",
-			string East = "585fa77c4fdd0cb0:Entity_TelePig_East_",
-			string SouthEast = "585fa70f744256bd:Entity_TelePig_SE_",
-			string South = "585fa722782335de:Entity_TelePig_South_",
-			string SouthWest = "585fa733765d8b2e:Entity_TelePig_SW",
-			string West = "585fa8d77a2d5d19:Entity_TelePig_West_",
-			string NorthWest = "585fa71173936243:Entity_TelePig_NW_",
+			string North = "58128ac7e63298e0:EnemyNorth_Anim",
+			string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
+			string East = "58128986ce447b92:EnemyEast_Anim",
+			string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
+			string South = "58128b1d3c322a60:EnemySouth_Anim",
+			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
+			string West = "58128bf533d431ee:EnemyWest_Anim",
+			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
 			float AnimationSpeed = 3,
 		},
 		Health = 
 		{
-			float ConfiguredHealth = 50,
+			float ConfiguredHealth = 25,
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
 			Vec4 HurtColor = [1, 0, 0.000599861, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-			float RegenRate = 0.5,
-			float MaxHealth = 0,
+			float RegenRate = 0.25,
+			float MaxHealth = 75,
 			float HurtDuration = 0.1,
 			float RegenCooldown = 1,
 		},
@@ -527,25 +473,94 @@ Level =
 		},
 		EnemyToutchDamage = 
 		{
-			float SecondsBetweenDamage = 0.2,
-			float Damage = 1,
-		},
-		AITeleportMod = 
-		{
-			float TPRangeLarge = 10,
-			float TPRangeSmall = 3,
+			float SecondsBetweenDamage = 0.5,
+			float Damage = 2.5,
 		},
 		Pistol = 
 		{
-			string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
-			float Damage = 5,
-			float EnergyUse = 2,
+			string Bullet = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
+			float Damage = 2,
+			float EnergyUse = 1,
 			float Energy = 100,
-			float CooldownMax = 0.25,
+			float CooldownMax = 0.8,
 			bool Player = false,
 			float BulletSpeed = 10,
-			float LifeLength = 1.5,
-			float CamZoom = 18,
+			float LifeLength = 5,
+			float CamZoom = 0,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.25296, -2.53804, -70],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.66],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5274db4c2e7c11f9:Circle",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.12161, -1.43505, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.8416, -4.09901, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 	Cog = 
