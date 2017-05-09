@@ -13,7 +13,10 @@
 
 class FailMenu : ZilchComponent
 {
-    var Fail : Boolean = false;
+    
+    var Fail            : Boolean = false;
+    var CRTScreenExists : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.GameSession, Events.PlayerDeath, this.OnPlayerDeath);
@@ -22,14 +25,58 @@ class FailMenu : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
         if(this.Fail)
         {
+            
+            if(!this.CRTScreenExists)
+            {
+                
+                var crtT = this.Space.CreateAtPosition(Archetype.DeathScreenCRT, Real3(0, 200, 0));
+                var crtB = this.Space.CreateAtPosition(Archetype.DeathScreenCRT, Real3(0, -200, 0));
+                var crtR = this.Space.CreateAtPosition(Archetype.DeathScreenCRT, Real3(500, 0, 0));
+                var crtL = this.Space.CreateAtPosition(Archetype.DeathScreenCRT, Real3(-500, 0, 0));
+                
+                crtR.Transform.Rotation.X = 90;
+                crtL.Transform.Rotation.X = 90;
+                
+                if(crtT.Transform.Translation.Y > 25)
+                {
+                    Math.Lerp(crtT.Transform.Translation.Y, 5, event.Dt * 2);
+                    Math.Lerp(crtB.Transform.Translation.Y, -5, event.Dt * 2);
+                }
+                else
+                {
+                    Math.Lerp(crtR.Transform.Translation.X, 0, event.Dt * 2);
+                    Math.Lerp(crtL.Transform.Translation.X, 0, event.Dt * 2);
+                }
+                
+                /*//while(crtR.Transform.Translation.X > 0)
+                //{
+                    
+                    if(crtT.Transform.Translation.Y > 25)
+                    {
+                        crtT.Transform.Translation.Y -= 5;
+                    }
+                    else
+                    {
+                        crtR.Transform.Translation.X -= 5;
+                    }
+                    
+                //}*/
+                
+                this.CRTScreenExists = true;
+                
+            }
+            
             this.Owner.Transform.Translation = Real3(0, 0, 0);
+            
         }
         else
         {
             this.Owner.Transform.Translation = Real3(0, 0, 100);
         }
+        
     }
 
     function OnPlayerDeath(event : PlayerDeath)
