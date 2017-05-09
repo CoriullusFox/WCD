@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5.59234, -33.416, 0],
+		Vec3 Translation = [-24.9499, -13.3645, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -77,7 +77,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 150,
+		float ConfiguredHealth = 100,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,

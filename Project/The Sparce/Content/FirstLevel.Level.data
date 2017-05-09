@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.165048, -7.27018, 111.566],
+			Vec3 Translation = [21.7859, -25.6148, 111.566],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 60.6531,
+			float Size = 44.9329,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 111.566,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.165048, -7.27018, 1.09682e-006],
+			Vec3 LookTarget = [21.7859, -25.6148, 8.00918e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2837,12 +2837,19 @@ Level =
 			Vec4 MarginColor = [0.156863, 0.156863, 0.156863, 1],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "598e724ce8626535:Gun_Pickup",
 		LinkId = 
 		{
 			uint Id = 73,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
 		},
 		Transform = 
 		{
@@ -2850,9 +2857,80 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Gun Pickup",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "Shotgun",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 74,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0ca1457c4d4:Gun_Icon_Shotgun",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
@@ -2860,7 +2938,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 75,
 		},
 		Transform = 
 		{
@@ -2877,7 +2955,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 76,
 		},
 		Named = 
 		{
@@ -2889,7 +2967,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [40.5, 48.5, 0],
+			Vec3 Translation = [-23.5, 37.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2923,7 +3001,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "Shotgun",
+			string Unlocked = "FlameThrower",
 		},
 		Hierarchy = 
 		{
@@ -2931,7 +3009,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 76,
+					uint Id = 77,
 				},
 				Named = 
 				{
@@ -2953,7 +3031,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5844b0ca144bdcd0:Gun_Icon_Rifle",
+					string SpriteSource = "5844b0cb1443e380:Gun_Icon_FlameThrower",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2973,7 +3051,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 77,
+			uint Id = 78,
 		},
 		Named = 
 		{
@@ -2985,7 +3063,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.5, -38.5, 0],
+			Vec3 Translation = [-0.5, -38.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3019,7 +3097,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "Shotgun",
+			string Unlocked = "Tesla",
 		},
 		Hierarchy = 
 		{
@@ -3027,7 +3105,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 78,
+					uint Id = 79,
 				},
 				Named = 
 				{
@@ -3049,7 +3127,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5844b0ca144bdcd0:Gun_Icon_Rifle",
+					string SpriteSource = "5844b0cb1438dd42:Gun_Icon_TelsaBurst",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -3069,7 +3147,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 79,
+			uint Id = 80,
 		},
 		Named = 
 		{
@@ -3123,7 +3201,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 80,
+					uint Id = 81,
 				},
 				Named = 
 				{
@@ -3166,7 +3244,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 81,
+			uint Id = 82,
 		},
 		Transform = 
 		{
@@ -3184,7 +3262,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 82,
+			uint Id = 83,
 		},
 		Transform = 
 		{
@@ -3202,7 +3280,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 83,
+			uint Id = 84,
 		},
 		Transform = 
 		{
@@ -3220,7 +3298,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 84,
+			uint Id = 85,
 		},
 		Transform = 
 		{
@@ -3238,7 +3316,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 85,
+			uint Id = 86,
 		},
 		Transform = 
 		{
@@ -3256,7 +3334,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 86,
+			uint Id = 87,
 		},
 		Transform = 
 		{
@@ -3274,7 +3352,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 87,
+			uint Id = 88,
 		},
 		Transform = 
 		{
@@ -3292,7 +3370,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 88,
+			uint Id = 89,
 		},
 		Transform = 
 		{
@@ -3310,7 +3388,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 89,
+			uint Id = 90,
 		},
 		Transform = 
 		{
@@ -3328,7 +3406,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 90,
+			uint Id = 91,
 		},
 		Transform = 
 		{
@@ -3346,7 +3424,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 91,
+			uint Id = 92,
 		},
 		Transform = 
 		{
@@ -3364,7 +3442,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 92,
+			uint Id = 93,
 		},
 		Transform = 
 		{
@@ -3382,7 +3460,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 93,
+			uint Id = 94,
 		},
 		Transform = 
 		{
@@ -3400,7 +3478,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 94,
+			uint Id = 95,
 		},
 		Transform = 
 		{
@@ -3418,7 +3496,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 95,
+			uint Id = 96,
 		},
 		Transform = 
 		{
@@ -3436,7 +3514,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 96,
+			uint Id = 97,
 		},
 		Transform = 
 		{
@@ -3454,7 +3532,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 98,
 		},
 		Transform = 
 		{
@@ -3472,7 +3550,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 99,
 		},
 		Transform = 
 		{
@@ -3490,7 +3568,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 99,
+			uint Id = 100,
 		},
 		Transform = 
 		{
@@ -3508,7 +3586,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 101,
 		},
 		Transform = 
 		{
@@ -3526,7 +3604,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 101,
+			uint Id = 102,
 		},
 		Transform = 
 		{
@@ -3539,12 +3617,19 @@ Level =
 			string Name = "Enemy",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 102,
+			uint Id = 103,
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+		Archetyped = 
+		{
+			string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		},
 		Transform = 
 		{
@@ -3552,9 +3637,106 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Enemy",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585f9b3987abc902:Entity_BuffPig_South",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0.3,
+			uint StartFrame = 0,
+		},
+		EnemyAI = 
+		{
+			float ChaseProximity = 4,
+			float ShootProximity = 7,
+			int Speed = 50,
+			Vec3 LookDirection = [0, 1, 0],
+			Vec3 MoveDirection = [0, 0, 0],
+			bool Pathfind = true,
+			bool Debug = false,
+			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
+			float Cooldown = 5,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5800bf6d54ec0d53:Slippery",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.35, 0.4, 0.5],
+		},
+		ChangeDirectionToPointAtPlayer = 
+		{
+		},
+		EnemyAnimations = 
+		{
+			string North = "585f9b4a9b98ef08:Entity_BuffPig_North",
+			string NorthEast = "585f9bfa687a3e29:Entity_BuffPig_NE",
+			string East = "585f9bcc67c75c57:Entity_BuffPig_East",
+			string SouthEast = "585f9b7b9cf92ccb:Entity_BuffPig_SE",
+			string South = "585f9b3987abc902:Entity_BuffPig_South",
+			string SouthWest = "585f9b1e80f97cad:Entity_BuffPig_SW",
+			string West = "585f9cc98c65c26b:Entity_BuffPig_West",
+			string NorthWest = "585f9b5397108311:Entity_BuffPig_NW",
+			float AnimationSpeed = 0.3,
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 100,
+			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0.000599861, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			float RegenRate = 0.1,
+			float MaxHealth = 150,
+			float HurtDuration = 0.2,
+			float RegenCooldown = 1,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		EnemyToutchDamage = 
+		{
+			float SecondsBetweenDamage = 0.8,
+			float Damage = 25,
+		},
+		Shotgun = 
+		{
+			string Bullet = "587c04eef2ec5c20:Bullet_TinyPelletEnemy",
+			int NumberOfShots = 5,
+			float DamagePerBullet = 2,
+			float DistBetweenShots = 0.1,
+			float EnergyUse = 12.5,
+			float Energy = 100,
+			float CooldownMax = 0.8,
+			bool Player = false,
+			float BulletSpeed = 12,
+			float LifeLength = 0.6,
+			float CamZoom = 0,
 		},
 	},
 	ArchetypeInstance = 
@@ -3562,7 +3744,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 103,
+			uint Id = 104,
 		},
 		Transform = 
 		{
@@ -3580,7 +3762,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 104,
+			uint Id = 105,
 		},
 		Transform = 
 		{
@@ -3598,7 +3780,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 105,
+			uint Id = 106,
 		},
 		Transform = 
 		{
@@ -3616,7 +3798,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 106,
+			uint Id = 107,
 		},
 		Transform = 
 		{
@@ -3629,12 +3811,19 @@ Level =
 			string Name = "Enemy",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 107,
+			uint Id = 108,
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+		Archetyped = 
+		{
+			string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		},
 		Transform = 
 		{
@@ -3642,9 +3831,103 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Enemy",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585fa11d6aa4e5d5:Entity_PyroPig_South_",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0.5,
+			uint StartFrame = 0,
+		},
+		EnemyAI = 
+		{
+			float ChaseProximity = 8,
+			float ShootProximity = 10,
+			int Speed = 75,
+			Vec3 LookDirection = [0, 1, 0],
+			Vec3 MoveDirection = [0, 0, 0],
+			bool Pathfind = true,
+			bool Debug = false,
+			float ResponceTime = 2,
+			float WaunderRange = 2.5,
+			float WaunderCooldown = 5,
+			float Cooldown = 3,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5800bf6d54ec0d53:Slippery",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.3, 0.4, 0.5],
+		},
+		ChangeDirectionToPointAtPlayer = 
+		{
+		},
+		EnemyAnimations = 
+		{
+			string North = "585f9f7237c956f8:Entity_PyroPig_North_",
+			string NorthEast = "585f9fe70531f31b:Entity_PyroPig_NE",
+			string East = "585f9fc001dc2cdc:Entity_PyroPig_East_",
+			string SouthEast = "585f9f323e240fb1:Entity_PyroPig_SE_",
+			string South = "585fa11d6aa4e5d5:Entity_PyroPig_South_",
+			string SouthWest = "5994ff5ab903b2b9:Entity_PyroPig_SW_",
+			string West = "585fa05d59aec182:Entity_PyroPig_West_",
+			string NorthWest = "585f9f9a0936948d:Entity_PyroPig_NW_",
+			float AnimationSpeed = 0.5,
+		},
+		Health = 
+		{
+			float ConfiguredHealth = 75,
+			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
+			bool MiniHeathBar = true,
+			bool Player = false,
+			Vec4 HurtColor = [1, 0, 0.000599861, 1],
+			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			float RegenRate = 0.25,
+			float MaxHealth = 0,
+			float HurtDuration = 0.2,
+			float RegenCooldown = 1,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		EnemyToutchDamage = 
+		{
+			float SecondsBetweenDamage = 0.25,
+			float Damage = 2,
+		},
+		FlameThrower = 
+		{
+			string Bullet = "583c4a1e4237346f:Bullet_FlamethrowerAmmo",
+			float DPS = 2,
+			float EnergyUse = 5,
+			float Energy = 100,
+			float CooldownMax = 1,
+			bool Player = false,
+			float CamZoom = 0,
+			float LifeLength = 0.5,
 		},
 	},
 	ArchetypeInstance = 
@@ -3652,7 +3935,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 109,
 		},
 		Transform = 
 		{
@@ -3670,7 +3953,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 109,
+			uint Id = 110,
 		},
 		Transform = 
 		{
@@ -3688,7 +3971,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 110,
+			uint Id = 111,
 		},
 		Transform = 
 		{
@@ -3706,7 +3989,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 111,
+			uint Id = 112,
 		},
 		Transform = 
 		{
@@ -3724,7 +4007,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 112,
+			uint Id = 113,
 		},
 		Transform = 
 		{
@@ -3742,7 +4025,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 113,
+			uint Id = 114,
 		},
 		Transform = 
 		{
@@ -3760,7 +4043,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 114,
+			uint Id = 115,
 		},
 		Transform = 
 		{
@@ -3778,7 +4061,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 115,
+			uint Id = 116,
 		},
 		Transform = 
 		{
@@ -3796,7 +4079,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 116,
+			uint Id = 117,
 		},
 		Transform = 
 		{
@@ -3814,7 +4097,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 117,
+			uint Id = 118,
 		},
 		Transform = 
 		{
@@ -3832,7 +4115,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 118,
+			uint Id = 119,
 		},
 		Transform = 
 		{
@@ -3850,7 +4133,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 119,
+			uint Id = 120,
 		},
 		Transform = 
 		{
@@ -3868,7 +4151,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 120,
+			uint Id = 121,
 		},
 		Transform = 
 		{
@@ -3886,7 +4169,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 121,
+			uint Id = 122,
 		},
 		Transform = 
 		{
@@ -3904,7 +4187,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 122,
+			uint Id = 123,
 		},
 		Transform = 
 		{
@@ -3922,7 +4205,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 123,
+			uint Id = 124,
 		},
 		Transform = 
 		{
@@ -3940,7 +4223,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 124,
+			uint Id = 125,
 		},
 		Transform = 
 		{
@@ -3958,7 +4241,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 125,
+			uint Id = 126,
 		},
 		Transform = 
 		{
@@ -3976,7 +4259,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 126,
+			uint Id = 127,
 		},
 		Transform = 
 		{
@@ -3994,7 +4277,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 127,
+			uint Id = 128,
 		},
 		Transform = 
 		{
@@ -4012,7 +4295,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 128,
+			uint Id = 129,
 		},
 		Transform = 
 		{
@@ -4030,7 +4313,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 129,
+			uint Id = 130,
 		},
 		Transform = 
 		{
@@ -4048,7 +4331,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 130,
+			uint Id = 131,
 		},
 		Transform = 
 		{
@@ -4065,7 +4348,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 131,
+			uint Id = 132,
 		},
 		Named = 
 		{
@@ -4174,7 +4457,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 132,
+			uint Id = 133,
 		},
 		Transform = 
 		{
@@ -4192,7 +4475,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 133,
+			uint Id = 134,
 		},
 		Transform = 
 		{
@@ -4210,7 +4493,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 134,
+			uint Id = 135,
 		},
 		Transform = 
 		{
@@ -4228,7 +4511,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 135,
+			uint Id = 136,
 		},
 		Transform = 
 		{
@@ -4246,7 +4529,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 136,
+			uint Id = 137,
 		},
 		Transform = 
 		{
@@ -4264,7 +4547,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 137,
+			uint Id = 138,
 		},
 		Transform = 
 		{
@@ -4282,7 +4565,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 138,
+			uint Id = 139,
 		},
 		Transform = 
 		{
@@ -4300,7 +4583,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 139,
+			uint Id = 140,
 		},
 		Transform = 
 		{
@@ -4318,7 +4601,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 140,
+			uint Id = 141,
 		},
 		Transform = 
 		{
@@ -4336,7 +4619,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 141,
+			uint Id = 142,
 		},
 		Transform = 
 		{
@@ -4354,7 +4637,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 142,
+			uint Id = 143,
 		},
 		Transform = 
 		{
@@ -4372,7 +4655,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 143,
+			uint Id = 144,
 		},
 		Transform = 
 		{
@@ -4390,7 +4673,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 144,
+			uint Id = 145,
 		},
 		Transform = 
 		{
@@ -4408,7 +4691,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 145,
+			uint Id = 146,
 		},
 		Transform = 
 		{
@@ -4426,7 +4709,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 146,
+			uint Id = 147,
 		},
 		Transform = 
 		{
@@ -4444,7 +4727,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 147,
+			uint Id = 148,
 		},
 		Transform = 
 		{
@@ -4462,7 +4745,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 148,
+			uint Id = 149,
 		},
 		Transform = 
 		{
@@ -4480,7 +4763,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 149,
+			uint Id = 150,
 		},
 		Transform = 
 		{
@@ -4498,7 +4781,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 150,
+			uint Id = 151,
 		},
 		Transform = 
 		{
@@ -4516,7 +4799,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 151,
+			uint Id = 152,
 		},
 		Transform = 
 		{
@@ -4534,7 +4817,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 152,
+			uint Id = 153,
 		},
 		Transform = 
 		{
@@ -4552,7 +4835,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 153,
+			uint Id = 154,
 		},
 		Transform = 
 		{
@@ -4570,7 +4853,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 154,
+			uint Id = 155,
 		},
 		Transform = 
 		{
@@ -4588,7 +4871,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 155,
+			uint Id = 156,
 		},
 		Transform = 
 		{
@@ -4606,7 +4889,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 156,
+			uint Id = 157,
 		},
 		Transform = 
 		{
@@ -4624,7 +4907,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 157,
+			uint Id = 158,
 		},
 		Transform = 
 		{
@@ -4642,7 +4925,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 158,
+			uint Id = 159,
 		},
 		Transform = 
 		{
@@ -4660,7 +4943,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 159,
+			uint Id = 160,
 		},
 		Transform = 
 		{
@@ -4678,7 +4961,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 160,
+			uint Id = 161,
 		},
 		Transform = 
 		{
@@ -4696,7 +4979,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 161,
+			uint Id = 162,
 		},
 		Transform = 
 		{
@@ -4714,7 +4997,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 162,
+			uint Id = 163,
 		},
 		Transform = 
 		{
@@ -4732,7 +5015,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 163,
+			uint Id = 164,
 		},
 		Transform = 
 		{
@@ -4750,7 +5033,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 164,
+			uint Id = 165,
 		},
 		Transform = 
 		{
@@ -4768,7 +5051,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 165,
+			uint Id = 166,
 		},
 		Transform = 
 		{
@@ -4786,7 +5069,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 166,
+			uint Id = 167,
 		},
 		Transform = 
 		{
@@ -4804,7 +5087,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 167,
+			uint Id = 168,
 		},
 		Transform = 
 		{
@@ -4822,7 +5105,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 168,
+			uint Id = 169,
 		},
 		Transform = 
 		{
@@ -4840,7 +5123,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 169,
+			uint Id = 170,
 		},
 		Transform = 
 		{
@@ -4858,7 +5141,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 170,
+			uint Id = 171,
 		},
 		Transform = 
 		{
@@ -4876,7 +5159,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 171,
+			uint Id = 172,
 		},
 		Transform = 
 		{
@@ -4894,7 +5177,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 172,
+			uint Id = 173,
 		},
 		Transform = 
 		{
@@ -4912,7 +5195,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 173,
+			uint Id = 174,
 		},
 		Transform = 
 		{
@@ -4930,7 +5213,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 174,
+			uint Id = 175,
 		},
 		Transform = 
 		{
@@ -4948,7 +5231,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 175,
+			uint Id = 176,
 		},
 		Transform = 
 		{
@@ -4966,7 +5249,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 176,
+			uint Id = 177,
 		},
 		Transform = 
 		{
@@ -4984,7 +5267,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 177,
+			uint Id = 178,
 		},
 		Transform = 
 		{
@@ -5002,7 +5285,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 178,
+			uint Id = 179,
 		},
 		Transform = 
 		{
@@ -5020,7 +5303,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 179,
+			uint Id = 180,
 		},
 		Transform = 
 		{
@@ -5038,7 +5321,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 180,
+			uint Id = 181,
 		},
 		Transform = 
 		{
@@ -5056,7 +5339,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 181,
+			uint Id = 182,
 		},
 		Transform = 
 		{
@@ -5074,7 +5357,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 182,
+			uint Id = 183,
 		},
 		Transform = 
 		{
@@ -5092,7 +5375,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 183,
+			uint Id = 184,
 		},
 		Transform = 
 		{
@@ -5110,7 +5393,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 184,
+			uint Id = 185,
 		},
 		Transform = 
 		{
@@ -5128,7 +5411,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 185,
+			uint Id = 186,
 		},
 		Transform = 
 		{
@@ -5146,7 +5429,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 186,
+			uint Id = 187,
 		},
 		Transform = 
 		{
@@ -5164,7 +5447,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 187,
+			uint Id = 188,
 		},
 		Transform = 
 		{
@@ -5182,7 +5465,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 188,
+			uint Id = 189,
 		},
 		Transform = 
 		{
@@ -5200,7 +5483,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 189,
+			uint Id = 190,
 		},
 		Transform = 
 		{
@@ -5218,7 +5501,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 190,
+			uint Id = 191,
 		},
 		Transform = 
 		{
@@ -5236,7 +5519,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 191,
+			uint Id = 192,
 		},
 		Transform = 
 		{
@@ -5254,7 +5537,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 192,
+			uint Id = 193,
 		},
 		Transform = 
 		{
@@ -5272,7 +5555,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 193,
+			uint Id = 194,
 		},
 		Transform = 
 		{
@@ -5290,7 +5573,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 194,
+			uint Id = 195,
 		},
 		Transform = 
 		{
@@ -5308,7 +5591,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 195,
+			uint Id = 196,
 		},
 		Transform = 
 		{
@@ -5326,7 +5609,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 196,
+			uint Id = 197,
 		},
 		Transform = 
 		{
@@ -5344,7 +5627,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 197,
+			uint Id = 198,
 		},
 		Transform = 
 		{
@@ -5362,7 +5645,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 198,
+			uint Id = 199,
 		},
 		Transform = 
 		{
@@ -5380,7 +5663,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 199,
+			uint Id = 200,
 		},
 		Transform = 
 		{
@@ -5398,7 +5681,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 200,
+			uint Id = 201,
 		},
 		Transform = 
 		{
@@ -5416,7 +5699,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 201,
+			uint Id = 202,
 		},
 		Transform = 
 		{
@@ -5434,7 +5717,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 202,
+			uint Id = 203,
 		},
 		Transform = 
 		{
@@ -5452,7 +5735,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 203,
+			uint Id = 204,
 		},
 		Transform = 
 		{
@@ -5470,7 +5753,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 204,
+			uint Id = 205,
 		},
 		Transform = 
 		{
@@ -5488,7 +5771,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 205,
+			uint Id = 206,
 		},
 		Transform = 
 		{
@@ -5506,7 +5789,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 206,
+			uint Id = 207,
 		},
 		Transform = 
 		{
@@ -5524,7 +5807,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 207,
+			uint Id = 208,
 		},
 		Transform = 
 		{
@@ -5542,7 +5825,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 208,
+			uint Id = 209,
 		},
 		Transform = 
 		{
@@ -5560,7 +5843,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 209,
+			uint Id = 210,
 		},
 		Transform = 
 		{
@@ -5578,7 +5861,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 210,
+			uint Id = 211,
 		},
 		Transform = 
 		{
@@ -5596,7 +5879,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 211,
+			uint Id = 212,
 		},
 		Transform = 
 		{
@@ -5614,7 +5897,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 212,
+			uint Id = 213,
 		},
 		Transform = 
 		{
@@ -5632,7 +5915,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 213,
+			uint Id = 214,
 		},
 		Transform = 
 		{
@@ -5650,7 +5933,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 214,
+			uint Id = 215,
 		},
 		Transform = 
 		{
@@ -5668,7 +5951,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 215,
+			uint Id = 216,
 		},
 		Transform = 
 		{
@@ -5686,7 +5969,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 216,
+			uint Id = 217,
 		},
 		Transform = 
 		{
@@ -5704,7 +5987,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 217,
+			uint Id = 218,
 		},
 		Transform = 
 		{
@@ -5722,7 +6005,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 218,
+			uint Id = 219,
 		},
 		Transform = 
 		{
@@ -5740,7 +6023,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 219,
+			uint Id = 220,
 		},
 		Transform = 
 		{
@@ -5758,7 +6041,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 220,
+			uint Id = 221,
 		},
 		Transform = 
 		{
@@ -5776,7 +6059,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 221,
+			uint Id = 222,
 		},
 		Transform = 
 		{
@@ -5794,7 +6077,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 222,
+			uint Id = 223,
 		},
 		Transform = 
 		{
@@ -5812,7 +6095,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 223,
+			uint Id = 224,
 		},
 		Transform = 
 		{
@@ -5830,7 +6113,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 224,
+			uint Id = 225,
 		},
 		Transform = 
 		{
@@ -5848,7 +6131,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 225,
+			uint Id = 226,
 		},
 		Transform = 
 		{
@@ -5866,7 +6149,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 226,
+			uint Id = 227,
 		},
 		Transform = 
 		{
@@ -5884,7 +6167,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 227,
+			uint Id = 228,
 		},
 		Transform = 
 		{
@@ -5902,7 +6185,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 228,
+			uint Id = 229,
 		},
 		Transform = 
 		{
@@ -5920,7 +6203,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 229,
+			uint Id = 230,
 		},
 		Transform = 
 		{
@@ -5938,7 +6221,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 230,
+			uint Id = 231,
 		},
 		Transform = 
 		{
@@ -5956,7 +6239,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 231,
+			uint Id = 232,
 		},
 		Transform = 
 		{
@@ -5974,7 +6257,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 232,
+			uint Id = 233,
 		},
 		Transform = 
 		{
@@ -5992,7 +6275,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 233,
+			uint Id = 234,
 		},
 		Transform = 
 		{
@@ -6010,7 +6293,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 234,
+			uint Id = 235,
 		},
 		Transform = 
 		{
@@ -6028,7 +6311,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 235,
+			uint Id = 236,
 		},
 		Transform = 
 		{
@@ -6046,7 +6329,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 236,
+			uint Id = 237,
 		},
 		Transform = 
 		{
@@ -6064,7 +6347,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 237,
+			uint Id = 238,
 		},
 		Transform = 
 		{
@@ -6082,7 +6365,7 @@ Level =
 		string Name = "585fac8c02e09c2f:Entity_Enemy_Teleport",
 		LinkId = 
 		{
-			uint Id = 238,
+			uint Id = 239,
 		},
 		Transform = 
 		{
@@ -6100,7 +6383,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 239,
+			uint Id = 240,
 		},
 		Transform = 
 		{
@@ -6118,7 +6401,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 240,
+			uint Id = 241,
 		},
 		Transform = 
 		{
@@ -6136,7 +6419,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 241,
+			uint Id = 242,
 		},
 		Transform = 
 		{
@@ -6154,7 +6437,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 242,
+			uint Id = 243,
 		},
 		Transform = 
 		{
@@ -6172,7 +6455,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 243,
+			uint Id = 244,
 		},
 		Transform = 
 		{
@@ -6190,7 +6473,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 244,
+			uint Id = 245,
 		},
 		Transform = 
 		{
@@ -6208,7 +6491,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 245,
+			uint Id = 246,
 		},
 		Transform = 
 		{
@@ -6226,7 +6509,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 246,
+			uint Id = 247,
 		},
 		Transform = 
 		{
@@ -6244,7 +6527,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 247,
+			uint Id = 248,
 		},
 		Transform = 
 		{
@@ -6262,7 +6545,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 248,
+			uint Id = 249,
 		},
 		Transform = 
 		{
@@ -6280,7 +6563,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 249,
+			uint Id = 250,
 		},
 		Transform = 
 		{
@@ -6298,7 +6581,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 250,
+			uint Id = 251,
 		},
 		Transform = 
 		{
@@ -6316,7 +6599,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 251,
+			uint Id = 252,
 		},
 		Transform = 
 		{
@@ -6334,7 +6617,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 252,
+			uint Id = 253,
 		},
 		Transform = 
 		{
@@ -6352,7 +6635,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 253,
+			uint Id = 254,
 		},
 		Transform = 
 		{
@@ -6370,7 +6653,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 254,
+			uint Id = 255,
 		},
 		Transform = 
 		{
@@ -6381,6 +6664,582 @@ Level =
 		Named = 
 		{
 			string Name = "Enemy",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 256,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-43.5, 16.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "Rifle",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 257,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0ca144bdcd0:Gun_Icon_Rifle",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 258,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-20.5, -32.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "FlameThrower",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 259,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0cb1443e380:Gun_Icon_FlameThrower",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 260,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.5, -5.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "Bouncer",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 261,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0cb1432b52a:Gun_Icon_Bouncer",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 262,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [31.5, 5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "Bouncer",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 263,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0cb1432b52a:Gun_Icon_Bouncer",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 264,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.5, -14.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "BeamLaser",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 265,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0ca144ea3b9:Gun_Icon_Laser",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 266,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.5, 27.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "ChainE",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 267,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0cb14408d4e:Gun_Icon_TeslaChain",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
 		},
 	},
 },
