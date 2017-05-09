@@ -47,6 +47,11 @@ class DebugMode : ZilchComponent
                 this.Space.TimeSpace.TimeScale += 0.05;
             if(Zero.Keyboard.KeyIsPressed(Keys.Minus))
                 this.Space.TimeSpace.TimeScale -= 0.05;
+            if(Zero.Keyboard.KeyIsPressed(Keys.Period))
+            {
+                this.DubugModeEnabled = false;
+                this.Space.FindObjectByName("TempPlayer").Health.ConfiguredHealth = 0.0;
+            }
         }
         if(Zero.Keyboard.KeyIsPressed(Keys.F3))
         {
