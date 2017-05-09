@@ -15,7 +15,7 @@ class Blocker : ZilchComponent
         if(Math.Distance(player, blocker) <= this.UnlockDist)
         {
             
-            this.Owner.Destroy();
+            this.Owner.Sprite.Color = Real4(1,1,1,0.5);
             
         }
     }

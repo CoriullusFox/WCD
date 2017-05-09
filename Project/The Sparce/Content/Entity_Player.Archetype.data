@@ -361,5 +361,23 @@ Cog =
 				string Name = "Teleporting Effect",
 			},
 		},
+		ArchetypeInstance = 
+		{
+			string Name = "598e658547820bb7:Blocker",
+			LinkId = 
+			{
+				uint Id = 9,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -51],
+				Vec3 Scale = [40, 40, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "Blocker",
+			},
+		},
 	},
 },
