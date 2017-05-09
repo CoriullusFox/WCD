@@ -83,7 +83,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 500,
+		float ConfiguredHealth = 1000,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
@@ -92,6 +92,7 @@ Cog =
 		float RegenRate = 5,
 		float MaxHealth = 500,
 		float HurtDuration = 0.2,
+		float RegenCooldown = 1,
 	},
 	EnemyToutchDamage = 
 	{
@@ -100,10 +101,10 @@ Cog =
 	},
 	PassiveAttack = 
 	{
-		float FireRate = 0.5,
+		float FireRate = 0.4,
 		string Bullet = "58638be9705e178b:Bullet_LargeBoss",
-		float BulletSpeed = 8,
-		float Damage = 2.5,
+		float BulletSpeed = 9,
+		float Damage = 5,
 		float LifeLength = 75,
 		float Randomness = 0.01,
 	},

@@ -55,8 +55,8 @@ Cog =
 	{
 		float Speed = 300,
 		float RunSpeed = 600,
-		float RunEnergy = 35,
-		float EmptyRunEnergyDamage = 0.1,
+		float RunEnergy = 100,
+		float EmptyRunEnergyDamage = 0.05,
 	},
 	ChangeDirectionToPointAtMouse = 
 	{
