@@ -107,9 +107,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.221428, -0.0808606, 4.36059],
+			Vec3 Translation = [-2.40265, 3.67353, 6.6638],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, -1.09278e-008, 0, 1],
+			Quat Rotation = [-0.214297, -0.247452, -0.0562198, 0.94323],
 		},
 		Camera = 
 		{
@@ -119,15 +119,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 19.9484,
+			float Size = 26.9275,
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = ZPlane,
+			ControlMode ControlMode = Orbit,
 			float LookDistance = 4.5359,
-			float VerticalAngle = 0,
-			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.221428, -0.0808606, -0.175315],
+			float VerticalAngle = 0.446804,
+			float HorizontalAngle = 0.513128,
+			Vec3 LookTarget = [-0.394543, 1.71364, 3.1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -196,7 +196,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [0.9064, 0.64, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -232,7 +232,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0.73, 0.5913, 0.5913, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -496,7 +496,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 2, 3.1],
+			Vec3 Translation = [-6.5, 3.5, 3],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -512,8 +512,8 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "StoryStoryStoryStoryStoryStoryStory",
-			TextAlign Align = Center,
+			string Text = "Captain's Log                         Day: 1",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 10000,
 			bool Smoothing = true,
 		},
@@ -536,7 +536,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 1, 3.1],
+			Vec3 Translation = [-6.5, 2.5, 3],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -552,8 +552,8 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "StoryStoryStoryStoryStoryStoryStory",
-			TextAlign Align = Center,
+			string Text = "I was given my first mission. To",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 10000,
 			bool Smoothing = true,
 		},
@@ -573,7 +573,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 3.1],
+			Vec3 Translation = [-6.5, 1.5, 3],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -589,8 +589,8 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "StoryStoryStoryStoryStoryStoryStory",
-			TextAlign Align = Center,
+			string Text = "slay an alien race of pigs that took",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 10000,
 			bool Smoothing = true,
 		},
@@ -610,7 +610,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -1, 3.1],
+			Vec3 Translation = [-6.5, 0.5, 3],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -626,8 +626,8 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "StoryStoryStoryStoryStoryStoryStory",
-			TextAlign Align = Center,
+			string Text = "over an earthling space station. I",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 10000,
 			bool Smoothing = true,
 		},
@@ -647,7 +647,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2, 3.1],
+			Vec3 Translation = [-6.5, -0.5, 3],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -663,8 +663,45 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "StoryStoryStoryStoryStoryStoryStory",
-			TextAlign Align = Center,
+			string Text = "have to eradicate the disgusting",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 10000,
+			bool Smoothing = true,
+		},
+		Fade = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "l6",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.5, -1.5, 3],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5820efc589857afa:TheSparceFont",
+			uint FontSize = 150,
+			string Text = "beasts.",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 10000,
 			bool Smoothing = true,
 		},

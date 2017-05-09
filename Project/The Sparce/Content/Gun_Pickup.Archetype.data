@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Gun Pickup",
 	},
+	Archetyped = 
+	{
+		string Name = "598e724ce8626535:Gun_Pickup",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [8, -2, 0],
+		Vec3 Translation = [-2.5, -38.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -56,7 +60,7 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Gun_Icon_Rifle",
+				string Name = "Gun_Icon",
 			},
 			Transform = 
 			{

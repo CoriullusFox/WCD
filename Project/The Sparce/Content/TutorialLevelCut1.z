@@ -56,6 +56,7 @@ class TutorialLevelCut1 : ZilchComponent
             this.Space.FindObjectByName("l3").Fade.Faded = true;
             this.Space.FindObjectByName("l4").Fade.Faded = true;
             this.Space.FindObjectByName("l5").Fade.Faded = true;
+            this.Space.FindObjectByName("l6").Fade.Faded = true;
         }
         else if(this.Time <= 24)
         {
@@ -64,6 +65,7 @@ class TutorialLevelCut1 : ZilchComponent
             this.Space.FindObjectByName("l3").Fade.Faded = false;
             this.Space.FindObjectByName("l4").Fade.Faded = false;
             this.Space.FindObjectByName("l5").Fade.Faded = false;
+            this.Space.FindObjectByName("l6").Fade.Faded = false;
         }
         
         if(this.Time >13)
