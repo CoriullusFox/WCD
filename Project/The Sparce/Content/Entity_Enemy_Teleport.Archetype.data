@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [13.9995, -11.4665, 0.0343571],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 10,
+		float ChaseProximity = 5,
 		float ShootProximity = 9,
 		int Speed = 100,
 		Vec3 LookDirection = [0, 1, 0],
@@ -114,12 +114,12 @@ Cog =
 		float CooldownMax = 0.5,
 		bool Player = false,
 		float BulletSpeed = 7,
-		float LifeLength = 6,
+		float LifeLength = 2,
 		float CamZoom = 0,
 	},
 	AITeleportMod = 
 	{
-		float TPRangeLarge = 10,
-		float TPRangeSmall = 3,
+		float TPRangeLarge = 4,
+		float TPRangeSmall = 2,
 	},
 },
