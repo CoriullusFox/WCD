@@ -119,7 +119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.37387, -4.31543, 50],
+			Vec3 Translation = [-0.480514, 0.381907, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 13.4064,
 		},
 		EditorCameraController = 
 		{
@@ -139,7 +139,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.37387, -4.31543, -1.47477e-007],
+			Vec3 LookTarget = [-0.480514, 0.381907, 2.30336e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -159,7 +159,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TileMap",
+			string Name = "Walls Tilemap",
 		},
 		Transform = 
 		{
@@ -194,7 +194,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TileMap",
+			string Name = "Floor TileMap",
 		},
 		Transform = 
 		{
@@ -255,6 +255,11 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_VertDoor",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
 		},
 	},
 	Cog = 
@@ -335,6 +340,11 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -352,6 +362,11 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_VertDoor",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
 		},
 	},
 	ArchetypeInstance = 
@@ -649,6 +664,41 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "Decor TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "599704c845afe7a3:SamTestingSandbox_TileMap04",
+			string PaletteName = "584fd7da8bf9792b:TileDecor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
 		},
 	},
 },

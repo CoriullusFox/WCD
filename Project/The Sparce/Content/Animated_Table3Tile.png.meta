@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Animated_Table3Tile",
+		uint64 ResourceId = 599709763307bd9e,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 16,
+		uint FrameSizeY = 16,
+		uint FrameCount = 2,
+		float FrameDelay = 0.0166667,
+		float OriginX = 8,
+		float OriginY = 8,
+		float PixelsPerUnit = 16,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
