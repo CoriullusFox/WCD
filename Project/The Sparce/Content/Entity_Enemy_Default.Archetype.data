@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [51.0837, -4.87482, 0],
+		Vec3 Translation = [48.9148, 20.9886, 0],
 		Vec3 Scale = [4, 4, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -132,7 +132,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -70],
-				Vec3 Scale = [1, 1, 1],
+				Vec3 Scale = [0.5, 0.5, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -141,7 +141,7 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 0.66],
+				Vec4 Color = [1, 0, 0, 0.9999],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",

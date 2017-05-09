@@ -20,7 +20,7 @@ class MinMapBlockers : ZilchComponent
             for (var l = this.Ynum; l > 0; --l)
             {
                 
-                var blocker = this.Space.CreateAtPosition(Archetype.Blocker, (this.Owner.Transform.Translation - Real3(((i-this.Xnum/2)*this.Scale), (l-this.Ynum/2)*this.Scale, -29)));
+                var blocker = this.Space.CreateAtPosition(Archetype.Blocker2, (this.Owner.Transform.Translation - Real3(((i-this.Xnum/2)*this.Scale), (l-this.Ynum/2)*this.Scale, -29)));
                 if(blocker != null)
                 {
                     
