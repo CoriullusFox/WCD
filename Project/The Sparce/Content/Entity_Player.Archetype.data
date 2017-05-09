@@ -143,7 +143,7 @@ Cog =
 	{
 		float ConfiguredHealth = 100,
 		string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
-		bool MiniHeathBar = true,
+		bool MiniHeathBar = false,
 		bool Player = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",

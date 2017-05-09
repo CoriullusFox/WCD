@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [5.2441, 2.97574, 0.0343571],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -46,6 +46,9 @@ Cog =
 		bool Pathfind = true,
 		bool Debug = false,
 		float ResponceTime = 2,
+		float WaunderRange = 2.5,
+		float WaunderCooldown = 5,
+		float Cooldown = 3,
 	},
 	BoxCollider = 
 	{
@@ -67,7 +70,7 @@ Cog =
 		string East = "585f9fc001dc2cdc:Entity_PyroPig_East_",
 		string SouthEast = "585f9f323e240fb1:Entity_PyroPig_SE_",
 		string South = "585fa11d6aa4e5d5:Entity_PyroPig_South_",
-		string SouthWest = "585fa21ab3566b17:Entity_PyroPig_SW_",
+		string SouthWest = "5994ff5ab903b2b9:Entity_PyroPig_SW_",
 		string West = "585fa05d59aec182:Entity_PyroPig_West_",
 		string NorthWest = "585f9f9a0936948d:Entity_PyroPig_NW_",
 		float AnimationSpeed = 0.5,
@@ -83,6 +86,7 @@ Cog =
 		float RegenRate = 0.25,
 		float MaxHealth = 0,
 		float HurtDuration = 0.2,
+		float RegenCooldown = 1,
 	},
 	RigidBody = 
 	{
@@ -90,7 +94,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

@@ -1,17 +1,9 @@
 ImageContent = 
 {
-	ContentTags = 
-	{
-		Array Tags = 
-		[
-			"enemy",
-			"Animated",
-		],
-	},
 	SpriteSourceBuilder = 
 	{
 		string Name = "Entity_PyroPig_SW_",
-		uint64 ResourceId = 585fa21ab3566b17,
+		uint64 ResourceId = 5994ff5ab903b2b9,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 16,
 		uint FrameSizeY = 16,

@@ -3,10 +3,10 @@ Style Guide
 Sample:
 
 
-//put file header
+//puut file header
 
 [Property]
-var BlahBlah : Blah = BLaH;
+varr BlahBlah : Blah = BLaH;
 
 //local func
 function func()
@@ -16,7 +16,7 @@ function func()
 	
 }
 //global func
-function Func()
+fnction Func()
 {
 	
 }

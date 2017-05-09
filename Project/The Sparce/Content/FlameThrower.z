@@ -37,7 +37,7 @@ class FlameThrower : ZilchComponent
     var CamZoom : Real = 20.0;
     
     [Property]
-    var LifeLength : Real = 0.5;
+    var LifeLength : Real = 1;
     
     function Initialize(init : CogInitializer) 
     {

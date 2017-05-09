@@ -51,6 +51,8 @@ Cog =
 	Despawn = 
 	{
 		float LifeLength = 0.5,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
 	SphericalParticleEmitter = 
 	{
@@ -114,6 +116,8 @@ Cog =
 			Despawn = 
 			{
 				float LifeLength = 0.1,
+				bool Explode = false,
+				string Explosion = "58620f152fd63a17:BulletExplosion",
 			},
 		},
 	},
