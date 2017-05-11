@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.551358, 0.300451, 49.4573],
+			Vec3 Translation = [0.0445889, -0.19131, 49.4573],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.0464,
+			float Size = 19.9484,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.551358, 0.300451, -0.542691],
+			Vec3 LookTarget = [0.0445889, -0.19131, -0.542691],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -834,6 +834,128 @@ Level =
 					float DepthOffset = 0,
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+		Archetyped = 
+		{
+			string Name = "585123514e9dff4f:HorDoor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 8, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Doorscript = 
+		{
+			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+			float DoorAnimationSpeed = 100,
+			bool Locked = true,
+			string Condition = "Chioces: EnemiesKilled, Key, None",
+			int EnemyDeathUnlockNumber = 0,
+			float RequiredEnemiesKilled = 3,
+			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+			bool Vert = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0.25, 0],
+			Vec3 Size = [1, 0.25, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+		Archetyped = 
+		{
+			string Name = "585123514e9dff4f:HorDoor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -8, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Doorscript = 
+		{
+			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+			float DoorAnimationSpeed = 100,
+			bool Locked = true,
+			string Condition = "EnemiesKilled",
+			int EnemyDeathUnlockNumber = 1,
+			float RequiredEnemiesKilled = 3,
+			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+			bool Vert = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0.25, 0],
+			Vec3 Size = [1, 0.25, 0.5],
 		},
 	},
 },
