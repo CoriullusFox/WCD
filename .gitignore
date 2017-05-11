@@ -260,4 +260,4 @@ Project/**/EditorContent/*
 
 # Important Gitignore Stuff -Matt
 *.hkgbrnd
-*.gitignore
+.gitignore
