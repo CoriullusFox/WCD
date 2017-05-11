@@ -15,11 +15,13 @@ class SetPositionInPixels : ZilchComponent
 {
     
     [Property]
-    var ViewportX : Real = 0;
+    var ViewportX   : Real      = 0;
     [Property]
-    var ViewportY : Real = 0;
+    var ViewportY   : Real      = 0;
     [Property]
-    var Alignment : Integer = 1;
+    var Alignment   : Integer   = 1;
+    [Property]
+    var FromTop     : Boolean   = false;
     
     
     var Offset : Real3
@@ -53,6 +55,11 @@ class SetPositionInPixels : ZilchComponent
         
         var screenSize = viewport.ViewportResolution;
         screenSize.X = 0;
+        
+        if(this.FromTop)
+        {
+            screenSize.Y = 0;
+        }
         
         var screen = viewport.ViewportToScreen(this.Viewport + screenSize);
         var world = viewport.ScreenToWorldZPlane(screen, this.Owner.Transform.WorldTranslation.Z);

@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 5.78571, 54.4995],
+			Vec3 Translation = [-7.99682, -6.8653, 54.4995],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 33.2872,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 5.78571, 4.4995],
+			Vec3 LookTarget = [-7.99682, -6.8653, 4.4995],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -764,7 +764,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-18.25, -12.25, 0],
+			Vec3 Translation = [-18.25, -12.25, -50],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -773,6 +773,7 @@ Level =
 			float ViewportX = 0,
 			float ViewportY = 0,
 			int Alignment = -1,
+			bool FromTop = false,
 		},
 		Hierarchy = 
 		{
@@ -1239,7 +1240,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 50, 1],
+			Vec3 Translation = [0, 50, 3.9],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1257,7 +1258,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -50, 1],
+			Vec3 Translation = [0, -50, 3.9],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1275,7 +1276,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-50, 0, 1],
+			Vec3 Translation = [-50, 0, 3.9],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1293,7 +1294,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [50, 0, 1],
+			Vec3 Translation = [50, 0, 3.9],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1335,6 +1336,47 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 38,
+		},
+		Named = 
+		{
+			string Name = "Version",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18, 10.25, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 30,
+			string Text = "The Sparce v0.5.4-a7 (0004CE787)",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		SetPositionInPixels = 
+		{
+			float ViewportX = 1,
+			float ViewportY = 25,
+			int Alignment = 1,
+			bool FromTop = true,
 		},
 	},
 },
