@@ -148,7 +148,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.02899, -1.20829, 52.7559],
+			Vec3 Translation = [-2.05237, 9.31993, 52.7559],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -160,7 +160,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0501,
+			float Size = 2.98365,
 		},
 		EditorCameraController = 
 		{
@@ -168,7 +168,7 @@ Level =
 			float LookDistance = 55.2583,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.02899, -1.20829, -2.50237],
+			Vec3 LookTarget = [-2.05237, 9.31993, -2.50237],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -339,7 +339,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -392,7 +392,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -441,11 +441,11 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "FlameThrower",
+			string Unlocked = "BeamLaser",
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -498,7 +498,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -551,7 +551,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -604,7 +604,7 @@ Level =
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
@@ -629,7 +629,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [15.0485, 9.95737, 0.0343571],
+			Vec3 Translation = [14.5, 3.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -670,6 +670,7 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+			bool ExitOnly = false,
 		},
 	},
 	Cog = 
@@ -688,7 +689,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.0649, 9.43007, 0.0343571],
+			Vec3 Translation = [-2.0649, 9.43007, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -729,6 +730,7 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+			bool ExitOnly = true,
 		},
 	},
 	Cog = 
@@ -788,6 +790,7 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+			bool ExitOnly = false,
 		},
 	},
 	Cog = 
@@ -847,18 +850,19 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+			bool ExitOnly = false,
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
+		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
 			uint Id = 16,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.60271, 5.4085, 0],
+			Vec3 Translation = [3.4798, 18.8237, -2.50237],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

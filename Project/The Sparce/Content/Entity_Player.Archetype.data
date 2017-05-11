@@ -45,7 +45,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -53,9 +53,9 @@ Cog =
 	},
 	Movement = 
 	{
-		float Speed = 300,
-		float RunSpeed = 600,
-		float RunEnergy = 100,
+		float Speed = 400,
+		float RunSpeed = 700,
+		float RunEnergy = 20,
 		float EmptyRunEnergyDamage = 0.05,
 	},
 	ChangeDirectionToPointAtMouse = 

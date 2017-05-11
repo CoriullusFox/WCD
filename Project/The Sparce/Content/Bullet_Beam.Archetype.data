@@ -49,7 +49,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -69,12 +69,6 @@ Cog =
 		bool PointGravity = true,
 		bool PointForce = true,
 		bool Buoyancy = true,
-	},
-	Despawn = 
-	{
-		float LifeLength = 3,
-		bool Explode = true,
-		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
 	BoxCollider = 
 	{

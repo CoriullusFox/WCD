@@ -21,6 +21,9 @@ class Beam : ZilchComponent
     var DPS : Real = 50;
     var PlayerBeam : Boolean = false;
     var Extend : Boolean = true;
+    var New : Boolean = false;
+    
+    var Dir : Real3;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -29,7 +32,10 @@ class Beam : ZilchComponent
 
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        
+        if(!this.New)
+        {
+            this.Owner.Destroy();
+        }
         if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != "TempPlayer")
         {
             
@@ -64,17 +70,22 @@ class Beam : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Extend)
-        {
-            this.Owner.Transform.Scale += Real3(0, this.Speed * event.Dt, 0);
-            if(this.Owner.Sprite.Color.W > 0.1)
-            {
-                this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt / 2);
-            }
-            else
-            {
-                this.Owner.Sprite.Color -= Real4(0,0,0,0);
-            }
-        }
+        
+        var randGen : Random = Random();
+        //angle of rotation
+        var angle = Math.Angle2D(this.Dir);
+        
+        //generate direction for orientation component from angle
+        var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+        
+        var filter = CastFilter();
+        filter.IgnoreDynamic = true;
+        filter.IgnoreStatic = false;
+        filter.IgnoreGhost = true;
+        var ray = Ray();
+        ray.Start = this.Owner.Transform.WorldTranslation;
+        ray.Direction = newDirection;
+        var cast = this.Space.PhysicsSpace.CastRayFirstFiltered(ray, filter);
+        this.Owner.Transform.Scale = Real3(1,cast.Distance, 1);
     }
 }

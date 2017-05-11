@@ -20,7 +20,7 @@ class ChainElectricity : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_Beam;
     
     [Property]
-    var Damage : Real = 20;
+    var Damage : Real = 5;
     
     [Property]
     var EnergyUsePer : Real = 5;
@@ -29,7 +29,7 @@ class ChainElectricity : ZilchComponent
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 4;
+    var CooldownMax : Real = 0.5;
     
     [Property]
     var Player : Boolean = false;
@@ -44,9 +44,11 @@ class ChainElectricity : ZilchComponent
     var Radius : Real = 20;
     
     [Property]
-    var FreezeTime : Real = 2;
+    var FreezeTime : Real = 0.1;
     
     var Links : Array[Cog];
+    
+    var DebugCircle : DebugCircle = DebugCircle();
     
     function Initialize(init : CogInitializer)
     {
@@ -75,6 +77,7 @@ class ChainElectricity : ZilchComponent
             toSend.MaxCooldown = this.CooldownMax;
             this.GameSession.DispatchEvent(Events.Cooldown, toSend);
         }
+        this.DebugCircle.Draw();
     }
 
     function OnShoot(event : Shoot)
@@ -105,21 +108,18 @@ class ChainElectricity : ZilchComponent
                 
                 var temp : Cog = null;
                 var cast = this.Space.PhysicsSpace.CastSphereResults(this.Links[i].Transform.Translation, this.Radius, this.MaxLinks, filter);
-                
                 if(this.LevelSettings.DebugMode.DubugModeEnabled)
                 {
-                    var debugCircle = DebugCircle();
-                    debugCircle.Position(this.Links[i].Transform.Translation);
-                    debugCircle.Radius(this.Radius);
-                    debugCircle.Border(true);
-                    debugCircle.Filled(true);
-                    debugCircle.Axis(Real3(0,0,1));
-                    debugCircle.Duration(1);
-                    debugCircle.Draw();
-                }
-                for (var l = 0; l < cast.Size() /*|| cast.Empty()*/; ++l)
-                {
                     
+                    this.DebugCircle.Position(this.Links[i].Transform.Translation);
+                    this.DebugCircle.Radius(this.Radius);
+                    this.DebugCircle.Border(true);
+                    this.DebugCircle.Filled(true);
+                    this.DebugCircle.Axis(Real3(0,0,1));
+                    this.DebugCircle.Duration(0.01);
+                }
+                for (var l = 0; l < cast.Size()+1 /*|| cast.Empty()*/; ++l)
+                {
                     if(cast.Current.ObjectHit.Name == "Enemy" && !this.ArrayContains(this.Links, cast.Current.ObjectHit))
                     {
                         Console.WriteLine(temp);
@@ -157,16 +157,16 @@ class ChainElectricity : ZilchComponent
                 {
                     break;
                 }
-                
+                Console.WriteLine("-----------------------------");
                 this.Links.Add(temp);
                 
                 
             }
             
             //check is found somthin
-            if(this.Links.Count != 1)
+            if(this.Links.Count > 1)
             {
-                this.Owner.Health.Freeze(0, this.FreezeTime);
+                //this.Owner.Health.Freeze(0, this.FreezeTime);
             }
             else
             {
@@ -183,7 +183,7 @@ class ChainElectricity : ZilchComponent
                 if(this.Owner.EnergyStor.Energy >= this.EnergyUsePer)
                 {
                     this.Owner.EnergyStor.Energy -= this.EnergyUsePer;
-                    this.Links[i].Health.Freeze(this.Damage, this.FreezeTime);
+                    this.Links[i].Health.Freeze(this.Damage, 0);
                 }
                 else
                 {
