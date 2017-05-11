@@ -148,7 +148,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.760992, 3.88125, 52.7559],
+			Vec3 Translation = [3.02899, -1.20829, 52.7559],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -160,7 +160,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.2255,
+			float Size = 18.0501,
 		},
 		EditorCameraController = 
 		{
@@ -168,7 +168,7 @@ Level =
 			float LookDistance = 55.2583,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.760992, 3.88125, -2.50237],
+			Vec3 LookTarget = [3.02899, -1.20829, -2.50237],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -560,12 +560,19 @@ Level =
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5820e8f49dbffcb3:WeaponPickup",
 		LinkId = 
 		{
 			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
 		},
 		Transform = 
 		{
@@ -573,9 +580,37 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "WeaponPickup",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "ChainE",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 	Cog = 
@@ -812,6 +847,24 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.60271, 5.4085, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },
