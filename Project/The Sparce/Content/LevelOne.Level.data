@@ -10,20 +10,6 @@ Level =
 		{
 			string Name = "LevelSettings",
 		},
-		GravityEffect = 
-		{
-			bool Active = true,
-			bool WakeUpOnChange = false,
-			bool LocalSpaceDirection = true,
-			float Strength = 10,
-			Vec3 Direction = [0, -1, 0],
-		},
-		DragEffect = 
-		{
-			bool Active = true,
-			bool WakeUpOnChange = false,
-			float Drag = 0.7,
-		},
 		CameraViewport = 
 		{
 			bool Background = true,
@@ -57,7 +43,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -101,8 +87,8 @@ Level =
 		},
 		UICreator = 
 		{
-			string UILevel = "",
-			string UIArchtype = "",
+			string UILevel = "5819b1c5833d962d:UILevel",
+			string UIArchtype = "5819b167eb57c437:UI_Space",
 		},
 		GameStateManager = 
 		{
@@ -118,15 +104,12 @@ Level =
 		EnemiesKilldstor = 
 		{
 		},
-		DetectVictory = 
-		{
-		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 2,
 		},
 		Named = 
 		{
@@ -134,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [-2.24333, 5.43501, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -146,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 74.0818,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [-2.24333, 5.43501, -2.51398e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -166,35 +149,92 @@ Level =
 			bool Wireframe = false,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "580dd214e5c6a3ce:PlayerSpawnPoint",
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PlayerSpawnPoint",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 4,
 		},
 		Named = 
 		{
-			string Name = "Camera",
+			string Name = "MainLayer",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Camera = 
+		MultiSprite = 
 		{
-			ProjectionMode ProjectionMode = Orthographic,
-			Facing Facing = NegativeZ,
-			CameraTransparentSort TransparentSort = InheritFromSpace,
-			float FieldOfView = 45,
-			float NearPlane = 0.5,
-			float FarPlane = 200,
-			float Size = 20,
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 		},
-		Microphone = 
+		TileMap = 
 		{
-			bool Active = true,
+			string SourceName = "5991ba632a7973f5:LevelOne_TileMap01",
+			string PaletteName = "584fcf9e48827ac7:SpaceTileSetWalls",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
+			string Name = "Floor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5991b9c968b4a363:LevelOne_TileMap00",
+			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
 		},
 	},
 },
