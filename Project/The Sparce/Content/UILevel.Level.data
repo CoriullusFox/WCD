@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 90.4836,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -1228,6 +1228,113 @@ Level =
 		},
 		UnlockNotif = 
 		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "599198f860a45ecf:DeathScreenCRTTop",
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 50, 1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "DeathScreenCRTTop",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "599198eb7ebe5674:DeathScreenCRTBottom",
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -50, 1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "DeathScreenCRTBottom",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "599199ea59fbe66a:DeathScreenCRTLeft",
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-50, 0, 1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "DeathScreenCRTLeft",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59919aff322ed832:DeathScreenCRTRight",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [50, 0, 1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "DeathScreenCRTRight",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 37,
+		},
+		Named = 
+		{
+			string Name = "CRTStatic",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -4],
+			Vec3 Scale = [7, 7, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5991a7e93a1a5c85:UI_Static",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },
