@@ -1,0 +1,9 @@
+DataContent = 
+{
+	RichAnimationBuilder = 
+	{
+		string Name = "CRTRight",
+		uint64 ResourceId = 59919aa9066b154a,
+		string PreviewArchetype = "",
+	},
+},

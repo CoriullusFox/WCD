@@ -1,0 +1,170 @@
+RichAnimation = 
+{
+	float SampleTolerance = 0.05,
+	float Duration = 2,
+	Object Root = 
+	{
+		TrackType Type = Object,
+		string Name = "Root",
+		string Path = "",
+		bool Disabled = false,
+		uint PropertyTypeId = 0,
+		string PropertyTypeName = "void",
+		Array KeyFrames = 
+		[
+		],
+		Array Children = 
+		[
+			{
+				TrackType Type = Object,
+				string Name = "/",
+				string Path = "/",
+				bool Disabled = false,
+				uint PropertyTypeId = 0,
+				string PropertyTypeName = "",
+				Array KeyFrames = 
+				[
+				],
+				Array Children = 
+				[
+					{
+						TrackType Type = Component,
+						string Name = "Transform",
+						string Path = "Transform",
+						bool Disabled = false,
+						uint PropertyTypeId = 0,
+						string PropertyTypeName = "",
+						Array KeyFrames = 
+						[
+						],
+						Array Children = 
+						[
+							{
+								TrackType Type = Property,
+								string Name = "Translation",
+								string Path = "Transform.Translation",
+								bool Disabled = false,
+								uint PropertyTypeId = 8,
+								string PropertyTypeName = "Vec3",
+								Array KeyFrames = 
+								[
+								],
+								Array Children = 
+								[
+									{
+										TrackType Type = SubProperty,
+										string Name = "X",
+										string Path = "Transform.Translation.X",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+											{
+												float key = 1,
+												Object value = 
+												{
+													float Time = 1,
+													float Value = 50,
+													Vec2 TangentIn = [-0.0019984, 0.04996],
+													Vec2 TangentOut = [0.0019984, -0.04996],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 2,
+												Object value = 
+												{
+													float Time = 2,
+													float Value = 25,
+													Vec2 TangentIn = [-0.0019984, 0.04996],
+													Vec2 TangentOut = [0.0019984, -0.04996],
+													uint EditorFlags = 6,
+												},
+											},
+										],
+										Array Children = 
+										[
+										],
+									},
+									{
+										TrackType Type = SubProperty,
+										string Name = "Y",
+										string Path = "Transform.Translation.Y",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+											{
+												float key = 1,
+												Object value = 
+												{
+													float Time = 1,
+													float Value = 0,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 2,
+												Object value = 
+												{
+													float Time = 2,
+													float Value = 0,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+										],
+										Array Children = 
+										[
+										],
+									},
+									{
+										TrackType Type = SubProperty,
+										string Name = "Z",
+										string Path = "Transform.Translation.Z",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+											{
+												float key = 1,
+												Object value = 
+												{
+													float Time = 1,
+													float Value = 1,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 2,
+												Object value = 
+												{
+													float Time = 2,
+													float Value = 1,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+										],
+										Array Children = 
+										[
+										],
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		],
+	},
+},

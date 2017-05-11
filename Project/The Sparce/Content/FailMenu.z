@@ -8,13 +8,14 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - none
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 class FailMenu : ZilchComponent
 {
     
-    var Fail            : Boolean = false;
+    var Fail            : Boolean   = false;
+    var Timer           : Real      = 0.0;
     
     function Initialize(init : CogInitializer)
     {
@@ -28,7 +29,29 @@ class FailMenu : ZilchComponent
         if(this.Fail)
         {
             
-            this.Owner.Transform.Translation = Real3(0, 0, 0);
+            this.Timer += event.Dt;
+            
+            var crtTop          = this.Space.FindObjectByName("DeathScreenCRTTop");
+            var crtBottom       = this.Space.FindObjectByName("DeathScreenCRTBottom");
+            var crtLeft         = this.Space.FindObjectByName("DeathScreenCRTLeft");
+            var crtRight        = this.Space.FindObjectByName("DeathScreenCRTRight");
+            var crtStatic       = this.Space.FindObjectByName("CRTStatic");
+            
+            crtTop.AnimationGraph.Active    = true;
+            crtBottom.AnimationGraph.Active = true;
+            crtLeft.AnimationGraph.Active   = true;
+            crtRight.AnimationGraph.Active  = true;
+            crtStatic.Sprite.Visible        = true;
+            
+            if(this.Timer <= 1.0)
+            {
+                crtStatic.Sprite.Color = Real4(1, 1, 1, this.Timer);
+            }
+            
+            if(this.Timer >= 2.5)
+            {
+                this.Owner.Transform.Translation = Real3(0, 0, 0);
+            }
             
         }
         else

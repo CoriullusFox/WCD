@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "DeathScreenCRT",
+		string Name = "DeathScreenCRTLeft",
 	},
 	Archetyped = 
 	{
-		string Name = "59971231dd01dbe0:DeathScreenCRT",
+		string Name = "599199ea59fbe66a:DeathScreenCRTLeft",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 11.7776, 1],
-		Vec3 Scale = [50, 5, 1],
+		Vec3 Translation = [-25, 0, 1],
+		Vec3 Scale = [50, 50, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -38,15 +38,15 @@ Cog =
 	},
 	AnimationGraph = 
 	{
-		bool Active = true,
+		bool Active = false,
 		AnimPlayMode PlayMode = PlayOnce,
 		float TimeScale = 1,
 		string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-		uint64 DebugPreviewId = 534549545245504f,
+		uint64 DebugPreviewId = 3ea2a2a13f800000,
 	},
 	SimpleAnimation = 
 	{
-		string AnimationName = "5991955dc7896ea1:AnimationDeathCRT",
+		string AnimationName = "599199b253fca0d1:CRTLeft",
 		AnimPlayMode PlayMode = PlayOnce,
 	},
 },

@@ -1,0 +1,226 @@
+RichAnimation = 
+{
+	float SampleTolerance = 0.05,
+	float Duration = 1.00087,
+	Object Root = 
+	{
+		TrackType Type = Object,
+		string Name = "Root",
+		string Path = "",
+		bool Disabled = false,
+		uint PropertyTypeId = 0,
+		string PropertyTypeName = "void",
+		Array KeyFrames = 
+		[
+		],
+		Array Children = 
+		[
+			{
+				TrackType Type = Object,
+				string Name = "/",
+				string Path = "/",
+				bool Disabled = false,
+				uint PropertyTypeId = 0,
+				string PropertyTypeName = "",
+				Array KeyFrames = 
+				[
+				],
+				Array Children = 
+				[
+					{
+						TrackType Type = Component,
+						string Name = "Transform",
+						string Path = "Transform",
+						bool Disabled = false,
+						uint PropertyTypeId = 0,
+						string PropertyTypeName = "",
+						Array KeyFrames = 
+						[
+						],
+						Array Children = 
+						[
+							{
+								TrackType Type = Property,
+								string Name = "Translation",
+								string Path = "Transform.Translation",
+								bool Disabled = false,
+								uint PropertyTypeId = 8,
+								string PropertyTypeName = "Vec3",
+								Array KeyFrames = 
+								[
+								],
+								Array Children = 
+								[
+									{
+										TrackType Type = SubProperty,
+										string Name = "X",
+										string Path = "Transform.Translation.X",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+											{
+												float key = 0,
+												Object value = 
+												{
+													float Time = 0,
+													float Value = 0,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 1.00087,
+												Object value = 
+												{
+													float Time = 1.00087,
+													float Value = 0,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+										],
+										Array Children = 
+										[
+										],
+									},
+									{
+										TrackType Type = SubProperty,
+										string Name = "Y",
+										string Path = "Transform.Translation.Y",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+											{
+												float key = 0,
+												Object value = 
+												{
+													float Time = 0,
+													float Value = 50,
+													Vec2 TangentIn = [-0.00415227, 0.0498273],
+													Vec2 TangentOut = [0.00415227, -0.0498273],
+													uint EditorFlags = 6,
+												},
+											},
+											{
+												float key = 1.00087,
+												Object value = 
+												{
+													float Time = 1.00087,
+													float Value = 25.25,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+										],
+										Array Children = 
+										[
+										],
+									},
+									{
+										TrackType Type = SubProperty,
+										string Name = "Z",
+										string Path = "Transform.Translation.Z",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+											{
+												float key = 0,
+												Object value = 
+												{
+													float Time = 0,
+													float Value = 1,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 1.00087,
+												Object value = 
+												{
+													float Time = 1.00087,
+													float Value = 1,
+													Vec2 TangentIn = [-0.05, 0],
+													Vec2 TangentOut = [0.05, 0],
+													uint EditorFlags = 0,
+												},
+											},
+										],
+										Array Children = 
+										[
+										],
+									},
+								],
+							},
+							{
+								TrackType Type = Property,
+								string Name = "Scale",
+								string Path = "Transform.Scale",
+								bool Disabled = false,
+								uint PropertyTypeId = 8,
+								string PropertyTypeName = "Vec3",
+								Array KeyFrames = 
+								[
+								],
+								Array Children = 
+								[
+									{
+										TrackType Type = SubProperty,
+										string Name = "X",
+										string Path = "Transform.Scale.X",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+										],
+										Array Children = 
+										[
+										],
+									},
+									{
+										TrackType Type = SubProperty,
+										string Name = "Y",
+										string Path = "Transform.Scale.Y",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+										],
+										Array Children = 
+										[
+										],
+									},
+									{
+										TrackType Type = SubProperty,
+										string Name = "Z",
+										string Path = "Transform.Scale.Z",
+										bool Disabled = false,
+										uint PropertyTypeId = 3,
+										string PropertyTypeName = "",
+										Array KeyFrames = 
+										[
+										],
+										Array Children = 
+										[
+										],
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		],
+	},
+},

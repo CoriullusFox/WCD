@@ -1,0 +1,9 @@
+DataContent = 
+{
+	RichAnimationBuilder = 
+	{
+		string Name = "CRTBottom",
+		uint64 ResourceId = 5991988a7ba71408,
+		string PreviewArchetype = "",
+	},
+},

@@ -1,0 +1,9 @@
+DataContent = 
+{
+	RichAnimationBuilder = 
+	{
+		string Name = "AnimationDeathCRT",
+		uint64 ResourceId = 5991955dc7896ea1,
+		string PreviewArchetype = "",
+	},
+},
