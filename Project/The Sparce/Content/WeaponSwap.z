@@ -35,6 +35,11 @@ class WeaponSwap : ZilchComponent
     [Property]
     var DisableLockedWeaponSelect : Boolean = true;
     
+    [Property]
+    var WeaponVisual : CogPath = null;
+    
+    var NoPistol : Boolean = false;
+    
     var NumberOfWeapons : Integer = 10;
     //var PrevSelected : Integer = 0;
     
@@ -55,6 +60,20 @@ class WeaponSwap : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.NoPistol)
+        {
+            this.RemoveComponents();
+            this.WeaponVisual.Cog.Sprite.Visible = false;
+            var sendSelected = SelectedGun();
+        
+            sendSelected.Selected = "";
+            sendSelected.Unlocked = false;
+            this.GameSession.DispatchEvent(Events.SelectedGun, sendSelected);
+        }
+        else
+        {
+            this.WeaponVisual.Cog.Sprite.Visible = true;
+        }
         if(!this.Once)
         {
             this.Once = !this.Once;

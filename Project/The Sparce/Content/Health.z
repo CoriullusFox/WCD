@@ -28,6 +28,9 @@ class Health : ZilchComponent
     var Player              : Boolean = false;
     
     [Property]
+    var Enemy              : Boolean = true;
+    
+    [Property]
     var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
     
     [Property]
@@ -179,7 +182,10 @@ class Health : ZilchComponent
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("PigSFX_KillPig"));
                 
                 //this is not temporary
-                this.LevelSettings.EnemiesKilldstor.EnemiesKilled += 1;
+                if(this.Enemy)
+                {
+                    this.LevelSettings.EnemiesKilldstor.EnemiesKilled += 1;
+                }
                 //This is temporary until we decide to make the enemies deaths perminent
                 
                 //this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;

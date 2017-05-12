@@ -90,6 +90,11 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		TimerToLevelSwap = 
+		{
+			float Timer = 5.5,
+			string Level = "584fedc2561f6c6e:TutorialLevel",
+		},
 	},
 	Cog = 
 	{
@@ -103,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0433835, 0.84791, 18.3465],
+			Vec3 Translation = [-0.449657, 1.30829, 18.3465],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897,
+			float Size = 18.2684,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +128,7 @@ Level =
 			float LookDistance = 15.0597,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.0433835, 0.84791, 3.28681],
+			Vec3 LookTarget = [-0.449657, 1.30829, 3.28681],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -193,7 +198,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [0.0124608, 0.0120247, 0.0120247, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -205,8 +210,18 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		Fade = 
+		AnimationGraph = 
 		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 77532720746e656e,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59bc6f8fba8683ad:fade",
+			AnimPlayMode PlayMode = PlayOnce,
 		},
 	},
 	Cog = 
@@ -269,9 +284,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [81.7573, 0, 0.1],
-			Vec3 Scale = [2.96355, 2.91418, 3],
-			Quat Rotation = [0, 0, 0.197842, 0.980234],
+			Vec3 Translation = [0.0804853, 0, 0.1],
+			Vec3 Scale = [0.3, 0.3, 3],
+			Quat Rotation = [0, 0, 0.153407, 0.988163],
 		},
 		Sprite = 
 		{
@@ -355,9 +370,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.78418, 0.235707, 0.05],
+			Vec3 Translation = [2.59393, 0.235707, 0.05],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, -0.700547, 0.713607],
+			Quat Rotation = [0, 0, -0.36858, 0.929596],
 		},
 		Sprite = 
 		{

@@ -1,0 +1,9 @@
+DataContent = 
+{
+	RichAnimationBuilder = 
+	{
+		string Name = "fade",
+		uint64 ResourceId = 59bc6f8fba8683ad,
+		string PreviewArchetype = "",
+	},
+},

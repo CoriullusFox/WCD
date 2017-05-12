@@ -16,15 +16,41 @@ class SpawnPlayer : ZilchComponent
     [Property]
     var PlayerToSpawn : String = "Entity_Player";
     
+    [Property]
+    var SpawnDefaultPlayer : Boolean = false;
+    
+    [Property]
+    var NoPistol : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
-        var player = Zero.ObjectStore.RestoreOrArchetype("PlayerSave.wcd", this.PlayerToSpawn, this.Space);
-        if(player != null)
-        { 
-            player.Transform.Translation = this.Owner.Transform.Translation;
-            this.LevelSettings.CameraViewport.Camera = player.FindChildByName("Camera");
-            player.Health.ConfiguredHealth = player.Health.MaxHealth;
-            
+        if(!this.SpawnDefaultPlayer)
+            {
+            var player = Zero.ObjectStore.RestoreOrArchetype("PlayerSave.wcd", this.PlayerToSpawn, this.Space);
+            if(player != null)
+            { 
+                player.Transform.Translation = this.Owner.Transform.Translation;
+                this.LevelSettings.CameraViewport.Camera = player.FindChildByName("Camera");
+                player.Health.ConfiguredHealth = player.Health.MaxHealth;
+                if(this.NoPistol)
+                {
+                    player.WeaponSwap.NoPistol = true;
+                }
+            }
+        }
+        else
+        {
+            var player = this.Space.CreateAtPosition(Archetype.Entity_Player, this.Owner.Transform.Translation);
+            if(player != null)
+            { 
+                player.Transform.Translation = this.Owner.Transform.Translation;
+                this.LevelSettings.CameraViewport.Camera = player.FindChildByName("Camera");
+                player.Health.ConfiguredHealth = player.Health.MaxHealth;
+                if(this.NoPistol)
+                {
+                    player.WeaponSwap.NoPistol = true;
+                }
+            }
         }
     }
 }

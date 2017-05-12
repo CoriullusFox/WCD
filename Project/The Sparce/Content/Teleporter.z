@@ -53,6 +53,7 @@ class Teleporter : ZilchComponent
         //if distanceFromPlayer is less than Proximity and Teleported is equal to false
         if(distanceFromPlayer < this.Proximity && this.Teleported == false && !this.ExitOnly)
         {
+            player.Health.Freeze(0, this.CoolDownMax);
             this.CoolDown += event.Dt;
             
             this.Owner.Sprite.AnimationActive = true;

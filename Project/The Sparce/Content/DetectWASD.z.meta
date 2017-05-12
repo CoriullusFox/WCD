@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "DetectWASD",
+		uint64 ResourceId = 59bc41ce82d19e95,
+	},
+},

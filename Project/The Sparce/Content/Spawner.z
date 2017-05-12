@@ -1,0 +1,22 @@
+class Spawner : ZilchComponent
+{
+    
+    [Property]
+    var Archtype : Archetype = Archetype.Entity_Enemy_Default;
+    
+    var Spawn : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Spawn)
+        {
+            this.Space.CreateAtPosition(this.Archtype, this.Owner.Transform.Translation);
+            this.Owner.Destroy();
+        }
+    }
+}

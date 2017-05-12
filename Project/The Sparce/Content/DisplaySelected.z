@@ -42,7 +42,7 @@ class DisplaySelected : ZilchComponent
         else
         {
             
-            this.Owner.SpriteText.Text = "Locked";
+            this.Owner.SpriteText.Text = "";
             
         }
         

@@ -79,13 +79,15 @@ class PlayerAnimations : ZilchComponent
 
     function WeaponChange(event : SelectedGun)
     {
-        
-        var selectedWeaponSprite = "Weapon_`event.Selected`";
-        var selectedWeapon = this.Owner.FindChildByName("Weapon");
-        
-        selectedWeapon.Sprite.SpriteSource = SpriteSource.Find(selectedWeaponSprite);
-        selectedWeapon.Sprite.AnimationActive = false;
-        selectedWeapon.Sprite.CurrentFrame = 6;
+        if(!this.Owner.WeaponSwap.NoPistol)
+        {
+            var selectedWeaponSprite = "Weapon_`event.Selected`";
+            var selectedWeapon = this.Owner.FindChildByName("Weapon");
+            
+            selectedWeapon.Sprite.SpriteSource = SpriteSource.Find(selectedWeaponSprite);
+            selectedWeapon.Sprite.AnimationActive = false;
+            selectedWeapon.Sprite.CurrentFrame = 6;
+        }
         
     }
 

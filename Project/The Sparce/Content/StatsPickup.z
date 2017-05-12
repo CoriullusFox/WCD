@@ -10,14 +10,18 @@
 ** Contributors:
 ** - none
 ** --------------------------------------------------------------------------*/
-
+enum Stat
+{
+    Health,
+    Energy,
+}
 class StatsPickup : ZilchComponent
 {
     [Property]
     var ChangeAmount : Integer = 0;
     
     [Property]
-    var Stat : String = "Put Stat Here";
+    var Stat : Stat = Stat.Health;
     
     function Initialize(init : CogInitializer)
     {
@@ -33,27 +37,42 @@ class StatsPickup : ZilchComponent
         if(otherObject.Name == "TempPlayer")
         {
             //if stat equal to Health
-            if(this.Stat == "Health")
+            if(this.Stat == Stat.Health)
             {
                 //check if stat is full
                 if(otherObject.Health.ConfiguredHealth >= otherObject.Health.MaxHealth)
                 {
-                    Console.WriteLine("Energy Full");
+                    Console.WriteLine("Health Full");
+                    return;
                 }
-                //else if the stat level less than itself plus pickup number
-                else if( otherObject.Health.ConfiguredHealth + this.ChangeAmount <= otherObject.Health.MaxHealth)
+                else
                 {
-                    otherObject.Health.ConfiguredHealth = otherObject.Health.ConfiguredHealth + this.ChangeAmount;
-                    this.Owner.Destroy();
+                    otherObject.Health.ConfiguredHealth += this.ChangeAmount;
                 }
+                
+                
+                if(otherObject.Health.ConfiguredHealth > otherObject.Health.MaxHealth)
+                {
+                    otherObject.Health.ConfiguredHealth = otherObject.Health.MaxHealth;
+                }
+                
+                if(otherObject.Health.Player)
+                {
+                    var toSend = HealthToUI();
+                    toSend.Health = otherObject.Health.ConfiguredHealth;
+                    toSend.MaxHealth = otherObject.Health.MaxHealth;
+                    otherObject.Health.GameSession.DispatchEvent(Events.HealthToUI, toSend);
+                }
+            
+                this.Owner.Destroy();
             }
             //if stat equal to Energy
-            if(this.Stat == "Energy")
+            if(this.Stat == Stat.Energy)
             {
                 //check if stat is full
                 if(otherObject.EnergyStor.Energy >= otherObject.EnergyStor.MaxEnergy)
                 {
-                    Console.WriteLine("Health Full");
+                    Console.WriteLine("Energy Full");
                 }
                 //else if the stat level less than itself plus pickup number
                 else if((otherObject.EnergyStor.Energy + this.ChangeAmount) <= otherObject.EnergyStor.MaxEnergy)

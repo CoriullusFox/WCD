@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "ChangeLevelOnToutch",
+		uint64 ResourceId = 59bc4c714c2365d2,
+	},
+},

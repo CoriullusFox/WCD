@@ -161,7 +161,7 @@ class Doorscript : ZilchComponent
             {
                 if(!this.Locked)
                 {
-                    Console.WriteLine("hi");
+
                     this.Owner.RemoveComponentByName("BoxCollider");
                     this.Owner.Sprite.CurrentFrame = 0;
                     this.Owner.Sprite.SpriteSource = this.DoorOpening;

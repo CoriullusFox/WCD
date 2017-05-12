@@ -1,0 +1,46 @@
+class DetectWASD : ZilchComponent
+{
+    [Property]
+    var Door : CogPath = null;
+    var W : Boolean = false;
+    var A: Boolean = false;
+    var S : Boolean = false;
+    var D : Boolean = false;
+    var SHIFT : Boolean = false;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.W))
+        {
+            this.W = true;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.A))
+        {
+            this.A = true;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.S))
+        {
+            this.S = true;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.D))
+        {
+            this.D = true;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.Shift))
+        {
+            this.SHIFT = true;
+        }
+        
+        if(this.W && this.A && this.S && this.D && this.SHIFT)
+        {
+            this.Door.Cog.Doorscript.Locked = false;
+            this.Door.Cog.Doorscript.Condition = "none";
+        }
+        
+    }
+}

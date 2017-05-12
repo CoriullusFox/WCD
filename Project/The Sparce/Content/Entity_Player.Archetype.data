@@ -76,6 +76,21 @@ Cog =
 		bool ChainEUnlocked = false,
 		bool FreezeUnlocked = false,
 		bool DisableLockedWeaponSelect = true,
+		CogPath WeaponVisual = 
+		{
+			string Path = "Weapon",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 2,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
 	},
 	EnergyStor = 
 	{
@@ -145,9 +160,10 @@ Cog =
 		string ArchetypeAmmoBar = "5819b1a1fc281cba:UI_HealthBar",
 		bool MiniHeathBar = false,
 		bool Player = true,
+		bool Enemy = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-		float RegenRate = 0.5,
+		float RegenRate = 0,
 		float MaxHealth = 100,
 		float HurtDuration = 0.1,
 		float RegenCooldown = 1,
@@ -158,7 +174,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 2,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -190,7 +206,7 @@ Cog =
 			string Name = "5858639d4a7e270b:Weapon_Holding",
 			LinkId = 
 			{
-				uint Id = 3,
+				uint Id = 2,
 			},
 			Transform = 
 			{

@@ -28,9 +28,19 @@ class WeaponPickup : ZilchComponent
             var toSend = UnlockorUpgrade();
             if(this.Unlocked == "Pistol")
             {
-                event.OtherObject.UpgradeManager.PistolTier += 1;
-                toSend.Name = "Pistol";
-                toSend.Tier = event.OtherObject.UpgradeManager.PistolTier;
+                if(event.OtherObject.WeaponSwap.NoPistol)
+                {
+                    event.OtherObject.WeaponSwap.NoPistol = false;
+                    toSend.Name = "Pistol";
+                    toSend.Tier = event.OtherObject.UpgradeManager.PistolTier;
+                    event.OtherObject.WeaponSwap.AddNewComponent("Pistol", true);
+                }
+                else
+                {
+                    event.OtherObject.UpgradeManager.PistolTier += 1;
+                    toSend.Name = "Pistol";
+                    toSend.Tier = event.OtherObject.UpgradeManager.PistolTier;
+                }
             }
             else if(this.Unlocked == "Minigun")
             {

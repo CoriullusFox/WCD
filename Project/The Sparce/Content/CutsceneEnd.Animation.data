@@ -1,0 +1,84 @@
+RichAnimation = 
+{
+	float SampleTolerance = 0.05,
+	float Duration = 5,
+	Object Root = 
+	{
+		TrackType Type = Object,
+		string Name = "Root",
+		string Path = "",
+		bool Disabled = false,
+		uint PropertyTypeId = 0,
+		string PropertyTypeName = "void",
+		Array KeyFrames = 
+		[
+		],
+		Array Children = 
+		[
+			{
+				TrackType Type = Object,
+				string Name = "/",
+				string Path = "/",
+				bool Disabled = false,
+				uint PropertyTypeId = 0,
+				string PropertyTypeName = "",
+				Array KeyFrames = 
+				[
+				],
+				Array Children = 
+				[
+					{
+						TrackType Type = Component,
+						string Name = "SwapLevelOnAnim",
+						string Path = "SwapLevelOnAnim",
+						bool Disabled = false,
+						uint PropertyTypeId = 0,
+						string PropertyTypeName = "",
+						Array KeyFrames = 
+						[
+						],
+						Array Children = 
+						[
+							{
+								TrackType Type = Property,
+								string Name = "Swap",
+								string Path = "SwapLevelOnAnim.Swap",
+								bool Disabled = false,
+								uint PropertyTypeId = 5,
+								string PropertyTypeName = "bool",
+								Array KeyFrames = 
+								[
+									{
+										float key = 0,
+										Object value = 
+										{
+											float Time = 0,
+											bool Value = false,
+											Vec2 TangentIn = [-0.05, 0],
+											Vec2 TangentOut = [0.05, 0],
+											uint EditorFlags = 0,
+										},
+									},
+									{
+										float key = 5,
+										Object value = 
+										{
+											float Time = 5,
+											bool Value = true,
+											Vec2 TangentIn = [-0.05, 0],
+											Vec2 TangentOut = [0.05, 0],
+											uint EditorFlags = 0,
+										},
+									},
+								],
+								Array Children = 
+								[
+								],
+							},
+						],
+					},
+				],
+			},
+		],
+	},
+},

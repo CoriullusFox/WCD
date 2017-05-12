@@ -18,6 +18,9 @@ class DetectVictory : ZilchComponent
     
     var Timer : Real = 1;
     
+    [Property]
+    var Winable : Boolean = true;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -25,15 +28,19 @@ class DetectVictory : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(!this.Space.FindAllObjectsByName("Enemy").IsNotEmpty || this.Win)
+        if(this.Winable)
         {
-            this.Timer -= event.Dt;
-        }
-        if(this.Timer <= 0)
-        {
-            Zero.ObjectStore.Store("PlayerSave.wcd", this.Space.FindObjectByName("TempPlayer"));
-            Console.WriteLine("VICTORY!");
-            this.Space.TimeSpace.Paused = true;
+            if(!this.Space.FindAllObjectsByName("Enemy").IsNotEmpty || this.Win)
+            {
+                this.Timer -= event.Dt;
+            }
+            if(this.Timer <= 0)
+            {
+                this.Space.FindObjectByName("TempPlayer").Health.ConfiguredHealth = this.Space.FindObjectByName("TempPlayer").Health.MaxHealth;
+                Zero.ObjectStore.Store("PlayerSave.wcd", this.Space.FindObjectByName("TempPlayer"));
+                Console.WriteLine("VICTORY!");
+                this.Space.TimeSpace.Paused = true;
+            }
         }
     }
 }

@@ -1,0 +1,20 @@
+class TimerToLevelSwap : ZilchComponent
+{
+    [Property]
+    var Timer : Real = 5.5;
+    [Property]
+    var Level : Level = null;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        if(this.Timer <= 0)
+        {
+            this.Space.LoadLevel(this.Level);
+        }
+    }
+}

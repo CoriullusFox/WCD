@@ -26,7 +26,7 @@ class SelectedWeaponIcon : ZilchComponent
     {
         if(event.Unlocked)
         {
-            
+            this.Owner.Sprite.Color = Real4(1,1,1,1);
             var selectedWeapon = event.Selected;
             
             if(selectedWeapon == "Pistol")
@@ -69,7 +69,7 @@ class SelectedWeaponIcon : ZilchComponent
         else
         {
             
-            this.Owner.Sprite.SpriteSource = SpriteSource.Find("UI_Locked");
+            this.Owner.Sprite.Color = Real4(1,1,1,0);
             
         }
     }

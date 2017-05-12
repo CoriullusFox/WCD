@@ -1,0 +1,43 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Spawner",
+	},
+	Archetyped = 
+	{
+		string Name = "59bc440368aff47b:Spawner",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [16, -21.5, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = false,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	Spawner = 
+	{
+		string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+	},
+},
