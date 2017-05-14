@@ -117,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.86134, -13.3192, 50],
+			Vec3 Translation = [-0.580955, -16.0823, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -129,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457,
+			float Size = 18.0501,
 		},
 		EditorCameraController = 
 		{
@@ -137,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.86134, -13.3192, 1.50283e-007],
+			Vec3 LookTarget = [-0.580955, -16.0823, 1.50283e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -363,7 +363,6 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			string KeySprite = "59dea99a4e8abb1d:Item_Key",
 		},
 	},
 	Cog = 
@@ -431,7 +430,6 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			string KeySprite = "59dea99a4e8abb1d:Item_Key",
 		},
 	},
 	Cog = 
@@ -768,12 +766,91 @@ Level =
 			Vec3 Size = [1, 0.25, 0.5],
 		},
 	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+		Archetyped = 
+		{
+			string Name = "585123514e9dff4f:HorDoor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, -18, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Doorscript = 
+		{
+			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+			float DoorAnimationSpeed = 100,
+			bool Locked = true,
+			string Condition = "EnemiesKilled",
+			int EnemyDeathUnlockNumber = 0,
+			float RequiredEnemiesKilled = 34,
+			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+			bool Vert = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0.25, 0],
+			Vec3 Size = [1, 0.25, 0.5],
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6, -10, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
 	ArchetypeInstance = 
 	{
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -791,7 +868,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -809,7 +886,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -827,7 +904,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 23,
 		},
 		Transform = 
 		{
@@ -845,7 +922,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -863,7 +940,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -881,7 +958,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 26,
 		},
 		Transform = 
 		{
@@ -899,7 +976,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 27,
 		},
 		Transform = 
 		{
@@ -917,7 +994,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 28,
 		},
 		Transform = 
 		{
@@ -935,7 +1012,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -953,7 +1030,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 30,
 		},
 		Transform = 
 		{
@@ -970,7 +1047,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 29,
+			uint Id = 31,
 		},
 		Named = 
 		{
@@ -1024,7 +1101,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 30,
+					uint Id = 32,
 				},
 				Named = 
 				{
@@ -1067,7 +1144,7 @@ Level =
 		string Name = "586101df0958c576:Pickup_Health",
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 33,
 		},
 		Transform = 
 		{
@@ -1084,7 +1161,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 34,
 		},
 		Named = 
 		{
@@ -1130,7 +1207,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 33,
+				uint ResolvedCog = 35,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1144,7 +1221,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 35,
 		},
 		Named = 
 		{
@@ -1190,7 +1267,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 32,
+				uint ResolvedCog = 34,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1204,7 +1281,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 36,
 		},
 		Named = 
 		{
@@ -1250,7 +1327,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 35,
+				uint ResolvedCog = 37,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1264,7 +1341,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 35,
+			uint Id = 37,
 		},
 		Named = 
 		{
@@ -1310,7 +1387,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 34,
+				uint ResolvedCog = 36,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1325,7 +1402,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 36,
+			uint Id = 38,
 		},
 		Transform = 
 		{
@@ -1343,7 +1420,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 39,
 		},
 		Transform = 
 		{
@@ -1361,7 +1438,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 40,
 		},
 		Transform = 
 		{
@@ -1379,7 +1456,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 41,
 		},
 		Transform = 
 		{
@@ -1397,7 +1474,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 42,
 		},
 		Transform = 
 		{
@@ -1415,7 +1492,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 41,
+			uint Id = 43,
 		},
 		Transform = 
 		{
@@ -1433,7 +1510,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 44,
 		},
 		Transform = 
 		{
@@ -1451,7 +1528,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 45,
 		},
 		Transform = 
 		{
@@ -1469,7 +1546,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 44,
+			uint Id = 46,
 		},
 		Transform = 
 		{
@@ -1487,7 +1564,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 45,
+			uint Id = 47,
 		},
 		Transform = 
 		{
@@ -1505,7 +1582,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 48,
 		},
 		Transform = 
 		{
@@ -1523,7 +1600,7 @@ Level =
 		string Name = "585fac7a31d9f76a:Entity_Enemy_Shield",
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 49,
 		},
 		Transform = 
 		{
@@ -1541,7 +1618,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 48,
+			uint Id = 50,
 		},
 		Transform = 
 		{
@@ -1559,7 +1636,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 51,
 		},
 		Transform = 
 		{
@@ -1577,7 +1654,7 @@ Level =
 		string Name = "585848194a6a1452:Entity_Enemy_Pyro",
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 52,
 		},
 		Transform = 
 		{
@@ -1595,7 +1672,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 53,
 		},
 		Transform = 
 		{
@@ -1613,7 +1690,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 54,
 		},
 		Transform = 
 		{
@@ -1631,7 +1708,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 55,
 		},
 		Transform = 
 		{
@@ -1649,7 +1726,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 56,
 		},
 		Transform = 
 		{
@@ -1667,7 +1744,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 57,
 		},
 		Transform = 
 		{
@@ -1685,7 +1762,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 58,
 		},
 		Transform = 
 		{
@@ -1703,7 +1780,7 @@ Level =
 		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 59,
 		},
 		Transform = 
 		{
@@ -1721,7 +1798,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 60,
 		},
 		Transform = 
 		{
@@ -1739,7 +1816,7 @@ Level =
 		string Name = "585fac1532f16dbc:Entity_Enemy_Sniper",
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 61,
 		},
 		Transform = 
 		{
@@ -1750,72 +1827,6 @@ Level =
 		Named = 
 		{
 			string Name = "Enemy",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 60,
-		},
-		Named = 
-		{
-			string Name = "Animated_HorDoor",
-		},
-		Archetyped = 
-		{
-			string Name = "585123514e9dff4f:HorDoor",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6, -18, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Doorscript = 
-		{
-			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
-			float DoorAnimationSpeed = 100,
-			bool Locked = true,
-			string Condition = "EnemiesKilled",
-			int EnemyDeathUnlockNumber = 0,
-			float RequiredEnemiesKilled = 34,
-			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
-			bool Vert = false,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0.25, 0],
-			Vec3 Size = [1, 0.25, 0.5],
 		},
 	},
 },
