@@ -1,0 +1,182 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Enemy",
+	},
+	Archetyped = 
+	{
+		string Name = "599e5cb07977da9a:Entity_Enemy_Miniboss",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, -2.75, 0],
+		Vec3 Scale = [4, 4, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 3,
+		uint StartFrame = 0,
+	},
+	EnemyAI = 
+	{
+		float ChaseProximity = 4,
+		float ShootProximity = 10,
+		int Speed = 80,
+		Vec3 LookDirection = [0, 1, 0],
+		Vec3 MoveDirection = [0, 0, 0],
+		bool Pathfind = true,
+		bool Debug = false,
+		float ResponceTime = 2,
+		float WaunderRange = 2.5,
+		float WaunderCooldown = 4,
+		float Cooldown = 1,
+	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "5800bf6d54ec0d53:Slippery",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.065, 0.09, 0.5],
+	},
+	ChangeDirectionToPointAtPlayer = 
+	{
+	},
+	EnemyAnimations = 
+	{
+		string North = "58128ac7e63298e0:EnemyNorth_Anim",
+		string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
+		string East = "58128986ce447b92:EnemyEast_Anim",
+		string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
+		string South = "58128b1d3c322a60:EnemySouth_Anim",
+		string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
+		string West = "58128bf533d431ee:EnemyWest_Anim",
+		string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
+		float AnimationSpeed = 3,
+	},
+	Health = 
+	{
+		float ConfiguredHealth = 50,
+		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
+		bool MiniHeathBar = true,
+		bool Player = false,
+		bool Enemy = true,
+		Vec4 HurtColor = [1, 0, 0.000599861, 1],
+		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+		float RegenRate = 0.25,
+		float MaxHealth = 75,
+		float HurtDuration = 0.1,
+		float RegenCooldown = 1,
+	},
+	RigidBody = 
+	{
+		bool Static = false,
+		bool Asleep = false,
+		bool Kinematic = false,
+		bool RotationLocked = true,
+		bool Mode2D = true,
+		bool AllowSleep = true,
+		bool Inherit2DMode = true,
+		Vec3 Velocity = [0, 0, 0],
+		Vec3 AngularVelocity = [0, 0, 0],
+	},
+	EnemyToutchDamage = 
+	{
+		float SecondsBetweenDamage = 0.5,
+		float Damage = 2.5,
+	},
+	Pistol = 
+	{
+		string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
+		float Damage = 5,
+		float EnergyUse = 1,
+		float Energy = 100,
+		float CooldownMax = 0.25,
+		bool Player = false,
+		float BulletSpeed = 10,
+		float LifeLength = 1.5,
+		float CamZoom = 20,
+	},
+	Shotgun = 
+	{
+		string Bullet = "583c7e44dd4f1575:Bullet_TinyPellet",
+		int NumberOfShots = 5,
+		float DamagePerBullet = 10,
+		float DistBetweenShots = 0.1,
+		float EnergyUse = 25,
+		float Energy = 100,
+		float CooldownMax = 0.6,
+		bool Player = false,
+		float BulletSpeed = 18,
+		float LifeLength = 0.35,
+		float CamZoom = 18,
+	},
+	TeslaGun = 
+	{
+		float Damage = 80,
+		float EnergyUse = 99,
+		float Energy = 100,
+		float CooldownMax = 5,
+		bool Player = false,
+		float CamZoom = 25,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Sprite",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -70],
+				Vec3 Scale = [0.5, 0.5, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 0, 0, 0.9999],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5274db4c2e7c11f9:Circle",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+	},
+},
