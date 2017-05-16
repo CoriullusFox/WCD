@@ -117,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.99095, 2.21744, 50],
+			Vec3 Translation = [-3.68289, 4.23131, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -129,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 19.9484,
+			float Size = 12.2457,
 		},
 		EditorCameraController = 
 		{
@@ -137,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-6.99095, 2.21744, 1.48082e-007],
+			Vec3 LookTarget = [-3.68289, 4.23131, 1.48082e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -5031,6 +5031,24 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [17, -18, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585123514e9dff4f:HorDoor",
+		LinkId = 
+		{
+			uint Id = 101,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 8.25, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
