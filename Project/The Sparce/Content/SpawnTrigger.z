@@ -1,8 +1,6 @@
 class SpawnTrigger : ZilchComponent
 {
-    
-    [Property]
-    var SpwanerToActivate : CogPath = null;
+    var Spawn : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -13,10 +11,7 @@ class SpawnTrigger : ZilchComponent
     {
         if(event.OtherObject.Name == "TempPlayer")
         {
-            
-            this.SpwanerToActivate.Cog.Spawner.Spawn = true;
-            this.Owner.Destroy();
-            
+            this.Spawn = true;
         }
     }
 
