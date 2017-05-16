@@ -4,6 +4,9 @@ class Spawner : ZilchComponent
     [Property]
     var Archtype : Archetype = Archetype.Entity_Enemy_Default;
     
+    [Property]
+    var Trigger : CogPath = null;
+    
     var Spawn : Boolean = false;
     
     function Initialize(init : CogInitializer)
@@ -13,9 +16,12 @@ class Spawner : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.Spawn = this.Trigger.Cog.SpawnTrigger.Spawn;
+        
         if(this.Spawn)
         {
             this.Space.CreateAtPosition(this.Archtype, this.Owner.Transform.Translation);
+            this.Trigger.Cog.Destroy();
             this.Owner.Destroy();
         }
     }
