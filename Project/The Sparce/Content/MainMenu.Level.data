@@ -102,6 +102,10 @@ Level =
 		StartupResolutionSettings = 
 		{
 		},
+		GameStateManager = 
+		{
+			bool EnableFullscreen = false,
+		},
 	},
 	Cog = 
 	{

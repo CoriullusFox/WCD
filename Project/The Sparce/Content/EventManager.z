@@ -100,3 +100,28 @@ class Fire : ZilchEvent
     sends Fire : Fire;
     
 }
+
+class SetMusicVol : ZilchEvent
+{
+    
+    sends SetMusicVol : SetMusicVol;
+    var Volume : Real;
+    
+}
+
+class SetSFXVol : ZilchEvent
+{
+    
+    sends SetSFXVol : SetSFXVol;
+    var Volume : Real;
+    
+}
+
+class ReadSettings : ZilchEvent
+{
+    
+    sends ReadSettings : ReadSettings;
+    var MusicVol : Real;
+    var SFXVol : Real;
+    
+}

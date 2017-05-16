@@ -35,11 +35,17 @@ class MusicManager : ZilchComponent
         this.MusicSpace = this.GameSession.CreateNamedSpace("MusicSpace",Archetype.Space);
         this.MusicSpace.LoadLevel(Level.MusicLevel);
         Zero.Connect(this.MusicSpace, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.ReadSettings, this.OnReadSettings);
         
         //Save emitter for the laterz
         this.CurrentEmitter = this.MusicSpace.FindObjectByName("Camera").SoundEmitter;
         
         //Start with the fade finished
+    }
+
+    function OnReadSettings(event : ReadSettings)
+    {
+        this.MusicSpace.SoundSpace.Volume = event.MusicVol;
     }
 
     function OnLogicUpdate(event : UpdateEvent)

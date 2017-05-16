@@ -1,0 +1,32 @@
+class SettingsStor : ZilchComponent
+{
+    [Property]
+    var MusicVol : Real = 1;
+    [Property]
+    var SFXVol : Real = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.SetMusicVol, this.OnSetMusicVol);
+        Zero.Connect(this.GameSession, Events.SetSFXVol, this.OnSetSFXVol);
+    }
+
+    function OnSetSFXVol(event : SetSFXVol)
+    {
+        this.SFXVol = event.Volume;
+    }
+
+    function OnSetMusicVol(event : SetMusicVol)
+    {
+        this.MusicVol = event.Volume;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var toSend = ReadSettings();
+        toSend.MusicVol = this.MusicVol;
+        toSend.SFXVol = this.SFXVol;
+        this.GameSession.DispatchEvent(Events.ReadSettings, toSend);
+    }
+}

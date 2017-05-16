@@ -20,6 +20,10 @@ class GameStateManager : ZilchComponent
     var ResX : Real = 1920;
     var ResY : Real = 1080;
     
+    var SpaceArch : Archetype = Archetype.SettingStorSpace;
+    var Lvl : Level = Level.SettingsStor;
+    var SettingsSpace : Space = null;
+    
     function Initialize(init : CogInitializer)
     {
         
@@ -38,7 +42,34 @@ class GameStateManager : ZilchComponent
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
+        Zero.Connect(this.GameSession, Events.LevelStarted, this.OnLevelStarted);
+        Zero.Connect(this.GameSession, Events.ReadSettings, this.OnReadSettings);
         
+    }
+
+    function OnReadSettings(event : ReadSettings)
+    {
+        this.Space.SoundSpace.Volume = event.SFXVol;
+    }
+
+    function OnLevelStarted(event : GameEvent)
+    {
+        
+        if(this.SettingsSpace == null)
+        {
+            
+            if(this.GameSession.FindSpaceByName("SettingSpace") != null)
+            {
+                this.SettingsSpace = this.GameSession.FindSpaceByName("SettingSpace");
+            }
+            else
+            {
+                
+                this.SettingsSpace = this.GameSession.CreateNamedSpace("SettingSpace", this.SpaceArch);
+                this.SettingsSpace.LoadLevel(this.Lvl);
+                
+            }
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)

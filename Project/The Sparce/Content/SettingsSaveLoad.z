@@ -1,0 +1,23 @@
+class SettingsSaveLoad : ZilchComponent
+{
+    
+    var SettingsStor : Cog = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.SettingsStor != null)
+        {
+            
+            Zero.ObjectStore.Store("SettingsSave.wcd", this.SettingsStor);
+            
+        }
+        else
+        {
+            this.SettingsStor = Zero.ObjectStore.RestoreOrArchetype("SettingsSave.wcd", "SettingsStor", this.Space);
+        }
+    }
+}

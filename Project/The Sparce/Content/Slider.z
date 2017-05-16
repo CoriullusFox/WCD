@@ -1,0 +1,95 @@
+enum Setting
+{
+    
+    Music,
+    SFX,
+    
+}
+class Slider : ZilchComponent
+{
+    
+    var Bar : CogPath = CogPath("Bar");
+    var Value : CogPath = CogPath("Value");
+    
+    var Val : Real = 1;
+    
+    [Property]
+    var Setting : Setting = Setting.Music;
+    
+    var Hovering : Boolean = false;
+    var MousePos : Real3 = Real3(0,0,0);
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.MouseMove, this.OnMouseMove);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.ReadSettings, this.OnReadSettings);
+    }
+    
+    function OnMouseMove(event : ViewportMouseEvent)
+    {
+        this.MousePos = event.ToWorldZPlane(0);
+    }
+
+    function OnReadSettings(event : ReadSettings)
+    {
+        if(this.Setting == Setting.Music)
+        {
+            this.Val = event.MusicVol;
+        }
+        else if(this.Setting == Setting.SFX)
+        {
+            this.Val = event.SFXVol;
+        }
+        
+        
+        this.Value.Cog.SpriteText.Text = "`(this.Val * 100) as Integer`";
+        this.Bar.Cog.Transform.Scale = Real3(this.Val, 1,1);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Hovering && Zero.Mouse.IsButtonDown(MouseButtons.Left))
+        {
+            var newVal : Real = Math.Distance(Real2(this.Owner.Transform.WorldTranslation.X, this.Owner.Transform.WorldTranslation.Y), Real2(this.MousePos.X, this.MousePos.Y)) / 6;
+            //Console.WriteLine(newVal);
+            
+            if(newVal > 1)
+            {
+                newVal = 1;
+            }
+            if(this.MousePos.X < this.Owner.Transform.Translation.X)
+            {
+                newVal = 0;
+            }
+            
+            if(this.Setting == Setting.Music)
+            {
+                var toSend = SetMusicVol();
+                toSend.Volume = newVal;
+                this.GameSession.DispatchEvent(Events.SetMusicVol, toSend);
+            }
+            else if(this.Setting == Setting.SFX)
+            {
+                var toSend = SetSFXVol();
+                toSend.Volume = newVal;
+                this.GameSession.DispatchEvent(Events.SetSFXVol, toSend);
+            }
+        }
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        this.Bar.Cog.Sprite.Color -= Real4(0.1,0.1,0.1,0);
+        this.Hovering = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        this.Bar.Cog.Sprite.Color += Real4(0.1,0.1,0.1,0);
+        this.Hovering = true;
+    }
+}
