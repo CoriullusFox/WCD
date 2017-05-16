@@ -117,11 +117,20 @@ class SetSFXVol : ZilchEvent
     
 }
 
+class SetLevelUnlcoked : ZilchEvent
+{
+    
+    sends SetLevelUnlcoked : SetLevelUnlcoked;
+    var Level : Integer;
+    
+}
+
 class ReadSettings : ZilchEvent
 {
     
     sends ReadSettings : ReadSettings;
     var MusicVol : Real;
     var SFXVol : Real;
+    var LVLNum : Integer;
     
 }

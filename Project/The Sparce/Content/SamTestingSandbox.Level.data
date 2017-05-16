@@ -97,7 +97,7 @@ Level =
 		},
 		MusicScr_Stage = 
 		{
-			string MusicToPlay = "5857201d22f95a2c:Silence",
+			string MusicToPlay = "59b56c4216ad54fa:NewStage",
 		},
 		DebugMode = 
 		{
@@ -119,7 +119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.01924, -3.89166, 50],
+			Vec3 Translation = [0, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.1034,
+			float Size = 16.3746,
 		},
 		EditorCameraController = 
 		{
@@ -139,7 +139,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.01924, -3.89166, -2.26964e-008],
+			Vec3 LookTarget = [0, 0, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -452,6 +452,7 @@ Level =
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
+			bool Enemy = true,
 			Vec4 HurtColor = [1, 0, 0.000599861, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 			float RegenRate = 0.25,
@@ -620,6 +621,7 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+			bool ExitOnly = false,
 		},
 	},
 	Cog = 
@@ -679,6 +681,7 @@ Level =
 			},
 			float Proximity = 1,
 			string TeleportingEffect = "58624a51b55ce44d:TeleEffect",
+			bool ExitOnly = false,
 		},
 	},
 	Cog = 

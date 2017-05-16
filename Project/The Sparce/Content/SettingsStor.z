@@ -4,12 +4,20 @@ class SettingsStor : ZilchComponent
     var MusicVol : Real = 1;
     [Property]
     var SFXVol : Real = 1;
+    [Property]
+    var UnlockedLVL : Integer = 0;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.GameSession, Events.SetMusicVol, this.OnSetMusicVol);
         Zero.Connect(this.GameSession, Events.SetSFXVol, this.OnSetSFXVol);
+        Zero.Connect(this.GameSession, Events.SetMusicVol, this.OnSetMusicVol);
+        Zero.Connect(this.GameSession, Events.SetLevelUnlcoked, this.OnSetLevelUnlcoked);
+    }
+
+    function OnSetLevelUnlcoked(event : SetLevelUnlcoked)
+    {
+        this.UnlockedLVL = event.Level;
     }
 
     function OnSetSFXVol(event : SetSFXVol)
@@ -27,6 +35,7 @@ class SettingsStor : ZilchComponent
         var toSend = ReadSettings();
         toSend.MusicVol = this.MusicVol;
         toSend.SFXVol = this.SFXVol;
+        toSend.LVLNum = this.UnlockedLVL;
         this.GameSession.DispatchEvent(Events.ReadSettings, toSend);
     }
 }
