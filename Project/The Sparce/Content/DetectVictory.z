@@ -21,9 +21,25 @@ class DetectVictory : ZilchComponent
     [Property]
     var Winable : Boolean = true;
     
+    var Wind : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.ReadSettings, this.OnReadSettings);
+    }
+
+    function OnReadSettings(event : ReadSettings)
+    {
+        if(this.Wind)
+        {
+            
+            var toSend = SetLevelUnlcoked();
+            toSend.Level = event.LVLNum + 1;
+            this.GameSession.DispatchEvent(Events.SetLevelUnlcoked, toSend);
+            this.Space.LoadLevel(Level.MainMenu);
+            
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -39,7 +55,8 @@ class DetectVictory : ZilchComponent
                 this.Space.FindObjectByName("TempPlayer").Health.ConfiguredHealth = this.Space.FindObjectByName("TempPlayer").Health.MaxHealth;
                 Zero.ObjectStore.Store("../../../AppData/Roaming/WCD/TheSparce/saves/PlayerSave", this.Space.FindObjectByName("TempPlayer"));
                 Console.WriteLine("VICTORY!");
-                this.Space.TimeSpace.Paused = true;
+                this.Space.TimeSpace.Paused = false;
+                this.Wind = true;
             }
         }
     }

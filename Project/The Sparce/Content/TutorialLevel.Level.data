@@ -98,6 +98,13 @@ Level =
 		{
 			bool DubugModeEnabled = false,
 		},
+		GameStateManager = 
+		{
+			bool EnableFullscreen = false,
+		},
+		Pause = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -111,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.5276, -10.0865, 50],
+			Vec3 Translation = [-6.26628, -7.49426, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -123,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90613,
+			float Size = 44.933,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-9.5276, -10.0865, -4.16468e-007],
+			Vec3 LookTarget = [-6.26628, -7.49426, -2.73912e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -515,6 +522,11 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
 	},
 	Cog = 
 	{
@@ -593,6 +605,11 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_HorDoor",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
 		},
 	},
 	Cog = 
@@ -734,6 +751,11 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -752,6 +774,11 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -769,6 +796,11 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_VertDoor",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
 		},
 	},
 	Cog = 
@@ -801,7 +833,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "59dea99a4e8abb1d:Item_Key",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -2138,7 +2170,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "Quick, make your way to your saceship",
+			string Text = "Quick, make your way to your spaceship",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -2225,7 +2257,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-29, -11, 0],
+			Vec3 Translation = [-21.7973, -11, 0],
 			Vec3 Scale = [1, 2.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
