@@ -104,10 +104,6 @@ Level =
 		EnemiesKilldstor = 
 		{
 		},
-		DetectVictory = 
-		{
-			bool Winable = true,
-		},
 	},
 	Cog = 
 	{
@@ -121,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.00788, -11.523, 50],
+			Vec3 Translation = [1.04646, -9.93972, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 59.9285,
+			float Size = 12.0994,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.00788, -11.523, 1.39394e-007],
+			Vec3 LookTarget = [1.04646, -9.93972, 5.36579e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1368,7 +1364,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "ChainElectricity",
+			string Unlocked = "ChainE",
 		},
 		Hierarchy = 
 		{
