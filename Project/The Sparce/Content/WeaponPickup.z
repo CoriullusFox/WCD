@@ -10,11 +10,24 @@
 ** Contributors:
 ** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
-
+enum Wep {
+    
+    Pistol,
+    Shotgun,
+    Minigun,
+    Rifle,
+    Beam_Laser,
+    Flame_Thrower,
+    Bouncer,
+    Tesla,
+    Chain_Electricity,
+    Freeze_Ray,
+    
+}
 class WeaponPickup : ZilchComponent
 {
     [Property]
-    var Unlocked : String = "null";
+    var Unlocked : Wep = Wep.Pistol;
     
     function Initialize(init : CogInitializer)
     {
@@ -26,7 +39,7 @@ class WeaponPickup : ZilchComponent
         if(event.OtherObject.Name == "TempPlayer")
         {
             var toSend = UnlockorUpgrade();
-            if(this.Unlocked == "Pistol")
+            if(this.Unlocked == Wep.Pistol)
             {
                 if(event.OtherObject.WeaponSwap.NoPistol)
                 {
@@ -42,7 +55,7 @@ class WeaponPickup : ZilchComponent
                     toSend.Tier = event.OtherObject.UpgradeManager.PistolTier;
                 }
             }
-            else if(this.Unlocked == "Minigun")
+            else if(this.Unlocked == Wep.Minigun)
             {
                 if(!event.OtherObject.WeaponSwap.MinigunUnlocked)
                 {
@@ -56,7 +69,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Tier = event.OtherObject.UpgradeManager.MinigunTier;
             }
             
-            else if(this.Unlocked == "Shotgun")
+            else if(this.Unlocked == Wep.Shotgun)
             {
                 if(!event.OtherObject.WeaponSwap.ShotgunUnlocked)
                 {
@@ -70,7 +83,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Tier = event.OtherObject.UpgradeManager.ShotgunTier;
             }
             
-            else if(this.Unlocked == "Rifle")
+            else if(this.Unlocked == Wep.Rifle)
             {
                 if(!event.OtherObject.WeaponSwap.RifleUnlocked)
                 {
@@ -84,7 +97,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Tier = event.OtherObject.UpgradeManager.RifleTier;
             }
             
-            else if(this.Unlocked == "BeamLaser")
+            else if(this.Unlocked == Wep.Beam_Laser)
             {
                 if(!event.OtherObject.WeaponSwap.BeamLaserUnlocked)
                 {
@@ -97,7 +110,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Name = "BeamLaser";
                 toSend.Tier = event.OtherObject.UpgradeManager.BeamlaserTier;
             }
-            else if(this.Unlocked == "FlameThrower")
+            else if(this.Unlocked == Wep.Flame_Thrower)
             {
                 if(!event.OtherObject.WeaponSwap.FlamethrowerUnlocked)
                 {
@@ -110,7 +123,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Name = "FlameThrower";
                 toSend.Tier = event.OtherObject.UpgradeManager.FlamethrowerTier;
             }
-            else if(this.Unlocked == "Bouncer")
+            else if(this.Unlocked == Wep.Bouncer)
             {
                 if(!event.OtherObject.WeaponSwap.BouncerUnlocked)
                 {
@@ -123,7 +136,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Name = "Bouncer";
                 toSend.Tier = event.OtherObject.UpgradeManager.BouncerTier;
             }
-            else if(this.Unlocked == "Tesla")
+            else if(this.Unlocked == Wep.Tesla)
             {
                 if(!event.OtherObject.WeaponSwap.TeslaUnlocked)
                 {
@@ -136,7 +149,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Name = "TeslaGun";
                 toSend.Tier = event.OtherObject.UpgradeManager.TeslaTier;
             }
-            else if(this.Unlocked == "ChainE")
+            else if(this.Unlocked == Wep.Chain_Electricity)
             {
                 if(!event.OtherObject.WeaponSwap.ChainEUnlocked)
                 {
@@ -149,7 +162,7 @@ class WeaponPickup : ZilchComponent
                 toSend.Name = "ChainElectricity";
                 toSend.Tier = event.OtherObject.UpgradeManager.ChainETier;
             }
-            else if(this.Unlocked == "FreezeRay")
+            else if(this.Unlocked == Wep.Freeze_Ray)
             {
                 if(!event.OtherObject.WeaponSwap.FreezeUnlocked)
                 {
