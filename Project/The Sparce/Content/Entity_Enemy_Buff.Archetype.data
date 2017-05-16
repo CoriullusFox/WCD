@@ -38,7 +38,7 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 3,
+		float ChaseProximity = 5,
 		float ShootProximity = 7,
 		int Speed = 50,
 		Vec3 LookDirection = [0, 1, 0],
@@ -77,7 +77,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 75,
+		float ConfiguredHealth = 50,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
@@ -95,7 +95,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -117,7 +117,7 @@ Cog =
 		float CooldownMax = 0.8,
 		bool Player = false,
 		float BulletSpeed = 12,
-		float LifeLength = 0.45,
+		float LifeLength = 0.6,
 		float CamZoom = 0,
 	},
 	Hierarchy = 
