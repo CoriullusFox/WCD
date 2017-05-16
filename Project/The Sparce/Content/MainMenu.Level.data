@@ -106,6 +106,10 @@ Level =
 		{
 			bool EnableFullscreen = false,
 		},
+		MusicScr_Stage = 
+		{
+			string MusicToPlay = "59b5730bfdc81b59:Intro",
+		},
 	},
 	Cog = 
 	{

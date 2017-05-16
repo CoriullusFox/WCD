@@ -121,9 +121,14 @@ Level =
 		},
 		DetectVictory = 
 		{
+			bool Winable = true,
 		},
 		EnemiesKilldstor = 
 		{
+		},
+		MusicScr_Stage = 
+		{
+			string MusicToPlay = "59b55f6042f514d6:Boss",
 		},
 	},
 	Cog = 
@@ -150,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7595,
+			float Size = 22.0464,
 		},
 		EditorCameraController = 
 		{
@@ -193,6 +198,8 @@ Level =
 		SpawnPlayer = 
 		{
 			string PlayerToSpawn = "Entity_Player",
+			bool SpawnDefaultPlayer = false,
+			bool NoPistol = false,
 		},
 		Grid = 
 		{
