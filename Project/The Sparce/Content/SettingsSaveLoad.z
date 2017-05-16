@@ -12,12 +12,12 @@ class SettingsSaveLoad : ZilchComponent
         if(this.SettingsStor != null)
         {
             
-            Zero.ObjectStore.Store("SettingsSave.wcd", this.SettingsStor);
+            Zero.ObjectStore.Store("../../../AppData/Roaming/WCD/TheSparce/saves/SettingsSave", this.SettingsStor);
             
         }
         else
         {
-            this.SettingsStor = Zero.ObjectStore.RestoreOrArchetype("SettingsSave.wcd", "SettingsStor", this.Space);
+            this.SettingsStor = Zero.ObjectStore.RestoreOrArchetype("../../../AppData/Roaming/WCD/TheSparce/saves/SettingsSave", "SettingsStor", this.Space);
         }
     }
 }

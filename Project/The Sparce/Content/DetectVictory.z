@@ -37,7 +37,7 @@ class DetectVictory : ZilchComponent
             if(this.Timer <= 0)
             {
                 this.Space.FindObjectByName("TempPlayer").Health.ConfiguredHealth = this.Space.FindObjectByName("TempPlayer").Health.MaxHealth;
-                Zero.ObjectStore.Store("PlayerSave.wcd", this.Space.FindObjectByName("TempPlayer"));
+                Zero.ObjectStore.Store("../../../AppData/Roaming/WCD/TheSparce/saves/PlayerSave", this.Space.FindObjectByName("TempPlayer"));
                 Console.WriteLine("VICTORY!");
                 this.Space.TimeSpace.Paused = true;
             }
