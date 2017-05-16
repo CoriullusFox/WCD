@@ -15,7 +15,7 @@ class ButtonLevelChange : ZilchComponent
 {
     
     [Property]
-    var Level : Level = Level.FirstLevel;
+    var Level : Level = Level.LevelOne;
     
     function Initialize(init : CogInitializer)
     {
