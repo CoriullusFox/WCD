@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-0.634982, -0.451925, 0.21841],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -87,6 +87,7 @@ Cog =
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
+		bool Enemy = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5844c0fe60a2ae39:Particle_Explosion",
 		float RegenRate = 5,
@@ -104,7 +105,7 @@ Cog =
 		float FireRate = 0.4,
 		string Bullet = "58638be9705e178b:Bullet_LargeBoss",
 		float BulletSpeed = 9,
-		float Damage = 5,
+		float Damage = 10,
 		float LifeLength = 75,
 		float Randomness = 0.01,
 	},

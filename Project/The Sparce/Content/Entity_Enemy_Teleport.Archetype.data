@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2, 9, 0],
+		Vec3 Translation = [1.45748, 0.710555, 0.21841],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -81,6 +81,7 @@ Cog =
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
+		bool Enemy = true,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		float RegenRate = 0.5,
@@ -119,8 +120,8 @@ Cog =
 	},
 	AITeleportMod = 
 	{
-		float TPRangeLarge = 2,
-		float TPRangeSmall = 1,
+		float TPRangeLarge = 5,
+		float TPRangeSmall = 2.5,
 	},
 	Hierarchy = 
 	{

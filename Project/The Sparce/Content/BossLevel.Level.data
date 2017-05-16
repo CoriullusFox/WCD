@@ -121,6 +121,7 @@ Level =
 		},
 		DetectVictory = 
 		{
+			bool Winable = true,
 		},
 		EnemiesKilldstor = 
 		{
@@ -193,6 +194,8 @@ Level =
 		SpawnPlayer = 
 		{
 			string PlayerToSpawn = "Entity_Player",
+			bool SpawnDefaultPlayer = false,
+			bool NoPistol = false,
 		},
 		Grid = 
 		{
@@ -220,29 +223,11 @@ Level =
 			uint StartFrame = 0,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "58586e025f680300:Entity_Captain",
-		LinkId = 
-		{
-			uint Id = 4,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -277,7 +262,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -306,6 +291,24 @@ Level =
 			string PaletteName = "584fc90396dcbbba:SpaceTileSetFloors",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "58586e025f680300:Entity_Captain",
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.634982, -0.451925, 0.21841],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },
