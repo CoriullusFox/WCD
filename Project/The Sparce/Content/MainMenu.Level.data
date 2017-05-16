@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.549713, 0.00643277, 49.999],
+			Vec3 Translation = [0.611531, -2.41604, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2532,
+			float Size = 20.1898,
 		},
 		EditorCameraController = 
 		{
@@ -143,7 +143,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.549713, 0.00643277, -0.001],
+			Vec3 LookTarget = [0.611531, -2.41604, -0.000999952],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -251,7 +251,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.5, 0.75, 0],
+					Vec3 Translation = [0, 0.75, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -261,7 +261,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.5159, 0, 0.67, 1],
+					Vec4 Color = [0, 0.67, 0.1273, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -289,6 +289,13 @@ Level =
 				{
 					string Level = "5991b2a36b02f6bb:LevelOne",
 				},
+				PlayButton = 
+				{
+					string LVL0 = "587df8cacd0a97cf:TutorialLevelCut1",
+					string LVL1 = "5991b2a36b02f6bb:LevelOne",
+					string LVL2 = "599e572c2d24ce68:LevelTwo",
+					string LVL3 = "58587ea017da4446:BossLevel",
+				},
 				Hierarchy = 
 				{
 					Cog = 
@@ -313,7 +320,7 @@ Level =
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
-							Vec4 Color = [0.415, 0, 0.83, 1],
+							Vec4 Color = [0, 0.83, 0.1328, 1],
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -339,7 +346,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [2.25, 0.75, 0],
+					Vec3 Translation = [2.5, -0.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -349,95 +356,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0, 1, 0.31, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "580f2b89ad88217b:sprite_bigbtn",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Reactive = 
-				{
-					bool Active = true,
-					bool CaptureMouse = false,
-				},
-				SelectableScale = 
-				{
-					Vec3 ScaleDirection = [1, 1, 1],
-					Vec3 MaxScale = [1.2, 1.2, 1],
-					Vec3 MinScale = [1, 1, 1],
-					float ScaleSpeed = 1,
-				},
-				ButtonLevelChange = 
-				{
-					string Level = "587df8cacd0a97cf:TutorialLevelCut1",
-				},
-				Hierarchy = 
-				{
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 9,
-						},
-						Named = 
-						{
-							string Name = "Button_Tutorial",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 0.5, 0],
-							Vec3 Scale = [0.5, 0.5, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [0, 1, 0.22, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "5820efc589857afa:TheSparceFont",
-							uint FontSize = 100,
-							string Text = "Tutorial",
-							TextAlign Align = Center,
-							float PixelsPerUnit = 64,
-							bool Smoothing = false,
-						},
-					},
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 10,
-				},
-				Named = 
-				{
-					string Name = "UI_MainMenuButtonBG",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-2.5, -0.5, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.325, 0.325, 0.325, 1],
+					Vec4 Color = [0, 0.0400002, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -471,7 +390,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 9,
 						},
 						Named = 
 						{
@@ -489,7 +408,7 @@ Level =
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
-							Vec4 Color = [0.575, 0.575, 0.575, 1],
+							Vec4 Color = [0.0199995, 0, 1, 1],
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -507,7 +426,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 12,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -515,7 +434,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [2.25, -0.5, 0],
+					Vec3 Translation = [-2.5, -0.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -558,7 +477,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 13,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -596,7 +515,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -615,7 +534,7 @@ Level =
 				string Name = "584fe92eafe4ada3:Particle_Stars",
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 13,
 				},
 				Transform = 
 				{
@@ -633,7 +552,7 @@ Level =
 				string Name = "584fe92eafe4ada3:Particle_Stars",
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 14,
 				},
 				Transform = 
 				{
@@ -652,7 +571,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -677,7 +596,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 18,
+					uint Id = 16,
 				},
 				Named = 
 				{

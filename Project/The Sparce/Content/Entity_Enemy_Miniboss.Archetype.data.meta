@@ -1,0 +1,20 @@
+DataContent = 
+{
+	DataBuilder = 
+	{
+		string Name = "Entity_Enemy_Miniboss",
+		uint64 ResourceId = 599e5cb07977da9a,
+		string LoaderType = "Cog",
+		uint Version = 0,
+		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Archetype",
+			"Enemy",
+			"Entity",
+		],
+	},
+},

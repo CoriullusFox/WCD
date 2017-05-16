@@ -104,6 +104,10 @@ Level =
 		EnemiesKilldstor = 
 		{
 		},
+		DetectVictory = 
+		{
+			bool Winable = true,
+		},
 	},
 	Cog = 
 	{
@@ -117,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.51795, -3.96867, 50],
+			Vec3 Translation = [3.00788, -11.523, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -129,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5336,
+			float Size = 59.9285,
 		},
 		EditorCameraController = 
 		{
@@ -137,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.51795, -3.96867, 1.52731e-007],
+			Vec3 LookTarget = [3.00788, -11.523, 1.39394e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -175,6 +179,41 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "Cables",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -0.1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "599e675da819b6a8:LevelOne_TileMap03",
+			string PaletteName = "584fd7da8bf9792b:TileDecor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
 			string Name = "Decor",
 		},
 		Transform = 
@@ -206,7 +245,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -241,7 +280,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -276,20 +315,20 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
-			string Name = "Animated_HorDoor",
+			string Name = "TripleMonitor",
 		},
 		Archetyped = 
 		{
-			string Name = "585123514e9dff4f:HorDoor",
+			string Name = "580a7760db23c84f:Decor_TripleMonitor",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 6, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [0, 16, 1],
+			Vec3 Scale = [2.5, 2.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -302,42 +341,158 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			string SpriteSource = "580a76569c6d5ecd:Decor_Monitor_3",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = false,
+			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		Doorscript = 
+		Hierarchy = 
 		{
-			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
-			float DoorAnimationSpeed = 100,
-			bool Locked = true,
-			string Condition = "Key",
-			int EnemyDeathUnlockNumber = 0,
-			float RequiredEnemiesKilled = 3,
-			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
-			bool Vert = false,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0.25, 0],
-			Vec3 Size = [1, 0.25, 0.5],
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 9,
+				},
+				Named = 
+				{
+					string Name = "Light",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Light = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					LightType LightType = Point,
+					Vec4 Color = [1, 1, 1, 1],
+					float Intensity = 1,
+					float Range = 50,
+					float Falloff = 1,
+					float Angle = 10,
+					float Size = 20,
+				},
+				GodRayLight = 
+				{
+					GodRayLightType LightType = Point,
+					bool Active = true,
+					int Samples = 80,
+					Vec4 Color = [0, 0.43, 1, 1],
+					float Intensity = 0.5,
+					float ScreenRadius = 0.22,
+					float OccluderClarity = 0.1,
+					bool ScreenEdgeFade = false,
+					float BeginFade = -0.1,
+					float EndFade = 0.1,
+					float DepthOffset = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Named = 
+				{
+					string Name = "Light",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Light = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					LightType LightType = Point,
+					Vec4 Color = [1, 1, 1, 1],
+					float Intensity = 1,
+					float Range = 50,
+					float Falloff = 1,
+					float Angle = 10,
+					float Size = 20,
+				},
+				GodRayLight = 
+				{
+					GodRayLightType LightType = Point,
+					bool Active = true,
+					int Samples = 80,
+					Vec4 Color = [0, 1, 0.16, 1],
+					float Intensity = 0.68,
+					float ScreenRadius = 0.23,
+					float OccluderClarity = 0.28,
+					bool ScreenEdgeFade = false,
+					float BeginFade = -0.1,
+					float EndFade = 0.1,
+					float DepthOffset = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "Light",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Light = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					LightType LightType = Point,
+					Vec4 Color = [1, 1, 1, 1],
+					float Intensity = 1,
+					float Range = 50,
+					float Falloff = 1,
+					float Angle = 10,
+					float Size = 20,
+				},
+				GodRayLight = 
+				{
+					GodRayLightType LightType = Point,
+					bool Active = true,
+					int Samples = 80,
+					Vec4 Color = [1, 0, 0.000599861, 1],
+					float Intensity = 0.5,
+					float ScreenRadius = 0.22,
+					float OccluderClarity = 0.1,
+					bool ScreenEdgeFade = false,
+					float BeginFade = -0.1,
+					float EndFade = 0.1,
+					float DepthOffset = 0,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -393,7 +548,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 7,
+				uint ResolvedCog = 13,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -404,7 +559,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -460,7 +615,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 10,
+				uint ResolvedCog = 15,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -471,7 +626,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -533,7 +688,7 @@ Level =
 		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 16,
 		},
 		Transform = 
 		{
@@ -551,7 +706,7 @@ Level =
 		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -569,7 +724,7 @@ Level =
 		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -586,68 +741,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
-		},
-		Named = 
-		{
-			string Name = "Animated_HorDoor",
-		},
-		Archetyped = 
-		{
-			string Name = "585123514e9dff4f:HorDoor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-17, -4.75, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Doorscript = 
-		{
-			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
-			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
-			float DoorAnimationSpeed = 100,
-			bool Locked = true,
-			string Condition = "EnemiesKilled",
-			int EnemyDeathUnlockNumber = 0,
-			float RequiredEnemiesKilled = 5,
-			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
-			bool Vert = false,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0.25, 0],
-			Vec3 Size = [1, 0.25, 0.5],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 15,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -704,12 +798,134 @@ Level =
 			Vec3 Size = [0.15, 1.5, 0.5],
 		},
 	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+		Archetyped = 
+		{
+			string Name = "585123514e9dff4f:HorDoor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 6, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Doorscript = 
+		{
+			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+			float DoorAnimationSpeed = 100,
+			bool Locked = true,
+			string Condition = "Key",
+			int EnemyDeathUnlockNumber = 0,
+			float RequiredEnemiesKilled = 3,
+			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+			bool Vert = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0.25, 0],
+			Vec3 Size = [1, 0.25, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Named = 
+		{
+			string Name = "Animated_HorDoor",
+		},
+		Archetyped = 
+		{
+			string Name = "585123514e9dff4f:HorDoor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-17, -4.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Doorscript = 
+		{
+			string DoorOpening = "585277474e1b3c0f:Animated_HorDoor_Unlocked_ Opening",
+			string DoorClosing = "58527726445783a6:Animated_HorDoor_Unlocked_Closing",
+			float DoorAnimationSpeed = 100,
+			bool Locked = true,
+			string Condition = "EnemiesKilled",
+			int EnemyDeathUnlockNumber = 0,
+			float RequiredEnemiesKilled = 5,
+			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
+			bool Vert = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0.25, 0],
+			Vec3 Size = [1, 0.25, 0.5],
+		},
+	},
 	ArchetypeInstance = 
 	{
 		string Name = "585123514e9dff4f:HorDoor",
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -727,7 +943,7 @@ Level =
 		string Name = "585123514e9dff4f:HorDoor",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -744,7 +960,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -805,7 +1021,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 24,
 		},
 		Named = 
 		{
@@ -867,7 +1083,7 @@ Level =
 		string Name = "585123514e9dff4f:HorDoor",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -885,7 +1101,7 @@ Level =
 		string Name = "585123514e9dff4f:HorDoor",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 26,
 		},
 		Transform = 
 		{
@@ -903,7 +1119,7 @@ Level =
 		string Name = "585123514e9dff4f:HorDoor",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 27,
 		},
 		Transform = 
 		{
@@ -921,7 +1137,7 @@ Level =
 		string Name = "585123514e9dff4f:HorDoor",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 28,
 		},
 		Transform = 
 		{
@@ -939,7 +1155,7 @@ Level =
 		string Name = "585facb807e69906:Entity_Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -952,11 +1168,65 @@ Level =
 			string Name = "Enemy",
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "586101df0958c576:Pickup_Health",
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.5, -11, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "586101df0958c576:Pickup_Health",
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, -11, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "586101df0958c576:Pickup_Health",
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-22.25, -16.25, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 33,
 		},
 		Named = 
 		{
@@ -1010,7 +1280,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 34,
 				},
 				Named = 
 				{
@@ -1048,29 +1318,203 @@ Level =
 			},
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "586101df0958c576:Pickup_Health",
 		LinkId = 
 		{
-			uint Id = 27,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-22.25, -16.25, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			uint Id = 35,
 		},
 		Named = 
 		{
-			string Name = "Medkit",
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.5, -11, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "ChainElectricity",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 36,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0cb14408d4e:Gun_Icon_TeslaChain",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 37,
+		},
+		Named = 
+		{
+			string Name = "Gun Pickup",
+		},
+		Archetyped = 
+		{
+			string Name = "598e724ce8626535:Gun_Pickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.5, -11, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58512907b0cd1654:Decor_Animated_HologramBase_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		WeaponPickup = 
+		{
+			string Unlocked = "Shotgun",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 38,
+				},
+				Named = 
+				{
+					string Name = "Gun_Icon",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5844b0ca1457c4d4:Gun_Icon_Shotgun",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				GunHover = 
+				{
+					float Speed = 5,
+					float HalfHeight = 0.1,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 39,
 		},
 		Named = 
 		{
@@ -1116,7 +1560,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 29,
+				uint ResolvedCog = 40,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1130,7 +1574,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 29,
+			uint Id = 40,
 		},
 		Named = 
 		{
@@ -1176,7 +1620,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 28,
+				uint ResolvedCog = 39,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1190,7 +1634,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 41,
 		},
 		Named = 
 		{
@@ -1236,7 +1680,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 31,
+				uint ResolvedCog = 42,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1250,7 +1694,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 42,
 		},
 		Named = 
 		{
@@ -1296,7 +1740,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 30,
+				uint ResolvedCog = 41,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1310,11 +1754,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 43,
 		},
 		Named = 
 		{
-			string Name = "Spawner1",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1357,7 +1801,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 33,
+				uint ResolvedCog = 44,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1368,11 +1812,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 45,
 		},
 		Named = 
 		{
-			string Name = "Spawner3",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1415,7 +1859,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 33,
+				uint ResolvedCog = 44,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1426,11 +1870,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 35,
+			uint Id = 46,
 		},
 		Named = 
 		{
-			string Name = "Spawner4",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1473,7 +1917,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 33,
+				uint ResolvedCog = 44,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1484,11 +1928,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 36,
+			uint Id = 47,
 		},
 		Named = 
 		{
-			string Name = "Spawner2",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1531,7 +1975,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 33,
+				uint ResolvedCog = 44,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1542,11 +1986,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 48,
 		},
 		Named = 
 		{
-			string Name = "Spawner5",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1589,7 +2033,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 33,
+				uint ResolvedCog = 44,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1600,11 +2044,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 49,
 		},
 		Named = 
 		{
-			string Name = "Spawner7",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1647,7 +2091,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 39,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1658,11 +2102,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 51,
 		},
 		Named = 
 		{
-			string Name = "Spawner6",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1705,7 +2149,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 39,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1716,11 +2160,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 41,
+			uint Id = 52,
 		},
 		Named = 
 		{
-			string Name = "Spawner8",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1763,7 +2207,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 39,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1774,11 +2218,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 53,
 		},
 		Named = 
 		{
-			string Name = "Spawner9",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1821,7 +2265,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 39,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1832,11 +2276,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 54,
 		},
 		Named = 
 		{
-			string Name = "Spawner10",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1879,7 +2323,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 39,
+				uint ResolvedCog = 50,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1890,11 +2334,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 44,
+			uint Id = 55,
 		},
 		Named = 
 		{
-			string Name = "Spawner11",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1937,7 +2381,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -1948,11 +2392,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 57,
 		},
 		Named = 
 		{
-			string Name = "Spawner13",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -1995,7 +2439,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2006,11 +2450,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 58,
 		},
 		Named = 
 		{
-			string Name = "Spawner12",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2053,7 +2497,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2064,11 +2508,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 48,
+			uint Id = 59,
 		},
 		Named = 
 		{
-			string Name = "Spawner14",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2111,7 +2555,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2122,11 +2566,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 60,
 		},
 		Named = 
 		{
-			string Name = "Spawner15",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2169,7 +2613,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2180,11 +2624,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 61,
 		},
 		Named = 
 		{
-			string Name = "Spawner16",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2227,7 +2671,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2238,11 +2682,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 62,
 		},
 		Named = 
 		{
-			string Name = "Spawner17",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2285,7 +2729,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2296,11 +2740,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 63,
 		},
 		Named = 
 		{
-			string Name = "Spawner19",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2343,7 +2787,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2354,11 +2798,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 64,
 		},
 		Named = 
 		{
-			string Name = "Spawner18",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2401,7 +2845,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 45,
+				uint ResolvedCog = 56,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2412,11 +2856,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 65,
 		},
 		Named = 
 		{
-			string Name = "Spawner24",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2459,7 +2903,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2470,11 +2914,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 67,
 		},
 		Named = 
 		{
-			string Name = "Spawner27",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2517,7 +2961,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2528,11 +2972,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 68,
 		},
 		Named = 
 		{
-			string Name = "Spawner25",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2575,7 +3019,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2586,11 +3030,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 69,
 		},
 		Named = 
 		{
-			string Name = "Spawner26",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2633,7 +3077,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2644,11 +3088,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 70,
 		},
 		Named = 
 		{
-			string Name = "Spawner33",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2691,7 +3135,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2702,11 +3146,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 71,
 		},
 		Named = 
 		{
-			string Name = "Spawner32",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2749,7 +3193,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2760,11 +3204,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 72,
 		},
 		Named = 
 		{
-			string Name = "Spawner34",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2807,7 +3251,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2818,11 +3262,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 73,
 		},
 		Named = 
 		{
-			string Name = "Spawner31",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2865,7 +3309,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2876,11 +3320,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 74,
 		},
 		Named = 
 		{
-			string Name = "Spawner30",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2923,7 +3367,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2934,11 +3378,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 75,
 		},
 		Named = 
 		{
-			string Name = "Spawner28",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -2981,7 +3425,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2992,11 +3436,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 76,
 		},
 		Named = 
 		{
-			string Name = "Spawner29",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -3039,7 +3483,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3050,11 +3494,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 66,
+			uint Id = 77,
 		},
 		Named = 
 		{
-			string Name = "Spawner21",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -3097,7 +3541,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3108,11 +3552,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 78,
 		},
 		Named = 
 		{
-			string Name = "Spawner22",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -3155,7 +3599,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3166,11 +3610,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 79,
 		},
 		Named = 
 		{
-			string Name = "Spawner23",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -3213,7 +3657,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3224,11 +3668,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 80,
 		},
 		Named = 
 		{
-			string Name = "Spawner20",
+			string Name = "Enemy",
 		},
 		Archetyped = 
 		{
@@ -3271,7 +3715,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 55,
+				uint ResolvedCog = 66,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3280,46 +3724,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "580a7760db23c84f:Decor_TripleMonitor",
-		LinkId = 
-		{
-			uint Id = 70,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4, 5.05, 0],
-			Vec3 Scale = [2.5, 2.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "TripleMonitor",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "580a7760db23c84f:Decor_TripleMonitor",
-		LinkId = 
-		{
-			uint Id = 71,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [4, 5.05, 0],
-			Vec3 Scale = [2.5, 2.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "TripleMonitor",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "59bc4a5da93e58e1:SpawnerTrigger",
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 44,
 		},
 		Transform = 
 		{
@@ -3337,7 +3745,7 @@ Level =
 		string Name = "59bc4a5da93e58e1:SpawnerTrigger",
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 50,
 		},
 		Transform = 
 		{
@@ -3355,7 +3763,7 @@ Level =
 		string Name = "59bc4a5da93e58e1:SpawnerTrigger",
 		LinkId = 
 		{
-			uint Id = 45,
+			uint Id = 56,
 		},
 		Transform = 
 		{
@@ -3373,7 +3781,7 @@ Level =
 		string Name = "59bc4a5da93e58e1:SpawnerTrigger",
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 66,
 		},
 		Transform = 
 		{
@@ -3384,6 +3792,121 @@ Level =
 		Named = 
 		{
 			string Name = "Trigger",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 81,
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+		Archetyped = 
+		{
+			string Name = "59bc440368aff47b:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 15, 0],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58128ac7e63298e0:EnemyNorth_Anim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Spawner = 
+		{
+			string Archtype = "599e5cb07977da9a:Entity_Enemy_Miniboss",
+			CogPath Trigger = 
+			{
+				string Path = ":/TriggerBoss",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 82,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 82,
+		},
+		Named = 
+		{
+			string Name = "TriggerBoss",
+		},
+		Archetyped = 
+		{
+			string Name = "59bc4a5da93e58e1:SpawnerTrigger",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 15, 0],
+			Vec3 Scale = [5, 5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		SpawnTrigger = 
+		{
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 },
