@@ -114,7 +114,6 @@ Level =
 		{
 			string UILevel = "59d0247de5da9f1a:MainMenuBackground",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
-			string LevelName = "MainMenuBackground",
 		},
 	},
 	Cog = 
@@ -235,47 +234,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Version",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-16, -6.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "584d6e3b812d356a:Font_Bold",
-			uint FontSize = 30,
-			string Text = "The Sparce v0.5.4-a7 (0004CE787)",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-		SetPositionInPixels = 
-		{
-			float ViewportX = 5,
-			float ViewportY = -25,
-			int Alignment = 1,
-			bool FromTop = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 6,
-		},
-		Named = 
-		{
 			string Name = "MainMenuButtonGroup",
 		},
 		Transform = 
@@ -290,7 +248,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -349,7 +307,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 8,
+							uint Id = 7,
 						},
 						Named = 
 						{
@@ -385,7 +343,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -437,7 +395,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 9,
 						},
 						Named = 
 						{
@@ -473,7 +431,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -524,7 +482,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -562,63 +520,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
-		},
-		Named = 
-		{
-			string Name = "Particle_SpaceBackground_Group",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Hierarchy = 
-		{
-			ArchetypeInstance = 
-			{
-				string Name = "584fe92eafe4ada3:Particle_Stars",
-				LinkId = 
-				{
-					uint Id = 14,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-8, 0, 0],
-					Vec3 Scale = [12, 12, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Particle_Stars_Left",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "584fe92eafe4ada3:Particle_Stars",
-				LinkId = 
-				{
-					uint Id = 15,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [8, 0, 0],
-					Vec3 Scale = [12, 12, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Particle_Stars_Right",
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 16,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -643,7 +545,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
+					uint Id = 13,
 				},
 				Named = 
 				{

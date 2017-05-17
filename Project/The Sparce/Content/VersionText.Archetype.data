@@ -1,0 +1,45 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Version",
+	},
+	Archetyped = 
+	{
+		string Name = "59d03883bb5ec9b8:VersionText",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-16, -6.5, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string FontName = "584d6e3b812d356a:Font_Bold",
+		uint FontSize = 30,
+		string Text = "The Sparce v0.5.4-a7 (0004CE787)",
+		TextAlign Align = Left,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+	},
+	SetPositionInPixels = 
+	{
+		float ViewportX = 5,
+		float ViewportY = -25,
+		int Alignment = 1,
+		bool FromTop = false,
+	},
+},
