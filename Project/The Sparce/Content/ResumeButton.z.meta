@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "ResumeButton",
+		uint64 ResourceId = 59b2c9e15f5be28c,
+	},
+},

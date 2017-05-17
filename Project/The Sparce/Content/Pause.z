@@ -17,6 +17,18 @@ class Pause : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        Zero.Connect(this.GameSession, Events.Unpause, this.OnUnpause);
+    }
+
+    function OnUnpause(event : Unpause)
+    {
+        var toSend = EventPause();
+        
+        this.Space.TimeSpace.Paused = false;
+        
+        toSend.Paused = this.Space.TimeSpace.Paused;
+        
+        this.GameSession.DispatchEvent(Events.EventPause, toSend);
     }
 
     function OnKeyDown(event : KeyboardEvent)

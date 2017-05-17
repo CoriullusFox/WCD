@@ -103,7 +103,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.9095, -3.16067, 54.4995],
+			Vec3 Translation = [-1.17224, 0.333755, 54.4995],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.313,
+			float Size = 24.6598,
 		},
 		EditorCameraController = 
 		{
@@ -123,7 +123,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.9095, -3.16067, 4.4995],
+			Vec3 LookTarget = [-1.17224, 0.333755, 4.4995],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -278,7 +278,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, -95.5],
+					Vec3 Translation = [0, 0, -95],
 					Vec3 Scale = [3, 3, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -308,9 +308,12 @@ Level =
 				SelectableScale = 
 				{
 					Vec3 ScaleDirection = [1, 1, 1],
-					Vec3 MaxScale = [4.5, 4.5, 1],
-					Vec3 MinScale = [4, 4, 1],
+					Vec3 MaxScale = [3.5, 3.5, 1],
+					Vec3 MinScale = [3, 3, 1],
 					float ScaleSpeed = 2,
+				},
+				ResumeButton = 
+				{
 				},
 				Hierarchy = 
 				{
@@ -365,7 +368,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-5, -3, -95.5],
+					Vec3 Translation = [-5, -3, -95],
 					Vec3 Scale = [3, 3, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -395,8 +398,8 @@ Level =
 				SelectableScale = 
 				{
 					Vec3 ScaleDirection = [1, 1, 1],
-					Vec3 MaxScale = [4.5, 4.5, 1],
-					Vec3 MinScale = [4, 4, 1],
+					Vec3 MaxScale = [3.5, 3.5, 1],
+					Vec3 MinScale = [3, 3, 1],
 					float ScaleSpeed = 2,
 				},
 				RestartButton = 
@@ -455,7 +458,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [5, -3, -95.5],
+					Vec3 Translation = [5, -3, -95],
 					Vec3 Scale = [3, 3, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -501,8 +504,8 @@ Level =
 				SelectableScale = 
 				{
 					Vec3 ScaleDirection = [1, 1, 1],
-					Vec3 MaxScale = [4.5, 4.5, 1],
-					Vec3 MinScale = [4, 4, 1],
+					Vec3 MaxScale = [3.5, 3.5, 1],
+					Vec3 MinScale = [3, 3, 1],
 					float ScaleSpeed = 2,
 				},
 				Hierarchy = 
@@ -558,7 +561,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -4.5, -80],
+					Vec3 Translation = [0, -4.5, -95],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -941,11 +944,11 @@ Level =
 		EditorFlags = 
 		{
 			bool Locked = true,
-			bool Hidden = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 100, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -967,7 +970,7 @@ Level =
 				EditorFlags = 
 				{
 					bool Locked = true,
-					bool Hidden = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -990,7 +993,7 @@ Level =
 						EditorFlags = 
 						{
 							bool Locked = true,
-							bool Hidden = true,
+							bool Hidden = false,
 						},
 						Transform = 
 						{
@@ -1031,7 +1034,7 @@ Level =
 								EditorFlags = 
 								{
 									bool Locked = true,
-									bool Hidden = true,
+									bool Hidden = false,
 								},
 								Transform = 
 								{
@@ -1075,7 +1078,7 @@ Level =
 						EditorFlags = 
 						{
 							bool Locked = true,
-							bool Hidden = true,
+							bool Hidden = false,
 						},
 						Transform = 
 						{
@@ -1142,7 +1145,7 @@ Level =
 								EditorFlags = 
 								{
 									bool Locked = true,
-									bool Hidden = true,
+									bool Hidden = false,
 								},
 								Transform = 
 								{
@@ -1186,12 +1189,12 @@ Level =
 						EditorFlags = 
 						{
 							bool Locked = true,
-							bool Hidden = true,
+							bool Hidden = false,
 						},
 						Transform = 
 						{
 							Vec3 Translation = [0, -5, -1],
-							Vec3 Scale = [4.8, 4, 1],
+							Vec3 Scale = [4, 4, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -1255,7 +1258,7 @@ Level =
 								EditorFlags = 
 								{
 									bool Locked = true,
-									bool Hidden = true,
+									bool Hidden = false,
 								},
 								Transform = 
 								{
@@ -1299,11 +1302,6 @@ Level =
 		Named = 
 		{
 			string Name = "CursorMCH",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
 		},
 		Transform = 
 		{
