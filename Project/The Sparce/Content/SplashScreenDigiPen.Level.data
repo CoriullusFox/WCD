@@ -203,7 +203,8 @@ Level =
 		SplashScreenTimeout = 
 		{
 			bool EnableFadeEffect = true,
-			string NextLevel = "580f2d187401da74:MainMenu",
+			bool UserCanSkip = true,
+			string NextLevel = "58684ac53872f5c2:SplashScreenWCD",
 			float Timeout = 4,
 			float FadeTime = 1.25,
 		},

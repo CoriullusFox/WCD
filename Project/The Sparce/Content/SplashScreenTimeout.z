@@ -19,7 +19,7 @@ class SplashScreenTimeout : ZilchComponent
     [Property]
     var UserCanSkip         : Boolean   = true;
     [Property]
-    var NextLevel           : Level     = Level.MainMenu;
+    var NextLevel           : Level     = Level.SplashScreenWCD;
     [Property]
     var Timeout             : Real      = 4.0;
     [Property]
@@ -68,7 +68,7 @@ class SplashScreenTimeout : ZilchComponent
         
         if(this.CurrTimeout >= this.Timeout + 0.05 || userPressedSkipKey)
         {
-            this.Space.LoadLevel(Level.MainMenu);
+            this.Space.LoadLevel(this.NextLevel);
         }
     }
     

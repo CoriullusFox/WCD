@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1898,
+			float Size = 24.6599,
 		},
 		EditorCameraController = 
 		{
@@ -233,7 +233,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.25, -3.5, 0],
+			Vec3 Translation = [0, -3.5, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -251,7 +251,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0.75, 0],
+					Vec3 Translation = [-2.25, 1, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -320,7 +320,7 @@ Level =
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
-							Vec4 Color = [0, 0.83, 0.1328, 1],
+							Vec4 Color = [0, 1, 0.16, 1],
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -346,7 +346,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [2.5, -0.5, 0],
+					Vec3 Translation = [-2.25, -0.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -356,7 +356,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0, 0.0400002, 1, 1],
+					Vec4 Color = [0.26, 0.26, 0.26, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -408,7 +408,7 @@ Level =
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
-							Vec4 Color = [0.0199995, 0, 1, 1],
+							Vec4 Color = [0.445, 0.445, 0.445, 1],
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -434,7 +434,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.5, -0.5, 0],
+					Vec3 Translation = [2.25, -0.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -631,6 +631,412 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "Station",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11, -1.25, -5],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [-0.000827219, -0.00067837, -0.0983856, 0.995148],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "59a868d9e8ee9900:Background_SpaceStation",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 40010dca3e800000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59a873e5a379d94f:Station",
+			AnimPlayMode PlayMode = Pingpong,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "Background_Earth",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.49459, 4.77608, -6],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5863a33038a58995:Background_Earth",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Named = 
+		{
+			string Name = "Ast4",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.18851, -4.60551, -6],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0.976073, 0.217444],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "598e8a5684984edf:Meteor",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 40d58bc13f600000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59a87071c659c7f9:ast4",
+			AnimPlayMode PlayMode = Pingpong,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Named = 
+		{
+			string Name = "Ast3",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.93624, 3.03178, -6],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [-0.0164374, 0.0782059, 0.205029, 0.975488],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "598e8a5684984edf:Meteor",
+			bool RenderMask = false,
+			bool FlipX = true,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 40c4afe63f000000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59a871bef0bc978e:ast3",
+			AnimPlayMode PlayMode = Pingpong,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Named = 
+		{
+			string Name = "Ast5",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.5531, 4.43341, -6],
+			Vec3 Scale = [1.29777, 1.29777, 1.29777],
+			Quat Rotation = [0, 0, -0.0965725, 0.995326],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "598e8a5684984edf:Meteor",
+			bool RenderMask = false,
+			bool FlipX = true,
+			bool FlipY = true,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 40cccef23f700000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59a87030cf53359f:ast5",
+			AnimPlayMode PlayMode = Pingpong,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Named = 
+		{
+			string Name = "Ast1",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [2.59393, 0.235707, -6],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, -0.36858, 0.929596],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "598e8a5684984edf:Meteor",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = true,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 598db8610955b3c9,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59a87128e457081e:Ast",
+			AnimPlayMode PlayMode = Pingpong,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Named = 
+		{
+			string Name = "Ast2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8.11409, 0.0423851, -6],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, -0.0131412, 0.999914],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "598e8a5684984edf:Meteor",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = true,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 40bfbd343f600000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59a871d6ec54d652:ast2",
+			AnimPlayMode PlayMode = Pingpong,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Named = 
+		{
+			string Name = "Background_Moon",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.98786, -6.51199, -6],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5863a33038a5cff6:Background_Moon",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Named = 
+		{
+			string Name = "Ast6",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.71821, -5.51789, -6],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, -0.0184725, 0.999829],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "598e8a5684984edf:Meteor",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3ced8afc3e800000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "59a870ffd7253811:ast6",
+			AnimPlayMode PlayMode = Pingpong,
 		},
 	},
 },
