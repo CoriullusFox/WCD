@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.611531, -2.41604, 49.999],
+			Vec3 Translation = [-2.3911, -0.0992296, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6599,
+			float Size = 30.1197,
 		},
 		EditorCameraController = 
 		{
@@ -143,7 +143,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.611531, -2.41604, -0.000999952],
+			Vec3 LookTarget = [-2.3911, -0.0992296, -0.000999952],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -198,7 +198,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 5, 0],
+			Vec3 Translation = [-6.75, 6.25, 0],
 			Vec3 Scale = [5, 5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -229,11 +229,52 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "Version",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-16, -6.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 30,
+			string Text = "The Sparce v0.5.4-a7 (0004CE787)",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = false,
+		},
+		SetPositionInPixels = 
+		{
+			float ViewportX = 5,
+			float ViewportY = -25,
+			int Alignment = 1,
+			bool FromTop = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
 			string Name = "MainMenuButtonGroup",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -3.5, 0],
+			Vec3 Translation = [-7.5, -1.75, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -243,7 +284,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -251,7 +292,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.25, 1, 0],
+					Vec3 Translation = [-2.25, 1.25, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -302,7 +343,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 7,
+							uint Id = 8,
 						},
 						Named = 
 						{
@@ -310,7 +351,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0, 0.5, 0],
+							Vec3 Translation = [-1.5, 0.5, 0],
 							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -327,7 +368,7 @@ Level =
 							string FontName = "5820efc589857afa:TheSparceFont",
 							uint FontSize = 100,
 							string Text = "Play",
-							TextAlign Align = Center,
+							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
 							bool Smoothing = false,
 						},
@@ -338,7 +379,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -346,7 +387,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.25, -0.5, 0],
+					Vec3 Translation = [-2.25, 0.25, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -390,7 +431,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 9,
+							uint Id = 10,
 						},
 						Named = 
 						{
@@ -398,7 +439,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0, 0.5, 0],
+							Vec3 Translation = [-1.5, 0.5, 0],
 							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -415,7 +456,7 @@ Level =
 							string FontName = "5820efc589857afa:TheSparceFont",
 							uint FontSize = 100,
 							string Text = "Options",
-							TextAlign Align = Center,
+							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
 							bool Smoothing = false,
 						},
@@ -426,7 +467,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 11,
 				},
 				Named = 
 				{
@@ -434,7 +475,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [2.25, -0.5, 0],
+					Vec3 Translation = [-2.25, -0.75, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -477,7 +518,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -485,7 +526,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0, 0.5, 0],
+							Vec3 Translation = [-1.5, 0.5, 0],
 							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -502,7 +543,7 @@ Level =
 							string FontName = "5820efc589857afa:TheSparceFont",
 							uint FontSize = 100,
 							string Text = "Quit",
-							TextAlign Align = Center,
+							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
 							bool Smoothing = false,
 						},
@@ -515,7 +556,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -534,7 +575,7 @@ Level =
 				string Name = "584fe92eafe4ada3:Particle_Stars",
 				LinkId = 
 				{
-					uint Id = 13,
+					uint Id = 14,
 				},
 				Transform = 
 				{
@@ -552,7 +593,7 @@ Level =
 				string Name = "584fe92eafe4ada3:Particle_Stars",
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 15,
 				},
 				Transform = 
 				{
@@ -571,7 +612,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -583,7 +624,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 13, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -596,7 +637,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 17,
 				},
 				Named = 
 				{
@@ -637,7 +678,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -645,7 +686,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11, -1.25, -5],
+			Vec3 Translation = [9.75, -2, -5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.000827219, -0.00067837, -0.0983856, 0.995148],
 		},
@@ -685,7 +726,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -693,7 +734,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.49459, 4.77608, -6],
+			Vec3 Translation = [5.25, 4, -6],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -720,7 +761,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -768,7 +809,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -816,7 +857,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -864,7 +905,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -912,7 +953,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 24,
 		},
 		Named = 
 		{
@@ -960,7 +1001,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 25,
 		},
 		Named = 
 		{
@@ -995,7 +1036,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 26,
 		},
 		Named = 
 		{
