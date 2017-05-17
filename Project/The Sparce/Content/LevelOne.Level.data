@@ -104,6 +104,10 @@ Level =
 		EnemiesKilldstor = 
 		{
 		},
+		DetectVictory = 
+		{
+			bool Winable = true,
+		},
 	},
 	Cog = 
 	{
@@ -117,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.04646, -9.93972, 50],
+			Vec3 Translation = [1.04646, 11.3883, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -129,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0994,
+			float Size = 19.9485,
 		},
 		EditorCameraController = 
 		{
@@ -137,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.04646, -9.93972, 5.36579e-008],
+			Vec3 LookTarget = [1.04646, 11.3883, 5.36579e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1164,12 +1168,19 @@ Level =
 			string Name = "Enemy",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "586101df0958c576:Pickup_Health",
 		LinkId = 
 		{
 			uint Id = 30,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
 		},
 		Transform = 
 		{
@@ -1177,9 +1188,38 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Medkit",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 100,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
 		},
 	},
 	ArchetypeInstance = 
@@ -1268,7 +1308,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "Shotgun",
+			Enum Unlocked = Shotgun,
 		},
 		Hierarchy = 
 		{
@@ -1364,7 +1404,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "ChainE",
+			Enum Unlocked = Chain_Electricity,
 		},
 		Hierarchy = 
 		{
@@ -1460,7 +1500,7 @@ Level =
 		},
 		WeaponPickup = 
 		{
-			string Unlocked = "Shotgun",
+			Enum Unlocked = Shotgun,
 		},
 		Hierarchy = 
 		{
@@ -3903,6 +3943,114 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 83,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17, -16.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 100,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 84,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.5, -11, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 100,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
 		},
 	},
 },
