@@ -8,7 +8,7 @@
 ** - Brandon Wolenetz
 **
 ** Contributors:
-** - none
+** - Hudson Green
 ** --------------------------------------------------------------------------*/
 
 
@@ -29,7 +29,7 @@ class UICreator : ZilchComponent
 
     function OnLevelStarted(event : GameEvent)
     {
-        if(event.LevelName != "UILevel")
+        if(event.LevelName != this.UILevel.Name)
             {
             if(this.UISpace != null)
             {
