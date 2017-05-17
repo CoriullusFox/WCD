@@ -26,12 +26,12 @@ Level =
 		},
 		CameraViewport = 
 		{
-			bool Background = true,
+			bool Background = false,
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
 			int Layer = 0,
 			bool Active = true,
-			bool Blocking = true,
+			bool Blocking = false,
 			CogPath Renderer = 
 			{
 				string Path = ".",
@@ -62,13 +62,13 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Fill,
+			ViewportScaling Scaling = Letterbox,
 			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0, 0, 0, 1],
+			Vec4 ClearColor = [0, 0, 0, 0],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -94,6 +94,11 @@ Level =
 		{
 			bool EnableFullscreen = false,
 		},
+		UICreator = 
+		{
+			string UILevel = "59d0247de5da9f1a:MainMenuBackground",
+			string UIArchtype = "5819b167eb57c437:UI_Space",
+		},
 	},
 	Cog = 
 	{
@@ -107,7 +112,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.79249, 0.274489, 50],
+			Vec3 Translation = [-8.54398, -1.39567, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -119,7 +124,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3323,
+			float Size = 29.7594,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +132,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.79249, 0.274489, 7.8352e-008],
+			Vec3 LookTarget = [-8.54398, -1.39567, 7.8352e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -178,6 +183,41 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "UI_GameTitleText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.75, 6.25, 0],
+			Vec3 Scale = [5, 5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586848777033c99f:Logo_Sparce",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
 			string Name = "CursorMCH",
 		},
 		Archetyped = 
@@ -186,7 +226,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 10.25, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -199,7 +239,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 5,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -240,206 +280,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
-		},
-		Named = 
-		{
-			string Name = "UI_GameTitleText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 5, 0],
-			Vec3 Scale = [5, 5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "586848777033c99f:Logo_Sparce",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
 			uint Id = 7,
-		},
-		Named = 
-		{
-			string Name = "SettingsButtonGroup",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.25, -3.5, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 8,
-				},
-				Named = 
-				{
-					string Name = "UI_SettingsButtonBG",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-2.5, -1.5, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.325, 0.325, 0.325, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "580f2b89ad88217b:sprite_bigbtn",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Reactive = 
-				{
-					bool Active = true,
-					bool CaptureMouse = false,
-				},
-				SelectableScale = 
-				{
-					Vec3 ScaleDirection = [1, 1, 1],
-					Vec3 MaxScale = [1.2, 1.2, 1],
-					Vec3 MinScale = [1, 1, 1],
-					float ScaleSpeed = 1,
-				},
-				ButtonLevelChange = 
-				{
-					string Level = "580f2d187401da74:MainMenu",
-				},
-				Hierarchy = 
-				{
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 9,
-						},
-						Named = 
-						{
-							string Name = "Button_Back",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 0.5, 0],
-							Vec3 Scale = [0.5, 0.5, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						SpriteText = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [0.575, 0.575, 0.575, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "5820efc589857afa:TheSparceFont",
-							uint FontSize = 100,
-							string Text = "Back",
-							TextAlign Align = Center,
-							float PixelsPerUnit = 64,
-							bool Smoothing = false,
-						},
-					},
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "Particle_SpaceBackground_Group",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Hierarchy = 
-		{
-			ArchetypeInstance = 
-			{
-				string Name = "584fe92eafe4ada3:Particle_Stars",
-				LinkId = 
-				{
-					uint Id = 11,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-8, 0, 0],
-					Vec3 Scale = [12, 12, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Particle_Stars_Left",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "584fe92eafe4ada3:Particle_Stars",
-				LinkId = 
-				{
-					uint Id = 12,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [8, 0, 0],
-					Vec3 Scale = [12, 12, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Particle_Stars_Right",
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 13,
 		},
 		Named = 
 		{
@@ -474,7 +315,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -511,7 +352,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -548,7 +389,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -585,7 +426,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 17,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -620,7 +461,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 18,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -654,7 +495,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 19,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -691,7 +532,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 20,
+					uint Id = 14,
 				},
 				Named = 
 				{
@@ -728,7 +569,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 21,
+							uint Id = 15,
 						},
 						Named = 
 						{
@@ -763,7 +604,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 22,
+							uint Id = 16,
 						},
 						Named = 
 						{
@@ -797,7 +638,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 23,
+							uint Id = 17,
 						},
 						Named = 
 						{
@@ -836,7 +677,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -865,73 +706,328 @@ Level =
 			float PixelsPerUnit = 64,
 			bool Smoothing = false,
 		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 19,
+				},
+				Named = 
+				{
+					string Name = "LanguageSelect",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, -1.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.529412, 0.529412, 0.529412, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5820efc589857afa:TheSparceFont",
+					uint FontSize = 48,
+					string Text = "Selected Language",
+					TextAlign Align = Right,
+					float PixelsPerUnit = 64,
+					bool Smoothing = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 20,
+				},
+				Named = 
+				{
+					string Name = "LanguageSelectDisabled",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, -1.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.25, 0.25, 0.25, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5820efc589857afa:TheSparceFont",
+					uint FontSize = 48,
+					string Text = "Murican",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 64,
+					bool Smoothing = false,
+				},
+			},
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 21,
 		},
 		Named = 
 		{
-			string Name = "LanguageSelectDisabled",
+			string Name = "MainMenuButtonGroup",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.5, -3, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-7.5, -1.75, 0],
+			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
+		Hierarchy = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.25, 0.25, 0.25, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
-			uint FontSize = 48,
-			string Text = "Murican",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 26,
-		},
-		Named = 
-		{
-			string Name = "LanguageSelect",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-0.5, -3, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.529412, 0.529412, 0.529412, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
-			uint FontSize = 48,
-			string Text = "Selected Language",
-			TextAlign Align = Right,
-			float PixelsPerUnit = 64,
-			bool Smoothing = false,
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 22,
+				},
+				Named = 
+				{
+					string Name = "UI_MainMenuButtonBG",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.25, 1.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0.67, 0.1273, 0.25],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "580f2b89ad88217b:sprite_bigbtn",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 23,
+						},
+						Named = 
+						{
+							string Name = "Button_Play",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-1.5, 0.5, 0],
+							Vec3 Scale = [0.5, 0.5, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 1, 0.16, 0.25],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5820efc589857afa:TheSparceFont",
+							uint FontSize = 100,
+							string Text = "Play",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 64,
+							bool Smoothing = false,
+						},
+					},
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 24,
+				},
+				Named = 
+				{
+					string Name = "UI_MainMenuButtonBG",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.25, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.26, 0.26, 0.26, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "580f2b89ad88217b:sprite_bigbtn",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				SelectableScale = 
+				{
+					Vec3 ScaleDirection = [1, 1, 1],
+					Vec3 MaxScale = [1.2, 1.2, 1],
+					Vec3 MinScale = [1, 1, 1],
+					float ScaleSpeed = 1,
+				},
+				ButtonLevelChange = 
+				{
+					string Level = "580f2d187401da74:MainMenu",
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 25,
+						},
+						Named = 
+						{
+							string Name = "Button_Back",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-1.5, 0.5, 0],
+							Vec3 Scale = [0.5, 0.5, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.445, 0.445, 0.445, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5820efc589857afa:TheSparceFont",
+							uint FontSize = 100,
+							string Text = "Back",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 64,
+							bool Smoothing = false,
+						},
+					},
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 26,
+				},
+				Named = 
+				{
+					string Name = "UI_MainMenuButtonBG",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.25, -0.75, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.25],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "580f2b89ad88217b:sprite_bigbtn",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 27,
+						},
+						Named = 
+						{
+							string Name = "Button_Quit",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-1.5, 0.5, 0],
+							Vec3 Scale = [0.5, 0.5, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 0.160784, 0.160784, 0.25],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "5820efc589857afa:TheSparceFont",
+							uint FontSize = 100,
+							string Text = "Quit",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 64,
+							bool Smoothing = false,
+						},
+					},
+				},
+			},
 		},
 	},
 },

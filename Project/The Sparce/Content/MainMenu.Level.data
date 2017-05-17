@@ -66,24 +66,6 @@ Level =
 			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
-		DeferredRenderer = 
-		{
-			Vec4 ClearColor = [0, 0, 0, 0],
-			bool DrawNonVisible = false,
-			bool DrawDebugObjects = true,
-			bool DrawEditorIcons = true,
-			bool EditorIconDepth = true,
-			bool Hdr = true,
-			bool Shadows = true,
-			bool AntiAliasing = false,
-			bool Refraction = true,
-			bool Reflections = true,
-			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
-			bool GodRays = true,
-			bool RenderMasks = false,
-			bool Glow = false,
-			float GlowThreshold = 1,
-		},
 		GridDraw = 
 		{
 			bool Active = true,
@@ -109,6 +91,15 @@ Level =
 		MusicScr_Stage = 
 		{
 			string MusicToPlay = "59b5730bfdc81b59:Intro",
+		},
+		ForwardRenderer = 
+		{
+			Vec4 ClearColor = [0, 0, 0, 1],
+			bool DrawNonVisible = false,
+			bool DrawDebugObjects = true,
+			bool DrawEditorIcons = true,
+			bool EditorIconDepth = true,
+			bool Wireframe = false,
 		},
 		UICreator = 
 		{
@@ -140,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6599,
+			float Size = 20.1898,
 		},
 		EditorCameraController = 
 		{
