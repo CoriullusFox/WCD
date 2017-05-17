@@ -94,11 +94,6 @@ Level =
 		{
 			bool EnableFullscreen = false,
 		},
-		UICreator = 
-		{
-			string UILevel = "59d0247de5da9f1a:MainMenuBackground",
-			string UIArchtype = "5819b167eb57c437:UI_Space",
-		},
 	},
 	Cog = 
 	{
@@ -112,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.54398, -1.39567, 50],
+			Vec3 Translation = [-9.96093, -0.102366, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -124,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7594,
+			float Size = 12.0993,
 		},
 		EditorCameraController = 
 		{
@@ -132,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-8.54398, -1.39567, 7.8352e-008],
+			Vec3 LookTarget = [-9.96093, -0.102366, 1.64155e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -829,6 +824,14 @@ Level =
 					bool AnimationActive = true,
 					float AnimationSpeed = 1,
 					uint StartFrame = 0,
+				},
+				PlayButton = 
+				{
+					string LVL0 = "",
+					string LVL1 = "",
+					string LVL2 = "",
+					string LVL3 = "",
+					bool Clickable = false,
 				},
 				Hierarchy = 
 				{

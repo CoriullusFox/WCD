@@ -91,6 +91,7 @@ Level =
 		MusicScr_Stage = 
 		{
 			string MusicToPlay = "59b5730bfdc81b59:Intro",
+			bool RestartIfSameTrack = false,
 		},
 		ForwardRenderer = 
 		{
@@ -105,6 +106,7 @@ Level =
 		{
 			string UILevel = "59d0247de5da9f1a:MainMenuBackground",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
+			bool ReloadIfSameLevel = false,
 		},
 	},
 	Cog = 
@@ -119,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.3911, -0.0992296, 49.999],
+			Vec3 Translation = [-7.56452, 1.85922, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -131,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1898,
+			float Size = 18.2685,
 		},
 		EditorCameraController = 
 		{
@@ -139,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.3911, -0.0992296, -0.000999952],
+			Vec3 LookTarget = [-7.56452, 1.85922, -0.00100018],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

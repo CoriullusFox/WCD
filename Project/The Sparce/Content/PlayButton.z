@@ -8,6 +8,8 @@ class PlayButton : ZilchComponent
     var LVL2 : Level = null;
     [Property]
     var LVL3 : Level = null;
+    [Property]
+    var Clickable : Boolean = true;
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -19,21 +21,33 @@ class PlayButton : ZilchComponent
         if(event.LVLNum == 0)
         {
             this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Play";
-            this.Owner.ButtonLevelChange.Level = this.LVL0;
+            if(this.Clickable)
+            {
+                this.Owner.ButtonLevelChange.Level = this.LVL0;
+            }
         }
         if(event.LVLNum == 1)
         {
+            if(this.Clickable)
+            {
             this.Owner.ButtonLevelChange.Level = this.LVL1;
+            }
             this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Continue";
         }
         if(event.LVLNum == 2)
         {
+            if(this.Clickable)
+            {
             this.Owner.ButtonLevelChange.Level = this.LVL2;
+            }
             this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Continue";
         }
         if(event.LVLNum == 3)
         {
+            if(this.Clickable)
+            {
             this.Owner.ButtonLevelChange.Level = this.LVL3;
+            }
             this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Continue";
         }
     }

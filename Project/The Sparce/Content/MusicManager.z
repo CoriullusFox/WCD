@@ -8,7 +8,7 @@
 ** - Sam Stearns
 **
 ** Contributors:
-** - none
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 
 class MusicManager : ZilchComponent
@@ -27,6 +27,8 @@ class MusicManager : ZilchComponent
     
     [Property]
     var MusicVolume : Real = 1;
+    
+    var CurrCue : SoundCue = null;
     
     
     function Initialize(init : CogInitializer)
@@ -63,6 +65,7 @@ class MusicManager : ZilchComponent
                 this.CurrentEmitter.Volume = this.MusicVolume;
                 this.CurrentEmitter.Stop();
                 this.CurrentEmitter.PlayCue(this.NextCue);
+                this.CurrCue = this.NextCue;
                 this.NextCue = null;
             }
         }
@@ -74,6 +77,7 @@ class MusicManager : ZilchComponent
         if (this.CurrentEmitterIsPlaying == false)
         {
             this.CurrentEmitter.PlayCue(cue);
+            this.CurrCue = cue;
             this.CurrentEmitterIsPlaying = true;
             this.NextCue = null;
         }
@@ -84,5 +88,11 @@ class MusicManager : ZilchComponent
         }
     }
     
+    function GetCurrentCue() : SoundCue
+    {
+        
+        return this.CurrCue;
+        
+    }
     
 }

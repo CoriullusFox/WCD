@@ -8,16 +8,21 @@
 ** - Sam Stearns
 **
 ** Contributors:
-** - none
+** - Brandon Wolenetz
 ** --------------------------------------------------------------------------*/
 class MusicScr_Stage : ZilchComponent
 {
     [Property]
     var MusicToPlay : SoundCue = null;
+    [Property]
+    var RestartIfSameTrack : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
         //Put this script on Level Settings
-        this.GameSession.MusicManager.SwitchTracks(this.MusicToPlay);
+        if(this.GameSession.MusicManager.GetCurrentCue() != this.MusicToPlay || this.RestartIfSameTrack)
+        {
+            this.GameSession.MusicManager.SwitchTracks(this.MusicToPlay);
+        }
     }
 }

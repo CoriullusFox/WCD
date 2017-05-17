@@ -19,6 +19,8 @@ class UICreator : ZilchComponent
     var UILevel : Level;
     [Property]
     var UIArchtype : Archetype;
+    [Property]
+    var ReloadIfSameLevel : Boolean = true;
     
     var UISpace : Space = null;
     
@@ -30,13 +32,27 @@ class UICreator : ZilchComponent
     function OnLevelStarted(event : GameEvent)
     {
         if(event.LevelName != this.UILevel.Name)
+        {
+            if(event.LevelName == this.Space.CurrentLevel.Name && !this.ReloadIfSameLevel)
             {
-            if(this.UISpace != null)
-            {
-                this.UISpace.Destroy();
+                
+                if(this.GameSession.FindSpaceByName("UI") == null)
+                {
+                    this.UISpace = this.GameSession.CreateNamedSpace("UI", this.UIArchtype);
+                    this.UISpace.LoadLevel(this.UILevel);
+                }
+                
             }
-            this.UISpace = this.GameSession.CreateNamedSpace("UI", this.UIArchtype);
-            this.UISpace.LoadLevel(this.UILevel);
+            else
+            {
+                if(this.UISpace != null)
+                {
+                    this.UISpace.Destroy();
+                }
+                this.UISpace = this.GameSession.CreateNamedSpace("UI", this.UIArchtype);
+                this.UISpace.LoadLevel(this.UILevel);
+            }
+            
         }
     }
 
