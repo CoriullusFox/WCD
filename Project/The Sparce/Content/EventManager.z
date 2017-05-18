@@ -141,3 +141,13 @@ class Unpause : ZilchEvent
     sends Unpause : Unpause;
     
 }
+
+class ScreenShake : ZilchEvent
+{
+    
+    sends ScreenShake : ScreenShake;
+    var FadeSpeed : Real;
+    var Timer : Real;
+    var Intencity : Real;
+    
+}

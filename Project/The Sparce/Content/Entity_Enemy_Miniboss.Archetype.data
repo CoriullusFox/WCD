@@ -77,7 +77,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 250,
+		float ConfiguredHealth = 150,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
@@ -95,7 +95,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -105,18 +105,6 @@ Cog =
 	{
 		float SecondsBetweenDamage = 0.5,
 		float Damage = 2.5,
-	},
-	Pistol = 
-	{
-		string Bullet = "583c4110d1935b64:Bullet_TinyLaser",
-		float Damage = 5,
-		float EnergyUse = 1,
-		float Energy = 100,
-		float CooldownMax = 0.25,
-		bool Player = false,
-		float BulletSpeed = 10,
-		float LifeLength = 1.5,
-		float CamZoom = 20,
 	},
 	Shotgun = 
 	{
@@ -132,14 +120,17 @@ Cog =
 		float LifeLength = 0.35,
 		float CamZoom = 18,
 	},
-	TeslaGun = 
+	Bouncer = 
 	{
-		float Damage = 80,
-		float EnergyUse = 99,
+		string Bullet = "582a50e058efc8d0:Bullet_Bouncy",
+		float Damage = 6,
+		float EnergyUse = 25,
 		float Energy = 100,
-		float CooldownMax = 5,
+		float CooldownMax = 0.5,
 		bool Player = false,
-		float CamZoom = 25,
+		float BulletSpeed = 8,
+		float LifeLength = 5,
+		float CamZoom = 20,
 	},
 	Hierarchy = 
 	{

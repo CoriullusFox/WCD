@@ -3,22 +3,52 @@ class CamShake : ZilchComponent
     
     [Property]
     var Amount : Real = 0;
-    
+    [Property]
+    var StartAtZero : Boolean = false;
+    [Property]
+    var Increace : Boolean = true;
     var CenterPos : Real3;
+    var FadeSpeed : Real = 0.05;
+    [Property]
+    var Timer : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
-        this.CenterPos = this.Owner.Transform.Translation;
+        if(this.StartAtZero)
+        {
+            this.CenterPos = Real3(0,0,50);
+        }
+        else
+        {
+            this.CenterPos = this.Owner.Transform.Translation;
+        }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.ScreenShake, this.OnScreenShake);
+    }
+
+    function OnScreenShake(event : ScreenShake)
+    {
+        this.Amount = event.Intencity;
+        this.FadeSpeed = event.FadeSpeed;
+        this.Timer = event.Timer;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.Timer -= event.Dt;
         
-        var rand = Random();
-        this.Owner.Transform.Translation = this.CenterPos + Real3(rand.Range(this.Amount, this.Amount*-1), rand.Range(this.Amount, this.Amount*-1), 0);
-        
-        this.Amount -= event.Dt*0.05;
-        
+        if(this.Timer > 0)
+        {
+            var rand = Random();
+            this.Owner.Transform.Translation = this.CenterPos + Real3(rand.Range(this.Amount, this.Amount*-1), rand.Range(this.Amount, this.Amount*-1), 0);
+            
+            this.Amount -= event.Dt*this.FadeSpeed;
+        }
+        else
+        {
+            
+            this.Owner.Transform.Translation = this.CenterPos;
+            
+        }
     }
 }
