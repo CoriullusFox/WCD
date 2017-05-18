@@ -101,6 +101,7 @@ Level =
 		{
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
+			bool ReloadIfSameLevel = true,
 		},
 		Pause = 
 		{
@@ -118,7 +119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-23.6945, -10.9662, 50],
+			Vec3 Translation = [-24.9728, -5.33493, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -130,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.0464,
+			float Size = 32.8894,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +139,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-23.6945, -10.9662, -1.13655e-006],
+			Vec3 LookTarget = [-24.9728, -5.33493, -1.19242e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -720,11 +721,6 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
 	},
 	Cog = 
 	{
@@ -804,11 +800,6 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
 	},
 	ArchetypeInstance = 
 	{
@@ -826,11 +817,6 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_VertDoor",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
 		},
 	},
 	ArchetypeInstance = 
@@ -850,11 +836,6 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
 	},
 	ArchetypeInstance = 
 	{
@@ -872,11 +853,6 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_VertDoor",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
 		},
 	},
 	Cog = 
@@ -957,11 +933,6 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
 	},
 	ArchetypeInstance = 
 	{
@@ -980,11 +951,6 @@ Level =
 		{
 			string Name = "Animated_VertDoor",
 		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
 	},
 	ArchetypeInstance = 
 	{
@@ -1002,11 +968,6 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_VertDoor",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
 		},
 	},
 	Cog = 
@@ -1270,11 +1231,6 @@ Level =
 		{
 			string Name = "Animated_HorDoor",
 		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
 	},
 	ArchetypeInstance = 
 	{
@@ -1292,11 +1248,6 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_HorDoor",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
 		},
 	},
 	ArchetypeInstance = 
@@ -1316,11 +1267,6 @@ Level =
 		{
 			string Name = "Animated_HorDoor",
 		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
-		},
 	},
 	ArchetypeInstance = 
 	{
@@ -1338,11 +1284,6 @@ Level =
 		Named = 
 		{
 			string Name = "Animated_HorDoor",
-		},
-		EditorFlags = 
-		{
-			bool Locked = false,
-			bool Hidden = true,
 		},
 	},
 	Cog = 

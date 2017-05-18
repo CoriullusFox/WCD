@@ -78,7 +78,16 @@ class TeslaGun : ZilchComponent
             
             this.Cooldown = 0;
             /** SHOOTING LOGIC HERE **/
-            
+            if(this.Player)
+            {
+                
+                var toSend = ScreenShake();
+                toSend.Intencity = 0.01;
+                toSend.Timer = 0.1;
+                toSend.FadeSpeed = 0.1;
+                this.Space.DispatchEvent(Events.ScreenShake, toSend);
+                
+            }
             var toSend = Hurt();
             toSend.Damage = this.Damage;
             var filter = CastFilter();

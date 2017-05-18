@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.40265, 3.67353, 6.6638],
+			Vec3 Translation = [-3.36491, 1.90402, 7.09473],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.214297, -0.247452, -0.0562198, 0.94323],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 26.9275,
+			float Size = 19.9484,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 4.5359,
 			float VerticalAngle = 0.446804,
 			float HorizontalAngle = 0.513128,
-			Vec3 LookTarget = [-0.394543, 1.71364, 3.1],
+			Vec3 LookTarget = [-1.35681, -0.055879, 3.53093],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -172,6 +172,9 @@ Level =
 		CamShake = 
 		{
 			float Amount = 0,
+			bool StartAtZero = false,
+			bool Increace = true,
+			float Timer = 100,
 		},
 	},
 	Cog = 
@@ -445,6 +448,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool Faded = true,
 		},
 	},
 	Cog = 
@@ -519,6 +523,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool Faded = true,
 		},
 		Hierarchy = 
 		{
@@ -559,6 +564,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool Faded = true,
 		},
 	},
 	Cog = 
@@ -596,6 +602,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool Faded = true,
 		},
 	},
 	Cog = 
@@ -633,6 +640,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool Faded = true,
 		},
 	},
 	Cog = 
@@ -670,6 +678,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool Faded = true,
 		},
 	},
 	Cog = 
@@ -707,6 +716,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool Faded = true,
 		},
 	},
 },

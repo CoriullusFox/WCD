@@ -94,7 +94,16 @@ class Bouncer : ZilchComponent
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_RocketLaunch"));
                 
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
-                
+                if(this.Player)
+                {
+                    
+                    var toSend = ScreenShake();
+                    toSend.Intencity = 0.03;
+                    toSend.Timer = 0.1;
+                    toSend.FadeSpeed = 0.1;
+                    this.Space.DispatchEvent(Events.ScreenShake, toSend);
+                    
+                }
                 if(createdBullet != null)
                 {
                     var randGen : Random = Random();

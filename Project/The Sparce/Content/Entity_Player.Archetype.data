@@ -200,6 +200,12 @@ Cog =
 			{
 				bool Active = true,
 			},
+			CamShake = 
+			{
+				float Amount = 0,
+				bool StartAtZero = true,
+				bool Increace = false,
+			},
 		},
 		ArchetypeInstance = 
 		{

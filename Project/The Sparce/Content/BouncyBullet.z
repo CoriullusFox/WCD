@@ -16,31 +16,47 @@ class BouncyBullet : ZilchComponent
     var PlayerBullet : Boolean = false;
     var Damage : Real = 5;
     
+    var Cooldown : Real = 0;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Cooldown -= event.Dt;
     }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
+
+        var toSend1 = ScreenShake();
+        toSend1.Intencity = 0.1;
+        toSend1.Timer = 0.1;
+        toSend1.FadeSpeed = 0.1;
+        this.Space.DispatchEvent(Events.ScreenShake, toSend1);
         if(this.PlayerBullet)
         {
-            if(event.OtherObject.Name != "TempPlayer" && event.OtherObject.Name != this.Owner.Name)
+            if(event.OtherObject.Name != "TempPlayer" && event.OtherObject.Name != this.Owner.Name && this.Cooldown <= 0)
             {
                 var toSend = Hurt();
                 toSend.Damage = this.Damage;
                 event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                this.Cooldown = 0.3;
                 
             }
         }
         else
         {
             
-            if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != this.Owner.Name)
+            if(event.OtherObject.Name != "Enemy" && event.OtherObject.Name != this.Owner.Name && this.Cooldown <= 0)
             {
                 var toSend = Hurt();
                 toSend.Damage = this.Damage;
                 event.OtherObject.DispatchEvent(Events.Hurt, toSend);
+                this.Cooldown = 0.3;
                 
             }
             
