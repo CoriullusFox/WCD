@@ -18,7 +18,7 @@ class Rifle : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_TinyLaser;
     
     [Property]
-    var Damage : Real = 50.0;
+    var Damage : Real = 30.0;
     
     [Property]
     var EnergyUse : Real = 49;
@@ -27,7 +27,7 @@ class Rifle : ZilchComponent
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 2.0;
+    var CooldownMax : Real = 1.0;
     
     [Property]
     var Player : Boolean = false;

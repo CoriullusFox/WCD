@@ -20,16 +20,16 @@ class ChainElectricity : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_Beam;
     
     [Property]
-    var Damage : Real = 5;
+    var Damage : Real = 1;
     
     [Property]
-    var EnergyUsePer : Real = 5;
+    var EnergyUsePer : Real = 1;
     
     [Property]
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 0.5;
+    var CooldownMax : Real = 0.15;
     
     [Property]
     var Player : Boolean = false;

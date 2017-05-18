@@ -22,19 +22,19 @@ class Shotgun : ZilchComponent
     var NumberOfShots : Integer = 5;
     
     [Property]
-    var DamagePerBullet : Real = 10;
+    var DamagePerBullet : Real = 8;
     
     [Property]
     var DistBetweenShots : Real = 0.1;
     
     [Property]
-    var EnergyUse : Real = 25;
+    var EnergyUse : Real = 40;
     
     [Property]
     var Energy : Real = 100.0;
     
     [Property]
-    var CooldownMax : Real = 0.6;
+    var CooldownMax : Real = 0.9;
     
     [Property]
     var Player : Boolean = false;
@@ -43,7 +43,7 @@ class Shotgun : ZilchComponent
     var BulletSpeed : Real = 18;
     
     [Property]
-    var LifeLength : Real = 0.35;
+    var LifeLength : Real = 0.23;
     
     [Property]
     var CamZoom : Real = 18;
