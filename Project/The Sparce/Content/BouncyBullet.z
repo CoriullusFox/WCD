@@ -31,12 +31,6 @@ class BouncyBullet : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-
-        var toSend1 = ScreenShake();
-        toSend1.Intencity = 0.1;
-        toSend1.Timer = 0.1;
-        toSend1.FadeSpeed = 0.1;
-        this.Space.DispatchEvent(Events.ScreenShake, toSend1);
         if(this.PlayerBullet)
         {
             if(event.OtherObject.Name != "TempPlayer" && event.OtherObject.Name != this.Owner.Name && this.Cooldown <= 0)
