@@ -44,11 +44,7 @@ class CamShake : ZilchComponent
             
             this.Amount -= event.Dt*this.FadeSpeed;
         }
-        else
-        {
-            
-            this.Owner.Transform.Translation = this.CenterPos;
-            
-        }
+        
+        this.CenterPos = this.Owner.Transform.Translation;
     }
 }

@@ -28,13 +28,16 @@ class Health : ZilchComponent
     var Player              : Boolean = false;
     
     [Property]
-    var Enemy              : Boolean = true;
+    var Enemy               : Boolean = true;
     
     [Property]
     var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
     
     [Property]
     var Explosion           : Archetype = Archetype.Particle_WhiteExplosion;
+    
+    [Property]
+    var PermDeathSprite     : Archetype = null;
     
     //REGEN
     [Property]
@@ -50,6 +53,9 @@ class Health : ZilchComponent
     
     [Property]
     var RegenCooldown : Real = 1;
+    
+    [Property]
+    var DeathSound : SoundCue = SoundCue.PigSFX_KillPig;
     
     var RegenTimer : Real = 0;
     
@@ -179,7 +185,8 @@ class Health : ZilchComponent
             }
             else if(!this.Player)
             {
-                this.Space.SoundSpace.PlayCue(SoundCue.Find("PigSFX_KillPig"));
+                this.Space.SoundSpace.PlayCue(this.DeathSound);
+                this.Space.CreateAtPosition(this.PermDeathSprite, this.Owner.Transform.Translation);
                 
                 //this is not temporary
                 if(this.Enemy)
@@ -191,6 +198,17 @@ class Health : ZilchComponent
                     toSend.FadeSpeed = 0.1;
                     this.Space.DispatchEvent(Events.ScreenShake, toSend);
                 }
+                else
+                {
+                    
+                    var toSend = ScreenShake();
+                    toSend.Intencity = 0.01;
+                    toSend.Timer = 0.1;
+                    toSend.FadeSpeed = 0.1;
+                    this.Space.DispatchEvent(Events.ScreenShake, toSend);
+                    
+                }
+                
                 //This is temporary until we decide to make the enemies deaths perminent
                 
                 //this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;

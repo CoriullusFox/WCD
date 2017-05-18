@@ -163,10 +163,12 @@ Cog =
 		bool Enemy = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+		string PermDeathSprite = "",
 		float RegenRate = 0,
 		float MaxHealth = 100,
 		float HurtDuration = 0.1,
 		float RegenCooldown = 1,
+		string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 	},
 	Hierarchy = 
 	{
@@ -205,6 +207,10 @@ Cog =
 				float Amount = 0,
 				bool StartAtZero = true,
 				bool Increace = false,
+				float Timer = 0,
+			},
+			PlayerCam = 
+			{
 			},
 		},
 		ArchetypeInstance = 

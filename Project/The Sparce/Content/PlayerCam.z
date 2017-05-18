@@ -1,0 +1,17 @@
+class PlayerCam : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        var newPos = this.Owner.Parent.Transform.Translation + this.Owner.Parent.ChangeDirectionToPointAtMouse.Direction / 6;
+        newPos = Real3(newPos.X, newPos.Y, 50);
+        Console.WriteLine(newPos);
+        this.Owner.Transform.WorldTranslation = Math.Lerp(this.Owner.Transform.WorldTranslation, newPos, event.Dt*4);
+        
+    }
+}

@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "PlayerCam",
+		uint64 ResourceId = 599b03d2b0899410,
+	},
+},
