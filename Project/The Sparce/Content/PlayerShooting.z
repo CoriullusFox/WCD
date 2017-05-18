@@ -29,11 +29,10 @@ class PlayerShooting : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.Space) || Zero.Mouse.IsButtonDown(MouseButtons.Left))
         {
             //send shoot event
-            var toSend = Shoot();
-            toSend.Direction = this.Direction;
-            toSend.Player = true;
-            this.Owner.DispatchEvent(Events.Shoot, toSend);
-            
+            var toSend1 = Shoot();
+            toSend1.Direction = this.Direction;
+            toSend1.Player = true;
+            this.Owner.DispatchEvent(Events.Shoot, toSend1);
         }
     }
 }

@@ -20,16 +20,16 @@ class ChainElectricity : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_Beam;
     
     [Property]
-    var Damage : Real = 5;
+    var Damage : Real = 1;
     
     [Property]
-    var EnergyUsePer : Real = 5;
+    var EnergyUsePer : Real = 1;
     
     [Property]
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 0.5;
+    var CooldownMax : Real = 0.15;
     
     [Property]
     var Player : Boolean = false;
@@ -86,7 +86,6 @@ class ChainElectricity : ZilchComponent
         //only shoot if cooldown is over
         if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUsePer)
         {
-            this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_ElecBurst"));
             
             this.Owner.DispatchEvent(Events.Fire, Fire());
             this.Cooldown = 0;
@@ -157,7 +156,6 @@ class ChainElectricity : ZilchComponent
                 {
                     break;
                 }
-                Console.WriteLine("-----------------------------");
                 this.Links.Add(temp);
                 
                 
@@ -167,6 +165,13 @@ class ChainElectricity : ZilchComponent
             if(this.Links.Count > 1)
             {
                 //this.Owner.Health.Freeze(0, this.FreezeTime);
+                var toSend = ScreenShake();
+                toSend.Intencity = 0.01;
+                toSend.Timer = 0.1;
+                toSend.FadeSpeed = 0.1;
+                this.Space.DispatchEvent(Events.ScreenShake, toSend);
+                this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_ElecBurst"));
+                
             }
             else
             {

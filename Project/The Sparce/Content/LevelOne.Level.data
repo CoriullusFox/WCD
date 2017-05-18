@@ -89,6 +89,7 @@ Level =
 		{
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
+			bool ReloadIfSameLevel = true,
 		},
 		GameStateManager = 
 		{
@@ -121,7 +122,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.04646, 11.3883, 50],
+			Vec3 Translation = [-0.255566, -7.2683, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +134,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 19.9485,
+			float Size = 32.8895,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +142,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.04646, 11.3883, 5.36579e-008],
+			Vec3 LookTarget = [-0.255566, -7.2683, 5.36579e-008],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1222,12 +1223,19 @@ Level =
 			Vec3 Size = [0.2, 0.25, 0.5],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "586101df0958c576:Pickup_Health",
 		LinkId = 
 		{
 			uint Id = 31,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
 		},
 		Transform = 
 		{
@@ -1235,9 +1243,38 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Medkit",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 50,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
 		},
 	},
 	ArchetypeInstance = 
@@ -2348,7 +2385,7 @@ Level =
 		},
 		Spawner = 
 		{
-			string Archtype = "585fac1532f16dbc:Entity_Enemy_Sniper",
+			string Archtype = "585fac7a31d9f76a:Entity_Enemy_Shield",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -3218,7 +3255,7 @@ Level =
 		},
 		Spawner = 
 		{
-			string Archtype = "585fac1532f16dbc:Entity_Enemy_Sniper",
+			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3276,7 +3313,7 @@ Level =
 		},
 		Spawner = 
 		{
-			string Archtype = "585fac1532f16dbc:Entity_Enemy_Sniper",
+			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3716,7 +3753,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21.5, -19.5, 0],
+			Vec3 Translation = [21.5, -28.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

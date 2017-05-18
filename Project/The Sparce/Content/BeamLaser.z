@@ -117,7 +117,16 @@ class BeamLaser : ZilchComponent
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_WahwahLaser"));
                 
                 this.CreatedBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
-                
+                if(this.Player)
+                {
+                    
+                    var toSend = ScreenShake();
+                    toSend.Intencity = 0.01;
+                    toSend.Timer = 0.1;
+                    toSend.FadeSpeed = 0.1;
+                    this.Space.DispatchEvent(Events.ScreenShake, toSend);
+                    
+                }
                 if(this.CreatedBullet != null)
                 {
                     this.CreatedBullet.Beam.New = true;

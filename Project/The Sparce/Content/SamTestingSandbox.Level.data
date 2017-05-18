@@ -85,6 +85,7 @@ Level =
 		{
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
+			bool ReloadIfSameLevel = true,
 		},
 		ForwardRenderer = 
 		{
@@ -98,6 +99,7 @@ Level =
 		MusicScr_Stage = 
 		{
 			string MusicToPlay = "59b56c4216ad54fa:NewStage",
+			bool RestartIfSameTrack = false,
 		},
 		DebugMode = 
 		{
@@ -119,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [-3.24293, -26.356, 49.9],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -131,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3746,
+			float Size = 13.5335,
 		},
 		EditorCameraController = 
 		{
@@ -139,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [-3.24293, -26.356, -0.0999998],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -198,7 +200,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -0.2],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -381,12 +383,12 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+			string Name = "5858484e735fa18e:Entity_Enemy_Buff",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-16.0372, -2.82051, 0],
-			Vec3 Scale = [4, 4, 1],
+			Vec3 Translation = [-4.39249, -9.31995, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -399,27 +401,27 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
+			string SpriteSource = "585f9b3987abc902:Entity_BuffPig_South",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
 			bool AnimationActive = true,
-			float AnimationSpeed = 3,
+			float AnimationSpeed = 0.3,
 			uint StartFrame = 0,
 		},
 		EnemyAI = 
 		{
-			float ChaseProximity = 4,
-			float ShootProximity = 10,
-			int Speed = 80,
+			float ChaseProximity = 5,
+			float ShootProximity = 7,
+			int Speed = 50,
 			Vec3 LookDirection = [0, 1, 0],
 			Vec3 MoveDirection = [0, 0, 0],
 			bool Pathfind = true,
 			bool Debug = false,
 			float ResponceTime = 2,
 			float WaunderRange = 2.5,
-			float WaunderCooldown = 4,
-			float Cooldown = 1,
+			float WaunderCooldown = 5,
+			float Cooldown = 5,
 		},
 		BoxCollider = 
 		{
@@ -429,35 +431,35 @@ Level =
 			string MaterialName = "5800bf6d54ec0d53:Slippery",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.065, 0.09, 0.5],
+			Vec3 Size = [0.35, 0.4, 0.5],
 		},
 		ChangeDirectionToPointAtPlayer = 
 		{
 		},
 		EnemyAnimations = 
 		{
-			string North = "58128ac7e63298e0:EnemyNorth_Anim",
-			string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-			string East = "58128986ce447b92:EnemyEast_Anim",
-			string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-			string South = "58128b1d3c322a60:EnemySouth_Anim",
-			string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-			string West = "58128bf533d431ee:EnemyWest_Anim",
-			string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
-			float AnimationSpeed = 3,
+			string North = "585f9b4a9b98ef08:Entity_BuffPig_North",
+			string NorthEast = "585f9bfa687a3e29:Entity_BuffPig_NE",
+			string East = "585f9bcc67c75c57:Entity_BuffPig_East",
+			string SouthEast = "585f9b7b9cf92ccb:Entity_BuffPig_SE",
+			string South = "585f9b3987abc902:Entity_BuffPig_South",
+			string SouthWest = "585f9b1e80f97cad:Entity_BuffPig_SW",
+			string West = "585f9cc98c65c26b:Entity_BuffPig_West",
+			string NorthWest = "585f9b5397108311:Entity_BuffPig_NW",
+			float AnimationSpeed = 0.3,
 		},
 		Health = 
 		{
-			float ConfiguredHealth = 25,
+			float ConfiguredHealth = 50,
 			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 			bool MiniHeathBar = true,
 			bool Player = false,
 			bool Enemy = true,
 			Vec4 HurtColor = [1, 0, 0.000599861, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-			float RegenRate = 0.25,
-			float MaxHealth = 75,
-			float HurtDuration = 0.1,
+			float RegenRate = 0.1,
+			float MaxHealth = 150,
+			float HurtDuration = 0.2,
 			float RegenCooldown = 1,
 		},
 		RigidBody = 
@@ -474,19 +476,21 @@ Level =
 		},
 		EnemyToutchDamage = 
 		{
-			float SecondsBetweenDamage = 0.5,
-			float Damage = 2.5,
+			float SecondsBetweenDamage = 0.8,
+			float Damage = 25,
 		},
-		Pistol = 
+		Shotgun = 
 		{
-			string Bullet = "587c04fafcce1b0b:Bullet_TinyLaserEnemy",
-			float Damage = 2,
-			float EnergyUse = 1,
+			string Bullet = "587c04eef2ec5c20:Bullet_TinyPelletEnemy",
+			int NumberOfShots = 5,
+			float DamagePerBullet = 2,
+			float DistBetweenShots = 0.1,
+			float EnergyUse = 12.5,
 			float Energy = 100,
 			float CooldownMax = 0.8,
 			bool Player = false,
-			float BulletSpeed = 10,
-			float LifeLength = 5,
+			float BulletSpeed = 12,
+			float LifeLength = 0.6,
 			float CamZoom = 0,
 		},
 		Hierarchy = 
@@ -503,8 +507,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-1.25296, -2.53804, -70],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [0, 0, -70],
+					Vec3 Scale = [2, 2, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -513,7 +517,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 0, 0, 0.66],
+					Vec4 Color = [1, 0, 0, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -526,49 +530,89 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7.12161, -1.43505, 0],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5858484e735fa18e:Entity_Enemy_Buff",
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.79885, -9.02423, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 12,
+				},
+				Named = 
+				{
+					string Name = "BuffParticles",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.0103562, -0.494216, -0.0999999],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteParticleSystem = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					SystemChildMode ChildMode = Independent,
+					SystemSpace SystemSpace = WorldSpace,
+					uint DrawOrder = 0,
+					float WarmUpTime = 0,
+					ParticleGeometry GeometryMode = Billboarded,
+					ParticleRenderMode RenderMode = Additive,
+					ParticleSortMode SortMode = Youngest,
+					ParticleAnimation ParticleAnimation = Single,
+					string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
+					Vec4 Tint = [1, 1, 1, 0.39],
+					float VelocityScale = 1,
+					float LengthScale = 1,
+					float MaxParticleSize = 100,
+					Vec3 SystemSize = [4, 4, 4],
+				},
+				SphericalParticleEmitter = 
+				{
+					bool Active = true,
+					uint EmitCount = 0,
+					float EmitRate = 7,
+					float EmitVariance = 3,
+					float Size = 0.1,
+					float SizeVariance = 0.05,
+					float Lifetime = 1,
+					float LifetimeVariance = 0.2,
+					float Spin = 0,
+					float SpinVariance = 0,
+					bool RandomSpin = false,
+					float Fill = 1,
+					float EmitterVelocityPercent = 0.9,
+					Vec3 StartVelocity = [0, -0.2, 0],
+					Vec3 RandomVelocity = [0, 0.5, 0],
+					Vec3 TangentVelocity = [0, 0, 0],
+					Vec3 EmitterSize = [0.1, 0.1, 0],
+					bool FastMovingEmitter = false,
+				},
+				LinearParticleAnimator = 
+				{
+					Vec3 Force = [0, 1, 0],
+					Vec3 RandomForce = [0, 0, 0],
+					float Torque = 0,
+					float Growth = 0,
+					float Dampening = 0,
+					Vec3 Twist = [0, 0, 0],
+				},
+				ParticleColorAnimator = 
+				{
+					Vec4 Color0 = [0, 1, 1, 0.9999],
+					Vec4 Color1 = [0, 1, 0.85, 1],
+					Vec4 Color2 = [0, 0.7, 1, 0.69],
+					Vec4 Color3 = [0, 0.88, 1, 0.245],
+					Vec4 Color4 = [0, 1, 1, 0],
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -614,7 +658,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 15,
+				uint ResolvedCog = 14,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -628,7 +672,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -674,7 +718,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 14,
+				uint ResolvedCog = 13,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -688,7 +732,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -696,7 +740,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -0.1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -717,6 +761,325 @@ Level =
 			string PaletteName = "584fd7da8bf9792b:TileDecor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.162126, -1.44291, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			Enum Unlocked = Chain_Electricity,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.86519, -25.9867, -0.200001],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5820e8f49dbffcb3:WeaponPickup",
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.3147, -1.4513, -0.200001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.59993, 3.59519, -0.200001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			Enum Unlocked = Rifle,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.480929, 3.55131, -0.200001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			Enum Unlocked = Beam_Laser,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.879429, 3.48549, -0.200001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			Enum Unlocked = Tesla,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Named = 
+		{
+			string Name = "WeaponPickup",
+		},
+		Archetyped = 
+		{
+			string Name = "5820e8f49dbffcb3:WeaponPickup",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.58155, -0.420058, -0.200001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.75, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5829b22cf32c2fa5:Weapon_Drop",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		WeaponPickup = 
+		{
+			Enum Unlocked = Flame_Thrower,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.44739, -24.8954, -0.0999985],
+			Vec3 Scale = [4, 4, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
 		},
 	},
 },

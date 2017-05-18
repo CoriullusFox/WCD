@@ -121,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.56452, 1.85922, 49.999],
+			Vec3 Translation = [-6.73017, 0.769599, 49.999],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2685,
+			float Size = 20.1898,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-7.56452, 1.85922, -0.00100018],
+			Vec3 LookTarget = [-6.73017, 0.769599, -0.00100014],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -293,6 +293,7 @@ Level =
 					string LVL1 = "5991b2a36b02f6bb:LevelOne",
 					string LVL2 = "599e572c2d24ce68:LevelTwo",
 					string LVL3 = "58587ea017da4446:BossLevel",
+					bool Clickable = true,
 				},
 				Hierarchy = 
 				{
