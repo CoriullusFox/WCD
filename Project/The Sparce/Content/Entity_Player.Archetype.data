@@ -66,14 +66,14 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = false,
+		bool ShotgunUnlocked = true,
 		bool MinigunUnlocked = false,
 		bool BeamLaserUnlocked = false,
 		bool RifleUnlocked = false,
 		bool FlamethrowerUnlocked = false,
 		bool BouncerUnlocked = false,
 		bool TeslaUnlocked = false,
-		bool ChainEUnlocked = false,
+		bool ChainEUnlocked = true,
 		bool FreezeUnlocked = false,
 		bool DisableLockedWeaponSelect = true,
 		CogPath WeaponVisual = 
