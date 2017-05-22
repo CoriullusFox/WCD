@@ -11,6 +11,8 @@ class CamShake : ZilchComponent
     var FadeSpeed : Real = 0.05;
     [Property]
     var Timer : Real = 0;
+    [Property]
+    var StayAtCenterPos : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -44,7 +46,9 @@ class CamShake : ZilchComponent
             
             this.Amount -= event.Dt*this.FadeSpeed;
         }
-        
-        this.CenterPos = this.Owner.Transform.Translation;
+        if(!this.StayAtCenterPos)
+        {
+            this.CenterPos = this.Owner.Transform.Translation;
+        }
     }
 }
