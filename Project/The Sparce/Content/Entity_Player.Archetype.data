@@ -161,6 +161,7 @@ Cog =
 		bool MiniHeathBar = false,
 		bool Player = true,
 		bool Enemy = true,
+		bool Explode = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		string PermDeathSprite = "",
@@ -223,7 +224,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.5, -0.5, 1],
+				Vec3 Translation = [0, 0, 1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
