@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [25.0073, -22.4958, 0],
-		Vec3 Scale = [4, 4, 1],
+		Vec3 Translation = [0, 0, 0],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -38,8 +38,8 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 4,
-		float ShootProximity = 10,
+		float ChaseProximity = 15,
+		float ShootProximity = 20,
 		int Speed = 80,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
@@ -58,7 +58,7 @@ Cog =
 		string MaterialName = "5800bf6d54ec0d53:Slippery",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.065, 0.09, 0.5],
+		Vec3 Size = [0.3, 0.55, 0.5],
 	},
 	ChangeDirectionToPointAtPlayer = 
 	{
@@ -122,15 +122,20 @@ Cog =
 		float LifeLength = 0.23,
 		float CamZoom = 18,
 	},
-	BeamLaser = 
+	AITeleportMod = 
 	{
-		string Bullet = "583c4c3f0309dcff:Bullet_Beam",
-		float DPS = 20,
-		float EnergyUse = 25,
+		float TPRangeLarge = 10,
+		float TPRangeSmall = 3,
+	},
+	TeslaGun = 
+	{
+		float Damage = 50,
+		float EnergyUse = 99,
 		float Energy = 100,
-		float CooldownMax = 0,
+		float CooldownMax = 5,
 		bool Player = false,
-		float CamZoom = 20,
+		float CamZoom = 25,
+		Vec4 WarnColor = [0, 0, 0, 0],
 	},
 	Hierarchy = 
 	{

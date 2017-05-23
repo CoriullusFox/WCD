@@ -16,7 +16,7 @@ class TeslaGun : ZilchComponent
     var Cooldown : Real = 0;
     
     [Property]
-    var Damage : Real = 80;
+    var Damage : Real = 50;
     
     [Property]
     var EnergyUse : Real = 99;
@@ -25,13 +25,14 @@ class TeslaGun : ZilchComponent
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 5;
+    var CooldownMax : Real = 1;
     
     [Property]
     var Player : Boolean = false;
     
     [Property]
     var CamZoom : Real = 25;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);

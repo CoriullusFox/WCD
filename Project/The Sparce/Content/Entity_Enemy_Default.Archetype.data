@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [13.3887, -3.34029, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,8 +38,8 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 4,
-		float ShootProximity = 10,
+		float ChaseProximity = 12,
+		float ShootProximity = 20,
 		int Speed = 80,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
@@ -155,82 +155,6 @@ Cog =
 				bool AnimationActive = true,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
-				string Name = "NormalParticles",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0.00432813, -0.142135, 0.100001],
-				Vec3 Scale = [0.25, 0.25, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteParticleSystem = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				SystemChildMode ChildMode = Independent,
-				SystemSpace SystemSpace = WorldSpace,
-				uint DrawOrder = 0,
-				float WarmUpTime = 0,
-				ParticleGeometry GeometryMode = Billboarded,
-				ParticleRenderMode RenderMode = Additive,
-				ParticleSortMode SortMode = Youngest,
-				ParticleAnimation ParticleAnimation = Single,
-				string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
-				Vec4 Tint = [1, 1, 1, 0.39],
-				float VelocityScale = 1,
-				float LengthScale = 1,
-				float MaxParticleSize = 100,
-				Vec3 SystemSize = [4, 4, 4],
-			},
-			SphericalParticleEmitter = 
-			{
-				bool Active = true,
-				uint EmitCount = 0,
-				float EmitRate = 7,
-				float EmitVariance = 3,
-				float Size = 0.1,
-				float SizeVariance = 0.05,
-				float Lifetime = 1,
-				float LifetimeVariance = 0.2,
-				float Spin = 0,
-				float SpinVariance = 0,
-				bool RandomSpin = false,
-				float Fill = 1,
-				float EmitterVelocityPercent = 0.9,
-				Vec3 StartVelocity = [0, -0.2, 0],
-				Vec3 RandomVelocity = [0, 0.5, 0],
-				Vec3 TangentVelocity = [0, 0, 0],
-				Vec3 EmitterSize = [0.1, 0.1, 0],
-				bool FastMovingEmitter = false,
-			},
-			LinearParticleAnimator = 
-			{
-				Vec3 Force = [0, 1, 0],
-				Vec3 RandomForce = [0, 0, 0],
-				float Torque = 0,
-				float Growth = 0,
-				float Dampening = 0,
-				Vec3 Twist = [0, 0, 0],
-			},
-			ParticleColorAnimator = 
-			{
-				Vec4 Color0 = [0.432, 1, 0.29, 0.9999],
-				Vec4 Color1 = [0.31428, 0.81, 0.19035, 1],
-				Vec4 Color2 = [0.1722, 0.82, 0.198112, 0.69],
-				Vec4 Color3 = [0.56875, 0.91, 0.592638, 0.245],
-				Vec4 Color4 = [0.50765, 0.71, 0.606802, 0],
 			},
 		},
 	},

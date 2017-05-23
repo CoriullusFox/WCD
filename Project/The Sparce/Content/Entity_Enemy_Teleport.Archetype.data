@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.45748, 0.710555, 0.21841],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,8 +38,8 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 5,
-		float ShootProximity = 9,
+		float ChaseProximity = 12,
+		float ShootProximity = 20,
 		int Speed = 100,
 		Vec3 LookDirection = [0, 1, 0],
 		Vec3 MoveDirection = [0, 0, 0],
@@ -84,10 +84,12 @@ Cog =
 		bool Enemy = true,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+		string PermDeathSprite = "",
 		float RegenRate = 0.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
 		float RegenCooldown = 1,
+		string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 	},
 	RigidBody = 
 	{
@@ -120,8 +122,8 @@ Cog =
 	},
 	AITeleportMod = 
 	{
-		float TPRangeLarge = 5,
-		float TPRangeSmall = 2.5,
+		float TPRangeLarge = 10,
+		float TPRangeSmall = 5,
 	},
 	Hierarchy = 
 	{
