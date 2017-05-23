@@ -155,7 +155,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.521, 2.70071, 55.2583],
+			Vec3 Translation = [8.27265, 2.81076, 55.2583],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -167,7 +167,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457,
+			float Size = 10.0259,
 		},
 		EditorCameraController = 
 		{
@@ -175,7 +175,7 @@ Level =
 			float LookDistance = 55.2583,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [10.521, 2.70071, -8.55888e-008],
+			Vec3 LookTarget = [8.27265, 2.81076, -1.25569e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1207,6 +1207,96 @@ Level =
 		Named = 
 		{
 			string Name = "Trigger",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.5, 4.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5, 0, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a18555c2bd3a02:BigCrate1",
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7, 0, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a18553c15deae8:BigCrate2",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9, 0, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a18540c758c777:BigCrate3",
+		LinkId = 
+		{
+			uint Id = 37,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11, 0, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
 		},
 	},
 },

@@ -31,6 +31,9 @@ class Health : ZilchComponent
     var Enemy               : Boolean = true;
     
     [Property]
+    var Explode : Boolean = true;
+    
+    [Property]
     var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
     
     [Property]
@@ -213,14 +216,18 @@ class Health : ZilchComponent
                 
                 //this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
                 
-                
-                this.Owner.Sprite.AnimationActive = false;
-                
-                this.Owner.Sprite.CurrentFrame = 1;
-                
-                this.Space.CreateAtPosition(Archetype.Particle_BlackDots, this.Owner.Transform.Translation);
-                
-                this.Space.CreateAtPosition(this.Explosion, this.Owner.Transform.Translation);
+                if(this.Owner.Sprite != null)
+                {
+                    this.Owner.Sprite.AnimationActive = false;
+                    
+                    this.Owner.Sprite.CurrentFrame = 1;
+                }
+                if(this.Explode)
+                {
+                    this.Space.CreateAtPosition(Archetype.Particle_BlackDots, this.Owner.Transform.Translation);
+                    
+                    this.Space.CreateAtPosition(this.Explosion, this.Owner.Transform.Translation);
+                }
                 this.Owner.DispatchEvent(Events.Destroy, Destroy());
                 this.Owner.Destroy();
             }
