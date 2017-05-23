@@ -93,7 +93,7 @@ class Pistol : ZilchComponent
             {
                 
                 //kickback
-                this.Owner.Transform.Translation -= event.Direction * 0.01;
+                //this.Owner.Transform.Translation -= event.Direction * 0.01;
                 
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_PunyLaser"));
                 
