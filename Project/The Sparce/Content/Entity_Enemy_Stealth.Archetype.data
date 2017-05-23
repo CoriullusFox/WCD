@@ -38,7 +38,7 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float ChaseProximity = 7,
+		float ChaseProximity = 15,
 		float ShootProximity = 0,
 		int Speed = 200,
 		Vec3 LookDirection = [0, 1, 0],
@@ -81,12 +81,15 @@ Cog =
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
+		bool Enemy = true,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+		string PermDeathSprite = "58624a51b55ce44d:TeleEffect",
 		float RegenRate = 0.5,
 		float MaxHealth = 0,
 		float HurtDuration = 0.1,
 		float RegenCooldown = 1,
+		string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 	},
 	RigidBody = 
 	{
@@ -94,7 +97,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

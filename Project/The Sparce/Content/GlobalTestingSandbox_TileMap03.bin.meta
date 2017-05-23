@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "GlobalTestingSandbox_TileMap03",
+		uint64 ResourceId = 59a1839b9ffab760,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5812ce9c399b74bd:GlobalTestingSandbox",
+	},
+},
