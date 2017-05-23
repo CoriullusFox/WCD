@@ -113,6 +113,7 @@ class FlameThrower : ZilchComponent
                     if(createdBullet.Flame != null)
                     {
                         createdBullet.Flame.PlayerFlame = this.Player;
+                        
                     }
                     
                     createdBullet.Flame.DPS = this.DPS;

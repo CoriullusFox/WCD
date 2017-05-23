@@ -22,8 +22,8 @@ class RestartButton : ZilchComponent
 
     function OnMouseDown(event : ViewportMouseEvent)
     {
-        this.Space.ReloadLevel();
         this.GameSpace.ReloadLevel();
         this.GameSpace.TimeSpace.Paused = false;
+        this.Space.Destroy();
     }
 }

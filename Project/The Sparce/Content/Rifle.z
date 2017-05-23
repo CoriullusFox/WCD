@@ -99,6 +99,10 @@ class Rifle : ZilchComponent
             }
             if(this.Bullet != null)
             {
+                
+                //kickback
+                this.Owner.Transform.Translation -= event.Direction * 0.015;
+                
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_LongLaser"));
                 
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);

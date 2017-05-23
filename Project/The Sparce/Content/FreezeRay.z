@@ -78,6 +78,10 @@ class FreezeRay : ZilchComponent
             
             if(this.Bullet != null)
             {
+                
+                //kickback
+                this.Owner.Transform.Translation -= event.Direction * 0.01;
+                
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
                 
                 if(createdBullet != null)

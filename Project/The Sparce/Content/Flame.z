@@ -53,6 +53,7 @@ class Flame : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
         var angle = 0.0;
         
         //strange fix to small bug
@@ -81,6 +82,7 @@ class Flame : ZilchComponent
         {
             
             this.Owner.SphericalParticleEmitter.Active = false;
+            this.Owner.RemoveComponentByName("boxCollider");
             
         }
         
