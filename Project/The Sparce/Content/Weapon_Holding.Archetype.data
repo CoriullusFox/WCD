@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Weapon",
 	},
+	Archetyped = 
+	{
+		string Name = "5858639d4a7e270b:Weapon_Holding",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0.5, -0.5, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},

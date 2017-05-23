@@ -1,0 +1,41 @@
+/* ----------------------------------------------------------------------------
+** TEAM - We Couldn't Decide
+** © 2017 DigiPen Institute of Technology, All Rights Reserved.
+**
+** WeaponLerp
+**
+** Author:
+** - Hudson Green
+**
+** Contributors:
+** - none
+** --------------------------------------------------------------------------*/
+
+class WeaponLerp : ZilchComponent
+{
+    
+    var WeaponWorldPos : Real3 = Real3(0, 0, 0);
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        this.WeaponWorldPos = this.Owner.Transform.WorldTranslation;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        
+        
+        //this.Owner.Transform.WorldTranslation = this.WeaponWorldPos;
+        
+        //var playerWorldTranslation = this.Owner.Parent.Transform.WorldTranslation;
+        
+        //this.WeaponWorldPos = Math.Lerp(this.Owner.Transform.WorldTranslation, playerWorldTranslation, event.Dt * 75);
+        
+    }
+    
+}
