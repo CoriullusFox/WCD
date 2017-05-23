@@ -101,7 +101,7 @@ class Rifle : ZilchComponent
             {
                 
                 //kickback
-                this.Owner.Transform.Translation -= event.Direction * 0.015;
+                //this.Owner.Transform.Translation -= event.Direction * 0.015;
                 
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_LongLaser"));
                 

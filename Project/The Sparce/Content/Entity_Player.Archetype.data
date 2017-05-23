@@ -173,48 +173,6 @@ Cog =
 	},
 	Hierarchy = 
 	{
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
-				string Name = "Camera",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 0, 40],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Camera = 
-			{
-				ProjectionMode ProjectionMode = Orthographic,
-				Facing Facing = NegativeZ,
-				CameraTransparentSort TransparentSort = InheritFromSpace,
-				float FieldOfView = 45,
-				float NearPlane = 0.5,
-				float FarPlane = 200,
-				float Size = 10,
-			},
-			Microphone = 
-			{
-				bool Active = true,
-			},
-			CamShake = 
-			{
-				float Amount = 0,
-				bool StartAtZero = true,
-				bool Increace = false,
-				float Timer = 0,
-				bool StayAtCenterPos = false,
-			},
-			PlayerCam = 
-			{
-			},
-		},
 		ArchetypeInstance = 
 		{
 			string Name = "5858639d4a7e270b:Weapon_Holding",
@@ -237,7 +195,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -272,7 +230,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 4,
 			},
 			Named = 
 			{
@@ -307,7 +265,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -342,7 +300,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -378,7 +336,7 @@ Cog =
 			string Name = "58624a51b55ce44d:TeleEffect",
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 7,
 			},
 			Transform = 
 			{
@@ -396,7 +354,7 @@ Cog =
 			string Name = "598e658547820bb7:Blocker",
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 8,
 			},
 			Transform = 
 			{
@@ -407,6 +365,68 @@ Cog =
 			Named = 
 			{
 				string Name = "Blocker",
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 9,
+			},
+			Named = 
+			{
+				string Name = "CamMech",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.997063, -0.0195502, -4.3583e-008],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			PlayerCam = 
+			{
+			},
+			Hierarchy = 
+			{
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 10,
+					},
+					Named = 
+					{
+						string Name = "Camera",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0.997063, 0.0195502, 40],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Camera = 
+					{
+						ProjectionMode ProjectionMode = Orthographic,
+						Facing Facing = NegativeZ,
+						CameraTransparentSort TransparentSort = InheritFromSpace,
+						float FieldOfView = 45,
+						float NearPlane = 0.5,
+						float FarPlane = 200,
+						float Size = 10,
+					},
+					Microphone = 
+					{
+						bool Active = true,
+					},
+					CamShake = 
+					{
+						float Amount = 0,
+						bool StartAtZero = true,
+						bool Increace = false,
+						float Timer = 0,
+						bool StayAtCenterPos = true,
+					},
+				},
 			},
 		},
 	},

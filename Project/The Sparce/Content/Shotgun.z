@@ -99,7 +99,7 @@ class Shotgun : ZilchComponent
                     {
                         
                         //kickback
-                        this.Owner.Transform.Translation -= event.Direction * 0.02;
+                        //this.Owner.Transform.Translation -= event.Direction * 0.02;
                         
                         var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
                         if(this.Player)

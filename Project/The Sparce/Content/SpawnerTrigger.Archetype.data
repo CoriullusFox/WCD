@@ -6,11 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Trigger",
+		string Name = "Bullet",
+	},
+	Archetyped = 
+	{
+		string Name = "59bc4a5da93e58e1:SpawnerTrigger",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [14, -8.5, 0],
+		Vec3 Translation = [0.0731528, 7.59073, 0],
 		Vec3 Scale = [2.5, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -34,21 +38,6 @@ Cog =
 	},
 	SpawnTrigger = 
 	{
-		CogPath SpwanerToActivate = 
-		{
-			string Path = ":/Spawner2",
-			bool ErrorOnResolveToNull = false,
-			bool ErrorOnPathCantCompute = false,
-			bool ErrorOnDirectLinkFail = false,
-			bool UpdateCogOnPathChange = true,
-			bool UpdatePathOnCogChange = true,
-			bool UpdateCogOnInitialize = true,
-			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 2,
-			CogPathPreference PathPreference0 = CogRelative,
-			CogPathPreference PathPreference1 = SpaceRelative,
-			CogPathPreference PathPreference2 = Absolute,
-		},
 	},
 	BoxCollider = 
 	{

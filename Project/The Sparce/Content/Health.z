@@ -195,11 +195,6 @@ class Health : ZilchComponent
                 if(this.Enemy)
                 {
                     this.LevelSettings.EnemiesKilldstor.EnemiesKilled += 1;
-                    var toSend = ScreenShake();
-                    toSend.Intencity = 0.1;
-                    toSend.Timer = 0.1;
-                    toSend.FadeSpeed = 0.1;
-                    this.Space.DispatchEvent(Events.ScreenShake, toSend);
                 }
                 else
                 {
@@ -211,7 +206,11 @@ class Health : ZilchComponent
                     this.Space.DispatchEvent(Events.ScreenShake, toSend);
                     
                 }
-                
+                var toSend = ScreenShake();
+                toSend.Intencity = 0.1;
+                toSend.Timer = 0.1;
+                toSend.FadeSpeed = 0.1;
+                this.Space.DispatchEvent(Events.ScreenShake, toSend);
                 //This is temporary until we decide to make the enemies deaths perminent
                 
                 //this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
