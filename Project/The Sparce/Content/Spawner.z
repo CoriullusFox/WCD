@@ -7,11 +7,25 @@ class Spawner : ZilchComponent
     [Property]
     var Trigger : CogPath = null;
     
+    [Property]
+    var Invisable : Boolean = false;
+    
     var Spawn : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        var temp = this.Space.CreateAtPosition(this.Archtype, this.Owner.Transform.Translation);
+        if(!this.Invisable)
+        {
+            if(temp != null)
+            {
+                this.Owner.Sprite.SpriteSource = temp.Sprite.SpriteSource;
+                temp.Destroy();
+                
+            }
+            this.Owner.Sprite.Visible = true;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
