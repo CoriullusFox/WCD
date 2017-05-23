@@ -28,12 +28,12 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
+		string SpriteSource = "59a1a51de2f65931:Entity_PurplePig_South_Anim",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 3,
+		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
 	EnemyAI = 
@@ -65,14 +65,14 @@ Cog =
 	},
 	EnemyAnimations = 
 	{
-		string North = "58128ac7e63298e0:EnemyNorth_Anim",
-		string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-		string East = "58128986ce447b92:EnemyEast_Anim",
-		string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-		string South = "58128b1d3c322a60:EnemySouth_Anim",
-		string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-		string West = "58128bf533d431ee:EnemyWest_Anim",
-		string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
+		string North = "59a1a508e7feb670:Entity_PurplePig_North_Anim",
+		string NorthEast = "59a1a579ff1bdfe5:Entity_PurplePig_NE_Anim",
+		string East = "59a1a6d9eca404aa:Entity_PurplePig_East_Anim",
+		string SouthEast = "59a1a6fb136e2c06:Entity_PurplePig_SE_Anim",
+		string South = "59a1a51de2f65931:Entity_PurplePig_South_Anim",
+		string SouthWest = "59a1a6caee01ec9d:Entity_PurplePig_SW_Anim",
+		string West = "59a1a52cebde77ca:Entity_PurplePig_West_Anim",
+		string NorthWest = "59a1a6ea1531e649:Entity_PurplePig_NW_Anim",
 		float AnimationSpeed = 3,
 	},
 	Health = 
@@ -82,6 +82,7 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		bool Enemy = true,
+		bool Explode = true,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		string PermDeathSprite = "",
@@ -135,7 +136,6 @@ Cog =
 		float CooldownMax = 5,
 		bool Player = false,
 		float CamZoom = 25,
-		Vec4 WarnColor = [0, 0, 0, 0],
 	},
 	Hierarchy = 
 	{

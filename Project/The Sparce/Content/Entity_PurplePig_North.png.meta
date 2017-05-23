@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "Entity_PurplePig_North",
+		uint64 ResourceId = 59a1a438c03d21a2,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 64,
+		uint FrameSizeY = 20,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333,
+		float OriginX = 32,
+		float OriginY = 10,
+		float PixelsPerUnit = 16,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

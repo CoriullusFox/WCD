@@ -15,7 +15,7 @@ Cog =
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [4, 4, 1],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,12 +28,12 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "58128b1d3c322a60:EnemySouth_Anim",
+		string SpriteSource = "59a1943465d4f343:GreenPig_South",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 3,
+		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
 	EnemyAI = 
@@ -65,14 +65,14 @@ Cog =
 	},
 	EnemyAnimations = 
 	{
-		string North = "58128ac7e63298e0:EnemyNorth_Anim",
-		string NorthEast = "58128a2bf53c787f:EnemyNorthEast_Anim",
-		string East = "58128986ce447b92:EnemyEast_Anim",
-		string SouthEast = "58128b5d01cdf0b1:EnemySouthEast_Anim",
-		string South = "58128b1d3c322a60:EnemySouth_Anim",
-		string SouthWest = "58128b3907855f3b:EnemySouthWest_Anim",
-		string West = "58128bf533d431ee:EnemyWest_Anim",
-		string NorthWest = "58128a07ebe305c9:EnemyNorthWest_Anim",
+		string North = "59a1941f7a391d0c:GreenPig_North",
+		string NorthEast = "59a194f5408765c1:GreenPig_NE",
+		string East = "59a194487331eae6:GreenPig_East",
+		string SouthEast = "59a194a175d3918c:GreenPig_SE",
+		string South = "59a1943465d4f343:GreenPig_South",
+		string SouthWest = "59a1945c701ef0f0:GreenPig_SW",
+		string West = "59a194647e33f34a:GreenPig_West",
+		string NorthWest = "59a194964d92786a:GreenPig_NW",
 		float AnimationSpeed = 3,
 	},
 	Health = 

@@ -22,10 +22,10 @@ class Shotgun : ZilchComponent
     var NumberOfShots : Integer = 5;
     
     [Property]
-    var DamagePerBullet : Real = 2;
+    var DamagePerBullet : Real = 5;
     
     [Property]
-    var DistBetweenShots : Real = 0.25;
+    var DistBetweenShots : Real = 0.1;
     
     [Property]
     var EnergyUse : Real = 40;
@@ -46,7 +46,7 @@ class Shotgun : ZilchComponent
     var LifeLength : Real = 0.23;
     
     [Property]
-    var CamZoom : Real = 14;
+    var CamZoom : Real = 16;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.Shoot, this.OnShoot);

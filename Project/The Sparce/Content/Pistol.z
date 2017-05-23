@@ -28,7 +28,7 @@ class Pistol : ZilchComponent
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 0.25;
+    var CooldownMax : Real = 0.5;
     
     [Property]
     var Player : Boolean = false;
