@@ -38,7 +38,7 @@ class Teleporter : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         if(this.ExitOnly)
         {
-            this.Owner.Sprite.SpriteSource = SpriteSource.Animated_TeleporterOneWay;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Decor_Animated_TeleporterOneWay;
         }
     }
     
