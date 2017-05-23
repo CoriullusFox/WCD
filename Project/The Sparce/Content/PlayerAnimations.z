@@ -65,6 +65,10 @@ class PlayerAnimations : ZilchComponent
     
     var Frozen : Boolean = false;
     
+    var WeaponIdleAnimationFrame : Boolean = false;
+    
+    var WeaponIdleBounce : Real = 0.0;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.GameSession, Events.SelectedGun, this.WeaponChange);
@@ -208,9 +212,29 @@ class PlayerAnimations : ZilchComponent
                 }
                 else
                 {
+                    
+                    this.WeaponIdleBounce += event.Dt;
+                    
+                    if(this.WeaponIdleBounce > 0.5)
+                    {
+                        this.WeaponIdleAnimationFrame = !this.WeaponIdleAnimationFrame;
+                        this.WeaponIdleBounce = 0.0;
+                    }
+                    
                     this.Owner.Sprite.AnimationActive = false;
                     
-                    //this.Owner.Sprite.CurrentFrame = 4;
+                    var heldWeapon = this.Owner.FindChildByName("Weapon");
+                    var translation = heldWeapon.Transform.Translation;
+                    
+                    if(this.WeaponIdleAnimationFrame)
+                    {
+                        heldWeapon.Transform.Translation = Real3(0, 0.00, translation.Z);
+                    }
+                    else
+                    {
+                        heldWeapon.Transform.Translation = Real3(0, -0.02, translation.Z);
+                    }
+                    
                 }
             }
             

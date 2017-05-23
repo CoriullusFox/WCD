@@ -134,7 +134,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0501,
+			float Size = 44.3961,
 		},
 		EditorCameraController = 
 		{
@@ -1879,6 +1879,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -1937,6 +1938,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -1995,6 +1997,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2053,6 +2056,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2111,6 +2115,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2169,6 +2174,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2227,6 +2233,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2285,6 +2292,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2343,6 +2351,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2401,6 +2410,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2459,6 +2469,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2517,6 +2528,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2575,6 +2587,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2633,6 +2646,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2691,6 +2705,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2749,6 +2764,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2807,6 +2823,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2865,6 +2882,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2923,6 +2941,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -2981,6 +3000,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3039,6 +3059,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3097,6 +3118,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3155,6 +3177,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3213,6 +3236,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3271,6 +3295,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3329,6 +3354,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3387,6 +3413,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3445,6 +3472,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3503,6 +3531,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3561,6 +3590,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3619,6 +3649,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3677,6 +3708,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3735,6 +3767,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -3793,6 +3826,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	ArchetypeInstance = 
@@ -3884,7 +3918,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 15, 0],
-			Vec3 Scale = [4, 4, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -3923,6 +3957,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
