@@ -91,6 +91,10 @@ class Pistol : ZilchComponent
             
             if(this.Bullet != null)
             {
+                
+                //kickback
+                this.Owner.Transform.Translation -= event.Direction * 0.01;
+                
                 this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_PunyLaser"));
                 
                 var createdBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);

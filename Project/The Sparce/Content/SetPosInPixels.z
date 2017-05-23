@@ -22,6 +22,10 @@ class SetPositionInPixels : ZilchComponent
     var Alignment   : Integer   = 1;
     [Property]
     var FromTop     : Boolean   = false;
+    [Property]
+    var FromRight   : Boolean   = false;
+    [Property]
+    var Enabled     : Boolean   = true;
     
     
     var Offset : Real3
@@ -54,17 +58,24 @@ class SetPositionInPixels : ZilchComponent
         if(viewport == null) return;
         
         var screenSize = viewport.ViewportResolution;
-        screenSize.X = 0;
+        
+        if(!this.FromRight)
+        {
+            screenSize.X = 0;
+        }
         
         if(this.FromTop)
         {
             screenSize.Y = 0;
         }
         
-        var screen = viewport.ViewportToScreen(this.Viewport + screenSize);
-        var world = viewport.ScreenToWorldZPlane(screen, this.Owner.Transform.WorldTranslation.Z);
-        
-        this.Owner.Transform.WorldTranslation = world + this.Offset;
+        if(this.Enabled)
+        {
+            var screen = viewport.ViewportToScreen(this.Viewport + screenSize);
+            var world = viewport.ScreenToWorldZPlane(screen, this.Owner.Transform.WorldTranslation.Z);
+            
+            this.Owner.Transform.WorldTranslation = world + this.Offset;
+        }
     }
     
 }
