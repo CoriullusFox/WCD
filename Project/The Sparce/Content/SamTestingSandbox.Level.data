@@ -455,12 +455,15 @@ Level =
 			bool MiniHeathBar = true,
 			bool Player = false,
 			bool Enemy = true,
+			bool Explode = true,
 			Vec4 HurtColor = [1, 0, 0.000599861, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			string PermDeathSprite = "",
 			float RegenRate = 0.1,
 			float MaxHealth = 150,
 			float HurtDuration = 0.2,
 			float RegenCooldown = 1,
+			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 		},
 		RigidBody = 
 		{
@@ -818,28 +821,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
-		LinkId = 
-		{
-			uint Id = 17,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.86519, -25.9867, -0.200001],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5820e8f49dbffcb3:WeaponPickup",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -856,7 +841,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -909,7 +894,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -962,7 +947,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -1015,7 +1000,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -1069,12 +1054,30 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.31648, -25.5102, -0.0999985],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
+		LinkId = 
+		{
 			uint Id = 23,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.44739, -24.8954, -0.0999985],
-			Vec3 Scale = [4, 4, 1],
+			Vec3 Translation = [-4.953, -27.4961, -0.0999985],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
