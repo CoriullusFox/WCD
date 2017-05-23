@@ -10,7 +10,6 @@ class PlayerCam : ZilchComponent
         
         var newPos = this.Owner.Parent.Transform.Translation + this.Owner.Parent.ChangeDirectionToPointAtMouse.Direction / 6;
         newPos = Real3(newPos.X, newPos.Y, 50);
-        Console.WriteLine(newPos);
         this.Owner.Transform.WorldTranslation = Math.Lerp(this.Owner.Transform.WorldTranslation, newPos, event.Dt*4);
         
     }

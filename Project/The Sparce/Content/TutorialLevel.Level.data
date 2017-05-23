@@ -86,6 +86,7 @@ Level =
 		{
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
+			bool ReloadIfSameLevel = true,
 		},
 		EnemiesKilldstor = 
 		{
@@ -101,6 +102,7 @@ Level =
 		MusicScr_Stage = 
 		{
 			string MusicToPlay = "59b56c4216ad54fa:NewStage",
+			bool RestartIfSameTrack = false,
 		},
 		GameStateManager = 
 		{
@@ -122,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.77574, -12.5396, 50],
+			Vec3 Translation = [-4.71918, -14.7502, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -134,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.3651,
+			float Size = 15.3121,
 		},
 		EditorCameraController = 
 		{
@@ -142,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [5.77574, -12.5396, 2.52465e-007],
+			Vec3 LookTarget = [-4.71918, -14.7502, -2.06283e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -992,7 +994,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1044,7 +1046,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1078,7 +1080,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1112,7 +1114,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1146,7 +1148,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1180,7 +1182,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1214,7 +1216,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1248,7 +1250,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1301,12 +1303,15 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool Explode = true,
 			Vec4 HurtColor = [1, 0, 0, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			string PermDeathSprite = "",
 			float RegenRate = 0,
 			float MaxHealth = 1,
 			float HurtDuration = 0,
 			float RegenCooldown = 1,
+			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 		},
 		BoxCollider = 
 		{
@@ -1341,7 +1346,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1394,12 +1399,15 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool Explode = true,
 			Vec4 HurtColor = [1, 0, 0, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			string PermDeathSprite = "",
 			float RegenRate = 0,
 			float MaxHealth = 1,
 			float HurtDuration = 0,
 			float RegenCooldown = 1,
+			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 		},
 		BoxCollider = 
 		{
@@ -1453,12 +1461,15 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool Explode = true,
 			Vec4 HurtColor = [1, 0, 0, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			string PermDeathSprite = "",
 			float RegenRate = 0,
 			float MaxHealth = 1,
 			float HurtDuration = 0,
 			float RegenCooldown = 1,
+			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 		},
 		BoxCollider = 
 		{
@@ -1512,12 +1523,15 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool Explode = true,
 			Vec4 HurtColor = [1, 0, 0, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			string PermDeathSprite = "",
 			float RegenRate = 0,
 			float MaxHealth = 1,
 			float HurtDuration = 0,
 			float RegenCooldown = 1,
+			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 		},
 		BoxCollider = 
 		{
@@ -1571,12 +1585,15 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool Explode = true,
 			Vec4 HurtColor = [1, 0, 0, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
+			string PermDeathSprite = "",
 			float RegenRate = 0,
 			float MaxHealth = 1,
 			float HurtDuration = 0,
 			float RegenCooldown = 1,
+			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
 		},
 		BoxCollider = 
 		{
@@ -1611,7 +1628,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1645,7 +1662,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1679,7 +1696,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1747,6 +1764,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -1801,6 +1819,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
@@ -1873,7 +1892,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1907,7 +1926,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1941,7 +1960,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1975,7 +1994,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2009,7 +2028,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2097,7 +2116,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2131,7 +2150,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2165,7 +2184,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2199,7 +2218,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2306,7 +2325,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.5, -21.5, 0],
+			Vec3 Translation = [-6.5, -11.5, 0],
 			Vec3 Scale = [3, 3, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2350,60 +2369,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Spawner3",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10, -11.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = false,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Spawner = 
-		{
-			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
-			CogPath Trigger = 
-			{
-				string Path = ":/Trigger2",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 56,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 57,
-		},
-		Named = 
-		{
 			string Name = "Teleporter",
 		},
 		Transform = 
@@ -2418,7 +2383,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2434,61 +2399,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 58,
-		},
-		Named = 
-		{
-			string Name = "Spawner5",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-12, -11.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = false,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Spawner = 
-		{
-			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
-			CogPath Trigger = 
-			{
-				string Path = ":/Trigger2",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 56,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 59,
+			uint Id = 56,
 		},
 		Named = 
 		{
@@ -2496,7 +2407,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12, -10.5, 0],
+			Vec3 Translation = [-19.5, -11, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2531,72 +2442,19 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 56,
+				uint ResolvedCog = 57,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+			bool Invisable = false,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 60,
-		},
-		Named = 
-		{
-			string Name = "Spawner4",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-12, -12.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = false,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Spawner = 
-		{
-			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
-			CogPath Trigger = 
-			{
-				string Path = ":/Trigger2",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 56,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 56,
+			uint Id = 57,
 		},
 		Named = 
 		{
@@ -2604,7 +2462,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.5, -21.5, 0],
+			Vec3 Translation = [-6.5, -11.5, 0],
 			Vec3 Scale = [3, 3, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2644,7 +2502,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 58,
 		},
 		Named = 
 		{
@@ -2662,7 +2520,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.79, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
