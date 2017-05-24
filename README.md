@@ -11,7 +11,7 @@ https://WCD.GitHub.io/
 
  &nbsp; <b>Art Director</b>                             - *ReallyNotSam* (The 10th Doctor)
           
- &nbsp; <b>Design Director</b>                          - *Sagedupuy* (Sage Plant)
+ &nbsp; <b>Design Director (Suspended)</b>                          - *Sagedupuy* (Sage Plant)
           
  &nbsp; <b>Tech Director/Tester</b>                     - *iMajesticButter* (Techno man of amazingness!) 
 
