@@ -25,7 +25,7 @@ class TeslaGun : ZilchComponent
     var Energy : Real = 100;
     
     [Property]
-    var CooldownMax : Real = 1;
+    var CooldownMax : Real = 5;
     
     [Property]
     var Player : Boolean = false;

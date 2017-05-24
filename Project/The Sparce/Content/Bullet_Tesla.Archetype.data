@@ -79,7 +79,7 @@ Cog =
 	},
 	Despawn = 
 	{
-		float LifeLength = 1,
+		float LifeLength = 2,
 		bool Explode = false,
 		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},

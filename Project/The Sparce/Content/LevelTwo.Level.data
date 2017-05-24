@@ -119,9 +119,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.81079, 27.4211, 45.1502],
+			Vec3 Translation = [-7.29765, -16.7174, 48.3321],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.15671, -0.0852122, -0.0135725, 0.983868],
+			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
 		Camera = 
 		{
@@ -131,15 +131,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0502,
+			float Size = 29.7599,
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = Orbit,
+			ControlMode ControlMode = ZPlane,
 			float LookDistance = 50,
-			float VerticalAngle = 0.315905,
-			float HorizontalAngle = 0.172788,
-			Vec3 LookTarget = [0.360278, 11.8873, -1.66785],
+			float VerticalAngle = 0,
+			float HorizontalAngle = 0,
+			Vec3 LookTarget = [-7.29765, -16.7174, -1.66785],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -308,7 +308,7 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "",
+			string SourceName = "59ab577e2b2e9e8d:LevelTwo_TileMap02",
 			string PaletteName = "584fd7da8bf9792b:TileDecor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.2,
@@ -330,7 +330,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-24, -8, 0.5],
+			Vec3 Translation = [-24.5, -8, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -466,7 +466,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-28, -12.5, 0.5],
+			Vec3 Translation = [-27.5, -13, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -643,7 +643,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-28, -15.5, 0.5],
+			Vec3 Translation = [-28, -15, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -738,7 +738,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-32.5, -5.5, 0.5],
+			Vec3 Translation = [-34.5, -5.5, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1748,7 +1748,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-26, -5.5, 0.5],
+			Vec3 Translation = [-27.5, -4.5, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1772,7 +1772,7 @@ Level =
 		},
 		Spawner = 
 		{
-			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -1986,7 +1986,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-27.5, -21, 0],
+			Vec3 Translation = [-28.5, -16.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2010,7 +2010,7 @@ Level =
 		},
 		StatsPickup = 
 		{
-			int ChangeAmount = 50,
+			int ChangeAmount = 75,
 			Enum Stat = Health,
 		},
 		BoxCollider = 
@@ -2040,7 +2040,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20, -14, 0],
+			Vec3 Translation = [-1.5, -29.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2080,7 +2080,7 @@ Level =
 		{
 			CogPath DoorToUnlock = 
 			{
-				string Path = ":/Animated_HorDoor3",
+				string Path = ":/Animated_VertDoor2",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -2088,7 +2088,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 31,
+				uint ResolvedCog = 27,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2172,7 +2172,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5, -10, 0.5],
+			Vec3 Translation = [-5, -9, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2231,7 +2231,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.5, -14.5, 0.5],
+			Vec3 Translation = [-0.5, -14, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2408,7 +2408,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.5, -13, 0.5],
+			Vec3 Translation = [-5, -12.5, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2467,7 +2467,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.5, -12, 0.5],
+			Vec3 Translation = [2, -11, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2721,7 +2721,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.5, -33, 0.5],
+			Vec3 Translation = [6, -34, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2780,7 +2780,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2, -22, 0.5],
+			Vec3 Translation = [-1.5, -22, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2957,7 +2957,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.5, -25, 0.5],
+			Vec3 Translation = [5.5, -24.5, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3016,7 +3016,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3, -31, 0],
+			Vec3 Translation = [-21.5, -12.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3056,7 +3056,7 @@ Level =
 		{
 			CogPath DoorToUnlock = 
 			{
-				string Path = ":/Animated_VertDoor",
+				string Path = ":/Animated_HorDoor3",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -3064,7 +3064,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 27,
+				uint ResolvedCog = 31,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3376,7 +3376,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.2, 11.5, 0.1],
+			Vec3 Translation = [0.25, 10.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3494,7 +3494,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.5, 16.5, 0.1],
+			Vec3 Translation = [-9.5, 19.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3553,7 +3553,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 18.2, 0.1],
+			Vec3 Translation = [-0.5, 17, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4523,7 +4523,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5, 12.5, 0],
+			Vec3 Translation = [-9.5, 7.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4619,7 +4619,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [8.5, 13.5, 0],
+			Vec3 Translation = [5.5, 13.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4942,6 +4942,124 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			CogPath Trigger = 
+			{
+				string Path = ":/Trigger6",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 64,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool Invisable = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 99,
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+		Archetyped = 
+		{
+			string Name = "59bc440368aff47b:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.5, 12.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Spawner = 
+		{
+			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			CogPath Trigger = 
+			{
+				string Path = ":/Trigger6",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 64,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool Invisable = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 100,
+		},
+		Named = 
+		{
+			string Name = "Enemy",
+		},
+		Archetyped = 
+		{
+			string Name = "59bc440368aff47b:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5, 11, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Spawner = 
+		{
+			string Archtype = "585fac7a31d9f76a:Entity_Enemy_Shield",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
