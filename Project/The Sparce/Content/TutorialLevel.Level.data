@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21.3861, -0.879766, 50],
+			Vec3 Translation = [17.6821, -2.16951, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 15.3121,
+			float Size = 9.28723,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [21.3861, -0.879766, 9.34815e-007],
+			Vec3 LookTarget = [17.6821, -2.16951, 9.34815e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -892,7 +892,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.5, 5.5, 0],
+			Vec3 Translation = [15.75, -2.25, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -984,7 +984,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 2, 1],
+			Vec3 Translation = [0, 3, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -998,9 +998,9 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "W,A,S,D to move",
+			string Text = "Use the                   keys to move",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -1032,6 +1032,40 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "WASDkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.5, 3, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "W, A, S, & D",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Named = 
+		{
 			string Name = "Intro",
 		},
 		Transform = 
@@ -1050,7 +1084,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
 			string Text = "Hello and welcome to your quick",
 			TextAlign Align = Center,
@@ -1062,7 +1096,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 25,
 		},
 		Named = 
 		{
@@ -1084,7 +1118,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
 			string Text = "refresher on how to be a",
 			TextAlign Align = Center,
@@ -1096,7 +1130,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 26,
 		},
 		Named = 
 		{
@@ -1118,43 +1152,9 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
 			string Text = "space marine",
-			TextAlign Align = Center,
-			float PixelsPerUnit = 400,
-			bool Smoothing = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 26,
-		},
-		Named = 
-		{
-			string Name = "ShootingIntro",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [16, 7.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
-			uint FontSize = 150,
-			string Text = "Pick this up, it will give you a gun!",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -1168,11 +1168,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "V",
+			string Name = "ShootingIntro",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.5, 7, 1],
+			Vec3 Translation = [13.5, 1.25, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1186,10 +1186,10 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "V",
-			TextAlign Align = Center,
+			string Text = "These are weapons. They",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
 		},
@@ -1206,7 +1206,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.5, 6.5, 1],
+			Vec3 Translation = [15.75, -1.25, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1220,7 +1220,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
 			string Text = "V",
 			TextAlign Align = Center,
@@ -1240,7 +1240,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21.5, 6, 1],
+			Vec3 Translation = [13.5, -3.25, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1254,10 +1254,10 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "Once you have a gun, shoot the crates!",
-			TextAlign Align = Center,
+			string Text = "Once you have a gun, shoot the crates on",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
 		},
@@ -1274,7 +1274,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [21.5, 5.5, 1],
+			Vec3 Translation = [13.5, -3.75, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1288,10 +1288,10 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "(click or space bar to shoot)",
-			TextAlign Align = Center,
+			string Text = "the right. (               or press            to shoot)",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
 		},
@@ -1898,7 +1898,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 1.5, 1],
+			Vec3 Translation = [0, 2.5, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1912,9 +1912,9 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "SHIFT to sprint",
+			string Text = "Try walking and holding the           key to sprint",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -2550,6 +2550,584 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 59,
+		},
+		Named = 
+		{
+			string Name = "SHIFTkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.75, 2.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "SHIFT",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Named = 
+		{
+			string Name = "DoorTip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.25, 1.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "This is a ",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 61,
+		},
+		Named = 
+		{
+			string Name = "LOCKED_DOORkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.75, 1.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Locked",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 62,
+		},
+		Named = 
+		{
+			string Name = "LOCKED_DOORkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.25, 1.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Door",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 63,
+		},
+		Named = 
+		{
+			string Name = "DoorTip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4, 1.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = ". You can tell",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 64,
+		},
+		Named = 
+		{
+			string Name = "DoorTip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.25, 0.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Because it is red.",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 65,
+		},
+		Named = 
+		{
+			string Name = "DoorTip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.25, 0.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "An unlocked door",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 66,
+		},
+		Named = 
+		{
+			string Name = "DoorTip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.25, -0.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "will be blue. Try",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 67,
+		},
+		Named = 
+		{
+			string Name = "DoorTip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.25, -0.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "sprinting to unlock",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 68,
+		},
+		Named = 
+		{
+			string Name = "DoorTip",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.25, -1.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "it.",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 69,
+		},
+		Named = 
+		{
+			string Name = "V",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.75, -0.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "V",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 70,
+		},
+		Named = 
+		{
+			string Name = "ShootingIntro",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5, 0.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "can be found on different",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 71,
+		},
+		Named = 
+		{
+			string Name = "ShootingIntro",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5, 0.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "levels. This particular weapon",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 72,
+		},
+		Named = 
+		{
+			string Name = "ShootingIntro",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5, -0.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "is a         . Try picking it up.",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 73,
+		},
+		Named = 
+		{
+			string Name = "PISTOLkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14.25, -0.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Pistol",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 74,
+		},
+		Named = 
+		{
+			string Name = "LCLICKkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.25, -3.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Left Click",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 75,
+		},
+		Named = 
+		{
+			string Name = "SPACEkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.5, -3.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "SPACE",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
 		},
 	},
 },
