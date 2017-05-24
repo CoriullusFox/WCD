@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.6821, -2.16951, 50],
+			Vec3 Translation = [17.6821, -12.3363, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.28723,
+			float Size = 7.60375,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [17.6821, -2.16951, 9.34815e-007],
+			Vec3 LookTarget = [17.6821, -12.3363, 9.34815e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -825,7 +825,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [19.5, -15.5, 0],
+			Vec3 Translation = [19.5, -15, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1308,7 +1308,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.5, -12.5, 1],
+			Vec3 Translation = [13.75, -13, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1322,10 +1322,10 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5820efc589857afa:TheSparceFont",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "Pick this up to unlock the cell door",
-			TextAlign Align = Center,
+			string Text = "Pick up the               to unlock the cell door",
+			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
 		},
@@ -1356,7 +1356,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
 			string Text = "V",
 			TextAlign Align = Center,
@@ -1390,7 +1390,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
 			string Text = "V",
 			TextAlign Align = Center,
@@ -3125,6 +3125,40 @@ Level =
 			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
 			string Text = "SPACE",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 76,
+		},
+		Named = 
+		{
+			string Name = "KEYCARDkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.75, -13, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Keycard",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
