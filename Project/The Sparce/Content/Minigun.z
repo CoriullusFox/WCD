@@ -103,7 +103,7 @@ class Minigun : ZilchComponent
                 {
                     
                     var toSend = ScreenShake();
-                    toSend.Intencity = 0.005;
+                    toSend.Intencity = 0.05;
                     toSend.Timer = 0.1;
                     toSend.FadeSpeed = 0.1;
                     this.Space.DispatchEvent(Events.ScreenShake, toSend);
