@@ -23,11 +23,11 @@ class DebugMode : ZilchComponent
     
     var DebugText : Archetype = Archetype.DebugModeText;
     
-    var GPressedGlobal : Boolean = false;
+    /*var GPressedGlobal : Boolean = false;
     
     var InfHealth : Boolean = false;
     
-    var InfEnergy : Boolean = false;
+    var InfEnergy : Boolean = false;*/
     
     function Initialize(init : CogInitializer)
     {
@@ -36,7 +36,7 @@ class DebugMode : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var player = this.Space.FindObjectByName("TempPlayer");
+        //var player = this.Space.FindObjectByName("TempPlayer");
         
         if(this.DubugModeEnabled)
         {
@@ -62,10 +62,11 @@ class DebugMode : ZilchComponent
             if(Zero.Keyboard.KeyIsPressed(Keys.Period))
             {
                 this.DubugModeEnabled = false;
-                player.Health.ConfiguredHealth = 0.0;
+                this.Space.FindObjectByName("TempPlayer").Health.ConfiguredHealth = 0.0;
+                //player.Health.ConfiguredHealth = 0.0;
             }
             
-            if(Zero.Keyboard.KeyIsDown(Keys.Control))
+            /*if(Zero.Keyboard.KeyIsDown(Keys.Control))
             {
                 player.Transform.Translation = Real3(player.Transform.Translation.X,
                                                     player.Transform.Translation.Y,
@@ -106,7 +107,7 @@ class DebugMode : ZilchComponent
             if(this.InfEnergy)
             {
                 player.EnergyStor.Energy = player.EnergyStor.MaxEnergy;
-            }
+            }*/
         }
         
         if(Zero.Keyboard.KeyIsPressed(Keys.F3))
