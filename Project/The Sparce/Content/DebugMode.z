@@ -36,7 +36,7 @@ class DebugMode : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        //var player = this.Space.FindObjectByName("TempPlayer");
+        var player = this.Space.FindObjectByName("TempPlayer");
         
         if(this.DubugModeEnabled)
         {
@@ -63,10 +63,10 @@ class DebugMode : ZilchComponent
             {
                 this.DubugModeEnabled = false;
                 this.Space.FindObjectByName("TempPlayer").Health.ConfiguredHealth = 0.0;
-                //player.Health.ConfiguredHealth = 0.0;
+                player.Health.ConfiguredHealth = 0.0;
             }
             
-            /*if(Zero.Keyboard.KeyIsDown(Keys.Control))
+            if(Zero.Keyboard.KeyIsDown(Keys.Control))
             {
                 player.Transform.Translation = Real3(player.Transform.Translation.X,
                                                     player.Transform.Translation.Y,
@@ -78,36 +78,6 @@ class DebugMode : ZilchComponent
                                                     player.Transform.Translation.Y,
                                                     0.0);
             }
-            
-            if(Zero.Keyboard.KeyIsDown(Keys.G) && Zero.Keyboard.KeyIsDown(Keys.M))
-            {
-                while(this.Space.FindObjectByName("Enemy").Health.ConfiguredHealth != 1.0)
-                {
-                    this.Space.FindObjectByName("Enemy").Health.ConfiguredHealth = 1.0;
-                    
-                    this.Space.FindObjectByName("Enemy").FindNextInOrder();
-                }
-            }
-            
-            if(Zero.Keyboard.KeyIsDown(Keys.Alt) && Zero.Keyboard.KeyIsDown(Keys.One))
-            {
-                this.InfHealth = !this.InfHealth;
-            }
-            
-            if(this.InfHealth)
-            {
-                player.Health.ConfiguredHealth = player.Health.MaxHealth;
-            }
-            
-            if(Zero.Keyboard.KeyIsDown(Keys.Alt) && Zero.Keyboard.KeyIsDown(Keys.Two))
-            {
-                this.InfEnergy = !this.InfEnergy;
-            }
-            
-            if(this.InfEnergy)
-            {
-                player.EnergyStor.Energy = player.EnergyStor.MaxEnergy;
-            }*/
         }
         
         if(Zero.Keyboard.KeyIsPressed(Keys.F3))

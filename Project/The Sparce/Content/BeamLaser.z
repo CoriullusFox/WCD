@@ -19,7 +19,7 @@ class BeamLaser : ZilchComponent
     var Bullet : Archetype = Archetype.Bullet_Beam;
     
     [Property]
-    var DPS : Real = 20;
+    var DPS : Real = 10;
     
     [Property]
     var EnergyUse : Real = 25;
