@@ -23,11 +23,11 @@ class DebugMode : ZilchComponent
     
     var DebugText : Archetype = Archetype.DebugModeText;
     
-    var GPressedGlobal : Boolean = false;
+    /*var GPressedGlobal : Boolean = false;
     
     var InfHealth : Boolean = false;
     
-    var InfEnergy : Boolean = false;
+    var InfEnergy : Boolean = false;*/
     
     function Initialize(init : CogInitializer)
     {
@@ -78,7 +78,11 @@ class DebugMode : ZilchComponent
                                                     player.Transform.Translation.Y,
                                                     0.0);
             }
-
+            
+            if(Zero.Keyboard.KeyIsDown(Keys.Alt) && Zero.Keyboard.KeyIsDown(Keys.One))
+            {
+                player.Health.ConfiguredHealth = player.Health.MaxHealth;
+            }
         }
         
         if(Zero.Keyboard.KeyIsPressed(Keys.F3))
