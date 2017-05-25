@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-21.5, -21, 0],
+		Vec3 Translation = [5.5, 13.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	StatsPickup = 
 	{
-		int ChangeAmount = 25,
+		int ChangeAmount = 100,
 		Enum Stat = Health,
 	},
 	BoxCollider = 

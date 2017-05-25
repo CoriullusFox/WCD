@@ -5,6 +5,9 @@ class Spawner : ZilchComponent
     var Archtype : Archetype = Archetype.Entity_Enemy_Default;
     
     [Property]
+    var SpawnEffect : Archetype = Archetype.TeleEffect;
+    
+    [Property]
     var Trigger : CogPath = null;
     
     [Property]
@@ -34,6 +37,7 @@ class Spawner : ZilchComponent
         
         if(this.Spawn)
         {
+            this.Space.CreateAtPosition(this.SpawnEffect, this.Owner.Transform.Translation);
             this.Space.CreateAtPosition(this.Archtype, this.Owner.Transform.Translation);
             this.Trigger.Cog.Destroy();
             this.Owner.Destroy();

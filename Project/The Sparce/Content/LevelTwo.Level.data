@@ -119,7 +119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.29765, -16.7174, 48.3321],
+			Vec3 Translation = [-1.47247, -23.7961, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7599,
+			float Size = 24.6597,
 		},
 		EditorCameraController = 
 		{
@@ -139,7 +139,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-7.29765, -16.7174, -1.66785],
+			Vec3 LookTarget = [-1.47247, -23.7961, -7.32589e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -355,6 +355,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -414,6 +415,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -491,6 +493,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -550,6 +553,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -609,6 +613,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -668,6 +673,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -763,6 +769,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac8c02e09c2f:Entity_Enemy_Teleport",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -1287,12 +1294,19 @@ Level =
 			Vec3 Size = [0.15, 1.5, 0.5],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "585123684cf5d900:VertDoor",
 		LinkId = 
 		{
 			uint Id = 27,
+		},
+		Named = 
+		{
+			string Name = "Animated_VertDoor2",
+		},
+		Archetyped = 
+		{
+			string Name = "585123684cf5d900:VertDoor",
 		},
 		Transform = 
 		{
@@ -1300,9 +1314,45 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Animated_VertDoor2",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Doorscript = 
+		{
+			string DoorOpening = "58527020886df5af:Animated_VertDoor_Unlocked_Opening",
+			string DoorClosing = "5852701e8e9813d9:Animated_VertDoor_Unlocked_Closing",
+			float DoorAnimationSpeed = 120,
+			bool Locked = true,
+			string Condition = "Key",
+			int EnemyDeathUnlockNumber = 0,
+			float RequiredEnemiesKilled = 0,
+			string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
+			bool Vert = true,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.15, 1.5, 0.5],
 		},
 	},
 	Cog = 
@@ -1773,6 +1823,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -1832,6 +1883,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -1970,19 +2022,12 @@ Level =
 			bool ExitOnly = false,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "586101df0958c576:Pickup_Health",
 		LinkId = 
 		{
 			uint Id = 39,
-		},
-		Named = 
-		{
-			string Name = "Medkit",
-		},
-		Archetyped = 
-		{
-			string Name = "586101df0958c576:Pickup_Health",
 		},
 		Transform = 
 		{
@@ -1990,38 +2035,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
-			uint StartFrame = 0,
-		},
-		StatsPickup = 
-		{
-			int ChangeAmount = 75,
-			Enum Stat = Health,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, -0.25, 0],
-			Vec3 Size = [0.2, 0.25, 0.5],
+			string Name = "Medkit",
 		},
 	},
 	Cog = 
@@ -2197,6 +2213,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac8c02e09c2f:Entity_Enemy_Teleport",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2256,6 +2273,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2315,6 +2333,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2374,6 +2393,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2433,6 +2453,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2492,6 +2513,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2569,6 +2591,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger5",
@@ -2628,6 +2651,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac7a31d9f76a:Entity_Enemy_Shield",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2687,6 +2711,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger4",
@@ -2746,6 +2771,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac1532f16dbc:Entity_Enemy_Sniper",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger5",
@@ -2805,6 +2831,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger5",
@@ -2864,6 +2891,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger5",
@@ -2923,6 +2951,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger5",
@@ -2982,6 +3011,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger5",
@@ -3130,7 +3160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [22.5, -11, 0],
+			Vec3 Translation = [20.5, -11.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3226,7 +3256,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.5, -23, 0],
+			Vec3 Translation = [28, -29, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3250,7 +3280,7 @@ Level =
 		},
 		StatsPickup = 
 		{
-			int ChangeAmount = 50,
+			int ChangeAmount = 100,
 			Enum Stat = Health,
 		},
 		BoxCollider = 
@@ -3401,6 +3431,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3460,6 +3491,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3519,6 +3551,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3578,6 +3611,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3637,6 +3671,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3696,6 +3731,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3755,6 +3791,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3814,6 +3851,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac1532f16dbc:Entity_Enemy_Sniper",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3873,6 +3911,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac7a31d9f76a:Entity_Enemy_Shield",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -3932,6 +3971,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger8",
@@ -3991,6 +4031,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac8c02e09c2f:Entity_Enemy_Teleport",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger8",
@@ -4050,6 +4091,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac8c02e09c2f:Entity_Enemy_Teleport",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger8",
@@ -4109,6 +4151,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "598dd87f3fdf9032:TeleEffect2",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger7",
@@ -4168,6 +4211,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger8",
@@ -4227,6 +4271,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger8",
@@ -4261,7 +4306,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [8.5, -1.5, 0],
+			Vec3 Translation = [8.5, -2.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4353,6 +4398,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -4412,6 +4458,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -4489,6 +4536,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "59a1686aac91aa8b:Entity_Enemy_Miniboss2",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -4698,6 +4746,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger7",
@@ -4757,6 +4806,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger7",
@@ -4775,137 +4825,11 @@ Level =
 			bool Invisable = false,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "59a185adc3637b54:BigCrate",
-		LinkId = 
-		{
-			uint Id = 91,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [21, -19, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59a185adc3637b54:BigCrate",
-		LinkId = 
-		{
-			uint Id = 92,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [19, -19.5, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59a185adc3637b54:BigCrate",
-		LinkId = 
-		{
-			uint Id = 93,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [21, -21, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59a182ea4095a6db:Crate",
-		LinkId = 
-		{
-			uint Id = 94,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [19.5, -21, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59a182ea4095a6db:Crate",
-		LinkId = 
-		{
-			uint Id = 95,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [22.5, -19.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59a182ea4095a6db:Crate",
-		LinkId = 
-		{
-			uint Id = 96,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [17.5, -19.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59a182ea4095a6db:Crate",
-		LinkId = 
-		{
-			uint Id = 97,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [22.5, -20.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 91,
 		},
 		Named = 
 		{
@@ -4942,6 +4866,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -4964,7 +4889,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 99,
+			uint Id = 92,
 		},
 		Named = 
 		{
@@ -5001,6 +4926,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -5023,7 +4949,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 93,
 		},
 		Named = 
 		{
@@ -5060,6 +4986,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac7a31d9f76a:Entity_Enemy_Shield",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger6",
@@ -5076,6 +5003,1901 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			bool Invisable = false,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 94,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-34.5, -8.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a1811e51262208:CrateDes1",
+		LinkId = 
+		{
+			uint Id = 95,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-20.5, -12.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 96,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-21.5, 1.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 97,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.5, -29.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 98,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.75, -23.75, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 99,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.5, -21.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 100,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.5, -6.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 101,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [22.5, -6.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 102,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.5, -5.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 103,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.5, 11.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 104,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.5, 10.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 105,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.5, 11.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 106,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.25, -1.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 107,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.25, -1.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 108,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.5, -0.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 109,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.5, -14.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 110,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.5, -13.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 111,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [7.5, -14.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 112,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.5, 12.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 113,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.5, 12.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 114,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.5, 20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 115,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.5, 20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 116,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.5, 20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a18105500a1791:CrateDes2",
+		LinkId = 
+		{
+			uint Id = 117,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.5, 19.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a18555c2bd3a02:BigCrate1",
+		LinkId = 
+		{
+			uint Id = 118,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.5, 12.25, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a1811e51262208:CrateDes1",
+		LinkId = 
+		{
+			uint Id = 119,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17, 13.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 120,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16, 12.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a18105500a1791:CrateDes2",
+		LinkId = 
+		{
+			uint Id = 121,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17, 10.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 122,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Archetyped = 
+		{
+			string Name = "59a181035738ebf3:CrateDes3",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.75, 13.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 123,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.25, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "59a1815465effb69:Crate003",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 124,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26.5, -32.75, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 125,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [28.5, -31.5, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 126,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [25.25, -19, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 127,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29.25, -19.5, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 128,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [28.25, -21.5, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 129,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.25, -27, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 130,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.25, -28, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 131,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [19.25, -26.25, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 132,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.25, -26, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 133,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.25, -19.5, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 134,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26.5, -30.75, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 135,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.25, -19, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 136,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.75, -18, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 137,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26.75, -18, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 138,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26.75, -21, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 139,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [25.75, -20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 140,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18, -20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 141,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [28.75, -18, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 142,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.75, -19.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 143,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17, -20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 144,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.75, -19, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 145,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.25, -17.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 146,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.25, -17.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 147,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.75, -18.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 148,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [28.25, -17, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 149,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29.75, -21, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 150,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [30.75, -20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 151,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.75, -27.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 152,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.75, -24.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 153,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.75, -24.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 154,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.75, -25.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 155,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.75, -28.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 156,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5, -36.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 157,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [19.75, -27.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 158,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.5, -36.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 159,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [16.75, -29.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 160,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [25, -30.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 161,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [25, -31.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 162,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24, -31.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 163,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [25, -32.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 164,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24, -32.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 165,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [28, -30, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 166,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27, -29.25, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 167,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26, -29.25, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 168,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [25, -29.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 169,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [28, -33, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 170,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [30, -31.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 171,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [30, -30.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 172,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29, -30, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 173,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14, -36, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 174,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14, -34, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 175,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5, -34.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 176,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5, -35.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 177,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [18.75, -28.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 178,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5, -32.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 179,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.5, -36.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 180,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [36, -36, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 181,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [33.5, -36.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 182,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.5, -35.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 183,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [36.5, -34.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 184,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5, -14.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 185,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14.5, -14.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 186,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.5, -23, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 100,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 187,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29.75, -22, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 100,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 188,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5, -33.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 100,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 189,
+		},
+		Named = 
+		{
+			string Name = "Medkit",
+		},
+		Archetyped = 
+		{
+			string Name = "586101df0958c576:Pickup_Health",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [23.5, -1.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		StatsPickup = 
+		{
+			int ChangeAmount = 100,
+			Enum Stat = Health,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, -0.25, 0],
+			Vec3 Size = [0.2, 0.25, 0.5],
 		},
 	},
 },
