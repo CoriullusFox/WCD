@@ -84,6 +84,17 @@ class Grid : ZilchComponent
                 var walkable : Boolean = this.Space.PhysicsSpace.CastSphereResults(worldPoint + Real3(0,0,0.5), this.NodeRadius-0.3, 1, filter).Empty();
                 var closeToWall : Boolean = !this.Space.PhysicsSpace.CastSphereResults(worldPoint + Real3(0,0,0.5), this.NodeDiameter, 1, filter).Empty();
                 this.Grid[i][l] = (new Node(walkable, worldPoint, i, l, closeToWall));
+                // -----TEMP DEBUG-----
+                //var debugS = this.Space.CreateAtPosition(Archetype.MissingTexture, worldPoint);
+                //if(debugS != null)
+                //{
+                //    
+                //    if(closeToWall)
+                //        debugS.Sprite.Color = Real4(1,1,0,0.5);
+                //    if(!walkable)
+                //        debugS.Sprite.Color = Real4(1,0,0,0.5);
+                //    
+                //}
             }
         }
     }
