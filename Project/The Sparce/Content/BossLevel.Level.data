@@ -107,6 +107,7 @@ Level =
 		{
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
+			bool ReloadIfSameLevel = true,
 		},
 		GameStateManager = 
 		{
@@ -129,6 +130,7 @@ Level =
 		MusicScr_Stage = 
 		{
 			string MusicToPlay = "59b55f6042f514d6:Boss",
+			bool RestartIfSameTrack = false,
 		},
 	},
 	Cog = 
@@ -143,7 +145,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.257176, -0.277553, 37.2595],
+			Vec3 Translation = [-0.587116, -22.9374, 37.2595],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -155,7 +157,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.0464,
+			float Size = 26.9276,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +165,7 @@ Level =
 			float LookDistance = 37.0411,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.257176, -0.277553, 0.218412],
+			Vec3 LookTarget = [-0.587116, -22.9374, 0.218412],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -191,7 +193,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -14.5, 0],
+			Vec3 Translation = [0, -25.75, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -306,7 +308,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.634982, -0.451925, 0.21841],
+			Vec3 Translation = [0, 0, 0.25],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
