@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [9.0345, 2.23498, 3.57947],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -66,15 +66,15 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = false,
-		bool MinigunUnlocked = false,
-		bool BeamLaserUnlocked = false,
-		bool RifleUnlocked = false,
-		bool FlamethrowerUnlocked = false,
-		bool BouncerUnlocked = false,
-		bool TeslaUnlocked = false,
-		bool ChainEUnlocked = false,
-		bool FreezeUnlocked = false,
+		bool ShotgunUnlocked = true,
+		bool MinigunUnlocked = true,
+		bool BeamLaserUnlocked = true,
+		bool RifleUnlocked = true,
+		bool FlamethrowerUnlocked = true,
+		bool BouncerUnlocked = true,
+		bool TeslaUnlocked = true,
+		bool ChainEUnlocked = true,
+		bool FreezeUnlocked = true,
 		bool DisableLockedWeaponSelect = true,
 		CogPath WeaponVisual = 
 		{
@@ -425,6 +425,84 @@ Cog =
 						bool Increace = false,
 						float Timer = 0,
 						bool StayAtCenterPos = true,
+					},
+				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 11,
+					},
+					Named = 
+					{
+						string Name = "Boss Health Indicator Back",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0, 4, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = false,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "59a23a60bfcc4e79:Boss Health Indicator Back",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Hierarchy = 
+					{
+						Cog = 
+						{
+							LinkId = 
+							{
+								uint Id = 12,
+							},
+							Named = 
+							{
+								string Name = "Blank",
+							},
+							Transform = 
+							{
+								Vec3 Translation = [-3.93, 0, 0],
+								Vec3 Scale = [0.787, 0.88, 1],
+								Quat Rotation = [0, 0, 0, 1],
+							},
+							Sprite = 
+							{
+								bool Visible = false,
+								bool VisibilityCulling = true,
+								bool VisibilityEvents = true,
+								bool CastShadows = false,
+								Vec4 Color = [1, 1, 1, 1],
+								BlendMode BlendMode = Alpha,
+								SpriteGeometryMode GeometryMode = ZPlane,
+								string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+								string SpriteSource = "5844ac6293e25cb9:Blank",
+								bool RenderMask = false,
+								bool FlipX = false,
+								bool FlipY = false,
+								bool AnimationActive = true,
+								float AnimationSpeed = 1,
+								uint StartFrame = 0,
+							},
+							Area = 
+							{
+								Vec2 Size = [10, 1],
+								Location Origin = CenterLeft,
+							},
+						},
 					},
 				},
 			},

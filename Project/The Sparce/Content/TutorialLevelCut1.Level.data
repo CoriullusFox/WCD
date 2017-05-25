@@ -107,9 +107,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.15128, 2.11232, 7.10056],
+			Vec3 Translation = [0.556083, -0.499777, 8.01999],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.214297, -0.247452, -0.0562198, 0.94323],
+			Quat Rotation = [0.0357713, 0.005232, -0.000187277, 0.999346],
 		},
 		Camera = 
 		{
@@ -119,15 +119,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 19.9484,
+			float Size = 24.365,
 		},
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = Orbit,
 			float LookDistance = 4.5359,
-			float VerticalAngle = 0.446804,
-			float HorizontalAngle = 0.513128,
-			Vec3 LookTarget = [-1.14317, 0.152428, 3.53675],
+			float VerticalAngle = -0.0715588,
+			float HorizontalAngle = -0.0104708,
+			Vec3 LookTarget = [0.508711, -0.175471, 3.49595],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -596,7 +596,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "slay an alien race of pigs that took",
+			string Text = "slay an alien race of pigs that",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 10000,
 			bool Smoothing = true,
@@ -634,7 +634,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "5820efc589857afa:TheSparceFont",
 			uint FontSize = 150,
-			string Text = "over an earthling space station. I",
+			string Text = "invaded our solar system. I ",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 10000,
 			bool Smoothing = true,
