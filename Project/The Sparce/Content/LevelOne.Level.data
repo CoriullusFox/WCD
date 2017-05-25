@@ -127,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-14.4966, 0.264185, 50],
+			Vec3 Translation = [-12.1368, 0.689488, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -139,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5336,
+			float Size = 11.0804,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-14.4966, 0.264185, -8.40023e-007],
+			Vec3 LookTarget = [-12.1368, 0.689488, -1.06456e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1869,6 +1869,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger1",
@@ -1928,6 +1929,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger1",
@@ -1987,6 +1989,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger1",
@@ -2046,6 +2049,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger1",
@@ -2105,6 +2109,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger1",
@@ -2164,6 +2169,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -2223,6 +2229,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -2282,6 +2289,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -2341,6 +2349,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -2400,6 +2409,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585fac7a31d9f76a:Entity_Enemy_Shield",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger2",
@@ -2459,6 +2469,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2518,6 +2529,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2577,6 +2589,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2636,6 +2649,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2695,6 +2709,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2754,6 +2769,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2813,6 +2829,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2872,6 +2889,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2931,6 +2949,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger3",
@@ -2990,6 +3009,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3049,6 +3069,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3108,6 +3129,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3167,6 +3189,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3226,6 +3249,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "5858484e735fa18e:Entity_Enemy_Buff",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3285,6 +3309,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3344,6 +3369,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3403,6 +3429,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3462,6 +3489,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3521,6 +3549,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3580,6 +3609,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3639,6 +3669,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3698,6 +3729,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3757,6 +3789,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585848194a6a1452:Entity_Enemy_Pyro",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3816,6 +3849,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "585facb807e69906:Entity_Enemy_Stealth",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/Trigger",
@@ -3947,6 +3981,7 @@ Level =
 		Spawner = 
 		{
 			string Archtype = "599e5cb07977da9a:Entity_Enemy_Miniboss",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
 				string Path = ":/TriggerBoss",
