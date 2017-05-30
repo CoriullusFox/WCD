@@ -121,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.24293, -26.356, 49.9],
+			Vec3 Translation = [-8.69298, -6.9312, 49.9],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -133,7 +133,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335,
+			float Size = 13.3718,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +141,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.24293, -26.356, -0.0999998],
+			Vec3 LookTarget = [-8.69298, -6.9312, -0.1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -379,246 +379,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy",
-		},
-		Archetyped = 
-		{
-			string Name = "5858484e735fa18e:Entity_Enemy_Buff",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-4.39249, -9.31995, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "585f9b3987abc902:Entity_BuffPig_South",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 0.3,
-			uint StartFrame = 0,
-		},
-		EnemyAI = 
-		{
-			float ChaseProximity = 5,
-			float ShootProximity = 7,
-			int Speed = 50,
-			Vec3 LookDirection = [0, 1, 0],
-			Vec3 MoveDirection = [0, 0, 0],
-			bool Pathfind = true,
-			bool Debug = false,
-			float ResponceTime = 2,
-			float WaunderRange = 2.5,
-			float WaunderCooldown = 5,
-			float Cooldown = 5,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5800bf6d54ec0d53:Slippery",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.35, 0.4, 0.5],
-		},
-		ChangeDirectionToPointAtPlayer = 
-		{
-		},
-		EnemyAnimations = 
-		{
-			string North = "585f9b4a9b98ef08:Entity_BuffPig_North",
-			string NorthEast = "585f9bfa687a3e29:Entity_BuffPig_NE",
-			string East = "585f9bcc67c75c57:Entity_BuffPig_East",
-			string SouthEast = "585f9b7b9cf92ccb:Entity_BuffPig_SE",
-			string South = "585f9b3987abc902:Entity_BuffPig_South",
-			string SouthWest = "585f9b1e80f97cad:Entity_BuffPig_SW",
-			string West = "585f9cc98c65c26b:Entity_BuffPig_West",
-			string NorthWest = "585f9b5397108311:Entity_BuffPig_NW",
-			float AnimationSpeed = 0.3,
-		},
-		Health = 
-		{
-			float ConfiguredHealth = 50,
-			string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
-			bool MiniHeathBar = true,
-			bool Player = false,
-			bool Enemy = true,
-			bool Explode = true,
-			Vec4 HurtColor = [1, 0, 0.000599861, 1],
-			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-			string PermDeathSprite = "",
-			float RegenRate = 0.1,
-			float MaxHealth = 150,
-			float HurtDuration = 0.2,
-			float RegenCooldown = 1,
-			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		EnemyToutchDamage = 
-		{
-			float SecondsBetweenDamage = 0.8,
-			float Damage = 25,
-		},
-		Shotgun = 
-		{
-			string Bullet = "587c04eef2ec5c20:Bullet_TinyPelletEnemy",
-			int NumberOfShots = 5,
-			float DamagePerBullet = 2,
-			float DistBetweenShots = 0.1,
-			float EnergyUse = 12.5,
-			float Energy = 100,
-			float CooldownMax = 0.8,
-			bool Player = false,
-			float BulletSpeed = 12,
-			float LifeLength = 0.6,
-			float CamZoom = 0,
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 11,
-				},
-				Named = 
-				{
-					string Name = "Sprite",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -70],
-					Vec3 Scale = [2, 2, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 0, 0, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5274db4c2e7c11f9:Circle",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 12,
-				},
-				Named = 
-				{
-					string Name = "BuffParticles",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.0103562, -0.494216, -0.0999999],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteParticleSystem = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					SystemChildMode ChildMode = Independent,
-					SystemSpace SystemSpace = WorldSpace,
-					uint DrawOrder = 0,
-					float WarmUpTime = 0,
-					ParticleGeometry GeometryMode = Billboarded,
-					ParticleRenderMode RenderMode = Additive,
-					ParticleSortMode SortMode = Youngest,
-					ParticleAnimation ParticleAnimation = Single,
-					string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
-					Vec4 Tint = [1, 1, 1, 0.39],
-					float VelocityScale = 1,
-					float LengthScale = 1,
-					float MaxParticleSize = 100,
-					Vec3 SystemSize = [4, 4, 4],
-				},
-				SphericalParticleEmitter = 
-				{
-					bool Active = true,
-					uint EmitCount = 0,
-					float EmitRate = 7,
-					float EmitVariance = 3,
-					float Size = 0.1,
-					float SizeVariance = 0.05,
-					float Lifetime = 1,
-					float LifetimeVariance = 0.2,
-					float Spin = 0,
-					float SpinVariance = 0,
-					bool RandomSpin = false,
-					float Fill = 1,
-					float EmitterVelocityPercent = 0.9,
-					Vec3 StartVelocity = [0, -0.2, 0],
-					Vec3 RandomVelocity = [0, 0.5, 0],
-					Vec3 TangentVelocity = [0, 0, 0],
-					Vec3 EmitterSize = [0.1, 0.1, 0],
-					bool FastMovingEmitter = false,
-				},
-				LinearParticleAnimator = 
-				{
-					Vec3 Force = [0, 1, 0],
-					Vec3 RandomForce = [0, 0, 0],
-					float Torque = 0,
-					float Growth = 0,
-					float Dampening = 0,
-					Vec3 Twist = [0, 0, 0],
-				},
-				ParticleColorAnimator = 
-				{
-					Vec4 Color0 = [0, 1, 1, 0.9999],
-					Vec4 Color1 = [0, 1, 0.85, 1],
-					Vec4 Color2 = [0, 0.7, 1, 0.69],
-					Vec4 Color3 = [0, 0.88, 1, 0.245],
-					Vec4 Color4 = [0, 1, 1, 0],
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Named = 
-		{
 			string Name = "Teleporter1",
 		},
 		Archetyped = 
@@ -661,7 +421,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 14,
+				uint ResolvedCog = 11,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -675,7 +435,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -721,7 +481,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 13,
+				uint ResolvedCog = 10,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -735,7 +495,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -770,7 +530,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -824,7 +584,7 @@ Level =
 		string Name = "5820e8f49dbffcb3:WeaponPickup",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -841,7 +601,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -894,7 +654,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -947,7 +707,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -1000,7 +760,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -1054,7 +814,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 19,
 		},
 		Transform = 
 		{
@@ -1072,7 +832,7 @@ Level =
 		string Name = "585848b27a4d3c71:Entity_Enemy_Default",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -1083,6 +843,60 @@ Level =
 		Named = 
 		{
 			string Name = "Enemy",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a182ea4095a6db:Crate",
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.665701, 1.13235, -0.0999985],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59a185adc3637b54:BigCrate",
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.37718, -11.386, -0.0999985],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5851107ec4a8ee01:Particle_BlackDots",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.17367, 1.98244, -0.0999985],
+			Vec3 Scale = [0.1, 0.1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Black Explosion",
 		},
 	},
 },

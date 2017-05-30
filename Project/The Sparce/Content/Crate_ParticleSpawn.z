@@ -1,0 +1,17 @@
+class Crate_ParticleSpawn : ZilchComponent
+{
+    [Property]
+    var ArchetypeToSpawn : Archetype = Archetype.Particle_Crate;
+    
+    [Property]
+    var BurstToSpawn : Archetype = Archetype.Particle_WhiteExplosion;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.Space.CreateAtPosition(this.ArchetypeToSpawn, this.Owner.Transform.Translation);
+        this.Space.CreateAtPosition(this.BurstToSpawn, this.Owner.Transform.Translation);
+        
+        this.Owner.RemoveComponentByName("Crate_ParticleSpawn");
+    }
+}

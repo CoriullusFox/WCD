@@ -1,0 +1,120 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "White Explosion",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-10.4554, 1.61041, -0.0999985],
+		Vec3 Scale = [0.1, 0.1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteParticleSystem = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		SystemChildMode ChildMode = Independent,
+		SystemSpace SystemSpace = WorldSpace,
+		uint DrawOrder = 0,
+		float WarmUpTime = 0,
+		ParticleGeometry GeometryMode = Billboarded,
+		ParticleRenderMode RenderMode = Blended,
+		ParticleSortMode SortMode = Youngest,
+		ParticleAnimation ParticleAnimation = Single,
+		string Texture = "5844c6737a078722:Particle_Burst_Anim",
+		Vec4 Tint = [1, 1, 1, 0.9999],
+		float VelocityScale = 0,
+		float LengthScale = 0,
+		float MaxParticleSize = 0,
+		Vec3 SystemSize = [0, 0, 0],
+	},
+	LinearParticleAnimator = 
+	{
+		Vec3 Force = [0, 0, 0],
+		Vec3 RandomForce = [0, 0, 0],
+		float Torque = 0,
+		float Growth = -5,
+		float Dampening = 0.1,
+		Vec3 Twist = [0, 0, 0],
+	},
+	Despawn = 
+	{
+		float LifeLength = 0.5,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
+	},
+	SphericalParticleEmitter = 
+	{
+		bool Active = true,
+		uint EmitCount = 1,
+		float EmitRate = 100,
+		float EmitVariance = 100,
+		float Size = 2.7,
+		float SizeVariance = 0,
+		float Lifetime = 0.2,
+		float LifetimeVariance = 0.05,
+		float Spin = 0,
+		float SpinVariance = 50,
+		bool RandomSpin = true,
+		float Fill = 1,
+		float EmitterVelocityPercent = 0,
+		Vec3 StartVelocity = [0, 0, 0],
+		Vec3 RandomVelocity = [0, 0, 0],
+		Vec3 TangentVelocity = [0, 0, 0],
+		Vec3 EmitterSize = [0, 0, 0],
+		bool FastMovingEmitter = true,
+	},
+	Hierarchy = 
+	{
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Named = 
+			{
+				string Name = "Warp",
+			},
+			Archetyped = 
+			{
+				string Name = "580db526cbf2b7c2:CameraWarp",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [2.5, 2.5, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Camera = 
+			{
+				ProjectionMode ProjectionMode = Orthographic,
+				Facing Facing = NegativeZ,
+				CameraTransparentSort TransparentSort = InheritFromSpace,
+				float FieldOfView = 45,
+				float NearPlane = 0.5,
+				float FarPlane = 200,
+				float Size = 20,
+			},
+			ScreenWarpRing = 
+			{
+				float Size = 0.005,
+				float Thickness = 0.5,
+				float Intensity = -0.01,
+			},
+			Despawn = 
+			{
+				float LifeLength = 0.1,
+				bool Explode = false,
+				string Explosion = "58620f152fd63a17:BulletExplosion",
+			},
+		},
+	},
+},

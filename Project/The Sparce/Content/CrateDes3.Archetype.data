@@ -14,9 +14,14 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [9.5, 4, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
+	},
+	Crate_ParticleSpawn = 
+	{
+		string ArchetypeToSpawn = "59a8a9fcfa294d80:Particle_Crate",
+		string BurstToSpawn = "5851106bc9781092:Particle_WhiteExplosion",
 	},
 	Hierarchy = 
 	{
