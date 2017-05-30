@@ -1,0 +1,27 @@
+class HurtInd : ZilchComponent
+{
+    
+    var FadeSpeed : Real = 2;
+    var Target : Real4 = Real4(1,0,0,0);
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.Hurt, this.OnHurt);
+        this.Owner.Sprite.Color = this.Target;
+    }
+
+    function OnHurt(event : Hurt)
+    {
+        Console.WriteLine("hello");
+        this.Owner.Sprite.Color = Real4(1,0,0,1);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        this.Owner.Sprite.Color = Math.Lerp(this.Owner.Sprite.Color, this.Target, event.Dt * this.FadeSpeed);
+        
+    }
+}

@@ -96,6 +96,16 @@ class Health : ZilchComponent
         
         this.HurtTimer = this.HurtDuration;
         this.IsHurt = true;
+        if(this.Player)
+        {
+            this.GameSession.DispatchEvent(Events.Hurt, Hurt());
+            
+            var toSend = ScreenShake();
+            toSend.Intencity = 0.1;
+            toSend.Timer = 0.1;
+            toSend.FadeSpeed = 0.1;
+            this.Space.DispatchEvent(Events.ScreenShake, toSend);
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -189,7 +199,7 @@ class Health : ZilchComponent
             else if(!this.Player)
             {
                 this.Space.SoundSpace.PlayCue(this.DeathSound);
-                this.Space.CreateAtPosition(this.PermDeathSprite, this.Owner.Transform.Translation);
+                this.Space.CreateAtPosition(this.PermDeathSprite, this.Owner.Transform.Translation + Real3(0,0,-0.1));
                 
                 //this is not temporary
                 if(this.Enemy)
@@ -211,7 +221,6 @@ class Health : ZilchComponent
                 toSend.Timer = 0.1;
                 toSend.FadeSpeed = 0.1;
                 this.Space.DispatchEvent(Events.ScreenShake, toSend);
-                //This is temporary until we decide to make the enemies deaths perminent
                 
                 //this.Owner.Sprite.SpriteSource = this.Owner.EnemyAnimations.South;
                 

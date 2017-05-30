@@ -1,0 +1,35 @@
+class UIOuch : ZilchComponent
+{
+    
+    var TargetColor : Real4 = Real4(1,0,0,0);
+    var Curve : SampleCurve = SampleCurve.Curve;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.HealthToUI, this.OnHealthToUI);
+        this.TargetColor = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0);
+        this.Owner.Sprite.Color = this.TargetColor;
+    }
+
+    function OnHealthToUI(event : HealthToUI)
+    {
+        
+        if(event.Health <= event.MaxHealth / 2)
+        {
+            
+            var ammount = 1 - (event.Health / (event.MaxHealth / 2));
+            this.TargetColor = Real4(this.TargetColor.X, this.TargetColor.Y, this.TargetColor.Z, this.Curve.Sample(ammount));
+            Console.WriteLine(this.Curve.Sample(ammount));
+            
+        }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        this.Owner.Sprite.Color = Math.Lerp(this.Owner.Sprite.Color, this.TargetColor, event.Dt * 3);
+        
+    }
+}
