@@ -47,22 +47,46 @@ class SelectedWeaponIcon : ZilchComponent
                 this.Owner.Sprite.CurrentFrame = 0;
             }
             
+            else if(selectedWeapon == "BeamLaser")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 8;
+            }
+            
             else if(selectedWeapon == "Rifle")
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
                 this.Owner.Sprite.CurrentFrame = 4;
             }
             
-            else if(selectedWeapon == "Beam")
+            else if(selectedWeapon == "FlameThrower")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 7;
+            }
+            
+            else if(selectedWeapon == "Bouncer")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 13;
+            }
+            
+            else if(selectedWeapon == "TeslaGun")
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
                 this.Owner.Sprite.CurrentFrame = 8;
             }
             
-            else if(selectedWeapon == "FlameThrower")
+            else if(selectedWeapon == "ChainElectricity")
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
-                this.Owner.Sprite.CurrentFrame = 7;
+                this.Owner.Sprite.CurrentFrame = 11;
+            }
+            
+             else if(selectedWeapon == "FreezeRay")
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Find(this.SelectedWeaponSprite);
+                this.Owner.Sprite.CurrentFrame = 12;
             }
             
         }
