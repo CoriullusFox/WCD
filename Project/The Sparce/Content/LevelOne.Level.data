@@ -127,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.2004, -2.19999, 50],
+			Vec3 Translation = [3.8457, -11.7654, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -139,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0804,
+			float Size = 6.08102,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-17.2004, -2.19999, -4.28715e-006],
+			Vec3 LookTarget = [3.8457, -11.7654, -4.17852e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1174,19 +1174,12 @@ Level =
 			string Name = "Enemy",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "586101df0958c576:Pickup_Health",
 		LinkId = 
 		{
 			uint Id = 30,
-		},
-		Named = 
-		{
-			string Name = "Medkit",
-		},
-		Archetyped = 
-		{
-			string Name = "586101df0958c576:Pickup_Health",
 		},
 		Transform = 
 		{
@@ -1194,38 +1187,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
-			uint StartFrame = 0,
-		},
-		StatsPickup = 
-		{
-			int ChangeAmount = 100,
-			Enum Stat = Health,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, -0.25, 0],
-			Vec3 Size = [0.2, 0.25, 0.5],
+			string Name = "Medkit",
 		},
 	},
 	Cog = 
@@ -3881,6 +3845,11 @@ Level =
 			Vec3 Scale = [2.5, 1, 1],
 			Quat Rotation = [0, 0, 0.707107, 0.707107],
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
 		Named = 
 		{
 			string Name = "Trigger1",
@@ -3898,6 +3867,11 @@ Level =
 			Vec3 Translation = [-17, -6, 0],
 			Vec3 Scale = [2.5, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 		Named = 
 		{
@@ -3917,6 +3891,11 @@ Level =
 			Vec3 Scale = [2.5, 1, 1],
 			Quat Rotation = [0, 0, 0.707107, 0.707107],
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
 		Named = 
 		{
 			string Name = "Trigger3",
@@ -3934,6 +3913,11 @@ Level =
 			Vec3 Translation = [17, -16.75, 0],
 			Vec3 Scale = [2.5, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 		Named = 
 		{
@@ -4031,11 +4015,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "59a8be567d0be415:Trigger",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -4055,6 +4039,11 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -4111,66 +4100,12 @@ Level =
 			Vec3 Size = [0.2, 0.25, 0.5],
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 84,
-		},
-		Named = 
-		{
-			string Name = "Medkit",
-		},
-		Archetyped = 
-		{
-			string Name = "586101df0958c576:Pickup_Health",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [4.5, -11, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "586100ec299d6c91:Pickup_Medkit",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
-			uint StartFrame = 0,
-		},
-		StatsPickup = 
-		{
-			int ChangeAmount = 100,
-			Enum Stat = Health,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, -0.25, 0],
-			Vec3 Size = [0.2, 0.25, 0.5],
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 85,
+			uint Id = 84,
 		},
 		Transform = 
 		{
@@ -4188,7 +4123,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 86,
+			uint Id = 85,
 		},
 		Transform = 
 		{
@@ -4206,7 +4141,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 87,
+			uint Id = 86,
 		},
 		Transform = 
 		{
@@ -4224,7 +4159,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 88,
+			uint Id = 87,
 		},
 		Transform = 
 		{
@@ -4242,7 +4177,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 89,
+			uint Id = 88,
 		},
 		Transform = 
 		{
@@ -4260,7 +4195,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 90,
+			uint Id = 89,
 		},
 		Transform = 
 		{
@@ -4278,7 +4213,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 91,
+			uint Id = 90,
 		},
 		Transform = 
 		{
@@ -4296,7 +4231,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 92,
+			uint Id = 91,
 		},
 		Transform = 
 		{
@@ -4314,7 +4249,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 93,
+			uint Id = 92,
 		},
 		Transform = 
 		{
@@ -4332,7 +4267,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 94,
+			uint Id = 93,
 		},
 		Transform = 
 		{
@@ -4350,7 +4285,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 95,
+			uint Id = 94,
 		},
 		Transform = 
 		{
@@ -4368,7 +4303,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 96,
+			uint Id = 95,
 		},
 		Transform = 
 		{
@@ -4386,7 +4321,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 96,
 		},
 		Transform = 
 		{
@@ -4404,7 +4339,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 97,
 		},
 		Transform = 
 		{
@@ -4422,7 +4357,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 99,
+			uint Id = 98,
 		},
 		Transform = 
 		{
@@ -4440,7 +4375,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 99,
 		},
 		Transform = 
 		{
@@ -4458,7 +4393,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 101,
+			uint Id = 100,
 		},
 		Transform = 
 		{

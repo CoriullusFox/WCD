@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [9.0345, 2.23498, 3.57947],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -66,15 +66,15 @@ Cog =
 	},
 	WeaponSwap = 
 	{
-		bool ShotgunUnlocked = true,
-		bool MinigunUnlocked = true,
-		bool BeamLaserUnlocked = true,
-		bool RifleUnlocked = true,
-		bool FlamethrowerUnlocked = true,
-		bool BouncerUnlocked = true,
-		bool TeslaUnlocked = true,
-		bool ChainEUnlocked = true,
-		bool FreezeUnlocked = true,
+		bool ShotgunUnlocked = false,
+		bool MinigunUnlocked = false,
+		bool BeamLaserUnlocked = false,
+		bool RifleUnlocked = false,
+		bool FlamethrowerUnlocked = false,
+		bool BouncerUnlocked = false,
+		bool TeslaUnlocked = false,
+		bool ChainEUnlocked = false,
+		bool FreezeUnlocked = false,
 		bool DisableLockedWeaponSelect = true,
 		CogPath WeaponVisual = 
 		{

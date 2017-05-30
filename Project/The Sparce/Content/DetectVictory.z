@@ -38,7 +38,7 @@ class DetectVictory : ZilchComponent
             var toSend = SetLevelUnlcoked();
             toSend.Level = event.LVLNum + 1;
             this.GameSession.DispatchEvent(Events.SetLevelUnlcoked, toSend);
-            this.Space.LoadLevel(Level.MainMenu);
+            this.Space.LoadLevel(Level.LevelVictory);
             
         }
     }
