@@ -42,6 +42,8 @@ class BeamLaser : ZilchComponent
     
     var Shooting : Boolean = false;
     
+    var Fix : Boolean = true;
+    
     
     function Initialize(init : CogInitializer)
     {
@@ -79,75 +81,82 @@ class BeamLaser : ZilchComponent
     //Shooting logic (only runs when the event is called)
     function OnShoot(event : Shoot)
     {
-        if(this.Energy >= this.EnergyUse * this.Space.TimeSpace.Dt && this.CreatedBullet != null)
+        if(this.Fix)
         {
-            this.Owner.EnergyStor.Energy -= this.EnergyUse * this.Space.TimeSpace.Dt;
-            Console.WriteLine("found");
-            this.CreatedBullet.Beam.Dir = event.Direction;
-            
-            var randGen : Random = Random();
-            //angle of rotation
-            var angle = Math.Angle2D(event.Direction);
-            
-            //generate direction for orientation component from angle
-            var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
-            
-            this.CreatedBullet.Orientation.LookAtDirection(newDirection);
-            this.CreatedBullet.Transform.WorldTranslation = this.Owner.Transform.WorldTranslation + Real3(0,0,-0.1);
-            return;
-        }
-        else if (this.CreatedBullet != null)
-        {
-            Console.WriteLine("not found");
-            this.CreatedBullet.Destroy();
-        }
-        this.Player = event.Player;
-        //only shoot if cooldown is over
-        if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
-        {
-            this.Owner.DispatchEvent(Events.Fire, Fire());
-            
-            
-            this.Cooldown = 0;
-            /** SHOOTING LOGIC HERE **/
-            
-            
-            if(this.Bullet != null)
+                this.Fix = false;
+            }
+            else
             {
-                this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_WahwahLaser"));
+            if(this.Energy >= this.EnergyUse * this.Space.TimeSpace.Dt && this.CreatedBullet != null)
+            {
+                this.Owner.EnergyStor.Energy -= this.EnergyUse * this.Space.TimeSpace.Dt;
+                Console.WriteLine("found");
+                this.CreatedBullet.Beam.Dir = event.Direction;
                 
-                this.CreatedBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
-                if(this.Player)
+                var randGen : Random = Random();
+                //angle of rotation
+                var angle = Math.Angle2D(event.Direction);
+                
+                //generate direction for orientation component from angle
+                var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                
+                this.CreatedBullet.Orientation.LookAtDirection(newDirection);
+                this.CreatedBullet.Transform.WorldTranslation = this.Owner.Transform.WorldTranslation + Real3(0,0,-0.1);
+                return;
+            }
+            else if (this.CreatedBullet != null)
+            {
+                Console.WriteLine("not found");
+                this.CreatedBullet.Destroy();
+            }
+            this.Player = event.Player;
+            //only shoot if cooldown is over
+            if(this.Cooldown >= this.CooldownMax && this.Energy >= this.EnergyUse)
+            {
+                this.Owner.DispatchEvent(Events.Fire, Fire());
+                
+                
+                this.Cooldown = 0;
+                /** SHOOTING LOGIC HERE **/
+                
+                
+                if(this.Bullet != null)
                 {
+                    this.Space.SoundSpace.PlayCue(SoundCue.Find("Gun_WahwahLaser"));
                     
-                    var toSend = ScreenShake();
-                    toSend.Intencity = 0.01;
-                    toSend.Timer = 0.1;
-                    toSend.FadeSpeed = 0.1;
-                    this.Space.DispatchEvent(Events.ScreenShake, toSend);
-                    
-                }
-                if(this.CreatedBullet != null)
-                {
-                    this.CreatedBullet.Beam.New = true;
-                    
-                    this.CreatedBullet.AttachTo(this.Owner);
-                    
-                    var randGen : Random = Random();
-                    //angle of rotation
-                    var angle = Math.Angle2D(event.Direction);
-                    
-                    //generate direction for orientation component from angle
-                    var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
-                    
-                    //apply direction and movement
-                    this.CreatedBullet.Orientation.LookAtDirection(newDirection);
-                    
-                    
-                    
-                    //set whether or not the beam is from the player
-                    this.CreatedBullet.Beam.PlayerBeam = this.Player;
-                    this.CreatedBullet.Beam.DPS = this.DPS;
+                    this.CreatedBullet = this.Space.CreateAtPosition(this.Bullet, this.Owner.Transform.Translation);
+                    if(this.Player)
+                    {
+                        
+                        var toSend = ScreenShake();
+                        toSend.Intencity = 0.01;
+                        toSend.Timer = 0.1;
+                        toSend.FadeSpeed = 0.1;
+                        this.Space.DispatchEvent(Events.ScreenShake, toSend);
+                        
+                    }
+                    if(this.CreatedBullet != null)
+                    {
+                        this.CreatedBullet.Beam.New = true;
+                        
+                        this.CreatedBullet.AttachTo(this.Owner);
+                        
+                        var randGen : Random = Random();
+                        //angle of rotation
+                        var angle = Math.Angle2D(event.Direction);
+                        
+                        //generate direction for orientation component from angle
+                        var newDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                        
+                        //apply direction and movement
+                        this.CreatedBullet.Orientation.LookAtDirection(newDirection);
+                        
+                        
+                        
+                        //set whether or not the beam is from the player
+                        this.CreatedBullet.Beam.PlayerBeam = this.Player;
+                        this.CreatedBullet.Beam.DPS = this.DPS;
+                    }
                 }
             }
         }

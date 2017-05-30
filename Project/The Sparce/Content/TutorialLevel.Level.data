@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.85705, -0.876229, 50],
+			Vec3 Translation = [6.45944, -12.9489, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457,
+			float Size = 33.2873,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.85705, -0.876229, 1.871e-006],
+			Vec3 LookTarget = [6.45944, -12.9489, 2.02847e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1488,7 +1488,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Trigger1",
+			string Name = "Bullet",
 		},
 		Transform = 
 		{
@@ -1506,7 +1506,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "59a8be567d0be415:Trigger",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1526,6 +1526,11 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -1944,7 +1949,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Trigger",
+			string Name = "Bullet",
 		},
 		Transform = 
 		{
@@ -1962,7 +1967,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "59a8be567d0be415:Trigger",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1982,6 +1987,11 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
@@ -2082,7 +2092,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Trigger2",
+			string Name = "Bullet",
 		},
 		Transform = 
 		{
@@ -2100,7 +2110,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "59a8be567d0be415:Trigger",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -2120,6 +2130,11 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 	},
 	Cog = 
