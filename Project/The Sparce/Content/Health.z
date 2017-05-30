@@ -70,6 +70,8 @@ class Health : ZilchComponent
     
     var PrevHealth : Real = 100;
     
+    var Timer : Real = 0.1;
+    
     var HeathPercent : Real
     {
         get
@@ -88,7 +90,11 @@ class Health : ZilchComponent
 
     function OnHurt(event : Hurt)
     {
-        this.Space.SoundSpace.PlayCue(SoundCue.Find("PigSFX_HurtPig"));
+        if(this.Timer <= 0)
+        {
+            this.Timer = 0.1;
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("PigSFX_HurtPig"));
+        }
         
         this.ConfiguredHealth -= event.Damage;
         
@@ -110,6 +116,7 @@ class Health : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        this.Timer -= event.Dt;
         this.RegenTimer -= event.Dt;
         if(this.PrevHealth > this.ConfiguredHealth)
         {
