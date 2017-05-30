@@ -1,7 +1,7 @@
 class Crate_ParticleSpawn : ZilchComponent
 {
     [Property]
-    var ArchetypeToSpawn : Archetype = Archetype.Particle_Crate;
+    var ArchetypeToSpawn : Archetype = Archetype.Particle_BigCrate;
     
     [Property]
     var BurstToSpawn : Archetype = Archetype.Particle_WhiteExplosion;
