@@ -109,20 +109,6 @@ Cog =
 		float SecondsBetweenDamage = 0.5,
 		float Damage = 2.5,
 	},
-	Shotgun = 
-	{
-		string Bullet = "583c7e44dd4f1575:Bullet_TinyPellet",
-		int NumberOfShots = 5,
-		float DamagePerBullet = 10,
-		float DistBetweenShots = 0.1,
-		float EnergyUse = 25,
-		float Energy = 100,
-		float CooldownMax = 0.6,
-		bool Player = false,
-		float BulletSpeed = 18,
-		float LifeLength = 0.35,
-		float CamZoom = 18,
-	},
 	Bouncer = 
 	{
 		string Bullet = "582a50e058efc8d0:Bullet_Bouncy",
@@ -132,7 +118,7 @@ Cog =
 		float CooldownMax = 0.5,
 		bool Player = false,
 		float BulletSpeed = 8,
-		float LifeLength = 5,
+		float LifeLength = 2,
 		float CamZoom = 20,
 	},
 	Hierarchy = 
