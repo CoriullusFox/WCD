@@ -13,7 +13,7 @@ class HurtInd : ZilchComponent
 
     function OnHurt(event : Hurt)
     {
-        Console.WriteLine("hello");
+        
         this.Owner.Sprite.Color = Real4(1,0,0,1);
         
     }

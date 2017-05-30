@@ -3,6 +3,10 @@ class UIOuch : ZilchComponent
     
     var TargetColor : Real4 = Real4(1,0,0,0);
     var Curve : SampleCurve = SampleCurve.Curve;
+    var Health : Real = 100;
+    var MaxHealth : Real = 100;
+    var Timer : Real = 0.5;
+    var Toggle : Boolean = true;
     
     function Initialize(init : CogInitializer)
     {
@@ -15,12 +19,15 @@ class UIOuch : ZilchComponent
     function OnHealthToUI(event : HealthToUI)
     {
         
+        this.Health = event.Health;
+        this.MaxHealth = event.MaxHealth;
+        
         if(event.Health <= event.MaxHealth / 2)
         {
             
             var ammount = 1 - (event.Health / (event.MaxHealth / 2));
             this.TargetColor = Real4(this.TargetColor.X, this.TargetColor.Y, this.TargetColor.Z, this.Curve.Sample(ammount));
-            Console.WriteLine(this.Curve.Sample(ammount));
+            //Console.WriteLine(this.Curve.Sample(ammount));
             
         }
         
@@ -29,6 +36,19 @@ class UIOuch : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         
+        this.Timer -= event.Dt;
+        if(this.Health <= this.MaxHealth / 4 && this.Timer <= 0)
+        {
+            
+            this.Timer = 0.5;
+            this.Toggle = !this.Toggle;
+        }
+        
+        if(this.Toggle)
+            this.TargetColor += Real4(0,0,0,0);
+        else
+            this.TargetColor += Real4(0,0,0,-this.Curve.Sample(1-(this.Health / (this.MaxHealth / 4))));
+        Console.WriteLine(this.TargetColor);
         this.Owner.Sprite.Color = Math.Lerp(this.Owner.Sprite.Color, this.TargetColor, event.Dt * 3);
         
     }
