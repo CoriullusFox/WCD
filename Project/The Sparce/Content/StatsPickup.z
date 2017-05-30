@@ -63,7 +63,7 @@ class StatsPickup : ZilchComponent
                     toSend.MaxHealth = otherObject.Health.MaxHealth;
                     otherObject.Health.GameSession.DispatchEvent(Events.HealthToUI, toSend);
                 }
-            
+                this.Space.SoundSpace.PlayCue(SoundCue.Find("Environment_Door"));
                 this.Owner.Destroy();
             }
             //if stat equal to Energy

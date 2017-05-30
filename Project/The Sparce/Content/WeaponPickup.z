@@ -178,6 +178,7 @@ class WeaponPickup : ZilchComponent
             
             this.GameSession.DispatchEvent(Events.UnlockorUpgrade, toSend);
             this.Owner.Destroy();
+            this.Space.SoundSpace.PlayCue(SoundCue.Find("Environment_Disappear"));
         }
     }
 }
