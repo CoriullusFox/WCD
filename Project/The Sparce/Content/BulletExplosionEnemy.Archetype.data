@@ -21,8 +21,8 @@ Cog =
 	SpriteParticleSystem = 
 	{
 		bool Visible = true,
-		bool VisibilityCulling = true,
-		bool VisibilityEvents = true,
+		bool VisibilityCulling = false,
+		bool VisibilityEvents = false,
 		bool CastShadows = false,
 		SystemChildMode ChildMode = Independent,
 		SystemSpace SystemSpace = WorldSpace,
@@ -76,5 +76,11 @@ Cog =
 		Vec4 Color2 = [1, 0, 0.000599861, 1],
 		Vec4 Color3 = [0.913726, 0, 0.000548109, 0.75],
 		Vec4 Color4 = [1, 0, 0.000599861, 0.75],
+	},
+	Despawn = 
+	{
+		float LifeLength = 3,
+		bool Explode = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
 	},
 },
