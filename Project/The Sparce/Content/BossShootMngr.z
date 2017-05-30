@@ -18,7 +18,7 @@ class BossShootMngr : ZilchComponent
     
     var Timer : Real = 10;
     
-    var Timer2 : Real = 0;
+    var Timer2 : Real = 2;
     
     function Initialize(init : CogInitializer)
     {
@@ -57,7 +57,7 @@ class BossShootMngr : ZilchComponent
             {
                 this.Timer = 13;
                 //Time, Speed, Firefate, Randomness, Bullet
-                this.Owner.SpinAttack.Attack(6, 0.1, 0.08, 0.2, Archetype.Bullet_TinyBoss);
+                this.Owner.SpinAttack.Attack(6, 0.1, 0.08, 0.4, Archetype.Bullet_TinyBoss);
             }
         }
         if(this.Stage == 1)
@@ -88,7 +88,7 @@ class BossShootMngr : ZilchComponent
         {
             if(this.Timer <= 0)
             {
-                this.Timer = 16;
+                this.Timer = 5;
                 //Time, Speed, Firefate, Randomness, Bullet
                 this.Owner.SpinAttack.Attack(3, 0.05, 0.05, 1.0, Archetype.Bullet_TinyBoss);
             }

@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -83,7 +83,7 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 1000,
+		float ConfiguredHealth = 500,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
@@ -105,10 +105,10 @@ Cog =
 	},
 	PassiveAttack = 
 	{
-		float FireRate = 0.4,
+		float FireRate = 0.5,
 		string Bullet = "58638be9705e178b:Bullet_LargeBoss",
 		float BulletSpeed = 9,
-		float Damage = 10,
+		float Damage = 6,
 		float LifeLength = 75,
 		float Randomness = 0.01,
 	},
