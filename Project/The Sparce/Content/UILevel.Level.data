@@ -115,7 +115,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 74.082,
+			float Size = 27.2533,
 		},
 		EditorCameraController = 
 		{
@@ -203,7 +203,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 30,
-			string Text = "The Sparce v0.6.5-a1 (0005C50D1)",
+			string Text = "The Sparce v0.9.11-b5 (00163E1)",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = false,
