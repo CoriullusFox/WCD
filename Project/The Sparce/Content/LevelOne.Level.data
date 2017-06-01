@@ -128,7 +128,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.9652, -10.9882, 50],
+			Vec3 Translation = [5.67862, -12.0432, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -140,7 +140,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.3131,
+			float Size = 24.6598,
 		},
 		EditorCameraController = 
 		{
@@ -148,7 +148,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [10.9652, -10.9882, -3.89615e-006],
+			Vec3 LookTarget = [5.67862, -12.0432, -4.12724e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -678,6 +678,22 @@ Level =
 			float RequiredEnemiesKilled = 3,
 			string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
 			bool Vert = true,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -793,6 +809,22 @@ Level =
 			float RequiredEnemiesKilled = 11,
 			string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
 			bool Vert = true,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -854,6 +886,22 @@ Level =
 			float RequiredEnemiesKilled = 3,
 			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
 			bool Vert = false,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -915,6 +963,22 @@ Level =
 			float RequiredEnemiesKilled = 5,
 			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
 			bool Vert = false,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -1012,6 +1076,22 @@ Level =
 			float RequiredEnemiesKilled = 20,
 			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
 			bool Vert = false,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -1073,6 +1153,22 @@ Level =
 			float RequiredEnemiesKilled = 34,
 			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
 			bool Vert = false,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -1256,7 +1352,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.5, -15.75, 0],
+			Vec3 Translation = [-15.5, -14, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1281,7 +1377,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.5, -9.5, 0],
+			Vec3 Translation = [-16, -9.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1377,7 +1473,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.5, -11, 0],
+			Vec3 Translation = [0, -12.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1473,7 +1569,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.5, -11, 0],
+			Vec3 Translation = [6, -12.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1569,7 +1665,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -8, 0],
+			Vec3 Translation = [0, -8, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1629,7 +1725,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.5, -4.5, 0],
+			Vec3 Translation = [-5.5, -4.5, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1689,7 +1785,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6, -8, 0],
+			Vec3 Translation = [6, -8, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1749,7 +1845,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.5, -4.5, 0],
+			Vec3 Translation = [5.5, -4.5, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

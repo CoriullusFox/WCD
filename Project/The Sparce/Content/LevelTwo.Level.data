@@ -102,6 +102,7 @@ Level =
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
 			bool ReloadIfSameLevel = true,
+			string Name = "UI",
 		},
 		Pause = 
 		{
@@ -124,7 +125,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.15317, -8.27613, 50],
+			Vec3 Translation = [-12.4539, -24.2075, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +137,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 49.6585,
+			float Size = 22.313,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +145,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.15317, -8.27613, -5.30396e-007],
+			Vec3 LookTarget = [-12.4539, -24.2075, -1.2126e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1938,7 +1939,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1998,7 +1999,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-23, -21, 0],
+			Vec3 Translation = [-23, -21, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3340,7 +3341,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9, -23, 0],
+			Vec3 Translation = [-9, -23, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

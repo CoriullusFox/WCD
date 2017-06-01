@@ -40,6 +40,12 @@ class Doorscript : ZilchComponent
     [Property]
     var Vert : Boolean = false;
     
+    [Property]
+    var LockTrigger : CogPath = null;
+    
+    [Property]
+    var HasLockTrigger : Boolean = false;
+    
     var G1 : Node = null;
     
     var G2 : Node = null;
@@ -68,7 +74,16 @@ class Doorscript : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
+        if(this.HasLockTrigger)
+        {
+            if(this.LockTrigger.Cog.SpawnTrigger.Spawn)
+            {
+                this.HasLockTrigger = false;
+                this.LockTrigger.Cog.Destroy();
+                this.Condition = "Key";
+                this.Locked = true;
+            }
+        }
         if(this.Ginit)
         {
             Console.WriteLine("Ginit");

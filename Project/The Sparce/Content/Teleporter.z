@@ -81,7 +81,7 @@ class Teleporter : ZilchComponent
                 {
                     //Set player's position to Position
                     this.Space.CreateAtPosition(this.TeleportingEffect, this.Position.Cog.Transform.Translation + Real3(0,0,0.1));
-                    player.Transform.Translation = this.Position.Cog.Transform.Translation;
+                    player.Transform.Translation = Real3(this.Position.Cog.Transform.Translation.X, this.Position.Cog.Transform.Translation.Y, player.Transform.Translation.Z);
                     player.Sprite.Visible = true;
                     player.FindChildByName("Weapon").Sprite.Visible = true;
                     

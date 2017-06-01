@@ -87,6 +87,7 @@ Level =
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
 			bool ReloadIfSameLevel = true,
+			string Name = "UI",
 		},
 		EnemiesKilldstor = 
 		{
@@ -124,7 +125,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.664, -11.6849, 50],
+			Vec3 Translation = [-7.77985, -8.38752, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +137,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2457,
+			float Size = 16.53,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +145,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-13.664, -11.6849, 1.14885e-006],
+			Vec3 LookTarget = [-7.77985, -8.38752, 1.40605e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -312,7 +313,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.5, -21.5, 0],
+			Vec3 Translation = [-5.5, -21.5, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -372,7 +373,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.5, -11.5, 0],
+			Vec3 Translation = [-6.5, -11.5, -0.01],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -499,6 +500,22 @@ Level =
 			float RequiredEnemiesKilled = 3,
 			string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
 			bool Vert = true,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -583,6 +600,22 @@ Level =
 			float RequiredEnemiesKilled = 5,
 			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
 			bool Vert = false,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -667,6 +700,22 @@ Level =
 			float RequiredEnemiesKilled = 3,
 			string LockedVisual = "585276eb2e14cdaf:Animated_HorDoor_Locked",
 			bool Vert = false,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -728,6 +777,22 @@ Level =
 			float RequiredEnemiesKilled = 7,
 			string LockedVisual = "585276eb2e157bde:Animated_VertDoor_Locked",
 			bool Vert = true,
+			CogPath LockTrigger = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool HasLockTrigger = false,
 		},
 		BoxCollider = 
 		{
@@ -1188,7 +1253,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "These are weapons. They",
+			string Text = "These are              .",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -1853,7 +1918,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "Quick, make your way to your saceship",
+			string Text = "Quick, make your way to your spaceship",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -2145,6 +2210,7 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool IsBoss = false,
 			bool Explode = false,
 			Vec4 HurtColor = [1, 1, 1, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
@@ -2154,6 +2220,7 @@ Level =
 			float HurtDuration = 0.1,
 			float RegenCooldown = 1,
 			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+			bool WinOnDeath = false,
 		},
 		Sprite = 
 		{
@@ -2211,6 +2278,7 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool IsBoss = false,
 			bool Explode = false,
 			Vec4 HurtColor = [1, 1, 1, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
@@ -2220,6 +2288,7 @@ Level =
 			float HurtDuration = 0.1,
 			float RegenCooldown = 1,
 			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+			bool WinOnDeath = false,
 		},
 		Sprite = 
 		{
@@ -2277,6 +2346,7 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool IsBoss = false,
 			bool Explode = false,
 			Vec4 HurtColor = [1, 1, 1, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
@@ -2286,6 +2356,7 @@ Level =
 			float HurtDuration = 0.1,
 			float RegenCooldown = 1,
 			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+			bool WinOnDeath = false,
 		},
 		Sprite = 
 		{
@@ -2343,6 +2414,7 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool IsBoss = false,
 			bool Explode = false,
 			Vec4 HurtColor = [1, 1, 1, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
@@ -2352,6 +2424,7 @@ Level =
 			float HurtDuration = 0.1,
 			float RegenCooldown = 1,
 			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+			bool WinOnDeath = false,
 		},
 		Sprite = 
 		{
@@ -2409,6 +2482,7 @@ Level =
 			bool MiniHeathBar = false,
 			bool Player = false,
 			bool Enemy = true,
+			bool IsBoss = false,
 			bool Explode = false,
 			Vec4 HurtColor = [1, 1, 1, 1],
 			string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
@@ -2418,6 +2492,7 @@ Level =
 			float HurtDuration = 0.1,
 			float RegenCooldown = 1,
 			string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+			bool WinOnDeath = false,
 		},
 		Sprite = 
 		{
@@ -2844,13 +2919,13 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 1],
+			Vec4 Color = [1, 0.901961, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "can be found on different",
+			string Text = "They can be found on different",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -2884,7 +2959,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "584d6e3b812d356a:Font_Bold",
 			uint FontSize = 150,
-			string Text = "levels. This particular weapon",
+			string Text = "         . This particular weapon",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
@@ -3397,6 +3472,210 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			bool Invisable = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 82,
+		},
+		Named = 
+		{
+			string Name = "WEAPONSkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.35, 1.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Weapons",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 83,
+		},
+		Named = 
+		{
+			string Name = "LEVELSkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.55, 0.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "levels",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 84,
+		},
+		Named = 
+		{
+			string Name = "ShootingIntro2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5, -4.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Once you        more guns, you can use the ",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 85,
+		},
+		Named = 
+		{
+			string Name = "PISTOLkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.5, -4.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "Scroll Wheel",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 86,
+		},
+		Named = 
+		{
+			string Name = "ShootingIntro2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.75, -4.75, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "to switch weapons.",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 87,
+		},
+		Named = 
+		{
+			string Name = "PISTOLkey",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.25, -4.25, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0.9, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "584d6e3b812d356a:Font_Bold",
+			uint FontSize = 150,
+			string Text = "find",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 400,
+			bool Smoothing = false,
 		},
 	},
 },
