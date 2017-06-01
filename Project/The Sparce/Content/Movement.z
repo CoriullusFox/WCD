@@ -39,13 +39,14 @@ class Movement : ZilchComponent
         var velocity = this.Owner.RigidBody.Velocity;
         
         //if pressing shift
-        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && velocity.X < 0.2 && velocity.Y < 0.2)
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift) && (Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.A)))
         {
             //if energy is not depleted
             if(this.Owner.EnergyStor.Energy >= 1.0)
             {
                 //deplete energy by RunEnergy
                 this.Owner.EnergyStor.Energy -= event.Dt * this.RunEnergy;
+                this.Owner.EnergyStor.Regen = false;
                 
                 r3Speed = Real3(this.RunSpeed * event.Dt, this.RunSpeed * event.Dt, this.RunSpeed * event.Dt);
             }
