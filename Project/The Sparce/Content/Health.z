@@ -175,25 +175,32 @@ class Health : ZilchComponent
             healthInPercent = 100;
         }
         
-        if(this.MiniHeathBar)
+        if(this.MiniHeathBar || this.IsBoss)
         {
             
-            var healthBarPos = this.Owner.Transform.Translation + Real3(0, -1.05, 0);
-            
-            if(this.IsBoss)
+            var healthBarHUD : Cog = null;
+            if(!this.IsBoss)
             {
-                healthBarPos = this.Owner.Transform.Translation + Real3(0, -1.5, 0);
-            }
-            
-            var healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, healthBarPos);
-            
-            if(this.IsBoss)
-            {
-                healthBarHUD.Transform.Scale = Real3(healthInPercent / 15, 0.15, 1);
+                var healthBarPos = this.Owner.Transform.Translation + Real3(0, -1.05, 0);
+                
+                if(this.IsBoss)
+                {
+                    healthBarPos = this.Owner.Transform.Translation + Real3(0, -1.5, 0);
+                }
+                
+                healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, healthBarPos);
+                
+                
+                healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
+                
             }
             else
             {
-                healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
+                healthBarHUD = this.GameSession.FindSpaceByName("UI").FindObjectByName("HealthBarBoss");
+                healthBarHUD.Transform.Scale = Real3(healthInPercent / 10, 0.5, 1);
+                healthBarHUD.Children.Current.Transform.WorldScale = Real3(1,healthBarHUD.Children.Current.Transform.WorldScale.Y, healthBarHUD.Children.Current.Transform.WorldScale.Z);
+                healthBarHUD.Sprite.Visible = true;
+                healthBarHUD.Children.Current.SpriteText.Visible = true;
             }
             
             if(this.IsBoss)
