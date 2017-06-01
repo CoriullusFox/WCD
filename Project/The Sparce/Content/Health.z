@@ -199,18 +199,9 @@ class Health : ZilchComponent
             if(this.IsBoss)
             {
                 
-                if(this.ConfiguredHealth > this.MaxHealth * 2/3)
-                {
-                    healthBarHUD.Sprite.Color = Real4(0.0, 1.0, 0.0, 1.0);
-                }
-                else if(this.ConfiguredHealth > this.MaxHealth * 1/2)
-                {
-                    healthBarHUD.Sprite.Color = Real4(1.0, 1.0, 0.0, 1.0);
-                }
-                else if(this.ConfiguredHealth < this.MaxHealth * 1/2)
-                {
-                    healthBarHUD.Sprite.Color = Real4(1.0, 0.0, 0.0, 1.0);
-                }
+                
+                healthBarHUD.Sprite.Color = ColorGradient.BossHealthBar.Sample(1 - (this.ConfiguredHealth / this.MaxHealth));
+                
                 
             }
             
