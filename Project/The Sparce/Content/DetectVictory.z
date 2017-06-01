@@ -34,6 +34,7 @@ class DetectVictory : ZilchComponent
         if(this.Wind)
         {
             
+            this.GameSession.FindSpaceByName("UI").Destroy();
             this.LevelSettings.UICreator.UISpace.Destroy();
             var toSend = SetLevelUnlcoked();
             toSend.Level = event.LVLNum + 1;

@@ -63,6 +63,9 @@ class Health : ZilchComponent
     [Property]
     var DeathSound          : SoundCue  = SoundCue.PigSFX_KillPig;
     
+    [Property]
+    var WinOnDeath          : Boolean = false;
+    
     var RegenTimer          : Real      = 0;
     
     var HurtTimer           : Real      = 0.0;
@@ -197,21 +200,16 @@ class Health : ZilchComponent
             else
             {
                 healthBarHUD = this.GameSession.FindSpaceByName("UI").FindObjectByName("HealthBarBoss");
-                healthBarHUD.Transform.Scale = Real3(healthInPercent / 10, 0.5, 1);
-                healthBarHUD.Children.Current.Transform.WorldScale = Real3(1,healthBarHUD.Children.Current.Transform.WorldScale.Y, healthBarHUD.Children.Current.Transform.WorldScale.Z);
-                healthBarHUD.Sprite.Visible = true;
-                healthBarHUD.Children.Current.SpriteText.Visible = true;
+                Console.WriteLine(this.GameSession.FindAllSpacesByName("UI"));
+                if(healthBarHUD != null)
+                {
+                    healthBarHUD.Transform.Scale = Real3(healthInPercent / 10, 0.5, 1);
+                    healthBarHUD.Children.Current.Transform.WorldScale = Real3(1,healthBarHUD.Children.Current.Transform.WorldScale.Y, healthBarHUD.Children.Current.Transform.WorldScale.Z);
+                    healthBarHUD.Sprite.Visible = true;
+                    healthBarHUD.Children.Current.SpriteText.Visible = true;
+                    healthBarHUD.Sprite.Color = ColorGradient.BossHealthBar.Sample(1 - (this.ConfiguredHealth / this.MaxHealth));
+                }
             }
-            
-            if(this.IsBoss)
-            {
-                
-                
-                healthBarHUD.Sprite.Color = ColorGradient.BossHealthBar.Sample(1 - (this.ConfiguredHealth / this.MaxHealth));
-                
-                
-            }
-            
         }
         //REGEN
         if(this.ConfiguredHealth < this.MaxHealth)
@@ -233,6 +231,11 @@ class Health : ZilchComponent
         // DESTROY OWNER IF HEALTH IS LESS THAN OR EQUAL TO ZERO
         if(this.ConfiguredHealth <= 0)
         {
+            if(this.WinOnDeath)
+            {
+                this.LevelSettings.DetectVictory.Winable = true;
+                this.LevelSettings.DetectVictory.Win = true;
+            }
             if(this.Player && !this.LevelSettings.DebugMode.DubugModeEnabled)
             {
                 //Death screen

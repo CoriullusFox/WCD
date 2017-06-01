@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.121003, 0, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -48,7 +48,7 @@ Cog =
 		float ResponceTime = 2,
 		float WaunderRange = 2.5,
 		float WaunderCooldown = 4,
-		float Cooldown = 4,
+		float Cooldown = 7,
 	},
 	BoxCollider = 
 	{
@@ -77,11 +77,12 @@ Cog =
 	},
 	Health = 
 	{
-		float ConfiguredHealth = 500,
+		float ConfiguredHealth = 175,
 		string ArchetypeAmmoBar = "5854645293bec599:UI_EnemyHealthBar",
 		bool MiniHeathBar = true,
 		bool Player = false,
 		bool Enemy = true,
+		bool IsBoss = false,
 		bool Explode = true,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
@@ -91,6 +92,7 @@ Cog =
 		float HurtDuration = 0.1,
 		float RegenCooldown = 1,
 		string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+		bool WinOnDeath = true,
 	},
 	RigidBody = 
 	{
@@ -98,7 +100,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

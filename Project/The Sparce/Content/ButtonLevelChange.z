@@ -16,6 +16,7 @@ class ButtonLevelChange : ZilchComponent
     
     [Property]
     var Level : Level = Level.LevelOne;
+    var Reset : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -24,6 +25,25 @@ class ButtonLevelChange : ZilchComponent
 
     function OnMouseUp(event : ViewportMouseEvent)
     {
-        this.Space.LoadLevel(this.Level);
+        if(!this.Reset)
+        {
+            this.Space.LoadLevel(this.Level);
+        }
+        else
+        {
+            var player = this.Space.CreateAtPosition(Archetype.Entity_Player, this.Owner.Transform.Translation);
+            if(player != null)
+            {
+                Zero.ObjectStore.Store("../../../AppData/Roaming/WCD/TheSparce/saves/PlayerSave", player);
+                player.Destroy();
+            }
+            var settings = this.Space.CreateAtPosition(Archetype.SettingsStor, this.Owner.Transform.Translation);
+            if(settings != null)
+            {
+                Zero.ObjectStore.Store("../../../AppData/Roaming/WCD/TheSparce/saves/SettingsSave", settings);
+                settings.Destroy();
+                this.GameSession.DispatchEvent(Events.Saveing, Saveing());
+            }
+        }
     }
 }

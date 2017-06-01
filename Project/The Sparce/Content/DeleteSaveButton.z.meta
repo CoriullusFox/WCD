@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "DeleteSaveButton",
+		uint64 ResourceId = 5986d33d8b69bd60,
+	},
+},

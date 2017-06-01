@@ -24,31 +24,44 @@ class PlayButton : ZilchComponent
             if(this.Clickable)
             {
                 this.Owner.ButtonLevelChange.Level = this.LVL0;
+                this.Owner.ButtonLevelChange.Reset = false;
             }
         }
-        if(event.LVLNum == 1)
+        else if(event.LVLNum == 1)
         {
             if(this.Clickable)
             {
-            this.Owner.ButtonLevelChange.Level = this.LVL1;
+                this.Owner.ButtonLevelChange.Level = this.LVL1;
+                this.Owner.ButtonLevelChange.Reset = false;
             }
             this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Continue";
         }
-        if(event.LVLNum == 2)
+        else if(event.LVLNum == 2)
         {
             if(this.Clickable)
             {
-            this.Owner.ButtonLevelChange.Level = this.LVL2;
+                this.Owner.ButtonLevelChange.Level = this.LVL2;
+                this.Owner.ButtonLevelChange.Reset = false;
             }
             this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Continue";
         }
-        if(event.LVLNum == 3)
+        else if(event.LVLNum == 3)
         {
             if(this.Clickable)
             {
-            this.Owner.ButtonLevelChange.Level = this.LVL3;
+                this.Owner.ButtonLevelChange.Level = this.LVL3;
+                this.Owner.ButtonLevelChange.Reset = false;
             }
             this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Continue";
+        }
+        else
+        {
+            if(this.Clickable)
+            {
+                this.Owner.ButtonLevelChange.Level = Level.MainMenu;
+                this.Owner.ButtonLevelChange.Reset = true;
+            }
+            this.Owner.FindChildByName("Button_Play").SpriteText.Text = "You Finnished Click To Reset";
         }
     }
 }

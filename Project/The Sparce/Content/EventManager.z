@@ -151,3 +151,10 @@ class ScreenShake : ZilchEvent
     var Intencity : Real;
     
 }
+
+class Saveing : ZilchEvent
+{
+    
+    sends Saveing : Saveing;
+    
+}

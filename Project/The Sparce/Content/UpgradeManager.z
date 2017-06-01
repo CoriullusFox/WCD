@@ -84,7 +84,7 @@ class UpgradeManager : ZilchComponent
                 {
                     this.Owner.Shotgun.DistBetweenShots = 0.05;
                     this.Owner.Shotgun.NumberOfShots = 6;
-                    this.Owner.Shotgun.DamagePerBullet = 11;
+                    this.Owner.Shotgun.DamagePerBullet = 4;
                 }
                 
                 // CALCULATE WEAPON PROPERTIES BASED ON TIER

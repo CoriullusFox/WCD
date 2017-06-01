@@ -2,13 +2,22 @@ class SettingsSaveLoad : ZilchComponent
 {
     
     var SettingsStor : Cog = null;
+    var Saving : Boolean = true;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.GameSession, Events.Saveing, this.OnSaveing);
     }
+
+    function OnSaveing(event : Saveing)
+    {
+        this.SettingsStor.Destroy();
+    }
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
         if(this.SettingsStor != null)
         {
             

@@ -1,0 +1,24 @@
+class DeleteSaveButton : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        var player = this.Space.CreateAtPosition(Archetype.Entity_Player, this.Owner.Transform.Translation);
+        if(player != null)
+        {
+            Zero.ObjectStore.Store("../../../AppData/Roaming/WCD/TheSparce/saves/PlayerSave", player);
+            player.Destroy();
+        }
+        var settings = this.Space.CreateAtPosition(Archetype.SettingsStor, this.Owner.Transform.Translation);
+        if(settings != null)
+        {
+            Zero.ObjectStore.Store("../../../AppData/Roaming/WCD/TheSparce/saves/SettingsSave", settings);
+            settings.Destroy();
+            this.GameSession.DispatchEvent(Events.Saveing, Saveing());
+        }
+    }
+}

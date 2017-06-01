@@ -28,7 +28,7 @@ class Shotgun : ZilchComponent
     var DistBetweenShots : Real = 0.1;
     
     [Property]
-    var EnergyUse : Real = 40;
+    var EnergyUse : Real = 50;
     
     [Property]
     var Energy : Real = 100.0;
