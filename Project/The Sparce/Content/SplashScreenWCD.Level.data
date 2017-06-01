@@ -204,7 +204,7 @@ Level =
 		{
 			bool EnableFadeEffect = true,
 			bool UserCanSkip = false,
-			string NextLevel = "580f2d187401da74:MainMenu",
+			string NextLevel = "59e40e68d6a30e15:SplashScreenEpilepsy",
 			float Timeout = 4,
 			float FadeTime = 1.25,
 		},
