@@ -164,7 +164,7 @@ class EnemyAI : ZilchComponent
         }
         this.CooldownTimer -= event.Dt;
         
-        if(this.CooldownTimer >= 1.0)
+        if(this.CooldownTimer <= 1.0)
         {
             this.Owner.Children.Current.Sprite.Visible = true;
         }
