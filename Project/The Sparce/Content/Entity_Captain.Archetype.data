@@ -88,6 +88,7 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		bool Enemy = true,
+		bool IsBoss = true,
 		bool Explode = true,
 		Vec4 HurtColor = [1, 0, 0, 1],
 		string Explosion = "5844c0fe60a2ae39:Particle_Explosion",

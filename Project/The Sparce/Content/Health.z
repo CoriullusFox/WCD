@@ -16,25 +16,28 @@ class Health : ZilchComponent
     
     // CONFIGURABLE HEALTH PROPERTY
     [Property]
-    var ConfiguredHealth    : Real = 100.0;
+    var ConfiguredHealth    : Real      = 100.0;
     
     [Property]
     var ArchetypeAmmoBar    : Archetype = Archetype.UI_HealthBar;
     
     [Property]
-    var MiniHeathBar        : Boolean = true;
+    var MiniHeathBar        : Boolean   = true;
     
     [Property]
-    var Player              : Boolean = false;
+    var Player              : Boolean   = false;
     
     [Property]
-    var Enemy               : Boolean = true;
+    var Enemy               : Boolean   = true;
     
     [Property]
-    var Explode : Boolean = true;
+    var IsBoss              : Boolean   = false;
     
     [Property]
-    var HurtColor           : Real4 = Real4(1.0, 0.0, 0.0, 1.0);
+    var Explode             : Boolean   = true;
+    
+    [Property]
+    var HurtColor           : Real4     = Real4(1.0, 0.0, 0.0, 1.0);
     
     [Property]
     var Explosion           : Archetype = Archetype.Particle_WhiteExplosion;
@@ -44,43 +47,45 @@ class Health : ZilchComponent
     
     //REGEN
     [Property]
-    var RegenRate : Real = 0.5;
+    var RegenRate           : Real      = 0.5;
     
     [Property]
-    var MaxHealth : Real = 100.0;
+    var MaxHealth           : Real      = 100.0;
     
-    var FreezeTimer : Real = 0.0;
-    
-    [Property]
-    var HurtDuration : Real = 0.1;
+    var FreezeTimer         : Real      = 0.0;
     
     [Property]
-    var RegenCooldown : Real = 1;
+    var HurtDuration        : Real      = 0.1;
     
     [Property]
-    var DeathSound : SoundCue = SoundCue.PigSFX_KillPig;
+    var RegenCooldown       : Real      = 1;
     
-    var RegenTimer : Real = 0;
+    [Property]
+    var DeathSound          : SoundCue  = SoundCue.PigSFX_KillPig;
     
-    var HurtTimer : Real = 0.0;
+    var RegenTimer          : Real      = 0;
     
-    var IsHurt : Boolean = false;
+    var HurtTimer           : Real      = 0.0;
     
-    var Regen : Boolean = true;
+    var IsHurt              : Boolean   = false;
     
-    var PrevHealth : Real = 100;
+    var Regen               : Boolean   = true;
     
-    var Timer : Real = 0.1;
+    var PrevHealth          : Real      = 100;
     
-    var HeathPercent : Real
+    var Timer               : Real      = 0.1;
+    
+    var HeathPercent        : Real
     {
         get
         {
             return this.ConfiguredHealth / this.MaxHealth;
         }
     }
+    
     function Initialize(init : CogInitializer)
     {
+        
         this.MaxHealth = this.ConfiguredHealth;
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -102,6 +107,7 @@ class Health : ZilchComponent
         
         this.HurtTimer = this.HurtDuration;
         this.IsHurt = true;
+        
         if(this.Player)
         {
             this.GameSession.DispatchEvent(Events.Hurt, Hurt());
@@ -132,7 +138,7 @@ class Health : ZilchComponent
             this.Regen = true;
         }
         
-        if (this.IsHurt)
+        if(this.IsHurt)
         {
             if (this.HurtTimer > 0)
             {
@@ -160,7 +166,7 @@ class Health : ZilchComponent
         {
             if(this.Player)
                 this.Owner.PlayerAnimations.Frozen = false;
-            else if (this.Owner.EnemyAnimations != null)
+            else if(this.Owner.EnemyAnimations != null)
                 this.Owner.EnemyAnimations.Frozen = false;
         }
         
@@ -171,8 +177,43 @@ class Health : ZilchComponent
         
         if(this.MiniHeathBar)
         {
-            var healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, this.Owner.Transform.Translation + Real3(0, -1.05, 0));
-            healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
+            
+            var healthBarPos = this.Owner.Transform.Translation + Real3(0, -1.05, 0);
+            
+            if(this.IsBoss)
+            {
+                healthBarPos = this.Owner.Transform.Translation + Real3(0, -1.5, 0);
+            }
+            
+            var healthBarHUD = this.Space.CreateAtPosition(this.ArchetypeAmmoBar, healthBarPos);
+            
+            if(this.IsBoss)
+            {
+                healthBarHUD.Transform.Scale = Real3(healthInPercent / 15, 0.15, 1);
+            }
+            else
+            {
+                healthBarHUD.Transform.Scale = Real3(healthInPercent / 35, 0.15, 1);
+            }
+            
+            if(this.IsBoss)
+            {
+                
+                if(this.ConfiguredHealth > this.MaxHealth * 2/3)
+                {
+                    healthBarHUD.Sprite.Color = Real4(0.0, 1.0, 0.0, 1.0);
+                }
+                else if(this.ConfiguredHealth > this.MaxHealth * 1/2)
+                {
+                    healthBarHUD.Sprite.Color = Real4(1.0, 1.0, 0.0, 1.0);
+                }
+                else if(this.ConfiguredHealth < this.MaxHealth * 1/2)
+                {
+                    healthBarHUD.Sprite.Color = Real4(1.0, 0.0, 0.0, 1.0);
+                }
+                
+            }
+            
         }
         //REGEN
         if(this.ConfiguredHealth < this.MaxHealth)
@@ -206,6 +247,7 @@ class Health : ZilchComponent
             else if(!this.Player)
             {
                 this.Space.SoundSpace.PlayCue(this.DeathSound);
+                
                 this.Space.CreateAtPosition(this.PermDeathSprite, this.Owner.Transform.Translation + Real3(0,0,-0.1));
                 
                 //this is not temporary
