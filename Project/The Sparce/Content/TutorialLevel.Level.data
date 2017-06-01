@@ -124,7 +124,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.45944, -12.9489, 50],
+			Vec3 Translation = [-13.664, -11.6849, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -136,7 +136,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2873,
+			float Size = 12.2457,
 		},
 		EditorCameraController = 
 		{
@@ -144,7 +144,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.45944, -12.9489, 2.02847e-006],
+			Vec3 LookTarget = [-13.664, -11.6849, 1.14885e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1949,7 +1949,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Bullet",
+			string Name = "Trigger1",
 		},
 		Transform = 
 		{
@@ -2068,7 +2068,7 @@ Level =
 			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
 			CogPath Trigger = 
 			{
-				string Path = ":/Trigger2",
+				string Path = ":/Trigger1",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -2076,7 +2076,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 50,
+				uint ResolvedCog = 47,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -2089,59 +2089,6 @@ Level =
 		LinkId = 
 		{
 			uint Id = 50,
-		},
-		Named = 
-		{
-			string Name = "Bullet",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-6.5, -11.5, 0],
-			Vec3 Scale = [3, 3, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = false,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "59a8be567d0be415:Trigger",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		SpawnTrigger = 
-		{
-		},
-		BoxCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		Area = 
-		{
-			Vec2 Size = [1, 1],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 51,
 		},
 		Named = 
 		{
@@ -2175,7 +2122,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 51,
 		},
 		Named = 
 		{
@@ -2241,7 +2188,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 52,
 		},
 		Named = 
 		{
@@ -2307,7 +2254,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 53,
 		},
 		Named = 
 		{
@@ -2373,7 +2320,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 54,
 		},
 		Named = 
 		{
@@ -2439,7 +2386,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 55,
 		},
 		Named = 
 		{
@@ -2505,7 +2452,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 56,
 		},
 		Named = 
 		{
@@ -2539,7 +2486,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 57,
 		},
 		Named = 
 		{
@@ -2573,7 +2520,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 58,
 		},
 		Named = 
 		{
@@ -2607,7 +2554,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 59,
 		},
 		Named = 
 		{
@@ -2641,7 +2588,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 60,
 		},
 		Named = 
 		{
@@ -2675,7 +2622,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 61,
 		},
 		Named = 
 		{
@@ -2709,7 +2656,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 62,
 		},
 		Named = 
 		{
@@ -2743,7 +2690,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 63,
 		},
 		Named = 
 		{
@@ -2777,7 +2724,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 64,
 		},
 		Named = 
 		{
@@ -2811,7 +2758,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 66,
+			uint Id = 65,
 		},
 		Named = 
 		{
@@ -2845,7 +2792,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -2879,7 +2826,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 67,
 		},
 		Named = 
 		{
@@ -2913,7 +2860,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 68,
 		},
 		Named = 
 		{
@@ -2947,7 +2894,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 70,
+			uint Id = 69,
 		},
 		Named = 
 		{
@@ -2981,7 +2928,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 71,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -3015,7 +2962,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 72,
+			uint Id = 71,
 		},
 		Named = 
 		{
@@ -3049,7 +2996,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 73,
+			uint Id = 72,
 		},
 		Named = 
 		{
@@ -3083,7 +3030,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 73,
 		},
 		Named = 
 		{
@@ -3117,7 +3064,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 74,
 		},
 		Named = 
 		{
@@ -3152,7 +3099,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 76,
+			uint Id = 75,
 		},
 		Named = 
 		{
@@ -3186,7 +3133,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 77,
+			uint Id = 76,
 		},
 		Named = 
 		{
@@ -3220,7 +3167,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 78,
+			uint Id = 77,
 		},
 		Named = 
 		{
@@ -3254,7 +3201,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 79,
+			uint Id = 78,
 		},
 		Named = 
 		{
@@ -3282,6 +3229,174 @@ Level =
 			TextAlign Align = Center,
 			float PixelsPerUnit = 400,
 			bool Smoothing = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 79,
+		},
+		Named = 
+		{
+			string Name = "Spawner6",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19.5, -12, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Spawner = 
+		{
+			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
+			CogPath Trigger = 
+			{
+				string Path = ":/Trigger1",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 47,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool Invisable = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 80,
+		},
+		Named = 
+		{
+			string Name = "Spawner6",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-19.5, -13, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Spawner = 
+		{
+			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
+			CogPath Trigger = 
+			{
+				string Path = ":/Trigger1",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 47,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool Invisable = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 81,
+		},
+		Named = 
+		{
+			string Name = "Spawner6",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.5, -12, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Spawner = 
+		{
+			string Archtype = "585848b27a4d3c71:Entity_Enemy_Default",
+			string SpawnEffect = "58624a51b55ce44d:TeleEffect",
+			CogPath Trigger = 
+			{
+				string Path = ":/Trigger1",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 47,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			bool Invisable = false,
 		},
 	},
 },
