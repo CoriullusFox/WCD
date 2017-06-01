@@ -74,7 +74,7 @@ Cog =
 	{
 		float LifeLength = 2,
 		bool Explode = true,
-		string Explosion = "58620f152fd63a17:BulletExplosion",
+		string Explosion = "599720f52330e0fc:BulletExplosionEnemy",
 	},
 	SphereCollider = 
 	{

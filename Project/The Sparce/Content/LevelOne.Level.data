@@ -90,6 +90,7 @@ Level =
 			string UILevel = "5819b1c5833d962d:UILevel",
 			string UIArchtype = "5819b167eb57c437:UI_Space",
 			bool ReloadIfSameLevel = true,
+			string Name = "UI",
 		},
 		GameStateManager = 
 		{
@@ -127,7 +128,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.22443, 5.46893, 50],
+			Vec3 Translation = [10.9652, -10.9882, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -139,7 +140,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897,
+			float Size = 22.3131,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +148,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.22443, 5.46893, -4.23451e-006],
+			Vec3 LookTarget = [10.9652, -10.9882, -3.89615e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4190,11 +4191,11 @@ Level =
 		},
 		Sprite = 
 		{
-			bool Visible = false,
+			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",

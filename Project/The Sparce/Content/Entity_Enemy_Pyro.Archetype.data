@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.605013, 0, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -82,15 +82,17 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		bool Enemy = true,
+		bool IsBoss = false,
 		bool Explode = true,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
-		string PermDeathSprite = "",
+		string PermDeathSprite = "59a18eef71aac0be:AshPile",
 		float RegenRate = 0.25,
 		float MaxHealth = 0,
 		float HurtDuration = 0.2,
 		float RegenCooldown = 1,
 		string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+		bool WinOnDeath = false,
 	},
 	RigidBody = 
 	{
@@ -98,7 +100,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],

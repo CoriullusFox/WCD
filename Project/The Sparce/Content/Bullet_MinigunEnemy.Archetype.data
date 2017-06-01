@@ -74,7 +74,7 @@ Cog =
 	{
 		float LifeLength = 10,
 		bool Explode = true,
-		string Explosion = "58620f152fd63a17:BulletExplosion",
+		string Explosion = "599720f52330e0fc:BulletExplosionEnemy",
 	},
 	SphereCollider = 
 	{
@@ -89,6 +89,8 @@ Cog =
 	BulletScript = 
 	{
 		bool ClipThru = false,
+		string Explosion = "58620f152fd63a17:BulletExplosion",
+		string ExplosionEnemy = "599720f52330e0fc:BulletExplosionEnemy",
 	},
 	CreateTrail = 
 	{
