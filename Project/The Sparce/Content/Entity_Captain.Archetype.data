@@ -98,6 +98,7 @@ Cog =
 		float HurtDuration = 0.2,
 		float RegenCooldown = 1,
 		string DeathSound = "59a6943e5f8312ce:PigSFX_KillPig",
+		bool WinOnDeath = false,
 	},
 	EnemyToutchDamage = 
 	{
@@ -163,8 +164,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.00440138, 0.814276, 0],
-				Vec3 Scale = [0.5, 0.5, 1],
+				Vec3 Translation = [-0.00440138, 1.04925, 0],
+				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
