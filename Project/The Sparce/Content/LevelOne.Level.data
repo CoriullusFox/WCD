@@ -127,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.93563, -3.41044, 50],
+			Vec3 Translation = [15.5008, -19.8794, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -139,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2532,
+			float Size = 4.97875,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-4.93563, -3.41044, -4.56236e-006],
+			Vec3 LookTarget = [15.5008, -19.8794, -3.6979e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4333,6 +4333,11 @@ Level =
 		{
 			string Name = "Sprite",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -4343,13 +4348,18 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [14.75, -19.5, 0],
+			Vec3 Translation = [14.75, -19.5, 0.001],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "Sprite",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 	},
 	ArchetypeInstance = 
@@ -4369,6 +4379,11 @@ Level =
 		{
 			string Name = "Sprite",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -4387,6 +4402,11 @@ Level =
 		{
 			string Name = "Sprite",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -4404,6 +4424,41 @@ Level =
 		Named = 
 		{
 			string Name = "Sprite",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 101,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15, -19.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "59e43bd60585d759:spr-Obsticles_Template023a",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },
