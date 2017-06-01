@@ -25,6 +25,8 @@ class SetPositionInPixels : ZilchComponent
     [Property]
     var FromRight   : Boolean   = false;
     [Property]
+    var FromCenter  : Boolean   = false;
+    [Property]
     var Enabled     : Boolean   = true;
     
     
@@ -58,10 +60,16 @@ class SetPositionInPixels : ZilchComponent
         if(viewport == null) return;
         
         var screenSize = viewport.ViewportResolution;
+        var screenSizeTmp = viewport.ViewportResolution;
         
         if(!this.FromRight)
         {
             screenSize.X = 0;
+        }
+        
+        if(this.FromCenter)
+        {
+            screenSize.X = screenSizeTmp.X / 2;
         }
         
         if(this.FromTop)
@@ -73,6 +81,11 @@ class SetPositionInPixels : ZilchComponent
         {
             var screen = viewport.ViewportToScreen(this.Viewport + screenSize);
             var world = viewport.ScreenToWorldZPlane(screen, this.Owner.Transform.WorldTranslation.Z);
+            
+            if(this.FromCenter)
+            {
+                world = world - Real3(this.Owner.Transform.Scale.X / 2, 0, 0);
+            }
             
             this.Owner.Transform.WorldTranslation = world + this.Offset;
         }

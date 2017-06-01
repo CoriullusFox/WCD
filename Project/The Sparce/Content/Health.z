@@ -85,7 +85,7 @@ class Health : ZilchComponent
             return this.ConfiguredHealth / this.MaxHealth;
         }
     }
-    
+    var Once : Boolean = true;
     function Initialize(init : CogInitializer)
     {
         
@@ -203,10 +203,14 @@ class Health : ZilchComponent
                 Console.WriteLine(this.GameSession.FindAllSpacesByName("UI"));
                 if(healthBarHUD != null)
                 {
-                    healthBarHUD.Transform.Scale = Real3(healthInPercent / 10, 0.5, 1);
-                    healthBarHUD.Children.Current.Transform.WorldScale = Real3(1,healthBarHUD.Children.Current.Transform.WorldScale.Y, healthBarHUD.Children.Current.Transform.WorldScale.Z);
+                    var x = 0.0;
+                    healthBarHUD.Transform.Scale = Real3(healthInPercent / 5, 0.5, 1);
+                    healthBarHUD.FindChildByName("HealthBarBossText").Transform.WorldScale = Real3(1,healthBarHUD.Children.Current.Transform.WorldScale.Y, healthBarHUD.Children.Current.Transform.WorldScale.Z);
                     healthBarHUD.Sprite.Visible = true;
-                    healthBarHUD.Children.Current.SpriteText.Visible = true;
+                    healthBarHUD.FindChildByName("HealthBarBossText").SpriteText.Visible = true;
+                    healthBarHUD.FindChildByName("HealthBarBossBack").Sprite.Visible = true;
+                    Console.WriteLine(healthBarHUD.FindChildByName("HealthBarBossBack").Transform.WorldScale);
+                    healthBarHUD.FindChildByName("HealthBarBossBack").Transform.WorldScale = Real3(100 / 5,0.5, 1);
                     healthBarHUD.Sprite.Color = ColorGradient.BossHealthBar.Sample(1 - (this.ConfiguredHealth / this.MaxHealth));
                 }
             }
