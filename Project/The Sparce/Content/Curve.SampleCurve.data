@@ -13,10 +13,10 @@ SampleCurve =
 			uint EditorFlags = 0,
 		},
 		{
-			float Time = 0.616056,
-			float Value = 0.353698,
-			Vec2 TangentIn = [-0.168412, -0.155949],
-			Vec2 TangentOut = [0.187609, 0.200965],
+			float Time = 0.642857,
+			float Value = 0.21865,
+			Vec2 TangentIn = [-0.202381, -0.110932],
+			Vec2 TangentOut = [0.135714, 0.223473],
 			uint EditorFlags = 9,
 		},
 		{
