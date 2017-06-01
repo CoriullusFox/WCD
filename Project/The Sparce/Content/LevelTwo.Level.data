@@ -106,6 +106,11 @@ Level =
 		Pause = 
 		{
 		},
+		MusicScr_Stage = 
+		{
+			string MusicToPlay = "59b56c4216ad54fa:NewStage",
+			bool RestartIfSameTrack = false,
+		},
 	},
 	Cog = 
 	{
@@ -447,6 +452,11 @@ Level =
 			Vec3 Scale = [1, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
 		Named = 
 		{
 			string Name = "Trigger",
@@ -705,6 +715,11 @@ Level =
 			Vec3 Scale = [1, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
 		Named = 
 		{
 			string Name = "Trigger2",
@@ -722,6 +737,11 @@ Level =
 			Vec3 Translation = [-24, -1.5, 0.5],
 			Vec3 Scale = [6, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 		Named = 
 		{
@@ -2167,6 +2187,11 @@ Level =
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
 		Named = 
 		{
 			string Name = "Trigger4",
@@ -2544,6 +2569,11 @@ Level =
 			Vec3 Translation = [7, -9.5, 0.5],
 			Vec3 Scale = [4, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 		Named = 
 		{
@@ -3367,6 +3397,11 @@ Level =
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
 		Named = 
 		{
 			string Name = "Trigger6",
@@ -3384,6 +3419,11 @@ Level =
 			Vec3 Translation = [11, 18, 0.5],
 			Vec3 Scale = [1, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 		Named = 
 		{
@@ -4489,6 +4529,11 @@ Level =
 			Vec3 Translation = [17, -12, 0.5],
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 		Named = 
 		{
