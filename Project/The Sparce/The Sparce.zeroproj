@@ -6,8 +6,10 @@ Cog =
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
+		string ProjectFolder = "C:\Users\digipen\Documents\GitHub\WCD\Project\The Sparce",
 		uint ProjectEngineRevision = 12046,
 		bool AutoTakeProjectScreenshot = true,
+		uint64 Guid = 59b5499743ad4ba1,
 	},
 	EditorSettings = 
 	{
@@ -16,6 +18,7 @@ Cog =
 		float ViewCubeViewportSize = 150,
 		ScriptReloadMethod ScriptReloadEditor = ReInitializeObjects,
 		ScriptReloadMethod ScriptReloadGame = PatchObjects,
+		bool AutoUpdateContentChanges = true,
 	},
 	ProjectDescription = 
 	{
