@@ -61,7 +61,7 @@ class PlayButton : ZilchComponent
                 this.Owner.ButtonLevelChange.Level = Level.MainMenu;
                 this.Owner.ButtonLevelChange.Reset = true;
             }
-            this.Owner.FindChildByName("Button_Play").SpriteText.Text = "You Finnished Click To Reset";
+            this.Owner.FindChildByName("Button_Play").SpriteText.Text = "Game Completed! Click To Reset";
         }
     }
 }
