@@ -127,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [15.5008, -19.8794, 50],
+			Vec3 Translation = [15.3107, -18.3914, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278e-008, 0, 1],
 		},
@@ -139,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.97875,
+			float Size = 6.72057,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [15.5008, -19.8794, -3.6979e-006],
+			Vec3 LookTarget = [15.3107, -18.3914, -3.70621e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4172,12 +4172,47 @@ Level =
 			string Name = "Sprite",
 		},
 	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 88,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15, -19.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "59e43bd60585d759:spr-Obsticles_Template023a",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
 	ArchetypeInstance = 
 	{
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 88,
+			uint Id = 89,
 		},
 		Transform = 
 		{
@@ -4195,7 +4230,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 89,
+			uint Id = 90,
 		},
 		Transform = 
 		{
@@ -4213,7 +4248,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 90,
+			uint Id = 91,
 		},
 		Transform = 
 		{
@@ -4231,7 +4266,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 91,
+			uint Id = 92,
 		},
 		Transform = 
 		{
@@ -4249,7 +4284,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 92,
+			uint Id = 93,
 		},
 		Transform = 
 		{
@@ -4267,7 +4302,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 93,
+			uint Id = 94,
 		},
 		Transform = 
 		{
@@ -4285,7 +4320,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 94,
+			uint Id = 95,
 		},
 		Transform = 
 		{
@@ -4303,7 +4338,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 95,
+			uint Id = 96,
 		},
 		Transform = 
 		{
@@ -4321,7 +4356,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 96,
+			uint Id = 97,
 		},
 		Transform = 
 		{
@@ -4344,7 +4379,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 98,
 		},
 		Transform = 
 		{
@@ -4367,7 +4402,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 99,
 		},
 		Transform = 
 		{
@@ -4390,7 +4425,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 99,
+			uint Id = 100,
 		},
 		Transform = 
 		{
@@ -4413,7 +4448,7 @@ Level =
 		string Name = "59a182ea4095a6db:Crate",
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 101,
 		},
 		Transform = 
 		{
@@ -4424,41 +4459,6 @@ Level =
 		Named = 
 		{
 			string Name = "Sprite",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 101,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [15, -19.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "59e43bd60585d759:spr-Obsticles_Template023a",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
 		},
 	},
 },
