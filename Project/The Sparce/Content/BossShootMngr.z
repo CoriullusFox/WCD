@@ -33,6 +33,24 @@ class BossShootMngr : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+        if(this.Timer <= 1)
+        {
+            this.Owner.FindChildByName("UI_Warning_Anim").Sprite.Visible = true;
+        }
+        else if(this.Timer > 1)
+        {
+            this.Owner.FindChildByName("UI_Warning_Anim").Sprite.Visible = false;
+        }
+        else if(this.Timer2 <= 1)
+        {
+            this.Owner.FindChildByName("UI_Warning_Anim").Sprite.Visible = true;
+        }
+        else if(this.Timer2 > 1)
+        {
+            this.Owner.FindChildByName("UI_Warning_Anim").Sprite.Visible = false;
+        }
+        
         this.Timer -= event.Dt;
         this.Timer2 -= event.Dt;
         if(this.Owner.Health.HeathPercent <= 0.25)

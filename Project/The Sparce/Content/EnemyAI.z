@@ -164,10 +164,6 @@ class EnemyAI : ZilchComponent
         }
         this.CooldownTimer -= event.Dt;
         
-        if(this.CooldownTimer <= 1.0)
-        {
-            this.Owner.Children.Current.Sprite.Visible = true;
-        }
         
         if(this.CooldownTimer <= 0)
         {
@@ -175,6 +171,11 @@ class EnemyAI : ZilchComponent
             this.Shoot = !this.Shoot;
             this.CooldownTimer = this.Cooldown;
         }
+        else if(this.CooldownTimer <= 1.0 && !this.Shoot)
+        {
+            this.Owner.Children.Current.Sprite.Visible = true;
+        }
+        
         if(distanceFromPlayer < this.ShootProximity && this.Shoot)
         {
             //raycast for shooting
