@@ -59,17 +59,9 @@ class EnemyAI : ZilchComponent
     
     var Shoot : Boolean = true;
     
-    var TelegraphTimer : Real = 0.5;
-    
-    var DefaultColor : Real4 = Real4(0.0,0.0,0.0,0.0);
-    
-    [Property]
-    var TeleraphColor : Real4 = Real4(0.0,0.0,0.0,0.0);
-    
     
     function Initialize(init : CogInitializer)
     {
-        this.DefaultColor = this.Owner.Sprite.Color;
         
         this.Timer = this.ResponceTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -172,27 +164,15 @@ class EnemyAI : ZilchComponent
         }
         this.CooldownTimer -= event.Dt;
         
-        if(this.CooldownTimer >= 3 && this.CooldownTimer <= this.TelegraphTimer)
+        if(this.CooldownTimer >= 1.0)
         {
-            this.Owner.Sprite.Color = this.DefaultColor;
-        }
-        else if(this.CooldownTimer >= 2 && this.CooldownTimer <= this.TelegraphTimer)
-        {
-            //this.Owner.Sprite.Color = this.TeleraphColor;
-        }
-        else if(this.CooldownTimer >= 1 && this.CooldownTimer <= this.TelegraphTimer)
-        {
-            this.Owner.Sprite.Color = this.DefaultColor;
-        }
-        else if(this.CooldownTimer >= 0 && this.CooldownTimer <= this.TelegraphTimer)
-        {
-            //this.Owner.Sprite.Color = this.TeleraphColor;
+            this.Owner.Children.Current.Sprite.Visible = true;
         }
         
         if(this.CooldownTimer <= 0)
         {
+            this.Owner.Children.Current.Sprite.Visible = false;
             this.Shoot = !this.Shoot;
-            this.Owner.Sprite.Color = this.DefaultColor;
             this.CooldownTimer = this.Cooldown;
         }
         if(distanceFromPlayer < this.ShootProximity && this.Shoot)

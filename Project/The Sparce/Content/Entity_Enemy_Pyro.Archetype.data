@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-0.605013, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -48,7 +48,7 @@ Cog =
 		float ResponceTime = 2,
 		float WaunderRange = 2.5,
 		float WaunderCooldown = 5,
-		float Cooldown = 3,
+		float Cooldown = 5,
 	},
 	BoxCollider = 
 	{
@@ -82,6 +82,7 @@ Cog =
 		bool MiniHeathBar = true,
 		bool Player = false,
 		bool Enemy = true,
+		bool Explode = true,
 		Vec4 HurtColor = [1, 0, 0.000599861, 1],
 		string Explosion = "5851106bc9781092:Particle_WhiteExplosion",
 		string PermDeathSprite = "",
@@ -129,25 +130,25 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Sprite",
+				string Name = "UI_Warning_Anim",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -70],
-				Vec3 Scale = [2, 2, 1],
+				Vec3 Translation = [0, 0.9, 0],
+				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
 			{
-				bool Visible = true,
+				bool Visible = false,
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 1],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5274db4c2e7c11f9:Circle",
+				string SpriteSource = "59a2d99bc9f8177b:UI_Warning_Anim",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,

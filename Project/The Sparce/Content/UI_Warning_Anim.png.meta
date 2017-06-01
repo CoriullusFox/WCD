@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "UI_Warning_Anim",
+		uint64 ResourceId = 59a2d99bc9f8177b,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 4,
+		uint FrameSizeY = 16,
+		uint FrameCount = 2,
+		float FrameDelay = 0.05,
+		float OriginX = 2,
+		float OriginY = 8,
+		float PixelsPerUnit = 16,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
